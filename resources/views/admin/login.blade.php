@@ -18,7 +18,7 @@
         <div class="card-body login-card-body">
             <p class="login-box-msg">Введите логин и пароль</p>
 
-            <form action="{{ route('admin.login_process') }}" method="post">
+            <form action="{{ route('login_process') }}" method="post">
                 @csrf
 
                 <div class="input-group mb-3">

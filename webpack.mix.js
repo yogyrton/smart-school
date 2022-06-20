@@ -15,12 +15,12 @@ mix.styles([
     'resources/css/admin/all.min.css',
     'resources/css/admin/icheck-bootstrap.min.css',
     'resources/css/admin/adminlte.min.css'
-], 'public/admin/css/admin.css');
+], 'public/admin_assets/css/admin.css');
 
 mix.scripts([
     'resources/js/admin/jquery.min.js',
     'resources/js/admin/bootstrap.bundle.min.js',
     'resources/js/admin/adminlte.min.js',
     'resources/js/admin/demo.js',
-], 'public/admin/js/admin.js');
+], 'public/admin_assets/js/admin.js');
 

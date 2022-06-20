@@ -22,8 +22,8 @@ class UserController extends Controller
 
 
         if (Auth::attempt($user)) {
-            return view('admin/layout');
+            return redirect()->route('main');
         }
-        return view('admin.login');
+        return redirect()->route('login');
     }
 }

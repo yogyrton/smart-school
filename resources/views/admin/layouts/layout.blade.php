@@ -22,8 +22,8 @@
         <div class="sidebar">
             <!-- Sidebar user (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <div class="info">
-                    <a href="#" class="d-block">Admin</a>
+                <div class="info d-block">
+                    <a href="{{ route('main') }}" class="d-block">Главная</a>
                 </div>
             </div>
 
@@ -41,12 +41,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
+                                <a href="{{ route('main_news.index') }}" class="nav-link">
                                     <p>Список новостей</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
+                                <a href="{{ route('main_news.create') }}" class="nav-link">
                                     <p>Добавить новость</p>
                                 </a>
                             </li>
@@ -165,22 +165,13 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
-
-        <!-- Main content -->
-        <section class="content">
-
-            <!-- Default box -->
-            <div class="card">
-                <div class="card-header">
-                    @yield('content')
-                </div>
-            </div>
+        <section class="content-header">
+            <div class="container-fluid">
+                @yield('content')
+            </div><!-- /.container-fluid -->
         </section>
-        <!-- /.content -->
+
     </div>
-
-
-
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
