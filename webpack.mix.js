@@ -11,6 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
+
 mix.styles([
     'resources/css/admin/all.min.css',
     'resources/css/admin/icheck-bootstrap.min.css',
@@ -24,5 +25,6 @@ mix.js([
     'resources/js/admin/demo.js',
 ], 'public/admin_assets/js/admin.js');
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.sass', 'public/css');
+ mix.js('resources/js/app.js', 'public/js')
+ .sass('resources/sass/app.sass', 'public/css', []);
+
