@@ -6,7 +6,7 @@ html *
 body
     background: $white
     font-family: "Rubik-SemiBold", sans-serif
-    color: red
+    color: $text
 
 body
     padding-top: 84px
@@ -14,8 +14,8 @@ body
 .not-padding
     padding: 0
 
-html
-    scroll-padding-top: 200px
+// html
+//     scroll-padding-top: 200px
 
 a
     text-decoration: none
@@ -36,11 +36,27 @@ textarea:focus
 
 img, svg
     vertical-align: middle
-    max-width: 100%
 
 input, textarea
     -webkit-border-radius: 0
     -webkit-appearance: none
+
+// .row
+//     margin: 0 -15px
+
+// .row > *
+//     padding-left: 15px
+//     padding-right: 15px
+
+.text
+    font-family: 'Rubik-Regular', sans-serif
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+
+.text-bold
+    font-family: 'Rubik-SemiBold',sans-serif
+    font-weight: 600
 
 .container
     width: 1320px
@@ -48,6 +64,7 @@ input, textarea
     padding-right: 10px
     padding-left: 10px
     max-width: none
+
 
 .h1, .h2, .h3, .h4, .h5, .h6, p
     margin-bottom: 0
@@ -58,7 +75,6 @@ h1, .h1
     font-size: 60px
     line-height: 100%
     font-weight: 600
-    white-space: pre-wrap
 
 .pre-wrap
     white-space: pre-wrap
@@ -97,6 +113,22 @@ button
     border: none
     background-color: transparent
 
+.button_1
+    border-radius: 100px
+    padding: 12px 28px
+    width: fit-content
+    color: $white
+    transition: 1s
+    cursor: pointer
+    display: flex
+    align-items: center
+
+.btn-purple 
+    background-color: $accentColor
+
+.btn-pink
+    background-color: $pink
+
 .mb-16
     margin-bottom: 16px
 .mb-20
@@ -111,19 +143,93 @@ button
     margin-bottom: 60px
 .mb-80
     margin-bottom: 80px
-.mb-120
-    margin-bottom: 120px
+.mb-160
+    margin-bottom: 160px
+.pb-10
+    padding-bottom: 10px!important
+.pb-48
+    padding-bottom: 48px
 .pb-80
     padding-bottom: 80px
+.pb-85
+    padding-bottom: 85px
 .pb-120
     padding-bottom: 120px
 .pt-120
     padding-top: 120px
 
+.logo 
+    width: 74px
+    height: 86px
+    color: red
+
+.swiper 
+    overflow: hidden
+
+.swiper-button-disabled
+    opacity: .3
+    
 header 
-    position: fixed
+    position: absolute
     left: 0
     right: 0
     top: 0
     z-index: 999
-    padding: 40px 0
+    padding: 15px 0
+    nav
+        width: 60%
+    .header-contacts-messengers
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 140px
+    a
+        color: $text
+    a:hover
+        color: $text
+
+.head 
+    margin-top: 100px
+
+    .head-inner 
+        width: 650px
+
+        .btn-group
+            gap:20px
+    
+    .head-advt
+        width: 425px
+        gap: 28px
+        display: flex
+        align-items: center
+        cursor: pointer
+
+        .advt-box
+            width: 338px
+    
+    // .pseudo 
+    //     position: absolute
+    //     top: 50%
+    //     left: 53%
+    //     transform: translateY(-50%)
+    //     background-image: url('/public/svg/headerPseudo.svg')
+    //     width: 133px
+    //     height: 328px
+    //     border-radius: 100px
+    //     transform: rotate(-145deg)
+
+.container-slider-pagination
+    .swiper-pagination
+        bottom: -40px
+        position: absolute
+        .swiper-pagination-bullet
+            opacity: 1
+            background: $light-grey
+            width: 10px
+            height: 10px
+            margin: 0 10px
+        .swiper-pagination-bullet-active
+            background: $accentColor
+
+.history-text-box 
+    width: 654px
