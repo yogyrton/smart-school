@@ -3,16 +3,14 @@
 @section('title', 'Список главных новостей')
 
 @section('content')
-    <a href="{{ route('main_news.create') }}">Добавить</a>
-    @if (session('error'))
-        Уже 3 главные новости
-    @endif
+    <a href="{{ route('teacher.create') }}">Добавить</a>
+
     <table class="table table-striped projects">
 
         <thead>
         <tr>
             <th style="width: 20%">
-                Заголовок
+                Место
             </th>
             <th style="width: 50%">
                 Текст
@@ -21,22 +19,22 @@
         </thead>
 
         <tbody>
-        @foreach($news as $new)
+        @foreach($teachers as $teacher)
             <tr>
                 <td>
-                    {{ $new->title }}
+                    {{ $teacher->name }}
                 </td>
                 <td>
                     <a>
-                        {{ $new->text }}
+                        {{ $teacher->position }}
                     </a>
                     <br>
                 </td>
 
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="{{ route('main_news.edit', $new->id) }}">Редактировать</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('main_news.edit', $teacher->id) }}">Редактировать</a>
 
-                    <form action="{{ route('main_news.destroy', $new->id) }}" method="post">
+                    <form action="{{ route('main_news.destroy', $teacher->id) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm">Удалить</button>

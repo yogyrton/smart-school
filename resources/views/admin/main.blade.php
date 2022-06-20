@@ -8,14 +8,13 @@
             <!-- small box -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <h3>150</h3>
-
+                    <h3>{{ $news }}</h3>
                     <p>Главные новости</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-bag"></i>
                 </div>
-                <a href="{{ route('main_news.index') }}" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{ route('main_news.index') }}" class="small-box-footer">Подробнее</a>
             </div>
         </div>
         <!-- ./col -->
@@ -23,14 +22,14 @@
             <!-- small box -->
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+                    <h3>{{ $teachers }}</h3>
 
                     <p>Педагоги</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="#" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{ route('teacher.index') }}" class="small-box-footer">Подробнее</a>
             </div>
         </div>
         <!-- ./col -->
@@ -45,7 +44,7 @@
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
                 </div>
-                <a href="#" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="#" class="small-box-footer">Подробнее</a>
             </div>
         </div>
         <!-- ./col -->
@@ -60,7 +59,7 @@
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">Подробнее <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="#" class="small-box-footer">Подробнее</a>
             </div>
         </div>
         <!-- ./col -->

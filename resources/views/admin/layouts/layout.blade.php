@@ -61,12 +61,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
+                                <a href="{{ route('teacher.index') }}" class="nav-link">
                                     <p>Список педагогов</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
+                                <a href="{{ route('teacher.create') }}" class="nav-link">
                                     <p>Добавить педагога</p>
                                 </a>
                         </ul>
