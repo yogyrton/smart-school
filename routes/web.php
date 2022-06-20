@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::prefix('login')->group(function (){
     Route::get('/', [UserController::class, 'index'])->name('login');
     Route::post('login_process', [UserController::class, 'login'])->name('login_process');
