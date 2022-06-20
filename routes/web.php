@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('admin')->group(function (){
+    Route::get('login', [UserController::class, 'index'])->name('admin.login');
+    Route::post('login_process', [UserController::class, 'login'])->name('admin.login_process');
 });
+
+
 
 
 //Route::domain('test.urist-perevozki.by')->group(function(){
