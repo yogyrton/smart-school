@@ -70,6 +70,6 @@ class MainNewsController extends Controller
     {
         MainNews::destroy($id);
 
-        return redirect()->route('main_news.store');
+        return redirect()->route('main_news.index');
     }
 }
