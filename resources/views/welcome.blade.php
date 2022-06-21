@@ -2,11 +2,12 @@
 
 @section('content')
 
+
 <section id="head" class="head mb-160 position-relative">
         <div class="container">
                 <div class="row align-items-center">
                         <div class=" col-xl-5 col-md-7 offset-1">
-                                <img src="./../../public/img/main/imgHead.png" alt="">
+                                <img src="/img/main/imgHead.png" alt="">
                         </div>
                 
                         <div class="col-md-6 pb-85">
@@ -111,7 +112,7 @@
                                 </p>
                         </div>
                         <div class="col-6 text">
-                                <img src="/public/img/main/history.png" alt="history-img">
+                                <img src="/img/main/history.png" alt="history-img">
                         </div>
                 </div>
                 
