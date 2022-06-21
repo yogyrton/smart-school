@@ -6,11 +6,11 @@
 <section id="head" class="head mb-160 position-relative">
         <div class="container">
                 <div class="row align-items-center">
-                        <div class=" col-xl-5 col-md-7 offset-1">
+                        <div class="col-6 imgHead-box">
                                 <img src="/img/main/imgHead.png" alt="">
                         </div>
                 
-                        <div class="col-md-6 pb-85">
+                        <div class="col-6">
                                 <div class="head-inner mb-80">
                                         <h1 class="h1 pb-48">
                                                 Международная сеть частных школ <span class="accentColor">Smart School</span>
@@ -95,37 +95,106 @@
 
                 </div>
         </div>
-        <!-- <div class="pseudo"></div> -->
+        <div class="pseudo"></div>
+        <!-- <div class="pseudo2"></div> -->
 </section>
 
 <section class="history mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">История</h2>
-                <div class="row">
-                        <div class="col-6 text history-text-box">
-                                <p class="pb-10">
-                                В 2015 году при содействии лучших методистов Беларуси и Европы был открыт Инновационный Детский Образовательный Центр "Фабрика Звезд", на базе которого мы разработали уникальную программу для школьников по нейробике, кинезиологии и эмоциональному интеллекту «Секрет успешного обучения». <span class="text-bold">Наша методика позволяет эффективно, легко и быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span> </p>
+                
+                        <div class="row align-items-center justify-content-between">
+                                <div class=" col-7 text history-text-box">
+                                        <p class="pb-10">
+                                        В 2015 году при содействии лучших методистов Беларуси и Европы был открыт Инновационный Детский Образовательный Центр "Фабрика Звезд", на базе которого мы разработали уникальную программу для школьников по нейробике, кинезиологии и эмоциональному интеллекту «Секрет успешного обучения». <span class="text-bold">Наша методика позволяет эффективно, легко и быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span> </p>
 
-                                <p class="pb-10">Опыт профессиональной команды методистов и психологов в создании данной программы, а также организация огромного количества смен детских лагерей под брендом «Фабрика звезд», знание лучших методик обучения, длительная коммуникация с родителями о действующей системе образования, ее достоинствах и недостатках, стали толчком для открытия в 2020 году частной школы "Смарт Скул", учредитель которой - детский писатель, юрист и медиатор Елена Пушкина. И именно программа "Секрет успешного обучения" легла в основу методологии "Смарт образования", которая используется в нашей школе.</p>
+                                        <p class="pb-10">Опыт профессиональной команды методистов и психологов в создании данной программы, а также организация огромного количества смен детских лагерей под брендом «Фабрика звезд», знание лучших методик обучения, длительная коммуникация с родителями о действующей системе образования, ее достоинствах и недостатках, стали толчком для открытия в 2020 году частной школы "Смарт Скул", учредитель которой - детский писатель, юрист и медиатор Елена Пушкина. И именно программа "Секрет успешного обучения" легла в основу методологии "Смарт образования", которая используется в нашей школе.</p>
 
-                                <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше. 
-                                </p>
+                                        <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше. 
+                                        </p>
+                                </div>
+                                <div class="col-5 text">
+                                        <img src="/img/main/history.png" alt="history-img">
+                                </div>
                         </div>
-                        <div class="col-6 text">
-                                <img src="/img/main/history.png" alt="history-img">
-                        </div>
-                </div>
+                
+                
                 
         </div>
 </section>
 
 
-<section>
+<section class="school mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Школа</h2>
-                <div class="row">
-                        <div class="col-6">hjkls</div>
-                        <div class="col-6">gfhjk</div>
+                <div class="row justify-content-between">
+                        <div class="col-6 school-box-wrapper">
+                                <div class="school-box-inner">
+                                        <div class="school-box">Беларусь</div>
+                                        <div class="school-box">Онлайн</div>
+                                        <div class="school-box d-flex flex-column text-left">
+                                                        <h3 class="accentColor mb-24">Онлайн</h3>
+                                                        <p class="text">обучение на платформе Zoom</p>
+                                                        <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+                                        <div class="school-box d-flex flex-column text-left">
+                                                        <h3 class="accentColor mb-24">Россия</h3>
+                                                        <p class="text">обучение дистанционно на платформе Zoom</p>
+                                                        <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="col-6 school-box-wrapper">
+                                <div class="school-box-inner">
+                                        <div class="school-box d-flex flex-column text-left">
+                                                        <h3 class="accentColor mb-24">Грузия</h3>
+                                                        <p class="text">обучение в Батуми</p>
+                                                        <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+                                        <div class="school-box">Онлайн</div>
+                                        <div class="school-box">Школа</div>
+                                        <div class="school-box">Привет</div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>
+
+
+<section class="advantages mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Почему мы?</h2>
+                <div class="advantages row justify-content-between">
+                        <div class="col-6 flex-column">
+                                <ul class="advantages-list-1">
+                                        <li class="text mb-20 li"> <span class="text-bold ">«Смарт Скул» </span> — это официальное частное учреждение образования в Беларуси, России, Грузии, Польше.</li>
+                                        <li class="text mb-20"><span class="text-bold ">Наша миссия</span>  - система образования, достойная наших детей.</li>
+                                        <li class="text mb-20"> <span class="text-bold ">Наша цель</span>  - воспитание счастливых, здоровых, мыслящих и социально-адаптированных детей СЕГОДНЯ. Воспитание умеющих сотрудничать, заботливых, творческих, компетентных, ответственных взрослых ЗАВТРА.</li>
+                                        <li class="text mb-20"><span class="text-bold ">Педагогическая стратегия</span>  - развитие потенциала каждого учащегося, эффективное устранение трудностей в обучении.</li>
+                                        <li class="text mb-20"><span class="text-bold ">Наши учащиеся</span>  знают и ценят свои права, национальные и общемировые ценности и культуру, осознают себя гражданами своей страны и всего мира.</li>
+                                </ul>
+                                <p class="text mb-12"><span class="text-bold">Ученик Смарт Скул - разносторонняя личность.</span> </br>
+                                Кроме качественного академического образования нам важно, чтобы ученики получали развитие в  различных областях:</p>
+                                <ul class="advantages-list-2 text mb-20">
+                                        <li>языки и эффективная коммуникация;</li>
+                                        <li>критическое и креативное мышление;</li>
+                                        <li>самообразование и личностное развитие;</li>
+                                        <li>здоровый образ жизни и окружающая среда;</li>
+                                        <li>эстетическая и художественная чувствительность;</li>
+                                        <li>научные, технические и технологические знания.</li>
+                                </ul>
+                                <p class="text-bold mb-20">Смарт Скул – выбор заботливых родителей!</p>
+                                <p class="text-bold">Растем, развиваемся, взрослеем вместе со Смарт Скул!</p>
+                        </div>
+                        <div class="col-6">
+                                <div class="grid-box">
+                                        <div><img src="/img/main/advantages/img1.png" alt="image-1"></div>
+                                        <div><img src="/img/main/advantages/img2.png" alt="image-2"></div>
+                                        <div><img src="/img/main/advantages/img3.png" alt="image-3"></div>
+                                        <div><img src="/img/main/advantages/img4.png" alt="image-4"></div>
+                                </div>
+                        </div>
                 </div>
         </div>
 </section>

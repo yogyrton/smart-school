@@ -8,8 +8,6 @@ body
     font-family: "Rubik-SemiBold", sans-serif
     color: $text
 
-body
-    padding-top: 84px
 
 .not-padding
     padding: 0
@@ -38,8 +36,8 @@ input, textarea
     -webkit-border-radius: 0
     -webkit-appearance: none
 
-// .row
-//     margin: 0 -15px
+.row
+    margin: 0 -15px
 
 // .row > *
 //     padding-left: 15px
@@ -119,6 +117,19 @@ button
     cursor: pointer
     display: flex
     align-items: center
+    
+
+.button_2 
+    padding: 10px 24px
+    color: $accentColor
+    width: fit-content
+    transition: 1s
+    cursor: pointer
+    background-color: transparent
+    border: 1px solid #8041FF
+    border-radius: 100px
+    display: flex
+    align-items: center
 
 .btn-purple 
     background-color: $accentColor
@@ -126,10 +137,14 @@ button
 .btn-pink
     background-color: $pink
 
+.mb-12
+    margin-bottom: 12px
 .mb-16
     margin-bottom: 16px
 .mb-20
     margin-bottom: 20px
+.mb-24
+    margin-bottom: 24px
 .mb-32
     margin-bottom: 32px
 .mb-40
@@ -142,6 +157,8 @@ button
     margin-bottom: 80px
 .mb-160
     margin-bottom: 160px
+.mb-180
+    margin-bottom: 180px
 .pb-10
     padding-bottom: 10px!important
 .pb-48
@@ -167,12 +184,26 @@ button
     opacity: .3
     
 header 
-    position: absolute
+    position: relative
     left: 0
     right: 0
     top: 0
     z-index: 999
     padding: 15px 0
+
+    .logo
+
+    .header-rectangle
+        background-image: url('/svg/headerRectangle.svg')
+        background-repeat: no-repeat
+        top: 165%
+        left: 6%
+        transform: translateY(-50%)
+        position: absolute
+        width: 166.97px
+        height: 383px
+        z-index: -1
+
     nav
         width: 60%
     .header-contacts-messengers
@@ -185,7 +216,35 @@ header
         
 
 .head 
-    margin-top: 100px
+    z-index: 10
+    .imgHead-box
+        position: relative
+        z-index: 0
+    .imgHead-box::before
+        content:""
+        position: absolute
+        background-image: url('/svg/imgHead-small1.svg')
+        background-repeat: no-repeat
+        background-size: contain
+        width: 243px
+        height: 243px
+        top: 0
+        right: 0
+        transform: translate(-15%, -30%)
+        z-index: -1
+
+    .imgHead-box::after
+        content:""
+        position: absolute
+        background-image: url('/svg/imgHead-small2.svg')
+        background-repeat: no-repeat
+        background-size: contain
+        width: 243px
+        height: 243px
+        bottom: 0
+        left: 0
+        transform: translate(-55%, -55%)
+        z-index: -1
 
     .head-inner 
         width: 650px
@@ -203,16 +262,32 @@ header
         .advt-box
             width: 338px
     
-    // .pseudo 
+    .pseudo 
+        position: absolute
+        top: -15%
+        left: 8%
+        background-image: url(/svg/bigRectangle.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        width: 449px
+        height: 928px
+        border-radius: 300px
+        transform: rotate(-145deg)
+        z-index: -1
+
+    // .pseudo2
     //     position: absolute
-    //     top: 50%
-    //     left: 53%
-    //     transform: translateY(-50%)
-    //     background-image: url('/public/svg/headerPseudo.svg')
+    //     bottom: 0
+    //     right: 0
+    //     background-image: url(/svg/headRectangleSmall.svg)
+    //     background-repeat: no-repeat
+    //     background-size: cover
     //     width: 133px
     //     height: 328px
     //     border-radius: 100px
     //     transform: rotate(-145deg)
+    //     z-index: -1
+
 
 .container-slider-pagination
     .swiper-pagination
@@ -229,3 +304,46 @@ header
 
 .history-text-box 
     width: 654px
+
+.school
+    
+    .school-box-wrapper
+        background-color: red 
+
+        .school-box-inner
+            display: grid
+            row-gap: 24px
+            column-gap: 30px
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr 1fr
+
+            .school-box
+                background-color: #F4F2F7
+                width: 312px
+                height: 292px
+                border-radius: 12px
+                padding: 40px
+
+.advantages
+    .grid-box
+        display: grid
+        gap: 30px
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: repeat(2, 1fr)
+        width: 654px
+
+        div 
+            width: 312px
+            height: 312px
+
+.advantages-list-1 li 
+        list-style: none
+        background: url('/img/main/advantages/marker1.svg') no-repeat 0 0px
+        padding-left: 36px
+                    
+.advantages-list-2 li
+        list-style: none
+        background: url('/img/main/advantages/marker2.svg') no-repeat 0 0px
+        padding-left: 36px
+
+        
