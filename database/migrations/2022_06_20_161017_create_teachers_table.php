@@ -20,7 +20,7 @@ class CreateTeachersTable extends Migration
             $table->string('category')->nullable();
             $table->string('experience')->nullable();
             $table->string('thumbnail')->nullable();
-            $table->tinyInteger('point')->unique();
+            $table->tinyInteger('point');
             $table->timestamps();
         });
     }

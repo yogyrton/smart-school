@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TeacherRequest;
+use App\Models\Admin\MainNews;
 use App\Models\Admin\Teacher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TeacherController extends Controller
 {
@@ -13,7 +16,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teachers = Teacher::all();
+        $teachers = Teacher::query()->orderBy('point')->get();
         return view('admin.teacher.index', compact('teachers'));
     }
 
@@ -27,57 +30,63 @@ class TeacherController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TeacherRequest $request)
     {
-        //
+        $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/teachers', 'public') : '';
+
+        Teacher::query()->create([
+            'name' => $request->name,
+            'position' => $request->position,
+            'category' => $request->category,
+            'experience' => $request->experience,
+            'thumbnail' => $file,
+            'point' => $request->point
+        ]);
+
+        return redirect()->route('teacher.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $teacher = Teacher::query()->findOrFail($id);
+
+        return view('admin.teacher.edit', compact('teacher', 'id'));
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TeacherRequest $request, $id)
     {
-        //
+
+        $teacher = Teacher::query()->find($id);
+
+        $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/teachers', 'public') : $teacher->thumbnail;
+
+        $teacher->update([
+            'name' => $request->name,
+            'position' => $request->position,
+            'category' => $request->category,
+            'experience' => $request->experience,
+            'thumbnail' => $file,
+            'point' => $request->point
+        ]);
+
+        return redirect()->route('teacher.index');
     }
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        Teacher::destroy($id);
+
+        return redirect()->route('teacher.index');
     }
 }
