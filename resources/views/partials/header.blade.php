@@ -6,9 +6,11 @@
             
         <div class="logo">
             <a href="/">
-                <img src="/public/svg/logo.svg" alt="logo-img">
+                <img src="/svg/logo.svg" alt="logo-img">
             </a>
         </div>
+
+        <div class="header-rectangle"></div>
 
             <nav class="d-none d-lg-block">
                 <ul class="d-flex justify-content-between">
