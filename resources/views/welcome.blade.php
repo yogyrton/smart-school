@@ -188,11 +188,59 @@
                                 <p class="text-bold">Растем, развиваемся, взрослеем вместе со Смарт Скул!</p>
                         </div>
                         <div class="col-6">
-                                <div class="grid-box">
-                                        <div><img src="/img/main/advantages/img1.png" alt="image-1"></div>
-                                        <div><img src="/img/main/advantages/img2.png" alt="image-2"></div>
-                                        <div><img src="/img/main/advantages/img3.png" alt="image-3"></div>
-                                        <div><img src="/img/main/advantages/img4.png" alt="image-4"></div>
+                                <div class="grid-wrapper">
+                                        <a class="grid-box"><img src="/img/main/advantages/img1.png" alt="image-1">
+                                                <div class="overlay-title">
+                                                        <h3>Первоклассник</h3>
+                                                </div>
+                                        </a>
+                                        <a class="grid-box"><img src="/img/main/advantages/img2.png" alt="image-2">
+                                                <div class="overlay-title">
+                                                        <h3>Обучение</h3>
+                                                </div></a>
+                                        <a class="grid-box"><img src="/img/main/advantages/img3.png" alt="image-3">
+                                                <div class="overlay-title">
+                                                        <h3>Старшеклассник</h3>
+                                                </div></a>
+                                        <a class="grid-box"><img src="/img/main/advantages/img4.png" alt="image-4">
+                                                <div class="overlay-title">
+                                                        <h3>Достижения</h3>
+                                                </div></a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>
+
+<section class="info">
+        <div class="container">
+                <div class="row d-flex">
+                        <div class="col-3">
+                                <div class="d-flex flex-column align-items-center  info-box">
+                                        <img class="mb-20" src="/svg/calendar.svg" alt="calendar">
+                                        <h4 class="text-bold mb-16">5 лет</h4>
+                                        <p class="text grey text-center">обучаем детей по нашим</br> авторским программам</p>
+                                </div>
+                        </div>
+                        <div class="col-3">
+                                <div class="d-flex flex-column align-items-center  info-box">
+                                        <img class="mb-20" src="/svg/group.svg" alt="calendar">
+                                        <h4 class="text-bold mb-16">453+ детей</h4>
+                                        <p class="text grey text-center">прошли обучение и выпустились из нашей школы</p>
+                                </div>
+                        </div>
+                        <div class="col-3">
+                                <div class="d-flex flex-column align-items-center  info-box">
+                                        <img class="mb-20" src="/svg/place.svg" alt="calendar">
+                                        <h4 class="text-bold mb-16">7 локаций</h4>
+                                        <p class="text grey text-center">предлагает наша школа для </br>обучения из разных точек мира</p>
+                                </div>
+                        </div>
+                        <div class="col-3">
+                                <div class="d-flex flex-column align-items-center info-box">
+                                        <img class="mb-20" src="/svg/study.svg" alt="calendar">
+                                        <h4 class="text-bold mb-16">73 преподавателя</h4>
+                                        <p class="text grey text-center">ведут обучение на профессиональном уровне</p>
                                 </div>
                         </div>
                 </div>
