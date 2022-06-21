@@ -80,12 +80,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
+                                <a href="{{ route('news.index') }}" class="nav-link">
                                     <p>Список новостей</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
+                                <a href="{{ route('news.create') }}" class="nav-link">
                                     <p>Добавить новость</p>
                                 </a>
                             </li>
