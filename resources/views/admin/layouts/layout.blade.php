@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/admin/css/admin.css">
+    <link rel="stylesheet" href="/admin_assets/css/admin.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -80,12 +80,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
+                                <a href="{{ route('news.index') }}" class="nav-link">
                                     <p>Список новостей</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
+                                <a href="{{ route('news.create') }}" class="nav-link">
                                     <p>Добавить новость</p>
                                 </a>
                             </li>
@@ -180,7 +180,7 @@
     <!-- /.control-sidebar -->
 </div>
 
-<script src="/admin/js/admin.js"></script>
+<script src="/admin_assets/js/admin.js"></script>
 
 </body>
 </html>

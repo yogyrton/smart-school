@@ -37,14 +37,14 @@
             <!-- small box -->
             <div class="small-box bg-warning">
                 <div class="inner">
-                    <h3>44</h3>
+                    <h3>{{ $new }}</h3>
 
                     <p>Вожатые</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
                 </div>
-                <a href="#" class="small-box-footer">Подробнее</a>
+                <a href="{{ route('news.index') }}" class="small-box-footer">Подробнее</a>
             </div>
         </div>
         <!-- ./col -->

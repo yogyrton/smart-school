@@ -3,7 +3,7 @@
 @section('title', 'Список главных новостей')
 
 @section('content')
-    <a href="{{ route('main_news.create') }}">Добавить</a>
+    <a href="{{ route('main_news.create') }}">Добавить главную новость (не больше 3)</a>
     @if (session('error'))
         Уже 3 главные новости
     @endif
