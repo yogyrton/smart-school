@@ -17,6 +17,7 @@ class TeacherController extends Controller
     public function index()
     {
         $teachers = Teacher::query()->orderBy('point')->get();
+
         return view('admin.teacher.index', compact('teachers'));
     }
 
@@ -44,7 +45,7 @@ class TeacherController extends Controller
             'point' => $request->point
         ]);
 
-        return redirect()->route('teacher.index');
+        return redirect()->route('teacher.index')->with('success', 'Данные о педагоге успешно добавлены');
     }
 
 
@@ -77,7 +78,7 @@ class TeacherController extends Controller
             'point' => $request->point
         ]);
 
-        return redirect()->route('teacher.index');
+        return redirect()->route('teacher.index')->with('success', 'данные педагога изменены');
     }
 
     /**
@@ -87,6 +88,6 @@ class TeacherController extends Controller
     {
         Teacher::destroy($id);
 
-        return redirect()->route('teacher.index');
+        return redirect()->route('teacher.index')->with('success', 'Данные о педагоге удалены');
     }
 }

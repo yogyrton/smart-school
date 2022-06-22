@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/admin/css/admin.css">
+    <link rel="stylesheet" href="/admin_assets/css/admin.css">
 
 </head>
 <body class="hold-transition login-page">
@@ -21,8 +21,24 @@
             <form action="{{ route('login_process') }}" method="post">
                 @csrf
 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                                <li>{{ session('error') }}</li>
+                    </div>
+                @endif
+
                 <div class="input-group mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Логин">
+                    <input type="email" class="form-control" name="email" placeholder="Email">
                     <div class="input-group-append">
                         <div class="input-group-text"></div>
                     </div>
@@ -44,7 +60,7 @@
 </div>
 
 
-<script src="/admin/js/admin.js"></script>
+<script src="/admin_assets/js/admin.js"></script>
 
 </body>
 </html>
