@@ -1,6 +1,6 @@
 @section('header')
 
-<header class="mb-80">
+<header class="mb-160">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
             
@@ -14,24 +14,24 @@
         
 
             <nav class="d-none d-lg-block">
-                <ul class="d-flex justify-content-between">
+                <ul class="d-flex no-gutters">
                     <li>
-                        <a class="h5" href="">
+                        <a class="h5 dropdown-toggle" href="">
                             О нас
                         </a>
                     </li>
                     <li>
-                        <a class="h5" href="">
+                        <a class="h5 dropdown-toggle" href="">
                             Школа
                         </a>
                     </li>
                     <li>
-                        <a class="h5" href="">
+                        <a class="h5 dropdown-toggle" href="">
                             Доп.услуги
                         </a>
                     </li>
                     <li>
-                        <a class="h5" href="">
+                        <a class="h5 dropdown-toggle" href="">
                             Детский лагерь
                         </a>
                     </li>

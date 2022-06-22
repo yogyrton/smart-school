@@ -10,7 +10,7 @@ body
 
 
 .not-padding
-    padding: 0
+    padding: 0!important
 
 a
     text-decoration: none
@@ -41,6 +41,10 @@ input, textarea
 
 .row
     margin: 0 -15px
+
+.no-gutters 
+    margin-right: 0
+    margin-left: 0
 
 // .row > *
 //     padding-left: 15px
@@ -211,7 +215,7 @@ button
     opacity: .3
     
 header 
-    padding: 15px 0
+    padding: 10px 0
 
     .logo
         position: relative
@@ -227,6 +231,8 @@ header
 
     nav
         width: 60%
+        li
+            margin: 0 48px 0 0
     .header-contacts-messengers
         display: flex
         justify-content: space-between
@@ -234,6 +240,22 @@ header
         width: 140px
     a
         color: $text
+        white-space: nowrap
+    
+    .dropdown-toggle  
+        position: relative
+    
+    .dropdown-toggle::after
+        display: inline-block
+        margin-left: 0.255em
+        vertical-align: 0.255em
+        content: ""
+        // background-image: url('/img/headerArrow.jpg')
+        border-top: 0.3em solid
+        border-right: 0.3em solid transparent
+        border-bottom: 0
+        border-left: 0.3em solid transparent
+        vertical-align: 0.15em
         
 
 .head 
@@ -270,6 +292,7 @@ header
 
     .head-inner 
         width: 650px
+        padding-top: 50px
 
         .btn-group
             gap:20px
@@ -280,7 +303,7 @@ header
         position: absolute
         top: -15%
         left: 8%
-        background-image: url(/svg/234.svg)
+        background-image: url(/img/main/pseudo1.png)
         background-repeat: no-repeat
         background-size: cover
         width: 449px
@@ -324,23 +347,57 @@ header
     width: 654px
 
 .school
-    
-    .school-box-wrapper
-        background-color: red 
 
-        .school-box-inner
+        .grid-box
             display: grid
             row-gap: 24px
             column-gap: 30px
-            grid-template-columns: 1fr 1fr
-            grid-template-rows: 1fr 1fr
+            grid-template-columns: repeat(4, 312px)
+            grid-template-rows: repeat(2, auto)
+
+            .school-box-photo-1
+                background: #F4F2F7
+                border-radius: 12px
+                width: 654px
+                grid-column-start: 1
+                grid-column-end: 3
+
+                div
+                    width: 342px
 
             .school-box
                 background-color: #F4F2F7
-                width: 312px
-                min-height: 292px
+                // width: 312px
                 border-radius: 12px
                 padding: 40px
+
+                p
+                    max-width: 365px
+
+            .school-box-photo-2
+                background: #F4F2F7
+                border-radius: 12px
+                width: 654px
+                grid-column-start: 3
+                grid-column-end: 5
+
+                div
+                    width: 342px
+
+.school-box img,
+.school-box-photo-1 img,
+.school-box-photo-2 img
+    width: 312px
+    height: 292px
+    border-radius: 12px 
+
+.school-box-photo-1 img,
+.school-box-photo-2 img
+    border-bottom-left-radius:12px
+    border-top-left-radius:12px
+    border-bottom-right-radius:0px
+    border-top-right-radius:0px
+
 
 .advantages
     .grid-wrapper
@@ -360,29 +417,29 @@ header
             z-index: 0
             cursor: pointer
 
-.grid-box::before 
-    content:""
-    position: absolute
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
-    background: rgba(19, 10, 37, 1)
-    opacity: 0
-    transition: 1s
+    .grid-box::before 
+        content:""
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background: rgba(19, 10, 37, 1)
+        opacity: 0
+        transition: 1s
 
-.grid-box:hover::before
-    opacity: 0.4
+    .grid-box:hover::before
+        opacity: 0.4
 
-.overlay-title
-    position: absolute
-    display: none
-    color: red
-    z-index: 2
-    color: $white
+    .overlay-title
+        position: absolute
+        display: none
+        color: red
+        z-index: 2
+        color: $white
 
-.grid-box:hover .overlay-title
-    display: block
+    .grid-box:hover .overlay-title
+        display: block
 
 .advantages-list-1 li 
         list-style: none

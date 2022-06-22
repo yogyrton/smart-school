@@ -5,7 +5,7 @@
 
 <section id="head" class="head mb-160 position-relative">
         <div class="container">
-                <div class="row align-items-center">
+                <div class="row">
                         <div class="col-6 imgHead-box"> 
                                 <img src="/img/main/imgHead.png" alt="">
                                 <div class="pseudo"></div>
@@ -90,35 +90,58 @@
 <section class="school mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Школа</h2>
-                <div class="row justify-content-between">
-                        <div class="col-6 school-box-wrapper">
-                                <div class="school-box-inner">
-                                        <div class="school-box">Беларусь</div>
-                                        <div class="school-box">Онлайн</div>
-                                        <div class="school-box d-flex flex-column text-left">
-                                                        <h3 class="accentColor mb-24">Онлайн</h3>
-                                                        <p class="text">обучение на платформе Zoom</p>
-                                                        <a href="" class="button_2 text">Подробнее</a>
-                                        </div>
-                                        <div class="school-box d-flex flex-column text-left">
-                                                        <h3 class="accentColor mb-24">Россия</h3>
-                                                        <p class="text">обучение дистанционно на платформе Zoom</p>
-                                                        <a href="" class="button_2 text">Подробнее</a>
-                                        </div>
-                                </div>
-                        </div>
+                <div class="row">
+                        <div class="col">
+                                <div class="grid-box">
+                                
+                                        <!-- <div class="school-box">Беларусь</div>
+                                        <div class="school-box">Онлайн</div> -->
 
-                        <div class="col-6 school-box-wrapper">
-                                <div class="school-box-inner">
-                                        <div class="school-box d-flex flex-column text-left">
-                                                        <h3 class="accentColor mb-24">Грузия</h3>
-                                                        <p class="text">обучение в Батуми</p>
+                                        <div class="school-box-photo-1 d-flex">
+                                                
+                                                <img src="/img/school/photo1.png" alt="children-with-map">
+                                                
+                                                <div class="school-box d-flex flex-column text-left ">
+                                                        <h3 class="accentColor mb-24">Беларусь</h3>
+                                                        <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
+                                                        <p class="text flex-grow-1 mb-12">д. Жуков Луг (5 км от ст.м.Уручье)</p>
                                                         <a href="" class="button_2 text">Подробнее</a>
+                                                </div>
                                         </div>
-                                        <div class="school-box">Онлайн</div>
-                                        <div class="school-box">Школа</div>
-                                        <div class="school-box">Привет</div>
+
+                                        <div class="school-box d-flex flex-column text-left">
+                                                <h3 class="accentColor mb-24">Грузия</h3>
+                                                <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
+                                                <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+                                        <div class="school-box not-padding">
+                                                <img src="/img/school/photo2.png" alt="children-img">
+                                        </div>
+
+                                        <div class="school-box d-flex flex-column text-left">
+                                                <h3 class="accentColor mb-24">Онлайн</h3>
+                                                <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
+                                                <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+                                        
+                                        <div class="school-box d-flex flex-column text-left">
+                                                <h3 class="accentColor mb-24">Россия</h3>
+                                                <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
+                                                <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+
+                                        <div class="school-box-photo-2 d-flex">
+                                                <img src="/img/school/photo3.png" alt="children-with-map">
+                                                <div class="school-box d-flex flex-column text-left ">
+                                                        <h3 class="accentColor mb-24">Польша</h3>
+                                                        <p class="text flex-grow-1 mb-12">обучение по адресу:</br>ul.Ksieskiej, Wroclaw</p>
+                                                        <a href="" class="button_2 text">Подробнее</a>
+                                                </div>
+                                        </div>
+                                        
+                                        
                                 </div>
+                                
                         </div>
                 </div>
         </div>
@@ -249,24 +272,25 @@
                                                 </div>
                                         </div>
                                         <div class="priority-box d-flex mb-40">
-                                        <img src="/svg/plant.svg" alt="plant-img">
-                                        <div class="d-flex flex-column">
+                                                <img src="/svg/plant.svg" alt="plant-img">
+                                                <div class="d-flex flex-column">
                                                                 <h5 class="text-bold">ИСТОЧНИК ЗНАНИЙ</h5>
                                                                 <p class="text">Урок - практический эксперимент, где учитель приветствует сотрудничество и уважительное общение.</p>
+                                                </div>
                                         </div>
-                                        </div>
-                                        <div class="priority-box d-flex mb-40">
-                                        <img src="/svg/hand.svg" alt="hand-svg">
-                                        <div class="d-flex flex-column">
-                                                                <h5 class="text-bold">БЛАГОПОЛУЧИЕ И ЗДОРОВЬЕ</h5>
-                                                                <p class="text">Психологическое сопровождение и тренинги по авторской программе “Секрет успешного обучения”.</p>
-                                        </div>
+                                        <div class="priority-box d-flex">
+                                                <img src="/svg/hand.svg" alt="hand-svg">
+                                                <div class="d-flex flex-column">
+                                                        <h5 class="text-bold">БЛАГОПОЛУЧИЕ И ЗДОРОВЬЕ</h5>
+                                                        <p class="text">Психологическое сопровождение и тренинги по авторской программе “Секрет успешного обучения”.</p>
+                                                </div>
                                         </div>
                                 </div>
                         </div>
                 </div>
         </div>
 </section>
+
 
 @stop
 
