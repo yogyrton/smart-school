@@ -96,7 +96,6 @@
                 </div>
         </div>
         <div class="pseudo"></div>
-        <!-- <div class="pseudo2"></div> -->
 </section>
 
 <section class="history mb-160">
@@ -122,7 +121,6 @@
                 
         </div>
 </section>
-
 
 <section class="school mb-160">
         <div class="container">
@@ -160,7 +158,6 @@
                 </div>
         </div>
 </section>
-
 
 <section class="advantages mb-160">
         <div class="container">
@@ -246,6 +243,8 @@
                 </div>
         </div>
 </section>
+
+
 
 @stop
 
