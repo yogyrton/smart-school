@@ -127,7 +127,7 @@
 <section class="advantages mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Почему мы?</h2>
-                <div class="advantages row justify-content-between">
+                <div class="advantages row justify-content-between align-items-center">
                         <div class="col-6 flex-column">
                                 <ul class="advantages-list-1">
                                         <li class="text mb-20 li"> <span class="text-bold ">«Смарт Скул» </span> — это официальное частное учреждение образования в Беларуси, России, Грузии, Польше.</li>
@@ -209,10 +209,10 @@
         </div>
 </section>
 
-<section class="priroity">
+<section class="priority">
         <div class="container">
-                <h2 class="accentColor mb-60">Вам точно к нам, если для вас важны</h2>
-                <div class="row d-flex priority-wrapper">
+                <h2 class="accentColor mb-60 pt-120">Вам точно к нам, если для вас важны</h2>
+                <div class="row d-flex priority-wrapper pb-100">
                         <div class="col-5">
                                 <div class="priority-inner">
                                         <div class="priority-box d-flex mb-40">
