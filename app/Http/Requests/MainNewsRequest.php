@@ -28,4 +28,14 @@ class MainNewsRequest extends FormRequest
                 'text' => 'required|max:80',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Поле "Заголовок" должно быть заполнено',
+            'text.required' => 'Поле "Текст" должно быть заполнено',
+            'title.max' => 'Поле "Заголовок" должно содержать не более 20 символов',
+            'text.max' => 'Поле "Текст" должно содержать не более 80 символов',
+        ];
+    }
 }

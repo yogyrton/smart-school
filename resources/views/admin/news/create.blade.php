@@ -3,6 +3,17 @@
 @section('title', 'Добавление новости')
 
 @section('content')
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -19,17 +30,17 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Заголовок</label>
+                                <label for="exampleInputEmail1">Заголовок (необязательно)</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Заголовок">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Текст новости</label>
+                                <label for="exampleInputPassword1">Текст новости (необязательно)</label>
                                 <input type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Фото</label>
+                                <label for="exampleInputPassword1">Фото (необязательно)</label>
                                 <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                             </div>
 

@@ -3,10 +3,23 @@
 @section('title', 'Список главных новостей')
 
 @section('content')
-    <a href="{{ route('main_news.create') }}">Добавить главную новость (не больше 3)</a>
+
     @if (session('error'))
-        Уже 3 главные новости
+        <div class="alert alert-danger">
+            <li>{{ session('error') }}</li>
+        </div>
     @endif
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            <li>{{ session('success') }}</li>
+        </div>
+    @endif
+
+
+
+    <a href="{{ route('main_news.create') }}">Добавить главную новость (не больше 3)</a>
+
     <table class="table table-striped projects">
 
         <thead>

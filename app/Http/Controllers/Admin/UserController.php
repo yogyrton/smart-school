@@ -22,8 +22,9 @@ class UserController extends Controller
 
 
         if (Auth::attempt($user)) {
-            return redirect()->route('main');
+            return redirect()->route('main')->with('success', 'Вы успешно вошли');
         }
-        return redirect()->route('login');
+
+        return redirect()->route('login')->with('error', 'Вы ввели неверные данные');
     }
 }

@@ -1,8 +1,19 @@
 @extends('admin.layouts.layout')
 
-@section('title', 'Изменить данные преподавателя')
+@section('title', 'Изменить данные педагога')
 
 @section('content')
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -11,7 +22,7 @@
                     <!-- jquery validation -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Изменить данные преподавателя</h3>
+                            <h3 class="card-title">Изменить данные педагога</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->

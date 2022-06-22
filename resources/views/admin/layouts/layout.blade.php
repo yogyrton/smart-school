@@ -56,6 +56,26 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
+                                Блок новостей
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('news.index') }}" class="nav-link">
+                                    <p>Список новостей</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('news.create') }}" class="nav-link">
+                                    <p>Добавить новость</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <p>
                                 Педагоги
                             </p>
                         </a>
@@ -75,18 +95,18 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Блок новостей
+                                Вожатые
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('news.index') }}" class="nav-link">
-                                    <p>Список новостей</p>
+                                <a href="{{ route('counselor.index') }}" class="nav-link">
+                                    <p>Список вожатых</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('news.create') }}" class="nav-link">
-                                    <p>Добавить новость</p>
+                                <a href="{{ route('counselor.create') }}" class="nav-link">
+                                    <p>Добавить вожатого</p>
                                 </a>
                             </li>
                         </ul>
@@ -120,32 +140,18 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
-                                    <p>Список цен</p>
+                                <a href="{{ route('prices.index') }}" class="nav-link">
+                                    <p>Список прейскурантов</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('prices.create') }}" class="nav-link">
+                                    <p>Добавить прейскурант</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <p>
-                                Вожатые
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
-                                    <p>Список вожатых</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
-                                    <p>Добавить вожатого</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
@@ -165,6 +171,9 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
+
+
+
         <section class="content-header">
             <div class="container-fluid">
                 @yield('content')

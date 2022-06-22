@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 
-@section('title', 'Список новостей')
+@section('title', 'Список вожатых')
 
 @section('content')
 
@@ -17,7 +17,7 @@
     @endif
 
 
-    <a href="{{ route('news.create') }}">Добавить новость</a>
+    <a href="{{ route('counselor.create') }}">Добавить вожатого</a>
 
     <table class="table table-striped projects">
 
@@ -28,45 +28,37 @@
                 Фото
             </th>
 
-            <th style="width: 5%">
-                Заголовок
-            </th>
-
             <th style="width: 25%">
-                Текст
+                ФИО
             </th>
 
             <th style="width: 20%">
-                Дата публикации
+                Лагерь
             </th>
 
         </tr>
         </thead>
 
         <tbody>
-        @foreach($news as $new)
+        @foreach($counselors as $counselor)
             <tr>
 
                 <td>
-                    <img src="{{ asset('storage/' . $new->thumbnail) }}" alt="{{ $new->title }}" width="60px" height="60px">
+                    <img src="{{ asset('storage/' . $counselor->thumbnail) }}" alt="{{ $counselor->name }}" width="60px" height="60px">
                 </td>
 
                 <td>
-                    {{ $new->title }}
+                    {{ $counselor->name }}
                 </td>
 
                 <td>
-                    {{ $new->text }}
-                </td>
-
-                <td>
-                    {{ $new->created_at->format('d-m-Y') }}
+                    {{ $counselor->camp }}
                 </td>
 
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="{{ route('news.edit', $new->id) }}">Редактировать</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('counselor.edit', $counselor->id) }}">Редактировать</a>
 
-                    <form action="{{ route('news.destroy', $new->id) }}" method="post">
+                    <form action="{{ route('counselor.destroy', $counselor->id) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm">Удалить</button>
