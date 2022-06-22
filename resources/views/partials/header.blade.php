@@ -8,9 +8,10 @@
             <a href="/">
                 <img src="/svg/logo.svg" alt="logo-img">
             </a>
+            <div class="header-rectangle"></div>
         </div>
 
-        <div class="header-rectangle"></div>
+        
 
             <nav class="d-none d-lg-block">
                 <ul class="d-flex justify-content-between">

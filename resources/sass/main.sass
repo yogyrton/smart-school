@@ -177,6 +177,8 @@ button
     padding-bottom: 80px
 .pb-85
     padding-bottom: 85px
+.pb-100
+    padding-bottom: 100px
 .pb-120
     padding-bottom: 120px
 .pt-120
@@ -187,6 +189,21 @@ button
     height: 86px
     color: red
 
+.swiper-box
+    width: 340px
+    margin-left: 100px
+    position: relative
+
+.swiper-box:before
+    content:""
+    display: block
+    position: absolute
+    background-image: url('/svg/bell.svg')
+    left: -100px
+    top: 15px
+    width: 60px
+    height: 60px
+
 .swiper 
     overflow: hidden
 
@@ -194,25 +211,19 @@ button
     opacity: .3
     
 header 
-    position: relative
-    left: 0
-    right: 0
-    top: 0
-    z-index: 999
     padding: 15px 0
 
     .logo
-
-    .header-rectangle
-        background-image: url('/svg/headerRectangle.svg')
-        background-repeat: no-repeat
-        top: 165%
-        left: 6%
-        transform: translateY(-50%)
-        position: absolute
-        width: 166.97px
-        height: 383px
-        z-index: -1
+        position: relative
+        .header-rectangle
+            background-image: url('/svg/headerRectangle.svg')
+            background-repeat: no-repeat
+            top: -15px
+            left: -40px
+            position: absolute
+            width: 166.97px
+            height: 383px
+            z-index: -1
 
     nav
         width: 60%
@@ -229,7 +240,8 @@ header
     z-index: 10
     .imgHead-box
         position: relative
-        z-index: 0
+        z-index: 10
+
     .imgHead-box::before
         content:""
         position: absolute
@@ -241,7 +253,7 @@ header
         top: 0
         right: 0
         transform: translate(-15%, -30%)
-        z-index: -1
+        z-index: -2
 
     .imgHead-box::after
         content:""
@@ -262,29 +274,20 @@ header
         .btn-group
             gap:20px
             height: 48px
-    
-    .head-advt
-        width: 425px
-        gap: 28px
-        display: flex
-        align-items: center
-        cursor: pointer
 
-        .advt-box
-            width: 338px
     
     .pseudo 
         position: absolute
         top: -15%
         left: 8%
-        background-image: url(/svg/bigRectangle.svg)
+        background-image: url(/svg/234.svg)
         background-repeat: no-repeat
         background-size: cover
         width: 449px
         height: 928px
         border-radius: 300px
         transform: rotate(-145deg)
-        z-index: -1
+        z-index: -3
 
     // .pseudo2
     //     position: absolute
@@ -307,11 +310,15 @@ header
         .swiper-pagination-bullet
             opacity: 1
             background: $light-grey
-            width: 10px
-            height: 10px
-            margin: 0 10px
+            width: 8px
+            height: 8px
+            margin: 0 8px
         .swiper-pagination-bullet-active
             background: $accentColor
+    .advt-box
+        width: 338px
+        cursor: pointer
+        
 
 .history-text-box 
     width: 654px
@@ -331,7 +338,7 @@ header
             .school-box
                 background-color: #F4F2F7
                 width: 312px
-                height: 292px
+                min-height: 292px
                 border-radius: 12px
                 padding: 40px
 
@@ -381,12 +388,15 @@ header
         list-style: none
         background: url('/img/main/advantages/marker1.svg') no-repeat 0 0px
         padding-left: 36px
-                    
+    
 .advantages-list-2 li
         list-style: none
         background: url('/img/main/advantages/marker2.svg') no-repeat 0 0px
         padding-left: 36px
+        margin-bottom: 8px
 
+.advantages-list-2:last-child
+    margin-bottom: 0
 
 .info 
     .row
@@ -395,3 +405,20 @@ header
         max-width: 312px
 .info .col-3
     width: 312px
+
+.priority
+    background-color: rgba(244, 242, 246, 1)
+
+    .priority-wrapper 
+        gap: 145px
+
+        .priority-box
+            gap: 20px
+            align-items: flex-start
+            height: 105px
+
+            img
+                object-fit: contain
+
+            p
+                max-width: 460px
