@@ -187,6 +187,21 @@ button
     height: 86px
     color: red
 
+.swiper-box
+    width: 340px
+    margin-left: 100px
+    position: relative
+
+.swiper-box:before
+    content:""
+    display: block
+    position: absolute
+    background-image: url('/svg/bell.svg')
+    left: -100px
+    top: 15px
+    width: 60px
+    height: 60px
+
 .swiper 
     overflow: hidden
 
@@ -194,11 +209,6 @@ button
     opacity: .3
     
 header 
-    // position: relative
-    // left: 0
-    // right: 0
-    // top: 0
-    // z-index: 999
     padding: 15px 0
 
     .logo
@@ -262,22 +272,13 @@ header
         .btn-group
             gap:20px
             height: 48px
-    
-    .head-advt
-        width: 425px
-        gap: 28px
-        display: flex
-        align-items: center
-        cursor: pointer
 
-        .advt-box
-            width: 338px
     
     .pseudo 
         position: absolute
         top: -15%
         left: 8%
-        background-image: url(/svg/bigRectangle.svg)
+        background-image: url(/svg/234.svg)
         background-repeat: no-repeat
         background-size: cover
         width: 449px
@@ -307,11 +308,15 @@ header
         .swiper-pagination-bullet
             opacity: 1
             background: $light-grey
-            width: 10px
-            height: 10px
-            margin: 0 10px
+            width: 8px
+            height: 8px
+            margin: 0 8px
         .swiper-pagination-bullet-active
             background: $accentColor
+    .advt-box
+        width: 338px
+        cursor: pointer
+        
 
 .history-text-box 
     width: 654px
@@ -395,3 +400,13 @@ header
         max-width: 312px
 .info .col-3
     width: 312px
+
+.priority-wrapper 
+    gap: 145px
+
+    .priority-inner
+        max-width: 540px
+        background-color: red
+
+        .priority-box
+            gap: 20px
