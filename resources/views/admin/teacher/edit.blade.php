@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 
-@section('title', 'Изменить данные преподавателя')
+@section('title', 'Изменить данные педагога')
 
 @section('content')
     <section class="content">
@@ -11,7 +11,7 @@
                     <!-- jquery validation -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Изменить данные преподавателя</h3>
+                            <h3 class="card-title">Изменить данные педагога</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
