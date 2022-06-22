@@ -228,7 +228,8 @@ header
     z-index: 10
     .imgHead-box
         position: relative
-        z-index: 0
+        z-index: 10
+
     .imgHead-box::before
         content:""
         position: absolute
@@ -240,7 +241,7 @@ header
         top: 0
         right: 0
         transform: translate(-15%, -30%)
-        z-index: -1
+        z-index: -2
 
     .imgHead-box::after
         content:""
@@ -283,7 +284,7 @@ header
         height: 928px
         border-radius: 300px
         transform: rotate(-145deg)
-        z-index: -1
+        z-index: -3
 
     // .pseudo2
     //     position: absolute
@@ -330,7 +331,7 @@ header
             .school-box
                 background-color: #F4F2F7
                 width: 312px
-                height: 292px
+                min-height: 292px
                 border-radius: 12px
                 padding: 40px
 

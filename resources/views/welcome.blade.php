@@ -6,8 +6,9 @@
 <section id="head" class="head mb-160 position-relative">
         <div class="container">
                 <div class="row align-items-center">
-                        <div class="col-6 imgHead-box">
+                        <div class="col-6 imgHead-box"> 
                                 <img src="/img/main/imgHead.png" alt="">
+                                <div class="pseudo"></div>
                         </div>
                 
                         <div class="col-6">
@@ -95,7 +96,7 @@
 
                 </div>
         </div>
-        <div class="pseudo"></div>
+        
 </section>
 
 <section class="history mb-160">
