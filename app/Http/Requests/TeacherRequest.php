@@ -32,4 +32,12 @@ class TeacherRequest extends FormRequest
             'point' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Поле "ФИО" должно быть заполнено',
+            'point.required' => 'Поле "Позиция показа" должно быть заполнено',
+        ];
+    }
 }

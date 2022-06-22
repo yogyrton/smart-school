@@ -21,8 +21,24 @@
             <form action="{{ route('login_process') }}" method="post">
                 @csrf
 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                                <li>{{ session('error') }}</li>
+                    </div>
+                @endif
+
                 <div class="input-group mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Логин">
+                    <input type="email" class="form-control" name="email" placeholder="Email">
                     <div class="input-group-append">
                         <div class="input-group-text"></div>
                     </div>

@@ -40,7 +40,7 @@ class CounselorController extends Controller
            'camp' => $request->camp,
         ]);
 
-        return redirect()->route('counselor.index');
+        return redirect()->route('counselor.index')->with('success', 'Данные о вожатом добавлены');
     }
 
     /**
@@ -67,7 +67,7 @@ class CounselorController extends Controller
             'camp' => $request->camp,
         ]);
 
-        return redirect()->route('counselor.index');
+        return redirect()->route('counselor.index')->with('success', 'Данные о вожатом изменены');
 
     }
 
@@ -78,6 +78,6 @@ class CounselorController extends Controller
     {
         Counselor::destroy($id);
 
-        return redirect()->route('counselor.index');
+        return redirect()->route('counselor.index')->with('success', 'Данные о вожатом удалены');
     }
 }

@@ -140,8 +140,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
-                                    <p>Список цен</p>
+                                <a href="{{ route('prices.index') }}" class="nav-link">
+                                    <p>Список прейскурантов</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('prices.create') }}" class="nav-link">
+                                    <p>Добавить прейскурант</p>
                                 </a>
                             </li>
                         </ul>
@@ -166,6 +171,9 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
+
+
+
         <section class="content-header">
             <div class="container-fluid">
                 @yield('content')

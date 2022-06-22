@@ -3,6 +3,20 @@
 @section('title', 'Список новостей')
 
 @section('content')
+
+    @if (session('error'))
+        <div class="alert alert-danger">
+            <li>{{ session('error') }}</li>
+        </div>
+    @endif
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            <li>{{ session('success') }}</li>
+        </div>
+    @endif
+
+
     <a href="{{ route('news.create') }}">Добавить новость</a>
 
     <table class="table table-striped projects">

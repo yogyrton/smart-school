@@ -38,8 +38,10 @@ class MainNewsController extends Controller
         $news = MainNews::query()->count();
         if ($news < 3) {
             MainNews::query()->create($request->all());
+            return redirect()->route('main_news.index')->with('success', 'Главная новость добавлена');
         }
         return redirect()->route('main_news.index')->with('error', 'Уже 3 главные новости');
+
     }
 
     /**
@@ -60,7 +62,8 @@ class MainNewsController extends Controller
         $news = MainNews::query()->find($id);
 
         $news->update($request->all());
-        return redirect()->route('main_news.index');
+
+        return redirect()->route('main_news.index')->with('success', 'Главная новость изменена');
     }
 
     /**
@@ -70,6 +73,6 @@ class MainNewsController extends Controller
     {
         MainNews::destroy($id);
 
-        return redirect()->route('main_news.index');
+        return redirect()->route('main_news.index')->with('success', 'Главная новость удалена');
     }
 }

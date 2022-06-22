@@ -29,4 +29,11 @@ class CounselorRequest extends FormRequest
             'camp' => 'nullable',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Поле "ФИО" должно быть заполнено',
+        ];
+    }
 }

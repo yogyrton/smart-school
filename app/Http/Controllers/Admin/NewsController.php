@@ -33,6 +33,7 @@ class NewsController extends Controller
      */
     public function store(NewsRequest $request)
     {
+        $request->validated();
 
         $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/news', 'public') : '';
 
@@ -42,7 +43,7 @@ class NewsController extends Controller
             'thumbnail' => $file,
         ]);
 
-        return redirect()->route('news.index');
+        return redirect()->route('news.index')->with('success', 'Новость успешно добавлена');
     }
 
 
@@ -59,8 +60,10 @@ class NewsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(NewsRequest $request, $id)
     {
+        $request->validated();
+
         $news = News::query()->find($id);
 
         $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/teachers', 'public') : $news->thumbnail;
@@ -71,7 +74,7 @@ class NewsController extends Controller
             'thumbnail' => $file,
         ]);
 
-        return redirect()->route('news.index');
+        return redirect()->route('news.index')->with('success', 'Новость успешно отредактирована');
     }
 
     /**
@@ -81,6 +84,6 @@ class NewsController extends Controller
     {
         News::destroy($id);
 
-        return redirect()->route('news.index');
+        return redirect()->route('news.index')->with('success', 'Новость удалена');
     }
 }

@@ -4,8 +4,10 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CounselorController;
 use App\Http\Controllers\Admin\MainNewsController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\PriceController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, 'index'])->name('home');
 
 Route::prefix('login')->group(function (){
     Route::get('/', [UserController::class, 'index'])->name('login');
@@ -35,6 +35,7 @@ Route::prefix('admin')->group(function (){
     Route::resource('teacher', TeacherController::class);
     Route::resource('news', NewsController::class);
     Route::resource('counselor', CounselorController::class);
+    Route::resource('prices', PriceController::class);
 });
 
 //Route::domain('test.urist-perevozki.by')->group(function(){
