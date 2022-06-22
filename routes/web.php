@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CounselorController;
 use App\Http\Controllers\Admin\MainNewsController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\TeacherController;
@@ -33,6 +34,7 @@ Route::prefix('admin')->group(function (){
     Route::resource('main_news', MainNewsController::class);
     Route::resource('teacher', TeacherController::class);
     Route::resource('news', NewsController::class);
+    Route::resource('counselor', CounselorController::class);
 });
 
 //Route::domain('test.urist-perevozki.by')->group(function(){

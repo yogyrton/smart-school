@@ -20,11 +20,11 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Заголовок</label>
+                                    <label for="exampleInputEmail1">Заголовок (обязательно)</label>
                                     <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $news->title }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Текст новости</label>
+                                    <label for="exampleInputPassword1">Текст новости (обязательно)</label>
                                     <input type="text" name="text" class="form-control" id="exampleInputPassword1" value="{{ $news->title }}">
                                 </div>
                             </div>

@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/admin/css/admin.css">
+    <link rel="stylesheet" href="/admin_assets/css/admin.css">
 
 </head>
 <body class="hold-transition login-page">
@@ -44,7 +44,7 @@
 </div>
 
 
-<script src="/admin/js/admin.js"></script>
+<script src="/admin_assets/js/admin.js"></script>
 
 </body>
 </html>

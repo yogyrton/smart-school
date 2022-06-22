@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Counselor;
 use App\Models\Admin\MainNews;
 use App\Models\Admin\News;
 use App\Models\Admin\Teacher;
@@ -16,7 +17,8 @@ class AdminController extends Controller
         $news = MainNews::query()->count();
         $teachers = Teacher::query()->count();
         $new = News::query()->count();
+        $counselors = Counselor::query()->count();
 
-        return view('admin.main', compact('news', 'teachers', 'new'));
+        return view('admin.main', compact('news', 'teachers', 'new', 'counselors'));
     }
 }
