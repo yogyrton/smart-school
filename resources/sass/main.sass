@@ -358,16 +358,15 @@ header
             .school-box-photo-1
                 background: #F4F2F7
                 border-radius: 12px
-                width: 654px
                 grid-column-start: 1
                 grid-column-end: 3
+                overflow: hidden
 
                 div
-                    width: 342px
+                    flex-grow: 1
 
             .school-box
                 background-color: #F4F2F7
-                // width: 312px
                 border-radius: 12px
                 padding: 40px
 
@@ -380,24 +379,16 @@ header
                 width: 654px
                 grid-column-start: 3
                 grid-column-end: 5
+                overflow: hidden
 
                 div
-                    width: 342px
+                    flex-grow: 1
 
 .school-box img,
 .school-box-photo-1 img,
 .school-box-photo-2 img
     width: 312px
-    height: 292px
-    border-radius: 12px 
-
-.school-box-photo-1 img,
-.school-box-photo-2 img
-    border-bottom-left-radius:12px
-    border-top-left-radius:12px
-    border-bottom-right-radius:0px
-    border-top-right-radius:0px
-
+    height: 100%
 
 .advantages
     .grid-wrapper
