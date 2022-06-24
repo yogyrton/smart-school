@@ -120,12 +120,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
+                                <a href="{{ route('documents.index') }}" class="nav-link">
                                     <p>Список документов</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
+                                <a href="{{ route('documents.create') }}" class="nav-link">
                                     <p>Добавить документ</p>
                                 </a>
                             </li>
@@ -141,12 +141,33 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="{{ route('prices.index') }}" class="nav-link">
-                                    <p>Список прейскурантов</p>
+                                    <p>Посмотреть прейскурант</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('prices.create') }}" class="nav-link">
                                     <p>Добавить прейскурант</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <p>
+                                Предыдущие смены
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('photos.index') }}" class="nav-link">
+                                    <p>Посмотреть фото</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('photos.create') }}" class="nav-link">
+                                    <p>Добавить фото</p>
                                 </a>
                             </li>
                         </ul>

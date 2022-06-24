@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 
-@section('title', 'Изменить вожатого')
+@section('title', 'Изменить фото')
 
 @section('content')
 
@@ -22,43 +22,31 @@
                     <!-- jquery validation -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Изменить вожатого</h3>
+                            <h3 class="card-title">Изменить фото</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form id="quickForm" novalidate="novalidate" action="{{ route('counselor.update', $id) }}"
-                              method="post" enctype="multipart/form-data">
+                        <form id="quickForm" novalidate="novalidate" action="{{ route('photos.update', $id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">ФИО (обязательно)</label>
-                                    <input type="text" name="name" class="form-control" id="exampleInputEmail1"
-                                           value="{{ $counselor->name }}">
-                                </div>
 
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Фото (необязательно)</label>
-                                    <input type="file" name="thumbnail" class="form-control-file"
-                                           id="exampleInputPassword1">
+                                    <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Выбрать лагерь (обязательно)</label>
 
                                     <div class="form-group">
-
-                                        <div class="form-group">
-                                            <label>Custom Select</label>
-                                            <select class="custom-select" name="camp">
-                                                <option value="{{ $counselor->camp }}">{{ $counselor->camp }}</option>
-                                                <option value="Жуков луг">Лагерь Жуков Луг</option>
-                                                <option value="Дримленд">Лагерь Дримленд</option>
-                                                <option value="Грузия">Лагерь в Грузии</option>
-                                            </select>
-                                        </div>
+                                        <select class="custom-select" name="camp">
+                                            <option value="{{ $photo->camp }}">{{ $photo->camp }}</option>
+                                            <option value="Жуков луг">Жуков Луг</option>
+                                            <option value="Дримленд">Дримленд</option>
+                                            <option value="Грузия">Грузия</option>
+                                        </select>
                                     </div>
-
                                 </div>
 
                             </div>
@@ -83,6 +71,7 @@
     </section>
 
 @endsection
+
 
 
 

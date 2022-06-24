@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 
-@section('title', 'Добавление вожатого')
+@section('title', 'Добавление документа')
 
 @section('content')
 
@@ -22,33 +22,21 @@
                 <!-- jquery validation -->
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Добавление вожатого</h3>
+                        <h3 class="card-title">Добавление документа</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form id="quickForm" novalidate="novalidate" action="{{ route('counselor.store') }}" method="post" enctype="multipart/form-data">
+                    <form id="quickForm" novalidate="novalidate" action="{{ route('documents.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">ФИО (обязательно)</label>
-                                <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Заголовок">
+                                <label for="exampleInputEmail1">Название (обязательно)</label>
+                                <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Заголовок">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Фото (необязательно)</label>
-                                <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Выбрать лагерь (обязательно)</label>
-
-                                <div class="form-group">
-                                    <select class="custom-select" name="camp">
-                                        <option value="Жуков луг">Лагерь Жуков Луг</option>
-                                        <option value="Дримленд">Лагерь Дримленд</option>
-                                        <option value="Грузия">Лагерь в Грузии</option>
-                                    </select>
-                                </div>
+                                <label for="exampleInputPassword1">Загрузить документ (обязательно)</label>
+                                <input type="file" name="path" class="form-control-file" id="exampleInputPassword1">
                             </div>
 
                         </div>
