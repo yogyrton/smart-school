@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CounselorController;
+use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\MainNewsController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PriceController;
@@ -28,14 +29,17 @@ Route::prefix('login')->group(function (){
     Route::post('login_process', [UserController::class, 'login'])->name('login_process');
 });
 
-Route::prefix('admin')->group(function (){
+Route::prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('main');
+
+    Route::get('/download/{id}', [DocumentController::class, 'download'])->name('download');
 
     Route::resource('main_news', MainNewsController::class);
     Route::resource('teacher', TeacherController::class);
     Route::resource('news', NewsController::class);
     Route::resource('counselor', CounselorController::class);
     Route::resource('prices', PriceController::class);
+    Route::resource('documents', DocumentController::class);
 });
 
 //Route::domain('test.urist-perevozki.by')->group(function(){

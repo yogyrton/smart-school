@@ -120,12 +120,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
+                                <a href="{{ route('documents.index') }}" class="nav-link">
                                     <p>Список документов</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
+                                <a href="{{ route('documents.create') }}" class="nav-link">
                                     <p>Добавить документ</p>
                                 </a>
                             </li>
