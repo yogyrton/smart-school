@@ -232,7 +232,7 @@
         </div>
 </section>
 
-<section class="priority">
+<section class="priority mb-160">
         <div class="container">
                 <h2 class="accentColor mb-60 pt-120">Вам точно к нам, если для вас важны</h2>
                 <div class="row d-flex priority-wrapper pb-100">
@@ -291,6 +291,140 @@
         </div>
 </section>
 
+<section id="teachers">
+        <div class="container">
+                <h2 class="accentColor mb-40">Команда профессиональных педагогов</h2>
+                <p class="text mb-60">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать информацию и любить сам процесс обучения.</p>
+                <div class="d-flex align-items-center justify-content-between position-relative teacher-wrapper">
+                        <div class="swiper">
+                                <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>
 
+<section id="replies" class="mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Отзывы</h2>
+                <div class="wrapper">
+
+                </div> 
+        </div>
+</section>
+
+<section id="news" class="mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Новости</h2>
+                <div class="wrapper">
+                        
+                </div> 
+        </div>
+</section>
+
+<section id="documents" class="mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Документы</h2>
+                <div class="wrapper row">
+                        <div class="col d-flex justify-content-between">
+                                <button class="document-button btn-doc text-bold">Документы для зачисления</button>
+                                <button class="document-button btn-doc text-bold">Образцы заявлений</button>
+                                <button class="document-button btn-doc text-bold">Свидетельство</button>
+                                <button class="document-button btn-doc text-bold">Лицензия</button>
+                                <button class="document-button btn-doc text-bold">Реквизиты</button>
+                                <button class="document-button btn-doc text-bold">Электронный журнал</button>
+                        </div>
+                </div> 
+        </div>
+</section>
+
+<section class="partners mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Наши партнеры</h2>
+                <div class="row">
+                        <div class="col">
+                                <div class="partners-wrapper d-flex align-items-center">
+                                        <img src="/img/partners/1.png" alt="partner-1">
+                                        <img src="/img/partners/2.png" alt="partner-2">
+                                        <img src="/img/partners/3.png" alt="partner-3">
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>
+
+<section class="contact">
+
+</section>
 @stop
 
