@@ -11,3 +11,13 @@ const swiper_1 = new Swiper('#head .swiper', {
         clickable: true
     }
 });
+
+const swiper_2 = new Swiper('#teachers .swiper', {
+    loop: false,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '#teachers .slider-button-next',
+        prevEl: '#teachers .slider-button-prev',
+    }
+});

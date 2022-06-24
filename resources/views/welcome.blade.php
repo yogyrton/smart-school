@@ -5,7 +5,7 @@
 
 <section id="head" class="head mb-160 position-relative">
         <div class="container">
-                <div class="row align-items-center">
+                <div class="row">
                         <div class="col-6 imgHead-box"> 
                                 <img src="/img/main/imgHead.png" alt="">
                                 <div class="pseudo"></div>
@@ -90,35 +90,58 @@
 <section class="school mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Школа</h2>
-                <div class="row justify-content-between">
-                        <div class="col-6 school-box-wrapper">
-                                <div class="school-box-inner">
-                                        <div class="school-box">Беларусь</div>
-                                        <div class="school-box">Онлайн</div>
-                                        <div class="school-box d-flex flex-column text-left">
-                                                        <h3 class="accentColor mb-24">Онлайн</h3>
-                                                        <p class="text">обучение на платформе Zoom</p>
-                                                        <a href="" class="button_2 text">Подробнее</a>
-                                        </div>
-                                        <div class="school-box d-flex flex-column text-left">
-                                                        <h3 class="accentColor mb-24">Россия</h3>
-                                                        <p class="text">обучение дистанционно на платформе Zoom</p>
-                                                        <a href="" class="button_2 text">Подробнее</a>
-                                        </div>
-                                </div>
-                        </div>
+                <div class="row">
+                        <div class="col">
+                                <div class="grid-box">
+                                
+                                        <!-- <div class="school-box">Беларусь</div>
+                                        <div class="school-box">Онлайн</div> -->
 
-                        <div class="col-6 school-box-wrapper">
-                                <div class="school-box-inner">
-                                        <div class="school-box d-flex flex-column text-left">
-                                                        <h3 class="accentColor mb-24">Грузия</h3>
-                                                        <p class="text">обучение в Батуми</p>
+                                        <div class="school-box-photo-1 d-flex">
+                                                
+                                                <img src="/img/school/photo1.png" alt="children-with-map">
+                                                
+                                                <div class="school-box d-flex flex-column text-left ">
+                                                        <h3 class="accentColor mb-24">Беларусь</h3>
+                                                        <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
+                                                        <p class="text flex-grow-1 mb-12">д. Жуков Луг (5 км от ст.м.Уручье)</p>
                                                         <a href="" class="button_2 text">Подробнее</a>
+                                                </div>
                                         </div>
-                                        <div class="school-box">Онлайн</div>
-                                        <div class="school-box">Школа</div>
-                                        <div class="school-box">Привет</div>
+
+                                        <div class="school-box d-flex flex-column text-left">
+                                                <h3 class="accentColor mb-24">Грузия</h3>
+                                                <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
+                                                <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+                                        <div class="school-box not-padding">
+                                                <img src="/img/school/photo2.png" alt="children-img">
+                                        </div>
+
+                                        <div class="school-box d-flex flex-column text-left">
+                                                <h3 class="accentColor mb-24">Онлайн</h3>
+                                                <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
+                                                <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+                                        
+                                        <div class="school-box d-flex flex-column text-left">
+                                                <h3 class="accentColor mb-24">Россия</h3>
+                                                <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
+                                                <a href="" class="button_2 text">Подробнее</a>
+                                        </div>
+
+                                        <div class="school-box-photo-2 d-flex">
+                                                <img src="/img/school/photo3.png" alt="children-with-map">
+                                                <div class="school-box d-flex flex-column text-left ">
+                                                        <h3 class="accentColor mb-24">Польша</h3>
+                                                        <p class="text flex-grow-1 mb-12">обучение по адресу:</br>ul.Ksieskiej, Wroclaw</p>
+                                                        <a href="" class="button_2 text">Подробнее</a>
+                                                </div>
+                                        </div>
+                                        
+                                        
                                 </div>
+                                
                         </div>
                 </div>
         </div>
@@ -209,7 +232,7 @@
         </div>
 </section>
 
-<section class="priority">
+<section class="priority mb-160">
         <div class="container">
                 <h2 class="accentColor mb-60 pt-120">Вам точно к нам, если для вас важны</h2>
                 <div class="row d-flex priority-wrapper pb-100">
@@ -249,18 +272,18 @@
                                                 </div>
                                         </div>
                                         <div class="priority-box d-flex mb-40">
-                                        <img src="/svg/plant.svg" alt="plant-img">
-                                        <div class="d-flex flex-column">
+                                                <img src="/svg/plant.svg" alt="plant-img">
+                                                <div class="d-flex flex-column">
                                                                 <h5 class="text-bold">ИСТОЧНИК ЗНАНИЙ</h5>
                                                                 <p class="text">Урок - практический эксперимент, где учитель приветствует сотрудничество и уважительное общение.</p>
+                                                </div>
                                         </div>
-                                        </div>
-                                        <div class="priority-box d-flex mb-40">
-                                        <img src="/svg/hand.svg" alt="hand-svg">
-                                        <div class="d-flex flex-column">
-                                                                <h5 class="text-bold">БЛАГОПОЛУЧИЕ И ЗДОРОВЬЕ</h5>
-                                                                <p class="text">Психологическое сопровождение и тренинги по авторской программе “Секрет успешного обучения”.</p>
-                                        </div>
+                                        <div class="priority-box d-flex">
+                                                <img src="/svg/hand.svg" alt="hand-svg">
+                                                <div class="d-flex flex-column">
+                                                        <h5 class="text-bold">БЛАГОПОЛУЧИЕ И ЗДОРОВЬЕ</h5>
+                                                        <p class="text">Психологическое сопровождение и тренинги по авторской программе “Секрет успешного обучения”.</p>
+                                                </div>
                                         </div>
                                 </div>
                         </div>
@@ -268,5 +291,140 @@
         </div>
 </section>
 
+<section id="teachers">
+        <div class="container">
+                <h2 class="accentColor mb-40">Команда профессиональных педагогов</h2>
+                <p class="text mb-60">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать информацию и любить сам процесс обучения.</p>
+                <div class="d-flex align-items-center justify-content-between position-relative teacher-wrapper">
+                        <div class="swiper">
+                                <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="teacher-box d-flex flex-column">
+                                                        <img class="mb-20" src="/img/teachers/teacher1.png" alt="teacher-1">
+                                                        <div class="teacher-description">
+                                                                <span class="teacher-post text grey mb-8">Учредитель</span>
+                                                                <h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
+                                                                <p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>
+
+<section id="replies" class="mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Отзывы</h2>
+                <div class="wrapper">
+
+                </div> 
+        </div>
+</section>
+
+<section id="news" class="mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Новости</h2>
+                <div class="wrapper">
+                        
+                </div> 
+        </div>
+</section>
+
+<section id="documents" class="mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Документы</h2>
+                <div class="wrapper row">
+                        <div class="col d-flex justify-content-between">
+                                <button class="document-button btn-doc text-bold">Документы для зачисления</button>
+                                <button class="document-button btn-doc text-bold">Образцы заявлений</button>
+                                <button class="document-button btn-doc text-bold">Свидетельство</button>
+                                <button class="document-button btn-doc text-bold">Лицензия</button>
+                                <button class="document-button btn-doc text-bold">Реквизиты</button>
+                                <button class="document-button btn-doc text-bold">Электронный журнал</button>
+                        </div>
+                </div> 
+        </div>
+</section>
+
+<section class="partners mb-160">
+        <div class="container">
+                <h2 class="accentColor mb-40">Наши партнеры</h2>
+                <div class="row">
+                        <div class="col">
+                                <div class="partners-wrapper d-flex align-items-center">
+                                        <img src="/img/partners/1.png" alt="partner-1">
+                                        <img src="/img/partners/2.png" alt="partner-2">
+                                        <img src="/img/partners/3.png" alt="partner-3">
+                                </div>
+                        </div>
+                </div>
+        </div>
+</section>
+
+<section class="contact">
+
+</section>
 @stop
 
