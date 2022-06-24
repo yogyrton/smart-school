@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CounselorController;
 use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\MainNewsController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\PriceController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\UserController;
@@ -40,6 +41,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('counselor', CounselorController::class);
     Route::resource('prices', PriceController::class);
     Route::resource('documents', DocumentController::class);
+    Route::resource('photos', PhotoController::class);
 });
 
 //Route::domain('test.urist-perevozki.by')->group(function(){
