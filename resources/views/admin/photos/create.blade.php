@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 
-@section('title', 'Добавление вожатого')
+@section('title', 'Добавить фото')
 
 @section('content')
 
@@ -22,20 +22,16 @@
                 <!-- jquery validation -->
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Добавление вожатого</h3>
+                        <h3 class="card-title">Добавить фото</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form id="quickForm" novalidate="novalidate" action="{{ route('counselor.store') }}" method="post" enctype="multipart/form-data">
+                    <form id="quickForm" novalidate="novalidate" action="{{ route('photos.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">ФИО (обязательно)</label>
-                                <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Заголовок">
-                            </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Фото (необязательно)</label>
+                                <label for="exampleInputPassword1">Фото (обязательно)</label>
                                 <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                             </div>
 
@@ -44,9 +40,9 @@
 
                                 <div class="form-group">
                                     <select class="custom-select" name="camp">
-                                        <option value="Жуков луг">Лагерь Жуков Луг</option>
-                                        <option value="Дримленд">Лагерь Дримленд</option>
-                                        <option value="Грузия">Лагерь в Грузии</option>
+                                        <option value="Жуков луг">Жуков Луг</option>
+                                        <option value="Дримленд">Дримленд</option>
+                                        <option value="Грузия">Грузия</option>
                                     </select>
                                 </div>
                             </div>

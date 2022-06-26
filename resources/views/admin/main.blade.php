@@ -4,6 +4,23 @@
 
 @section('content')
     <div class="row">
+
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-light">
+                <div class="inner">
+
+                    <h3>На стайт</h3>
+                    <p>Главная страница</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-person-add"></i>
+                </div>
+                <a href="{{ route('home') }}" class="small-box-footer" target="_blank">Подробнее</a>
+            </div>
+        </div>
+
+
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
@@ -48,6 +65,14 @@
             </div>
         </div>
         <!-- ./col -->
+
+        <!-- ./col -->
+    </div>
+
+
+
+    <div class="row">
+
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-danger">
@@ -60,6 +85,52 @@
                     <i class="ion ion-pie-graph"></i>
                 </div>
                 <a href="{{ route('counselor.index') }}" class="small-box-footer">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+                <div class="inner">
+                    <h3>{{ $doc }}</h3>
+                    <p>Блок документов</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a href="{{ route('documents.index') }}" class="small-box-footer">Подробнее</a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+                <div class="inner">
+
+                    <h3>{{ $price }}</h3>
+                    <p>Прейскурант цен</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="{{ route('prices.index') }}" class="small-box-footer">Подробнее</a>
+            </div>
+        </div>
+        <!-- ./col -->
+
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-dark">
+                <div class="inner">
+
+                    <h3>Фото</h3>
+                    <p>Предыдущие смены</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="{{ route('photos.index') }}" class="small-box-footer">Подробнее</a>
             </div>
         </div>
         <!-- ./col -->
