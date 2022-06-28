@@ -61,7 +61,7 @@ input, textarea
     font-weight: 600
 
 .container
-    width: 1320px
+    width: 1340px
     margin: 0 auto
     padding-right: 10px
     padding-left: 10px
@@ -71,6 +71,12 @@ input, textarea
 .h1, .h2, .h3, .h4, .h5, .h6, p
     margin-bottom: 0
     margin-top: 0
+
+.h1, h1, h2.h1
+    @media screen and (max-width: 1500px)
+        white-space: normal
+    @media screen and (max-width: 600px)
+        font-size: 32px
 
 h1, .h1 
     font-family: 'Rubik-SemiBold', sans-serif
@@ -230,20 +236,25 @@ header
 
     .logo
         position: relative
-        .header-rectangle
-            background-image: url('/svg/headerRectangle.svg')
-            background-repeat: no-repeat
-            top: -15px
-            left: -40px
-            position: absolute
-            width: 166.97px
-            height: 383px
-            z-index: -1
+        background-color: red
+        margin-right: 120px
+        // .header-rectangle
+        //     background-image: url('/svg/headerRectangle.svg')
+        //     background-repeat: no-repeat
+        //     top: -15px
+        //     left: -40px
+        //     position: absolute
+        //     width: 166.97px
+        //     height: 383px
+        //     z-index: -1
 
+    .header-navigation
+        margin-right: 55px 
     nav
-        width: 60%
-        li
-            margin: 0 48px 0 0
+            li
+                margin: 0 55px 0 0
+            .list-contacts
+                margin-right: 0 
     .header-contacts-messengers
         display: flex
         justify-content: space-between
