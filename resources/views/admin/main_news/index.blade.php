@@ -18,12 +18,15 @@
 
 
 
-    <a href="{{ route('main_news.create') }}">Добавить главную новость (не больше 3)</a>
+    <a href="{{ route('main_news.create') }}">Добавить главную новость (не больше 3 на каждую страницу)</a>
 
     <table class="table table-striped projects">
 
         <thead>
         <tr>
+            <th style="width: 20%">
+                Лагерь
+            </th>
             <th style="width: 20%">
                 Заголовок
             </th>
@@ -36,6 +39,9 @@
         <tbody>
         @foreach($news as $new)
             <tr>
+                <td>
+                    {{ $new->page }}
+                </td>
                 <td>
                     {{ $new->title }}
                 </td>

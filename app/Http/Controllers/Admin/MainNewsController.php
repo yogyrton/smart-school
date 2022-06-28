@@ -15,7 +15,7 @@ class MainNewsController extends Controller
      */
     public function index()
     {
-        $news = MainNews::all();
+        $news = MainNews::query()->orderBy('page')->get();
 
         return view('admin.main_news.index', compact('news'));
     }
@@ -35,12 +35,12 @@ class MainNewsController extends Controller
      */
     public function store(MainNewsRequest $request)
     {
-        $news = MainNews::query()->count();
+        $news = MainNews::query()->where('page', '=', $request->page)->count();
         if ($news < 3) {
             MainNews::query()->create($request->all());
             return redirect()->route('main_news.index')->with('success', 'Главная новость добавлена');
         }
-        return redirect()->route('main_news.index')->with('error', 'Уже 3 главные новости');
+        return redirect()->route('main_news.index')->with('error', "Уже 3 главные новости на странице: $request->page" );
 
     }
 

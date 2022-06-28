@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MainNewsRequest extends FormRequest
+class NewsUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,9 @@ class MainNewsRequest extends FormRequest
     public function rules()
     {
         return [
-                'title' => 'required|max:20',
-                'text' => 'required|max:80',
-                'page' => 'required',
+            'title' => 'required|max:20',
+            'text' => 'required|max:150',
+            'thumbnail' => 'nullable|image',
         ];
     }
 
@@ -36,8 +36,7 @@ class MainNewsRequest extends FormRequest
             'title.required' => 'Поле "Заголовок" должно быть заполнено',
             'title.max' => 'Поле "Заголовок" должно содержать не более 20 символов',
             'text.required' => 'Поле "Текст" должно быть заполнено',
-            'text.max' => 'Поле "Текст" должно содержать не более 80 символов',
-            'page.required' => 'Выберите лагерь',
+            'text.max' => 'Поле "Текст" должно содержать не более 150 символов',
         ];
     }
 }

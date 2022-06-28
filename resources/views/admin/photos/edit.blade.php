@@ -32,7 +32,7 @@
                             <div class="card-body">
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Фото (необязательно)</label>
+                                    <label for="exampleInputPassword1">Фото (необязательно, размер 426х426 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp))</label>
                                     <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 

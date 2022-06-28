@@ -33,9 +33,29 @@
                                 <label for="exampleInputEmail1">Заголовок (обязательно)</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Название заголовка">
                             </div>
+
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Текст новости (обязательно)</label>
                                 <input type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Выбрать страницу (обязательно)</label>
+
+                            <div class="form-group">
+                                <select class="custom-select" name="page">
+                                    <option value="Главная">Главная</option>
+                                    <option value="Школа Беларусь">Школа Беларусь</option>
+                                    <option value="Школа Беларусь 1-4">Школа Беларусь 1-4</option>
+                                    <option value="Школа Беларусь 5-11">Школа Беларусь 5-11</option>
+                                    <option value="Онлайн школа">Онлайн школа</option>
+                                    <option value="Школа Россия">Школа Россия</option>
+                                    <option value="Лагерь">Лагерь</option>
+                                    <option value="Лагерь Жуков Луг">Лагерь Жуков Луг</option>
+                                    <option value="Лагерь Дримленд">Лагерь Дримленд</option>
+                                    <option value="Лагерь в Грузии">Лагерь в Грузии</option>
+                                </select>
                             </div>
                         </div>
                         <!-- /.card-body -->

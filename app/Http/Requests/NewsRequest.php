@@ -24,11 +24,9 @@ class NewsRequest extends FormRequest
     public function rules()
     {
         return [
-            [
                 'title' => 'required|max:20',
                 'text' => 'required|max:150',
-                'thumbnail' => 'require|image',
-            ]
+                'thumbnail' => 'required|image',
         ];
     }
 
@@ -36,9 +34,10 @@ class NewsRequest extends FormRequest
     {
         return [
             'title.required' => 'Поле "Заголовок" должно быть заполнено',
-            'text.required' => 'Поле "Текст" должно быть заполнено',
             'title.max' => 'Поле "Заголовок" должно содержать не более 20 символов',
+            'text.required' => 'Поле "Текст" должно быть заполнено',
             'text.max' => 'Поле "Текст" должно содержать не более 150 символов',
+            'thumbnail.required' => 'Поле "Фото" должно быть заполнено',
         ];
     }
 }
