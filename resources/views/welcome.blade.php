@@ -291,10 +291,10 @@
         </div>
 </section>
 
-<section id="teachers">
+<section id="teachers" class="mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Команда профессиональных педагогов</h2>
-                <p class="text mb-60">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать информацию и любить сам процесс обучения.</p>
+                <p class="text mb-60 teachers-info">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать информацию и любить сам процесс обучения.</p>
                 <!-- <div class="d-flex align-items-center justify-content-between position-relative teacher-wrapper">
                         <div class="swiper">
                                 <div class="swiper-wrapper">
@@ -380,7 +380,8 @@
 							<div class="teacher-description">
 								<span class="teacher-post text grey mb-8">Учредитель</span>
 								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
-								<p  class="teacher-description text">Детский писатель, профессиональный медиатор, юрист</p>
+								<p  class="teacher-description text mb-8">Детский писатель, профессиональный медиатор, юрист</p>
+                                                                <p class="teacher-experience text grey">Стаж: 27 лет</p>
 							</div>
 						</div>
 					</div>

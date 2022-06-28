@@ -483,8 +483,8 @@ header
 
 
 #teachers
-    margin-bottom: 105px
-    p
+
+    .teachers-info
         max-width: 654px
 
     .teacher-wrapper 
@@ -513,10 +513,10 @@ header
     position: absolute
     width: 48px
     height: 48px
-    top: 60%
+    top: 50%
+    transform: translate(0, -50%) 
     -webkit-transform: translate(0, -50%)
     -ms-transform: translate(0, -50%)
-    transform: translate(0, -50%)
     border-radius: 50%
     border: 1px solid #8041FF
     z-index: 3
@@ -533,67 +533,69 @@ header
     content: ""
     width: 8px
     height: 2px
-    background-color: $accentColor
+    background-color: #8041FF
     position: absolute
     left: 50%
 
 
 .teacher-swiper__next::before,
 .teacher-swiper__prev::before 
+    transform: translate(-50%, 0) rotate(45deg)
     -webkit-transform: translate(-50%, 0) rotate(45deg)
     -ms-transform: translate(-50%, 0) rotate(45deg)
-    transform: translate(-50%, 0) rotate(45deg)
     top: 20px
+
 
 .teacher-swiper__next::after,
 .teacher-swiper__prev::after 
-    -webkit-transform: translate(-50%, 0) rotate(-45deg)
-    -ms-transform: translate(-50%, 0) rotate(-45deg)
     transform: translate(-50%, 0) rotate(-45deg)
     bottom: 20px
-
+    -webkit-transform: translate(-50%, 0) rotate(-45deg)
+    -ms-transform: translate(-50%, 0) rotate(-45deg)
 
 .teacher-swiper__next.swiper-button-disabled,
 .teacher-swiper__prev.swiper-button-disabled 
     opacity: 0
     visibility: hidden
 
+
 .teacher-swiper__prev 
-    left: -110px
+    left: -76px
+    transform: translate(0, -50%) rotate(180deg)
     -webkit-transform: translate(0, -50%) rotate(180deg)
     -ms-transform: translate(0, -50%) rotate(180deg)
-    transform: translate(0, -50%) rotate(180deg)
 
 
 .teacher-swiper__next 
-    right: -110px
+    right: -76px
+
 
 .swiper-vertical .swiper-wrapper 
-  -webkit-box-orient: vertical
-  -webkit-box-direction: normal
-  -ms-flex-direction: column
-  flex-direction: column
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
 
 
 .swiper-autoheight .swiper-wrapper 
-  -webkit-box-align: start
-      -ms-flex-align: start
-          align-items: flex-start
+    -webkit-box-align: start
+    -ms-flex-align: start
+    align-items: flex-start
 
 
 .swiper-initialized .swiper-slide 
-  -ms-flex-negative: 0
-      flex-shrink: 0
+    -ms-flex-negative: 0
+    flex-shrink: 0
 
 
 .swiper-android .swiper-slide,
 .swiper-android .swiper-wrapper 
-  -webkit-transform: translate3d(0px, 0, 0)
-          transform: translate3d(0px, 0, 0)
+    -webkit-transform: translate3d(0px, 0, 0)
+    transform: translate3d(0px, 0, 0)
 
 
 .swiper-button-lock 
-  display: none !important
+    display: none !important
 
 
 .partners-wrapper
