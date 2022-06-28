@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CounselorRequest extends FormRequest
+class TeacheUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,8 +25,11 @@ class CounselorRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'thumbnail' => 'required|image',
-            'camp' => 'required',
+            'position' => 'nullable',
+            'category' => 'nullable',
+            'experience' => 'nullable',
+            'thumbnail' => 'nullable|image',
+            'point' => 'required|integer',
         ];
     }
 
@@ -34,8 +37,9 @@ class CounselorRequest extends FormRequest
     {
         return [
             'name.required' => 'Поле "ФИО" должно быть заполнено',
-            'thumbnail.required' => 'Поле "Фото" должно быть заполнено',
-            'camp.required' => 'Поле "Лагерь" должно быть заполнено',
+            'point.required' => 'Поле "Позиция показа" должно быть заполнено',
+            'point.integer' => 'Поле "Позиция показа" должно быть числом',
+
         ];
     }
 }

@@ -17,6 +17,7 @@ class CreateMainNewsTable extends Migration
             $table->id();
             $table->string('title', 20);
             $table->string('text', 80);
+            $table->string('page');
             $table->timestamps();
         });
     }

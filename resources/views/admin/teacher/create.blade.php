@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Фото (обязательно)</label>
+                                <label for="exampleInputPassword1">Фото (обязательно, размер 312x312 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
                                 <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1" placeholder="Текст новости">
                             </div>
 

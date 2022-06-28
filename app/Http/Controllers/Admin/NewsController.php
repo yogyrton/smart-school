@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsRequest;
+use App\Http\Requests\NewsUpdateRequest;
 use App\Models\Admin\News;
 use App\Models\Admin\Teacher;
 use Illuminate\Http\Request;
@@ -33,9 +34,7 @@ class NewsController extends Controller
      */
     public function store(NewsRequest $request)
     {
-        $request->validated();
-
-        $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/news', 'public') : '';
+        $file = $request->file('thumbnail')->store('img/news', 'public');
 
         News::query()->create([
             'title' => $request->title,
@@ -60,9 +59,8 @@ class NewsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(NewsRequest $request, $id)
+    public function update(NewsUpdateRequest $request, $id)
     {
-        $request->validated();
 
         $news = News::query()->find($id);
 

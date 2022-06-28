@@ -32,7 +32,7 @@ class CounselorController extends Controller
      */
     public function store(CounselorRequest $request)
     {
-        $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/counselor', 'public') : '';
+        $file = $request->file('thumbnail')->store('img/counselor', 'public');
 
         Counselor::query()->create([
            'name' => $request->name,

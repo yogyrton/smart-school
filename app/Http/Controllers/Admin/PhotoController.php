@@ -33,8 +33,6 @@ class PhotoController extends Controller
      */
     public function store(PhotoCreateRequest $request)
     {
-        $request->validated();
-
         $file = $request->file('thumbnail')->store('img/photos', 'public');
 
         Photo::query()->create([
@@ -60,8 +58,6 @@ class PhotoController extends Controller
      */
     public function update(PhotoUpdateRequest $request, $id)
     {
-        $request->validated();
-
         $photo = Photo::query()->find($id);
 
         $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/photos', 'public') : $photo->thumbnail;

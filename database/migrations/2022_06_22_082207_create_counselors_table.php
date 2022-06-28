@@ -16,7 +16,7 @@ class CreateCounselorsTable extends Migration
         Schema::create('counselors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('thumbnail')->nullable();
+            $table->string('thumbnail');
             $table->string('camp');
             $table->timestamps();
         });

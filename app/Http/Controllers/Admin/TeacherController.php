@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\TeacherRequest;
+use App\Http\Requests\TeacherCreateRequest;
+use App\Http\Requests\TeacheUpdateRequest;
 use App\Models\Admin\MainNews;
 use App\Models\Admin\Teacher;
 use Illuminate\Http\Request;
@@ -32,7 +33,7 @@ class TeacherController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(TeacherRequest $request)
+    public function store(TeacherCreateRequest $request)
     {
         $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/teachers', 'public') : '';
 
@@ -62,7 +63,7 @@ class TeacherController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(TeacherRequest $request, $id)
+    public function update(TeacheUpdateRequest $request, $id)
     {
 
         $teacher = Teacher::query()->find($id);
