@@ -11,8 +11,9 @@
                 <div class="col-md-12">
                     <!-- jquery validation -->
                     <div class="card card-primary">
-                        <!-- /.card-header -->
-                        <!-- form start -->
+                        <div class="card-header">
+                            <h3 class="card-title">Добавить прайс (только числа, без отрицательных и десятичных)</h3>
+                        </div>
                         <form id="quickForm" novalidate="novalidate" action="{{ route('prices.update', $id) }}" method="post">
                             @csrf
                             @method('PUT')

@@ -30,17 +30,17 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Заголовок (необязательно)</label>
+                                <label for="exampleInputEmail1">Заголовок (обязательно)</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Заголовок">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Текст новости (необязательно)</label>
+                                <label for="exampleInputPassword1">Текст новости (обязательно)</label>
                                 <input type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Фото (необязательно)</label>
+                                <label for="exampleInputPassword1">Фото (обязательно, размер 312х234 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
                                 <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                             </div>
 
