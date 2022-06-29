@@ -395,8 +395,17 @@
 <section id="replies" class="mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Отзывы</h2>
-                <div class="wrapper">
-
+                <div class="d-flex align-items-center justify-content-between replies-wrapper">
+                        <div class="swiper replies-swiper">
+                                <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="/img/replies/reply1.png" alt="reply-1"></div>
+                                        <div class="swiper-slide"><img src="/img/replies/reply2.png" alt="reply-2"></div>
+                                        <div class="swiper-slide"><img src="/img/replies/reply3.png" alt="reply-3"></div>
+                                        <div class="swiper-slide"><img src="/img/replies/reply3.png" alt="reply-3"></div>
+                                </div>
+                                <div class="replies-swiper__next"></div>
+                                <div class="replies-swiper__prev"></div>
+                        </div>
                 </div> 
         </div>
 </section>

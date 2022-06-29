@@ -1,7 +1,8 @@
 require('./bootstrap');
 
 import Swiper from 'swiper/bundle';
-import TeachersSlider from './TeachersSlider'
+import TeachersSlider from './TeachersSlider';
+import RepliesSlider from './RepliesSlider'
 
 const swiper_1 = new Swiper('#head .swiper', {
     loop: false,
