@@ -524,15 +524,15 @@
 
 <section id="order-section">
         <div class="container">
-                <div class="row">
-                        <div class="col-lg-4 d-flex flex-column contacts block-1">
-                                <h2 class="accentColor">Контакты</h2>
+                <div class="row justify-content-between">
+                        <div class="col-lg-4 d-flex flex-column contacts-wrapper">
+                                <h2 class="accentColor contacts-title">Контакты</h2>
                                 <div></div>
                                 <div></div>
                                 <div></div>
                         </div>
-                        <div class="col-lg-6 block2 position-relative">
-                                <h2 class="accentColor">Запишите ребенка на обучение в Smart School!</h2>
+                        <div class="col-lg-6 position-relative">
+                                <h2 class="accentColor order-title">Запишите ребенка на обучение в Smart School!</h2>
                                 <p></p>
                                 <form action=""></form>
                         </div>

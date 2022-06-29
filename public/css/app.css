@@ -11759,3 +11759,8 @@ header .dropdown-toggle::after {
 #news .news-swiper__next {
   right: -90px;
 }
+
+#order-section .contacts-title,
+#order-section .order-title {
+  margin-bottom: 28px;
+}
