@@ -522,18 +522,24 @@
         </div>
 </section>
 
-<section class="contacts">
+<section id="order-section">
         <div class="container">
-                <div class="row d-flex justify-between">
-                        <div class="col-4 d-flex flex-column block1">
-                                hi
+                <div class="row">
+                        <div class="col-lg-4 d-flex flex-column contacts block-1">
+                                <h2 class="accentColor">Контакты</h2>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                         </div>
-                        <div class="col-6 block2">
-                                hi
+                        <div class="col-lg-6 block2 position-relative">
+                                <h2 class="accentColor">Запишите ребенка на обучение в Smart School!</h2>
+                                <p></p>
+                                <form action=""></form>
                         </div>
                 </div>
                 
         </div>
 </section>
+
 @stop
 
