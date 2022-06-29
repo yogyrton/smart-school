@@ -32,21 +32,6 @@
                                                                                 <p class="head-text text">Приглашаем учеников <span class="text-bold">1-11 классов</span> в наш <span class="text-bold">НОВЫЙ ФИЛИАЛ</span> по адресу: Минск, ул. Орловская, 80 (Dreamland)</p>
                                                                         </div>
                                                                 </div>
-                                                                <!-- <div class="swiper-slide">
-                                                                                <div class="advt-box">
-                                                                                        <h5 class="accentColor">Внимание!</h5>
-                                                                                        <p class="head-text text">Приглашаем учеников <span class="text-bold">1-11 классов</span> в наш <span class="text-bold">НОВЫЙ ФИЛИАЛ</span> по адресу: Минск, ул. Орловская, 80 (Dreamland)</p>
-                                                                                </div>
-                                                                        
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                        
-                                                                                <div class="advt-box">
-                                                                                        <h5 class="accentColor">Внимание!</h5>
-                                                                                        <p class="head-text text">Приглашаем учеников <span class="text-bold">1-11 классов</span> в наш <span class="text-bold">НОВЫЙ ФИЛИАЛ</span> по адресу: Минск, ул. Орловская, 80 (Dreamland)</p>
-                                                                                </div>
-                                                                        
-                                                                </div> -->
                                                         
                                                         </div>
                                                 </div>
@@ -414,8 +399,95 @@
         <div class="container">
                 <h2 class="accentColor mb-40">Новости</h2>
                 <div class="wrapper">
-                        
-                </div> 
+                <div class="d-flex align-items-center justify-content-between news-wrapper">
+                        <div class="swiper news-swiper">
+                                <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                                <div class="news-box d-flex flex-column">
+                                                        <div class="news__image-ibg">
+                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
+                                                        </div>
+                                                        <div class="news-description">
+                                                                        <span class="news-date grey mb-12">09.06.2022</span>
+                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
+                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
+                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
+                                                        </div>
+                                                </div>
+                                        </div> 
+                                        <!-- <div class="swiper-slide">
+                                                <div class="news-box d-flex flex-column">
+                                                        <div class="news__image-ibg">
+                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
+                                                        </div>
+                                                        <div class="news-description">
+                                                                        <span class="news-date grey mb-12">09.06.2022</span>
+                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
+                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
+                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="news-box d-flex flex-column">
+                                                        <div class="news__image-ibg">
+                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
+                                                        </div>
+                                                        <div class="news-description">
+                                                                        <span class="news-date grey mb-12">09.06.2022</span>
+                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
+                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
+                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="news-box d-flex flex-column">
+                                                        <div class="news__image-ibg">
+                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
+                                                        </div>
+                                                        <div class="news-description">
+                                                                        <span class="news-date grey mb-12">09.06.2022</span>
+                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
+                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
+                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="news-box d-flex flex-column">
+                                                        <div class="news__image-ibg">
+                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
+                                                        </div>
+                                                        <div class="news-description">
+                                                                        <span class="news-date grey mb-12">09.06.2022</span>
+                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
+                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
+                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                                <div class="news-box d-flex flex-column">
+                                                        <div class="news__image-ibg">
+                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
+                                                        </div>
+                                                        <div class="news-description">
+                                                                        <span class="news-date grey mb-12">09.06.2022</span>
+                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
+                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
+                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
+                                                        </div>
+                                                </div>
+                                        </div> -->
+                                        
+                                </div> 
+                                        
+                                </div>
+                                <div class="news-swiper__next"></div>
+                                <div class="news-swiper__prev"></div>
+                        </div>
+                </div>
         </div>
 </section>
 

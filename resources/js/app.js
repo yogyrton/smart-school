@@ -2,7 +2,8 @@ require('./bootstrap');
 
 import Swiper from 'swiper/bundle';
 import TeachersSlider from './TeachersSlider';
-import RepliesSlider from './RepliesSlider'
+import RepliesSlider from './RepliesSlider';
+import NewsSlider from './NewsSlider';
 
 const swiper_1 = new Swiper('#head .swiper', {
     loop: false,
@@ -13,6 +14,8 @@ const swiper_1 = new Swiper('#head .swiper', {
         clickable: true
     }
 });
+
+
 
 
 

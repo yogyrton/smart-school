@@ -689,3 +689,105 @@ header
 
     .replies-swiper__next 
         right: -90px
+
+#news
+
+    .image-in-slider
+        height: 200px
+
+    .image-in-slider img
+        max-width: 100%
+
+    .news-description 
+        width: 312px
+
+        span
+            font-size: 12px
+            line-height: 18px
+            font-weight: 400
+            font-family: 'Rubik-Regular', sans-serif
+
+        .news-title
+            font-size: 20px
+            line-height: 24px
+
+    .swiper
+        position: static //??
+
+    .news-wrapper 
+        position: relative
+
+    .teacher__image-ibg 
+        width: 100%
+
+    .teacher__image-ibg img 
+        border-radius: 16px
+        object-fit: cover
+
+    .swiper-wrapper 
+        width: 100%
+        height: 100%
+        -webkit-box-sizing: content-box
+        box-sizing: content-box
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        position: relative
+
+    .news-swiper__next,
+    .news-swiper__prev 
+        position: absolute
+        width: 48px
+        height: 48px
+        top: 50%
+        transform: translate(0, -50%) 
+        -webkit-transform: translate(0, -50%)
+        -ms-transform: translate(0, -50%)
+        border-radius: 50%
+        border: 1px solid #8041FF
+        z-index: 3
+        cursor: pointer
+        -webkit-transition: all 0.3s ease 0s
+        -o-transition: all 0.3s ease 0s
+        transition: all 0.3s ease 0s
+
+    .news-swiper__next::before,
+    .news-swiper__next::after,
+    .news-swiper__prev::before,
+    .news-swiper__prev::after 
+        content: ""
+        width: 8px
+        height: 2px
+        background-color: #8041FF
+        position: absolute
+        left: 50%
+
+
+    .news-swiper__next::before,
+    .news-swiper__prev::before 
+        transform: translate(-50%, 0) rotate(45deg)
+        -webkit-transform: translate(-50%, 0) rotate(45deg)
+        -ms-transform: translate(-50%, 0) rotate(45deg)
+        top: 20px
+
+
+    .news-swiper__next::after,
+    .news-swiper__prev::after 
+        transform: translate(-50%, 0) rotate(-45deg)
+        bottom: 20px
+        -webkit-transform: translate(-50%, 0) rotate(-45deg)
+        -ms-transform: translate(-50%, 0) rotate(-45deg)
+
+    .news-swiper__next.swiper-button-disabled,
+    .news-swiper__prev.swiper-button-disabled 
+        opacity: 0
+        visibility: hidden
+
+    .news-swiper__prev 
+        left: -76px
+        transform: translate(0, -50%) rotate(180deg)
+        -webkit-transform: translate(0, -50%) rotate(180deg)
+        -ms-transform: translate(0, -50%) rotate(180deg)
+
+    .news-swiper__next 
+        right: -90px
