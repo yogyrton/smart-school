@@ -10944,11 +10944,13 @@ body {
 
 a {
   text-decoration: none;
+  color: #130A25;
 }
 
 a:hover {
   transition: 0.5s;
   text-decoration: none;
+  color: #130A25;
 }
 
 ul li, ol li {
@@ -10998,7 +11000,7 @@ input, textarea {
 }
 
 .container {
-  width: 1340px;
+  width: 1360px;
   margin: 0 auto;
   padding-right: 10px;
   padding-left: 10px;
@@ -11113,6 +11115,7 @@ button {
 
 .btn-purple {
   background-color: #8041FF;
+  border: 1px solid #8041FF;
 }
 
 .btn-purple:hover {
@@ -11237,7 +11240,7 @@ header {
 header .logo {
   position: relative;
   background-color: red;
-  margin-right: 120px;
+  margin-right: 128px;
 }
 header .header-navigation {
   margin-right: 55px;
@@ -11249,10 +11252,8 @@ header nav .list-contacts {
   margin-right: 0;
 }
 header .header-contacts-messengers {
-  display: flex;
-  justify-content: space-between;
+  gap: 16px;
   align-items: center;
-  width: 140px;
 }
 header a {
   color: #130A25;
@@ -11760,7 +11761,116 @@ header .dropdown-toggle::after {
   right: -90px;
 }
 
-#order-section .contacts-title,
-#order-section .order-title {
+#order-section #order-section img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#order-section .contacts-wrapper {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Rubik-Regular", sans-serif;
+}
+#order-section .contacts-wrapper .contacts-title,
+#order-section .contacts-wrapper .order-title {
   margin-bottom: 28px;
+}
+#order-section .contacts-wrapper .subtitle {
+  max-width: 435px;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+#order-section .contacts-wrapper .contacts-info {
+  gap: 8px;
+  align-items: center;
+}
+#order-section .contacts-wrapper .contacts-mail {
+  padding-left: 34px;
+  position: relative;
+  margin-bottom: 28px;
+}
+#order-section .contacts-wrapper .contacts-mail::before {
+  content: "";
+  position: absolute;
+  background-image: url("/svg/letter.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  left: 2px;
+  top: 4px;
+}
+#order-section .contacts-wrapper .contacts-socials {
+  gap: 12px;
+}
+#order-section .contacts-wrapper .contacts-socials .contacts-socials-link {
+  padding: 12px;
+  background: #F4F2F7;
+  border-radius: 100px;
+}
+#order-section .contacts-wrapper .contacts-location,
+#order-section .contacts-wrapper .contacts-timetable {
+  padding-left: 34px;
+  position: relative;
+}
+#order-section .contacts-wrapper .contacts-location::before {
+  content: "";
+  position: absolute;
+  background-image: url("/svg/location.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  left: 2px;
+  top: -3px;
+}
+#order-section .contacts-wrapper .contacts-timetable::before {
+  content: "";
+  position: absolute;
+  background-image: url("/svg/time.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  left: 2px;
+  top: -1px;
+}
+
+.footer {
+  background: #FFFFFF;
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.07);
+  padding: 40px 0;
+}
+.footer .logo {
+  background-color: red;
+  margin-right: 120px;
+}
+.footer .footer-inner {
+  display: grid;
+  grid-template-columns: repeat(5, 141px);
+  grid-template-rows: auto;
+  grid-column-gap: 110px;
+  justify-items: start;
+}
+.footer .footer-inner .footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-inner .footer-box .footer-list-item {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Rubik-Regular", sans-serif;
+}
+.footer .footer-inner .footer-box .footer-list-item:last-child {
+  margin-bottom: 0;
+}
+.footer .footer-inner .footer-box .footer-list-item a {
+  color: #605F5F;
+}
+.footer .footer-inner .footer-box .footer-socials {
+  gap: 16px;
+}
+.footer address {
+  margin-left: 195px;
+  color: #605F5F;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Rubik-Regular", sans-serif;
 }

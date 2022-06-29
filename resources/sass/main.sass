@@ -14,10 +14,12 @@ body
 
 a
     text-decoration: none
+    color: $text
 
 a:hover
     transition: .5s
     text-decoration: none
+    color: $text
 
 ul, ol
     li
@@ -61,7 +63,7 @@ input, textarea
     font-weight: 600
 
 .container
-    width: 1340px
+    width: 1360px
     margin: 0 auto
     padding-right: 10px
     padding-left: 10px
@@ -156,6 +158,7 @@ button
 
 .btn-purple 
     background-color: $accentColor
+    border: 1px solid #8041FF
 
 .btn-purple:hover
     background-color: transparent
@@ -237,7 +240,7 @@ header
     .logo
         position: relative
         background-color: red
-        margin-right: 120px
+        margin-right: 128px
         // .header-rectangle
         //     background-image: url('/svg/headerRectangle.svg')
         //     background-repeat: no-repeat
@@ -254,12 +257,10 @@ header
             li
                 margin: 0 55px 0 0
             .list-contacts
-                margin-right: 0 
+                margin-right: 0
     .header-contacts-messengers
-        display: flex
-        justify-content: space-between
+        gap: 16px
         align-items: center
-        width: 140px
     a
         color: $text
         white-space: nowrap
@@ -793,7 +794,104 @@ header
         right: -90px
 
 #order-section
-    .contacts-title,
-    .order-title
-        margin-bottom: 28px
+
+    #order-section img
+        object-fit: contain
+    .contacts-wrapper
+        font-size: 20px
+        line-height: 24px
+        font-family: 'Rubik-Regular', sans-serif
+        .contacts-title,
+        .order-title
+            margin-bottom: 28px
+        .subtitle 
+            max-width: 435px
+            margin-bottom: 28px
+            font-weight: 400
+        .contacts-info
+            gap: 8px
+            align-items: center
+        .contacts-mail
+            padding-left: 34px
+            position: relative
+            margin-bottom: 28px
+        .contacts-mail::before
+            content:""
+            position: absolute
+            background-image: url('/svg/letter.svg')
+            background-repeat: no-repeat
+            width: 24px
+            height: 24px
+            left: 2px
+            top: 4px
+        .contacts-socials
+            gap: 12px
+            .contacts-socials-link
+                padding: 12px
+                background: #F4F2F7
+                border-radius: 100px
+        .contacts-location,
+        .contacts-timetable
+            padding-left: 34px
+            position: relative
+        .contacts-location::before
+            content:""
+            position: absolute
+            background-image: url('/svg/location.svg')
+            background-repeat: no-repeat
+            width: 24px
+            height: 24px
+            left: 2px
+            top: -3px
+        .contacts-timetable::before
+            content:""
+            position: absolute
+            background-image: url('/svg/time.svg')
+            background-repeat: no-repeat
+            width: 24px
+            height: 24px
+            left: 2px
+            top: -1px
+
+.footer
+    background: #FFFFFF
+    box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.07)
+    padding: 40px 0
+    .logo
+        background-color: red
+        margin-right: 120px
+    .footer-inner
+        display: grid
+        grid-template-columns: repeat(5, 141px)
+        grid-template-rows: auto
+        grid-column-gap: 110px
+        justify-items: start
+
+        .footer-box
+            display: flex
+            flex-direction: column
+
+            .footer-list-item
+                margin-bottom: 12px
+                font-size: 16px
+                line-height: 24px
+                font-family: 'Rubik-Regular', sans-serif
+
+            .footer-list-item:last-child
+                margin-bottom: 0
+
+            .footer-list-item a
+                color: $grey
+
+            .footer-socials
+                gap: 16px
+
+    address
+        margin-left: 195px
+        color: $grey
+        font-size: 16px
+        line-height: 24px
+        font-family: 'Rubik-Regular', sans-serif
+        
+
 
