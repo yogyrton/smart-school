@@ -6,11 +6,11 @@
 <section id="head" class="head mb-160 position-relative">
         <div class="container">
                 <div class="row">
-                        <div class="col-6 imgHead-box"> 
+                        <div class="col-6 imgHead-box">
                                 <img src="/img/main/imgHead.png" alt="">
                                 <div class="pseudo"></div>
                         </div>
-                
+
                         <div class="col-6">
                                 <div class="head-inner mb-80">
                                         <h1 class="h1 pb-48">
@@ -27,31 +27,29 @@
                                                 <div class="swiper">
                                                         <div class="swiper-wrapper">
                                                                 <div class="swiper-slide">
-                                                                        <div class="advt-box">
                                                                                 <h5 class="accentColor">Внимание!</h5>
                                                                                 <p class="head-text text">Приглашаем учеников <span class="text-bold">1-11 классов</span> в наш <span class="text-bold">НОВЫЙ ФИЛИАЛ</span> по адресу: Минск, ул. Орловская, 80 (Dreamland)</p>
-                                                                        </div>
                                                                 </div>
-                                                        
+
                                                         </div>
                                                 </div>
                                                 <div class="swiper-pagination"></div>
                                         </div>
-                                        
+
                                 </div>
-                        
-                                
+
+
                         </div>
 
                 </div>
         </div>
-        
+
 </section>
 
 <section class="history mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">История</h2>
-                
+
                         <div class="row align-items-center justify-content-between">
                                 <div class=" col-7 text history-text-box">
                                         <p class="pb-10">
@@ -59,16 +57,16 @@
 
                                         <p class="pb-10">Опыт профессиональной команды методистов и психологов в создании данной программы, а также организация огромного количества смен детских лагерей под брендом «Фабрика звезд», знание лучших методик обучения, длительная коммуникация с родителями о действующей системе образования, ее достоинствах и недостатках, стали толчком для открытия в 2020 году частной школы "Смарт Скул", учредитель которой - детский писатель, юрист и медиатор Елена Пушкина. И именно программа "Секрет успешного обучения" легла в основу методологии "Смарт образования", которая используется в нашей школе.</p>
 
-                                        <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше. 
+                                        <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше.
                                         </p>
                                 </div>
                                 <div class="col-5 text">
                                         <img src="/img/main/history.png" alt="history-img">
                                 </div>
                         </div>
-                
-                
-                
+
+
+
         </div>
 </section>
 
@@ -102,7 +100,7 @@
                                                 <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
                                                 <a href="" class="button_2 text">Подробнее</a>
                                         </div>
-                                        
+
                                         <div class="school-box d-flex flex-column text-left">
                                                 <h3 class="accentColor mb-24">Россия</h3>
                                                 <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
@@ -117,8 +115,8 @@
                                                         <a href="" class="button_2 text">Подробнее</a>
                                                 </div>
                                         </div>
-                                        
-                                        
+
+
                                 </div>
                         </div>
                 </div>
@@ -238,7 +236,7 @@
                                                 </div>
                                         </div>
                                 </div>
-                                
+
                         </div>
                         <div class="col-5">
                                 <div class="priority-inner">
@@ -343,7 +341,7 @@
 							</div>
 						</div>
 					</div>
-                                        
+
 			        </div>
                                 <div class="teacher-swiper__next"></div>
                                 <div class="teacher-swiper__prev"></div>
@@ -365,7 +363,7 @@
                                 <div class="replies-swiper__next"></div>
                                 <div class="replies-swiper__prev"></div>
                         </div>
-                </div> 
+                </div>
         </div>
 </section>
 
@@ -388,7 +386,7 @@
                                                                         <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
                                                         </div>
                                                 </div>
-                                        </div> 
+                                        </div>
                                         <!-- <div class="swiper-slide">
                                                 <div class="news-box d-flex flex-column">
                                                         <div class="news__image-ibg">
@@ -454,9 +452,9 @@
                                                         </div>
                                                 </div>
                                         </div> -->
-                                        
-                                </div> 
-                                        
+
+                                </div>
+
                                 </div>
                                 <div class="news-swiper__next"></div>
                                 <div class="news-swiper__prev"></div>
@@ -477,7 +475,7 @@
                                 <button class="document-button btn-doc text-bold">Реквизиты</button>
                                 <button class="document-button btn-doc text-bold">Электронный журнал</button>
                         </div>
-                </div> 
+                </div>
         </div>
 </section>
 
@@ -561,7 +559,7 @@
                                                         <div class="mb-12">
                                                                 <label for="contact_name">Представьтесь*</label>
                                                                 <input type="text" id="contact_name" name="contact_name" autocomplete="off" placeholder="Введите Ваше имя" class="w-100 text" required>
-                                                        </div> 
+                                                        </div>
 
                                                         <div class="mb-12">
                                                                 <label for="contact_phone">Телефон*</label>
@@ -582,7 +580,7 @@
                                 </form>
                         </div>
                 </div>
-                
+
         </div>
 </section>
 
