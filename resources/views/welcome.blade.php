@@ -4,14 +4,14 @@
 
 
 <section id="head" class="head mb-160 position-relative">
-        <div class="container">
+        <div class="container container-mob">
                 <div class="row">
-                        <div class="col-6 imgHead-box"> 
+                        <div class="d-none d-lg-block col-lg-6 imgHead-box"> 
                                 <img src="/img/main/imgHead.png" alt="">
                                 <div class="pseudo"></div>
                         </div>
                 
-                        <div class="col-6">
+                        <div class="col-lg-6">
                                 <div class="head-inner mb-80">
                                         <h1 class="h1 pb-48">
                                                 Международная сеть частных школ <span class="accentColor">Smart School</span>
@@ -49,11 +49,11 @@
 </section>
 
 <section class="history mb-160">
-        <div class="container">
+        <div class="container container-mob">
                 <h2 class="accentColor mb-40">История</h2>
                 
-                        <div class="row align-items-center justify-content-between">
-                                <div class=" col-7 text history-text-box">
+                        <div class="row align-items-start justify-content-between">
+                                <div class=" col-lg-7 text history-text-box">
                                         <p class="pb-10">
                                         В 2015 году при содействии лучших методистов Беларуси и Европы был открыт Инновационный Детский Образовательный Центр "Фабрика Звезд", на базе которого мы разработали уникальную программу для школьников по нейробике, кинезиологии и эмоциональному интеллекту «Секрет успешного обучения». <span class="text-bold">Наша методика позволяет эффективно, легко и быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span> </p>
 
@@ -62,8 +62,10 @@
                                         <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше. 
                                         </p>
                                 </div>
-                                <div class="col-5 text">
-                                        <img src="/img/main/history.png" alt="history-img">
+                                <div class="col-lg-5 text">
+                                        <div class="box-img">
+                                                <img src="/img/main/history.png" alt="history-img">
+                                        </div>
                                 </div>
                         </div>
                 
@@ -72,14 +74,16 @@
         </div>
 </section>
 
-<section class="school mb-160">
+<section class="school mb-160 ">
         <div class="container">
                 <h2 class="accentColor mb-40">Школа</h2>
                 <div class="row">
                         <div class="col">
                                 <div class="grid-box">
                                         <div class="school-box-photo-1 d-flex">
-                                                <img src="/img/school/photo1.png" alt="children-with-map">
+                                                <div class="img-box">
+                                                        <img src="/img/school/photo1.png" alt="children-with-map">
+                                                </div>
                                                 <div class="school-box d-flex flex-column text-left ">
                                                         <h3 class="accentColor mb-24">Беларусь</h3>
                                                         <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
@@ -110,7 +114,9 @@
                                         </div>
 
                                         <div class="school-box-photo-2 d-flex">
-                                                <img src="/img/school/photo3.png" alt="children-with-map">
+                                                <div class="img-box">
+                                                        <img src="/img/school/photo3.png" alt="children-with-map">
+                                                </div>
                                                 <div class="school-box d-flex flex-column text-left ">
                                                         <h3 class="accentColor mb-24">Польша</h3>
                                                         <p class="text flex-grow-1 mb-12">обучение по адресу:</br>ul.Ksieskiej, Wroclaw</p>
@@ -129,7 +135,7 @@
         <div class="container">
                 <h2 class="accentColor mb-40">Почему мы?</h2>
                 <div class="advantages row justify-content-between align-items-center">
-                        <div class="col-6 flex-column">
+                        <div class="col-lg-6 flex-column">
                                 <ul class="advantages-list-1">
                                         <li class="text mb-20 li"> <span class="text-bold ">«Смарт Скул» </span> — это официальное частное учреждение образования в Беларуси, России, Грузии, Польше.</li>
                                         <li class="text mb-20"><span class="text-bold ">Наша миссия</span>  - система образования, достойная наших детей.</li>
@@ -150,7 +156,7 @@
                                 <p class="text-bold mb-20">Смарт Скул – выбор заботливых родителей!</p>
                                 <p class="text-bold">Растем, развиваемся, взрослеем вместе со Смарт Скул!</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6">
                                 <div class="grid-wrapper">
                                         <a class="grid-box"><img src="/img/main/advantages/img1.png" alt="image-1">
                                                 <div class="overlay-title">
@@ -178,31 +184,31 @@
 <section class="info mb-160">
         <div class="container">
                 <div class="row d-flex">
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-6">
                                 <div class="d-flex flex-column align-items-center info-box">
                                         <img class="mb-20" src="/svg/calendar.svg" alt="calendar">
-                                        <h4 class="text-bold mb-16">5 лет</h4>
+                                        <h4 class="text-bold mb-16 text-center">5 лет</h4>
                                         <p class="text grey text-center">обучаем детей по нашим</br> авторским программам</p>
                                 </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-6">
                                 <div class="d-flex flex-column align-items-center  info-box">
                                         <img class="mb-20" src="/svg/group.svg" alt="calendar">
-                                        <h4 class="text-bold mb-16">453+ детей</h4>
+                                        <h4 class="text-bold mb-16 text-center">453+ детей</h4>
                                         <p class="text grey text-center">прошли обучение и выпустились из нашей школы</p>
                                 </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-6">
                                 <div class="d-flex flex-column align-items-center  info-box">
                                         <img class="mb-20" src="/svg/place.svg" alt="calendar">
-                                        <h4 class="text-bold mb-16">7 локаций</h4>
+                                        <h4 class="text-bold mb-16 text-center">7 локаций</h4>
                                         <p class="text grey text-center">предлагает наша школа для </br>обучения из разных точек мира</p>
                                 </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-6">
                                 <div class="d-flex flex-column align-items-center info-box">
                                         <img class="mb-20" src="/svg/study.svg" alt="calendar">
-                                        <h4 class="text-bold mb-16">73 преподавателя</h4>
+                                        <h4 class="text-bold mb-16 text-center">73 преподавателя</h4>
                                         <p class="text grey text-center">ведут обучение на профессиональном уровне</p>
                                 </div>
                         </div>
@@ -279,7 +285,7 @@
 				<div class="swiper-wrapper">
 				        <div class="swiper-slide">
 						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg"><img class="mb-20 " src="/img/teachers/teacher1.png" alt="teacher-1"></div>
+							<div class="teacher__image-ibg mb-20"><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
 							<div class="teacher-description">
 								<span class="teacher-post text grey mb-8">Учредитель</span>
 								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
@@ -290,7 +296,7 @@
 					</div>
                                         <div class="swiper-slide">
 						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg"><img class="mb-20 " src="/img/teachers/teacher1.png" alt="teacher-1"></div>
+							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
 							<div class="teacher-description">
 								<span class="teacher-post text grey mb-8">Учредитель</span>
 								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
@@ -301,7 +307,7 @@
 					</div>
                                         <div class="swiper-slide">
 						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg"><img class="mb-20 " src="/img/teachers/teacher1.png" alt="teacher-1"></div>
+							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
 							<div class="teacher-description">
 								<span class="teacher-post text grey mb-8">Учредитель</span>
 								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
@@ -312,7 +318,7 @@
 					</div>
                                         <div class="swiper-slide">
 						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg"><img class="mb-20 " src="/img/teachers/teacher1.png" alt="teacher-1"></div>
+							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
 							<div class="teacher-description">
 								<span class="teacher-post text grey mb-8">Учредитель</span>
 								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
@@ -323,7 +329,7 @@
 					</div>
                                         <div class="swiper-slide">
 						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg"><img class="mb-20 " src="/img/teachers/teacher1.png" alt="teacher-1"></div>
+							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
 							<div class="teacher-description">
 								<span class="teacher-post text grey mb-8">Учредитель</span>
 								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
@@ -334,7 +340,7 @@
 					</div>
                                         <div class="swiper-slide">
 						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg"><img class="mb-20 " src="/img/teachers/teacher1.png" alt="teacher-1"></div>
+							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
 							<div class="teacher-description">
 								<span class="teacher-post text grey mb-8">Учредитель</span>
 								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
@@ -378,21 +384,8 @@
                                 <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                                 <div class="news-box d-flex flex-column">
-                                                        <div class="news__image-ibg">
-                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
-                                                        </div>
-                                                        <div class="news-description">
-                                                                        <span class="news-date grey mb-12">09.06.2022</span>
-                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
-                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
-                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
-                                                        </div>
-                                                </div>
-                                        </div> 
-                                        <!-- <div class="swiper-slide">
-                                                <div class="news-box d-flex flex-column">
-                                                        <div class="news__image-ibg">
-                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
+                                                        <div class="news__image-ibg mb-20 ">
+                                                                <img src="/img/news/news1.png" alt="news-1">
                                                         </div>
                                                         <div class="news-description">
                                                                         <span class="news-date grey mb-12">09.06.2022</span>
@@ -402,59 +395,6 @@
                                                         </div>
                                                 </div>
                                         </div>
-                                        <div class="swiper-slide">
-                                                <div class="news-box d-flex flex-column">
-                                                        <div class="news__image-ibg">
-                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
-                                                        </div>
-                                                        <div class="news-description">
-                                                                        <span class="news-date grey mb-12">09.06.2022</span>
-                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
-                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
-                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                                <div class="news-box d-flex flex-column">
-                                                        <div class="news__image-ibg">
-                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
-                                                        </div>
-                                                        <div class="news-description">
-                                                                        <span class="news-date grey mb-12">09.06.2022</span>
-                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
-                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
-                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                                <div class="news-box d-flex flex-column">
-                                                        <div class="news__image-ibg">
-                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
-                                                        </div>
-                                                        <div class="news-description">
-                                                                        <span class="news-date grey mb-12">09.06.2022</span>
-                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
-                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
-                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                                <div class="news-box d-flex flex-column">
-                                                        <div class="news__image-ibg">
-                                                                <img class="mb-20 " src="/img/news/news1.png" alt="news-1">
-                                                        </div>
-                                                        <div class="news-description">
-                                                                        <span class="news-date grey mb-12">09.06.2022</span>
-                                                                        <h5 class="accentColor news-title text-bold mb-12">Внимание!</h5>
-                                                                        <p  class="news-text text mb-12">Открыт набор офлайн на 2022/2023 учебный год:Минск, ул. Орловская, 80 (Dreamland) – 1-11 классы.При бронировании до 1 июля 2022 года стоимость снижена и фиксируется на весь год!</p>
-                                                                        <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
-                                                        </div>
-                                                </div>
-                                        </div> -->
-                                        
                                 </div> 
                                         
                                 </div>
@@ -555,31 +495,8 @@
                         <div class="col-lg-6 position-relative order-box">
                                 <h2 class="accentColor order-title">Запишите ребенка на обучение в Smart School!</h2>
                                 <p class="order-box-description mb-40">Заполните данные ниже, и мы свяжемся с вами, предоставив все необходимые документы для записи, и обговорим все детали. </p>
-                                <form id="order" class="form">
-                                        <div class="row mb-40">
-                                                <div class="col-lg-6">
-                                                        <div class="mb-12">
-                                                                <label for="contact_name">Представьтесь*</label>
-                                                                <input type="text" id="contact_name" name="contact_name" autocomplete="off" placeholder="Введите Ваше имя" class="w-100 text" required>
-                                                        </div> 
-
-                                                        <div class="mb-12">
-                                                                <label for="contact_phone">Телефон*</label>
-                                                                <input type="text" title="+375 (25/29/33/44) XXX-XX-XX" autocomplete="off" pattern="\+375\s?[\(]{0,1}(25|29|33|44)[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="Введите номер телефона" id="contact_phone" name="contact_phone" class="w-100 input-mask__phone text" required>
-                                                        </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                        <div class="mb-12">
-                                                                <label for="contact_email">Email*</label>
-                                                                <input type="text" pattern="(\w+[.]?\w+?@\w+?\.[a-z]{2,4})" autocomplete="off" placeholder="Введите email для связи*"  id="contact_email" name="contact_email" class="w-100 input-mask__mail text">
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                                <label for="contact_msg">Есть вопросы? Напишите</label>
-                                                <textarea name="contact_msg" id="contact_msg" class="w-100"></textarea>
-                                        </div>
-                                </form>
+                                
+                                <app-form></app-form>
                         </div>
                 </div>
                 

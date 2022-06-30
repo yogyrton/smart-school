@@ -1,5 +1,10 @@
 require('./bootstrap');
 
+import Vue from 'vue';
+
+// Vue.component('app-form', require('./Form.vue'));
+
+
 import Swiper from 'swiper/bundle';
 import TeachersSlider from './TeachersSlider';
 import RepliesSlider from './RepliesSlider';
