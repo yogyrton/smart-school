@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CounselorRequest;
 use App\Models\Admin\Counselor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CounselorController extends Controller
 {
@@ -76,6 +77,10 @@ class CounselorController extends Controller
      */
     public function destroy($id)
     {
+        $couns = Counselor::query()->find($id);
+        $path = '/public/' . $couns->thumbnail;
+        Storage::delete($path);
+
         Counselor::destroy($id);
 
         return redirect()->route('counselor.index')->with('success', 'Данные о вожатом удалены');
