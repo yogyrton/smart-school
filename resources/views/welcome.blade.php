@@ -22,23 +22,26 @@
                                         </div>
                                 </div>
                         
-
-                <div class="position-relative swiper-box">
-                        <div class="position-relative container-slider-pagination">
-                                <div class="swiper">
-                                <div class="swiper-wrapper">
-                                        @foreach($mainNews as $mainNew)
-                                        <div class="swiper-slide">
-                                                <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                <p class="head-text text">{{ $mainNew->text }}</p>
+                                <div class="position-relative swiper-box">
+                                <div class="position-relative container-slider-pagination">
+                                        <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                                @foreach($mainNews as $mainNew)
+                                                <div class="swiper-slide">
+                                                        <h5 class="accentColor">{{ $mainNew->title }}</h5>
+                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                </div>
+                                                @endforeach
                                         </div>
-                                        @endforeach
+                                        </div>
+                                        <div class="swiper-pagination"></div>
                                 </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
                         </div>
+                        
                         </div>
-                </div>
+
+                        
                 </div>
         </div>
 </section>
