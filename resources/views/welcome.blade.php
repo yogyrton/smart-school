@@ -6,11 +6,11 @@
 <section id="head" class="head mb-160 position-relative">
         <div class="container container-mob">
                 <div class="row">
-                        <div class="d-none d-lg-block col-lg-6 imgHead-box"> 
+                        <div class="d-none d-lg-block col-lg-6 imgHead-box">
                                 <img src="/img/main/imgHead.png" alt="">
                                 <div class="pseudo"></div>
                         </div>
-                
+
                         <div class="col-lg-6">
                                 <div class="head-inner mb-80">
                                         <h1 class="h1 pb-48">
@@ -21,28 +21,24 @@
                                                 <button class="button_1 btn-pink">Оставить заявку</button>
                                         </div>
                                 </div>
-                        
-                                <div class="position-relative swiper-box">
-                                <div class="position-relative container-slider-pagination">
-                                        <div class="swiper">
-                                        <div class="swiper-wrapper">
-                                                @foreach($mainNews as $mainNew)
-                                                <div class="swiper-slide">
-                                                        <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{{ $mainNew->text }}</p>
-                                                </div>
-                                                @endforeach
-                                        </div>
-                                        </div>
-                                        <div class="swiper-pagination"></div>
-                                </div>
-                                </div>
-                        </div>
-                        
-                        </div>
 
-                        
+                    <div class="position-relative swiper-box">
+                        <div class="position-relative container-slider-pagination">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    @foreach($mainNews as $mainNew)
+                                        <div class="swiper-slide">
+                                            <h5 class="accentColor">{{ $mainNew->title }}</h5>
+                                            <p class="head-text text">{{ $mainNew->text }}</p>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </div>
 </section>
 
@@ -74,10 +70,9 @@
                         <img src="/img/main/history.png" alt="history-img">
                         </div>
                 </div>
-                </div>
-        </div>         
+        </div>        
 </section>
-                                        
+
 <section class="school mb-160 ">
         <div class="container">
                 <h2 class="accentColor mb-40">Школа</h2>
