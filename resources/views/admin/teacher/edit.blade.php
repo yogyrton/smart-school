@@ -31,7 +31,7 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">ФИО</label>
+                                    <label for="exampleInputEmail1">ФИО (обязательно)</label>
                                     <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="{{ $teacher->name }}">
                                 </div>
 
@@ -46,12 +46,12 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Стаж (необязательно)</label>
+                                    <label for="exampleInputPassword1">Стаж (необязательно, например "Стаж: 5 лет")</label>
                                     <input type="text" name="experience" class="form-control" id="exampleInputPassword1" value="{{ $teacher->experience }}">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Фото (необязательно, размер 312х312 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
+                                    <label for="exampleInputPassword1">Фото (необязательно, размер 312х312, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
                                     <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 

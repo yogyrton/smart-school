@@ -35,7 +35,7 @@ class TeacherController extends Controller
      */
     public function store(TeacherCreateRequest $request)
     {
-        $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/teachers', 'public') : '';
+        $file = $request->file('thumbnail')->store('img/teachers', 'public');
 
         Teacher::query()->create([
             'name' => $request->name,
