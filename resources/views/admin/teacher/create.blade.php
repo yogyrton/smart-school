@@ -45,12 +45,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Стаж (необязательно)</label>
+                                <label for="exampleInputPassword1">Стаж (необязательно, например "Стаж: 5 лет")</label>
                                 <input type="text" name="experience" class="form-control" id="exampleInputPassword1" placeholder="Стаж">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Фото (обязательно, размер 312x312 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
+                                <label for="exampleInputPassword1">Фото (обязательно, размер 312x312, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
                                 <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1" placeholder="Текст новости">
                             </div>
 
