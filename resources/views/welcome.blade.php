@@ -294,61 +294,6 @@
 							</div>
 						</div>
 					</div>
-                                        <div class="swiper-slide">
-						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
-							<div class="teacher-description">
-								<span class="teacher-post text grey mb-8">Учредитель</span>
-								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
-								<p  class="teacher-description text mb-8">Детский писатель, профессиональный медиатор, юрист</p>
-                                                                <p class="teacher-experience text grey">Стаж: 27 лет</p>
-							</div>
-						</div>
-					</div>
-                                        <div class="swiper-slide">
-						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
-							<div class="teacher-description">
-								<span class="teacher-post text grey mb-8">Учредитель</span>
-								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
-								<p  class="teacher-description text mb-8">Детский писатель, профессиональный медиатор, юрист</p>
-                                                                <p class="teacher-experience text grey">Стаж: 27 лет</p>
-							</div>
-						</div>
-					</div>
-                                        <div class="swiper-slide">
-						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
-							<div class="teacher-description">
-								<span class="teacher-post text grey mb-8">Учредитель</span>
-								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
-								<p  class="teacher-description text mb-8">Детский писатель, профессиональный медиатор, юрист</p>
-                                                                <p class="teacher-experience text grey">Стаж: 27 лет</p>
-							</div>
-						</div>
-					</div>
-                                        <div class="swiper-slide">
-						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
-							<div class="teacher-description">
-								<span class="teacher-post text grey mb-8">Учредитель</span>
-								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
-								<p  class="teacher-description text mb-8">Детский писатель, профессиональный медиатор, юрист</p>
-                                                                <p class="teacher-experience text grey">Стаж: 27 лет</p>
-							</div>
-						</div>
-					</div>
-                                        <div class="swiper-slide">
-						<div class="teacher-box d-flex flex-column">
-							<div class="teacher__image-ibg mb-20 "><img src="/img/teachers/teacher1.png" alt="teacher-1"></div>
-							<div class="teacher-description">
-								<span class="teacher-post text grey mb-8">Учредитель</span>
-								<h5 class="accentColor teacher-name mb-8">Островская Илона Анатольевна</h5>
-								<p  class="teacher-description text mb-8">Детский писатель, профессиональный медиатор, юрист</p>
-                                                                <p class="teacher-experience text grey">Стаж: 27 лет</p>
-							</div>
-						</div>
-					</div>
                                         
 			        </div>
                                 <div class="teacher-swiper__next"></div>
@@ -495,7 +440,6 @@
                         <div class="col-lg-6 position-relative order-box">
                                 <h2 class="accentColor order-title">Запишите ребенка на обучение в Smart School!</h2>
                                 <p class="order-box-description mb-40">Заполните данные ниже, и мы свяжемся с вами, предоставив все необходимые документы для записи, и обговорим все детали. </p>
-                                
                                 <app-form></app-form>
                         </div>
                 </div>

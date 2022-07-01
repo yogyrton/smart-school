@@ -8,7 +8,7 @@
             <a href="/">
                 <img src="/svg/logo.svg" alt="logo-img">
             </a>
-            <!-- <div class="header-rectangle"></div> -->
+            <div class="header-rectangle"></div>
         </div>
 
         
