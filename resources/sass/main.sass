@@ -50,9 +50,9 @@ input, textarea
     margin-right: 0
     margin-left: 0
 
-// .row > *
-//     padding-left: 15px
-//     padding-right: 15px
+.row > *
+    padding-left: 15px
+    padding-right: 15px
 
 .text
     font-family: 'Rubik-Regular', sans-serif
@@ -70,6 +70,13 @@ input, textarea
     padding-right: 10px
     padding-left: 10px
     max-width: none
+    @media screen and (max-width: 1500px)
+        width: 1200px
+    @media screen and (max-width: 1200px)
+        width: 100%
+        padding: 0 50px
+    @media screen and (max-width: 992px)
+        padding: 0 20px
 
     
 .pre-wrap
@@ -236,26 +243,32 @@ button
     
 header 
     padding: 10px 0
+    @media screen and (max-width: 992px)
+        padding: 5px 0
 
     .logo
         position: relative
         background-color: red
         margin-right: 128px
-        // .header-rectangle
-        //     background-image: url('/svg/headerRectangle.svg')
-        //     background-repeat: no-repeat
-        //     top: -15px
-        //     left: -40px
-        //     position: absolute
-        //     width: 166.97px
-        //     height: 383px
-        //     z-index: -1
+        @media screen and (max-width: 1400px)
+            margin-right: 70px
+        .header-rectangle
+            background-image: url('/svg/headerRectangle.svg')
+            background-repeat: no-repeat
+            top: -15px
+            left: -40px
+            position: absolute
+            width: 166.97px
+            height: 383px
+            z-index: -1
 
     .header-navigation
         margin-right: 55px 
         nav
             li
                 margin: 0 55px 0 0
+                @media screen and (max-width: 1400px)
+                    margin-right: 25px
             a 
                 white-space: nowrap
             .list-contacts
@@ -302,6 +315,8 @@ header
         right: 0
         transform: translate(-15%, -30%)
         z-index: -2
+        @media screen and (max-width: 1500px)
+            display: none
     .imgHead-box::after
         content:""
         position: absolute
@@ -314,6 +329,8 @@ header
         left: 0
         transform: translate(-55%, -55%)
         z-index: -1
+        @media screen and (max-width: 1500px)
+            display: none
     .pseudo 
         position: absolute
         top: -15%
@@ -326,14 +343,23 @@ header
         border-radius: 300px
         transform: rotate(-145deg)
         z-index: -3
+        @media screen and (max-width: 1500px)
+            display: none
 
     .head-inner 
-        width: 650px
+        max-width: 650px
         padding-top: 50px
+        @media screen and (max-width: 992px)
+            width: 100%
+            max-width: 100%
 
         .btn-group
             gap:20px
             height: 48px
+.container-mob
+    .row
+        @media screen and (max-width: 992px)
+            flex-direction: column-reverse
 
     // .pseudo2
     //     position: absolute
@@ -352,6 +378,7 @@ header
     .advt-box
         width: 338px
         cursor: pointer
+        word-wrap: break-word
     .swiper-pagination
         bottom: -40px
         position: absolute
@@ -363,17 +390,38 @@ header
             margin: 0 8px
         .swiper-pagination-bullet-active
             background: $accentColor
-        
-.history-text-box 
-    width: 654px
 
+.history
+    .history-text-box 
+        max-width: 654px
+        @media screen and (max-width: 992px)
+            width: 100%
+            max-width: 100%
+    .box-img
+        height: 100%
+        object-fit: cover
+        width: fit-content
+        @media screen and (max-width: 992px)
+            margin-bottom: 50px
+        @media screen and (max-width: 576px)
+            display: none
+    .box-img img
+        width: 100%
+        object-fit: cover
+        height: 100%
+        @media screen and (max-width: 992px)
+            display: none
 .school
     .grid-box
         display: grid
         row-gap: 24px
         column-gap: 30px
         grid-template-columns: repeat(4, 312px)
-        grid-template-rows: repeat(2, auto)
+        grid-template-rows: repeat(2, 290px)
+        justify-content: center
+        @media screen and (max-width: 1501px)
+            grid-template-columns: repeat(2, 312px)
+            grid-auto-rows: 312px
 
         .school-box-photo-1
             background: #F4F2F7
@@ -387,19 +435,22 @@ header
             border-radius: 12px
             padding: 40px
             flex-grow: 1
+            overflow: hidden
+            word-wrap: break-word
 
             p
                 max-width: 365px
 
         .school-box-photo-2
             background: #F4F2F7
-            width: 654px
+            border-radius: 12px
             grid-column-start: 3
             grid-column-end: 5
             overflow: hidden
+            @media screen and (max-width: 1501px)
+                grid-column-start: 1
+                grid-column-end: 3
 
-            div
-                flex-grow: 1
 
 .school-box img,
 .school-box-photo-1 img,
@@ -461,11 +512,13 @@ header
         .grid-box:hover .overlay-title
             display: block
 
-.info 
+.info
     .row
-        gap: 27px
+        @media screen and (max-width: 1200px)
+            flex-wrap: wrap
         .info-box
             max-width: 312px
+            word-wrap: break-word
 .info .col-3
     width: 312px
 
@@ -487,6 +540,9 @@ header
     .swiper
         position: static //??
 
+        .swiper-slide
+            width: 312px!important
+
     .teachers-info
         max-width: 654px
 
@@ -505,10 +561,18 @@ header
 
             .teacher__image-ibg 
                 width: 100%
+                height: 312px
 
             .teacher__image-ibg img 
                 border-radius: 16px
                 object-fit: cover
+                width: 100%
+                height: 100%
+                
+            
+            .teacher-description
+                word-wrap: break-word
+                width: 312px
 
     .teacher-swiper__next,
     .teacher-swiper__prev 
@@ -669,14 +733,27 @@ header
         right: -90px
 
 #news
+
+    .swiper-slide
+        width: 312px!important
+
     .image-in-slider
         height: 200px
 
     .image-in-slider img
         max-width: 100%
 
+    .news__image-ibg
+        width: 312px
+        height: 200px
+
+    .news__image-ibg img
+        width: 100%
+        height: 100%
+
     .news-description 
         width: 312px
+        word-wrap: break-word
 
         span
             font-size: 12px
@@ -840,9 +917,9 @@ header
         line-height: 24px
         font-family: 'Rubik-Regular', sans-serif
 
-    .form
+    .order-form
 
-        input, textarea
+        .input, input, textarea
             font-family: "Rubik-Regular", sans-serif
             font-size: 16px
             line-height: 24px
@@ -856,8 +933,9 @@ header
             line-height: 18px
             font-family: "Rubik-Regular", sans-serif
             font-weight: 400
+            color: $grey
 
-        input, .bootstrap-select .dropdown-toggle
+        .input, input, .bootstrap-select .dropdown-toggle
             display: block
             width: 312px
             //height: 42px
@@ -884,6 +962,123 @@ header
             padding: 12px 16px
             transition: 0.4s ease
             min-height: 200px
+
+.multiselect 
+    box-sizing: content-box
+    display: block
+    position: relative
+    width: 100%
+    min-height: 20px
+    text-align: left
+    color: #35495e
+
+.multiselect__input
+    border: none
+.multiselect__input:active
+    border: none
+
+.multiselect__select
+    position: absolute
+    width: 20px
+    height: 38px
+    right: 10px
+    top: -7px
+    padding: 4px 8px
+    text-align: center
+    transition: transform .2s ease
+
+.multiselect__select:before 
+    position: relative
+    right: 0
+    top: 65%
+    color: #999
+    margin-top: 4px
+    border-style: solid
+    border-width: 5px 5px 0
+    border-color: #999 transparent transparent
+    content: ""
+
+.multiselect__tags 
+    min-height: 20px
+    display: block
+    padding: 8px 40px 0 8px
+    border-radius: 5px
+    border: 1px solid #e8e8e8
+    background: #fff
+    font-size: 14px
+
+.multiselect__content-wrapper 
+    position: absolute
+    display: block
+    background: #fff
+    width: 100%
+    max-height: 50px
+    overflow: auto
+    border: 1px solid #e8e8e8
+    border-top: none
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+    z-index: 3
+    -webkit-overflow-scrolling: touch
+
+.multiselect__content 
+    list-style: none
+    display: inline-block
+    padding: 0
+    margin: 0
+    min-width: 100%
+    vertical-align: top
+
+.resources-list 
+  margin-top: 15px
+  padding: 0
+  list-style: none
+
+.resources-list li 
+  display: flex
+  align-items: center
+  min-height: 50px
+  padding: 10px 40px 10px 0
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1)
+  position: relative
+
+.resources-list li:last-child 
+  border-bottom: none
+
+.resources-list li .resource-title 
+  font-size: 1em
+  color: #333
+
+.resources-list li .version 
+  opacity: 0.7
+  margin-left: 5px
+  font-size: 75%
+
+.resources-list li .resource-description,
+.resources-list li .resource-url 
+  font-size: 0.8em
+  color: #999
+  margin-top: 5px
+
+.resources-list li .resource-url 
+  margin-top: 0
+
+.resources-list li .resource-description:empty 
+  display: none
+
+.resources-list li .delete-controls 
+  position: absolute
+  right: 0
+  width: 40px
+  text-align: center
+  color: #999
+  cursor: pointer
+
+.resources-list li .delete-controls:hover,
+.resources-list li .delete-controls:focus 
+  color: red
+
+
 
 .footer
     background: #FFFFFF

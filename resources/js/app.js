@@ -1,5 +1,13 @@
 require('./bootstrap');
 
+import Vue from 'vue';
+window.EventHandler = new Vue;
+
+Vue.component('app-form', require('./Form').default);
+new Vue({
+}).$mount('#app');
+
+
 import Swiper from 'swiper/bundle';
 import TeachersSlider from './TeachersSlider';
 import RepliesSlider from './RepliesSlider';

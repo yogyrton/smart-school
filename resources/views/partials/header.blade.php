@@ -8,12 +8,12 @@
             <a href="/">
                 <img src="/svg/logo.svg" alt="logo-img">
             </a>
-            <!-- <div class="header-rectangle"></div> -->
+            <div class="header-rectangle"></div>
         </div>
 
         
         <div class="header-navigation">
-            <nav>
+            <nav class="d-lg-block d-none">
                 <ul class="d-flex no-gutters navigation-list">
                     <li>
                         <a class="h5 dropdown-toggle" href="">
@@ -55,7 +55,7 @@
         </div>
             
 
-        <div class="d-flex header-contacts-messengers">
+        <div class="d-none d-lg-flex header-contacts-messengers">
             <a href="">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_182_1856)">
