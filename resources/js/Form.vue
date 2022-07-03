@@ -1,5 +1,4 @@
 <template>
-    <div>
         <form action="" class="order-form">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -50,27 +49,23 @@
                                 </div>
                             </div>
         </form>
-                                        <!-- <div>
-                                            <multiselect :options="options" :value="optionsProxy" @input="updateSelected" @search-change="searchQuery" :show-labels="true" :multiple="true" :searchable="true" :close-on-select="true" placeholder="Search" :custom-label="customLabel" track-by="name" :loading="showLoadingSpinner">
-                                            </multiselect>
-                                        </div> -->
-    </div>
+                                    
 </template>
 
 <script>
 
-// import Multiselect from 'vue-multiselect'
+import Multiselect from 'vue-multiselect'
 
-// export default {
-//   components: {
-//     Multiselect
-//   },
-//   data () {
-//     return {
-//       value: '',
-//       options: ['Россия', 'Беларусь', 'Польша', 'Грузия']
-//     }
-//   }
-// }
+export default {
+  components: {
+    Multiselect
+  },
+  data () {
+    return {
+      value: '',
+      options: ['Россия', 'Беларусь', 'Польша', 'Грузия']
+    }
+  }
+}
 </script>
 
