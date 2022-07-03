@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <section id="head" class="head mb-160 position-relative">
         <div class="container container-mob">
                 <div class="row">
@@ -39,6 +40,7 @@
                 </div>
             </div>
         </div>
+</section>
 
 <section class="history mb-160">
         <div class="container container-mob">
@@ -56,21 +58,20 @@
                                         и быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span>
                                         </p>
                                         <p class="pb-10">Опыт профессиональной команды методистов и психологов в создании данной программы,
-                            а также организация огромного количества смен детских лагерей под брендом «Фабрика звезд»,
-                            знание лучших методик обучения, длительная коммуникация с родителями о действующей системе
-                            образования, ее достоинствах и недостатках, стали толчком для открытия в 2020 году частной школы
-                            "Смарт Скул", учредитель которой - детский писатель, юрист и медиатор Елена Пушкина. И именно
-                            программа "Секрет успешного обучения" легла в основу методологии "Смарт образования", которая
-                            используется в нашей школе.</p>
-                            <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше.</p>
-                     </div>
-                     <div class="col-5 text">
-                    <img src="/img/main/history.png" alt="history-img">
-                    </div>
+                                        а также организация огромного количества смен детских лагерей под брендом «Фабрика звезд»,
+                                        знание лучших методик обучения, длительная коммуникация с родителями о действующей системе
+                                        образования, ее достоинствах и недостатках, стали толчком для открытия в 2020 году частной школы
+                                        "Смарт Скул", учредитель которой - детский писатель, юрист и медиатор Елена Пушкина. И именно
+                                        программа "Секрет успешного обучения" легла в основу методологии "Смарт образования", которая
+                                        используется в нашей школе.</p>
+                                <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше.</p>
+                        </div>
+                        <div class="col-5 text">
+                        <img src="/img/main/history.png" alt="history-img">
+                        </div>
                 </div>
-              </div>
-         </div>
-    </section>
+        </div>
+</section>
 
 <section class="school mb-160 ">
         <div class="container">
@@ -214,7 +215,7 @@
         </div>
 </section>
 
- <section class="priority mb-160">
+<section class="priority mb-160">
         <div class="container">
                 <h2 class="accentColor mb-60 pt-120">Вам точно к нам, если для вас важны</h2>
                 <div class="row d-flex priority-wrapper pb-100">
@@ -273,40 +274,39 @@
         </div>
 </section>
 
-    <section id="teachers" class="mb-160">
+<section id="teachers" class="mb-160">
         <div class="container">
-            <h2 class="accentColor mb-40">Команда профессиональных педагогов</h2>
-            <p class="text mb-60 teachers-info">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать
+        <h2 class="accentColor mb-40">Команда профессиональных педагогов</h2>
+        <p class="text mb-60 teachers-info">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать
                 информацию и любить сам процесс обучения.</p>
-            <div class="d-flex align-items-center justify-content-between position-relative teacher-wrapper">
-                <div class="swiper teacher-swiper">
-                    <div class="swiper-wrapper">
+        <div class="d-flex align-items-center justify-content-between position-relative teacher-wrapper">
+        <div class="swiper teacher-swiper">
+                <div class="swiper-wrapper">
                         @foreach($teachers as $teacher)
-                            <div class="swiper-slide">
+                        <div class="swiper-slide">
                                 <div class="teacher-box d-flex flex-column">
-                                    <div class="teacher__image-ibg"><img class="mb-20 "
-                                                                         src="{{ '/storage/' . $teacher->thumbnail }}"
-                                                                         alt="{{ $teacher->name }}"></div>
-                                    <div class="teacher-description">
+                                        <div class="teacher__image-ibg"><img class="mb-20 "
+                                                                        src="{{ '/storage/' . $teacher->thumbnail }}"
+                                                                        alt="{{ $teacher->name }}">
+                                        </div>
+                                <div class="teacher-description">
                                         <span class="teacher-post text grey mb-8">{{ $teacher->position }}</span>
                                         <h5 class="accentColor teacher-name mb-8">{{ $teacher->name }}</h5>
                                         <p class="teacher-description text mb-8">{{ $teacher->category }}</p>
                                         <p class="teacher-experience text grey">{{ $teacher->experience }}</p>
-                                    </div>
+                                        </div>
                                 </div>
-                            </div>
+                                </div>
                         @endforeach
-
-                    </div>
-                    <div class="teacher-swiper__next"></div>
-                    <div class="teacher-swiper__prev"></div>
                 </div>
-            </div>
+                <div class="teacher-swiper__next"></div>
+                <div class="teacher-swiper__prev"></div>
+                </div>
         </div>
-    </section>
+        </div>
+</section>
 
-
-   <section id="replies" class="mb-160">
+<section id="replies" class="mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Отзывы</h2>
                 <div class="d-flex align-items-center justify-content-between replies-wrapper">
@@ -322,69 +322,72 @@
                         </div>
                 </div>
         </div>
-  </section>
+</section>
 
-    <section id="news" class="mb-160">
+<section id="news" class="mb-160">
         <div class="container">
-            <h2 class="accentColor mb-40">Новости</h2>
-            <div class="wrapper">
+                <h2 class="accentColor mb-40">Новости</h2>
+                <div class="wrapper">
                 <div class="d-flex align-items-center justify-content-between news-wrapper">
-                    <div class="swiper news-swiper">
+                        <div class="swiper news-swiper">
                         <div class="swiper-wrapper">
-                            @foreach($news as $new)
+                                @foreach($news as $new)
                                 <div class="swiper-slide">
-                                    <div class="news-box d-flex flex-column">
+                                <div class="news-box d-flex flex-column">
                                         <div class="news__image-ibg">
-                                            <img class="mb-20 " src="{{ '/storage/' . $new->thumbnail }}" alt="news-1">
+                                                <img class="mb-20 " src="{{ '/storage/' . $new->thumbnail }}" alt="news-1">
                                         </div>
                                         <div class="news-description">
-                                            <span class="news-date grey mb-12">{{ $new->updated_at->format('d-m-Y') }}</span>
-                                            <h5 class="accentColor news-title text-bold mb-12">{{ $new->title }}</h5>
-                                            <p class="news-text text mb-12">{{ $new->text }}</p>
-                                            <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
+                                                <span class="news-date grey mb-12">{{ $new->updated_at->format('d-m-Y') }}</span>
+                                                <h5 class="accentColor news-title text-bold mb-12">{{ $new->title }}</h5>
+                                                <p class="news-text text mb-12">{{ $new->text }}</p>
+                                                <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
                                         </div>
-                                    </div>
+                                        </div>
                                 </div>
-                            @endforeach
+                                @endforeach
                         </div>
 
-                    </div>
-                    <div class="news-swiper__next"></div>
-                    <div class="news-swiper__prev"></div>
+                        </div>
+                        <div class="news-swiper__next"></div>
+                        <div class="news-swiper__prev"></div>
                 </div>
-            </div>
+                </div>
         </div>
-    </section>
+        </section>
 
-    <section id="documents" class="mb-160">
+<section id="documents" class="mb-160">
         <div class="container">
-            <h2 class="accentColor mb-40">Документы</h2>
+                <h2 class="accentColor mb-40">Документы</h2>
                 <div class="wrapper row">
-                @foreach($documents as $document)
-                <div class="col d-flex justify-content-between">
-                    <a href="{{ route('download', $document->id) }}"><button class="document-button btn-doc text-bold">{{ $document->title }}</button></a>
+                        <div class="col d-flex justify-content-between">
+                        <button class="document-button btn-doc text-bold">Документы для зачисления</button>
+                        <button class="document-button btn-doc text-bold">Образцы заявлений</button>
+                        <button class="document-button btn-doc text-bold">Свидетельство</button>
+                        <button class="document-button btn-doc text-bold">Лицензия</button>
+                        <button class="document-button btn-doc text-bold">Реквизиты</button>
+                        <button class="document-button btn-doc text-bold">Электронный журнал</button>
+                        </div>
                 </div>
-                @endforeach
-            </div>
         </div>
-    </section>
+</section>
 
-    <section class="partners mb-160">
+<section class="partners mb-160">
         <div class="container">
-            <h2 class="accentColor mb-40">Наши партнеры</h2>
-            <div class="row">
-                <div class="col">
-                    <div class="partners-wrapper d-flex align-items-center">
-                        <img src="/img/partners/1.png" alt="partner-1">
-                        <img src="/img/partners/2.png" alt="partner-2">
-                        <img src="/img/partners/3.png" alt="partner-3">
-                    </div>
+        <h2 class="accentColor mb-40">Наши партнеры</h2>
+                <div class="row">
+                        <div class="col">
+                        <div class="partners-wrapper d-flex align-items-center">
+                                <img src="/img/partners/1.png" alt="partner-1">
+                                <img src="/img/partners/2.png" alt="partner-2">
+                                <img src="/img/partners/3.png" alt="partner-3">
+                        </div>
+                        </div>
                 </div>
-            </div>
         </div>
-    </section>
+</section>
 
-    <section id="order-section" class="mb-160">
+<section id="order-section" class="mb-160">
         <div class="container">
                 <div class="row justify-content-between">
                         <div class="col-lg-4 d-flex flex-column contacts-wrapper">
