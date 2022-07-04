@@ -87,6 +87,11 @@ class TeacherController extends Controller
      */
     public function destroy($id)
     {
+        $teacher = Teacher::query()->find($id);
+        $path = '/public/' . $teacher->thumbnail;
+
+        Storage::delete($path);
+
         Teacher::destroy($id);
 
         return redirect()->route('teacher.index')->with('success', 'Данные о педагоге удалены');

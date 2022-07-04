@@ -45,17 +45,17 @@
 <section class="history mb-160">
         <div class="container container-mob">
                 <h2 class="accentColor mb-40">История</h2>
-                
+
                         <div class="row align-items-start justify-content-between">
                                 <div class=" col-lg-7 text history-text-box">
                                         <p class="pb-10">
                                         В 2015 году при содействии лучших методистов
                                         Беларуси и Европы был открыт Инновационный Детский
                                         Образовательный Центр "Фабрика Звезд", на базе которого мы
-                                        разработали уникальную программу для школьников по нейробике, 
+                                        разработали уникальную программу для школьников по нейробике,
                                         кинезиологии и эмоциональному интеллекту «Секрет успешного обучения».
-                                        <span class="text-bold">Наша методика позволяет эффективно, легко 
-                                        и быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span> 
+                                        <span class="text-bold">Наша методика позволяет эффективно, легко
+                                        и быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span>
                                         </p>
                                         <p class="pb-10">Опыт профессиональной команды методистов и психологов в создании данной программы,
                                         а также организация огромного количества смен детских лагерей под брендом «Фабрика звезд»,
@@ -70,7 +70,7 @@
                         <img src="/img/main/history.png" alt="history-img">
                         </div>
                 </div>
-        </div>        
+        </div>
 </section>
 
 <section class="school mb-160 ">
@@ -105,7 +105,7 @@
                                                 <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
                                                 <a href="" class="button_2 text">Подробнее</a>
                                         </div>
-                                        
+
                                         <div class="school-box d-flex flex-column text-left">
                                                 <h3 class="accentColor mb-24">Россия</h3>
                                                 <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
@@ -122,8 +122,8 @@
                                                         <a href="" class="button_2 text">Подробнее</a>
                                                 </div>
                                         </div>
-                                        
-                                        
+
+
                                 </div>
                         </div>
                 </div>
@@ -243,7 +243,7 @@
                                                 </div>
                                         </div>
                                 </div>
-                                
+
                         </div>
                         <div class="col-5">
                                 <div class="priority-inner">
@@ -320,7 +320,7 @@
                                 <div class="replies-swiper__next"></div>
                                 <div class="replies-swiper__prev"></div>
                         </div>
-                </div> 
+                </div>
         </div>
 </section>
 
@@ -328,7 +328,7 @@
         <div class="container">
                 <h2 class="accentColor mb-40">Новости</h2>
                 <div class="wrapper">
-                <div class="d-flex align-items-center justify-content-between news-wrapper">                 
+                <div class="d-flex align-items-center justify-content-between news-wrapper">
                         <div class="swiper news-swiper">
                         <div class="swiper-wrapper">
                                 @foreach($news as $new)
@@ -360,14 +360,11 @@
         <div class="container">
                 <h2 class="accentColor mb-40">Документы</h2>
                 <div class="wrapper row">
+                    @foreach($documents as $document)
                         <div class="col d-flex justify-content-between">
-                        <button class="document-button btn-doc text-bold">Документы для зачисления</button>
-                        <button class="document-button btn-doc text-bold">Образцы заявлений</button>
-                        <button class="document-button btn-doc text-bold">Свидетельство</button>
-                        <button class="document-button btn-doc text-bold">Лицензия</button>
-                        <button class="document-button btn-doc text-bold">Реквизиты</button>
-                        <button class="document-button btn-doc text-bold">Электронный журнал</button>
+                            <a href="{{ route('download', $document->id) }}"><button class="document-button btn-doc text-bold">{{ $document->title }}</button></a>
                         </div>
+                    @endforeach
                 </div>
         </div>
 </section>
@@ -446,14 +443,12 @@
                         <div class="col-lg-6 position-relative order-box">
                                 <h2 class="accentColor order-title">Запишите ребенка на обучение в Smart School!</h2>
                                 <p class="order-box-description mb-40">Заполните данные ниже, и мы свяжемся с вами, предоставив все необходимые документы для записи, и обговорим все детали. </p>
-                        
-                                
                                 <app-form></app-form>
-                                
                         </div>
-                </div>  
+                </div>
         </div>
-        
+
 </section>
 
 @stop
+

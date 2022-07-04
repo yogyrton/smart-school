@@ -8,6 +8,7 @@ use App\Http\Requests\NewsUpdateRequest;
 use App\Models\Admin\News;
 use App\Models\Admin\Teacher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
@@ -80,6 +81,11 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
+        $news = News::query()->find($id);
+        $path = '/public/' . $news->thumbnail;
+
+        Storage::delete($path);
+
         News::destroy($id);
 
         return redirect()->route('news.index')->with('success', 'Новость удалена');

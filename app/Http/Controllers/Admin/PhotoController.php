@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PhotoCreateRequest;
 use App\Http\Requests\PhotoUpdateRequest;
+use App\Models\Admin\News;
 use App\Models\Admin\Photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PhotoController extends Controller
 {
@@ -75,6 +77,11 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
+        $photo = Photo::query()->find($id);
+        $path = '/public/' . $photo->thumbnail;
+
+        Storage::delete($path);
+
         Photo::destroy($id);
 
         return redirect()->route('photos.index')->with('success', 'Фото успешно удалено');
