@@ -2121,6 +2121,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -2128,8 +2145,12 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      value: '',
-      options: ['Россия', 'Беларусь', 'Польша', 'Грузия']
+      options1: ['Онлайн', 'Camp'],
+      options2: ['Беларусь', 'Россия', 'Грузия', 'Испания', 'Франция', 'Молдова'],
+      options3: ['1-4', '5-11'],
+      value1: [],
+      value2: [],
+      value3: []
     };
   }
 });
@@ -19932,124 +19953,233 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("form", { staticClass: "order-form", attrs: { action: "" } }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-lg-6" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-12" }, [
+          _c(
+            "div",
+            [
+              _c("label", { staticClass: "typo__label" }, [
+                _vm._v("Формат обучения"),
+              ]),
+              _vm._v(" "),
+              _c("multiselect", {
+                attrs: {
+                  options: _vm.options1,
+                  searchable: false,
+                  "close-on-select": true,
+                  "show-labels": false,
+                  placeholder: "Выберите формат обучения",
+                  required: "",
+                },
+                model: {
+                  value: _vm.value1,
+                  callback: function ($$v) {
+                    _vm.value1 = $$v
+                  },
+                  expression: "value1",
+                },
+              }),
+            ],
+            1
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-6" }, [
+        _c("div", { staticClass: "mb-12" }, [
+          _c(
+            "div",
+            [
+              _c("label", { staticClass: "typo__label" }, [_vm._v("Страна")]),
+              _vm._v(" "),
+              _c("multiselect", {
+                attrs: {
+                  options: _vm.options2,
+                  searchable: false,
+                  "close-on-select": true,
+                  "show-labels": false,
+                  placeholder: "Выберите страну",
+                },
+                model: {
+                  value: _vm.value2,
+                  callback: function ($$v) {
+                    _vm.value2 = $$v
+                  },
+                  expression: "value2",
+                },
+              }),
+            ],
+            1
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-12" }, [
+          _c(
+            "div",
+            [
+              _c("label", { staticClass: "typo__label" }, [
+                _vm._v("Класс обучения"),
+              ]),
+              _vm._v(" "),
+              _c("multiselect", {
+                attrs: {
+                  options: _vm.options3,
+                  searchable: false,
+                  "close-on-select": true,
+                  "show-labels": false,
+                  placeholder: "Выберите класс обучения",
+                },
+                model: {
+                  value: _vm.value3,
+                  callback: function ($$v) {
+                    _vm.value3 = $$v
+                  },
+                  expression: "value3",
+                },
+              }),
+            ],
+            1
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(2),
+      ]),
+      _vm._v(" "),
+      _vm._m(3),
+    ]),
+    _vm._v(" "),
+    _vm._m(4),
+    _vm._v(" "),
+    _vm._m(5),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("form", { staticClass: "order-form", attrs: { action: "" } }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c("div", { staticClass: "mb-12" }, [
-            _c("label", { attrs: { for: "order_name" } }, [
-              _vm._v("Представьтесь*"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "w-100",
-              attrs: {
-                type: "text",
-                id: "order_name",
-                name: "order_name",
-                placeholder: "Введите Ваше имя",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mb-12" }, [
-            _c("label", { attrs: { for: "contact_phone" } }, [
-              _vm._v("Телефон*"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "w-100 input-mask__phone",
-              attrs: {
-                placeholder: "Введите номер телефона",
-                type: "text",
-                id: "contact_phone",
-                name: "order_phone",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mb-12" }, [
-            _c("label", { attrs: { for: "contact_email" } }, [
-              _vm._v("Email*"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "w-100 input-mask__mail",
-              attrs: {
-                placeholder: "Введите email для связи",
-                type: "text",
-                id: "contact_email",
-                name: "contact_email",
-                required: "",
-              },
-            }),
-          ]),
-        ]),
+    return _c("div", { staticClass: "mb-12" }, [
+      _c("label", { attrs: { for: "order_name" } }, [_vm._v("Представьтесь*")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "w-100",
+        attrs: {
+          type: "text",
+          id: "order_name",
+          name: "order_name",
+          placeholder: "Введите Ваше имя",
+          required: "",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-12" }, [
+      _c("label", { attrs: { for: "contact_phone" } }, [_vm._v("Телефон*")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "w-100 input-mask__phone",
+        attrs: {
+          placeholder: "Введите номер телефона",
+          type: "text",
+          id: "contact_phone",
+          name: "order_phone",
+          required: "",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-12" }, [
+      _c("label", { attrs: { for: "contact_email" } }, [_vm._v("Email*")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "w-100 input-mask__mail",
+        attrs: {
+          placeholder: "Введите email для связи",
+          type: "text",
+          id: "contact_email",
+          name: "contact_email",
+          required: "",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-12" }, [
+      _c("label", { attrs: { for: "order_name" } }, [
+        _vm._v("Есть вопросы? Напишите"),
+      ]),
+      _vm._v(" "),
+      _c("textarea", {
+        staticClass: "w-100",
+        attrs: {
+          name: "contact_msg",
+          id: "contact_msg",
+          placeholder: "Напишите Ваш вопрос",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-check-ico col-12" }, [
+      _c("label", { staticClass: "d-flex check-ico" }, [
+        _c("input", {
+          staticClass: "consent",
+          attrs: {
+            type: "checkbox",
+            checked: "",
+            name: "agreement",
+            value: "true",
+            autocomplete: "off",
+            required: "",
+          },
+        }),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-6" }, [
-          _c("div", { staticClass: "mb-12" }, [
-            _c("label", { attrs: { for: "order_name" } }, [
-              _vm._v("Представьтесь*"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "w-100",
-              attrs: {
-                type: "text",
-                id: "order_name",
-                name: "order_name",
-                placeholder: "Введите Ваше имя",
-                required: "",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mb-12" }, [
-            _c("label", { staticClass: "typo__label" }, [_vm._v(" Страна")]),
-            _vm._v(" "),
-            _c("div"),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mb-12" }, [
-            _c("label", { attrs: { for: "contact_email" } }, [
-              _vm._v("Email*"),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "w-100 input-mask__mail",
-              attrs: {
-                placeholder: "Введите email для связи",
-                type: "text",
-                id: "contact_email",
-                name: "contact_email",
-                required: "",
-              },
-            }),
-          ]),
-        ]),
+        _c("span", { staticClass: "d-flex" }),
         _vm._v(" "),
-        _c("div", [
-          _c("label", { attrs: { for: "order_name" } }, [
-            _vm._v("Есть вопросы? Напишите"),
-          ]),
-          _vm._v(" "),
-          _c("textarea", {
-            staticClass: "w-100",
-            attrs: {
-              name: "contact_msg",
-              id: "contact_msg",
-              placeholder: "Напишите Ваш вопрос",
+        _c("p", { staticClass: "politic grey" }, [
+          _vm._v(
+            "Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на обработку персональных данных в соответствии с\n                                "
+          ),
+          _c(
+            "a",
+            {
+              staticClass: "accentColor",
+              attrs: { target: "_blank", href: "/" },
             },
-          }),
+            [_vm._v("Политикой обработки персональных данных")]
+          ),
+          _vm._v("."),
         ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form_btn" }, [
+      _c("button", { staticClass: "btn-purple button_2" }, [
+        _vm._v("Отправить"),
       ]),
     ])
   },
@@ -45006,10 +45136,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.EventHandler = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]();
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-form', (__webpack_require__(/*! ./Form.vue */ "./resources/js/Form.vue")["default"]));
-new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app'); // const app = new Vue({
-//     el: '#app'
-// })
-
+new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app');
 
 
 

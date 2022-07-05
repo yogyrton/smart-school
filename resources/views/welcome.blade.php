@@ -66,8 +66,8 @@
                                         используется в нашей школе.</p>
                                 <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше.</p>
                         </div>
-                        <div class="col-5 text">
-                        <img src="/img/main/history.png" alt="history-img">
+                        <div class="col-5 text box-img">
+                                <img src="/img/main/history.png" alt="history-img">
                         </div>
                 </div>
         </div>
@@ -83,12 +83,15 @@
                                                 <div class="img-box">
                                                         <img src="/img/school/photo1.png" alt="children-with-map">
                                                 </div>
-                                                <div class="school-box d-flex flex-column text-left ">
+                                                
+                                                        <div class="school-box d-flex flex-column text-left ">
                                                         <h3 class="accentColor mb-24">Беларусь</h3>
                                                         <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
                                                         <p class="text flex-grow-1 mb-12">д. Жуков Луг (5 км от ст.м.Уручье)</p>
                                                         <a href="" class="button_2 text">Подробнее</a>
-                                                </div>
+                                                        </div>
+                                                
+                                                
                                         </div>
 
                                         <div class="school-box d-flex flex-column text-left">
@@ -96,6 +99,7 @@
                                                 <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
                                                 <a href="" class="button_2 text">Подробнее</a>
                                         </div>
+
                                         <div class="school-box not-padding">
                                                 <img src="/img/school/photo2.png" alt="children-img">
                                         </div>
@@ -116,6 +120,7 @@
                                                 <div class="img-box">
                                                         <img src="/img/school/photo3.png" alt="children-with-map">
                                                 </div>
+                                                
                                                 <div class="school-box d-flex flex-column text-left ">
                                                         <h3 class="accentColor mb-24">Польша</h3>
                                                         <p class="text flex-grow-1 mb-12">обучение по адресу:</br>ul.Ksieskiej, Wroclaw</p>
@@ -183,28 +188,28 @@
 <section class="info mb-160">
         <div class="container">
                 <div class="row d-flex">
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6 d-flex justify-content-center">
                                 <div class="d-flex flex-column align-items-center info-box">
                                         <img class="mb-20" src="/svg/calendar.svg" alt="calendar">
                                         <h4 class="text-bold mb-16 text-center">5 лет</h4>
                                         <p class="text grey text-center">обучаем детей по нашим</br> авторским программам</p>
                                 </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                                <div class="d-flex flex-column align-items-center  info-box">
+                        <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+                                <div class="d-flex flex-column align-items-center info-box">
                                         <img class="mb-20" src="/svg/group.svg" alt="calendar">
                                         <h4 class="text-bold mb-16 text-center">453+ детей</h4>
                                         <p class="text grey text-center">прошли обучение и выпустились из нашей школы</p>
                                 </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                                <div class="d-flex flex-column align-items-center  info-box">
+                        <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+                                <div class="d-flex flex-column align-items-center info-box">
                                         <img class="mb-20" src="/svg/place.svg" alt="calendar">
                                         <h4 class="text-bold mb-16 text-center">7 локаций</h4>
                                         <p class="text grey text-center">предлагает наша школа для </br>обучения из разных точек мира</p>
                                 </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6 d-flex justify-content-center">
                                 <div class="d-flex flex-column align-items-center info-box">
                                         <img class="mb-20" src="/svg/study.svg" alt="calendar">
                                         <h4 class="text-bold mb-16 text-center">73 преподавателя</h4>
@@ -219,7 +224,7 @@
         <div class="container">
                 <h2 class="accentColor mb-60 pt-120">Вам точно к нам, если для вас важны</h2>
                 <div class="row d-flex priority-wrapper pb-100">
-                        <div class="col-5">
+                        <div class="col-lg-5">
                                 <div class="priority-inner">
                                         <div class="priority-box d-flex mb-40">
                                                 <img src="/svg/bag.svg" alt="bag-img">
@@ -362,6 +367,12 @@
                 <div class="wrapper row">
                     @foreach($documents as $document)
                         <div class="col d-flex justify-content-between">
+                                <button class="document-button btn-doc text-bold">Документы для зачисления</button>
+                                <button class="document-button btn-doc text-bold">Образцы заявлений</button>
+                                <button class="document-button btn-doc text-bold">Свидетельство</button>
+                                <button class="document-button btn-doc text-bold">Лицензия</button>
+                                <button class="document-button btn-doc text-bold">Реквизиты</button>
+                                <button class="document-button btn-doc text-bold">Электронный журнал</button>
                             <a href="{{ route('download', $document->id) }}"><button class="document-button btn-doc text-bold">{{ $document->title }}</button></a>
                         </div>
                     @endforeach
@@ -395,15 +406,20 @@
                                                 <img src="/svg/telephone.svg" alt="phone-logo">
                                                 <img src="/svg/viber.svg" alt="viber-logo">
                                                 <img src="/svg/telegram.svg" alt="telegram-logo">
-                                                <a href="tel:+375 (25) 506-65-88" >+375 (25) 506-65-88</a>
+                                                <a href="tel:+37525506-65-88" >+375 (25) 506-65-88</a>
                                         </div>
                                         <div class="contacts-info d-flex mb-20">
                                                 <img src="/svg/telephone.svg" alt="phone-logo">
                                                 <img src="/svg/viber.svg" alt="viber-logo">
                                                 <img src="/svg/telegram.svg" alt="telegram-logo">
-                                                <a href="tel:+375 (25) 506-60-09" >+375 (25) 506-60-09</a>
+                                                <a href="tel:+37525506-60-09" >+375 (25) 506-60-09</a>
                                         </div>
-                                        <p class="contacts-mail">Smartminsk2020@gmail.com</p>
+
+                                        <div class="contacts-mail">
+                                                <a  href="mailto:Smartminsk2020@gmail.com">Smartminsk2020@gmail.com</a>
+                                        </div>
+                                        
+
                                         <div class="contacts-socials d-flex">
                                                 <a class="contacts-socials-link" href="/">
                                                         <img class="contacts-socials-img" src="/svg/inst.svg" alt="inst">
@@ -429,7 +445,7 @@
                                                 <img src="/svg/viber.svg" alt="viber-logo">
                                                 <img src="/svg/whatsapp.svg" alt="whatsapp-logo">
                                                 <img src="/svg/telegram.svg" alt="telegram-logo">
-                                                <a href="tel:+375 (25) 601-65-00" >+375 (25) 601-65-00</a>
+                                                <a href="tel:+37525601-65-00" >+375 (25) 601-65-00</a>
                                         </div>
                                 </div>
                                 <div>
