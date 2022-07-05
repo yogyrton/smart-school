@@ -7,9 +7,6 @@ Vue.component('app-form', require('./Form.vue').default);
 new Vue({
 }).$mount('#app');
 
-// const app = new Vue({
-//     el: '#app'
-// })
 
 import Swiper from 'swiper/bundle';
 import TeachersSlider from './TeachersSlider';
