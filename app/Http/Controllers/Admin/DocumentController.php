@@ -34,16 +34,21 @@ class DocumentController extends Controller
      */
     public function store(DocumentCreateRequest $request)
     {
-        $request->validated();
+        $docs = Document::query()->count();
 
-        $file = $request->file('path')->store('documents','public');
+        if ($docs < 5) {
+            $file = $request->file('path')->store('documents','public');
 
-        Document::query()->create([
-           'title' => $request->title,
-           'path' => $file,
-        ]);
+            Document::query()->create([
+                'title' => $request->title,
+                'path' => $file,
+            ]);
 
-        return redirect()->route('documents.index')->with('success', 'Документ успешно добавлен');
+            return redirect()->route('documents.index')->with('success', 'Документ успешно добавлен');
+        }
+
+        return redirect()->route('documents.index')->with('error', 'Не может быть больше 5 документов');
+
     }
 
     /**
@@ -80,6 +85,10 @@ class DocumentController extends Controller
      */
     public function destroy($id)
     {
+        $doc = Document::query()->find($id);
+        $path = '/public/' . $doc->path;
+
+        Storage::delete($path);
         Document::destroy($id);
 
         return redirect()->route('documents.index')->with('success', 'Документ удален');

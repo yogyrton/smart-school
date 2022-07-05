@@ -45,6 +45,8 @@ Route::prefix('admin')->group(function () {
     Route::resource('photos', PhotoController::class);
 });
 
+
+
 //Route::domain('test.urist-perevozki.by')->group(function(){
 //    Route::get('/', function () {
 //        return view('urist-perevozki');
