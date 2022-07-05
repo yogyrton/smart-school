@@ -32,20 +32,6 @@ Route::prefix('login')->group(function () {
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
 });
 
-Route::middleware('admin')->prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('main');
-
-    Route::get('/download/{id}', [DocumentController::class, 'download'])->name('download');
-
-    Route::resource('main_news', MainNewsController::class);
-    Route::resource('teacher', TeacherController::class);
-    Route::resource('news', NewsController::class);
-    Route::resource('counselor', CounselorController::class);
-    Route::resource('prices', PriceController::class);
-    Route::resource('documents', DocumentController::class);
-    Route::resource('photos', PhotoController::class);
-});
-
 Route::fallback(function (){
     return 'aasda';
 });
