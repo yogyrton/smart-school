@@ -175,7 +175,13 @@
 
                 </ul>
             </nav>
-            <!-- /.sidebar-menu -->
+
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="info d-block">
+                    <a href="{{ route('logout') }}" class="d-block">Выйти</a>
+                </div>
+            </div>
+
         </div>
         <!-- /.sidebar -->
     </aside>

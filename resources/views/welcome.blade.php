@@ -83,15 +83,15 @@
                                                 <div class="img-box">
                                                         <img src="/img/school/photo1.png" alt="children-with-map">
                                                 </div>
-                                                
+
                                                         <div class="school-box d-flex flex-column text-left ">
                                                         <h3 class="accentColor mb-24">Беларусь</h3>
                                                         <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
                                                         <p class="text flex-grow-1 mb-12">д. Жуков Луг (5 км от ст.м.Уручье)</p>
                                                         <a href="" class="button_2 text">Подробнее</a>
                                                         </div>
-                                                
-                                                
+
+
                                         </div>
 
                                         <div class="school-box d-flex flex-column text-left">
@@ -120,7 +120,7 @@
                                                 <div class="img-box">
                                                         <img src="/img/school/photo3.png" alt="children-with-map">
                                                 </div>
-                                                
+
                                                 <div class="school-box d-flex flex-column text-left ">
                                                         <h3 class="accentColor mb-24">Польша</h3>
                                                         <p class="text flex-grow-1 mb-12">обучение по адресу:</br>ul.Ksieskiej, Wroclaw</p>
@@ -367,12 +367,6 @@
                 <div class="wrapper row">
                     @foreach($documents as $document)
                         <div class="col d-flex justify-content-between">
-                                <button class="document-button btn-doc text-bold">Документы для зачисления</button>
-                                <button class="document-button btn-doc text-bold">Образцы заявлений</button>
-                                <button class="document-button btn-doc text-bold">Свидетельство</button>
-                                <button class="document-button btn-doc text-bold">Лицензия</button>
-                                <button class="document-button btn-doc text-bold">Реквизиты</button>
-                                <button class="document-button btn-doc text-bold">Электронный журнал</button>
                             <a href="{{ route('download', $document->id) }}"><button class="document-button btn-doc text-bold">{{ $document->title }}</button></a>
                         </div>
                     @endforeach
@@ -418,7 +412,7 @@
                                         <div class="contacts-mail">
                                                 <a  href="mailto:Smartminsk2020@gmail.com">Smartminsk2020@gmail.com</a>
                                         </div>
-                                        
+
 
                                         <div class="contacts-socials d-flex">
                                                 <a class="contacts-socials-link" href="/">
