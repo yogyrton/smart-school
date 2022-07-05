@@ -29,9 +29,10 @@ Route::get('/', [MainPageController::class, 'index'])->name('home');
 Route::prefix('login')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('login');
     Route::post('login_process', [UserController::class, 'login'])->name('login_process');
+    Route::get('logout', [UserController::class, 'logout'])->name('logout');
 });
 
-Route::prefix('admin')->group(function () {
+Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('main');
 
     Route::get('/download/{id}', [DocumentController::class, 'download'])->name('download');
@@ -45,7 +46,9 @@ Route::prefix('admin')->group(function () {
     Route::resource('photos', PhotoController::class);
 });
 
-
+Route::fallback(function (){
+    return 'aasda';
+});
 
 //Route::domain('test.urist-perevozki.by')->group(function(){
 //    Route::get('/', function () {

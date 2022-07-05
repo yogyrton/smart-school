@@ -27,4 +27,11 @@ class UserController extends Controller
 
         return redirect()->route('login')->with('error', 'Вы ввели неверные данные');
     }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        return redirect()->route('login');
+    }
 }
