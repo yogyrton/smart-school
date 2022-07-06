@@ -14037,7 +14037,6 @@ header .dropdown-toggle::after {
 
 .head {
   z-index: 10;
-  position: relative;
 }
 .head .imgHead-box {
   position: relative;
@@ -14058,6 +14057,16 @@ header .dropdown-toggle::after {
   .head .imgHead-box .pseudo {
     display: none;
   }
+}
+.head .pseudo2 {
+  position: absolute;
+  background-image: url("/img/pseudo2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 254px;
+  height: 140px;
+  bottom: 0;
+  right: 75px;
 }
 .head .head-inner {
   max-width: 650px;
@@ -14100,6 +14109,10 @@ header .dropdown-toggle::after {
   background: #8041FF;
 }
 
+.history {
+  overflow: hidden;
+  padding-bottom: 160px;
+}
 .history .history-text-box {
   max-width: 654px;
 }
@@ -14109,17 +14122,31 @@ header .dropdown-toggle::after {
     max-width: 100%;
   }
 }
+.history .box-img {
+  position: relative;
+}
 @media screen and (max-width: 992px) {
   .history .box-img {
     margin-bottom: 50px;
     width: 100%;
   }
 }
+.history .box-img .history-pseudo {
+  position: absolute;
+  background-image: url("/img/historyPseudo.png");
+  background-repeat: no-repeat;
+  width: 625px;
+  height: 500px;
+  z-index: -1;
+  top: -56px;
+  left: -38px;
+}
 .history .box-img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  z-index: 1;
 }
 
 .school .grid-box {

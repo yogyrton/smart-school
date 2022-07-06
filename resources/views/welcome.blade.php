@@ -40,10 +40,10 @@
                 </div>
             </div>
         </div>
-        
+        <div class="pseudo2"></div>
 </section>
 
-<section class="history mb-160">
+<section class="history">
         <div class="container container-mob">
                 <h2 class="accentColor mb-40">История</h2>
 
@@ -69,9 +69,11 @@
                         </div>
                         <div class="col-5 text box-img">
                                 <img src="/img/main/history.png" alt="history-img">
+                                <div class="history-pseudo"></div>
                         </div>
                 </div>
         </div>
+        
 </section>
 
 <section class="school mb-160 ">
