@@ -13835,6 +13835,7 @@ button {
 
 .btn-doc {
   padding: 16px;
+  min-height: 80px;
   background-color: #8041FF;
   color: #FFFFFF;
   width: 198px;
@@ -14147,12 +14148,14 @@ header .dropdown-toggle::after {
   background-color: #F4F2F7;
   border-radius: 12px;
   padding: 40px;
-  flex-grow: 1;
   overflow: hidden;
   word-wrap: break-word;
 }
 .school .grid-box .school-box p {
   max-width: 365px;
+}
+.school .grid-box .school-box .school-box-link {
+  flex-grow: 1;
 }
 .school .grid-box .school-box-photo-2 {
   background: #F4F2F7;
