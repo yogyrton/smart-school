@@ -339,7 +339,6 @@ header
 
 .head 
     z-index: 10
-    position: relative
     .imgHead-box
         position: relative
         z-index: 10
@@ -356,14 +355,15 @@ header
             @media screen and (max-width: 1500px)
                 display: none
 
-    // .pseudo2
-    //     position: absolute
-    //     background-image: url(/svg/headRectangle.svg)
-    //     background-repeat: no-repeat
-    //     background-size: cover
-    //     width: 133px
-    //     height: 328px
-    //   
+    .pseudo2
+        position: absolute
+        background-image: url('/img/pseudo2.png')
+        background-repeat: no-repeat
+        background-size: cover
+        width: 254px
+        height: 140px
+        bottom: 0
+        right: 75px
 
     .head-inner 
         max-width: 650px
@@ -411,20 +411,33 @@ header
             background: $accentColor
 
 .history
+    overflow: hidden
+    padding-bottom: 160px
     .history-text-box 
         max-width: 654px
         @media screen and (max-width: 992px)
             width: 100%
             max-width: 100%
     .box-img
+        position: relative
         @media screen and (max-width: 992px)
             margin-bottom: 50px
             width: 100%
+        .history-pseudo
+            position: absolute
+            background-image: url('/img/historyPseudo.png')
+            background-repeat: no-repeat
+            width: 625px
+            height: 500px
+            z-index: -1
+            top: -56px
+            left: -38px
             
     .box-img img
         width: 100%
         object-fit: cover
         height: 100%
+        z-index: 1
             
 .school
     .grid-box
