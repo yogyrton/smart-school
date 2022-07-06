@@ -1,6 +1,6 @@
 @section('header')
 
-<header class="mb-160">
+<header>
     <div class="container">
         <div class="d-flex align-items-center">
             

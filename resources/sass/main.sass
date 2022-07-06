@@ -261,14 +261,15 @@ button
     width: 340px
     margin-left: 100px
     position: relative
+    cursor: pointer
 
 .swiper-box:before
     content:""
     display: block
     position: absolute
     background-image: url('/svg/bell.svg')
-    left: -100px
-    top: 15px
+    left: -92px
+    top: 18px
     width: 60px
     height: 60px
 
@@ -280,6 +281,7 @@ button
     
 header 
     padding: 10px 0
+    margin-bottom: 140px
     @media screen and (max-width: 992px)
         padding: 5px 0
 
@@ -336,55 +338,35 @@ header
 
 .head 
     z-index: 10
+    position: relative
     .imgHead-box
         position: relative
         z-index: 10
-    .imgHead-box::before
-        content:""
-        position: absolute
-        background-image: url('/svg/imgHead-small1.svg')
-        background-repeat: no-repeat
-        background-size: contain
-        width: 243px
-        height: 243px
-        top: 0
-        right: 0
-        transform: translate(-15%, -30%)
-        z-index: -2
-        @media screen and (max-width: 1500px)
-            display: none
-    .imgHead-box::after
-        content:""
-        position: absolute
-        background-image: url('/svg/imgHead-small2.svg')
-        background-repeat: no-repeat
-        background-size: contain
-        width: 243px
-        height: 243px
-        bottom: 0
-        left: 0
-        transform: translate(-55%, -55%)
-        z-index: -1
-        @media screen and (max-width: 1500px)
-            display: none
-    .pseudo 
-        position: absolute
-        top: -15%
-        left: 8%
-        background-image: url(/img/main/pseudo1.png)
-        background-repeat: no-repeat
-        background-size: cover
-        width: 449px
-        height: 928px
-        border-radius: 300px
-        transform: rotate(-145deg)
-        z-index: -3
-        @media screen and (max-width: 1500px)
-            display: none
+        .pseudo 
+            position: absolute
+            top: -21%
+            left: -110px
+            background-image: url(/img/pseudo1.png)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 731px
+            height: 787px
+            z-index: -3
+            @media screen and (max-width: 1500px)
+                display: none
+
+    // .pseudo2
+    //     position: absolute
+    //     background-image: url(/svg/headRectangle.svg)
+    //     background-repeat: no-repeat
+    //     background-size: cover
+    //     width: 133px
+    //     height: 328px
+    //   
 
     .head-inner 
         max-width: 650px
-        padding-top: 50px
+        padding-top: 70px
         @media screen and (max-width: 992px)
             width: 100%
             max-width: 100%
