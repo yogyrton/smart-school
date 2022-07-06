@@ -4,7 +4,8 @@
                                 <div class="col-lg-6">
                                     <div class="mb-12">
                                         <label for="order_name">Представьтесь*</label>
-                                        <input type="text" id="order_name" name="order_name" class="w-100" placeholder="Введите Ваше имя" required>
+                                        <input  type="text" id="order_name" name="order_name" class="w-100" placeholder="Введите Ваше имя" required>
+                                        
                                     </div>
 
                                     <div class="mb-12"> 
@@ -18,7 +19,7 @@
 
                                     <div class="mb-12">
                                         <label for="contact_phone">Телефон*</label>
-                                        <input placeholder="Введите номер телефона" type="text" id="contact_phone" name="order_phone" class="w-100 input-mask__phone" required>
+                                        <input  placeholder="Введите номер телефона"  type="text" id="contact_phone" name="order_phone"  class="w-100 input-mask__phone" required>
                                     </div>
                                 </div>
 
@@ -50,7 +51,9 @@
                                     <label for="order_name">Есть вопросы? Напишите</label>
                                     <textarea name="contact_msg" id="contact_msg" class="w-100" placeholder="Напишите Ваш вопрос"></textarea>
                                 </div>
+
                             </div>
+                            
                             <div class="box-check-ico col-12">
                                 <label class="d-flex check-ico">
                                     <input class="consent" type="checkbox" checked name="agreement" value="true"
@@ -62,7 +65,7 @@
                             </div>
 
                             <div class="form_btn">
-                                <button class="btn-purple button_2">Отправить</button>
+                                <button type="button" class="btn-purple button_2" id="submit-form">Отправить</button>
                             </div>
                             
         </form>
@@ -72,6 +75,7 @@
 <script>
 
 import Multiselect from 'vue-multiselect'
+// import { required,  email } from 'vuelidate/lib/validators';
 
 export default {
     components: {

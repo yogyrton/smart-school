@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+        
 </section>
 
 <section class="history mb-160">
@@ -290,7 +291,7 @@
                         @foreach($teachers as $teacher)
                         <div class="swiper-slide">
                                 <div class="teacher-box d-flex flex-column">
-                                        <div class="teacher__image-ibg"><img class="mb-20 "
+                                        <div class="teacher__image-ibg mb-20"><img 
                                                                         src="{{ '/storage/' . $teacher->thumbnail }}"
                                                                         alt="{{ $teacher->name }}">
                                         </div>
