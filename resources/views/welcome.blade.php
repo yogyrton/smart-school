@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+        
 </section>
 
 <section class="history mb-160">
@@ -80,6 +81,7 @@
                         <div class="col">
                                 <div class="grid-box">
                                         <div class="school-box-photo-1 d-flex">
+                                                <a class="school-box-link" href="">
                                                 <div class="img-box">
                                                         <img src="/img/school/photo1.png" alt="children-with-map">
                                                 </div>
@@ -90,14 +92,16 @@
                                                         <p class="text flex-grow-1 mb-12">д. Жуков Луг (5 км от ст.м.Уручье)</p>
                                                         <a href="" class="button_2 text">Подробнее</a>
                                                         </div>
-
-
+                                                </a>
                                         </div>
 
                                         <div class="school-box d-flex flex-column text-left">
-                                                <h3 class="accentColor mb-24">Грузия</h3>
-                                                <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
-                                                <a href="" class="button_2 text">Подробнее</a>
+                                                <a class="school-box-link" href="">
+                                                        <h3 class="accentColor mb-24">Грузия</h3>
+                                                        <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
+                                                        <a href="" class="button_2 text">Подробнее</a>
+                                                </a>
+                                                
                                         </div>
 
                                         <div class="school-box not-padding">
@@ -105,29 +109,34 @@
                                         </div>
 
                                         <div class="school-box d-flex flex-column text-left">
-                                                <h3 class="accentColor mb-24">Онлайн</h3>
-                                                <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
-                                                <a href="" class="button_2 text">Подробнее</a>
+                                                <a class="school-box-link" href="">
+                                                        <h3 class="accentColor mb-24">Онлайн</h3>
+                                                        <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
+                                                        <a href="" class="button_2 text">Подробнее</a>
+                                                </a>
                                         </div>
 
                                         <div class="school-box d-flex flex-column text-left">
-                                                <h3 class="accentColor mb-24">Россия</h3>
-                                                <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
-                                                <a href="" class="button_2 text">Подробнее</a>
+                                                <a class="school-box-link" href="">
+                                                        <h3 class="accentColor mb-24">Россия</h3>
+                                                        <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
+                                                        <a href="" class="button_2 text">Подробнее</a>
+                                                </a>
                                         </div>
 
                                         <div class="school-box-photo-2 d-flex">
-                                                <div class="img-box">
-                                                        <img src="/img/school/photo3.png" alt="children-with-map">
-                                                </div>
+                                                <a class="school-box-link" href="">
+                                                        <div class="img-box">
+                                                                <img src="/img/school/photo3.png" alt="children-with-map">
+                                                        </div>
 
-                                                <div class="school-box d-flex flex-column text-left ">
-                                                        <h3 class="accentColor mb-24">Польша</h3>
-                                                        <p class="text flex-grow-1 mb-12">обучение по адресу:</br>ul.Ksieskiej, Wroclaw</p>
-                                                        <a href="" class="button_2 text">Подробнее</a>
-                                                </div>
+                                                        <div class="school-box d-flex flex-column text-left ">
+                                                                <h3 class="accentColor mb-24">Польша</h3>
+                                                                <p class="text flex-grow-1 mb-12">обучение по адресу:</br>ul.Ksieskiej, Wroclaw</p>
+                                                                <a href="" class="button_2 text">Подробнее</a>
+                                                        </div>
+                                                </a>
                                         </div>
-
 
                                 </div>
                         </div>
@@ -290,7 +299,7 @@
                         @foreach($teachers as $teacher)
                         <div class="swiper-slide">
                                 <div class="teacher-box d-flex flex-column">
-                                        <div class="teacher__image-ibg"><img class="mb-20 "
+                                        <div class="teacher__image-ibg mb-20"><img 
                                                                         src="{{ '/storage/' . $teacher->thumbnail }}"
                                                                         alt="{{ $teacher->name }}">
                                         </div>
@@ -339,8 +348,8 @@
                                 @foreach($news as $new)
                                 <div class="swiper-slide">
                                 <div class="news-box d-flex flex-column">
-                                        <div class="news__image-ibg">
-                                                <img class="mb-20 " src="{{ '/storage/' . $new->thumbnail }}" alt="news-1">
+                                        <div class="news__image-ibg mb-20">
+                                                <img src="{{ '/storage/' . $new->thumbnail }}" alt="news-1">
                                         </div>
                                         <div class="news-description">
                                                 <span class="news-date grey mb-12">{{ $new->updated_at->format('d-m-Y') }}</span>

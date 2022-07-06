@@ -13835,6 +13835,7 @@ button {
 
 .btn-doc {
   padding: 16px;
+  min-height: 80px;
   background-color: #8041FF;
   color: #FFFFFF;
   width: 198px;
@@ -13944,6 +13945,7 @@ button {
   width: 340px;
   margin-left: 100px;
   position: relative;
+  cursor: pointer;
 }
 
 .swiper-box:before {
@@ -13951,8 +13953,8 @@ button {
   display: block;
   position: absolute;
   background-image: url("/svg/bell.svg");
-  left: -100px;
-  top: 15px;
+  left: -92px;
+  top: 18px;
   width: 60px;
   height: 60px;
 }
@@ -13967,6 +13969,7 @@ button {
 
 header {
   padding: 10px 0;
+  margin-bottom: 140px;
 }
 @media screen and (max-width: 992px) {
   header {
@@ -14034,68 +14037,31 @@ header .dropdown-toggle::after {
 
 .head {
   z-index: 10;
+  position: relative;
 }
 .head .imgHead-box {
   position: relative;
   z-index: 10;
 }
-.head .imgHead-box::before {
-  content: "";
+.head .imgHead-box .pseudo {
   position: absolute;
-  background-image: url("/svg/imgHead-small1.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 243px;
-  height: 243px;
-  top: 0;
-  right: 0;
-  transform: translate(-15%, -30%);
-  z-index: -2;
-}
-@media screen and (max-width: 1500px) {
-  .head .imgHead-box::before {
-    display: none;
-  }
-}
-.head .imgHead-box::after {
-  content: "";
-  position: absolute;
-  background-image: url("/svg/imgHead-small2.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 243px;
-  height: 243px;
-  bottom: 0;
-  left: 0;
-  transform: translate(-55%, -55%);
-  z-index: -1;
-}
-@media screen and (max-width: 1500px) {
-  .head .imgHead-box::after {
-    display: none;
-  }
-}
-.head .pseudo {
-  position: absolute;
-  top: -15%;
-  left: 8%;
-  background-image: url(/img/main/pseudo1.png);
+  top: -21%;
+  left: -110px;
+  background-image: url(/img/pseudo1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 449px;
-  height: 928px;
-  border-radius: 300px;
-  transform: rotate(-145deg);
+  width: 731px;
+  height: 787px;
   z-index: -3;
 }
 @media screen and (max-width: 1500px) {
-  .head .pseudo {
+  .head .imgHead-box .pseudo {
     display: none;
   }
 }
 .head .head-inner {
   max-width: 650px;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 @media screen and (max-width: 992px) {
   .head .head-inner {
@@ -14182,12 +14148,14 @@ header .dropdown-toggle::after {
   background-color: #F4F2F7;
   border-radius: 12px;
   padding: 40px;
-  flex-grow: 1;
   overflow: hidden;
   word-wrap: break-word;
 }
 .school .grid-box .school-box p {
   max-width: 365px;
+}
+.school .grid-box .school-box .school-box-link {
+  flex-grow: 1;
 }
 .school .grid-box .school-box-photo-2 {
   background: #F4F2F7;
@@ -14405,7 +14373,7 @@ header .dropdown-toggle::after {
   -ms-transform: translate(0, -50%) rotate(180deg);
 }
 #teachers .teacher-swiper__next {
-  right: -76px;
+  right: -80px;
 }
 
 .swiper-vertical .swiper-wrapper {
@@ -14506,7 +14474,7 @@ header .dropdown-toggle::after {
   -ms-transform: translate(0, -50%) rotate(180deg);
 }
 #replies .replies-swiper__next {
-  right: -90px;
+  right: -80px;
 }
 
 #news .swiper-slide {
@@ -14519,8 +14487,10 @@ header .dropdown-toggle::after {
   max-width: 100%;
 }
 #news .news__image-ibg {
+  height: 235px;
   width: 312px;
-  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
 }
 #news .news__image-ibg img {
   width: 100%;
@@ -14550,10 +14520,12 @@ header .dropdown-toggle::after {
   width: 312px;
 }
 #news .teacher-box .teacher__image-ibg {
+  height: 312px;
   width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
 }
 #news .teacher-box .teacher__image-ibg img {
-  border-radius: 16px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -14621,7 +14593,7 @@ header .dropdown-toggle::after {
   -ms-transform: translate(0, -50%) rotate(180deg);
 }
 #news .news-swiper__next {
-  right: -90px;
+  right: -80px;
 }
 
 .partners-wrapper {
