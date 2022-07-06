@@ -25,7 +25,7 @@ class PhotoUpdateRequest extends FormRequest
     {
         return [
             'camp' => 'required',
-            'thumbnail' => 'image',
+            'thumbnail' => 'image|max:10000',
         ];
     }
 
@@ -33,7 +33,10 @@ class PhotoUpdateRequest extends FormRequest
     {
         return [
             'camp.required' => 'Поле "Лагерь" обязательно для заполнения',
-            'thumbnail.image' => 'В поле "Фото" загрузите изображение формата: ',
+
+            'thumbnail.required' => 'Поле "Фото" обязательно для заполнения',
+            'thumbnail.image' => 'Поле "Фото" должно иметь форматы jpg, jpeg, png, bmp, gif, svg или webp',
+            'thumbnail.max' => 'Поле "Фото" должно быть не больше 8 мб',
         ];
     }
 }

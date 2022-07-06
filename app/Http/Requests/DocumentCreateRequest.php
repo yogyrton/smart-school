@@ -24,8 +24,8 @@ class DocumentCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:20',
-            'path' => 'required|file'
+            'title' => 'required|max:40',
+            'path' => 'required|file|max:10000'
         ];
     }
 
@@ -33,9 +33,10 @@ class DocumentCreateRequest extends FormRequest
     {
         return [
             'title.required' => 'Поле "название" обязательно для заполнения',
-            'title.max' => 'В поле "название" не более 20 символов',
+            'title.max' => 'В поле "название" не более 40 символов',
+
             'path.required' => 'Поле "Загрузить документ" обязательно для заполнения',
-            'path.file' => 'Файлы с расширением: ',
+            'path.max' => 'Поле "Загрузить документ" должно быть не больше 8 мб',
         ];
     }
 }

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CounselorRequest;
+use App\Http\Requests\CounselorCreateRequest;
+use App\Http\Requests\CounselorUpdateRequest;
 use App\Models\Admin\Counselor;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class CounselorController extends Controller
@@ -31,7 +31,7 @@ class CounselorController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(CounselorRequest $request)
+    public function store(CounselorCreateRequest $request)
     {
         $file = $request->file('thumbnail')->store('img/counselor', 'public');
 
@@ -57,7 +57,7 @@ class CounselorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(CounselorRequest $request, $id)
+    public function update(CounselorUpdateRequest $request, $id)
     {
         $counselor = Counselor::query()->find($id);
         $file = $request->hasFile('thumbnail') ? $request->file('thumbnail')->store('img/counselor', 'public') : $counselor->thumbnail;
