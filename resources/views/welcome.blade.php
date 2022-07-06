@@ -348,8 +348,8 @@
                                 @foreach($news as $new)
                                 <div class="swiper-slide">
                                 <div class="news-box d-flex flex-column">
-                                        <div class="news__image-ibg">
-                                                <img class="mb-20 " src="{{ '/storage/' . $new->thumbnail }}" alt="news-1">
+                                        <div class="news__image-ibg mb-20">
+                                                <img src="{{ '/storage/' . $new->thumbnail }}" alt="news-1">
                                         </div>
                                         <div class="news-description">
                                                 <span class="news-date grey mb-12">{{ $new->updated_at->format('d-m-Y') }}</span>
