@@ -4,19 +4,17 @@ import Vue from 'vue';
 window.EventHandler = new Vue;
 
 import Validations from 'vuelidate';
-Vue.use(Validations);
-
-
-
-Vue.component('app-form', require('./Form.vue').default);
-new Vue({
-}).$mount('#app');
-
 
 import Swiper from 'swiper/bundle';
 import TeachersSlider from './TeachersSlider';
 import RepliesSlider from './RepliesSlider';
 import NewsSlider from './NewsSlider';
+
+Vue.use(Validations);
+
+Vue.component('app-form', require('./Form.vue').default);
+new Vue({
+}).$mount('#app');
 
 const swiper_1 = new Swiper('#head .swiper', {
     loop: false,
@@ -27,6 +25,8 @@ const swiper_1 = new Swiper('#head .swiper', {
         clickable: true
     }
 });
+
+
 
 
 

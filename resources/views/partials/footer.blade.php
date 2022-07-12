@@ -5,7 +5,7 @@
         <div class="d-flex align-items-start">
             <div class="logo">
                 <a href="/">
-                    <img src="/svg/logo.svg" alt="logo-img">
+                    <img src="/svg/logoAccent.svg" alt="logo-img">
                 </a>
             </div>
 
