@@ -124,13 +124,30 @@
             <div class="small-box bg-dark">
                 <div class="inner">
 
-                    <h3>Фото</h3>
-                    <p>Предыдущие смены</p>
+                    <h3>{{ $photo }}</h3>
+                    <p>Фото предыдущих смен</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
                 <a href="{{ route('photos.index') }}" class="small-box-footer">Подробнее</a>
+            </div>
+        </div>
+        <!-- ./col -->
+
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-dark">
+                <div class="inner">
+
+                    <h3>{{ $gallery }}</h3>
+                    <p>Фотогалерея</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="{{ route('galleries.index') }}" class="small-box-footer">Подробнее</a>
             </div>
         </div>
         <!-- ./col -->

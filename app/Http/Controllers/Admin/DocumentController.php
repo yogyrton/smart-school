@@ -36,7 +36,7 @@ class DocumentController extends Controller
     {
         $docs = Document::query()->count();
 
-        if ($docs < 5) {
+        if ($docs < 6) {
             $file = $request->file('path')->store('documents','public');
 
             Document::query()->create([
@@ -47,7 +47,7 @@ class DocumentController extends Controller
             return redirect()->route('documents.index')->with('success', 'Документ успешно добавлен');
         }
 
-        return redirect()->route('documents.index')->with('error', 'Не может быть больше 5 документов');
+        return redirect()->route('documents.index')->with('error', 'Не может быть больше 6 документов');
 
     }
 
