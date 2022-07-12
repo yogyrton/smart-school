@@ -16,7 +16,7 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        $documents = Document::all();
+        $documents = Document::query()->orderBy('page')->get();
 
         return view('admin.documents.index', compact('documents'));
     }
@@ -34,22 +34,38 @@ class DocumentController extends Controller
      */
     public function store(DocumentCreateRequest $request)
     {
-        $docs = Document::query()->count();
+        $page = $request->page;
 
-        if ($docs < 6) {
+        $count = Document::query()->where('page', '=', $page)->count();
+
+        if ($page == 'Общие' && $count < 5) {
             $file = $request->file('path')->store('documents','public');
 
             Document::query()->create([
                 'title' => $request->title,
                 'path' => $file,
+                'page' => $page,
             ]);
 
             return redirect()->route('documents.index')->with('success', 'Документ успешно добавлен');
         }
 
-        return redirect()->route('documents.index')->with('error', 'Не может быть больше 6 документов');
+        if (($page == 'Лагерь Жуков Луг' || $page == 'Лагерь Дримленд' || $page == 'Лагерь в Грузии') && $count < 2) {
+            $file = $request->file('path')->store('documents','public');
+
+            Document::query()->create([
+                'title' => $request->title,
+                'path' => $file,
+                'page' => $page,
+            ]);
+
+            return redirect()->route('documents.index')->with('success', 'Документ успешно добавлен');
+        }
+
+        return redirect()->route('documents.index')->with('error', 'Неверное количество документов');
 
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -66,8 +82,6 @@ class DocumentController extends Controller
      */
     public function update(DocumentUpdateRequest $request, $id)
     {
-        $request->validated();
-
         $document = Document::query()->find($id);
 
         $file = $request->hasFile('path') ? $request->file('path')->store('documents','public') : $document->path;
@@ -75,6 +89,7 @@ class DocumentController extends Controller
         $document->update([
             'title' => $request->title,
             'path' => $file,
+            'page' => $request->page,
         ]);
 
         return redirect()->route('documents.index')->with('success', 'Документ успешно изменен');
