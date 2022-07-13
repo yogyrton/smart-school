@@ -5,8 +5,8 @@
 
 <section id="head" class="head mb-160 position-relative">
         <div class="container container-mob">
-                <div class="row">
-                        <div class="d-none d-lg-block col-lg-6 imgHead-box">
+                <div class="row head-wrapper">
+                        <div class="col-lg-6 imgHead-box">
                                 <img src="/img/main/imgHead.png" alt="">
                                 <div class="pseudo"></div>
                         </div>
@@ -16,27 +16,30 @@
                                         <h1 class="h1 pb-48">
                                                 Международная сеть частных школ <span class="accentColor">Smart School</span>
                                         </h1>
-                                        <div class="btn-group">
+                                        <div class="btn-group mb-80">
                                                 <button class="button_1 btn-purple">Выбрать страну</button>
                                                 <button class="button_1 btn-pink">Оставить заявку</button>
                                         </div>
+
+                                        <div class="position-relative swiper-box">
+                                                <div class="position-relative container-slider-pagination">
+                                                <div class="swiper">
+                                                        <div class="swiper-wrapper">
+                                                        @foreach($mainNews as $mainNew)
+                                                                <div class="swiper-slide">
+                                                                <h5 class="accentColor">{{ $mainNew->title }}</h5>
+                                                                <p class="head-text text">{{ $mainNew->text }}</p>
+                                                                </div>
+                                                        @endforeach
+                                                        </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                                </div>
+                                        </div>
                                 </div>
 
-                    <div class="position-relative swiper-box">
-                        <div class="position-relative container-slider-pagination">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    @foreach($mainNews as $mainNew)
-                                        <div class="swiper-slide">
-                                            <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                            <p class="head-text text">{{ $mainNew->text }}</p>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
+                    
+
                 </div>
             </div>
         </div>
@@ -128,13 +131,14 @@
 
                                         <div class="school-box-photo-2 d-flex">
                                                 <a class="school-box-link" href="">
-                                                        <div class="img-box">
-                                                                <img src="/img/school/photo3.png" alt="children-with-map">
-                                                        </div>
+                                                <div class="img-box">
+                                                        <img src="/img/school/photo3.png" alt="children-with-map">
+                                                </div>
 
                                                         <div class="school-box d-flex flex-column text-left ">
-                                                                <h3 class="accentColor mb-24">Польша</h3>
-                                                                <p class="text flex-grow-1 mb-12">обучение по адресу:</br>ul.Ksieskiej, Wroclaw</p>
+                                                                <h3 class="accentColor mb-24">Беларусь</h3>
+                                                                <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
+                                                                <p class="text flex-grow-1 mb-12">д. Жуков Луг (5 км от ст.м.Уручье)</p>
                                                                 <a href="" class="button_2 text">Подробнее</a>
                                                         </div>
                                                 </a>
@@ -149,7 +153,7 @@
 <section class="advantages mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Почему мы?</h2>
-                <div class="advantages row justify-content-between align-items-center">
+                <div class="advantages row justify-content-between align-items-center flex-wrap-reverse">
                         <div class="col-lg-6 flex-column">
                                 <ul class="advantages-list-1">
                                         <li class="text mb-20 li"> <span class="text-bold ">«Смарт Скул» </span> — это официальное частное учреждение образования в Беларуси, России, Грузии, Польше.</li>
@@ -173,7 +177,8 @@
                         </div>
                         <div class="col-lg-6">
                                 <div class="grid-wrapper">
-                                        <a class="grid-box"><img src="/img/main/advantages/img1.png" alt="image-1">
+                                        <a class="grid-box">
+                                                <img src="/img/main/advantages/img1.png" alt="image-1">
                                                 <div class="overlay-title">
                                                         <h3>Первоклассник</h3>
                                                 </div>
@@ -261,7 +266,7 @@
                                 </div>
 
                         </div>
-                        <div class="col-5">
+                        <div class="col-lg-5">
                                 <div class="priority-inner">
                                         <div class="priority-box d-flex mb-40">
                                                 <img src="/svg/bottle.svg" alt="bottle-img">

@@ -284,6 +284,7 @@ import { required, email, minLength } from 'vuelidate/lib/validators';
                                 id="grade"
                                 v-model="form.grade"
                                 :class="$v.form.grade.$error ? 'is-invalid' : ''"
+                                class="multiselect"
                                 :options="grade"
                                 :searchable="false"
                                 :close-on-select="true"
@@ -400,9 +401,9 @@ export default {
                 country: '',
                 grade: ''
             },
-            format: ['Очно', 'Camp'],
-            countries: ['Бел','Ру','Гер','Фр','Ит','Спб'],
-            grade: ["1", "2", "3", "4"],
+            format: ['Онлайн', 'Оффлайн'],
+            countries: ['Беларусь','Россия','Грузия', 'Польша'],
+            grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
         };
     },
     validations: {
