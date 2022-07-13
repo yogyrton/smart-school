@@ -13755,6 +13755,7 @@ input, textarea {
 @media screen and (max-width: 600px) {
   .h1, h1, h2.h1 {
     font-size: 32px;
+    line-height: 32px;
   }
 }
 
@@ -13971,6 +13972,11 @@ header {
   padding: 10px 0;
   margin-bottom: 140px;
 }
+@media screen and (max-width: 1520px) {
+  header {
+    display: none;
+  }
+}
 @media screen and (max-width: 992px) {
   header {
     padding: 5px 0;
@@ -14052,11 +14058,6 @@ header .dropdown-toggle::after {
   width: 731px;
   height: 787px;
   z-index: -3;
-}
-@media screen and (max-width: 1500px) {
-  .head .imgHead-box .pseudo {
-    display: none;
-  }
 }
 .head .pseudo2 {
   position: absolute;
@@ -14712,7 +14713,8 @@ header .dropdown-toggle::after {
   font-weight: 400;
   color: #605F5F;
 }
-#order-section .order-form label {
+
+label {
   display: block;
   margin-bottom: 2px;
   font-size: 12px;
@@ -14721,7 +14723,8 @@ header .dropdown-toggle::after {
   font-weight: 400;
   color: #605F5F;
 }
-#order-section .order-form .input, #order-section .order-form input, #order-section .order-form .bootstrap-select .dropdown-toggle {
+
+.input, input {
   display: block;
   width: 312px;
   border: 1px solid #F4F2F7;
@@ -14731,21 +14734,22 @@ header .dropdown-toggle::after {
   transition: 0.4s ease;
   color: #605F5F;
 }
-#order-section .order-form .input:focus, #order-section .order-form .input:active, #order-section .order-form input:focus, #order-section .order-form input:active, #order-section .order-form .bootstrap-select .dropdown-toggle:focus, #order-section .order-form .bootstrap-select .dropdown-toggle:active {
+.input:focus, .input:active, input:focus, input:active {
   border: 1px solid #8041FF;
   box-shadow: none;
   outline: none;
 }
-#order-section .order-form .input::-moz-placeholder, #order-section .order-form input::-moz-placeholder, #order-section .order-form .bootstrap-select .dropdown-toggle::-moz-placeholder {
+.input::-moz-placeholder, input::-moz-placeholder {
   color: #605F5F;
 }
-#order-section .order-form .input:-ms-input-placeholder, #order-section .order-form input:-ms-input-placeholder, #order-section .order-form .bootstrap-select .dropdown-toggle:-ms-input-placeholder {
+.input:-ms-input-placeholder, input:-ms-input-placeholder {
   color: #605F5F;
 }
-#order-section .order-form .input::placeholder, #order-section .order-form input::placeholder, #order-section .order-form .bootstrap-select .dropdown-toggle::placeholder {
+.input::placeholder, input::placeholder {
   color: #605F5F;
 }
-#order-section .order-form textarea {
+
+textarea {
   display: block;
   height: calc(100% - 28px);
   resize: none;
@@ -14756,16 +14760,42 @@ header .dropdown-toggle::after {
   transition: 0.4s ease;
   min-height: 200px;
 }
-#order-section .order-form textarea:focus, #order-section .order-form textarea:active {
+textarea:focus, textarea:active {
   border: 1px solid #8041FF;
   box-shadow: none;
   outline: none;
 }
-#order-section .order-form .form_btn {
+
+.textarea::-moz-placeholder {
+  color: #605F5F;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Rubik-Regular", sans-serif;
+}
+
+.textarea:-ms-input-placeholder {
+  color: #605F5F;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Rubik-Regular", sans-serif;
+}
+
+.textarea::placeholder {
+  color: #605F5F;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Rubik-Regular", sans-serif;
+}
+
+.form_btn {
   justify-content: flex-end;
   display: flex;
 }
-#order-section .order-form .form_btn button {
+
+.form_btn button {
   padding: 12px 56px;
   color: #FFFFFF;
   width: -webkit-fit-content;
@@ -14811,7 +14841,6 @@ header .dropdown-toggle::after {
   top: 10px;
   padding: 4px 8px;
   text-align: center;
-  transition: transform 0.2s ease;
   cursor: pointer;
 }
 
@@ -14832,7 +14861,6 @@ header .dropdown-toggle::after {
   height: 50px;
   display: block;
   border-radius: 8px;
-  transition: 0.4s ease;
   border: none;
   background: #F4F2F7;
   color: #605F5F;
@@ -14884,7 +14912,6 @@ header .dropdown-toggle::after {
   padding: 40px 0;
 }
 .footer .logo {
-  background-color: red;
   margin-right: 120px;
 }
 .footer .footer-inner {
