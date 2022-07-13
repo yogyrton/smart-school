@@ -123,30 +123,35 @@ input, textarea
     margin-bottom: 0
     margin-top: 0
 
-.h1, h1, h2.h1
-    @media screen and (max-width: 1500px)
-        white-space: normal
-    @media screen and (max-width: 600px)
-        font-size: 32px
-        line-height: 32px
 
 h1, .h1 
     font-family: 'Rubik-SemiBold', sans-serif
     font-size: 60px
     line-height: 100%
     font-weight: 600
+    @media screen and (max-width: 600px)
+        font-size: 32px
+        line-height: 32px
+    @media screen and (max-width: 1500px)
+        white-space: normal
 
 h2, .h2
     font-family: 'Rubik-SemiBold', sans-serif
     font-size: 44px
     line-height: 100%
     font-weight: 600
+    @media screen and (max-width: 600px)
+        font-size: 32px
+        line-height: 32px
 
 h3, .h3 
     font-family: 'Rubik-SemiBold', sans-serif
     font-size: 32px
     line-height: 32px
     font-weight: 600
+    @media screen and (max-width: 992px)
+        font-size: 24px
+        line-height: 32px
 
 h4, .h4
     font-family: 'Rubik-SemiBold', sans-serif
@@ -230,6 +235,8 @@ button
     margin-bottom: 32px
 .mb-40
     margin-bottom: 40px
+    @media screen and (max-width: 600px)
+        margin-bottom: 24px  
 .mb-50
     margin-bottom: 50px
 .mb-60
@@ -238,6 +245,8 @@ button
     margin-bottom: 80px
 .mb-160
     margin-bottom: 160px
+    @media screen and (max-width: 992px)
+        margin-bottom: 40px
 .mb-180
     margin-bottom: 180px
 .pb-10
@@ -254,6 +263,8 @@ button
     padding-bottom: 120px
 .pt-120
     padding-top: 120px
+    @media screen and (max-width: 992px)
+        padding-top: 40px
 
 .logo 
     width: 74px
@@ -340,7 +351,7 @@ header
         vertical-align: 0.15em
         
 
-.head 
+.head
     z-index: 10
     .imgHead-box
         position: relative
@@ -365,6 +376,8 @@ header
         height: 140px
         bottom: 0
         right: 75px
+        @media screen and (max-width: 1200px)
+            display: none
 
     .head-inner 
         max-width: 650px
@@ -380,19 +393,6 @@ header
     .row
         @media screen and (max-width: 992px)
             flex-direction: column-reverse
-
-    // .pseudo2
-    //     position: absolute
-    //     bottom: 0
-    //     right: 0
-    //     background-image: url(/svg/headRectangleSmall.svg)
-    //     background-repeat: no-repeat
-    //     background-size: cover
-    //     width: 133px
-    //     height: 328px
-    //     border-radius: 100px
-    //     transform: rotate(-145deg)
-    //     z-index: -1
 
 #head .container-slider-pagination
     .advt-box
@@ -414,6 +414,8 @@ header
 .history
     overflow: hidden
     padding-bottom: 160px
+    @media screen and (max-width: 992px)
+        padding-bottom: 40px
     .history-text-box 
         max-width: 654px
         @media screen and (max-width: 992px)
@@ -433,6 +435,8 @@ header
             z-index: -1
             top: -56px
             left: -38px
+            @media screen and (max-width: 1510px)
+                display: none
             
     .box-img img
         width: 100%
@@ -481,6 +485,8 @@ header
                 grid-column-start: 1
                 grid-column-end: 3
 
+.img-box
+    height: 100%
 
 .school-box img,
 .school-box-photo-1 img,
@@ -489,6 +495,11 @@ header
     height: 100%
 
 .advantages
+
+    .advantages-list-2
+        @media screen and (max-width: 920px)
+            margin-bottom: 0px
+
     .advantages-list-1 li 
         list-style: none
         background: url('/img/main/advantages/marker1.svg') no-repeat 0 0px
@@ -508,11 +519,13 @@ header
         gap: 30px
         grid-template-columns: 1fr 1fr
         grid-template-rows: repeat(2, 1fr)
-        width: 654px
+        // width: 654px
+        @media screen and (max-width: 992px)
+            margin-bottom: 24px
 
         .grid-box 
-            width: 312px
-            height: 312px
+            // width: 312px
+            // height: 312px
             position: relative
             display: flex
             align-items: center
@@ -524,6 +537,11 @@ header
                 display: none
                 z-index: 2
                 color: $white
+                @media screen and (max-width: 920px)
+                    font-size: 32px
+                    line-height: 24px
+            
+                
 
         .grid-box::before 
             content:""
@@ -542,6 +560,11 @@ header
         .grid-box:hover .overlay-title
             display: block
 
+        .grid-box img
+            height: 100%
+            width: 100%
+            object-fit: cover
+
 .info
     .row
         @media screen and (max-width: 1200px)
@@ -558,8 +581,13 @@ header
 
 .priority
     background-color: rgba(244, 242, 246, 1)
+    h2
+        @media screen and (max-width: 992px)
+            margin-bottom: 24px
     .priority-wrapper 
         gap: 125px
+        @media screen and (max-width: 992px) 
+            gap: 0 
         .priority-inner
             display: flex
             flex-direction: column
@@ -569,10 +597,16 @@ header
                 gap: 20px
                 align-items: flex-start
                 height: 105px
+                @media screen and (max-width: 992px)
+                    height: 100%
                 img
                     object-fit: contain
                 p
                     max-width: 460px
+
+.priority-box:nth-child(3)
+    @media screen and (max-width: 992px)
+        margin-bottom: 20px
 
 #teachers
     .swiper
@@ -1041,12 +1075,14 @@ textarea
     display: block
     position: relative
 
-.multiselect .scrollbar
-    background-color: red
-    width: 2px
 
-.multiselect::-webkit-scrollbar-track
-    border: 5px solid red
+.multiselect__content-wrapper
+    scrollbar-width: thin
+    scrollbar-color: #6969dd #e0e0e0
+
+.multiselect::-webkit-scrollbar-thumb 
+    border-radius: 4px
+    background: #f0f2f5
 
 .multiselect__single, .multiselect__placeholder
     font-family: "Rubik-Regular", sans-serif
@@ -1067,7 +1103,7 @@ textarea
 
 .multiselect__select:before 
     position: relative
-    right: -19%px
+    right: -19%
     top: -10%
     background-image: url('/svg/formArrow.svg')
     background-repeat: no-repeat

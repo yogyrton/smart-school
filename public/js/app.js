@@ -2449,6 +2449,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -2469,9 +2470,9 @@ __webpack_require__.r(__webpack_exports__);
         country: '',
         grade: ''
       },
-      format: ['Очно', 'Camp'],
-      countries: ['Бел', 'Ру', 'Гер', 'Фр', 'Ит', 'Спб'],
-      grade: ["1", "2", "3", "4"]
+      format: ['Онлайн', 'Оффлайн'],
+      countries: ['Беларусь', 'Россия', 'Грузия', 'Польша'],
+      grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
     };
   },
   validations: {
@@ -20941,6 +20942,7 @@ var render = function () {
                       ]),
                       _vm._v(" "),
                       _c("multiselect", {
+                        staticClass: "multiselect",
                         class: _vm.$v.form.grade.$error ? "is-invalid" : "",
                         attrs: {
                           id: "grade",
@@ -48069,6 +48071,9 @@ var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head 
     el: "#head .swiper-pagination",
     clickable: true
   }
+});
+$(window).on("load", function () {
+  $(".multiselect").mCustomScrollbar();
 });
 })();
 
