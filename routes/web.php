@@ -11,7 +11,7 @@ Route::prefix('login')->group(function () {
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
 });
 
-Route::get('/', [MainPageController::class, 'index'])->name('home')->middleware('throttle:test');
+Route::get('/', [MainPageController::class, 'index'])->name('home');
 
 
 
