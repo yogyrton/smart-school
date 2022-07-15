@@ -36,7 +36,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Главные новости
+                                --- Главные новости
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -56,7 +56,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Блок новостей
+                                --- Блок новостей
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -76,7 +76,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Педагоги
+                                --- Педагоги
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -95,7 +95,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Вожатые
+                                --- Вожатые
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -115,7 +115,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Блок документов
+                                --- Блок документов
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -135,7 +135,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Прейскурант цен
+                                --- Прейскурант цен
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -156,7 +156,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Предыдущие смены
+                                --- Фото предыдущих смен
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -173,12 +173,31 @@
                         </ul>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <p>
+                                --- Фотогалерея
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('galleries.index') }}" class="nav-link">
+                                    <p>Посмотреть фото</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('galleries.create') }}" class="nav-link">
+                                    <p>Добавить фото</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </nav>
-
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info d-block">
-                    <a href="{{ route('logout') }}" class="d-block">Выйти</a>
+                    <a href="{{ route('logout') }}" class="d-block">Выйти из АдминПанели</a>
                 </div>
             </div>
 

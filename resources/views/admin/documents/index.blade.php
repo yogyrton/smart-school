@@ -17,12 +17,16 @@
     @endif
 
 
-    <a href="{{ route('documents.create') }}">Добавить документ</a>
+    <a href="{{ route('documents.create') }}">Добавить документ (не больше 5 общих, не более 2 для каждого лагеря)</a>
 
     <table class="table table-striped projects">
 
         <thead>
         <tr>
+
+            <th style="width: 20%">
+                Позиция
+            </th>
 
             <th style="width: 20%">
                 Название
@@ -38,6 +42,10 @@
         <tbody>
         @foreach($documents as $document)
             <tr>
+
+                <th>
+                    {{ $document->page }}
+                </th>
 
                 <td>
                     {{ $document->title }}

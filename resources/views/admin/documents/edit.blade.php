@@ -30,6 +30,7 @@
                             @csrf
                             @method('PUT')
                             <div class="card-body">
+
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Название (обязательно)</label>
                                     <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $document->title }}">
@@ -40,11 +41,25 @@
                                     <input type="file" name="path" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Выбрать позицию показа(обязательно)</label>
+
+                                    <div class="form-group">
+                                        <select class="custom-select" name="page">
+                                            <option value="{{ $document->page }}">{{ $document->page }}</option>
+                                            <option value="Общие">Общие</option>
+                                            <option value="Лагерь Жуков Луг">Лагерь Жуков Луг</option>
+                                            <option value="Лагерь Дримленд">Лагерь Дримленд</option>
+                                            <option value="Лагерь в Грузии">Лагерь в Грузии</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Добавить</button>
+                                <button type="submit" class="btn btn-primary">Изменить</button>
                             </div>
                         </form>
                     </div>

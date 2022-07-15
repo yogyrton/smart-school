@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CounselorController;
 use App\Http\Controllers\Admin\DocumentController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\MainNewsController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PhotoController;
@@ -23,4 +24,5 @@ Route::middleware('admin')->group(function () {
     Route::resource('prices', PriceController::class);
     Route::resource('documents', DocumentController::class);
     Route::resource('photos', PhotoController::class);
+    Route::resource('galleries', GalleryController::class);
 });
