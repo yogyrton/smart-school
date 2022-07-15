@@ -90,7 +90,7 @@
                     </div>
 
                     <div class="col-lg-6">
-
+                        
                         <div class="form-group mb-12">
                             <label for="country">Страна</label>
                             <multiselect
@@ -205,7 +205,7 @@
                 <div class="form_btn">
                     <button type="submit" class="btn-purple button_2">Отправить</button>
                 </div>
-
+                
             </form>
             <div v-else>
                 <h1>
@@ -313,7 +313,7 @@ export default {
 .form-check-input:focus {
     border-color: #8041FF;
     outline: 0;
-    box-shadow: none;
+    box-shadow: none; 
 }
 
 .invalid-feedback {

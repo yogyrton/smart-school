@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\MailController;
 use App\Http\Controllers\Page\MainPageController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,8 +11,7 @@ Route::prefix('login')->group(function () {
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
 });
 
-Route::get('/', [MainPageController::class, 'index'])->name('home');
-Route::get('/mail', [MailController::class, 'index'])->name('mail');
+Route::get('/', [MainPageController::class, 'index'])->name('home')->middleware('throttle:test');
 
 
 

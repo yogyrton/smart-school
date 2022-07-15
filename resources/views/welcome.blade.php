@@ -21,7 +21,7 @@
                                                 <button class="button_1 btn-pink">Оставить заявку</button>
                                         </div>
 
-
+                                        
                                 </div>
                         </div>
 
@@ -40,7 +40,7 @@
                                                 <div class="swiper-pagination"></div>
                                                 </div>
                                 </div>
-
+                        
             </div>
         </div>
         <div class="pseudo2"></div>
@@ -76,9 +76,9 @@
                         </div>
                 </div>
         </div>
-
+        
 </section>
-<!--
+<!-- 
  <section id="school" class="mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Школа</h2>
@@ -106,7 +106,7 @@
                                                         <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
                                                         <a href="" class="button_2 text">Подробнее</a>
                                                 </a>
-
+                                                
                                         </div>
 
                                         <div class="school-box not-padding">
@@ -306,7 +306,7 @@
                         @foreach($teachers as $teacher)
                         <div class="swiper-slide">
                                 <div class="teacher-box d-flex flex-column">
-                                        <div class="teacher__image-ibg mb-20"><img
+                                        <div class="teacher__image-ibg mb-20"><img 
                                                                         src="{{ '/storage/' . $teacher->thumbnail }}"
                                                                         alt="{{ $teacher->name }}">
                                         </div>
