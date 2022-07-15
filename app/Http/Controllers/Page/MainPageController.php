@@ -23,3 +23,4 @@ class MainPageController extends Controller
         return view('welcome', compact('mainNews', 'teachers', 'news', 'documents'));
     }
 }
+
