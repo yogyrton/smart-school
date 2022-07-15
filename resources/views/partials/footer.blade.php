@@ -1,6 +1,6 @@
 @section('footer')
 
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container">
         <div class="d-flex align-items-start">
             <div class="logo">
@@ -73,6 +73,6 @@
         </div>
         <address>Разработка и дизайн Ilavista Technologies</address>
     </div>
-</footer>
+</footer> -->
 
 @show

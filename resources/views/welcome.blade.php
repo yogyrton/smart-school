@@ -5,23 +5,27 @@
 
 <section id="head" class="head mb-160 position-relative">
         <div class="container container-mob">
-                <div class="row head-wrapper">
-                        <div class="col-lg-6 imgHead-box">
+                <div class="head-wrapper">
+                        <div class="imgHead-box">
                                 <img src="/img/main/imgHead.png" alt="">
                                 <div class="pseudo"></div>
                         </div>
 
-                        <div class="col-lg-6">
-                                <div class="head-inner mb-80">
+                        <div class="head-info">
+                                <div class="head-inner">
                                         <h1 class="h1 pb-48">
                                                 Международная сеть частных школ <span class="accentColor">Smart School</span>
                                         </h1>
-                                        <div class="btn-group mb-80">
+                                        <div class="btn-group">
                                                 <button class="button_1 btn-purple">Выбрать страну</button>
                                                 <button class="button_1 btn-pink">Оставить заявку</button>
                                         </div>
 
-                                        <div class="position-relative swiper-box">
+                                        
+                                </div>
+                        </div>
+
+                        <div class="position-relative swiper-box head-swiper">
                                                 <div class="position-relative container-slider-pagination">
                                                 <div class="swiper">
                                                         <div class="swiper-wrapper">
@@ -35,22 +39,18 @@
                                                 </div>
                                                 <div class="swiper-pagination"></div>
                                                 </div>
-                                        </div>
                                 </div>
-
-                    
-
-                </div>
+                        
             </div>
         </div>
         <div class="pseudo2"></div>
 </section>
 
-<section class="history">
-        <div class="container container-mob">
+<section id="history">
+        <div class="container">
                 <h2 class="accentColor mb-40">История</h2>
 
-                        <div class="row align-items-start justify-content-between">
+                        <div class="row align-items-start justify-content-between container-mob">
                                 <div class=" col-lg-7 text history-text-box">
                                         <p class="pb-10">
                                         В 2015 году при содействии лучших методистов
@@ -78,8 +78,8 @@
         </div>
         
 </section>
-
-<section class="school mb-160 ">
+<!-- 
+ <section id="school" class="mb-160">
         <div class="container">
                 <h2 class="accentColor mb-40">Школа</h2>
                 <div class="row">
@@ -148,7 +148,7 @@
                         </div>
                 </div>
         </div>
-</section>
+</section>  -->
 
 <section class="advantages mb-160">
         <div class="container">
@@ -177,21 +177,21 @@
                         </div>
                         <div class="col-lg-6">
                                 <div class="grid-wrapper">
-                                        <a class="grid-box">
+                                        <a class="grid-box" href="/">
                                                 <img src="/img/main/advantages/img1.png" alt="image-1">
                                                 <div class="overlay-title">
                                                         <h3>Первоклассник</h3>
                                                 </div>
                                         </a>
-                                        <a class="grid-box"><img src="/img/main/advantages/img2.png" alt="image-2">
+                                        <a class="grid-box"  href="/"><img src="/img/main/advantages/img2.png" alt="image-2">
                                                 <div class="overlay-title">
                                                         <h3>Обучение</h3>
                                                 </div></a>
-                                        <a class="grid-box"><img src="/img/main/advantages/img3.png" alt="image-3">
+                                        <a class="grid-box"  href="/"><img src="/img/main/advantages/img3.png" alt="image-3">
                                                 <div class="overlay-title">
                                                         <h3>Старшеклассник</h3>
                                                 </div></a>
-                                        <a class="grid-box"><img src="/img/main/advantages/img4.png" alt="image-4">
+                                        <a class="grid-box"  href="/"><img src="/img/main/advantages/img4.png" alt="image-4">
                                                 <div class="overlay-title">
                                                         <h3>Достижения</h3>
                                                 </div></a>
@@ -362,7 +362,7 @@
                                                 <span class="news-date grey mb-12">{{ $new->updated_at->format('d-m-Y') }}</span>
                                                 <h5 class="accentColor news-title text-bold mb-12">{{ $new->title }}</h5>
                                                 <p class="news-text text mb-12">{{ $new->text }}</p>
-                                                <a class="news-btn accentColor text-bold" href="/">Подробнее</a>
+                                                <a class="news-btn text-bold" href="/">Подробнее</a>
                                         </div>
                                         </div>
                                 </div>
@@ -375,7 +375,7 @@
                 </div>
                 </div>
         </div>
-        </section>
+</section>
 
 <section id="documents" class="mb-160">
         <div class="container">
@@ -407,7 +407,7 @@
 
 <section id="order-section" class="mb-160">
         <div class="container">
-                <div class="row justify-content-between">
+                <div class="row container-mob justify-content-between">
                         <div class="col-lg-4 d-flex flex-column contacts-wrapper">
                                 <h2 class="accentColor contacts-title">Контакты</h2>
                                 <div class="mb-40">
