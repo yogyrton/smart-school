@@ -1,166 +1,3 @@
-<!-- <template>
-        <form @submit.prevent="submit" class="order-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="mb-12">
-
-                                        <pre> {{$v.postData.name}}</pre>
-
-                                        <div class="form-group" :class="{ 'form-group--error': $v.postData.name.$error }">
-                                            <label for="order_name">Представьтесь*</label>
-                                            <input  @blur="$v.postData.name.$touch()"
-                                            v-model.trim="$v.postData.name.$model" 
-                                            type="text" id="order_name"
-                                            name="order_name" placeholder="Введите Ваше имя" class="w-100" >
-                                        </div>
-
-                                        <span class="error" v-if="!$v.postData.name.error">Filed is required</span>
-                                        <div class="error" v-if="!$v.postData.name.minLength">Name must have at least {{$v.postData.name.$params.minLength.min}} letters.</div>
-                                    </div>
-
-                                    <div class="mb-12"> 
-                                            <div>
-                                                <label class="typo__label">Формат обучения</label>
-                                                <multiselect v-model="value1" :options="options1" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Выберите формат обучения" >
-                                                </multiselect>
-                                            </div>
-                                    </div>
-
-                                    <div class="mb-12">
-
-                                        <pre> {{$v.postData.phone}}</pre>
-
-                                        <label for="contact_phone">Телефон*</label>
-                                        <input @blur="$v.postData.phone.$touch()"
-                                        v-model.trim="$v.postData.phone.$model" 
-                                        placeholder="Введите номер телефона"  type="text" id="contact_phone" name="order_phone"  class="w-100 input-mask__phone" >
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="mb-12"> 
-                                            <div>
-                                                <label class="typo__label">Страна</label>
-                                                <multiselect  v-model="value2" :options="options2" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Выберите страну">
-                                                </multiselect>
-                                            </div>
-                                    </div>
-
-                                    <div class="mb-12"> 
-                                            <div>
-                                                <label class="typo__label">Класс обучения</label>
-                                                <multiselect  v-model="value3" :options="options3" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Выберите класс обучения">
-                                                </multiselect>
-                                            </div>
-                                    </div>
-
-
-                                    <div class="mb-12">
-
-                                        <pre> {{$v.postData.email}}</pre>
-
-                                        <label for="contact_email">Email*</label>
-                                        <input @blur="$v.postData.email.$touch()"
-                                        v-model.trim="$v.postData.email.$model"
-                                        placeholder="Введите email для связи" type="email" id="contact_email" name="contact_email" class="w-100 input-mask__mail" >
-                                    </div>
-                                </div>
-
-                                <div class="mb-12">
-                                    <label for="order_name">Есть вопросы? Напишите</label>
-                                    <textarea name="contact_msg" id="contact_msg" class="w-100" placeholder="Напишите Ваш вопрос"></textarea>
-                                </div>
-
-                            </div>
-                            
-                            <div class="box-check-ico col-12">
-                                <label class="d-flex align-items-center check-ico">
-                                    <input class="consent" type="checkbox" checked name="agreement" value="true"
-                                        autocomplete="off" required>
-                                    <span class="d-flex align-items-center"></span>
-                                    <p class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на обработку персональных данных в соответствии с
-                                        <a class="accentColor" target="_blank" href="/">Политикой обработки персональных данных</a>.</p>
-                                </label>
-                            </div>
-
-                            <div class="form_btn">
-                                <button type="submit" :disabled="submitStatus === 'PENDING'" class="btn-purple button_2" id="submit-form">Отправить</button>
-                                <p class="typo__p" v-if="submitStatus === 'OK'">Thanks for your submission!</p>
-                                <p class="typo__p" v-if="submitStatus === 'ERROR'">Please fill the form correctly.</p>
-                                <p class="typo__p" v-if="submitStatus === 'PENDING'">Sending...</p>
-                            </div>
-        </form>
-                                    
-</template>
-
-
-<script>
-import Multiselect from 'vue-multiselect'
-import { required, email, minLength } from 'vuelidate/lib/validators';
-
-    export default {
-        components: {
-            Multiselect
-        },
-        data() {
-            return {
-                postData: {
-                    name: '',
-                    phone: '',
-                    email: ''
-                    },
-                error: false,
-                submitStatus: null,
-                options1: ['Онлайн','Camp'],
-                options2: ['Беларусь','Россия','Грузия','Испания','Франция','Молдова'],
-                options3: ['1-4','5-11'],
-                value1: [],
-                value2: [],
-                value3: [],
-            }
-        },
-
-        validations: {
-            postData:{
-                name: {
-                    required,
-                    minLength: minLength(2)
-                },
-                phone: {
-                    required
-                },
-                email: {
-                    email,
-                    required
-                    
-                }
-            }
-        },
-        
-        methods: {
-            submit() {
-                console.log('submit!')
-                this.$v.$touch()
-                if (this.$v.$invalid) {
-                    this.submitStatus = 'ERROR'
-                } else {
-                    
-                    this.submitStatus = 'PENDING'
-                    setTimeout(() => {
-                    this.submitStatus = 'OK'
-                    }, 1000)
-                }
-            }
-        }
-}
-
-</script>
-
-<style>
-.error {
-    color: red;
-}
-</style> -->
 
 <template>
     <div>
@@ -176,7 +13,7 @@ import { required, email, minLength } from 'vuelidate/lib/validators';
                             <label for="name">Представьтесь*</label>
                             <input
                                 id="name"
-                                class="form-control"
+                                class="form-control w-100"
                                 placeholder="Введите Ваше имя"
                                 :class="$v.form.name.$error ? 'is-invalid' : ''"
                                 v-model.trim="form.name"
@@ -207,7 +44,7 @@ import { required, email, minLength } from 'vuelidate/lib/validators';
                                 id="format"
                                 name="format"
                                 v-model="form.format"
-                                class="multiselect"
+                                class="multiselect w-100"
                                 :class="$v.form.format.$error ? 'is-invalid' : ''"
                                 :options="format"
                                 :searchable="false"
@@ -232,7 +69,7 @@ import { required, email, minLength } from 'vuelidate/lib/validators';
                             <input
                                 id="phone"
                                 type="text"
-                                class="form-control"
+                                class="form-control w-100"
                                 placeholder="Введите номер телефона"
                                 :class="
                                     $v.form.phone.$error ? 'is-invalid' : ''
@@ -254,12 +91,12 @@ import { required, email, minLength } from 'vuelidate/lib/validators';
 
                     <div class="col-lg-6">
                         
-
                         <div class="form-group mb-12">
                             <label for="country">Страна</label>
                             <multiselect
                                 id="country"
                                 v-model="form.country"
+                                class="w-100"
                                 :class="$v.form.country.$error ? 'is-invalid' : ''"
                                 :options="countries"
                                 :searchable="false"
@@ -284,6 +121,7 @@ import { required, email, minLength } from 'vuelidate/lib/validators';
                                 id="grade"
                                 v-model="form.grade"
                                 :class="$v.form.grade.$error ? 'is-invalid' : ''"
+                                class="multiselect w-100"
                                 :options="grade"
                                 :searchable="false"
                                 :close-on-select="true"
@@ -306,7 +144,7 @@ import { required, email, minLength } from 'vuelidate/lib/validators';
                             <input
                                 id="email"
                                 type="email"
-                                class="form-control"
+                                class="form-control w-100"
                                 placeholder="Введите email для связи"
                                 :class="
                                     $v.form.email.$error ? 'is-invalid' : ''
@@ -350,7 +188,7 @@ import { required, email, minLength } from 'vuelidate/lib/validators';
                                         autocomplete="off" v-model="form.agreeWithRules">
                                     <span class="d-flex align-items-center"></span>
                                     <p class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на обработку персональных данных в соответствии с
-                                        <a class="accentColor" target="_blank" href="/">Политикой обработки персональных данных</a>.</p>
+                                        <a class="politic-link" target="_blank" href="/">Политикой обработки персональных данных</a>.</p>
                                 </label>
 
                         <p
@@ -400,9 +238,9 @@ export default {
                 country: '',
                 grade: ''
             },
-            format: ['Очно', 'Camp'],
-            countries: ['Бел','Ру','Гер','Фр','Ит','Спб'],
-            grade: ["1", "2", "3", "4"],
+            format: ['Онлайн', 'Оффлайн'],
+            countries: ['Беларусь','Россия','Грузия', 'Польша'],
+            grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
         };
     },
     validations: {
@@ -441,7 +279,6 @@ export default {
     padding: 12px 16px;
     transition: 0.4s ease;
     color: #605F5F;
-    width: 100%;
     font-family: "Rubik-Regular", sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -486,5 +323,7 @@ export default {
     color: #BD2773;
     font-family: 'Rubik-Regular', sans-serif
 }
-
+.politic-link {
+    color:#8041FF !important
+}
 </style>

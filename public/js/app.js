@@ -2287,168 +2287,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -2469,9 +2307,9 @@ __webpack_require__.r(__webpack_exports__);
         country: '',
         grade: ''
       },
-      format: ['Очно', 'Camp'],
-      countries: ['Бел', 'Ру', 'Гер', 'Фр', 'Ит', 'Спб'],
-      grade: ["1", "2", "3", "4"]
+      format: ['Онлайн', 'Оффлайн'],
+      countries: ['Беларусь', 'Россия', 'Грузия', 'Польша'],
+      grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
     };
   },
   validations: {
@@ -2540,27 +2378,27 @@ function initSliders() {
       navigation: {
         prevEl: '.news-swiper__prev',
         nextEl: '.news-swiper__next'
-      } // // Брейкпоинты
-      // breakpoints: {
-      // 	320: {
-      // 		slidesPerView: 1,
-      // 		spaceBetween: 0,
-      // 		autoHeight: true,
-      // 	},
-      // 	768: {
-      // 		slidesPerView: 2,
-      // 		spaceBetween: 20,
-      // 	},
-      // 	992: {
-      // 		slidesPerView: 3,
-      // 		spaceBetween: 20,
-      // 	},
-      // 	1268: {
-      // 		slidesPerView: 4,
-      // 		spaceBetween: 30,
-      // 	},
-      // },
-      // События
+      },
+      // Брейкпоинты
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          autoHeight: true
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1268: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      } // События
       // on: {
       // }
 
@@ -2624,35 +2462,39 @@ function initSliders() {
       observer: true,
       observeParents: true,
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 20,
       speed: 1000,
       navigation: {
         prevEl: '.replies-swiper__prev',
         nextEl: '.replies-swiper__next'
       },
-      // Брейкпоинты
-
-      /*
       breakpoints: {
-      	320: {
-      		slidesPerView: 1,
-      		spaceBetween: 0,
-      		autoHeight: true,
-      	},
-      	768: {
-      		slidesPerView: 2,
-      		spaceBetween: 20,
-      	},
-      	992: {
-      		slidesPerView: 3,
-      		spaceBetween: 20,
-      	},
-      	1268: {
-      		slidesPerView: 4,
-      		spaceBetween: 30,
-      	},
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 30 // autoHeight: true,
+
+        },
+        500: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        1600: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
       },
-      */
       // События
       on: {}
     });
@@ -2722,28 +2564,25 @@ function initSliders() {
         nextEl: '.teacher-swiper__next'
       },
       // Брейкпоинты
-
-      /*
       breakpoints: {
-      	320: {
-      		slidesPerView: 1,
-      		spaceBetween: 0,
-      		autoHeight: true,
-      	},
-      	768: {
-      		slidesPerView: 2,
-      		spaceBetween: 20,
-      	},
-      	992: {
-      		slidesPerView: 3,
-      		spaceBetween: 20,
-      	},
-      	1268: {
-      		slidesPerView: 4,
-      		spaceBetween: 30,
-      	},
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          autoHeight: true
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1268: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
       },
-      */
       // События
       on: {}
     });
@@ -2836,7 +2675,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".form-control[data-v-1e620c62] {\n  display: block;\n  border: 1px solid #F4F2F7;\n  border-radius: 8px;\n  background: #F4F2F7;\n  padding: 12px 16px;\n  transition: 0.4s ease;\n  color: #605F5F;\n  width: 100%;\n  font-family: \"Rubik-Regular\", sans-serif;\n  font-size: 16px;\n  line-height: 24px;\n  font-weight: 400;\n  background-clip: padding-box;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n.form-control[data-v-1e620c62]:focus, .form-control[data-v-1e620c62]:active {\n  border: 1px solid #8041FF;\n  box-shadow: none;\n  outline: none;\n}\n.form-control.is-invalid[data-v-1e620c62],\n.multiselect .is-invalid[data-v-1e620c62] {\n  border-color: #dc3545 !important;\n}\n.form-control[data-v-1e620c62]:focus {\n  box-shadow: none;\n}\n.form-check-input[data-v-1e620c62] {\n  width: 20px;\n  height: 20px;\n  border: 1px solid #8041FF;\n  border-radius: 2px;\n}\n.form-check-input[data-v-1e620c62]:focus {\n  border-color: #8041FF;\n  outline: 0;\n  box-shadow: none;\n}\n.invalid-feedback[data-v-1e620c62] {\n  font-weight: 400;\n  font-size: 12px;\n  line-height: 18px;\n  color: #BD2773;\n  font-family: \"Rubik-Regular\", sans-serif;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".form-control[data-v-1e620c62] {\n  display: block;\n  border: 1px solid #F4F2F7;\n  border-radius: 8px;\n  background: #F4F2F7;\n  padding: 12px 16px;\n  transition: 0.4s ease;\n  color: #605F5F;\n  font-family: \"Rubik-Regular\", sans-serif;\n  font-size: 16px;\n  line-height: 24px;\n  font-weight: 400;\n  background-clip: padding-box;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n.form-control[data-v-1e620c62]:focus, .form-control[data-v-1e620c62]:active {\n  border: 1px solid #8041FF;\n  box-shadow: none;\n  outline: none;\n}\n.form-control.is-invalid[data-v-1e620c62],\n.multiselect .is-invalid[data-v-1e620c62] {\n  border-color: #dc3545 !important;\n}\n.form-control[data-v-1e620c62]:focus {\n  box-shadow: none;\n}\n.form-check-input[data-v-1e620c62] {\n  width: 20px;\n  height: 20px;\n  border: 1px solid #8041FF;\n  border-radius: 2px;\n}\n.form-check-input[data-v-1e620c62]:focus {\n  border-color: #8041FF;\n  outline: 0;\n  box-shadow: none;\n}\n.invalid-feedback[data-v-1e620c62] {\n  font-weight: 400;\n  font-size: 12px;\n  line-height: 18px;\n  color: #BD2773;\n  font-family: \"Rubik-Regular\", sans-serif;\n}\n.politic-link[data-v-1e620c62] {\n  color: #8041FF !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20769,7 +20608,7 @@ var render = function () {
                           modifiers: { trim: true },
                         },
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control w-100",
                       class: _vm.$v.form.name.$error ? "is-invalid" : "",
                       attrs: { id: "name", placeholder: "Введите Ваше имя" },
                       domProps: { value: _vm.form.name },
@@ -20812,7 +20651,7 @@ var render = function () {
                       ]),
                       _vm._v(" "),
                       _c("multiselect", {
-                        staticClass: "multiselect",
+                        staticClass: "multiselect w-100",
                         class: _vm.$v.form.format.$error ? "is-invalid" : "",
                         attrs: {
                           id: "format",
@@ -20858,7 +20697,7 @@ var render = function () {
                           modifiers: { trim: true },
                         },
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control w-100",
                       class: _vm.$v.form.phone.$error ? "is-invalid" : "",
                       attrs: {
                         id: "phone",
@@ -20903,6 +20742,7 @@ var render = function () {
                       ]),
                       _vm._v(" "),
                       _c("multiselect", {
+                        staticClass: "w-100",
                         class: _vm.$v.form.country.$error ? "is-invalid" : "",
                         attrs: {
                           id: "country",
@@ -20941,6 +20781,7 @@ var render = function () {
                       ]),
                       _vm._v(" "),
                       _c("multiselect", {
+                        staticClass: "multiselect w-100",
                         class: _vm.$v.form.grade.$error ? "is-invalid" : "",
                         attrs: {
                           id: "grade",
@@ -20983,7 +20824,7 @@ var render = function () {
                           modifiers: { trim: true },
                         },
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control w-100",
                       class: _vm.$v.form.email.$error ? "is-invalid" : "",
                       attrs: {
                         id: "email",
@@ -21156,7 +20997,7 @@ var staticRenderFns = [
       ),
       _c(
         "a",
-        { staticClass: "accentColor", attrs: { target: "_blank", href: "/" } },
+        { staticClass: "politic-link", attrs: { target: "_blank", href: "/" } },
         [_vm._v("Политикой обработки персональных данных")]
       ),
       _vm._v("."),
