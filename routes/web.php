@@ -15,6 +15,7 @@ Route::get('/', [MainPageController::class, 'index'])->name('home')->middleware(
 
 
 
+
 Route::fallback(function (){
     return 'aasda';
 });

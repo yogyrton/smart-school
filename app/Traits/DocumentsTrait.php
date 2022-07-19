@@ -6,8 +6,8 @@ use App\Models\Admin\Document;
 
 trait DocumentsTrait
 {
-    public static function getDocuments()
+    public static function getDocuments($page)
     {
-        return Document::all();
+        return Document::query()->where('page', '=', $page)->get();
     }
 }

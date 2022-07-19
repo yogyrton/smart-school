@@ -28,7 +28,7 @@ class SchoolRussiaController extends Controller
         $priceRus_5 = PriceTrait::getPrice($this->priceRus_5_8);
         $priceRus_9 = PriceTrait::getPrice($this->priceRus_9_11);
         $news = NewsTrait::getNews();
-        $documents = DocumentsTrait::getDocuments();
+        $documents = DocumentsTrait::getDocuments($this->page);
 
         return view('school-rus', compact('mainNews', 'news', 'documents', 'priceBel_1', 'priceBel_5', 'priceBel_9', 'priceRus_1', 'priceRus_5', 'priceRus_9'));
     }

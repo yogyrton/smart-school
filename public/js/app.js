@@ -2299,13 +2299,13 @@ __webpack_require__.r(__webpack_exports__);
     return {
       registrationPassed: false,
       form: {
-        name: "",
-        email: "",
-        phone: "",
+        name: null,
+        email: null,
+        phone: null,
         agreeWithRules: false,
-        format: '',
-        country: '',
-        grade: ''
+        format: null,
+        country: null,
+        grade: null
       },
       format: ['Онлайн', 'Оффлайн'],
       countries: ['Беларусь', 'Россия', 'Грузия', 'Польша'],
@@ -2348,6 +2348,16 @@ __webpack_require__.r(__webpack_exports__);
 
       if (!this.$v.form.$error) {
         this.registrationPassed = true;
+        axios.post('api/mail', {
+          name: this.form.name,
+          email: this.form.email,
+          phone: this.form.phone,
+          format: this.form.format,
+          country: this.form.country,
+          grade: this.form.grade
+        }).then(function (res) {
+          console.log(res);
+        });
       }
     }
   }

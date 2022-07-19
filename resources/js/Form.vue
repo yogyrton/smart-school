@@ -90,7 +90,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        
+
                         <div class="form-group mb-12">
                             <label for="country">Страна</label>
                             <multiselect
@@ -205,7 +205,7 @@
                 <div class="form_btn">
                     <button type="submit" class="btn-purple button_2">Отправить</button>
                 </div>
-                
+
             </form>
             <div v-else>
                 <h1>
@@ -230,13 +230,13 @@ export default {
         return {
             registrationPassed: false,
             form: {
-                name: "",
-                email: "",
-                phone: "",
+                name: null,
+                email: null,
+                phone: null,
                 agreeWithRules: false,
-                format:'',
-                country: '',
-                grade: ''
+                format:null,
+                country: null,
+                grade: null
             },
             format: ['Онлайн', 'Оффлайн'],
             countries: ['Беларусь','Россия','Грузия', 'Польша'],
@@ -260,9 +260,14 @@ export default {
     },
     methods: {
         checkForm() {
+
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
                 this.registrationPassed = true;
+
+                axios.post('api/mail', {name: this.form.name, email: this.form.email, phone: this.form.phone, format: this.form.format, country: this.form.country, grade: this.form.grade}).then( res => {
+                    console.log(res);
+                })
             }
         },
     },
@@ -313,7 +318,7 @@ export default {
 .form-check-input:focus {
     border-color: #8041FF;
     outline: 0;
-    box-shadow: none; 
+    box-shadow: none;
 }
 
 .invalid-feedback {

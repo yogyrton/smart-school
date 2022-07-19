@@ -17,7 +17,7 @@ class JukovLugController extends Controller
     {
         $mainNews = MainNewsTrait::getMainNews($this->page);
         $priceBel = PriceTrait::getPrice($this->price);
-        $documents = DocumentsTrait::getDocuments();
+        $documents = DocumentsTrait::getDocuments($this->page);
 
         return view('school-bel-1-4', compact('mainNews', 'priceBel', 'documents'));
     }
