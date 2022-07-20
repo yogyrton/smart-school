@@ -2355,278 +2355,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/NewsSlider.js":
-/*!************************************!*\
-  !*** ./resources/js/NewsSlider.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
-
-function initSliders() {
-  if (document.querySelector('.news-swiper')) {
-    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news-swiper', {
-      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
-      observer: true,
-      observeParents: true,
-      slidesPerView: 4,
-      spaceBetween: 30,
-      speed: 1000,
-      navigation: {
-        prevEl: '.news-swiper__prev',
-        nextEl: '.news-swiper__next'
-      },
-      // Брейкпоинты
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          autoHeight: true
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 20
-        },
-        1268: {
-          slidesPerView: 4,
-          spaceBetween: 30
-        }
-      } // События
-      // on: {
-      // }
-
-    });
-  }
-} // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
-
-
-function initSlidersScroll() {
-  var sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-
-  if (sliderScrollItems.length > 0) {
-    for (var index = 0; index < sliderScrollItems.length; index++) {
-      var sliderScrollItem = sliderScrollItems[index];
-      var sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-      var sliderScroll = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](sliderScrollItem, {
-        observer: true,
-        observeParents: true,
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: {
-          enabled: true
-        },
-        scrollbar: {
-          el: sliderScrollBar,
-          draggable: true,
-          snapOnRelease: false
-        },
-        mousewheel: {
-          releaseOnEdges: true
-        }
-      });
-      sliderScroll.scrollbar.updateSize();
-    }
-  }
-}
-
-window.addEventListener("load", function (e) {
-  // Запуск инициализации слайдеров
-  initSliders(); // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  //initSlidersScroll();
-});
-
-/***/ }),
-
-/***/ "./resources/js/RepliesSlider.js":
-/*!***************************************!*\
-  !*** ./resources/js/RepliesSlider.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
-
-function initSliders() {
-  if (document.querySelector('.replies-swiper')) {
-    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.replies-swiper', {
-      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
-      observer: true,
-      observeParents: true,
-      slidesPerView: 3,
-      spaceBetween: 20,
-      speed: 1000,
-      navigation: {
-        prevEl: '.replies-swiper__prev',
-        nextEl: '.replies-swiper__next'
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 30 // autoHeight: true,
-
-        },
-        500: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40
-        },
-        992: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-        1200: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-        1600: {
-          slidesPerView: 3,
-          spaceBetween: 20
-        }
-      },
-      // События
-      on: {}
-    });
-  }
-} // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
-
-
-function initSlidersScroll() {
-  var sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-
-  if (sliderScrollItems.length > 0) {
-    for (var index = 0; index < sliderScrollItems.length; index++) {
-      var sliderScrollItem = sliderScrollItems[index];
-      var sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-      var sliderScroll = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](sliderScrollItem, {
-        observer: true,
-        observeParents: true,
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: {
-          enabled: true
-        },
-        scrollbar: {
-          el: sliderScrollBar,
-          draggable: true,
-          snapOnRelease: false
-        },
-        mousewheel: {
-          releaseOnEdges: true
-        }
-      });
-      sliderScroll.scrollbar.updateSize();
-    }
-  }
-}
-
-window.addEventListener("load", function (e) {
-  // Запуск инициализации слайдеров
-  initSliders(); // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  //initSlidersScroll();
-});
-
-/***/ }),
-
-/***/ "./resources/js/TeachersSlider.js":
-/*!****************************************!*\
-  !*** ./resources/js/TeachersSlider.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
-
-function initSliders() {
-  if (document.querySelector('.teacher-swiper')) {
-    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.teacher-swiper', {
-      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
-      observer: true,
-      observeParents: true,
-      slidesPerView: 4,
-      spaceBetween: 30,
-      speed: 1000,
-      navigation: {
-        prevEl: '.teacher-swiper__prev',
-        nextEl: '.teacher-swiper__next'
-      },
-      // Брейкпоинты
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          autoHeight: true
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 20
-        },
-        1268: {
-          slidesPerView: 4,
-          spaceBetween: 30
-        }
-      },
-      // События
-      on: {}
-    });
-  }
-} // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
-
-
-function initSlidersScroll() {
-  var sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-
-  if (sliderScrollItems.length > 0) {
-    for (var index = 0; index < sliderScrollItems.length; index++) {
-      var sliderScrollItem = sliderScrollItems[index];
-      var sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-      var sliderScroll = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](sliderScrollItem, {
-        observer: true,
-        observeParents: true,
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: {
-          enabled: true
-        },
-        scrollbar: {
-          el: sliderScrollBar,
-          draggable: true,
-          snapOnRelease: false
-        },
-        mousewheel: {
-          releaseOnEdges: true
-        }
-      });
-      sliderScroll.scrollbar.updateSize();
-    }
-  }
-}
-
-window.addEventListener("load", function (e) {
-  // Запуск инициализации слайдеров
-  initSliders(); // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  //initSlidersScroll();
-});
-
-/***/ }),
-
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -47667,107 +47395,6 @@ _core_core_js__WEBPACK_IMPORTED_MODULE_0__["default"].use(modules);
 
 /***/ }),
 
-/***/ "./node_modules/swiper/swiper.esm.js":
-/*!*******************************************!*\
-  !*** ./node_modules/swiper/swiper.esm.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "A11y": () => (/* reexport safe */ _modules_a11y_a11y_js__WEBPACK_IMPORTED_MODULE_11__["default"]),
-/* harmony export */   "Autoplay": () => (/* reexport safe */ _modules_autoplay_autoplay_js__WEBPACK_IMPORTED_MODULE_14__["default"]),
-/* harmony export */   "Controller": () => (/* reexport safe */ _modules_controller_controller_js__WEBPACK_IMPORTED_MODULE_10__["default"]),
-/* harmony export */   "EffectCards": () => (/* reexport safe */ _modules_effect_cards_effect_cards_js__WEBPACK_IMPORTED_MODULE_24__["default"]),
-/* harmony export */   "EffectCoverflow": () => (/* reexport safe */ _modules_effect_coverflow_effect_coverflow_js__WEBPACK_IMPORTED_MODULE_22__["default"]),
-/* harmony export */   "EffectCreative": () => (/* reexport safe */ _modules_effect_creative_effect_creative_js__WEBPACK_IMPORTED_MODULE_23__["default"]),
-/* harmony export */   "EffectCube": () => (/* reexport safe */ _modules_effect_cube_effect_cube_js__WEBPACK_IMPORTED_MODULE_20__["default"]),
-/* harmony export */   "EffectFade": () => (/* reexport safe */ _modules_effect_fade_effect_fade_js__WEBPACK_IMPORTED_MODULE_19__["default"]),
-/* harmony export */   "EffectFlip": () => (/* reexport safe */ _modules_effect_flip_effect_flip_js__WEBPACK_IMPORTED_MODULE_21__["default"]),
-/* harmony export */   "FreeMode": () => (/* reexport safe */ _modules_free_mode_free_mode_js__WEBPACK_IMPORTED_MODULE_16__["default"]),
-/* harmony export */   "Grid": () => (/* reexport safe */ _modules_grid_grid_js__WEBPACK_IMPORTED_MODULE_17__["default"]),
-/* harmony export */   "HashNavigation": () => (/* reexport safe */ _modules_hash_navigation_hash_navigation_js__WEBPACK_IMPORTED_MODULE_13__["default"]),
-/* harmony export */   "History": () => (/* reexport safe */ _modules_history_history_js__WEBPACK_IMPORTED_MODULE_12__["default"]),
-/* harmony export */   "Keyboard": () => (/* reexport safe */ _modules_keyboard_keyboard_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
-/* harmony export */   "Lazy": () => (/* reexport safe */ _modules_lazy_lazy_js__WEBPACK_IMPORTED_MODULE_9__["default"]),
-/* harmony export */   "Manipulation": () => (/* reexport safe */ _modules_manipulation_manipulation_js__WEBPACK_IMPORTED_MODULE_18__["default"]),
-/* harmony export */   "Mousewheel": () => (/* reexport safe */ _modules_mousewheel_mousewheel_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
-/* harmony export */   "Navigation": () => (/* reexport safe */ _modules_navigation_navigation_js__WEBPACK_IMPORTED_MODULE_4__["default"]),
-/* harmony export */   "Pagination": () => (/* reexport safe */ _modules_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_5__["default"]),
-/* harmony export */   "Parallax": () => (/* reexport safe */ _modules_parallax_parallax_js__WEBPACK_IMPORTED_MODULE_7__["default"]),
-/* harmony export */   "Scrollbar": () => (/* reexport safe */ _modules_scrollbar_scrollbar_js__WEBPACK_IMPORTED_MODULE_6__["default"]),
-/* harmony export */   "Swiper": () => (/* reexport safe */ _core_core_js__WEBPACK_IMPORTED_MODULE_0__["default"]),
-/* harmony export */   "Thumbs": () => (/* reexport safe */ _modules_thumbs_thumbs_js__WEBPACK_IMPORTED_MODULE_15__["default"]),
-/* harmony export */   "Virtual": () => (/* reexport safe */ _modules_virtual_virtual_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
-/* harmony export */   "Zoom": () => (/* reexport safe */ _modules_zoom_zoom_js__WEBPACK_IMPORTED_MODULE_8__["default"]),
-/* harmony export */   "default": () => (/* reexport safe */ _core_core_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-/* harmony export */ });
-/* harmony import */ var _core_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/core.js */ "./node_modules/swiper/core/core.js");
-/* harmony import */ var _modules_virtual_virtual_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/virtual/virtual.js */ "./node_modules/swiper/modules/virtual/virtual.js");
-/* harmony import */ var _modules_keyboard_keyboard_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/keyboard/keyboard.js */ "./node_modules/swiper/modules/keyboard/keyboard.js");
-/* harmony import */ var _modules_mousewheel_mousewheel_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/mousewheel/mousewheel.js */ "./node_modules/swiper/modules/mousewheel/mousewheel.js");
-/* harmony import */ var _modules_navigation_navigation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/navigation/navigation.js */ "./node_modules/swiper/modules/navigation/navigation.js");
-/* harmony import */ var _modules_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/pagination/pagination.js */ "./node_modules/swiper/modules/pagination/pagination.js");
-/* harmony import */ var _modules_scrollbar_scrollbar_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/scrollbar/scrollbar.js */ "./node_modules/swiper/modules/scrollbar/scrollbar.js");
-/* harmony import */ var _modules_parallax_parallax_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/parallax/parallax.js */ "./node_modules/swiper/modules/parallax/parallax.js");
-/* harmony import */ var _modules_zoom_zoom_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/zoom/zoom.js */ "./node_modules/swiper/modules/zoom/zoom.js");
-/* harmony import */ var _modules_lazy_lazy_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/lazy/lazy.js */ "./node_modules/swiper/modules/lazy/lazy.js");
-/* harmony import */ var _modules_controller_controller_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/controller/controller.js */ "./node_modules/swiper/modules/controller/controller.js");
-/* harmony import */ var _modules_a11y_a11y_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/a11y/a11y.js */ "./node_modules/swiper/modules/a11y/a11y.js");
-/* harmony import */ var _modules_history_history_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/history/history.js */ "./node_modules/swiper/modules/history/history.js");
-/* harmony import */ var _modules_hash_navigation_hash_navigation_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/hash-navigation/hash-navigation.js */ "./node_modules/swiper/modules/hash-navigation/hash-navigation.js");
-/* harmony import */ var _modules_autoplay_autoplay_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/autoplay/autoplay.js */ "./node_modules/swiper/modules/autoplay/autoplay.js");
-/* harmony import */ var _modules_thumbs_thumbs_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/thumbs/thumbs.js */ "./node_modules/swiper/modules/thumbs/thumbs.js");
-/* harmony import */ var _modules_free_mode_free_mode_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/free-mode/free-mode.js */ "./node_modules/swiper/modules/free-mode/free-mode.js");
-/* harmony import */ var _modules_grid_grid_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/grid/grid.js */ "./node_modules/swiper/modules/grid/grid.js");
-/* harmony import */ var _modules_manipulation_manipulation_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/manipulation/manipulation.js */ "./node_modules/swiper/modules/manipulation/manipulation.js");
-/* harmony import */ var _modules_effect_fade_effect_fade_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/effect-fade/effect-fade.js */ "./node_modules/swiper/modules/effect-fade/effect-fade.js");
-/* harmony import */ var _modules_effect_cube_effect_cube_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/effect-cube/effect-cube.js */ "./node_modules/swiper/modules/effect-cube/effect-cube.js");
-/* harmony import */ var _modules_effect_flip_effect_flip_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/effect-flip/effect-flip.js */ "./node_modules/swiper/modules/effect-flip/effect-flip.js");
-/* harmony import */ var _modules_effect_coverflow_effect_coverflow_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/effect-coverflow/effect-coverflow.js */ "./node_modules/swiper/modules/effect-coverflow/effect-coverflow.js");
-/* harmony import */ var _modules_effect_creative_effect_creative_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modules/effect-creative/effect-creative.js */ "./node_modules/swiper/modules/effect-creative/effect-creative.js");
-/* harmony import */ var _modules_effect_cards_effect_cards_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./modules/effect-cards/effect-cards.js */ "./node_modules/swiper/modules/effect-cards/effect-cards.js");
-/**
- * Swiper 7.4.1
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * https://swiperjs.com
- *
- * Copyright 2014-2021 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: December 24, 2021
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***/ }),
-
 /***/ "./node_modules/axios/package.json":
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
@@ -47885,21 +47512,15 @@ var __webpack_exports__ = {};
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuelidate */ "./node_modules/vuelidate/lib/index.js");
+/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuelidate */ "./node_modules/vuelidate/lib/index.js");
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
-/* harmony import */ var _TeachersSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TeachersSlider */ "./resources/js/TeachersSlider.js");
-/* harmony import */ var _RepliesSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RepliesSlider */ "./resources/js/RepliesSlider.js");
-/* harmony import */ var _NewsSlider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NewsSlider */ "./resources/js/NewsSlider.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.EventHandler = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
 
-
-
-
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuelidate__WEBPACK_IMPORTED_MODULE_5__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuelidate__WEBPACK_IMPORTED_MODULE_2__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-form', (__webpack_require__(/*! ./Form.vue */ "./resources/js/Form.vue")["default"]));
 new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app');
 var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head .swiper', {
@@ -47911,6 +47532,124 @@ var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head 
     clickable: true
   }
 });
+var swiper_2 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#teachers .swiper', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.teachers .slider-button-next',
+    prevEl: '.teachers .slider-button-prev'
+  },
+  pagination: {
+    el: ".teachers .swiper-pagination",
+    clickable: true,
+    renderBullet: function renderBullet(index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    }
+  },
+  breakpoints: {
+    560: {
+      slidesPerView: 2
+    },
+    700: {
+      slidesPerView: 2
+    },
+    1200: {
+      slidesPerView: 3
+    },
+    1400: {
+      slidesPerView: 4
+    }
+  }
+});
+var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#replies .swiper', {
+  loop: false,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.replies .slider-button-next',
+    prevEl: '.replies .slider-button-prev'
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30 // autoHeight: true,
+
+    },
+    500: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    1600: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  }
+});
+var swiper_4 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#news .swiper', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.news .slider-button-next',
+    prevEl: '.news .slider-button-prev'
+  },
+  breakpoints: {
+    700: {
+      slidesPerView: 2
+    },
+    1200: {
+      slidesPerView: 3
+    },
+    1400: {
+      slidesPerView: 4
+    }
+  }
+}); //для уменьшения лого при скролле
+
+window.onscroll = function () {
+  if (window.scrollY < 200) {
+    document.querySelector('.header-rectangle').classList.remove('tiny');
+    document.querySelector('.logo').classList.remove('tiny');
+  } else {
+    document.querySelector('.header-rectangle').classList.add('tiny');
+    document.querySelector('.logo').classList.add('tiny');
+  }
+}; //для появления ссылки подробнее в блоке news
+
+
+function cutTextWithDots(line) {
+  line = line.substring(0, 120);
+  line = line.substring(0, line.lastIndexOf(' '));
+  line += '...';
+  return line;
+}
+
+var el = document.getElementsByClassName('news-text');
+var mores = document.getElementsByClassName('news-btn');
+
+for (var i = 0; i < el.length; i++) {
+  var height = getComputedStyle(el[i]).height;
+
+  if (Number(height.substring(0, height.indexOf('px'))) > 110) {
+    el[i].style.height = '110px';
+    el[i].style.overflow = 'hidden';
+    mores[i].style.display = 'block';
+    el[i].innerHTML = cutTextWithDots(el[i].innerHTML);
+  }
+}
 })();
 
 /******/ })()
