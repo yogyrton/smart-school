@@ -6,12 +6,54 @@ window.EventHandler = new Vue;
 import Validations from 'vuelidate';
 
 import Swiper from 'swiper/bundle';
+import ScrollReveal from 'scrollreveal';
 
 Vue.use(Validations);
 
 Vue.component('app-form', require('./Form.vue').default);
 new Vue({
 }).$mount('#app');
+
+
+//*Animation*//
+var slideUp = {
+    delay: 300,
+    duration: 1500,
+    reset: false,
+    easing: 'ease'
+};
+
+ScrollReveal().reveal('.scrollreveal', slideUp);
+ScrollReveal().reveal('.scrollheader',
+        {delay: 250,
+        duration: 1000,
+        reset: false,}
+);
+
+//для плавного скролла к разделам
+const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
+if(menuLinks.length > 0) {
+    menuLinks.forEach(menuLink => {
+        menuLink.addEventListener("click", onMenuLinkClick);
+    });
+
+    function onMenuLinkClick (e) {
+        const menuLink = e.target ;
+        if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+            const gotoBlock = document.querySelector(menuLink.dataset.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+
+            window.scrollTo ({
+                top: gotoBlockValue,
+                behavior: "smooth"
+            });
+
+            e.preventDefault();
+        }
+    }
+}
+
+//свайперы
 
 const swiper_1 = new Swiper('#head .swiper', {
     loop: false,
@@ -62,6 +104,13 @@ const swiper_3 = new Swiper('#replies .swiper', {
         nextEl: '.replies .slider-button-next',
         prevEl: '.replies .slider-button-prev',
     },
+    pagination: {
+        el: ".replies .swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
     breakpoints: {
         320: {
             slidesPerView: 1,
@@ -99,17 +148,45 @@ const swiper_4 = new Swiper('#news .swiper', {
         nextEl: '.news .slider-button-next',
         prevEl: '.news .slider-button-prev',
     },
+    pagination: {
+        el: ".news .swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
     breakpoints: {
-        700: {
+        600: {
             slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 10,
         },
         1200: {
             slidesPerView: 3,
+            spaceBetween: 10,
         },
         1400: {
             slidesPerView: 4,
+            spaceBetween: 10
         }
     }
+});
+
+const swiper_5 = new Swiper('#history .swiper', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.history .slider-button-next',
+        prevEl: '.history .slider-button-prev',
+    },
 });
 
 //для уменьшения лого при скролле
@@ -124,22 +201,24 @@ window.onscroll = function() {
 }
 
 //для появления ссылки подробнее в блоке news
-function cutTextWithDots(line) {
-    line = line.substring(0,120)
-    line = line.substring(0, line.lastIndexOf(' '));
-    line += '...'
-    return line;
-}
-
-const el = document.getElementsByClassName('news-text');
-const mores = document.getElementsByClassName('news-btn');
-
-for (let i = 0; i < el.length; i++) {
-    let height = getComputedStyle(el[i]).height;
-    if (Number(height.substring(0, height.indexOf('px'))) > 110) {
-        el[i].style.height = '110px';
-        el[i].style.overflow = 'hidden';
-        mores[i].style.display = 'block';
-        el[i].innerHTML = cutTextWithDots(el[i].innerHTML);
+window.addEventListener("DOMContentLoaded", ()=> {
+    function cutTextWithDots(line) {
+        line = line.substring(0,120)
+        line = line.substring(0, line.lastIndexOf(' '));
+        line += '...'
+        return line;
     }
-}
+    
+    const el = document.getElementsByClassName('news-text');
+    const mores = document.getElementsByClassName('news-btn');
+    
+    for (let i = 0; i < el.length; i++) {
+        let height = getComputedStyle(el[i]).height;
+        if (Number(height.substring(0, height.indexOf('px'))) > 115) {
+            el[i].style.height = '120px';
+            el[i].style.overflow = 'hidden';
+            mores[i].style.display = 'block';
+            el[i].innerHTML = cutTextWithDots(el[i].innerHTML);
+        }
+    }
+} )

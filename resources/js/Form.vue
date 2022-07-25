@@ -180,13 +180,13 @@
                     </div>
 
                     <div class="box-check-ico col-12">
-                                <label class="d-flex align-items-center check-ico"
+                                <label class="d-flex check-ico"
                                 :class="$v.form.agreeWithRules.$error ? 'is-invalid' : ''"
                                 for="agreeWithRules"
                                 >
                                     <input class="consent" id="agreeWithRules" type="checkbox" checked name="agreement" value="true"
                                         autocomplete="off" v-model="form.agreeWithRules">
-                                    <span class="d-flex align-items-center"></span>
+                                    <span class="d-flex"></span>
                                     <p class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на обработку персональных данных в соответствии с
                                         <a class="politic-link" target="_blank" href="/">Политикой обработки персональных данных</a>.</p>
                                 </label>

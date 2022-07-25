@@ -9,7 +9,7 @@
                 </a>
             </div>
 
-            <div class="footer-inner mb-40">
+            <div class="footer-inner">
                 <div class="footer-box">
                     <h5 class="text-bold mb-16">О нас</h5>
                     <ul class="footer-list">
