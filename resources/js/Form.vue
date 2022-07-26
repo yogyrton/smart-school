@@ -265,9 +265,7 @@ export default {
             if (!this.$v.form.$error) {
                 this.registrationPassed = true;
 
-                axios.post('api/mail', {name: this.form.name, email: this.form.email, phone: this.form.phone, format: this.form.format, country: this.form.country, grade: this.form.grade}).then( res => {
-                    console.log(res);
-                })
+                axios.post('api/mail', {name: this.form.name, email: this.form.email, phone: this.form.phone, format: this.form.format, country: this.form.country, grade: this.form.grade})
             }
         },
     },

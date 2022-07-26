@@ -2355,8 +2355,6 @@ __webpack_require__.r(__webpack_exports__);
           format: this.form.format,
           country: this.form.country,
           grade: this.form.grade
-        }).then(function (res) {
-          console.log(res);
         });
       }
     }
