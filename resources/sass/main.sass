@@ -145,6 +145,21 @@ input, textarea
         path
             transition: 1s
 
+#dots, #dots2
+    display: none
+    @media screen and (max-width: 576px)
+        display: inline-block
+
+#more, #more2
+    display: block
+    @media screen and (max-width: 576px)
+        display: none
+
+#btnMore, #btnMore2
+    font-family: 'Rubik-SemiBold', sans-serif
+    visibility: hidden
+    @media screen and (max-width: 576px)
+        visibility: initial
 
 .h1, .h2, .h3, .h4, .h5, .h6, p
     margin-bottom: 0
@@ -524,18 +539,6 @@ header
             @media screen and (min-width: 1650px)
                 display: none
 
-    // .pseudo2
-    //     position: absolute
-    //     background-image: url('/img/pseudo2.png')
-    //     background-repeat: no-repeat
-    //     background-size: cover
-    //     width: 254px
-    //     height: 140px
-    //     bottom: 0
-    //     right: 75px
-    //     @media screen and (max-width: 1200px)
-    //         display: none
-
     .head-inner 
         padding-top: 70px
         @media screen and (max-width: 1200px)
@@ -550,6 +553,11 @@ header
             margin-bottom: 75px
             @media screen and (max-width: 576px)
                 margin-bottom: 0
+                gap:8px
+            
+            .button_1
+                @media screen and (max-width: 576px)
+                    padding: 12px 8px
 
 .container-mob
     @media screen and (max-width: 992px)
@@ -604,7 +612,7 @@ header
             max-width: 100%
     .history-pseudo
         position: absolute
-        background-image: url('/img/historyPseudo.png')
+        background-image: url('/img/main/history/historyPseudo.png')
         background-repeat: no-repeat
         width: 625px
         height: 500px
@@ -623,6 +631,14 @@ header
     .swiper-slide
         @media screen and (max-width: 992px)
             text-align: center !important
+
+    .position-relative
+        @media screen and (max-width: 992px)
+            margin-bottom: 50px
+
+    .slider-button-next, .slider-button-prev
+        @media screen and (max-width: 1200px)
+            display: none
     
     .slider-button-next
         right: 15%
@@ -647,6 +663,24 @@ header
         @media screen and (max-width: 1200px)
             opacity: 1
             visibility: inherit
+
+    .swiper-pagination
+        display: none
+        bottom: 5%
+        position: absolute
+        @media screen and (max-width: 1200px)
+            display: block
+        .swiper-pagination-bullet
+            opacity: 1
+            background: $light-grey
+            width: 8px
+            height: 8px
+            margin: 0 8px
+        .swiper-pagination-bullet-active
+            background: $accentColor
+
+
+        
             
 #school
     .grid-box
@@ -744,7 +778,7 @@ header
         @media screen and (max-width: 920px)
             margin-bottom: 0px
 
-    .advantages-list-1 li 
+    .advantages-list-1 li
         list-style: none
         background: url('/img/main/advantages/marker1.svg') no-repeat 0 0px
         padding-left: 36px
@@ -819,18 +853,46 @@ header
             object-fit: cover
 
 .info
+    @media screen and (max-width: 768px)
+        margin-bottom: 0
+        padding-bottom: 80px
+    @media screen and (max-width: 576px)
+        padding-bottom: 100px
+    // .info-desktop
+    //     @media screen and (max-width: 768px)
+    //         display: none
     .row
         @media screen and (max-width: 1200px)
             flex-wrap: wrap
+        // @media screen and (max-width: 768px)
+        //     display: none !important
         .info-box
             max-width: 312px
-            word-wrap: break-word
-            @media screen and (max-width: 990px) 
-                margin-bottom: 30px  
-            @media screen and (max-width: 768px) 
-                margin-bottom: 50px  
-.info .col-3
-    width: 312px
+            word-wrap: break-word 
+
+    .info .col-3
+        width: 312px
+
+    // .info-mob-swiper
+    //     display: none 
+    //     @media screen and (max-width: 768px)
+    //         display: block
+
+    .swiper-pagination
+        display: none
+        bottom: -25%
+        position: absolute
+        @media screen and (max-width: 1240px)
+            display: block
+        .swiper-pagination-bullet
+            opacity: 1
+            background: $light-grey
+            width: 8px
+            height: 8px
+            margin: 0 8px
+        .swiper-pagination-bullet-active
+            background: $accentColor
+
 
 .priority
     background-color: rgba(244, 242, 246, 1)
@@ -857,7 +919,7 @@ header
                     object-fit: contain
                 p
                     max-width: 460px
-
+                    
 #teachers
     @media screen and (max-width: 990px)
         margin-bottom: 0
@@ -1148,12 +1210,40 @@ header
     a
         width: 100%
 
-.partners-wrapper
-    gap: 30px
-    @media screen and (max-width: 1200px)
-        gap: 12px
-        flex-wrap: wrap
-        justify-content: center
+#partners
+    // .partners-wrapper
+    //     gap: 30px
+    //     @media screen and (max-width: 1200px)
+    //         gap: 12px
+    //         flex-wrap: wrap
+    //         justify-content: center
+    @media screen and (max-width: 768px)
+        margin-bottom: 0
+        padding-bottom: 80px
+    @media screen and (max-width: 576px)
+        padding-bottom: 100px
+
+    .swiper-slide
+        text-align: left
+        @media screen and (max-width: 768px)
+            text-align: center
+
+    .swiper-pagination
+        bottom: -25px
+        position: absolute
+        display: none
+        @media screen and (max-width: 1200px)
+            display: block
+        @media screen and (max-width: 768px)
+            bottom: -50px
+        .swiper-pagination-bullet
+            opacity: 1
+            background: $light-grey
+            width: 8px
+            height: 8px
+            margin: 0 8px
+        .swiper-pagination-bullet-active
+            background: $accentColor
 
 #order-section
 
@@ -1237,6 +1327,7 @@ header
             font-weight: 400
             color: $grey
 
+
 label
     display: block
     margin-bottom: 2px
@@ -1265,6 +1356,11 @@ label
         color: $grey
 
 textarea
+    font-family: "Rubik-Regular", sans-serif
+    font-size: 16px
+    line-height: 24px
+    font-weight: 400
+    color: $grey
     display: block
     height: calc(100% - 28px)
     resize: none
@@ -1278,6 +1374,16 @@ textarea
         border: 1px solid #8041FF
         box-shadow: none
         outline: none
+    @media screen and (max-width: 400px)
+        height: 50px
+        min-height: 50px
+        background-clip: padding-box
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+
+.textarea::-webkit-scrollbar
+    width: 1px
 
 .textarea 
     &::placeholder
@@ -1317,8 +1423,6 @@ textarea
     line-height: 24px
     font-weight: 400
     color: $grey
-    @media screen and (max-width: 1440px)
-        font-size: 14px
 
 
 .multiselect__select

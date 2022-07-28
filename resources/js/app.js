@@ -187,7 +187,62 @@ const swiper_5 = new Swiper('#history .swiper', {
         nextEl: '.history .slider-button-next',
         prevEl: '.history .slider-button-prev',
     },
+    pagination: {
+        el: "#history .swiper-pagination",
+        clickable: true
+    }
 });
+
+const swiper_6 = new Swiper('#info .swiper',{
+    loop: false,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    pagination: {
+        el: "#info .swiper-pagination",
+        clickable: true
+    },
+    breakpoints: {
+        280: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 3
+        },
+        1240: {
+            slidesPerView: 4
+        }
+    }
+});
+
+const swiper_7 = new Swiper ('#partners .swiper', {
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+        el: "#partners .swiper-pagination",
+        clickable: true
+    },
+    breakpoints: {
+        280: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 3
+        }
+    }
+});
+
+// const swiper_8 = new Swiper ('#priority .swiper', {
+//     loop: false,
+//     slidesPerView: 2,
+//     spaceBetween: 30,
+//     pagination: {
+//         el: "#priority .swiper-pagination",
+//         clickable: true
+//     },
+// });
 
 //для уменьшения лого при скролле
 window.onscroll = function() {
@@ -222,3 +277,45 @@ window.addEventListener("DOMContentLoaded", ()=> {
         }
     }
 } )
+
+//для кнопки Подробнее, которая раскрывает остальной текст в history
+
+window.addEventListener("DOMContentLoaded", ()=> {
+    var btn = document.getElementById("btnMore");
+    btn.onclick = function readMore () { 
+    var dots = document.getElementById("dots");
+    var more = document.getElementById("more");
+    
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btn.innerHTML="Подробнее";
+        more.style.display = "none"; 
+    } else {
+        dots.style.display="none";
+        btn.innerHTML="Скрыть";
+        more.style.display="inline";
+    }
+    }
+})
+
+//для кнопки Подробнее, которая раскрывает остальной текст в advantages
+
+window.addEventListener("DOMContentLoaded", ()=> {
+    var btn = document.getElementById("btnMore2");
+    btn.onclick = function readMore () { 
+    var dots = document.getElementById("dots2");
+    var more = document.getElementById("more2");
+    
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btn.innerHTML="Подробнее";
+        more.style.display = "none"; 
+    } else {
+        dots.style.display="none";
+        btn.innerHTML="Скрыть";
+        more.style.display="inline";
+    }
+    }
+})

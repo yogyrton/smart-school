@@ -5433,6 +5433,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -5443,6 +5449,7 @@ __webpack_require__.r(__webpack_exports__);
   mixins: [vuelidate__WEBPACK_IMPORTED_MODULE_1__.validationMixin],
   data: function data() {
     return {
+      windowWidth: null,
       registrationPassed: false,
       form: {
         name: "",
@@ -5488,6 +5495,10 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
+  created: function created() {
+    this.handleWindowResize();
+    window.addEventListener('resize', this.handleWindowResize);
+  },
   methods: {
     checkForm: function checkForm() {
       this.$v.form.$touch();
@@ -5495,6 +5506,9 @@ __webpack_require__.r(__webpack_exports__);
       if (!this.$v.form.$error) {
         this.registrationPassed = true;
       }
+    },
+    handleWindowResize: function handleWindowResize() {
+      this.windowWidth = window.innerWidth;
     }
   }
 });
@@ -43906,7 +43920,7 @@ var render = function () {
             },
             [
               _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-lg-6" }, [
+                _c("div", { staticClass: "col-6" }, [
                   _c("div", { staticClass: "form-group mb-12" }, [
                     _c("label", { attrs: { for: "name" } }, [
                       _vm._v("Представьтесь*"),
@@ -43924,7 +43938,11 @@ var render = function () {
                       ],
                       staticClass: "form-control w-100",
                       class: _vm.$v.form.name.$error ? "is-invalid" : "",
-                      attrs: { id: "name", placeholder: "Введите Ваше имя" },
+                      attrs: {
+                        id: "name",
+                        placeholder:
+                          _vm.windowWidth > 767 ? "Введите Ваше имя" : "Имя",
+                      },
                       domProps: { value: _vm.form.name },
                       on: {
                         input: function ($event) {
@@ -43955,7 +43973,53 @@ var render = function () {
                         ])
                       : _vm._e(),
                   ]),
-                  _vm._v(" "),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "form-group mb-12" },
+                    [
+                      _c("label", { attrs: { for: "country" } }, [
+                        _vm._v("Страна"),
+                      ]),
+                      _vm._v(" "),
+                      _c("multiselect", {
+                        staticClass: "w-100",
+                        class: _vm.$v.form.country.$error ? "is-invalid" : "",
+                        attrs: {
+                          id: "country",
+                          options: _vm.countries,
+                          searchable: false,
+                          "close-on-select": true,
+                          "show-labels": false,
+                          placeholder:
+                            _vm.windowWidth > 767
+                              ? "Выберите страну"
+                              : "Страна",
+                        },
+                        model: {
+                          value: _vm.form.country,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "country", $$v)
+                          },
+                          expression: "form.country",
+                        },
+                      }),
+                      _vm._v(" "),
+                      !_vm.$v.form.country.required
+                        ? _c("p", { staticClass: "invalid-feedback" }, [
+                            _vm._v(
+                              "\n                            Выберите страну\n                        "
+                            ),
+                          ])
+                        : _vm._e(),
+                    ],
+                    1
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6" }, [
                   _c(
                     "div",
                     { staticClass: "form-group mb-12" },
@@ -43974,7 +44038,10 @@ var render = function () {
                           searchable: false,
                           "close-on-select": true,
                           "show-labels": false,
-                          placeholder: "Выберите формат обучения",
+                          placeholder:
+                            _vm.windowWidth > 1200
+                              ? "Выберите формат обучения"
+                              : "Формат",
                         },
                         model: {
                           value: _vm.form.format,
@@ -43995,7 +44062,53 @@ var render = function () {
                     ],
                     1
                   ),
-                  _vm._v(" "),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "form-group mb-12" },
+                    [
+                      _c("label", { attrs: { for: "country" } }, [
+                        _vm._v("Класс обучения"),
+                      ]),
+                      _vm._v(" "),
+                      _c("multiselect", {
+                        staticClass: "multiselect w-100",
+                        class: _vm.$v.form.grade.$error ? "is-invalid" : "",
+                        attrs: {
+                          id: "grade",
+                          options: _vm.grade,
+                          searchable: false,
+                          "close-on-select": true,
+                          "show-labels": false,
+                          placeholder:
+                            _vm.windowWidth > 1200
+                              ? "Выберите класс обучения"
+                              : "Класс",
+                        },
+                        model: {
+                          value: _vm.form.grade,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "grade", $$v)
+                          },
+                          expression: "form.grade",
+                        },
+                      }),
+                      _vm._v(" "),
+                      !_vm.$v.form.grade.required
+                        ? _c("p", { staticClass: "invalid-feedback" }, [
+                            _vm._v(
+                              "\n                            Выберите класс обучения\n                        "
+                            ),
+                          ])
+                        : _vm._e(),
+                    ],
+                    1
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6 col-md-12" }, [
                   _c("div", { staticClass: "form-group mb-12" }, [
                     _c("label", { attrs: { for: "name" } }, [
                       _vm._v("Телефон*"),
@@ -44046,85 +44159,7 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group mb-12" },
-                    [
-                      _c("label", { attrs: { for: "country" } }, [
-                        _vm._v("Страна"),
-                      ]),
-                      _vm._v(" "),
-                      _c("multiselect", {
-                        staticClass: "w-100",
-                        class: _vm.$v.form.country.$error ? "is-invalid" : "",
-                        attrs: {
-                          id: "country",
-                          options: _vm.countries,
-                          searchable: false,
-                          "close-on-select": true,
-                          "show-labels": false,
-                          placeholder: "Выберите страну",
-                        },
-                        model: {
-                          value: _vm.form.country,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "country", $$v)
-                          },
-                          expression: "form.country",
-                        },
-                      }),
-                      _vm._v(" "),
-                      !_vm.$v.form.country.required
-                        ? _c("p", { staticClass: "invalid-feedback" }, [
-                            _vm._v(
-                              "\n                            Выберите страну\n                        "
-                            ),
-                          ])
-                        : _vm._e(),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "form-group mb-12" },
-                    [
-                      _c("label", { attrs: { for: "country" } }, [
-                        _vm._v("Класс обучения"),
-                      ]),
-                      _vm._v(" "),
-                      _c("multiselect", {
-                        staticClass: "multiselect w-100",
-                        class: _vm.$v.form.grade.$error ? "is-invalid" : "",
-                        attrs: {
-                          id: "grade",
-                          options: _vm.grade,
-                          searchable: false,
-                          "close-on-select": true,
-                          "show-labels": false,
-                          placeholder: "Выберите класс обучения",
-                        },
-                        model: {
-                          value: _vm.form.grade,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "grade", $$v)
-                          },
-                          expression: "form.grade",
-                        },
-                      }),
-                      _vm._v(" "),
-                      !_vm.$v.form.grade.required
-                        ? _c("p", { staticClass: "invalid-feedback" }, [
-                            _vm._v(
-                              "\n                            Выберите класс обучения\n                        "
-                            ),
-                          ])
-                        : _vm._e(),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6 col-md-12" }, [
                   _c("div", { staticClass: "form-group mb-12" }, [
                     _c("label", { attrs: { for: "name" } }, [_vm._v("Email*")]),
                     _vm._v(" "),
@@ -71275,8 +71310,60 @@ var swiper_5 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#histo
   navigation: {
     nextEl: '.history .slider-button-next',
     prevEl: '.history .slider-button-prev'
+  },
+  pagination: {
+    el: "#history .swiper-pagination",
+    clickable: true
   }
-}); //для уменьшения лого при скролле
+});
+var swiper_6 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#info .swiper', {
+  loop: false,
+  slidesPerView: 4,
+  spaceBetween: 30,
+  pagination: {
+    el: "#info .swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    280: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    768: {
+      slidesPerView: 3
+    },
+    1240: {
+      slidesPerView: 4
+    }
+  }
+});
+var swiper_7 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#partners .swiper', {
+  loop: false,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  pagination: {
+    el: "#partners .swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    280: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    768: {
+      slidesPerView: 3
+    }
+  }
+}); // const swiper_8 = new Swiper ('#priority .swiper', {
+//     loop: false,
+//     slidesPerView: 2,
+//     spaceBetween: 30,
+//     pagination: {
+//         el: "#priority .swiper-pagination",
+//         clickable: true
+//     },
+// });
+//для уменьшения лого при скролле
 
 window.onscroll = function () {
   if (window.scrollY < 200) {
@@ -71310,6 +71397,44 @@ window.addEventListener("DOMContentLoaded", function () {
       el[i].innerHTML = cutTextWithDots(el[i].innerHTML);
     }
   }
+}); //для кнопки Подробнее, которая раскрывает остальной текст в history
+
+window.addEventListener("DOMContentLoaded", function () {
+  var btn = document.getElementById("btnMore");
+
+  btn.onclick = function readMore() {
+    var dots = document.getElementById("dots");
+    var more = document.getElementById("more");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btn.innerHTML = "Подробнее";
+      more.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btn.innerHTML = "Скрыть";
+      more.style.display = "inline";
+    }
+  };
+}); //для кнопки Подробнее, которая раскрывает остальной текст в advantages
+
+window.addEventListener("DOMContentLoaded", function () {
+  var btn = document.getElementById("btnMore2");
+
+  btn.onclick = function readMore() {
+    var dots = document.getElementById("dots2");
+    var more = document.getElementById("more2");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btn.innerHTML = "Подробнее";
+      more.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btn.innerHTML = "Скрыть";
+      more.style.display = "inline";
+    }
+  };
 });
 })();
 

@@ -8,13 +8,13 @@
                 @submit.prevent="checkForm"
             >
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-6">
                         <div class="form-group mb-12">
                             <label for="name">Представьтесь*</label>
                             <input
                                 id="name"
                                 class="form-control w-100"
-                                placeholder="Введите Ваше имя"
+                                :placeholder="windowWidth > 767 ? 'Введите Ваше имя' : 'Имя'"
                                 :class="$v.form.name.$error ? 'is-invalid' : ''"
                                 v-model.trim="form.name"
                             />
@@ -37,7 +37,36 @@
                                 Здесь должно быть больше 2-х символов
                             </p>
                         </div>
+                    </div>
 
+                    <div class="col-6"> 
+                        <div class="form-group mb-12">
+                            <label for="country">Страна</label>
+                            <multiselect
+                                id="country"
+                                v-model="form.country"
+                                class="w-100"
+                                :class="$v.form.country.$error ? 'is-invalid' : ''"
+                                :options="countries"
+                                :searchable="false"
+                                :close-on-select="true"
+                                :show-labels="false"
+                                :placeholder="windowWidth > 767 ? 'Выберите страну' : 'Страна'"
+                            >
+                            </multiselect>
+                            <p
+                                v-if="
+                                    !$v.form.country.required
+                                "
+                                class="invalid-feedback"
+                            >
+                                Выберите страну
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
                         <div class="form-group mb-12">
                             <label for="format">Формат обучения:</label>
                             <multiselect
@@ -50,7 +79,7 @@
                                 :searchable="false"
                                 :close-on-select="true"
                                 :show-labels="false"
-                                placeholder="Выберите формат обучения"
+                                :placeholder="windowWidth > 1200 ? 'Выберите формат обучения' : 'Формат'"
                             >
                             </multiselect>
                             <p
@@ -63,7 +92,35 @@
                             </p>
 
                         </div>
+                    </div>
 
+                    <div class="col-6">
+                        <div class="form-group mb-12">
+                            <label for="country">Класс обучения</label>
+                            <multiselect
+                                id="grade"
+                                v-model="form.grade"
+                                :class="$v.form.grade.$error ? 'is-invalid' : ''"
+                                class="multiselect w-100"
+                                :options="grade"
+                                :searchable="false"
+                                :close-on-select="true"
+                                :show-labels="false"
+                                :placeholder="windowWidth > 1200 ? 'Выберите класс обучения' : 'Класс'"
+                            >
+                            </multiselect>
+                            <p
+                                v-if="
+                                    !$v.form.grade.required
+                                "
+                                class="invalid-feedback"
+                            >
+                                Выберите класс обучения
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
                         <div class="form-group mb-12">
                             <label for="name">Телефон*</label>
                             <input
@@ -86,59 +143,9 @@
                                 Обязательное поле
                             </p>
                         </div>
-
                     </div>
-
-                    <div class="col-lg-6">
                         
-                        <div class="form-group mb-12">
-                            <label for="country">Страна</label>
-                            <multiselect
-                                id="country"
-                                v-model="form.country"
-                                class="w-100"
-                                :class="$v.form.country.$error ? 'is-invalid' : ''"
-                                :options="countries"
-                                :searchable="false"
-                                :close-on-select="true"
-                                :show-labels="false"
-                                placeholder="Выберите страну"
-                            >
-                            </multiselect>
-                            <p
-                                v-if="
-                                    !$v.form.country.required
-                                "
-                                class="invalid-feedback"
-                            >
-                                Выберите страну
-                            </p>
-                        </div>
-
-                        <div class="form-group mb-12">
-                            <label for="country">Класс обучения</label>
-                            <multiselect
-                                id="grade"
-                                v-model="form.grade"
-                                :class="$v.form.grade.$error ? 'is-invalid' : ''"
-                                class="multiselect w-100"
-                                :options="grade"
-                                :searchable="false"
-                                :close-on-select="true"
-                                :show-labels="false"
-                                placeholder="Выберите класс обучения"
-                            >
-                            </multiselect>
-                            <p
-                                v-if="
-                                    !$v.form.grade.required
-                                "
-                                class="invalid-feedback"
-                            >
-                                Выберите класс обучения
-                            </p>
-                        </div>
-
+                    <div class="col-lg-6 col-md-12">
                         <div class="form-group mb-12">
                             <label for="name">Email*</label>
                             <input
@@ -169,9 +176,8 @@
                                 Email неккоректный
                             </p>
                         </div>
-
                     </div>
-
+                        
                 </div>
 
                     <div class="mb-12">
@@ -228,6 +234,7 @@ export default {
     mixins: [validationMixin],
     data() {
         return {
+            windowWidth: null,
             registrationPassed: false,
             form: {
                 name: "",
@@ -258,6 +265,10 @@ export default {
             },
         },
     },
+    created() {
+            this.handleWindowResize();
+            window.addEventListener('resize', this.handleWindowResize);
+        },
     methods: {
         checkForm() {
             this.$v.form.$touch();
@@ -265,6 +276,9 @@ export default {
                 this.registrationPassed = true;
             }
         },
+            handleWindowResize() {
+                this.windowWidth = window.innerWidth;
+            }
     },
 };
 </script>

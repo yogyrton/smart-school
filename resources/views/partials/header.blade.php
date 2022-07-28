@@ -20,7 +20,7 @@
                         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                             <ul  class="d-flex justify-content-between header-list">
                                     <li class="header-item">
-                                        <a class="h5 dropdown-btn" href="#history">О нас</a>
+                                        <a class="h5 dropdown-btn" href="#">О нас</a>
                                     </li>
                                     <li class="header-item">
                                         <a class="h5 dropdown-btn" href="#school">Школа</a>
