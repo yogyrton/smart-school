@@ -1,15 +1,15 @@
 @section('footer')
 
-<!-- <footer class="footer">
+<footer class="footer">
     <div class="container">
-        <div class="d-flex align-items-start">
+        <div class="d-flex align-items-start footer-wrapper">
             <div class="logo">
                 <a href="/">
                     <img src="/svg/logoAccent.svg" alt="logo-img">
                 </a>
             </div>
 
-            <div class="footer-inner mb-40">
+            <div class="footer-inner">
                 <div class="footer-box">
                     <h5 class="text-bold mb-16">О нас</h5>
                     <ul class="footer-list">
@@ -54,25 +54,33 @@
                     </ul>
                 </div>
                 <div class="footer-box">
-                    <ul class="footer-list">
+                    <ul class="footer-list mb-40">
                         <li class="text-bold mb-12"><a href="">Отзывы</a></li>
                         <li class="text-bold mb-12"><a href="">Одно окно</a></li>
-                        <li class="text-bold mb-40"><a href="">Контакты</a></li>   
+                        <li class="text-bold"><a href="">Контакты</a></li>   
                     </ul>
-                    <div class="d-flex footer-socials">
-                        <a href="/"><img src="/svg/facebook.svg" alt=""></a>
-                        <a href="/"><img src="/svg/inst.svg" alt=""></a>
-                        <a href="/"><img src="/svg/vk.svg" alt=""></a>
-                        <a href="/"><img src="/svg/telegram.svg" alt=""></a>
-                    </div>
+                    <div class="d-lg-flex d-none footer-socials">
+                        <a target="_blank" href="/"><img src="/svg/facebook.svg" alt=""></a>
+                        <a target="_blank" href="/"><img src="/svg/inst.svg" alt=""></a>
+                        <a target="_blank" href="/"><img src="/svg/vk.svg" alt=""></a>
+                        <a target="_blank" href="/"><img src="/svg/telegram.svg" alt=""></a>
                 </div>
+                </div>
+                <div class="d-lg-none footer-socials">
+                        <a target="_blank" href="/"><img src="/svg/facebook.svg" alt=""></a>
+                        <a target="_blank" href="/"><img src="/svg/inst.svg" alt=""></a>
+                        <a target="_blank" href="/"><img src="/svg/vk.svg" alt=""></a>
+                        <a target="_blank" href="/"><img src="/svg/telegram.svg" alt=""></a>
+                </div>
+                <address>Разработка и дизайн Ilavista Technologies</address>
+                </div> 
             </div>
 
             
 
         </div>
-        <address>Разработка и дизайн Ilavista Technologies</address>
+        
     </div>
-</footer> -->
+</footer>
 
 @show
