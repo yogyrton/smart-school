@@ -8,6 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    {{ $mail }}
+<h1>Данные об отправителе: </h1>
+    <p>Имя: {{ $data['name'] }}</p>
+    <p>Страна: {{ $data['country']}}</p>
+    <p>Класс: {{ $data['grade'] }}</p>
+    <p>Формат: {{ $data['format'] }}</p>
+    <p>Телефон: {{ $data['phone'] }}</p>
+    <p>Email: {{ $data['email'] }}</p>
+    <p>Текст сообщения:</p>
+{!! nl2br($data['contact_msg']) !!}
 </body>
 </html>

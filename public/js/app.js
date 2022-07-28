@@ -2305,7 +2305,8 @@ __webpack_require__.r(__webpack_exports__);
         agreeWithRules: false,
         format: null,
         country: null,
-        grade: null
+        grade: null,
+        contact_msg: null
       },
       format: ['Онлайн', 'Оффлайн'],
       countries: ['Беларусь', 'Россия', 'Грузия', 'Польша'],
@@ -2335,6 +2336,7 @@ __webpack_require__.r(__webpack_exports__);
       grade: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
       },
+      contact_msg: {},
       agreeWithRules: {
         mustBeTrue: function mustBeTrue(value) {
           return value;
@@ -2354,7 +2356,8 @@ __webpack_require__.r(__webpack_exports__);
           phone: this.form.phone,
           format: this.form.format,
           country: this.form.country,
-          grade: this.form.grade
+          grade: this.form.grade,
+          contact_msg: this.form.contact_msg
         });
       }
     }
@@ -20876,7 +20879,37 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(0),
+              _c("div", { staticClass: "mb-12" }, [
+                _c("label", { attrs: { for: "order_name" } }, [
+                  _vm._v("Есть вопросы? Напишите"),
+                ]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.contact_msg,
+                      expression: "form.contact_msg",
+                    },
+                  ],
+                  staticClass: "w-100 textarea",
+                  attrs: {
+                    name: "contact_msg",
+                    id: "contact_msg",
+                    placeholder: "Напишите Ваш вопрос",
+                  },
+                  domProps: { value: _vm.form.contact_msg },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "contact_msg", $event.target.value)
+                    },
+                  },
+                }),
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "box-check-ico col-12" }, [
                 _c(
@@ -20944,7 +20977,7 @@ var render = function () {
                     _vm._v(" "),
                     _c("span", { staticClass: "d-flex align-items-center" }),
                     _vm._v(" "),
-                    _vm._m(1),
+                    _vm._m(0),
                   ]
                 ),
                 _vm._v(" "),
@@ -20958,7 +20991,7 @@ var render = function () {
                   : _vm._e(),
               ]),
               _vm._v(" "),
-              _vm._m(2),
+              _vm._m(1),
             ]
           )
         : _c("div", [
@@ -20976,25 +21009,6 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-12" }, [
-      _c("label", { attrs: { for: "order_name" } }, [
-        _vm._v("Есть вопросы? Напишите"),
-      ]),
-      _vm._v(" "),
-      _c("textarea", {
-        staticClass: "w-100 textarea",
-        attrs: {
-          name: "contact_msg",
-          id: "contact_msg",
-          placeholder: "Напишите Ваш вопрос",
-        },
-      }),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement

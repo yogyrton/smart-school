@@ -176,7 +176,7 @@
 
                     <div class="mb-12">
                         <label for="order_name">Есть вопросы? Напишите</label>
-                        <textarea name="contact_msg" id="contact_msg" class="w-100 textarea" placeholder="Напишите Ваш вопрос"></textarea>
+                        <textarea name="contact_msg" id="contact_msg" v-model="form.contact_msg" class="w-100 textarea" placeholder="Напишите Ваш вопрос"></textarea>
                     </div>
 
                     <div class="box-check-ico col-12">
@@ -236,7 +236,8 @@ export default {
                 agreeWithRules: false,
                 format:null,
                 country: null,
-                grade: null
+                grade: null,
+                contact_msg: null
             },
             format: ['Онлайн', 'Оффлайн'],
             countries: ['Беларусь','Россия','Грузия', 'Польша'],
@@ -251,6 +252,7 @@ export default {
             format: { required },
             country: { required },
             grade: { required },
+            contact_msg: {},
             agreeWithRules: {
                 mustBeTrue(value) {
                     return value;
@@ -265,7 +267,7 @@ export default {
             if (!this.$v.form.$error) {
                 this.registrationPassed = true;
 
-                axios.post('api/mail', {name: this.form.name, email: this.form.email, phone: this.form.phone, format: this.form.format, country: this.form.country, grade: this.form.grade})
+                axios.post('api/mail', { name: this.form.name, email: this.form.email, phone: this.form.phone, format: this.form.format, country: this.form.country, grade: this.form.grade, contact_msg: this.form.contact_msg})
             }
         },
     },

@@ -11,13 +11,8 @@ class MailController extends Controller
 {
     public function send(VueFormRequest $request)
     {
-
         $data = $request->validated();
-        $mail = $data['email'];
 
-
-
-        Mail::to('parusov.93@gmail.com')->send(new MessageMail($mail));
-
+        Mail::to('parusov.93@gmail.com')->send(new MessageMail($data));
     }
 }

@@ -29,7 +29,8 @@ class VueFormRequest extends FormRequest
             'phone' => 'required',
             'format' => 'required',
             'country' => 'required',
-            'grade' => 'required'
+            'grade' => 'required',
+            'contact_msg' => 'nullable'
         ];
     }
 }
