@@ -22,7 +22,7 @@
                     <!-- jquery validation -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Изменить главную новости</h3>
+                            <h3 class="card-title">Изменить главную новость</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -31,18 +31,18 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Заголовок (обязательно)</label>
+                                    <label for="exampleInputEmail1">Заголовок (необязательно изменять, сохранится старое, не более 50 символов)</label>
                                     <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $news->title }}">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Текст новости (обязательно)</label>
+                                    <label for="exampleInputPassword1">Текст новости (необязательно изменять, сохранится старое, не более 500 символов)</label>
                                     <input type="text" name="text" class="form-control" id="exampleInputPassword1" value="{{ $news->title }}">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Выбрать страницу (обязательно)</label>
+                                <label for="exampleInputPassword1">Выбрать страницу (необязательно изменять, сохранится старое)</label>
 
                                 <div class="form-group">
                                     <select class="custom-select" name="page">

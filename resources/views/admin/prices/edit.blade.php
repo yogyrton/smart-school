@@ -12,7 +12,7 @@
                     <!-- jquery validation -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Добавить прайс (только числа, без отрицательных и десятичных, максимальное число в поле: 10000)</h3>
+                            <h3 class="card-title">Добавить прайс (только числа, без отрицательных и десятичных, минимальное число в поле: 0, максимальное число в поле: 10000)</h3>
                         </div>
                         <form id="quickForm" novalidate="novalidate" action="{{ route('prices.update', $id) }}" method="post">
                             @csrf

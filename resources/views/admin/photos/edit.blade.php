@@ -32,12 +32,12 @@
                             <div class="card-body">
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Фото (необязательно, размер 426х426 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp))</label>
+                                    <label for="exampleInputPassword1">Фото (необязательно изменять, сохранится старое, размер 426х426 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp, не более 8 мб))</label>
                                     <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Выбрать лагерь (обязательно)</label>
+                                    <label for="exampleInputPassword1">Выбрать лагерь (необязательно изменять, сохранится старое)</label>
 
                                     <div class="form-group">
                                         <select class="custom-select" name="camp">

@@ -29,7 +29,7 @@ class TeacherCreateRequest extends FormRequest
             'category' => 'nullable|max:200',
             'experience' => 'nullable|max:200',
             'thumbnail' => 'required|image|max:10000',
-            'point' => 'required|integer|unique:teachers,point|max:200',
+            'point' => 'required|integer|unique:teachers,point|min:1|max:200',
         ];
     }
 
@@ -52,6 +52,7 @@ class TeacherCreateRequest extends FormRequest
             'point.required' => 'Поле "Позиция показа" должно быть заполнено',
             'point.integer' => 'Поле "Позиция показа" должно быть числом',
             'point.unique' => 'Поле "Позиция показа" должно быть уникальным',
+            'point.min' => 'Поле "Позиция показа" должно быть не менее 1',
             'point.max' => 'Поле "Позиция показа" должно быть не более 200',
         ];
     }
