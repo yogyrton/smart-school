@@ -15,7 +15,7 @@
                                 <div class="main-xxl w-100">
                                         <img src="/img/mainxxl.png" alt="">
                                 </div>
-                                
+
                         </div>
 
                         <div class="head-info">
@@ -40,9 +40,9 @@
                                                                 <div class="swiper-slide">
                                                                 <div class="advt-box w-100">
                                                                         <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                                            <p class="head-text text">{{ $mainNew->text }}</p>
                                                                 </div>
-                                                                
+
                                                                 </div>
                                                         @endforeach
                                                         </div>
@@ -138,11 +138,11 @@
                                                                 <div class="box-description">
                                                                         <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
                                                                         <p class="text flex-grow-1 mb-20">д. Жуков Луг (5 км от ст.м.Уручье)</p>
-                                                                </div> 
+                                                                </div>
                                                                 <button class="button_2 text">Подробнее</button>
                                                         </div>
-                                                        
-                                                        
+
+
                                         </a>
 
                                         <a class="school-box d-flex school-box-photo-2" href="/">
@@ -169,7 +169,7 @@
                                                 <div class="box-inner">
                                                         <h3 class="accentColor mb-24">Онлайн</h3>
                                                         <div class="box-description">
-                                                                <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>   
+                                                                <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
                                                         </div>
                                                         <button class="button_2 text">Подробнее</button>
                                                 </div>
@@ -185,7 +185,7 @@
                                                                         <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
                                                                 </div>
                                                                 <button class="button_2 text">Подробнее</button>
-                                                        </div>  
+                                                        </div>
                                         </a>
 
                                         <a class="school-box d-flex school-box-photo-3" href="/">
@@ -199,14 +199,14 @@
                                                                         <p class="text flex-grow-1 mb-12">обучение по адресу: ul.Ksieskiej, Wroclaw</p>
                                                                 </div>
                                                                 <button class="button_2 text">Подробнее</button>
-                                                        </div> 
+                                                        </div>
                                         </a>
 
                                 </div>
                         </div>
                 </div>
         </div>
-</section> 
+</section>
 
 <section id="advantages" class="advantages mb-160 scrollreveal">
         <div class="container">
@@ -217,8 +217,8 @@
                                 <ul class="advantages-list-1">
                                         <li class="text mb-20 li"> <span class="text-bold ">«Смарт Скул» </span> — это официальное частное учреждение образования в Беларуси, России, Грузии, Польше.</li>
                                         <li class="text mb-20"><span class="text-bold ">Наша миссия</span>  - система образования, достойная наших детей.</li>
-                                        <li class="text mb-20"> <span class="text-bold ">Наша цель</span>  - воспитание счастливых, 
-                                        здоровых, мыслящих и социально-адаптированных детей СЕГОДНЯ. Воспитание умеющих сотрудничать, заботливых, творческих, компетентных, ответственных взрослых ЗАВТРА <span id="dots2">...</span></li>   
+                                        <li class="text mb-20"> <span class="text-bold ">Наша цель</span>  - воспитание счастливых,
+                                        здоровых, мыслящих и социально-адаптированных детей СЕГОДНЯ. Воспитание умеющих сотрудничать, заботливых, творческих, компетентных, ответственных взрослых ЗАВТРА <span id="dots2">...</span></li>
                                 </ul>
 
                                 <div id="more2">
@@ -229,7 +229,7 @@
                                         <p class="text mb-12"><span class="text-bold">Ученик Смарт Скул - разносторонняя личность.</span> </br>
                                         Кроме качественного академического образования нам важно, чтобы ученики получали развитие в  различных областях:</p>
                                         <ul class="advantages-list-2 text mb-20">
-                                        
+
                                                 <li>языки и эффективная коммуникация;</li>
                                                 <li>критическое и креативное мышление;</li>
                                                 <li>самообразование и личностное развитие;</li>
@@ -242,8 +242,8 @@
 
                                 </div>
                                 <button class="accentColor" id="btnMore2">Подробнее</button>
-                                
-                                
+
+
                         </div>
                         <div class="col-lg-6">
                                 <div class="grid-wrapper">
@@ -316,9 +316,9 @@
                                         </div>
                                 </div>
                         </div>
-                        <div class="swiper-pagination"></div> 
+                        <div class="swiper-pagination"></div>
                         </div>
-                        
+
                 </div>
         </div>
 </section>
@@ -394,7 +394,7 @@
                                 </svg>
                         </div>
                 <div class="swiper">
-                        
+
                         <div class="swiper-wrapper">
                         @foreach($teachers as $teacher)
                         <div class="swiper-slide">
@@ -441,7 +441,7 @@
                                         <div class="swiper-slide"><img src="/img/main/replies/reply3.png" alt="reply-3"></div>
                                         <div class="swiper-slide"><img src="/img/main/replies/reply3.png" alt="reply-3"></div>
                                 </div>
-                                
+
                         </div>
                         <div class="swiper-pagination text replies-pagination"></div>
                         <div class="slider-button-next">
@@ -450,7 +450,7 @@
                                 </svg>
                         </div>
                 </div>
-                        
+
         </div>
 </section>
 
@@ -475,7 +475,7 @@
                                                 <div class="news-description">
                                                         <span class="news-date grey mb-12">{{ $new->updated_at->format('d-m-Y') }}</span>
                                                         <h5 class="accentColor news-title text-bold mb-12">{{ $new->title }}</h5>
-                                                        <p class="news-text text mb-12">{{ $new->text }}</p>
+                                                        <p class="news-text text mb-12">{{$new->text }}</p>
                                                         <a class="news-btn text-bold" href="/">Подробнее</a>
                                                 </div>
                                                 </div>
@@ -527,11 +527,11 @@
                                                                 <img src="/img/main/partners/3.png" alt="partner-3">
                                                         </div>
                                                 </div>
-                                                
+
                                         </div>
                                         <div class="swiper-pagination"></div>
                                 </div>
-                                
+
                         </div>
                 </div>
         </div>

@@ -36,7 +36,7 @@
 
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Текст новости (обязательно для заполнения, не более 1000 символов)</label>
-                                <input type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости">
+                                <textarea type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости"></textarea>
                             </div>
 
                             <div class="form-group">

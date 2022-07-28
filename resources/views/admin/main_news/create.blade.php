@@ -36,7 +36,7 @@
 
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Текст новости (обязательно для заполнения, не более 500 символов)</label>
-                                <input type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости">
+                                <textarea type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости"></textarea>
                             </div>
                         </div>
 
@@ -76,5 +76,14 @@
         <!-- /.row -->
     </div><!-- /.container-fluid -->
 </section>
+
+    <script src="{{ asset('admin_assets/ckeditor/build/ckeditor.js') }}"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#exampleInputPassword1'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
 @endsection

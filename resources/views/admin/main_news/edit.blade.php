@@ -37,7 +37,7 @@
 
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Текст новости (необязательно изменять, сохранится старое, не более 500 символов)</label>
-                                    <input type="text" name="text" class="form-control" id="exampleInputPassword1" value="{{ $news->title }}">
+                                    <input type="text" name="text" class="form-control" id="exampleInputPassword1" value="{!! $news->text !!}">
                                 </div>
                             </div>
 
@@ -78,5 +78,14 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </section>
+
+    <script src="{{ asset('admin_assets/ckeditor/build/ckeditor.js') }}"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#exampleInputPassword1'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
 @endsection

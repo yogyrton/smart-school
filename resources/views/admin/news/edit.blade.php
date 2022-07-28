@@ -4,6 +4,15 @@
 
 @section('content')
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <section class="content">
         <div class="container-fluid">
@@ -28,7 +37,7 @@
 
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Текст новости (необязательно изменять, сохранится старое, не более 1000 символов)</label>
-                                    <input type="text" name="text" class="form-control" id="exampleInputPassword1" value="{{ $news->text }}">
+                                    <textarea type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="{{ $news->text }}"></textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -56,6 +65,7 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </section>
+
 
 @endsection
 
