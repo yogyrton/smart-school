@@ -5,9 +5,9 @@ namespace App\Models\Admin;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Document extends Model
+class Gallery extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'path', 'page'];
+    protected $fillable = ['thumbnail'];
 }

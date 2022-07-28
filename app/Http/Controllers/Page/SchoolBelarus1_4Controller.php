@@ -6,20 +6,21 @@ use App\Http\Controllers\Controller;
 use App\Traits\DocumentsTrait;
 use App\Traits\MainNewsTrait;
 use App\Traits\NewsTrait;
-use App\Traits\TeachersTrait;
+use App\Traits\PriceTrait;
+use Illuminate\Http\Request;
 
-class MainPageController extends Controller
+class SchoolBelarus1_4Controller extends Controller
 {
-    public $page = 'Главная';
+    public $page = 'Школа Беларусь 1-4';
+    public $price = 'blr_1_4';
 
     public function index()
     {
         $mainNews = MainNewsTrait::getMainNews($this->page);
-        $teachers = TeachersTrait::getTeachers();
+        $priceBel = PriceTrait::getPrice($this->price);
         $news = NewsTrait::getNews();
         $documents = DocumentsTrait::getDocuments($this->page);
 
-
-        return view('welcome', compact('mainNews', 'teachers', 'news', 'documents'));
+        return view('school-bel-1-4', compact('mainNews', 'priceBel', 'news', 'documents'));
     }
 }

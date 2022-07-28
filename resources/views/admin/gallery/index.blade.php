@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 
-@section('title', 'Список документов')
+@section('title', 'Фотогалерея')
 
 @section('content')
 
@@ -17,7 +17,7 @@
     @endif
 
 
-    <a href="{{ route('documents.create') }}">Добавить документ (не более 2 для каждого лагеря)</a>
+    <a href="{{ route('galleries.create') }}">Добавить фото (не более 10)</a>
 
     <table class="table table-striped projects">
 
@@ -25,40 +25,24 @@
         <tr>
 
             <th style="width: 20%">
-                Позиция
-            </th>
-
-            <th style="width: 20%">
-                Название
-            </th>
-
-            <th style="width: 5%">
-                Скачать
+                Фото
             </th>
 
         </tr>
         </thead>
 
         <tbody>
-        @foreach($documents as $document)
+        @foreach($galleries as $gallery)
             <tr>
 
-                <th>
-                    {{ $document->page }}
-                </th>
-
                 <td>
-                    {{ $document->title }}
-                </td>
-
-                <td>
-                    <a href="{{ route('download', $document->id) }}">Скачать</a>
+                    <img src="{{ asset('storage/' . $gallery->thumbnail) }}" alt="{{ $gallery->thumbnail }}" width="60px" height="60px">
                 </td>
 
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="{{ route('documents.edit', $document->id) }}">Редактировать</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('galleries.edit', $gallery->id) }}">Редактировать</a>
 
-                    <form action="{{ route('documents.destroy', $document->id) }}" method="post">
+                    <form action="{{ route('galleries.destroy', $gallery->id) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm">Удалить</button>

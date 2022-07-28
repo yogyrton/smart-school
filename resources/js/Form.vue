@@ -182,7 +182,7 @@
 
                     <div class="mb-12">
                         <label for="order_name">Есть вопросы? Напишите</label>
-                        <textarea name="contact_msg" id="contact_msg" class="w-100 textarea" placeholder="Напишите Ваш вопрос"></textarea>
+                        <textarea name="contact_msg" id="contact_msg" v-model="form.contact_msg" class="w-100 textarea" placeholder="Напишите Ваш вопрос"></textarea>
                     </div>
 
                     <div class="box-check-ico col-12">
@@ -211,7 +211,7 @@
                 <div class="form_btn">
                     <button type="submit" class="btn-purple button_2">Отправить</button>
                 </div>
-                
+
             </form>
             <div v-else>
                 <h1>
@@ -237,13 +237,14 @@ export default {
             windowWidth: null,
             registrationPassed: false,
             form: {
-                name: "",
-                email: "",
-                phone: "",
+                name: null,
+                email: null,
+                phone: null,
                 agreeWithRules: false,
-                format:'',
-                country: '',
-                grade: ''
+                format:null,
+                country: null,
+                grade: null,
+                contact_msg: null
             },
             format: ['Онлайн', 'Оффлайн'],
             countries: ['Беларусь','Россия','Грузия', 'Польша'],
@@ -258,6 +259,7 @@ export default {
             format: { required },
             country: { required },
             grade: { required },
+            contact_msg: {},
             agreeWithRules: {
                 mustBeTrue(value) {
                     return value;
@@ -271,9 +273,12 @@ export default {
         },
     methods: {
         checkForm() {
+
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
                 this.registrationPassed = true;
+
+                axios.post('api/mail', { name: this.form.name, email: this.form.email, phone: this.form.phone, format: this.form.format, country: this.form.country, grade: this.form.grade, contact_msg: this.form.contact_msg})
             }
         },
             handleWindowResize() {
@@ -327,7 +332,7 @@ export default {
 .form-check-input:focus {
     border-color: #8041FF;
     outline: 0;
-    box-shadow: none; 
+    box-shadow: none;
 }
 
 .invalid-feedback {

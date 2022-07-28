@@ -39,6 +39,19 @@
                                 <input type="file" name="path" class="form-control-file" id="exampleInputPassword1">
                             </div>
 
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Выбрать позицию показа(обязательно)</label>
+
+                                <div class="form-group">
+                                    <select class="custom-select" name="page">
+                                        <option value="Главная">Общие</option>
+                                        <option value="Лагерь Жуков Луг">Лагерь Жуков Луг</option>
+                                        <option value="Лагерь Дримленд">Лагерь Дримленд</option>
+                                        <option value="Лагерь в Грузии">Лагерь в Грузии</option>
+                                    </select>
+                                </div>
+                            </div>
+
                         </div>
 
                         <!-- /.card-body -->

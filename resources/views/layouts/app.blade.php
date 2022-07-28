@@ -32,7 +32,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/app.css?v={{ $assets_version }}">
-   
+
 
     <!-- scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>

@@ -28,7 +28,7 @@
                                                 <button class="button_1 btn-pink">Оставить заявку</button>
                                         </div>
 
-                                        
+
                                 </div>
                         </div>
 
@@ -50,7 +50,7 @@
                                                 <div class="swiper-pagination"></div>
                                                 </div>
                                 </div>
-                        
+
             </div>
         </div>
         <!-- <div class="pseudo2"></div> -->
@@ -119,7 +119,7 @@
                         </div>
                 </div>
         </div>
-        
+
 </section>
 
 <section id="school" class="mb-160 scrollreveal">

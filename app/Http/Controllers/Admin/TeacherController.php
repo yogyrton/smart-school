@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TeacherCreateRequest;
-use App\Http\Requests\TeacheUpdateRequest;
+use App\Http\Requests\TeacherUpdateRequest;
 use App\Models\Admin\MainNews;
 use App\Models\Admin\Teacher;
 use Illuminate\Http\Request;
@@ -63,7 +63,7 @@ class TeacherController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(TeacheUpdateRequest $request, $id)
+    public function update(TeacherUpdateRequest $request, $id)
     {
 
         $teacher = Teacher::query()->find($id);

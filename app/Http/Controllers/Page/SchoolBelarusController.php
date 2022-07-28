@@ -5,21 +5,20 @@ namespace App\Http\Controllers\Page;
 use App\Http\Controllers\Controller;
 use App\Traits\DocumentsTrait;
 use App\Traits\MainNewsTrait;
-use App\Traits\NewsTrait;
-use App\Traits\TeachersTrait;
+use App\Traits\PhotoTrait;
 
-class MainPageController extends Controller
+class SchoolBelarusController extends Controller
 {
-    public $page = 'Главная';
+
+    private $page = 'Школа Беларусь';
+
 
     public function index()
     {
         $mainNews = MainNewsTrait::getMainNews($this->page);
-        $teachers = TeachersTrait::getTeachers();
-        $news = NewsTrait::getNews();
         $documents = DocumentsTrait::getDocuments($this->page);
+        $photo = PhotoTrait::getAllPhoto();
 
-
-        return view('welcome', compact('mainNews', 'teachers', 'news', 'documents'));
+        return view('school-bel', compact('mainNews', 'documents', 'photo'));
     }
 }

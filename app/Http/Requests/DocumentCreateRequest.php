@@ -25,7 +25,8 @@ class DocumentCreateRequest extends FormRequest
     {
         return [
             'title' => 'required|max:40',
-            'path' => 'required|file|max:10000'
+            'path' => 'required|file|max:10000',
+            'page' => 'required'
         ];
     }
 
@@ -37,6 +38,8 @@ class DocumentCreateRequest extends FormRequest
 
             'path.required' => 'Поле "Загрузить документ" обязательно для заполнения',
             'path.max' => 'Поле "Загрузить документ" должно быть не больше 8 мб',
+
+            'page.required' => 'Поле "Выбрать позицию" обязательно для заполнения',
         ];
     }
 }
