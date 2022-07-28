@@ -17,7 +17,7 @@ class MainPageController extends Controller
         $mainNews = MainNewsTrait::getMainNews($this->page);
         $teachers = TeachersTrait::getTeachers();
         $news = NewsTrait::getNews();
-        $documents = DocumentsTrait::getDocuments();
+        $documents = DocumentsTrait::getDocuments($this->page);
 
 
         return view('welcome', compact('mainNews', 'teachers', 'news', 'documents'));

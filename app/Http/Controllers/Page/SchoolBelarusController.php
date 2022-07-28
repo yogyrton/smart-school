@@ -16,7 +16,7 @@ class SchoolBelarusController extends Controller
     public function index()
     {
         $mainNews = MainNewsTrait::getMainNews($this->page);
-        $documents = DocumentsTrait::getDocuments();
+        $documents = DocumentsTrait::getDocuments($this->page);
         $photo = PhotoTrait::getAllPhoto();
 
         return view('school-bel', compact('mainNews', 'documents', 'photo'));

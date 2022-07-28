@@ -44,7 +44,7 @@
 
                                 <div class="form-group">
                                     <select class="custom-select" name="page">
-                                        <option value="Общие">Общие</option>
+                                        <option value="Главная">Общие</option>
                                         <option value="Лагерь Жуков Луг">Лагерь Жуков Луг</option>
                                         <option value="Лагерь Дримленд">Лагерь Дримленд</option>
                                         <option value="Лагерь в Грузии">Лагерь в Грузии</option>

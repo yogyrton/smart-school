@@ -38,7 +38,7 @@ class DocumentController extends Controller
 
         $count = Document::query()->where('page', '=', $page)->count();
 
-        if ($page == 'Общие' && $count < 5) {
+        if ($page == 'Главная') {
             $file = $request->file('path')->store('documents','public');
 
             Document::query()->create([
