@@ -3,89 +3,83 @@
 @section('content')
 
 
-    <section id="head" class="head mb-160 position-relative">
+    <section id="head" class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container container-mob">
-            <div class="head-wrapper">
-                <div class="imgHead-box">
-                    <img src="/img/main/imgHead.png" alt="">
-                    <div class="pseudo"></div>
-                    <div class="mainMob w-100">
-                        <img src="/img/mainMob.png" alt="">
-                    </div>
-                    <div class="main-xxl w-100">
-                        <img src="/img/mainxxl.png" alt="">
-                    </div>
 
+            <div class="head--container">
+                <div>
+                    <img src="/img/main/banners/home.png" alt="" class="banner-image d-none d-md-block">
+                    <img src="/img/main/banners/home-mob.png" alt="" class="banner-image d-block d-md-none">
                 </div>
 
-                <div class="head-info">
-                    <div class="head-inner">
-                        <h1 class="h1 pb-48">
-                            Международная сеть частных школ <span class="accentColor">Smart School</span>
-                        </h1>
-                        <div class="btn-group">
-                            <button class="button_1 btn-purple">Выбрать страну</button>
-                            <button class="button_1 btn-pink">Оставить заявку</button>
-                        </div>
-
-
+                <div>
+                    <h1 class="h1 pb-48">
+                        Международная сеть частных школ <span class="accentColor nowrap">Smart School</span>
+                    </h1>
+                    <div class="btn-group">
+                        <button class="button_1 btn-purple">Выбрать страну</button>
+                        <button class="button_1 btn-pink">Оставить заявку</button>
                     </div>
-                </div>
 
-                @if(!empty($mainNew))
-                <div class="position-relative swiper-box head-swiper">
-                    <div class="position-relative container-slider-pagination">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                @foreach($mainNews as $mainNew)
-                                    <div class="swiper-slide">
-                                        <div class="advt-box w-100">
-                                            <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                            <p class="head-text text">{{ $mainNew->text }}</p>
+                    <div class="notification--head">
+                        @if(!empty($mainNews)  && count($mainNews) > 0)
+                            <div class="position-relative swiper-box head-swiper">
+                                <div class="position-relative container-slider-pagination">
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            @foreach($mainNews as $mainNew)
+                                                <div class="swiper-slide">
+                                                    <div class="advt-box w-100">
+                                                        <h5 class="accentColor">{{ $mainNew->title }}</h5>
+                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                    </div>
+
+                                                </div>
+                                            @endforeach
                                         </div>
-
                                     </div>
-                                @endforeach
+                                    <div class="swiper-pagination"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
+                        @endif
                     </div>
-                </div>
-                @endif
 
+                </div>
             </div>
         </div>
-        <!-- <div class="pseudo2"></div> -->
     </section>
 
     <section id="history" class="history scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">История</h2>
             <div class="row align-items-center justify-content-between container-mob">
-                <div class=" col-lg-7 text history-text-box">
-                    <p class="pb-10">
-                        В 2015 году при содействии лучших методистов
-                        Беларуси и Европы был открыт Инновационный Детский
-                        Образовательный Центр "Фабрика Звезд", на базе которого мы
-                        разработали уникальную программу для школьников по нейробике,
-                        кинезиологии и эмоциональному интеллекту «Секрет успешного обучения».
-                        <span class="text-bold">Наша методика позволяет эффективно, легко
-                                        и быстро усваивать школьную программу, повышает успеваемость на 2-3 балла! <div
-                                id="dots"></div></span>
-                        <span id="more"></p>
+                <div class=" col-lg-7 text order-2 order-lg-7">
+                    <div class="history-text-box">
+                        <p class="pb-10">
+                            В 2015 году при содействии лучших методистов
+                            Беларуси и Европы был открыт Инновационный Детский
+                            Образовательный Центр "Фабрика Звезд", на базе которого мы
+                            разработали уникальную программу для школьников по нейробике,
+                            кинезиологии и эмоциональному интеллекту «Секрет успешного обучения».
+                            <span class="text-bold">Наша методика позволяет эффективно, легкои быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span>
+                        </p>
 
-                    <p class="pb-10">Опыт профессиональной команды методистов и психологов в создании данной программы,
-                        а также организация огромного количества смен детских лагерей под брендом «Фабрика звезд»,
-                        знание лучших методик обучения, длительная коммуникация с родителями о действующей системе
-                        образования, ее достоинствах и недостатках, стали толчком для открытия в 2020 году частной школы
-                        "Смарт Скул", учредитель которой - детский писатель, юрист и медиатор Елена Пушкина. И именно
-                        программа "Секрет успешного обучения" легла в основу методологии "Смарт образования", которая
-                        используется в нашей школе.</p>
-                    <p>С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше.</p>
-                    </span>
-                    <button class="accentColor" id="btnMore">Подробнее</button>
+                        <div id="hidden-text-box">
+                            <p class="pb-10">Опыт профессиональной команды методистов и психологов в создании данной программы,
+                                а также организация огромного количества смен детских лагерей под брендом «Фабрика звезд»,
+                                знание лучших методик обучения, длительная коммуникация с родителями о действующей системе
+                                образования, ее достоинствах и недостатках, стали толчком для открытия в 2020 году частной школы
+                                "Смарт Скул", учредитель которой - детский писатель, юрист и медиатор Елена Пушкина. И именно
+                                программа "Секрет успешного обучения" легла в основу методологии "Смарт образования", которая
+                                используется в нашей школе.</p>
+                            <p class="pb-10">С 2022 года мы учим детей не только в Беларуси, но и в России, Грузии и Польше.</p>
+                        </div>
+
+                        <button class="accentColor" id="btnMore">Подробнее</button>
+                    </div>
+
                 </div>
-                <div class="col-lg-5 col-md-12 col-sm-12 text position-relative swiper-box align-items-center">
+                <div class="col-lg-5 col-md-12 col-sm-12 text position-relative swiper-box align-items-center order-1 order-lg-2">
                     <div class="slider-button-prev">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -99,17 +93,17 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/history.png" alt="history-img">
+                                    <img src="/img/main/history/home-1.jpg" alt="history-img">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/history_1.png" alt="history-img">
+                                    <img src="/img/main/history/home-2.jpg" alt="history-img">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/history_2.png" alt="history-img">
+                                    <img src="/img/main/history/home-3.jpg" alt="history-img">
                                 </div>
                             </div>
                         </div>
@@ -137,7 +131,7 @@
                 <div class="col">
                     <div class="grid-box">
 
-                        <a class="school-box d-flex school-box-photo-1" href="/">
+                        <a class="school-box d-flex school-box-photo-1" href="/school-belarus">
                             <div class="img-box">
                                 <img src="/img/main/school/photo1.png" alt="children-with-map">
                             </div>
@@ -170,7 +164,7 @@
                             <img class="w-100" src="/img/main/school/photo2.png" alt="children-img">
                         </div>
 
-                        <a class="school-box d-flex flex-column" href="/">
+                        <a class="school-box d-flex flex-column" href="/school-online">
                             <div class="img-box block-mob">
                                 <img src="/img/main/school/photo4.png" alt="children-img">
                             </div>
@@ -183,7 +177,7 @@
                             </div>
                         </a>
 
-                        <a class="school-box d-flex flex-column" href="/">
+                        <a class="school-box d-flex flex-column" href="/school-russia">
                             <div class="img-box block-mob">
                                 <img src="/img/main/school/photo5.png" alt="children-img">
                             </div>
@@ -350,64 +344,50 @@
         </div>
     </section>
 
-    <section class="priority mb-160 scrollreveal">
+    @include('sections.advantagies')
+
+    <section id="teachers" class="mb-160 scrollreveal teachers">
         <div class="container">
-            <h2 class="accentColor mb-60 pt-120">Вам точно к нам, если для вас важны</h2>
-            <div class="row d-flex priority-wrapper pb-100">
-                <div class="col-lg-5">
-                    <div class="priority-inner">
-                        <div class="priority-box d-flex mb-40">
-                            <img src="/svg/bag.svg" alt="bag-img">
-                            <div class="d-flex flex-column">
-                                <h5 class="text-bold">УЧЕБНЫЙ ПРОЦЕСС</h5>
-                                <p class="text">Гибкая интерактивная среда обучения, где учащиеся активно и уверенно
-                                    участвуют в собственном образовании.</p>
+            <h2 class="accentColor mb-40">Команда профессиональных педагогов</h2>
+            <p class="text mb-60 teachers-info">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать
+                информацию и любить сам процесс обучения.</p>
+            <div class="d-flex align-items-center justify-content-between position-relative">
+                <div class="slider-button-prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.003 11.9901C9.00261 11.7902 9.07233 11.5964 9.20004 11.4425L13.4835 6.30862C13.629 6.13388 13.8379 6.02399 14.0645 6.00313C14.291 5.98227 14.5165 6.05215 14.6915 6.19738C14.8664 6.34262 14.9765 6.55132 14.9974 6.77757C15.0182 7.00383 14.9483 7.2291 14.8029 7.40384L10.9648 11.9901L14.6658 16.5764C14.737 16.6639 14.7901 16.7646 14.8222 16.8727C14.8542 16.9808 14.8646 17.0942 14.8527 17.2063C14.8407 17.3184 14.8067 17.427 14.7526 17.526C14.6985 17.6249 14.6253 17.7122 14.5373 17.7828C14.4492 17.8612 14.3459 17.9205 14.2337 17.9571C14.1216 17.9938 14.0031 18.0069 13.8857 17.9956C13.7683 17.9844 13.6545 17.949 13.5514 17.8918C13.4482 17.8346 13.3581 17.7567 13.2865 17.663L9.14864 12.5292C9.04111 12.3708 8.98983 12.181 9.003 11.9901V11.9901Z"
+                            fill="#8041FF"/>
+                    </svg>
+                </div>
+                <div class="swiper">
+
+                    <div class="swiper-wrapper">
+                        @foreach($teachers as $teacher)
+                            <div class="swiper-slide">
+                                <div class="teacher-box d-flex flex-column">
+                                    <div class="teacher__image-ibg mb-20"><img
+                                            src="{{ '/storage/' . $teacher->thumbnail }}"
+                                            alt="{{ $teacher->name }}">
+                                    </div>
+                                    <div class="teacher-description">
+                                        <span class="teacher-post text grey mb-8">{{ $teacher->position }}</span>
+                                        <h5 class="accentColor teacher-name mb-8">{{ $teacher->name }}</h5>
+                                        <p class="teacher-description text mb-8">{{ $teacher->category }}</p>
+                                        <p class="teacher-experience text grey">{{ $teacher->experience }}</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="priority-box d-flex mb-40">
-                            <img src="/svg/hands.svg" alt="hands-img">
-                            <div class="d-flex flex-column">
-                                <h5 class="text-bold">КАЧЕСТВО ОБРАЗОВАНИЯ</h5>
-                                <p class="text">У нас подобрана лучшая команда профессиональных педагогов.</p>
-                            </div>
-                        </div>
-                        <div class="priority-box d-flex">
-                            <img src="/svg/prize.svg" alt="prize-img">
-                            <div class="d-flex flex-column">
-                                <h5 class="text-bold">СПРАВЕДЛИВАЯ ОЦЕНКА ЗНАНИЙ</h5>
-                                <p class="text">Продуманные экологичные методы оценивания учащихся.</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
 
                 </div>
-                <div class="col-lg-5">
-                    <div class="priority-inner">
-                        <div class="priority-box d-flex mb-40">
-                            <img src="/svg/bottle.svg" alt="bottle-img">
-                            <div class="d-flex flex-column">
-                                <h5 class="text-bold">ФИЗИКО-МАТЕМАТИЧЕСКИЙ УКЛОН</h5>
-                                <p class="text">Упор на решение задач, приближенных к реальной жизни и позволяющих
-                                    мыслить нестандартно.</p>
-                            </div>
-                        </div>
-                        <div class="priority-box d-flex mb-40">
-                            <img src="/svg/plant.svg" alt="plant-img">
-                            <div class="d-flex flex-column">
-                                <h5 class="text-bold">ИСТОЧНИК ЗНАНИЙ</h5>
-                                <p class="text">Урок - практический эксперимент, где учитель приветствует сотрудничество
-                                    и уважительное общение.</p>
-                            </div>
-                        </div>
-                        <div class="priority-box d-flex">
-                            <img src="/svg/hand.svg" alt="hand-svg">
-                            <div class="d-flex flex-column">
-                                <h5 class="text-bold">БЛАГОПОЛУЧИЕ И ЗДОРОВЬЕ</h5>
-                                <p class="text">Психологическое сопровождение и тренинги по авторской программе “Секрет
-                                    успешного обучения”.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="swiper-pagination text teachers-pagination"></div>
+                <div class="slider-button-next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.998 12.0094C14.9984 12.2093 14.9287 12.4031 14.8009 12.557L10.5174 17.6909C10.372 17.8656 10.1631 17.9755 9.93652 17.9964C9.70999 18.0172 9.48444 17.9474 9.30948 17.8021C9.13453 17.6569 9.02451 17.4482 9.00363 17.2219C8.98274 16.9957 9.0527 16.7704 9.19811 16.5957L13.0361 12.0094L9.33519 7.42315C9.26402 7.33563 9.21088 7.23492 9.17881 7.12682C9.14674 7.01872 9.13638 6.90536 9.14833 6.79324C9.16027 6.68113 9.19428 6.57248 9.2484 6.47353C9.30252 6.37459 9.37568 6.2873 9.46369 6.21669C9.55178 6.13833 9.65512 6.07899 9.76724 6.04237C9.87936 6.00576 9.99784 5.99266 10.1153 6.00391C10.2327 6.01515 10.3465 6.0505 10.4496 6.10772C10.5527 6.16495 10.6429 6.24283 10.7145 6.33648L14.8523 11.4704C14.9599 11.6287 15.0111 11.8185 14.998 12.0094Z"
+                            fill="#8041FF"/>
+                    </svg>
                 </div>
             </div>
         </div>

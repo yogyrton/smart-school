@@ -1,6 +1,7 @@
 require('./bootstrap');
 
 import Vue from 'vue';
+
 window.EventHandler = new Vue;
 
 import Validations from 'vuelidate';
@@ -11,8 +12,7 @@ import ScrollReveal from 'scrollreveal';
 Vue.use(Validations);
 
 Vue.component('app-form', require('./Form.vue').default);
-new Vue({
-}).$mount('#app');
+new Vue({}).$mount('#app');
 
 
 //*Animation*//
@@ -25,25 +25,27 @@ var slideUp = {
 
 ScrollReveal().reveal('.scrollreveal', slideUp);
 ScrollReveal().reveal('.scrollheader',
-        {delay: 250,
+    {
+        delay: 250,
         duration: 1000,
-        reset: false,}
+        reset: false,
+    }
 );
 
 //для плавного скролла к разделам
 const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
-if(menuLinks.length > 0) {
+if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener("click", onMenuLinkClick);
     });
 
-    function onMenuLinkClick (e) {
-        const menuLink = e.target ;
-        if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+    function onMenuLinkClick(e) {
+        const menuLink = e.target;
+        if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
             const gotoBlock = document.querySelector(menuLink.dataset.goto);
             const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
-            window.scrollTo ({
+            window.scrollTo({
                 top: gotoBlockValue,
                 behavior: "smooth"
             });
@@ -193,7 +195,7 @@ const swiper_5 = new Swiper('#history .swiper', {
     }
 });
 
-const swiper_6 = new Swiper('#info .swiper',{
+const swiper_6 = new Swiper('#info .swiper', {
     loop: false,
     slidesPerView: 4,
     spaceBetween: 30,
@@ -215,7 +217,7 @@ const swiper_6 = new Swiper('#info .swiper',{
     }
 });
 
-const swiper_7 = new Swiper ('#partners .swiper', {
+const swiper_7 = new Swiper('#partners .swiper', {
     loop: false,
     slidesPerView: 3,
     spaceBetween: 10,
@@ -234,39 +236,59 @@ const swiper_7 = new Swiper ('#partners .swiper', {
     }
 });
 
-// const swiper_8 = new Swiper ('#priority .swiper', {
-//     loop: false,
-//     slidesPerView: 2,
-//     spaceBetween: 30,
-//     pagination: {
-//         el: "#priority .swiper-pagination",
-//         clickable: true
-//     },
-// });
+const swiper_8 = new Swiper('#priority .swiper', {
+    loop: false,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    pagination: {
+        el: "#priority .swiper-pagination",
+        clickable: true
+    },
+    grid: {
+        fill: 'row',
+        rows: 2,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            rows: 2,
+        },
+        768: {
+            slidesPerView: 2,
+            rows: 2,
+        },
+        1200: {
+            slidesPerView: 6,
+            rows: 1,
+        }
+    }
+});
+
 
 //для уменьшения лого при скролле
-window.onscroll = function() {
+window.onscroll = function () {
     if (window.scrollY < 200) {
-        document.querySelector('.header-rectangle').classList.remove('tiny');
-        document.querySelector('.logo').classList.remove('tiny');
+        // document.querySelector('.header-rectangle').classList.remove('tiny');
+        document.querySelector('header').classList.remove('tiny');
     } else {
-        document.querySelector('.header-rectangle').classList.add('tiny');
-        document.querySelector('.logo').classList.add('tiny'); 
+        // document.querySelector('.header-rectangle').classList.add('tiny');
+        document.querySelector('header').classList.add('tiny');
     }
 }
 
 //для появления ссылки подробнее в блоке news
-window.addEventListener("DOMContentLoaded", ()=> {
+window.addEventListener("DOMContentLoaded", () => {
     function cutTextWithDots(line) {
-        line = line.substring(0,120)
+        line = line.substring(0, 120)
         line = line.substring(0, line.lastIndexOf(' '));
         line += '...'
         return line;
     }
-    
+
     const el = document.getElementsByClassName('news-text');
     const mores = document.getElementsByClassName('news-btn');
-    
+
     for (let i = 0; i < el.length; i++) {
         let height = getComputedStyle(el[i]).height;
         if (Number(height.substring(0, height.indexOf('px'))) > 115) {
@@ -276,46 +298,41 @@ window.addEventListener("DOMContentLoaded", ()=> {
             el[i].innerHTML = cutTextWithDots(el[i].innerHTML);
         }
     }
-} )
+})
 
 //для кнопки Подробнее, которая раскрывает остальной текст в history
+window.addEventListener("DOMContentLoaded", () => {
+    let button_more = document.getElementById("btnMore");
+    button_more.onclick = function readMore() {
+        let hidden_box = document.getElementById("hidden-text-box");
 
-window.addEventListener("DOMContentLoaded", ()=> {
-    var btn = document.getElementById("btnMore");
-    btn.onclick = function readMore () { 
-    var dots = document.getElementById("dots");
-    var more = document.getElementById("more");
-    
+        if (hidden_box.classList.contains('active')) {
+            hidden_box.classList.remove('active');
 
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btn.innerHTML="Подробнее";
-        more.style.display = "none"; 
-    } else {
-        dots.style.display="none";
-        btn.innerHTML="Скрыть";
-        more.style.display="inline";
+        } else {
+            hidden_box.classList.add('active');
+            button_more.innerHTML = "Свернуть";
+        }
     }
-    }
-})
+});
 
 //для кнопки Подробнее, которая раскрывает остальной текст в advantages
 
-window.addEventListener("DOMContentLoaded", ()=> {
+window.addEventListener("DOMContentLoaded", () => {
     var btn = document.getElementById("btnMore2");
-    btn.onclick = function readMore () { 
-    var dots = document.getElementById("dots2");
-    var more = document.getElementById("more2");
-    
+    btn.onclick = function readMore() {
+        var dots = document.getElementById("dots2");
+        var more = document.getElementById("more2");
 
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btn.innerHTML="Подробнее";
-        more.style.display = "none"; 
-    } else {
-        dots.style.display="none";
-        btn.innerHTML="Скрыть";
-        more.style.display="inline";
-    }
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btn.innerHTML = "Подробнее";
+            more.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btn.innerHTML = "Скрыть";
+            more.style.display = "inline";
+        }
     }
 })

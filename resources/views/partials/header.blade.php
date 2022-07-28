@@ -1,24 +1,17 @@
 @section('header')
 
 
-    <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
+    <header class="">
+            <nav class="navbar navbar-expand-xl navbar-light">
                 <div class="container container-md">
-                    <div class="logo d-lg-block d-none">
-                        <a href="/">
-                            <img src="/svg/logo.svg" alt="logo-img">
-                        </a>
-                        <div class="header-rectangle"></div>
-                        <!-- <img class="header-rectangle" src="/svg/headerRectangle.svg" alt=""> -->
-                    </div>
-                    <div class="logo-md d-lg-none">
-                        <a href="/">
-                            <img src="/svg/logo-md.svg" alt="logo-md-img">
-                        </a>
-                    </div>
-                    
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                            <ul  class="d-flex justify-content-between header-list">
+
+                    <a href="/" class="logo">
+                        <img src="/img/main/logo-header.webp" class="d-none d-xl-block" alt="Логотип международной сети частных школ Smart School" width="229">
+                        <img src="/img/main/logo-header-mobile.webp" class="d-xl-none d-block" alt="Логотип международной сети частных школ Smart School" width="84">
+                    </a>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul  class="d-flex header-list">
                                     <li class="header-item">
                                         <a class="h5 dropdown-btn" href="#">О нас</a>
                                     </li>
@@ -41,9 +34,9 @@
                                         <a data-goto=".order-section" class="h5 menu-link" href="#">Контакты</a>
                                     </li>
                             </ul>
-                            
+
                         </div>
-                        <div class="d-none d-lg-flex header-contacts-messengers">
+                        <div class="d-none d-xl-flex header-contacts-messengers">
                                 <a target="_blank" href="">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_182_1856)">
@@ -79,13 +72,13 @@
                                         </svg>
                                     </a>
                         </div>
-                        <div class="d-block d-lg-none button-burger btn" data-bs-toggle="modal" data-bs-target="#burgerModal">
+                        <div class="d-block d-xl-none button-burger btn" data-bs-toggle="modal" data-bs-target="#burgerModal">
                             <img src="/svg/burger.svg" alt="burger-icon">
                         </div>
                 </div>
 </nav>
     </header>
-    
+
     <div class="modal fade" id="burgerModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -93,7 +86,7 @@
                     <div class="d-flex justify-content-between container">
                         <div class="logo">
                             <a href="/">
-                                <img src="/svg/logoAccent.svg" alt="logo-img">
+                                <img src="/img/main/logo-accent-mobile.webp" width="84" alt="logo-img">
                             </a>
                         </div>
                         <div class="button-burger" data-bs-toggle="modal" data-bs-target="#burgerModal">
@@ -172,6 +165,6 @@
             </div>
         </div>
     </div>
-    
+
 
 @show
