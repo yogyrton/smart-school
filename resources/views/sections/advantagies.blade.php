@@ -1,6 +1,6 @@
-<section class="priority mb-160 scrollreveal" id="priority">
+<section class="priority pt-120 pb-120 scrollreveal" id="priority">
     <div class="container">
-        <h2 class="accentColor mb-60 pt-120">Вам точно к нам, если для вас важны</h2>
+        <h2 class="accentColor mb-60">Вам точно к нам, если для вас важны</h2>
 
         <div class="priority-inner">
             <div class="swiper">

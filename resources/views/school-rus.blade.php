@@ -1,10 +1,10 @@
-
 @extends('layouts.app')
 
 @section('content')
 
 
-    <section id="head" class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+    <section id="head"
+             class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
@@ -58,17 +58,21 @@
                 <div class=" col-lg-7 text order-2 order-lg-7">
                     <div class="history-text-box">
                         <p class="pb-10">
-                            «Смарт Скул» — это официальное частное учреждение образования в Беларуси, России, Грузии, Польше.
+                            «Смарт Скул» — это официальное частное учреждение образования в Беларуси, России, Грузии,
+                            Польше.
                         </p>
 
                         <div id="hidden-text-box">
                             <p class="pb-10">
-                                Технологии развиваются как никогда быстро. Не осталась без внимания и система образования.
-                                Благодаря Интернету мы можем получать знания, используя удаленный доступ. Международная сеть частных школ «Смарт Скул» предоставляет новые удобства и широкие возможности.
+                                Технологии развиваются как никогда быстро. Не осталась без внимания и система
+                                образования.
+                                Благодаря Интернету мы можем получать знания, используя удаленный доступ. Международная
+                                сеть частных школ «Смарт Скул» предоставляет новые удобства и широкие возможности.
                                 Достойное образование для наших детей!
                             </p>
                             <p class="pb-10">
-                                Более подробную информацию по программам и условиям обучения в нашей школе можно узнать у менеджеров или оставив заявку на сайте.
+                                Более подробную информацию по программам и условиям обучения в нашей школе можно узнать
+                                у менеджеров или оставив заявку на сайте.
                             </p>
                         </div>
 
@@ -76,7 +80,8 @@
                     </div>
 
                 </div>
-                <div class="col-lg-5 col-md-12 col-sm-12 text position-relative swiper-box align-items-center order-1 order-lg-2">
+                <div
+                    class="col-lg-5 col-md-12 col-sm-12 text position-relative swiper-box align-items-center order-1 order-lg-2">
                     <div class="slider-button-prev">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -117,5 +122,143 @@
     </section>
 
     @include('sections.advantagies-online')
+    @include('address.zoom')
+
+    <section id="price" class="pb-120 price-online">
+        <div class="container">
+            <h2 class="accentColor mb-40">Наш прейскурант</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="/img/main/price/online.jpg" alt="" class="border-20 img-fluid mb-20">
+
+                    {{-- MOBILE --}}
+                    <div class="swiper-box d-block d-lg-none">
+                        <div class="swiper swiper-1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="price--card">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <img src="/svg/time.svg" alt="" class="me-2">
+                                            <span>Пребывание в школе: <br>
+                                            Онлайн 9:00-15.45 <br>
+                                            (1-4 классы есть возможность выбора смены обучения<br>
+                                            (утренняя с 09:00, дневная с 12:00)</span>
+                                        </div>
+                                        <div class="d-flex align-items-start">
+                                            <img src="/svg/people.svg" alt="" class="me-2">
+                                            <span>Наполняемость классов: до 12 человек.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="price--card d-flex align-items-center">
+                                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                                        <p class="mb-0">
+                                            Учебные занятия согласно образовательным программам общего среднего
+                                            образования Республики Беларусь.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="price--card">
+                                        <p class="mb-0">
+                                            <span class="d-block text-bold">Психолого-педагогическое сопровождение детей и родителей.</span>
+                                            Занятия с детьми по авторской программе «Секрет успешного обучения»
+                                            (нейробика, кинезиология, тренировка мозга, развитие эмоционального
+                                            интеллекта и скорочтение).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-1"></div>
+                    </div>
+
+                    <div class="price--card d-none d-lg-block">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="/svg/time.svg" alt="" class="me-2">
+                            <span>Пребывание в школе: <br>
+                                Онлайн 9:00-15.45 <br>
+                                (1-4 классы есть возможность выбора смены обучения<br>
+                                (утренняя с 09:00, дневная с 12:00)</span>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <img src="/svg/people.svg" alt="" class="me-2">
+                            <span>Наполняемость классов: до 12 человек.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row mb-20">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <div class="price--card d-flex flex-column justify-content-center h-100">
+                                <div class="h3 accentColor text-md-end mb-2">12000 рос.руб.</div>
+                                <div class="text-md-end">1-4 классы</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <div class="price--card d-flex flex-column justify-content-center h-100">
+                                <div class="h3 accentColor text-md-end mb-2">13000 рос.руб.</div>
+                                <div class="text-md-end">5-8 классы</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <div class="price--card d-flex flex-column justify-content-center h-100">
+                                <div class="h3 accentColor text-md-end">15000 рос.руб.</div>
+                                <div class="text-md-end">9-11 классы</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price--card align-items-center mb-20 d-none d-lg-flex">
+                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                        <p class="mb-0">
+                            Учебные занятия согласно образовательным программам общего среднего образования Республики
+                            Беларусь.
+                        </p>
+                    </div>
+
+                    <div class="price--card mb-20 d-none d-lg-block">
+                        <p class="mb-0">
+                            <span
+                                class="d-block text-bold">Психолого-педагогическое сопровождение детей и родителей.</span>
+                            Занятия с детьми по авторской программе «Секрет успешного обучения» (нейробика,
+                            кинезиология, тренировка мозга, развитие эмоционального интеллекта и скорочтение).
+                        </p>
+                    </div>
+
+                    <div class="accordion" id="accordionExample">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Дополнительные занятия (на выбор):
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul class="custom-ul">
+                                        <li>Школьные предметы (стимулирующие и поддерживающие занятия)</li>
+                                        <li>Основы MBA</li>
+                                        <li>Программирование</li>
+                                        <li>Углубленное изучение иностранных языков: уровень B1 B2 и другие</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @include('sections.faq-online')
+    @include('sections.news')
+    @include('sections.documents')
+    @include('sections.contacts')
 @stop
 

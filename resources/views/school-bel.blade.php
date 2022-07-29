@@ -122,6 +122,54 @@
 
     @include('sections.advantagies')
 
+    <section class="pt-120 pb-120" id="address">
+        <div class="container">
+            <div class="row mb-40">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <div class="text-center">
+                            <a href="https://goo.gl/maps/1DqaKy5WPwUwZm2UA" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
+                                <img src="/svg/location.svg" alt="" class="me-2">
+                                <span class="text-start text-md-center h6">г.Минск, ул. Орловская, 80 (Dreamland)</span>
+                            </a>
+
+                            <div class="row justify-content-center mb-24">
+                                <div class="col-6 col-sm-4 col-md-6 col-xl-4"> <a href="/school-belarus/junior" class="w-100 button_1 btn-purple">1-4 класс</a></div>
+                                <div class="col-6 col-sm-4 col-md-6 col-xl-4"><a href="/school-belarus/senior" class="w-100 button_1 btn-purple">5-11 класс</a></div>
+                            </div>
+                        </div>
+                        @include('address.dreamland-slider')
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <div class="text-center">
+                            <a href="https://goo.gl/maps/efPppZVbbreqtA369" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
+                                <img src="/svg/location.svg" alt="" class="me-2">
+                                <span class="text-start text-md-center h6">д. Жуков Луг, ул. Дорожная, 14А, 5 км от ст.м.Уручье </span>
+                            </a>
+
+                            <div class="row justify-content-center mb-24">
+                                <div class="col-6 col-sm-4 col-md-6 col-xl-4"> <a href="/school-belarus/junior" class="w-100 button_1 btn-purple">1-4 класс</a></div>
+                            </div>
+                        </div>
+
+                        @include('address.zhukov-lug-slider')
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="button_1 btn-pink">Оставить заявку</button>
+            </div>
+        </div>
+    </section>
+
+    @include('sections.documents')
+    @include('sections.album')
+    @include('sections.contacts')
 
 @stop
 
