@@ -44,13 +44,6 @@ Route::fallback(function (){
 });
 
 
-
-
-
-
-
-
-
 //Route::domain('test.urist-perevozki.by')->group(function(){
 //    Route::get('/', function () {
 //        return view('urist-perevozki');
