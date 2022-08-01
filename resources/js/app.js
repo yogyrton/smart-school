@@ -8,6 +8,7 @@ import Validations from 'vuelidate';
 
 import Swiper from 'swiper/bundle';
 import ScrollReveal from 'scrollreveal';
+import magnificPopup from 'magnific-popup';
 
 Vue.use(Validations);
 
@@ -265,6 +266,130 @@ const swiper_8 = new Swiper('#priority .swiper', {
     }
 });
 
+const swiper_9 = new Swiper('#priority-online .swiper', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+        el: "#priority-online .swiper-pagination",
+        clickable: true
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+        },
+        991: {
+            slidesPerView: 2,
+        },
+        1200: {
+            slidesPerView: 6,
+        }
+    }
+});
+
+const swiper_10 = new Swiper('#address .swiper-1', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: "#address .swiper-pagination-1",
+        clickable: true
+    },
+
+    navigation: {
+        nextEl: '#address .swiper-box-1 .slider-button-next',
+        prevEl: '#address .swiper-box-1 .slider-button-prev',
+    }
+});
+
+const swiper_11 = new Swiper('#address .swiper-2', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: "#address .swiper-pagination-2",
+        clickable: true
+    },
+
+    navigation: {
+        nextEl: '#address .swiper-box-2 .slider-button-next',
+        prevEl: '#address .swiper-box-2 .slider-button-prev',
+    },
+});
+
+const swiper_12 = new Swiper('#album .swiper', {
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: "#album .swiper-pagination",
+        clickable: true
+    },
+
+    navigation: {
+        nextEl: '#album .swiper-box .slider-button-next',
+        prevEl: '#album .swiper-box .slider-button-prev',
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        575: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        }
+    }
+});
+
+const swiper_13 = new Swiper('#price .swiper-0', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    pagination: {
+        el: "#price .swiper-pagination-0",
+        clickable: true
+    }
+});
+
+const swiper_14 = new Swiper('#price .swiper-1', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    pagination: {
+        el: "#price .swiper-pagination-1",
+        clickable: true
+    }
+});
+
+
+const swiper_15 = new Swiper('#price.price-online .swiper-2', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    pagination: {
+        el: "#price.price-online .swiper-pagination-2",
+        clickable: true
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        991: {
+            slidesPerView: 2,
+        }
+    }
+});
+
+
 
 //для уменьшения лого при скролле
 window.onscroll = function () {
@@ -336,3 +461,23 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 })
+
+
+//ZOOM ALBUM IMAGES
+$(document).ready(function() {
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Загрузка...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1],
+            tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+            arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>'
+        }
+    });
+});
+
+

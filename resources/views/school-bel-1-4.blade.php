@@ -126,5 +126,337 @@
 
 
     @include('sections.advantagies')
+
+    <section class="pt-120 pb-120" id="address">
+        <div class="container">
+            <div class="row align-items-center mb-160">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <a href="https://goo.gl/maps/efPppZVbbreqtA369" target="_blank" rel="noopener" class="d-inline-flex align-items-center font-weight-bold mb-40">
+                        <img src="/svg/location.svg" alt="" class="me-2">
+                        <span class="text-start h4">д. Жуков Луг, ул. Дорожная, 14А, 5 км от ст.м.Уручье </span>
+                    </a>
+
+                    <ul class="mb-10 custom-ul">
+                        <li>находится в 5 км от ст. м. Уручье, охраняемая территория, двухэтажное здание, удобные помещения, большая пришкольная территория;</li>
+                        <li>трехразовое питание с учетом индивидуальных запросов родителей, собственный шеф-повар;</li>
+                        <li>условия соответствуют санитарным и противопожарным нормам Республики Беларусь.</li>
+                    </ul>
+
+                    <div class="row">
+                        <div class="col-md-4"><button class="button_1 btn-pink w-100">Оставить заявку</button></div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    @include('address.zhukov-lug-slider')
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <a href="https://goo.gl/maps/1DqaKy5WPwUwZm2UA" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
+                        <img src="/svg/location.svg" alt="" class="me-2">
+                        <span class="text-start text-md-center h4">г.Минск, ул. Орловская, 80 (Dreamland)</span>
+                    </a>
+
+                    <ul class="mb-10 custom-ul">
+                        <li>находится в центре города на территории парка Dreamland, охраняемая территория, двухэтажное здание, удобное транспортное сообщение, большая пришкольная территория;</li>
+                        <li>трехразовое питание с учетом индивидуальных запросов родителей, собственный шеф-повар;</li>
+                        <li>условия соответствуют санитарным и противопожарным нормам Республики Беларусь.</li>
+                    </ul>
+
+                    <div class="row">
+                        <div class="col-md-4"><button class="button_1 btn-pink w-100">Оставить заявку</button></div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    @include('address.dreamland-slider')
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="price" class="pb-120">
+        <div class="container">
+            <h2 class="accentColor mb-40">Наш прейскурант</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="/img/main/price/junior.jpg" alt="" class="border-20 img-fluid mb-20">
+
+                    {{-- MOBILE --}}
+                    <div class="swiper-box d-block d-lg-none">
+                        <div class="swiper swiper-0">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="price--card">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <img src="/svg/time.svg" alt="" class="me-2">
+                                            <span>Пребывание в школе: <br>8:00-18:00 (начало уроков в 9:00);</span>
+                                        </div>
+                                        <div class="d-flex align-items-start mb-3">
+                                            <img src="/svg/food.svg" alt="" class="me-2">
+                                            <span>Питание: завтрак, обед, полдник;</span>
+                                        </div>
+                                        <div class="d-flex align-items-start">
+                                            <img src="/svg/people.svg" alt="" class="me-2">
+                                            <span>Наполняемость классов: до 15 человек.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="price--card d-flex align-items-center">
+                                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                                        <p class="mb-0">
+                                            Учебные занятия согласно образовательным программам общего среднего образования Республики Беларусь.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="price--card">
+                                        <p class="mb-0">
+                                            <span class="d-block text-bold">Психолого-педагогическое сопровождение детей и родителей.</span>
+                                            Занятия с детьми по авторской программе «Секрет успешного обучения» (нейробика, кинезиология, тренировка мозга, развитие эмоционального интеллекта и скорочтение).
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="price--card d-flex align-items-center h-100 mb-20">
+                                        Ежедневная подготовка в школе домашних заданий (2-4 классы).
+                                    </div>
+                                    <div class="price--card d-flex align-items-center h-100 mb-20">
+                                        Для 1-го класса предусмотрен дневной сон.
+                                    </div>
+                                    <div class="price--card d-flex align-items-center">
+                                        Английский язык (по уровню): <br>
+                                        1-2 классы - 3 раза в неделю;  <br>
+                                        3-4 классы - 5 раз в неделю.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-0"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-8 mb-4 mb-xl-0 d-none d-lg-block">
+                            <div class="price--card">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="/svg/time.svg" alt="" class="me-2">
+                                    <span>Пребывание в школе: <br>8:00-18:00 (начало уроков в 9:00);</span>
+                                </div>
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="/svg/food.svg" alt="" class="me-2">
+                                    <span>Питание: завтрак, обед, полдник;</span>
+                                </div>
+                                <div class="d-flex align-items-start">
+                                    <img src="/svg/people.svg" alt="" class="me-2">
+                                    <span>Наполняемость классов: до 15 человек.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="price--card d-flex flex-column justify-content-center h-100">
+                                <div class="h3 accentColor text-md-end">1200 руб.</div>
+                                <div class="text-md-end">в месяц</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="price--card align-items-center mb-20 d-none d-lg-flex">
+                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                        <p class="mb-0">
+                            Учебные занятия согласно образовательным программам общего среднего образования Республики Беларусь.
+                        </p>
+                    </div>
+
+                    <div class="price--card mb-20 d-none d-lg-block">
+                        <p class="mb-0">
+                            <span class="d-block text-bold">Психолого-педагогическое сопровождение детей и родителей.</span>
+                            Занятия с детьми по авторской программе «Секрет успешного обучения» (нейробика, кинезиология, тренировка мозга, развитие эмоционального интеллекта и скорочтение).
+                        </p>
+                    </div>
+
+                    <div class="row mb-20 d-none d-lg-flex">
+                        <div class="col-xl-4 mb-4 mb-xl-0">
+                            <div class="price--card d-flex align-items-center h-100">
+                                Ежедневная подготовка в школе домашних заданий (2-4 классы).
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 mb-4 mb-xl-0">
+                            <div class="price--card d-flex align-items-center h-100">
+                                Для 1-го класса предусмотрен дневной сон.
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4">
+                            <div class="price--card d-flex align-items-center">
+                                Английский язык (по уровню): <br>
+                                1-2 классы - 3 раза в неделю;  <br>
+                                3-4 классы - 5 раз в неделю.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion" id="accordionExample">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Дополнительные занятия (на выбор):</span>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul class="custom-ul">
+                                        <li>Английский язык</li>
+                                        <li>Шахматы</li>
+                                        <li>Основы визуального программирования</li>
+                                        <li>Театральная мастерская «Сказкин Дом»</li>
+                                        <li>Айкидо</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <span>По желанию с дополнительной оплатой:</span>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="accordion-body">
+                                        <ul class="custom-ul">
+                                            <li>Художественная мастерская</li>
+                                            <li>Музыкальная школа (игра на инструменте по выбору фортепиано или гитара, музыкальная грамотность, сольфеджио)</li>
+                                            <li>Хореография, студия актёрского мастерства</li>
+                                            <li>Робототехника</li>
+                                            <li>БИЗНЕС-ШКОЛА ДЛЯ ДЕТЕЙ KIDS MBA
+                                                (основы бизнеса, права, маркетинга, тайм менеджмент, креативное мышление и предприимчивость)</li>
+                                            <li>Литературная мастерская</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faq" class="pb-120">
+        <div class="container">
+            <h2 class="accentColor mb-40">Часто задаваемые вопросы</h2>
+
+            <div class="row">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="accordion accordion-faq" id="accordionFaq">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOneFaq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFaq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Является ли школа официальной? Есть ли у школы лицензия? Выдает ли школа аттестаты государственного образца?</span>
+                                </button>
+                            </h2>
+                            <div id="collapseOneFaq" class="accordion-collapse collapse" aria-labelledby="headingOneFaq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                    Школа является официальным учреждением образования наравне с государственными школами. <br>
+                                    В Республике Беларусь для работы частных общеобразовательных школ лицензия не требуется.
+                                    <button data-bs-toggle="modal" data-bs-target="#faq-1">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2Faq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Faq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Как происходит перевод документов в школу и сколько это занимает времени?</span>
+                                </button>
+                            </h2>
+                            <div id="collapse2Faq" class="accordion-collapse collapse" aria-labelledby="heading2Faq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                    Достаточно связаться с менеджерами по контактам, указанным на сайте. Срок подготовки договора – сутки.
+                                    После заключения договора вам будет предоставлена справка о согласии на перевод учащегося, которую вы должны предоставить в действующую школу вашего ребенка для выдачи школой всех документов, которые вы передадите в нашу школу. Ребенок может приступать к занятиям сразу после заключения договора, т.е., через сутки.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3Faq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Faq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Если у ребенка аллергия на пищевые продукты, можно ли предусмотреть это в питании?</span>
+                                </button>
+                            </h2>
+                            <div id="collapse3Faq" class="accordion-collapse collapse" aria-labelledby="heading3Faq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                    Да, конечно. Наш шеф-повар готовит с учетом индивидуальных запросов и особенностей детей.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4Faq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4Faq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Можно ли рассмотреть сокращенный день?</span>
+                                </button>
+                            </h2>
+                            <div id="collapse4Faq" class="accordion-collapse collapse" aria-labelledby="heading4Faq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                    Да, такая возможность есть. Обратитесь к менеджеру по телефонам, указанным на сайте.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading5Faq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5Faq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Какой режим дня у детей 1-4 класса?</span>
+                                </button>
+                            </h2>
+                            <div id="collapse5Faq" class="accordion-collapse collapse" aria-labelledby="heading5Faq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                    Режим дня у учеников 1-4 класса разработан в соответствии с рекомендациями Санитарных правил и норм Республики Беларусь.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+                    <img src="/img/main/faq/junior.jpg" alt="" class="w-100 border-20">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @include('sections.news')
+    @include('sections.documents')
+    @include('sections.contacts')
+
+
+    <!-- Modals FAQ -->
+    <div class="modal fade" id="faq-1" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><img src="/svg/close.svg" alt=""></button>
+                <div class="h6 mb-20 text-bold">Является ли школа официальной? Есть ли у школы лицензия? Выдает ли школа аттестаты государственного образца?</div>
+                <p class="mb-20">
+                    Школа является официальным учреждением образования наравне с государственными школами.
+                    В Республике Беларусь для работы частных общеобразовательных школ лицензия не требуется.
+                    Для приема экзаменов и выдачи аттестатов у 9-х и 11-х классов необходима государственная аккредитация учреждения образования — это, в первую очередь, подтверждение соответствия преподавания заявленной программе. Министерство образования проверяет, насколько выполняется заявленная программа на практике.
+                    Мы подаем заявку на аккредитацию и получаем в 2022-23 учебном году.
+                </p>
+                <p class="mb-20">
+                    Учреждение образования, не прошедшее государственную аккредитацию, не может выдавать аттестаты государственного образца (9 и 11 классы). Однако для того, чтобы учащиеся получили их, законодательно предусмотрена возможность сдачи государственного экзамена на базе ГУО.
+                </p>
+                <p class="mb-0">
+                    В настоящее время аккредитация учреждений начального и среднего образования производится по заявительному принципу. Это означает, что каждое УО самостоятельно принимает решение о прохождении государственной аккредитации.
+                </p>
+            </div>
+        </div>
+    </div>
 @stop
 
