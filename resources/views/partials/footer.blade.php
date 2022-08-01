@@ -13,7 +13,7 @@
                     <div class="footer-box">
                         <h5 class="text-bold mb-16">О нас</h5>
                         <ul class="footer-list">
-                            <li class="footer-list-item"><a href="@if($routeName === 'home')#history @else /#history @endif"">История</a></li>
+                            <li class="footer-list-item"><a href="@if($routeName === 'home')#history @else /#history @endif">История</a></li>
                             <li class="footer-list-item "><a href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
                             <li class="footer-list-item "><a href="@if($routeName === 'home')#priority @else /#priority @endif">Преимущества</a></li>
                             <li class="footer-list-item "><a href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
