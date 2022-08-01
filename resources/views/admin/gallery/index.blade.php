@@ -17,7 +17,7 @@
     @endif
 
 
-    <a href="{{ route('galleries.create') }}">Добавить фото (не более 10)</a>
+    <a href="{{ route('galleries.create') }}">Добавить фото в галерею Школа-Беларусь (не более 10)</a>
 
     <table class="table table-striped projects">
 

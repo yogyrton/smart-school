@@ -8,23 +8,20 @@ use App\Traits\DocumentsTrait;
 use App\Traits\MainNewsTrait;
 use App\Traits\PhotoTrait;
 use App\Traits\PriceTrait;
-use Illuminate\Http\Request;
 
-class JukovLugController extends Controller
+class DreamlandCampController extends Controller
 {
-    private $page = 'Лагерь Жуков Луг';
-    private $priceForSale = 'blr_gl_sale';
-    private $price = 'blr_gl';
+    private $page = 'Лагерь Дримленд';
+    private $price = 'blr_dr';
 
     public function index()
     {
         $mainNews = MainNewsTrait::getMainNews($this->page);
         $documents = DocumentsTrait::getDocuments($this->page);
         $price = PriceTrait::getPrice($this->price);
-        $priceForSale = PriceTrait::getPrice($this->priceForSale);
         $counselors = CounselorTrait::getTeachers($this->page);
         $photos = PhotoTrait::getPhotoByCamp($this->page);
 
-        return view('camp-jukov-lug', compact('mainNews', 'price', 'documents', 'counselors', 'photos', 'priceForSale'));
+        return view('camp-dreamland', compact('mainNews', 'price', 'documents', 'counselors', 'photos'));
     }
 }

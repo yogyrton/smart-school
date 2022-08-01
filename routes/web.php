@@ -1,12 +1,16 @@
 <?php
 
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Page\DreamlandCampController;
+use App\Http\Controllers\Page\GeorgiaCampController;
+use App\Http\Controllers\Page\JukovLugController;
 use App\Http\Controllers\Page\MainPageController;
 use App\Http\Controllers\Page\SchoolBelarusController;
 use App\Http\Controllers\Page\SchoolBelarus1_4Controller;
 use App\Http\Controllers\Page\SchoolBelarus5_11Controller;
 use App\Http\Controllers\Page\OnlineSchoolController;
 use App\Http\Controllers\Page\SchoolRussiaController;
+use App\Http\Controllers\Page\CampController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,6 +30,10 @@ Route::get('/school-russia', [SchoolRussiaController::class, 'index'])->name('sc
 
 Route::get('/school-online', [OnlineSchoolController::class, 'index'])->name('school-online');
 
+Route::get('/camp', [CampController::class, 'index'])->name('camp');
+Route::get('/camp/jukov-lug', [JukovLugController::class, 'index'])->name('jukov-lug');
+Route::get('/camp/georgia', [GeorgiaCampController::class, 'index'])->name('georgia');
+Route::get('/camp/dreamland', [DreamlandCampController::class, 'index'])->name('dreamland');
 
 
 

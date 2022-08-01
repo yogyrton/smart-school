@@ -40,9 +40,9 @@
 
                                 <div class="form-group">
                                     <select class="custom-select" name="camp">
-                                        <option value="Жуков луг">Жуков Луг</option>
-                                        <option value="Дримленд">Дримленд</option>
-                                        <option value="Грузия">Грузия</option>
+                                        <option value="Лагерь Жуков Луг">Лагерь Жуков Луг</option>
+                                        <option value="Лагерь Дримленд">Лагерь Дримленд</option>
+                                        <option value="Лагерь в Грузии">Лагерь в Грузии</option>
                                     </select>
                                 </div>
                             </div>

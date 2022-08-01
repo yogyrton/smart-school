@@ -24,20 +24,25 @@
         <thead>
         <tr>
 
-            <th style="width: 20%">
+            <th style="width: 10%">
                 Фото
             </th>
 
-            <th style="width: 5%">
+            <th style="width: 15%">
                 Заголовок
             </th>
 
-            <th style="width: 25%">
+            <th style="width: 35%">
                 Текст
             </th>
 
-            <th style="width: 20%">
+            <th style="width: 15%">
                 Дата публикации
+            </th>
+
+
+            <th style="width: 5%">
+                Действия
             </th>
 
         </tr>

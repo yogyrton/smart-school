@@ -37,7 +37,7 @@
 
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Текст новости (необязательно изменять, сохранится старое, не более 500 символов)</label>
-                                    <input type="text" name="text" class="form-control" id="exampleInputPassword1" value="{!! $news->text !!}">
+                                        <textarea name="text" class="form-control" id="exampleInputPassword1">{!! $news->text !!}</textarea>
                                 </div>
                             </div>
 
