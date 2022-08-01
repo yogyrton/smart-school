@@ -27,18 +27,9 @@ Route::get('/school-russia', [SchoolRussiaController::class, 'index'])->name('in
 Route::get('/school-online', [OnlineSchoolController::class, 'index'])->name('index');
 
 
-
-
 Route::fallback(function (){
     return view('errors.404');
 });
-
-
-
-
-
-
-
 
 
 //Route::domain('test.urist-perevozki.by')->group(function(){
