@@ -389,6 +389,16 @@ const swiper_15 = new Swiper('#price.price-online .swiper-2', {
     }
 });
 
+const swiper_16 = new Swiper('#school .swiper', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    pagination: {
+        el: "#school .swiper-pagination-1",
+        clickable: true
+    }
+});
 
 
 //для уменьшения лого при скролле
