@@ -24,23 +24,21 @@ class PriceRequest extends FormRequest
     public function rules()
     {
         return [
-            'blr_1_4' => 'required|integer|max:10000',
-            'blr_5_11' => 'required|integer|max:10000',
-            'blr_gl' => 'required|integer|max:10000',
-            'blr_dr' => 'required|integer|max:10000',
-            'rus_1_4_rus' => 'required|integer|max:10000',
-            'rus_5_8_rus' => 'required|integer|max:10000',
-            'rus_9_11_rus' => 'required|integer|max:10000',
-            'rus_1_4_blr' => 'required|integer|max:10000',
-            'rus_5_8_blr' => 'required|integer|max:10000',
-            'rus_9_11_blr' => 'required|integer|max:10000',
-            'onl_1_4_rus' => 'required|integer|max:10000',
-            'onl_5_8_rus' => 'required|integer|max:10000',
-            'onl_9_11_rus' => 'required|integer|max:10000',
-            'onl_1_4_blr' => 'required|integer|max:10000',
-            'onl_5_8_blr' => 'required|integer|max:10000',
-            'onl_9_11_blr' => 'required|integer|max:10000',
-            'geo' => 'required|integer|max:10000',
+            'blr_1_4' => 'required|integer|min:0|max:10000',
+            'blr_5_11' => 'required|integer|min:0|max:10000',
+            'blr_gl' => 'required|integer|min:0|max:10000',
+            'blr_gl_sale' => 'required|integer|min:0|max:10000',
+            'blr_dr' => 'required|integer|min:0|max:10000',
+            'rus_1_4_rus' => 'required|integer|min:0|max:10000',
+            'rus_5_8_rus' => 'required|integer|min:0|max:10000',
+            'rus_9_11_rus' => 'required|integer|min:0|max:10000',
+            'onl_1_4_rus' => 'required|integer|min:0|max:10000',
+            'onl_5_8_rus' => 'required|integer|min:0|max:10000',
+            'onl_9_11_rus' => 'required|integer|min:0|max:10000',
+            'onl_1_4_blr' => 'required|integer|min:0|max:10000',
+            'onl_5_8_blr' => 'required|integer|min:0|max:10000',
+            'onl_9_11_blr' => 'required|integer|min:0|max:10000',
+            'geo' => 'required|integer|min:0|max:10000',
         ];
     }
 }

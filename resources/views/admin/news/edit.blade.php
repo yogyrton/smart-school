@@ -4,6 +4,15 @@
 
 @section('content')
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <section class="content">
         <div class="container-fluid">
@@ -22,17 +31,17 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Заголовок (необязательно)</label>
+                                    <label for="exampleInputEmail1">Заголовок (необязательно изменять, сохранится старое, не более 50 символов)</label>
                                     <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $news->title }}">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Текст новости (необязательно)</label>
-                                    <input type="text" name="text" class="form-control" id="exampleInputPassword1" value="{{ $news->text }}">
+                                    <label for="exampleInputPassword1">Текст новости (необязательно изменять, сохранится старое, не более 1000 символов)</label>
+                                    <textarea type="text" name="text" class="form-control" id="exampleInputPassword1">{{ $news->text }}</textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Фото (необязательно, размер 312х234 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
+                                    <label for="exampleInputPassword1">Фото (необязательно изменять, сохранится старое, размер 312х234 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp, не более 8 мб)</label>
                                     <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 
@@ -56,6 +65,17 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </section>
+
+
+    <script src="{{ asset('admin_assets/ckeditor/build/ckeditor.js') }}"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#exampleInputPassword1'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
 
 @endsection
 

@@ -10,7 +10,7 @@ use App\Traits\TeachersTrait;
 
 class MainPageController extends Controller
 {
-    public $page = 'Главная';
+    private $page = 'Главная';
 
     public function index()
     {

@@ -47,7 +47,7 @@
                 </td>
                 <td>
                     <a>
-                        {{ $new->text }}
+                        {!! $new->text !!}
                     </a>
                     <br>
                 </td>
