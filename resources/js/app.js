@@ -400,6 +400,17 @@ const swiper_16 = new Swiper('#school .swiper', {
     }
 });
 
+const swiper_17 = new Swiper('#schedule .swiper', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    pagination: {
+        el: "#schedule .swiper-pagination",
+        clickable: true
+    }
+});
+
 
 //для уменьшения лого при скролле
 window.onscroll = function () {

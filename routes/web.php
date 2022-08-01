@@ -8,6 +8,7 @@ use App\Http\Controllers\Page\SchoolBelarus5_11Controller;
 use App\Http\Controllers\Page\OnlineSchoolController;
 use App\Http\Controllers\Page\SchoolRussiaController;
 use App\Http\Controllers\Page\CampController;
+use App\Http\Controllers\Page\JukovLugController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,6 +29,7 @@ Route::get('/school-russia', [SchoolRussiaController::class, 'index'])->name('in
 Route::get('/school-online', [OnlineSchoolController::class, 'index'])->name('index');
 
 Route::get('/campMain', [CampController::class, 'index'])->name('index');
+Route::get('/camp-jukov-lug', [JukovLugController::class, 'index'])->name('index');
 
 Route::fallback(function (){
     return view('errors.404');

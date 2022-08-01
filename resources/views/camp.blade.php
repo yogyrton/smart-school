@@ -16,13 +16,13 @@
                     <h1 class="h1 pb-48">
                         Детский лагерь
                     </h1>
-                    <div class="btn-group btn-group-4">
+                    <div class=" btn-group-4">
                         <a href="/school-belarus/junior" class="button_1 btn-purple">Жуков Луг</a>
                         <a href="/school-belarus/junior" class="button_1 btn-purple">Dreamland</a>
                         <a href="/school-belarus/junior" class="button_1 btn-purple">Грузия</a>
                         <a href="/school-belarus/junior" class="button_1 btn-purple">Польша</a>
                         <a href="/school-belarus/senior" class="button_1 btn-purple">Онлайн</a>
-                        <button class="button_1 btn-pink">Оставить заявку</button>
+                        <a class="button_1 btn-pink">Оставить заявку</a>
                     </div>
 
                     <div class="notification--head">
@@ -98,17 +98,52 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/home-3.jpg" alt="history-img">
+                                    <img src="/img/main/history/camp-1.jpg" alt="history-img">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/home-1.jpg" alt="history-img">
+                                    <img src="/img/main/history/camp-2.jpg" alt="history-img">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/home-2.jpg" alt="history-img">
+                                    <img src="/img/main/history/camp-3.jpg" alt="history-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="d-flex h-100 justify-content-center">
+                                    <img src="/img/main/history/camp-4.jpg" alt="history-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="d-flex h-100 justify-content-center">
+                                    <img src="/img/main/history/camp-5.jpg" alt="history-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="d-flex h-100 justify-content-center">
+                                    <img src="/img/main/history/camp-6.jpg" alt="history-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="d-flex h-100 justify-content-center">
+                                    <img src="/img/main/history/camp-7.jpg" alt="history-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="d-flex h-100 justify-content-center">
+                                    <img src="/img/main/history/camp-8.jpg" alt="history-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="d-flex h-100 justify-content-center">
+                                    <img src="/img/main/history/camp-9.jpg" alt="history-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="d-flex h-100 justify-content-center">
+                                    <img src="/img/main/history/camp-10.jpg" alt="history-img">
                                 </div>
                             </div>
                         </div>
@@ -128,6 +163,74 @@
         </div>
 </section>
 
+<section id="faq" class="pb-120">
+        <div class="container">
+            <h2 class="accentColor mb-40">Часто задаваемые вопросы</h2>
 
+            <div class="row">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="accordion accordion-faq" id="accordionFaq">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOneFaq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFaq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Возможно только круглосуточное пребывание или есть дневное?</span>
+                                </button>
+                            </h2>
+                            <div id="collapseOneFaq" class="accordion-collapse collapse" aria-labelledby="headingOneFaq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                Есть возможность дневного пребывания.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2Faq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Faq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Если у ребенка аллергия или пожелания по питанию?</span>
+                                </button>
+                            </h2>
+                            <div id="collapse2Faq" class="accordion-collapse collapse" aria-labelledby="heading2Faq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                    На сменах работает профессиональный шеф-повар, который готовит с учетом индивидуальных запросов и особенностей детей.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3Faq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Faq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Сколько вожатых на смене?</span>
+                                </button>
+                            </h2>
+                            <div id="collapse3Faq" class="accordion-collapse collapse" aria-labelledby="heading3Faq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                    На 10 человек 1 вожатый круглосуточного пребывания. Также на сменах работают психологи, представитель администрации, сотрудники анимационной программы и приглашенные гости.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading5Faq">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5Faq" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span>Как забронировать место?</span>
+                                </button>
+                            </h2>
+                            <div id="collapse5Faq" class="accordion-collapse collapse" aria-labelledby="heading5Faq" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">
+                                    Необходимо связаться с менеджером по телефонам, указанным на сайте, и в течение суток для вас подготовят договор для бронирования места.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+                    <img src="/img/main/faq/camp.jpg" alt="" class="w-100 border-20">
+                </div>
+            </div>
+        </div>
+</section>
+
+@include ('sections.partners')
+@include ('sections.reviews')
+@include ('sections.contacts')
 
 @stop

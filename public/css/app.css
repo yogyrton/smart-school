@@ -17055,7 +17055,7 @@ textarea:focus, textarea:active {
   display: grid;
   grid-template-columns: repeat(3, 188px);
   -moz-column-gap: 20px;
-  column-gap: 20px;
+       column-gap: 20px;
   grid-row-gap: 12px;
 }
 @media screen and (max-width: 1200px) {
@@ -17066,20 +17066,124 @@ textarea:focus, textarea:active {
 }
 @media screen and (max-width: 767px) {
   .btn-group-4 {
-    -moz-column-gap: 0;
-    column-gap: 0;
     grid-template-columns: repeat(2, 48%);
   }
 }
 @media screen and (max-width: 400px) {
   .btn-group-4 {
     grid-template-columns: repeat(2, 49%);
+    -moz-column-gap: 8px;
+         column-gap: 8px;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 359px) {
   .btn-group-4 {
     grid-template-columns: 100%;
   }
+}
+
+.btn-group-4 a {
+  width: 100%;
+}
+
+.page-description {
+  max-width: 653px;
+}
+
+.price--card-2 {
+  border-radius: 12px;
+  background: #F4F2F6;
+  padding: 44px 66px;
+}
+
+.custom-ul-2 {
+  padding-left: 0;
+}
+.custom-ul-2 li {
+  list-style: none;
+  padding-left: 36px;
+  position: relative;
+  margin-bottom: 12px;
+}
+.custom-ul-2 li::before {
+  content: url("/svg/list.svg");
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .schedule .row {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 420px) {
+  .schedule .row {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .schedule-photo {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .schedule-photo {
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+
+.schedule-photo img {
+  height: auto;
+  width: 100%;
+}
+
+.schedule-card {
+  margin: 0 30px 24px 0;
+  padding: 68px 35px;
+  width: 100%;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: #F4F2F6;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1440px) {
+  .schedule-card {
+    padding: 65px 15px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 360px) {
+  .schedule-card {
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+#schedule .swiper-box {
+  position: relative;
+}
+#schedule .swiper-pagination {
+  display: none;
+  bottom: -10%;
+  position: absolute;
+}
+@media screen and (max-width: 992px) {
+  #schedule .swiper-pagination {
+    display: block;
+  }
+}
+#schedule .swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background: #F4F2F6;
+  width: 8px;
+  height: 8px;
+  margin: 0 8px;
+}
+#schedule .swiper-pagination .swiper-pagination-bullet-active {
+  background: #8041FF;
 }
 
 .mfp-container .mfp-arrow {
