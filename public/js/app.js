@@ -73643,6 +73643,16 @@ var swiper_15 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#pric
       slidesPerView: 2
     }
   }
+});
+var swiper_16 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#school .swiper', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoHeight: true,
+  pagination: {
+    el: "#school .swiper-pagination-1",
+    clickable: true
+  }
 }); //для уменьшения лого при скролле
 
 window.onscroll = function () {
