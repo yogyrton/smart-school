@@ -13,6 +13,8 @@ try {
 } catch (e) {}
 
 window.axios = require('axios');
+/* Sweet Alert 2 */
+window.Swal = require('sweetalert2');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

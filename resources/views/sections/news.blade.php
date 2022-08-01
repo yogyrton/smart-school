@@ -23,7 +23,7 @@
                                             <span
                                                 class="news-date grey mb-12">{{ $new->updated_at->format('d.m.Y') }}</span>
                                         <h5 class="accentColor news-title text-bold mb-12">{{ $new->title }}</h5>
-                                        <p class="news-text text mb-12">{{ $new->text }}</p>
+                                        <p class="news-text text mb-12">{!! $new->text !!}</p>
                                         <a class="news-btn text-bold" href="/">Подробнее</a>
                                     </div>
                                 </div>

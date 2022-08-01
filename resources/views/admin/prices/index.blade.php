@@ -66,7 +66,7 @@
                 {{ $price->blr_5_11 }} бел. руб.
             </td>
             <td>
-                {{ $price->blr_gl }} бел. руб.
+                {{ $price->blr_gl_sale }} бел. руб. (скидка) | {{ $price->blr_gl }} бел. руб.
             </td>
             <td>
                 {{ $price->blr_dr }} бел. руб.
@@ -106,13 +106,13 @@
                 Цена
             </td>
             <td>
-                {{ $price->rus_1_4_rus }} рос. руб. | {{ $price->rus_1_4_blr }} бел. руб.
+                {{ $price->rus_1_4_rus }} рос. руб.
             </td>
             <td>
-                {{ $price->rus_5_8_rus }} рос. руб. | {{ $price->rus_5_8_blr }} бел. руб.
+                {{ $price->rus_5_8_rus }} рос. руб
             </td>
             <td>
-                {{ $price->rus_9_11_rus }} рос. руб. | {{ $price->rus_9_11_blr }} бел. руб.
+                {{ $price->rus_9_11_rus }} рос. руб.
             </td>
 
         </tr>

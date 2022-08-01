@@ -30,17 +30,17 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Заголовок (обязательно)</label>
+                                <label for="exampleInputEmail1">Заголовок (обязательно для заполнения, не более 50 символов)</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Заголовок">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Текст новости (обязательно)</label>
-                                <input type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости">
+                                <label for="exampleInputPassword1">Текст новости (обязательно для заполнения, не более 1000 символов)</label>
+                                <textarea type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости"></textarea>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Фото (обязательно, размер 312х234 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
+                                <label for="exampleInputPassword1">Фото (обязательно, размер 312х234 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp, не более 8 мб)</label>
                                 <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                             </div>
 
@@ -64,5 +64,15 @@
         <!-- /.row -->
     </div><!-- /.container-fluid -->
 </section>
+
+
+    <script src="{{ asset('admin_assets/ckeditor/build/ckeditor.js') }}"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#exampleInputPassword1'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
 @endsection

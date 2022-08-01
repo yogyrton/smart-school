@@ -15248,6 +15248,56 @@ button {
   transition: all 0.3s;
 }
 
+.full-height-swall {
+  padding: 0 !important;
+}
+.full-height-swall .swal2-popup {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+}
+.full-height-swall .swal2-popup .swal2-icon {
+  display: none !important;
+}
+.full-height-swall .swal2-popup .swal2-title {
+  width: 653px;
+  font-size: 60px;
+  line-height: 1;
+  margin-left: auto;
+  margin-right: 20%;
+  text-align: left;
+  padding: 0 0 48px 0;
+  color: #130A25;
+  display: flex !important;
+  align-items: flex-end;
+}
+.full-height-swall .swal2-popup .swal2-actions {
+  width: 653px;
+  margin-left: auto;
+  margin-right: 20%;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.full-height-swall .swal2-popup .swal2-actions button.swal2-confirm {
+  min-width: 188px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 100px;
+  background: #8041FF;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #8041FF;
+}
+.full-height-swall .swal2-popup .swal2-actions button.swal2-confirm:hover {
+  background: #ffffff;
+  color: #8041FF;
+}
+
 header {
   position: fixed;
   left: 0;

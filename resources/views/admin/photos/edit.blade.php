@@ -32,19 +32,19 @@
                             <div class="card-body">
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Фото (необязательно, размер 426х426 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp))</label>
+                                    <label for="exampleInputPassword1">Фото (необязательно изменять, сохранится старое, размер 426х426 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp, не более 8 мб))</label>
                                     <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Выбрать лагерь (обязательно)</label>
+                                    <label for="exampleInputPassword1">Выбрать лагерь (необязательно изменять, сохранится старое)</label>
 
                                     <div class="form-group">
                                         <select class="custom-select" name="camp">
                                             <option value="{{ $photo->camp }}">{{ $photo->camp }}</option>
-                                            <option value="Жуков луг">Жуков Луг</option>
-                                            <option value="Дримленд">Дримленд</option>
-                                            <option value="Грузия">Грузия</option>
+                                            <option value="Лагерь Жуков Луг">Лагерь Жуков Луг</option>
+                                            <option value="Лагерь Дримленд">Лагерь Дримленд</option>
+                                            <option value="Лагерь в Грузии">Лагерь в Грузии</option>
                                         </select>
                                     </div>
                                 </div>

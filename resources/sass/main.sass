@@ -510,6 +510,55 @@ h2.mb-60
     transition: all 0.3s
 
 
+
+.full-height-swall
+    padding: 0 !important
+    .swal2-popup
+        margin: 0
+        width: 100%
+        height: 100vh
+        border-radius: 0
+
+        .swal2-icon
+            display: none !important
+        .swal2-title
+            width: 653px
+            font-size: 60px
+            line-height: 1
+            margin-left: auto
+            margin-right: 20%
+            text-align: left
+            padding: 0 0 48px 0
+            color: $text
+            display: flex !important
+            align-items: flex-end
+        .swal2-actions
+            width: 653px
+            margin-left: auto
+            margin-right: 20%
+            text-align: left
+            justify-content: flex-start
+            align-items: flex-start
+            button.swal2-confirm
+                min-width: 188px
+                height: 48px
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 4px
+                border-radius: 100px
+                background: $accentColor
+                color: #ffffff
+                transition: 0.3s ease-in-out
+                border: 1px solid $accentColor
+                &:hover
+                    background: #ffffff
+                    color: $accentColor
+
+
+
+
+
 header
     position: fixed
     left: 0

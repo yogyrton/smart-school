@@ -31,7 +31,7 @@
                                                 <div class="swiper-slide">
                                                     <div class="advt-box w-100">
                                                         <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                        <p class="head-text text">{!! $mainNew->text !!}</p>
                                                     </div>
 
                                                 </div>
@@ -308,7 +308,7 @@
         </div>
     </section>
 
-    <section id="info" class="info pt-120 scrollreveal">
+    <section id="info" class="info pb-120 pt-120 scrollreveal">
         <div class="container">
             <div class="swiper-box">
                 <div class="swiper">

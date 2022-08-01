@@ -276,9 +276,25 @@ export default {
 
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
-                this.registrationPassed = true;
-
-                axios.post('api/mail', { name: this.form.name, email: this.form.email, phone: this.form.phone, format: this.form.format, country: this.form.country, grade: this.form.grade, contact_msg: this.form.contact_msg})
+                axios.post('api/mail', {
+                    name: this.form.name,
+                    email: this.form.email,
+                    phone: this.form.phone,
+                    format: this.form.format,
+                    country: this.form.country,
+                    grade: this.form.grade,
+                    contact_msg: this.form.contact_msg}
+                    )
+                    .then(response => {
+                        if(response) {
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'Do you want to continue',
+                                icon: 'error',
+                                confirmButtonText: 'Cool'
+                            })
+                        }
+                    })
             }
         },
             handleWindowResize() {

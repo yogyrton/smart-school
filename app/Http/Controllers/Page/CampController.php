@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class CampController extends Controller
 {
-    public $page = 'Лагерь';
+    private $page = 'Лагерь';
 
     public function index()
     {

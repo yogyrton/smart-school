@@ -96,12 +96,40 @@
             checkForm() {
                 this.$v.form.$touch();
                 if (!this.$v.form.$error) {
-                    this.registrationPassed = true;
+
+                    Swal.fire({
+                        allowEscapeKey: false,
+                        title: 'Спасибо, Ваша заявка успешно отправлена!',
+                        icon: 'error',
+                        confirmButtonText: 'На главную',
+                        customClass: {
+                            container: 'full-height-swall'
+                        }
+                    })
+                        .then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href='/'
+                            }
+                        });
 
                     axios.post('api/mail', {
                         name: this.form.name,
                         phone: this.form.phone,
                     })
+                        .then(response => {
+                            if(response) {
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'Do you want to continue',
+                                    icon: 'error',
+                                    confirmButtonText: 'Cool',
+                                    customClass: {
+                                        container: 'full-height-swall'
+                                    }
+                                })
+                            }
+                        })
+
                 }
             },
             handleWindowResize() {

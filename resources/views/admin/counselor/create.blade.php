@@ -30,23 +30,23 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">ФИО (обязательно)</label>
+                                <label for="exampleInputEmail1">ФИО (обязательно для заполнения, не более 200 символов)</label>
                                 <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Заголовок">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Фото (обязательно, размер 349х492 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
+                                <label for="exampleInputPassword1">Фото (обязательно для заполнения, размер 349х492 или кратное ему, форматы: jpg, jpeg, png, bmp, gif, svg или webp)</label>
                                 <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Выбрать лагерь (обязательно)</label>
+                                <label for="exampleInputPassword1">Выбрать лагерь (обязательно для заполнения)</label>
 
                                 <div class="form-group">
                                     <select class="custom-select" name="camp">
-                                        <option value="Жуков луг">Лагерь Жуков Луг</option>
-                                        <option value="Дримленд">Лагерь Дримленд</option>
-                                        <option value="Грузия">Лагерь в Грузии</option>
+                                        <option value="Лагерь Жуков Луг">Лагерь Жуков Луг</option>
+                                        <option value="Лагерь Дримленд">Лагерь Дримленд</option>
+                                        <option value="Лагерь в Грузии">Лагерь в Грузии</option>
                                     </select>
                                 </div>
                             </div>
