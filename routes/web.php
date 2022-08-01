@@ -18,16 +18,17 @@ Route::prefix('login')->middleware('throttle:test')->group(function () {
 
 Route::get('/', [MainPageController::class, 'index'])->name('home');
 
-Route::get('/school-belarus', [SchoolBelarusController::class, 'index'])->name('index');
-Route::get('/school-belarus/junior', [SchoolBelarus1_4Controller::class, 'index'])->name('index');
-Route::get('/school-belarus/senior', [SchoolBelarus5_11Controller::class, 'index'])->name('index');
+Route::get('/school-belarus', [SchoolBelarusController::class, 'index'])->name('belarus');
+Route::get('/school-belarus/junior', [SchoolBelarus1_4Controller::class, 'index'])->name('junior');
+Route::get('/school-belarus/senior', [SchoolBelarus5_11Controller::class, 'index'])->name('senior');
 
-Route::get('/school-russia', [SchoolRussiaController::class, 'index'])->name('index');
+Route::get('/school-russia', [SchoolRussiaController::class, 'index'])->name('russia');
 
-Route::get('/school-online', [OnlineSchoolController::class, 'index'])->name('index');
+Route::get('/school-online', [OnlineSchoolController::class, 'index'])->name('online');
 
-
-
+Route::get('/dev', function (){
+    return view('errors.dev');
+});
 
 Route::fallback(function (){
     return view('errors.404');

@@ -13,6 +13,7 @@ import magnificPopup from 'magnific-popup';
 Vue.use(Validations);
 
 Vue.component('app-form', require('./Form.vue').default);
+Vue.component('app-request-form', require('./ReqForm.vue').default);
 new Vue({}).$mount('#app');
 
 
@@ -177,7 +178,7 @@ const swiper_4 = new Swiper('#news .swiper', {
         },
         1400: {
             slidesPerView: 4,
-            spaceBetween: 10
+            spaceBetween: 30
         }
     }
 });
@@ -393,10 +394,23 @@ const swiper_16 = new Swiper('#school .swiper', {
     loop: false,
     slidesPerView: 1,
     spaceBetween: 30,
-    autoHeight: true,
     pagination: {
-        el: "#school .swiper-pagination-1",
+        el: "#school .swiper-pagination",
         clickable: true
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        575: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1200: {
+            slidesPerView: 5,
+            spaceBetween: 0
+        }
     }
 });
 
@@ -466,7 +480,7 @@ window.addEventListener("DOMContentLoaded", () => {
             more.style.display = "none";
         } else {
             dots.style.display = "none";
-            btn.innerHTML = "Скрыть";
+            btn.innerHTML = "Свернуть";
             more.style.display = "inline";
         }
     }

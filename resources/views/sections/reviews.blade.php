@@ -1,4 +1,4 @@
-<section id="replies" class="mb-160 replies scrollreveal">
+<section id="replies" class="pt-120 replies scrollreveal">
     <div class="container">
         <h2 class="accentColor mb-40">Отзывы</h2>
         <div class="d-flex align-items-center justify-content-between position-relative">

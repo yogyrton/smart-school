@@ -387,103 +387,511 @@
 
 
 #school
+    .swiper
+        @media screen and (min-width: 1200px)
+            overflow: visible
+    .swiper-wrapper
+        @media screen and (min-width: 1200px)
+            overflow: visible
+            display: grid
+            grid-template-columns: repeat(4, calc(25% - 23px))
+            row-gap: 30px
+            justify-content: space-between
+
+    .swiper-slide
+        height: auto
+        @media screen and (min-width: 1200px)
+            width: 100% !important
+            &:first-child
+                grid-column-start: 1
+                grid-column-end: 3
+            &:last-child
+                grid-column-start: 3
+                grid-column-end: 5
+    a.school-box
+        &:hover
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2)
+            button
+                background: $accentColor
+                color: #ffffff
     .school-box
+        display: block
+        height: 100%
+        background: $light-grey
+        border-radius: 12px
+        transition: 0.3s ease-in-out
+
+        @media screen and (min-width: 1200px)
+            display: grid
+            grid-template-columns: 50% 50%
+            width: 100%
+            background: transparent
         .img-box
+            width: 100%
+            border-radius: 12px 12px 0 0
+            position: relative
+            overflow: hidden
+            @media screen and (min-width: 1200px)
+                padding-top: 100%
+                border-radius: 12px 0 0 12px
             img
-                border-radius: 12px 12px 0 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+                position: static
+                top: 0
+                left: 0
+                @media screen and (min-width: 1200px)
+                    position: absolute
+
         .box-inner
             padding: 24px
             background: $light-grey
+            border-radius: 0 0 12px 12px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            @media screen and (min-width: 1200px)
+                border-radius: 0 12px 12px 0
 
 
-    //.grid-box
-    //    display: grid
-    //    row-gap: 24px
-    //    column-gap: 30px
-    //    grid-template-columns: repeat(4, 312px)
-    //    grid-template-rows: repeat(2, 290px)
-    //    justify-content: center
-    //    @media screen and (max-width: 1400px)
-    //        grid-template-columns: 332px 332px
-    //        grid-auto-rows: minmax(310px, auto)
-    //        grid-template-rows: none
-    //    @media screen and (max-width: 768px)
-    //        justify-content: center
-    //        grid-template-columns: 332px
-    //        grid-auto-rows: minmax(420px, auto)
-    //        grid-template-rows: none
-    //        grid-row-gap: 20px
-    //
-    //    .school-box
-    //        overflow: hidden
-    //        border-radius: 12px
-    //        background: #F4F2F7
-    //        word-wrap: break-word
-    //        @media screen and (max-width: 768px)
-    //            flex-direction: column
-    //
-    //        img
-    //            height: 100%
-    //            @media screen and (max-width: 768px)
-    //                width: 100%
-    //
-    //        .box-inner
-    //            height: 100%
-    //            display: flex
-    //            flex-direction: column
-    //            padding: 40px
-    //            @media screen and (max-width: 768px)
-    //                padding: 24px
-    //
-    //            .box-description
-    //                flex-grow: 1
-    //
-    //.img-box
-    //    height: 100%
-    //    @media screen and (max-width: 768px)
-    //        height: 232px
-    //
-    //    img
-    //        height: 100%
-    //        @media screen and (max-width: 768px)
-    //            width: 100%
-    //
-    //.school-box-photo-1
-    //    grid-column-start: 1
-    //    grid-column-end: 3
-    //    @media screen and (max-width: 1400px)
-    //        grid-column-start: 1
-    //        grid-column-end: 3
-    //    @media screen and (max-width: 768px)
-    //        grid-column-start: 1
-    //        grid-column-end: 1
-    //
-    //.school-box-photo-2
-    //    flex-direction: column
-    //
-    //.school-box-photo-3
-    //    grid-column-start: 3
-    //    grid-column-end: 5
-    //    @media screen and (max-width: 1400px)
-    //        grid-column-start: 1
-    //        grid-column-end: 3
-    //    @media screen and (max-width: 768px)
-    //        grid-column-start: 1
-    //        grid-column-end: 1
-    //
-    //.block-desktop
-    //    @media screen and (max-width: 768px)
-    //        display: none !important
-    //
-    //.block-mob
-    //    display: none
-    //    @media screen and (max-width: 768px)
-    //        display: flex
-    //
-    //.mob-padding
-    //    padding: 0
-    //    @media screen and (max-width: 768px)
-    //        padding: 24px
+    .school-box-short.school-box
+        @media screen and (min-width: 1200px)
+            height: 100%
+            display: block
+            .box-inner
+                border-radius: 12px
+                width: 100%
+                height: 100%
+            .block-mob
+                display: none
+
+    .school-box-desktop
+        display: none
+        @media screen and (min-width: 1200px)
+            display: block
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-radius: 12px
+
+
+    .swiper-pagination
+        position: static
+        padding: 4px 0 12px 0
+
+
+
+
+
+
+#teachers
+    @media screen and (max-width: 990px)
+        margin-bottom: 0
+        padding-bottom: 110px
+
+    .teachers-info
+        max-width: 654px
+
+    .teacher__image-ibg
+        width: 100%
+        padding-top: 100%
+        overflow: hidden
+        position: relative
+        border-radius: 16px
+
+    .teacher__image-ibg img
+        position: absolute
+        left: 0
+        top: 0
+        object-fit: cover
+        width: 100%
+        height: 100%
+
+
+    .teacher-description
+        word-wrap: break-word
+
+
+    .teacher__image-ibg
+        height: 100%
+        width: 100%
+        overflow: hidden
+        border-radius: 16px
+
+    .teacher__image-ibg img
+        object-fit: cover
+        width: 100%
+
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -100%)
+        @media screen and (max-width: 576px)
+            right: 75px
+            z-index: 100
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 576px)
+            left: 75px
+            z-index: 100
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+    .swiper-pagination
+        display: none
+        @media screen and (max-width: 576px)
+            display: block
+
+    .swiper-pagination-bullet
+        width: 24px
+        height: 24px
+        text-align: center
+        line-height: 24px
+        font-size: 16px
+        color: $grey
+        background-color: inherit
+        opacity: 1
+
+    .swiper-pagination-bullet-active
+        color: $white
+        background: $accentColor
+
+
+    .teachers-pagination
+        position: absolute
+        bottom: 0
+        transform: translateY(70px)
+
+
+
+#replies
+    @media screen and (max-width: 990px)
+        margin-bottom: 0
+        padding-bottom: 110px
+
+    img
+        width: 100%
+
+    .swiper .swiper-slide
+        text-align: center
+
+    .slider-button-next
+        right: 0
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -100%)
+        @media screen and (max-width: 576px)
+            right: 75px
+            z-index: 100
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 576px)
+            left: 75px
+            z-index: 100
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+    .swiper-pagination
+        display: none
+        @media screen and (max-width: 576px)
+            display: block
+
+    .swiper-pagination-bullet
+        width: 24px
+        height: 24px
+        text-align: center
+        line-height: 24px
+        font-size: 16px
+        color: $grey
+        background-color: inherit
+        opacity: 1
+
+    .swiper-pagination-bullet-active
+        color: $white
+        background: $accentColor
+
+
+    .replies-pagination
+        position: absolute
+        bottom: 0
+        transform: translateY(70px)
+
+#news
+    @media screen and (max-width: 990px)
+        margin-bottom: 0
+        padding-bottom: 110px
+
+    .image-in-slider
+        height: 100%
+
+    .image-in-slider img
+        width: 100%
+
+    .news__image-ibg
+        width: 100%
+        height: 200px
+        overflow: hidden
+        border-radius: 12px
+
+    .news__image-ibg img
+        width: 100%
+        height: 100%
+        min-height: 200px
+
+    .news-description
+        padding: 0 5px
+        word-wrap: break-word
+        flex-grow: 1
+
+        span
+            font-size: 12px
+            line-height: 18px
+            font-weight: 400
+
+        .news-title
+            font-size: 20px
+            line-height: 24px
+
+    .news-btn
+        display: none
+        color: $accentColor !important
+
+    .swiper .swiper-slide
+        @media screen and (max-width: 576px)
+
+
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -100%)
+        @media screen and (max-width: 576px)
+            right: 75px
+            z-index: 100
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 576px)
+            left: 75px
+            z-index: 100
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+    .swiper-pagination
+        display: none
+        @media screen and (max-width: 576px)
+            display: block
+
+    .swiper-pagination-bullet
+        width: 24px
+        height: 24px
+        text-align: center
+        line-height: 24px
+        font-size: 16px
+        color: $grey
+        background-color: inherit
+        opacity: 1
+
+    .swiper-pagination-bullet-active
+        color: $white
+        background: $accentColor
+
+    .news-pagination
+        position: absolute
+        bottom: 0
+        transform: translateY(70px)
+
+
+
+#partners
+    // .partners-wrapper
+    //     gap: 30px
+    //     @media screen and (max-width: 1200px)
+    //         gap: 12px
+    //         flex-wrap: wrap
+    //         justify-content: center
+    @media screen and (max-width: 768px)
+        margin-bottom: 0
+        padding-bottom: 80px
+    @media screen and (max-width: 576px)
+        padding-bottom: 100px
+
+    .swiper-slide
+        text-align: left
+        @media screen and (max-width: 768px)
+            text-align: center
+
+    .swiper-pagination
+        bottom: -25px
+        position: absolute
+        display: none
+        @media screen and (max-width: 1200px)
+            display: block
+        @media screen and (max-width: 768px)
+            bottom: -50px
+
+        .swiper-pagination-bullet
+            opacity: 1
+            background: $light-grey
+            width: 8px
+            height: 8px
+            margin: 0 8px
+
+        .swiper-pagination-bullet-active
+            background: $accentColor
+
+#order-section
+
+    #order-section img
+        object-fit: contain
+
+    .contacts-wrapper
+        font-size: 20px
+        line-height: 24px
+
+        .contacts-title,
+        .order-title
+            margin-bottom: 28px
+
+        .subtitle
+            max-width: 435px
+            margin-bottom: 28px
+            font-weight: 400
+
+        .contacts-info
+            gap: 8px
+            align-items: center
+            word-break: break-all
+
+        .contacts-mail
+            padding-left: 34px
+            position: relative
+            margin-bottom: 28px
+            word-break: break-all
+
+        .contacts-mail::before
+            content: ""
+            position: absolute
+            background-image: url('/svg/letter.svg')
+            background-repeat: no-repeat
+            width: 24px
+            height: 24px
+            left: 2px
+            top: 4px
+
+        .contacts-socials
+            gap: 12px
+
+            .contacts-socials-link
+                padding: 12px
+                background: #F4F2F7
+                border-radius: 100px
+
+        .contacts-location,
+        .contacts-timetable
+            padding-left: 34px
+            position: relative
+
+        .contacts-location::before
+            content: ""
+            position: absolute
+            background-image: url('/svg/location.svg')
+            background-repeat: no-repeat
+            width: 24px
+            height: 24px
+            left: 2px
+            top: -3px
+
+        .contacts-timetable::before
+            content: ""
+            position: absolute
+            background-image: url('/svg/time.svg')
+            background-repeat: no-repeat
+            width: 24px
+            height: 24px
+            left: 2px
+            top: -1px
+
+
+    .order-box
+        @media screen and (max-width: 990px)
+            margin-bottom: 40px
+
+        .order-title
+            margin-bottom: 28px
+
+        .order-box-description
+            font-size: 20px
+            line-height: 24px
+
+    .order-form
+
+        .input, input, textarea
+            font-size: 16px
+            line-height: 24px
+            font-weight: 400
+            color: $grey
+
 
 
 

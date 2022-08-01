@@ -1,4 +1,4 @@
-<section id="documents" class="mb-160 scrollreveal">
+<section id="documents" class="pt-120 scrollreveal">
     <div class="container">
         <h2 class="accentColor mb-40">Документы</h2>
         <div class="wrapper">

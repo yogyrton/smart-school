@@ -39,7 +39,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6"> 
+                    <div class="col-6">
                         <div class="form-group mb-12">
                             <label for="country">Страна</label>
                             <multiselect
@@ -144,7 +144,7 @@
                             </p>
                         </div>
                     </div>
-                        
+
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group mb-12">
                             <label for="name">Email*</label>
@@ -177,7 +177,7 @@
                             </p>
                         </div>
                     </div>
-                        
+
                 </div>
 
                     <div class="mb-12">
@@ -288,61 +288,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-.form-control {
-    display: block;
-    border: 1px solid #F4F2F7;
-    border-radius: 8px;
-    background: #F4F2F7;
-    padding: 12px 16px;
-    transition: 0.4s ease;
-    color: #605F5F;
-    font-family: "Rubik-Regular", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    background-clip: padding-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.form-control:focus, .form-control:active {
-    border: 1px solid #8041FF;
-    box-shadow: none;
-    outline: none;
-}
-.form-control.is-invalid,
-.multiselect .is-invalid {
-    border-color: #dc3545!important;
-}
-
-.form-control:focus {
-    box-shadow: none;
-}
-
-.form-check-input {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #8041FF;
-    border-radius: 2px;
-}
-
-.form-check-input:focus {
-    border-color: #8041FF;
-    outline: 0;
-    box-shadow: none;
-}
-
-.invalid-feedback {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #BD2773;
-    font-family: 'Rubik-Regular', sans-serif
-}
-.politic-link {
-    color:#8041FF !important
-}
-</style>
