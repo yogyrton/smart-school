@@ -1,0 +1,15 @@
+.btn-group-4
+    display: grid
+    grid-template-columns: repeat(3, 188px)
+    column-gap: 20px
+    grid-row-gap: 12px
+    @media screen and (max-width: 1200px)
+        grid-template-columns: repeat(2, 188px)
+        grid-row-gap: 12px
+    @media screen and (max-width: 767px)
+        column-gap: 0
+        grid-template-columns: repeat(2, 48%)
+    @media screen and (max-width: 400px)
+        grid-template-columns: repeat(2, 49%)
+    @media screen and (max-width: 360px)
+        grid-template-columns: 100%
