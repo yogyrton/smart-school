@@ -1,4 +1,4 @@
-<section id="order-section" class="mb-160 order-section scrollreveal">
+<section id="order-section" class="pt-120 pb-120 order-section scrollreveal">
     <div class="container">
         <div class="row container-mob justify-content-between">
             <div class="col-lg-4 d-flex flex-column contacts-wrapper">

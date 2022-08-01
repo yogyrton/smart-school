@@ -82,8 +82,14 @@ class DocumentController extends Controller
      */
     public function update(DocumentUpdateRequest $request, $id)
     {
-        $document = Document::query()->find($id);
+        $page = $request->page;
+        $count = Document::query()->where('page', '=', $page)->count();
 
+        if (($page == 'Лагерь Жуков Луг' || $page == 'Лагерь Дримленд' || $page == 'Лагерь в Грузии') && $count >= 2) {
+            return redirect()->route('documents.index')->with('error', 'Неверное количество документов');
+        }
+
+        $document = Document::query()->find($id);
         $file = $request->hasFile('path') ? $request->file('path')->store('documents','public') : $document->path;
 
         $document->update([
@@ -113,7 +119,6 @@ class DocumentController extends Controller
     {
         $doc = Document::query()->find($id);
         $path = public_path('storage/') . $doc->path;
-
 
         return response()->download($path);
     }

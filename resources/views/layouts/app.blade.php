@@ -41,6 +41,7 @@
 <body class="@yield('padding')">
 <div id="app">
     @include('partials.header')
+    @include('partials.request_modal')
 
     @yield('content')
 

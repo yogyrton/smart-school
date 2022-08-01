@@ -24,7 +24,7 @@ class DocumentUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:40',
+            'title' => 'required|max:50',
             'path' => 'file|max:10000',
             'page' => 'required'
         ];
@@ -34,7 +34,7 @@ class DocumentUpdateRequest extends FormRequest
     {
         return [
             'title.required' => 'Поле "название" обязательно для заполнения',
-            'title.max' => 'В поле "название" не более 40 символов',
+            'title.max' => 'В поле "название" не более 50 символов',
 
             'path.max' => 'Поле "Загрузить документ" должно быть не больше 8 мб',
 

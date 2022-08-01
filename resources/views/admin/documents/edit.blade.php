@@ -32,17 +32,17 @@
                             <div class="card-body">
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Название (обязательно)</label>
+                                    <label for="exampleInputEmail1">Название (необязательно изменять, сохранится старое, не более 50 символов)</label>
                                     <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $document->title }}">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Загрузить документ (необязательно)</label>
+                                    <label for="exampleInputPassword1">Загрузить документ (необязательно изменять, сохранится старое)</label>
                                     <input type="file" name="path" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Выбрать позицию показа(обязательно)</label>
+                                    <label for="exampleInputPassword1">Выбрать позицию показа(необязательно изменять, сохранится старое)</label>
 
                                     <div class="form-group">
                                         <select class="custom-select" name="page">

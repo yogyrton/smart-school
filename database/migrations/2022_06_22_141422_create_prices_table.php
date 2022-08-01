@@ -18,13 +18,11 @@ class CreatePricesTable extends Migration
             $table->integer('blr_1_4')->default(0)->unsigned();
             $table->integer('blr_5_11')->default(0)->unsigned();
             $table->integer('blr_gl')->default(0)->unsigned();
+            $table->integer('blr_gl_sale')->default(0)->unsigned();
             $table->integer('blr_dr')->default(0)->unsigned();
             $table->integer('rus_1_4_rus')->default(0)->unsigned();
             $table->integer('rus_5_8_rus')->default(0)->unsigned();
             $table->integer('rus_9_11_rus')->default(0)->unsigned();
-            $table->integer('rus_1_4_blr')->default(0)->unsigned();
-            $table->integer('rus_5_8_blr')->default(0)->unsigned();
-            $table->integer('rus_9_11_blr')->default(0)->unsigned();
             $table->integer('onl_1_4_rus')->default(0)->unsigned();
             $table->integer('onl_5_8_rus')->default(0)->unsigned();
             $table->integer('onl_9_11_rus')->default(0)->unsigned();

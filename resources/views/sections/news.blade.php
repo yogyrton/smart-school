@@ -1,5 +1,5 @@
 @if(!empty($news)  && count($news) > 0)
-    <section id="news" class="mb-160 news scrollreveal">
+    <section id="news" class="pt-120 news scrollreveal">
     <div class="container">
         <h2 class="accentColor mb-40">Новости</h2>
         <div class="wrapper">
@@ -21,9 +21,9 @@
                                     </div>
                                     <div class="news-description">
                                             <span
-                                                class="news-date grey mb-12">{{ $new->updated_at->format('d-m-Y') }}</span>
+                                                class="news-date grey mb-12">{{ $new->updated_at->format('d.m.Y') }}</span>
                                         <h5 class="accentColor news-title text-bold mb-12">{{ $new->title }}</h5>
-                                        <p class="news-text text mb-12">{{ $new->text }}</p>
+                                        <p class="news-text text mb-12">{!! $new->text !!}</p>
                                         <a class="news-btn text-bold" href="/">Подробнее</a>
                                     </div>
                                 </div>

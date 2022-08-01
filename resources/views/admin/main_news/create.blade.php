@@ -30,18 +30,18 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Заголовок (обязательно)</label>
+                                <label for="exampleInputEmail1">Заголовок (обязательно для заполнения, не более 50 символов)</label>
                                 <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Название заголовка">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Текст новости (обязательно)</label>
-                                <input type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости">
+                                <label for="exampleInputPassword1">Текст новости (обязательно для заполнения, не более 500 символов)</label>
+                                <textarea type="text" name="text" class="form-control" id="exampleInputPassword1" placeholder="Текст новости"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Выбрать страницу (обязательно)</label>
+                            <label for="exampleInputPassword1">Выбрать страницу (обязательно для заполнения)</label>
 
                             <div class="form-group">
                                 <select class="custom-select" name="page">
@@ -76,5 +76,14 @@
         <!-- /.row -->
     </div><!-- /.container-fluid -->
 </section>
+
+    <script src="{{ asset('admin_assets/ckeditor/build/ckeditor.js') }}"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#exampleInputPassword1'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
 @endsection

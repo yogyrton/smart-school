@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Page\DreamlandCampController;
+use App\Http\Controllers\Page\GeorgiaCampController;
+use App\Http\Controllers\Page\JukovLugController;
 use App\Http\Controllers\Page\MainPageController;
 use App\Http\Controllers\Page\SchoolBelarusController;
 use App\Http\Controllers\Page\SchoolBelarus1_4Controller;
@@ -8,7 +11,6 @@ use App\Http\Controllers\Page\SchoolBelarus5_11Controller;
 use App\Http\Controllers\Page\OnlineSchoolController;
 use App\Http\Controllers\Page\SchoolRussiaController;
 use App\Http\Controllers\Page\CampController;
-use App\Http\Controllers\Page\JukovLugController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,16 +22,22 @@ Route::prefix('login')->middleware('throttle:test')->group(function () {
 
 Route::get('/', [MainPageController::class, 'index'])->name('home');
 
-Route::get('/school-belarus', [SchoolBelarusController::class, 'index'])->name('index');
-Route::get('/school-belarus/junior', [SchoolBelarus1_4Controller::class, 'index'])->name('index');
-Route::get('/school-belarus/senior', [SchoolBelarus5_11Controller::class, 'index'])->name('index');
+Route::get('/school-belarus', [SchoolBelarusController::class, 'index'])->name('belarus');
+Route::get('/school-belarus/junior', [SchoolBelarus1_4Controller::class, 'index'])->name('junior');
+Route::get('/school-belarus/senior', [SchoolBelarus5_11Controller::class, 'index'])->name('senior');
 
-Route::get('/school-russia', [SchoolRussiaController::class, 'index'])->name('index');
+Route::get('/school-russia', [SchoolRussiaController::class, 'index'])->name('russia');
+Route::get('/school-online', [OnlineSchoolController::class, 'index'])->name('online');
 
-Route::get('/school-online', [OnlineSchoolController::class, 'index'])->name('index');
+Route::get('/camp', [CampController::class, 'index'])->name('camp');
+Route::get('/camp/jukov-lug', [JukovLugController::class, 'index'])->name('jukov-lug');
+Route::get('/camp/georgia', [GeorgiaCampController::class, 'index'])->name('georgia');
+Route::get('/camp/dreamland', [DreamlandCampController::class, 'index'])->name('dreamland');
 
-Route::get('/campMain', [CampController::class, 'index'])->name('index');
-Route::get('/camp-jukov-lug', [JukovLugController::class, 'index'])->name('index');
+
+Route::get('/dev', function (){
+    return view('errors.dev');
+});
 
 Route::fallback(function (){
     return view('errors.404');

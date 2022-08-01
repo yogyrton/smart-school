@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <section id="head" class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+    <section id="head" class="head position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container container-mob">
 
             <div class="head--container">
@@ -18,7 +18,7 @@
                     </h1>
                     <div class="btn-group">
                         <button class="button_1 btn-purple">Выбрать страну</button>
-                        <button class="button_1 btn-pink">Оставить заявку</button>
+                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">
@@ -31,7 +31,7 @@
                                                 <div class="swiper-slide">
                                                     <div class="advt-box w-100">
                                                         <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                        <p class="head-text text">{!! $mainNew->text !!}</p>
                                                     </div>
 
                                                 </div>
@@ -49,7 +49,7 @@
         </div>
     </section>
 
-    <section id="history" class="history scrollreveal">
+    <section id="history" class="pt-120 history scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">История</h2>
             <div class="row align-items-center justify-content-between container-mob">
@@ -124,22 +124,24 @@
 
     </section>
 
-    <section id="school" class="mb-160 scrollreveal">
+    <section id="school" class="scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Школа</h2>
-            <div class="siper-box">
+            <div class="swiper-box">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a class="school-box school-box-photo-1" href="/school-belarus">
+                            <a class="school-box" href="/school-belarus">
                                 <div class="img-box">
-                                    <img src="/img/main/school/photo1.png" alt="children-with-map">
+                                    <img src="/img/main/school/belarus.jpg" alt="children-with-map">
                                 </div>
                                 <div class="d-flex flex-column box-inner">
-                                    <h3 class="accentColor mb-24">Беларусь</h3>
-                                    <div class="box-description">
-                                        <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
-                                        <p class="text flex-grow-1 mb-20">д. Жуков Луг (5 км от ст.м.Уручье)</p>
+                                    <div>
+                                        <h3 class="accentColor mb-24">Беларусь</h3>
+                                        <div class="box-description">
+                                            <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
+                                            <p class="text flex-grow-1 mb-20">д. Жуков Луг (5 км от ст.м.Уручье)</p>
+                                        </div>
                                     </div>
                                     <button class="button_2 text">Подробнее</button>
                                 </div>
@@ -148,33 +150,37 @@
 
 
                         <div class="swiper-slide">
-                            <a class="school-box school-box-photo-2" href="/">
+                            <a class="school-box school-box-short" href="/dev">
                                 <div class="img-box block-mob">
-                                    <img src="/img/main/school/photo2.png" alt="children-img">
+                                    <img src="/img/main/school/gruziya.jpg" alt="children-img">
                                 </div>
                                 <div class="box-inner">
-                                    <h3 class="accentColor mb-24">Грузия</h3>
-                                    <div class="box-description">
-                                        <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
+                                    <div>
+                                        <h3 class="accentColor mb-24">Грузия</h3>
+                                        <div class="box-description">
+                                            <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
+                                        </div>
                                     </div>
                                     <button class="button_2 text">Подробнее</button>
                                 </div>
                             </a>
                         </div>
 
-                        <div class="school-box block-desktop">
+                        <div class="school-box school-box-desktop">
                             <img class="w-100" src="/img/main/school/photo2.png" alt="children-img">
                         </div>
 
                         <div class="swiper-slide">
-                            <a class="school-box flex-column" href="/school-online">
+                            <a class="school-box school-box-short" href="/school-online">
                                 <div class="img-box block-mob">
-                                    <img src="/img/main/school/photo4.png" alt="children-img">
+                                    <img src="/img/main/school/online.jpg" alt="children-img">
                                 </div>
                                 <div class="box-inner">
-                                    <h3 class="accentColor mb-24">Онлайн</h3>
-                                    <div class="box-description">
-                                        <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
+                                    <div>
+                                        <h3 class="accentColor mb-24">Онлайн</h3>
+                                        <div class="box-description">
+                                            <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
+                                        </div>
                                     </div>
                                     <button class="button_2 text">Подробнее</button>
                                 </div>
@@ -182,14 +188,16 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <a class="school-box flex-column" href="/school-russia">
+                            <a class="school-box school-box-short" href="/school-russia">
                                 <div class="img-box block-mob">
-                                    <img src="/img/main/school/photo5.png" alt="children-img">
+                                    <img src="/img/main/school/russia.jpg" alt="children-img">
                                 </div>
                                 <div class="box-inner">
-                                    <h3 class="accentColor mb-24">Россия</h3>
-                                    <div class="box-description">
-                                        <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
+                                    <div>
+                                        <h3 class="accentColor mb-24">Россия</h3>
+                                        <div class="box-description">
+                                            <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
+                                        </div>
                                     </div>
                                     <button class="button_2 text">Подробнее</button>
                                 </div>
@@ -197,15 +205,17 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <a class="school-box school-box-photo-3" href="/">
+                            <a class="school-box" href="/dev">
                                 <div class="img-box">
-                                    <img src="/img/main/school/photo3.png" alt="children-with-map">
+                                    <img src="/img/main/school/poland.jpg" alt="children-with-map">
                                 </div>
 
                                 <div class="d-flex flex-column box-inner">
-                                    <h3 class="accentColor mb-24">Польша</h3>
-                                    <div class="box-description">
-                                        <p class="text flex-grow-1 mb-12">обучение по адресу: ul.Ksieskiej, Wroclaw</p>
+                                    <div>
+                                        <h3 class="accentColor mb-24">Польша</h3>
+                                        <div class="box-description">
+                                            <p class="text flex-grow-1 mb-12">обучение по адресу: ul.Ksieskiej, Wroclaw</p>
+                                        </div>
                                     </div>
                                     <button class="button_2 text">Подробнее</button>
                                 </div>
@@ -213,11 +223,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <section id="advantages" class="advantages mb-160 scrollreveal">
+    <section id="advantages" class="advantages pt-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Почему мы?</h2>
 
@@ -297,63 +308,60 @@
         </div>
     </section>
 
-    <section id="info" class="info mb-160 scrollreveal">
+    <section id="info" class="info pb-120 pt-120 scrollreveal">
         <div class="container">
-            <div class="d-flex row align-items-center justify-content-between position-relative info-mob-swiper">
-                <div class="col">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="d-flex justify-content-center">
-                                    <div class="d-flex flex-column align-items-center info-box">
-                                        <img class="mb-20" src="/svg/calendar.svg" alt="calendar">
-                                        <h4 class="text-bold mb-16 text-center">5 лет</h4>
-                                        <p class="text grey text-center">обучаем детей по нашим</br> авторским
-                                            программам</p>
-                                    </div>
+            <div class="swiper-box">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex flex-column align-items-center info-box">
+                                    <img class="mb-20" src="/svg/calendar.svg" alt="calendar">
+                                    <h4 class="text-bold mb-16 text-center">5 лет</h4>
+                                    <p class="text grey text-center">обучаем детей по нашим</br> авторским
+                                        программам</p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="d-flex justify-content-center">
-                                    <div class="d-flex flex-column align-items-center info-box">
-                                        <img class="mb-20" src="/svg/group.svg" alt="group">
-                                        <h4 class="text-bold mb-16 text-center">453+ детей</h4>
-                                        <p class="text grey text-center">прошли обучение и выпустились из нашей
-                                            школы</p>
-                                    </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex flex-column align-items-center info-box">
+                                    <img class="mb-20" src="/svg/group.svg" alt="group">
+                                    <h4 class="text-bold mb-16 text-center">453+ детей</h4>
+                                    <p class="text grey text-center">прошли обучение и выпустились из нашей
+                                        школы</p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="d-flex justify-content-center">
-                                    <div class="d-flex flex-column align-items-center info-box">
-                                        <img class="mb-20" src="/svg/place.svg" alt="place">
-                                        <h4 class="text-bold mb-16 text-center">7 локаций</h4>
-                                        <p class="text grey text-center">предлагает наша школа для </br>обучения из
-                                            разных точек мира</p>
-                                    </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex flex-column align-items-center info-box">
+                                    <img class="mb-20" src="/svg/place.svg" alt="place">
+                                    <h4 class="text-bold mb-16 text-center">7 локаций</h4>
+                                    <p class="text grey text-center">предлагает наша школа для </br>обучения из
+                                        разных точек мира</p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="d-flex justify-content-center">
-                                    <div class="d-flex flex-column align-items-center info-box">
-                                        <img class="mb-20" src="/svg/study.svg" alt="study">
-                                        <h4 class="text-bold mb-16 text-center">73 преподавателя</h4>
-                                        <p class="text grey text-center">ведут обучение на профессиональном уровне</p>
-                                    </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <div class="d-flex flex-column align-items-center info-box">
+                                    <img class="mb-20" src="/svg/study.svg" alt="study">
+                                    <h4 class="text-bold mb-16 text-center">73 преподавателя</h4>
+                                    <p class="text grey text-center">ведут обучение на профессиональном уровне</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
                 </div>
-
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
     @include('sections.advantagies')
 
-    <section id="teachers" class="mb-160 scrollreveal teachers">
+    <section id="teachers" class="pt-120 scrollreveal teachers">
         <div class="container">
             <h2 class="accentColor mb-40">Команда профессиональных педагогов</h2>
             <p class="text mb-60 teachers-info">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать
@@ -399,9 +407,6 @@
             </div>
         </div>
     </section>
-
-
-
 
     @include('sections.reviews')
     @include('sections.news')
