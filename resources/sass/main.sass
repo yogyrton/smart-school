@@ -4,30 +4,28 @@ html *
     margin: 0
 
 body
-    padding-top: 250px
+    padding-top: 105px
     background: $white
-    font-family: "Rubik-SemiBold", sans-serif
+    font-family: "Rubik", sans-serif
     color: $text
-    @media screen and (max-width: 992px)
-        padding-top: 170px
-    @media screen and (max-width: 576px)
-        padding-top: 95px
+    @media screen and (max-width: 1366px)
+        padding-top: 66px
+    @media screen and (max-width: 1199px)
+        padding-top: 44px
 
 html
     scroll-padding-top: 100px
 
-body
-    overflow: visible !important
 
 .w-100
-    width: 100%!important
+    width: 100% !important
 
 .not-padding
-    padding: 0!important
+    padding: 0 !important
 
 a
     text-decoration: none !important
-    color: $text !important
+    color: $text
 
 a:hover
     color: $accentColor !important
@@ -37,7 +35,7 @@ ul, ol
         list-style-type: none
 
 textarea:focus
-    box-shadow: none!important
+    box-shadow: none !important
     outline: none
     border: none
     background: transparent
@@ -59,18 +57,16 @@ input, textarea
     padding-left: 15px
     padding-right: 15px
 
-.no-gutters 
+.no-gutters
     margin-right: 0
     margin-left: 0
 
 .text
-    font-family: 'Rubik-Regular', sans-serif
     font-weight: 400
     font-size: 16px
     line-height: 24px
 
 .text-bold
-    font-family: 'Rubik-SemiBold',sans-serif
     font-weight: 600
 
 .container
@@ -91,16 +87,19 @@ input, textarea
 
 .box-check-ico
     a
-    text-decoration: none
-    display: inline
+        text-decoration: none
+        display: inline
+
 .box-check-ico label
-    font-size: 16px!important
-    line-height:24px!important
+    font-size: 16px !important
+    line-height: 24px !important
     color: $grey
+
 .check-ico
     margin-top: 4px
     position: relative
     cursor: pointer
+
     input
         position: absolute
         z-index: -1
@@ -108,6 +107,7 @@ input, textarea
         -webkit-appearance: auto
         left: 50%
         width: 0
+
     span::before
         content: ''
         display: inline-block
@@ -116,15 +116,17 @@ input, textarea
         margin-right: 12px
         border: 1px solid $grey
         flex: 0 0 16px
-    input.invalid-check+span:before
+
+    input.invalid-check + span:before
         border: 1px solid $grey
-.check-ico>input:checked+span::before
+
+.check-ico > input:checked + span::before
     background-image: url("/svg/checkicon.svg")
     background-repeat: no-repeat
     background-position: 50%
     background-color: transparent
     box-shadow: none
-    
+
 .pre-wrap
     white-space: pre-wrap
 
@@ -141,6 +143,7 @@ input, textarea
     margin: 0 -30px
     flex-shrink: 0
     z-index: 2
+
     svg
         path
             transition: 1s
@@ -156,28 +159,28 @@ input, textarea
         display: none
 
 #btnMore, #btnMore2
-    font-family: 'Rubik-SemiBold', sans-serif
-    visibility: hidden
+    display: none
     @media screen and (max-width: 576px)
-        visibility: initial
+        display: block
 
 .h1, .h2, .h3, .h4, .h5, .h6, p
     margin-bottom: 0
     margin-top: 0
 
-h1, .h1 
-    font-family: 'Rubik-SemiBold', sans-serif
+h1, .h1
     font-size: 60px
     line-height: 100%
     font-weight: 600
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: 1440px)
+        font-size: 48px
+    @media screen and (max-width: 991px)
         font-size: 32px
         line-height: 32px
     @media screen and (max-width: 1500px)
         white-space: normal
 
 h2, .h2
-    font-family: 'Rubik-SemiBold', sans-serif
+
     font-size: 44px
     line-height: 100%
     font-weight: 600
@@ -185,8 +188,7 @@ h2, .h2
         font-size: 32px
         line-height: 32px
 
-h3, .h3 
-    font-family: 'Rubik-SemiBold', sans-serif
+h3, .h3
     font-size: 32px
     line-height: 32px
     font-weight: 600
@@ -195,14 +197,17 @@ h3, .h3
         line-height: 32px
 
 h4, .h4
-    font-family: 'Rubik-SemiBold', sans-serif
     font-size: 24px
     line-height: 24px
     font-weight: 600
 
-h5, .h5 
-    font-family: 'Rubik-SemiBold', sans-serif
+h5, .h5
     font-size: 16px !important
+    line-height: 24px
+    font-weight: 600
+
+h6, .h6
+    font-size: 20px
     line-height: 24px
     font-weight: 600
 
@@ -210,7 +215,7 @@ h5, .h5
     font-style: italic
 
 button
-    box-shadow: none!important
+    box-shadow: none !important
     outline: none
     border-radius: 0
     border: none
@@ -219,17 +224,20 @@ button
 
 .button_1
     border-radius: 100px
-    padding: 12px 28px
+    padding: 11px 8px
+    min-width: 188px
     width: fit-content
     color: $white
     transition: 1s
     cursor: pointer
     display: flex
+    justify-content: center
     align-items: center
-    @media screen and (max-width: 576px)
-        padding: 12px 13px
+    @media screen and (max-width: 575px)
+        min-width: 162px
 
-.button_2 
+
+.button_2
     padding: 10px 24px
     color: $accentColor
     width: fit-content
@@ -240,6 +248,7 @@ button
     border-radius: 100px
     display: flex
     align-items: center
+
     &:hover
         border: 1px solid #8041FF
         background-color: $accentColor
@@ -256,8 +265,10 @@ button
     display: flex
     align-items: center
     justify-content: center
+    @media screen and (max-width: 768px)
+        min-height: 56px
 
-.btn-purple 
+.btn-purple
     background-color: $accentColor
     border: 1px solid #8041FF
 
@@ -268,55 +279,87 @@ button
 .btn-purple:hover,
 .btn-pink:hover
     background-color: transparent
-    color: $accentColor!important
+    color: $accentColor !important
     border: 1px solid #8041FF
 
 .mb-8
     margin-bottom: 8px
+
 .mb-12
     margin-bottom: 12px
+
 .mb-16
     margin-bottom: 16px
+
 .mb-20
     margin-bottom: 20px
+
 .mb-24
     margin-bottom: 24px
+
 .mb-32
     margin-bottom: 32px
+
 .mb-40
     margin-bottom: 40px
     @media screen and (max-width: 600px)
-        margin-bottom: 24px  
+        margin-bottom: 24px
+
 .mb-50
     margin-bottom: 50px
+
+h2.mb-60
+    @media screen and (max-width: 992px)
+        margin-bottom: 24px
+
 .mb-60
     margin-bottom: 60px
+
 .mb-80
     margin-bottom: 80px
+
 .mb-160
     margin-bottom: 160px
     @media screen and (max-width: 992px)
-        margin-bottom: 40px
+        margin-bottom: 60px
+
 .mb-180
     margin-bottom: 180px
+
 .pb-10
-    padding-bottom: 10px!important
+    padding-bottom: 10px !important
+
 .pb-48
     padding-bottom: 48px
+    @media screen and (max-width: 992px)
+        padding-bottom: 24px
+
 .pb-80
     padding-bottom: 80px
+
 .pb-85
     padding-bottom: 85px
+
 .pb-100
     padding-bottom: 100px
+
 .pb-120
     padding-bottom: 120px
+    @media screen and (max-width: 992px)
+        padding-bottom: 40px
+
 .pt-120
     padding-top: 120px
     @media screen and (max-width: 992px)
         padding-top: 40px
 
-.swiper 
+
+.border-20
+    border-radius: 20px
+
+
+.swiper
+    width: 100%
     overflow: hidden
 
 .swiper-button-disabled
@@ -324,53 +367,78 @@ button
 
 .modal
     padding-right: 17px
-    cursor: pointer
     @media screen and (max-width: 992px)
         padding-right: 0
+
     .modal-dialog
         max-width: none
         width: 760px
-        max-width: none
-        margin: 0
+        margin: 0 auto
         height: 100%
         @media screen and (max-width: 800px)
             width: auto
+
+        .modal-close
+            width: 20px
+            height: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            right: 32px
+            top: 32px
+            z-index: 2
+            border: 2px solid $accentColor
+            border-radius: 50%
+            opacity: 0.8
+            transition: 0.3s ease-in-out
+            &:hover
+                opacity: 1
+
+
         .modal-content
             padding: 60px
             outline: none
             border: none
             @media screen and (max-width: 992px)
                 padding: 20px
+
             .modal-body
                 padding: 0
                 position: relative
                 flex: 1 1 auto
+
                 a
                     font-weight: 400 !important
-                    font-family: 'Rubik-Regular', sans-serif
                     margin-bottom: 20px
+
                 .close-burger
                     position: absolute
                     top: 40px
                     right: 40px
                     cursor: pointer
+
                 .row
                     @media screen and (max-width: 992px)
                         flex-direction: column
                         margin: 0
+
                 .row > *
                     @media screen and (max-width: 992px)
                         padding-right: 0
                         padding-left: 0
+
                     .button_1
                         @media screen and (max-width: 992px)
                             display: none
+
                 .header-contacts-messengers
                     flex-direction: column
                     height: auto
                     position: absolute
                     top: 0
                     right: 20px
+
         .close
             position: absolute
             z-index: 2
@@ -383,305 +451,173 @@ button
 
 #burgerModal
     padding-right: 0
+
     .modal-content
         padding: 0
+
     .modal-dialog
         max-width: none
         margin: 0
         height: 100%
+        width: 90%
+
+        -webkit-transform: translateX(-20px)
+        -moz-transform: translateX(-20px)
+        -ms-transform: translateX(-20px)
+        transform: translateX(-20px)
+
         .modal-content
             height: 100%
+            border-radius: 0 24px 24px 0
+
     .modal-header
-        padding: 21px 0
+        padding: 24px 0
+        margin-bottom: 12px
         border-bottom: none
+
     .modal-body
         nav
             ul
                 li
                     margin-bottom: 16px
+
                     a
                         padding: 0
                         color: $text
+
                 li:last-of-type
                     margin-bottom: 0
 
-    
-header 
+#burgerModal.show .modal-dialog
+    -webkit-transform: translateX(0)
+    -moz-transform: translateX(0)
+    -ms-transform: translateX(0)
+    transform: translateX(0)
+
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
+
+
+header
     position: fixed
     left: 0
     right: 0
     top: 0
     z-index: 999
-    height: 105px
     background-color: white
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07)
-    @media screen and (max-width: 990px)
+    transition: 0.3s ease-in-out
+
+    @media screen and (max-width: 1199px)
         background-color: #8041FF
         margin-bottom: 40px
         height: auto
-    .container
-        @media screen and (max-width: 1200px)
-            width: 100%
-            padding: 0 15px!important
-    .logo
-        position: relative
-        margin-right: 110px
-        @media screen and (max-width: 1400px)
-            margin-right: 60px
-        @media screen and (max-width: 990px)
-            display: none
-        .header-rectangle
-            background-image: url('/svg/headerRectangle.svg')
-            background-repeat: no-repeat
-            top: -20px
-            left: -45px
-            position: absolute
-            width: 230px
-            height: 150px
-            z-index: -1
-            transition: margin-top 0.5s 
-            @media screen and (max-width: 990px)
-                display: none
-        .header-rectangle.tiny
-            width: 165px
-            height: 105px
-            background-size: 203px 108px
-            transition: margin-top 0.5s
-            
-    .logo.tiny img
-        width: 60px
-        height: 69px
-        transform: translate(-15px, -10px)
 
-    nav
+    .navbar
+        padding: 0
+
+    .container
+        position: relative
+        height: 106px
+        @media screen and (max-width: 1366px)
+            height: 66px
+        @media screen and (max-width: 1199px)
+            width: 100%
+            padding: 0 15px !important
+            height: 44px
+
+    .logo
         height: 100%
+        width: 175px
+        @media screen and (max-width: 1366px)
+            width: 160px
+        @media screen and (max-width: 1199px)
+            width: auto
+            display: block
+            padding: 6px 0
+
+        img
+            position: absolute
+            left: 10px
+            top: 0
+            z-index: 2
+            transition: 0.6s ease-in-out
+            transform: translateX(-54px)
+            @media screen and (max-width: 1366px)
+                transform: translateX(0px)
+                max-width: 160px
+            @media screen and (max-width: 1199px)
+                left: 15px
+                position: static
 
     .header-list
-        width: 92%
+        padding-left: 26px
+        margin-bottom: 0
+        @media screen and (max-width: 1500px)
+            padding-left: 12px
+        @media screen and (max-width: 1199px)
+            padding-left: 0
+
+        li
+            margin-right: 48px
+            @media screen and (max-width: 1500px)
+                margin-right: 24px
+            @media screen and (max-width: 1199px)
+                margin-right: 0
+
+            &:last-child
+                margin-right: 0
+
 
     .header-contacts-messengers
         gap: 13px
         align-items: center
 
     .header-contacts-messengers a
-            color: $text
-            white-space: nowrap
-    
-    .dropdown-btn 
+        color: $text
+        white-space: nowrap
+
+    .dropdown-btn
         position: relative
-        
+        padding-right: 24px
+
         &::after
             position: absolute
-            height: 6px
-            display: block
-            background-repeat: no-repeat
-            width: 15px
-            content: ""
-            right: -20px
-            top: 8px
-            background-image: url('/svg/arrowHeader.svg')
+            content: url('/svg/arrowHeader.svg')
+            right: 0
+            top: 0
+
         &:hover
             color: $accentColor
 
-.head
-    z-index: 10
-    .head-wrapper
-        display: grid
-        grid-template-rows: 345px 1fr
-        grid-template-columns: repeat(2, 1fr)
-        grid-column-gap: 40px
-        grid-row-gap: 70px
-        @media screen and (max-width: 1200px)
-            grid-template-rows: auto
-            grid-template-columns: minmax(100%, auto)
-            grid-row-gap: 0
 
-    .imgHead-box
-        position: relative
-        z-index: 10
-        grid-area: 1/1/3/2
-        @media screen and (max-width: 1200px)
-            grid-area: 2/1/3/2
-            margin-bottom: 35px
-        img, .pseudo
-            @media screen and (max-width: 576px)
-                display: none 
-        .mainMob img
-            display: none
-            @media screen and (max-width: 576px)
-                display: block
-                width: 100%
-                margin-left: -20px
-        .main-xxl img
-            display: none
-            @media screen and (min-width: 1650px)
-                display: block
-                top: -145px
-                position: absolute
-                z-index: -3
-                left: -27%
-        .pseudo 
-            position: absolute
-            top: -21%
-            left: -122px
-            width: 731px
-            height: 787px
-            background-image: url(/img/pseudo1.png)
-            background-repeat: no-repeat
-            background-size: cover
-            z-index: -3
-            @media screen and (max-width: 1200px)
-                top: 0
-                left: -55px
-                height: 100%
-            @media screen and (max-width: 765px)
-                width: 100%
-            @media screen and (min-width: 1650px)
-                display: none
+    .button-burger
+        padding-right: 0
 
-    .head-inner 
-        padding-top: 70px
-        @media screen and (max-width: 1200px)
-            padding-top: 0
-        @media screen and (max-width: 992px)
-            width: 100%
-            max-width: 100%
- 
-        .btn-group
-            gap:20px
-            height: 48px
-            margin-bottom: 75px
-            @media screen and (max-width: 576px)
-                margin-bottom: 0
-                gap:8px
-            
-            .button_1
-                @media screen and (max-width: 576px)
-                    padding: 12px 8px
 
-.container-mob
-    @media screen and (max-width: 992px)
-        flex-direction: column-reverse
+header.tiny
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07)
+
+    .logo
+        img
+            top: -22px
+            transform: scale(0.7) translateX(-54px)
+            width: auto
+            max-width: 229px
+            @media screen and (max-width: 1366px)
+                top: -29px
+                transform: scale(0.6) translateX(-54px)
+            @media screen and (max-width: 1199px)
+                transform: none
+                top: auto
+                width: 84px
+
 
 .head-info
     @media screen and (max-width: 1200px)
         grid-area: 1/1/2/2
 
-#head .swiper-box
-    max-width: 340px
-    margin-left: 100px
-    position: relative
-    cursor: pointer
 
-#head .swiper-box:before
-    content:""
-    display: block
-    position: absolute
-    background-image: url('/svg/bell.svg')
-    left: -95px
-    top: 20px
-    width: 60px
-    height: 60px
-
-#head .container-slider-pagination
-    .advt-box
-        width: 338px
-        cursor: pointer
-        word-wrap: break-word
-    .swiper-pagination
-        bottom: -40px
-        position: absolute
-        .swiper-pagination-bullet
-            opacity: 1
-            background: $light-grey
-            width: 8px
-            height: 8px
-            margin: 0 8px
-        .swiper-pagination-bullet-active
-            background: $accentColor
-
-#history
-    overflow: hidden
-    padding-bottom: 160px
-    @media screen and (max-width: 992px)
-        padding-bottom: 40px
-    .history-text-box 
-        max-width: 654px
-        @media screen and (max-width: 992px)
-            width: 100%
-            max-width: 100%
-    .history-pseudo
-        position: absolute
-        background-image: url('/img/main/history/historyPseudo.png')
-        background-repeat: no-repeat
-        width: 625px
-        height: 500px
-        z-index: -1
-        top: -56px
-        left: -38px
-        @media screen and (max-width: 1510px)
-            display: none
-            
-    img
-        max-width: 100%
-        object-fit: cover
-        height: 100%
-        border-radius: 20px
-
-    .swiper-slide
-        @media screen and (max-width: 992px)
-            text-align: center !important
-
-    .position-relative
-        @media screen and (max-width: 992px)
-            margin-bottom: 50px
-
-    .slider-button-next, .slider-button-prev
-        @media screen and (max-width: 1200px)
-            display: none
-    
-    .slider-button-next
-        right: 15%
-        position: absolute
-        border: none
-        top: 0px
-        transform: translate(30%, 400%)
-        @media screen and (max-width: 1440px)
-            transform: translate(30%, 300%)
-    .slider-button-prev
-        left: 10%
-        position: absolute
-        border: none
-        top: 0px
-        transform: translate(30%, 400%)
-        @media screen and (max-width: 1440px)
-            transform: translate(30%, 300%)
-
-    .swiper-button-disabled
-        opacity: 0
-        visibility: hidden
-        @media screen and (max-width: 1200px)
-            opacity: 1
-            visibility: inherit
-
-    .swiper-pagination
-        display: none
-        bottom: 5%
-        position: absolute
-        @media screen and (max-width: 1200px)
-            display: block
-        .swiper-pagination-bullet
-            opacity: 1
-            background: $light-grey
-            width: 8px
-            height: 8px
-            margin: 0 8px
-        .swiper-pagination-bullet-active
-            background: $accentColor
-
-
-        
-            
 #school
     .grid-box
         display: grid
@@ -708,7 +644,7 @@ header
             word-wrap: break-word
             @media screen and (max-width: 768px)
                 flex-direction: column
-            
+
             img
                 height: 100%
                 @media screen and (max-width: 768px)
@@ -757,7 +693,7 @@ header
         @media screen and (max-width: 768px)
             grid-column-start: 1
             grid-column-end: 1
-    
+
     .block-desktop
         @media screen and (max-width: 768px)
             display: none !important
@@ -766,7 +702,7 @@ header
         display: none
         @media screen and (max-width: 768px)
             display: flex
-        
+
     .mob-padding
         padding: 0
         @media screen and (max-width: 768px)
@@ -782,7 +718,7 @@ header
         list-style: none
         background: url('/img/main/advantages/marker1.svg') no-repeat 0 0px
         padding-left: 36px
-    
+
     .advantages-list-2 li
         list-style: none
         background: url('/img/main/advantages/marker2.svg') no-repeat 0 0px
@@ -801,7 +737,7 @@ header
         @media screen and (max-width: 992px)
             margin-bottom: 24px
 
-        .grid-box 
+        .grid-box
             // width: 312px
             // height: 312px
             position: relative
@@ -810,11 +746,13 @@ header
             justify-content: center
             z-index: 0
             cursor: pointer
+
             .overlay-title
                 position: absolute
                 display: none
                 z-index: 2
                 color: $white
+
                 h3
                     @media screen and (max-width: 1440px)
                         font-size: 20px
@@ -824,10 +762,10 @@ header
                         font-size: 20px
                     @media screen and (max-width: 576px)
                         font-size: 13px
-                        
-        
-        .grid-box::before 
-            content:""
+
+
+        .grid-box::before
+            content: ""
             position: absolute
             left: 0
             top: 0
@@ -868,13 +806,13 @@ header
         //     display: none !important
         .info-box
             max-width: 312px
-            word-wrap: break-word 
+            word-wrap: break-word
 
     .info .col-3
         width: 312px
 
     // .info-mob-swiper
-    //     display: none 
+    //     display: none
     //     @media screen and (max-width: 768px)
     //         display: block
 
@@ -884,42 +822,18 @@ header
         position: absolute
         @media screen and (max-width: 1240px)
             display: block
+
         .swiper-pagination-bullet
             opacity: 1
             background: $light-grey
             width: 8px
             height: 8px
             margin: 0 8px
+
         .swiper-pagination-bullet-active
             background: $accentColor
 
 
-.priority
-    background-color: rgba(244, 242, 246, 1)
-    h2
-        @media screen and (max-width: 992px)
-            margin-bottom: 24px
-    .priority-wrapper 
-        gap: 125px
-        @media screen and (max-width: 992px) 
-            gap: 0 
-        .priority-inner
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-            .priority-box
-                gap: 20px
-                align-items: flex-start
-                height: 105px
-                @media screen and (max-width: 992px)
-                    height: 100%
-                    margin-bottom: 20px
-                img
-                    object-fit: contain
-                p
-                    max-width: 460px
-                    
 #teachers
     @media screen and (max-width: 990px)
         margin-bottom: 0
@@ -928,28 +842,28 @@ header
     .teachers-info
         max-width: 654px
 
-    .teacher__image-ibg 
+    .teacher__image-ibg
         width: 100%
         height: 312px
 
-    .teacher__image-ibg img 
+    .teacher__image-ibg img
         border-radius: 16px
         object-fit: cover
         width: 100%
         height: 100%
-                    
-                
+
+
     .teacher-description
         word-wrap: break-word
 
 
     .teacher__image-ibg
-        height: 100% 
+        height: 100%
         width: 100%
         overflow: hidden
         border-radius: 16px
 
-    .teacher__image-ibg img 
+    .teacher__image-ibg img
         object-fit: cover
         width: 100%
 
@@ -967,6 +881,7 @@ header
         @media screen and (max-width: 576px)
             right: 75px
             z-index: 100
+
     .slider-button-prev
         left: 0px
         transform: translateX(-55px)
@@ -992,7 +907,7 @@ header
         @media screen and (max-width: 576px)
             display: block
 
-    .swiper-pagination-bullet 
+    .swiper-pagination-bullet
         width: 24px
         height: 24px
         text-align: center
@@ -1002,10 +917,10 @@ header
         background-color: inherit
         opacity: 1
 
-    .swiper-pagination-bullet-active 
+    .swiper-pagination-bullet-active
         color: $white
         background: $accentColor
-        
+
 
     .teachers-pagination
         position: absolute
@@ -1021,11 +936,11 @@ header
     img
         width: 100%
 
-    .swiper .swiper-slide 
+    .swiper .swiper-slide
         text-align: center
 
     .slider-button-next
-        right: 0px
+        right: 0
         transform: translateX(55px)
         position: absolute
         @media screen and (max-width: 1400px)
@@ -1038,6 +953,7 @@ header
         @media screen and (max-width: 576px)
             right: 75px
             z-index: 100
+
     .slider-button-prev
         left: 0px
         transform: translateX(-55px)
@@ -1063,7 +979,7 @@ header
         @media screen and (max-width: 576px)
             display: block
 
-    .swiper-pagination-bullet 
+    .swiper-pagination-bullet
         width: 24px
         height: 24px
         text-align: center
@@ -1073,10 +989,10 @@ header
         background-color: inherit
         opacity: 1
 
-    .swiper-pagination-bullet-active 
+    .swiper-pagination-bullet-active
         color: $white
         background: $accentColor
-        
+
 
     .replies-pagination
         position: absolute
@@ -1105,7 +1021,7 @@ header
         height: 100%
         min-height: 200px
 
-    .news-description 
+    .news-description
         padding: 0 5px
         word-wrap: break-word
         flex-grow: 1
@@ -1114,7 +1030,6 @@ header
             font-size: 12px
             line-height: 18px
             font-weight: 400
-            font-family: 'Rubik-Regular', sans-serif
 
         .news-title
             font-size: 20px
@@ -1125,8 +1040,8 @@ header
         color: $accentColor !important
 
     .swiper .swiper-slide
-        @media screen and (max-width: 576px) 
-            
+        @media screen and (max-width: 576px)
+
 
     .slider-button-next
         right: 0px
@@ -1142,6 +1057,7 @@ header
         @media screen and (max-width: 576px)
             right: 75px
             z-index: 100
+
     .slider-button-prev
         left: 0px
         transform: translateX(-55px)
@@ -1167,7 +1083,7 @@ header
         @media screen and (max-width: 576px)
             display: block
 
-    .swiper-pagination-bullet 
+    .swiper-pagination-bullet
         width: 24px
         height: 24px
         text-align: center
@@ -1177,38 +1093,16 @@ header
         background-color: inherit
         opacity: 1
 
-    .swiper-pagination-bullet-active 
+    .swiper-pagination-bullet-active
         color: $white
         background: $accentColor
-        
+
     .news-pagination
         position: absolute
         bottom: 0
         transform: translateY(70px)
 
-#documents
-    .wrapper
-        display: grid
-        grid-template-rows: 1fr
-        grid-template-columns: repeat(6, 198px)
-        grid-column-gap: 30px
-        @media screen and (max-width: 1500px)
-            grid-template-columns: repeat(3,198px)
-            grid-template-rows: repeat(2, 100px)
-            justify-content: center
-            grid-row-gap: 20px
-            grid-column-gap: 30px
-        @media screen and (max-width: 768px)
-            grid-template-columns: 1fr
-            grid-template-rows: repeat(6,auto)
-            justify-content: center
-            grid-row-gap: 12px
-            grid-column-gap: 0
 
-    .document-button
-        flex: 0 1 198px
-    a
-        width: 100%
 
 #partners
     // .partners-wrapper
@@ -1236,12 +1130,14 @@ header
             display: block
         @media screen and (max-width: 768px)
             bottom: -50px
+
         .swiper-pagination-bullet
             opacity: 1
             background: $light-grey
             width: 8px
             height: 8px
             margin: 0 8px
+
         .swiper-pagination-bullet-active
             background: $accentColor
 
@@ -1249,28 +1145,33 @@ header
 
     #order-section img
         object-fit: contain
+
     .contacts-wrapper
         font-size: 20px
         line-height: 24px
-        font-family: 'Rubik-Regular', sans-serif
+
         .contacts-title,
         .order-title
             margin-bottom: 28px
-        .subtitle 
+
+        .subtitle
             max-width: 435px
             margin-bottom: 28px
             font-weight: 400
+
         .contacts-info
             gap: 8px
             align-items: center
             word-break: break-all
+
         .contacts-mail
             padding-left: 34px
             position: relative
             margin-bottom: 28px
             word-break: break-all
+
         .contacts-mail::before
-            content:""
+            content: ""
             position: absolute
             background-image: url('/svg/letter.svg')
             background-repeat: no-repeat
@@ -1278,18 +1179,22 @@ header
             height: 24px
             left: 2px
             top: 4px
+
         .contacts-socials
             gap: 12px
+
             .contacts-socials-link
                 padding: 12px
                 background: #F4F2F7
                 border-radius: 100px
+
         .contacts-location,
         .contacts-timetable
             padding-left: 34px
             position: relative
+
         .contacts-location::before
-            content:""
+            content: ""
             position: absolute
             background-image: url('/svg/location.svg')
             background-repeat: no-repeat
@@ -1297,8 +1202,9 @@ header
             height: 24px
             left: 2px
             top: -3px
+
         .contacts-timetable::before
-            content:""
+            content: ""
             position: absolute
             background-image: url('/svg/time.svg')
             background-repeat: no-repeat
@@ -1307,21 +1213,21 @@ header
             left: 2px
             top: -1px
 
-    
+
     .order-box
         @media screen and (max-width: 990px)
             margin-bottom: 40px
+
         .order-title
             margin-bottom: 28px
+
         .order-box-description
             font-size: 20px
             line-height: 24px
-            font-family: 'Rubik-Regular', sans-serif
 
     .order-form
 
         .input, input, textarea
-            font-family: "Rubik-Regular", sans-serif
             font-size: 16px
             line-height: 24px
             font-weight: 400
@@ -1333,10 +1239,9 @@ label
     margin-bottom: 2px
     font-size: 12px
     line-height: 18px
-    font-family: "Rubik-Regular", sans-serif
     font-weight: 400
     color: $grey
-            
+
 
 .input, input
     display: block
@@ -1348,15 +1253,16 @@ label
     padding: 12px 16px
     transition: 0.4s ease
     color: $grey
+
     &:focus, &:active
         border: 1px solid #8041FF
         box-shadow: none
         outline: none
+
     &::placeholder
         color: $grey
 
 textarea
-    font-family: "Rubik-Regular", sans-serif
     font-size: 16px
     line-height: 24px
     font-weight: 400
@@ -1370,10 +1276,12 @@ textarea
     padding: 12px 16px
     transition: 0.4s ease
     min-height: 200px
+
     &:focus, &:active
         border: 1px solid #8041FF
         box-shadow: none
         outline: none
+
     @media screen and (max-width: 400px)
         height: 50px
         min-height: 50px
@@ -1385,17 +1293,17 @@ textarea
 .textarea::-webkit-scrollbar
     width: 1px
 
-.textarea 
+.textarea
     &::placeholder
         color: $grey
         font-weight: 400
         font-size: 16px
         line-height: 24px
-        font-family: "Rubik-Regular", sans-serif
 
 .form_btn
     justify-content: flex-end
     display: flex
+
 .form_btn button
     padding: 12px 56px
     color: $white
@@ -1407,18 +1315,17 @@ textarea
     display: flex
     margin-top: 32px
 
-.multiselect 
+.multiselect
     box-sizing: content-box
     background: transparent
     display: block
     position: relative
 
-.multiselect.is-invalid .multiselect__tags 
+.multiselect.is-invalid .multiselect__tags
     border: 1px solid #BD2773 !important
 
 
 .multiselect__single, .multiselect__placeholder
-    font-family: "Rubik-Regular", sans-serif
     font-size: 16px
     line-height: 24px
     font-weight: 400
@@ -1436,7 +1343,7 @@ textarea
     cursor: pointer
 
 
-.multiselect__select:before 
+.multiselect__select:before
     position: relative
     right: -19%
     top: -10%
@@ -1456,6 +1363,7 @@ textarea
     background: #F4F2F7
     color: #605F5F
     cursor: pointer
+
     &:focus, &:active
         border: 1px solid #8041FF
         box-shadow: none
@@ -1469,7 +1377,7 @@ textarea
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05)
     border-radius: 0px 0px 12px 12px
     width: 100%
-    max-height: 200px!important
+    max-height: 200px !important
     overflow: auto
     border: none
     outline: none
@@ -1477,7 +1385,6 @@ textarea
     -webkit-overflow-scrolling: touch
 
 .multiselect__content
-    font-family: "Rubik-Regular", sans-serif
     color: $grey
     font-weight: 400
     font-size: 16px
@@ -1532,6 +1439,7 @@ textarea
     padding: 40px 0
     @media screen and (max-width: 576px)
         padding: 24px 0
+
     .footer-wrapper
         @media screen and (max-width: 1440px)
             justify-content: center
@@ -1539,6 +1447,7 @@ textarea
             justify-content: center
         @media screen and (max-width: 576px)
             flex-direction: column
+
         .logo
             margin-right: 120px
             @media screen and (max-width: 1200px)
@@ -1546,6 +1455,7 @@ textarea
             @media screen and (max-width: 576px)
                 margin-right: 0
                 margin-bottom: 20px
+
         .footer-inner
             display: grid
             grid-template-columns: repeat(5, 140px)
@@ -1561,12 +1471,12 @@ textarea
                 grid-template-columns: repeat(4, 140px)
                 grid-column-gap: 20px
             @media screen and (max-width: 576px)
-                grid-template-columns: repeat(2, 155px)  
+                grid-template-columns: repeat(2, 155px)
                 grid-template-rows: 3fr
                 grid-column-gap: 15px
                 grid-row-gap: 20px
             @media screen and (max-width: 359px)
-                grid-template-columns: 1fr 
+                grid-template-columns: 1fr
                 grid-auto-rows: auto
                 grid-column-gap: 0
                 grid-row-gap: 20px
@@ -1579,7 +1489,6 @@ textarea
                     margin-bottom: 12px
                     font-size: 16px
                     line-height: 24px
-                    font-family: 'Rubik-Regular', sans-serif
 
                 .footer-list-item:last-child
                     margin-bottom: 0
@@ -1596,7 +1505,6 @@ textarea
         color: $grey
         font-size: 16px
         line-height: 24px
-        font-family: 'Rubik-Regular', sans-serif
         @media screen and (max-width: 1200px)
             grid-area: 3/1/3/3
         @media screen and (max-width: 576px)
@@ -1604,7 +1512,86 @@ textarea
             grid-row-end: 4
         @media screen and (max-width: 359px)
             grid-area: 7/1/7/1
-            
+
+
+.nowrap
+    white-space: nowrap
+
+
+.custom-ul
+    padding-left: 0
+
+    li
+        list-style: none
+        padding-left: 36px
+        position: relative
+        margin-bottom: 24px
+
+        &::before
+            content: url("/svg/list.svg")
+            position: absolute
+            left: 0
+            top: 0
+
+
+
+
+.accordion
+    .accordion-item
+        border: none
+        .accordion-button
+            padding: 20px 0
+            border: none
+            font-size: 20px
+            background: transparent !important
+            line-height: 24px
+            color: $accentColor
+            font-weight: 600
+            @media screen and (max-width: 991px)
+                font-size: 16px
+            span
+                display: inline-block
+                max-width: calc(100% - 32px)
+            &::after
+                margin-left: 12px
+                background-image: url("/svg/accordion.svg")
+        .accordion-body
+            padding: 4px 0
+
+
+.accordion-faq.accordion
+    .accordion-item
+        border-bottom: 1px solid $light-grey
+        &:first-child
+            .accordion-button
+                padding-top: 0
+        .accordion-button
+            font-weight: 400
+            color: $text
+            padding: 24px 0
+            &::after
+                margin-left: auto
+                background-image: url("/svg/accordion-faq.svg")
+                transform: rotate(-45deg)
+        .accordion-body
+            padding: 4px 0 24px 32px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                left: 16px
+                top: 4px
+                bottom: 24px
+                width: 1px
+                background: $accentColor
+
+            button
+                font-weight: 600
+                color: $accentColor
+
+        .accordion-button.collapsed
+            &::after
+                transform: rotate(0)
 
 /* Scroll */
 *
