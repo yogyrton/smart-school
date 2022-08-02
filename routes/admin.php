@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('main');
 
-    Route::get('/download/{id}', [DocumentController::class, 'download'])->name('download');
+
 
     Route::resource('main_news', MainNewsController::class);
     Route::resource('teacher', TeacherController::class);
