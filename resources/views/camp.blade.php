@@ -54,7 +54,7 @@
         </div>
 </section>
 
-<section id="history" class="history scrollreveal">
+<section id="history" class="history scrollreveal pb-120">
         <div class="container">
             <h2 class="accentColor mb-40">О нас</h2>
             <div class="row align-items-center justify-content-between container-mob">
@@ -163,7 +163,7 @@
         </div>
 </section>
 
-<section id="faq" class="pb-120">
+<section id="faq">
         <div class="container">
             <h2 class="accentColor mb-40">Часто задаваемые вопросы</h2>
 

@@ -79,7 +79,7 @@
         </div>
 </section>
 
-<section class="schedule pb-120" id="schedule">
+<section class="schedule" id="schedule">
     <div class="container">
         <h2 class="accentColor mb-40">
             График смен

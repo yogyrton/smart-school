@@ -75,7 +75,7 @@
         </div>
 </section>
 
-<section class="schedule pb-120" id="schedule">
+<section class="schedule" id="schedule">
     <div class="container">
         <h2 class="accentColor mb-40">
             График смен
@@ -179,7 +179,7 @@
         </div>
 </section>
 
-<section id="guides" class="scrollreveal mb-160">
+<section id="guides" class="scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Вожатые</h2>
                 <div class="d-flex align-items-center justify-content-between position-relative">
