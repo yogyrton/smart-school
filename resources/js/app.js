@@ -136,10 +136,6 @@ const swiper_3 = new Swiper('#replies .swiper', {
         1200: {
             slidesPerView: 2,
             spaceBetween: 10,
-        },
-        1600: {
-            slidesPerView: 3,
-            spaceBetween: 20
         }
     }
 });

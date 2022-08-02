@@ -67,7 +67,7 @@
                                 <a class="h5" href="/dev">Одно окно</a>
                             </li>
                             <li class="header-item">
-                                <a data-goto=".order-section" class="h5 menu-link" href="@if($routeName === 'home')#contacts @else /#contacts @endif">Контакты</a>
+                                <a data-goto=".order-section" class="h5 menu-link" href="@if($routeName === 'home')#order-section @else /#order-section @endif">Контакты</a>
                             </li>
                         </ul>
                     </div>

@@ -1,15 +1,14 @@
 @extends('layouts.app')
-
+@section('title', 'Международная сеть частных школ Smart School')
+@section('description', 'Международная сеть частных школ Smart School - это официальное частное учреждение образования в Беларуси, России, Грузии, Польше.')
 @section('content')
-
-
     <section id="head" class="head position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container container-mob">
 
             <div class="head--container">
                 <div>
-                    <img src="/img/main/banners/home.png" alt="" class="banner-image d-none d-md-block">
-                    <img src="/img/main/banners/home-mob.png" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/home.webp" alt="" class="banner-image d-none d-md-block">
+                    <img src="/img/main/banners/home-mob.webp" alt="" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -217,7 +216,7 @@
                         <div class="swiper-slide">
                             <div class="d-flex justify-content-center">
                                 <div class="d-flex flex-column align-items-center info-box">
-                                    <img class="mb-20" src="/svg/calendar.svg" alt="calendar">
+                                    <img class="mb-20" src="/svg/calendar.webp" alt="calendar" width="100">
                                     <h4 class="text-bold mb-16 text-center">5 лет</h4>
                                     <p class="text grey text-center">обучаем детей по нашим</br> авторским
                                         программам</p>
@@ -227,7 +226,7 @@
                         <div class="swiper-slide">
                             <div class="d-flex justify-content-center">
                                 <div class="d-flex flex-column align-items-center info-box">
-                                    <img class="mb-20" src="/svg/group.svg" alt="group">
+                                    <img class="mb-20" src="/svg/group.webp" alt="group" width="100">
                                     <h4 class="text-bold mb-16 text-center">453+ детей</h4>
                                     <p class="text grey text-center">прошли обучение и выпустились из нашей
                                         школы</p>
@@ -237,7 +236,7 @@
                         <div class="swiper-slide">
                             <div class="d-flex justify-content-center">
                                 <div class="d-flex flex-column align-items-center info-box">
-                                    <img class="mb-20" src="/svg/place.svg" alt="place">
+                                    <img class="mb-20" src="/svg/place.webp" alt="place" width="100">
                                     <h4 class="text-bold mb-16 text-center">7 локаций</h4>
                                     <p class="text grey text-center">предлагает наша школа для </br>обучения из
                                         разных точек мира</p>
@@ -247,7 +246,7 @@
                         <div class="swiper-slide">
                             <div class="d-flex justify-content-center">
                                 <div class="d-flex flex-column align-items-center info-box">
-                                    <img class="mb-20" src="/svg/study.svg" alt="study">
+                                    <img class="mb-20" src="/svg/study.webp" alt="study" width="100">
                                     <h4 class="text-bold mb-16 text-center">73 преподавателя</h4>
                                     <p class="text grey text-center">ведут обучение на профессиональном уровне</p>
                                 </div>

@@ -7,7 +7,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="priority-box d-flex mb-40">
-                            <img src="/svg/bag.svg" alt="bag-img">
+                            <img src="/svg/bag.webp" alt="bag-img" width="60">
                             <div class="d-flex flex-column">
                                 <h5 class="text-bold">УЧЕБНЫЙ ПРОЦЕСС</h5>
                                 <p class="text">Гибкая интерактивная среда обучения, где учащиеся активно и уверенно
@@ -17,7 +17,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="priority-box d-flex mb-40">
-                            <img src="/svg/bottle.svg" alt="bottle-img">
+                            <img src="/svg/bottle.webp" alt="bottle-img" width="60">
                             <div class="d-flex flex-column">
                                 <h5 class="text-bold">ФИЗИКО-МАТЕМАТИЧЕСКИЙ УКЛОН</h5>
                                 <p class="text">Упор на решение задач, приближенных к реальной жизни и позволяющих
@@ -28,7 +28,7 @@
 
                     <div class="swiper-slide">
                         <div class="priority-box d-flex mb-40">
-                            <img src="/svg/hands.svg" alt="hands-img">
+                            <img src="/svg/hands.webp" alt="hands-img" width="60">
                             <div class="d-flex flex-column">
                                 <h5 class="text-bold">КАЧЕСТВО ОБРАЗОВАНИЯ</h5>
                                 <p class="text">У нас подобрана лучшая команда профессиональных педагогов.</p>
@@ -38,7 +38,7 @@
 
                     <div class="swiper-slide">
                         <div class="priority-box d-flex mb-40">
-                            <img src="/svg/plant.svg" alt="plant-img">
+                            <img src="/svg/plant.webp" alt="plant-img" width="60">
                             <div class="d-flex flex-column">
                                 <h5 class="text-bold">ИСТОЧНИК ЗНАНИЙ</h5>
                                 <p class="text">Урок - практический эксперимент, где учитель приветствует сотрудничество
@@ -49,7 +49,7 @@
 
                     <div class="swiper-slide">
                         <div class="priority-box d-flex">
-                            <img src="/svg/prize.svg" alt="prize-img">
+                            <img src="/svg/prize.webp" alt="prize-img" width="60">
                             <div class="d-flex flex-column">
                                 <h5 class="text-bold">СПРАВЕДЛИВАЯ ОЦЕНКА ЗНАНИЙ</h5>
                                 <p class="text">Продуманные экологичные методы оценивания учащихся.</p>
@@ -60,7 +60,7 @@
 
                     <div class="swiper-slide">
                         <div class="priority-box d-flex">
-                            <img src="/svg/hand.svg" alt="hand-svg">
+                            <img src="/svg/hand.webp" alt="hand-svg" width="60">
                             <div class="d-flex flex-column">
                                 <h5 class="text-bold">БЛАГОПОЛУЧИЕ И ЗДОРОВЬЕ</h5>
                                 <p class="text">Психологическое сопровождение и тренинги по авторской программе “Секрет

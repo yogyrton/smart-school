@@ -1,5 +1,6 @@
 @extends('layouts.app')
-
+@section('title', 'Частная школа Smart School в Республике Беларусь')
+@section('description', 'Частная школа Smart School предлагает интерактивную среду обучения, где учащиеся активно и уверенно участвуют в собственном образовании.')
 @section('content')
 
     @php($activeNav = 'school')
@@ -8,8 +9,8 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/school-belarus.png" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/school-belarus-mob.png" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/school-belarus.webp" alt="" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/school-belarus-mob.webp" alt="" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>

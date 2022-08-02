@@ -5,7 +5,7 @@
     display: flex
     align-items: flex-end
     z-index: 10
-    @media screen and (max-width: 1366px)
+    @media screen and (max-width: 1440px)
         min-height: 600px
     @media screen and (max-width: 1200px)
         height: auto
@@ -68,6 +68,9 @@
             max-width: calc(100% - 30px)
             transform: translateX(0)
 
+        p
+            @media screen and (max-width: 359px)
+                font-size: 14px
 
     .btn-group
         @media screen and (max-width: 767px)
@@ -132,9 +135,9 @@
     margin-left: 100px
     position: relative
     cursor: pointer
-    @media screen and (max-width: 400px)
+    @media screen and (max-width: 575px)
         margin-left: 80px
-    @media screen and (max-width: 359px)
+    @media screen and (max-width: 400px)
         margin-left: 60px
 
 
@@ -147,11 +150,15 @@
     top: 20px
     width: 60px
     height: 60px
+    @media screen and (max-width: 575px)
+        top: 10px
+        left: -75px
     @media screen and (max-width: 400px)
         width: 40px
         height: 40px
         background-size: contain
         left: -55px
+
 
 #head .container-slider-pagination
     .advt-box
@@ -239,7 +246,7 @@
                 width: 100% !important
 
         .priority-box
-            gap: 20px
+            //gap: 20px
             align-items: flex-start
             //height: 105px
             @media screen and (max-width: 992px)
@@ -247,6 +254,7 @@
                 margin-bottom: 20px
 
             img
+                margin-right: 20px
                 object-fit: contain
                 @media screen and (max-width: 400px)
                     width: 40px
@@ -658,7 +666,9 @@
     .replies-pagination
         position: absolute
         bottom: 0
-        transform: translateY(70px)
+        transform: translate(-50%, 70px)
+        max-width: calc(100% - 100px)
+        left: 50%
 
 #news
     @media screen and (max-width: 990px)
@@ -851,13 +861,19 @@
             //top: 4px
 
         .contacts-socials
-            gap: 12px
+            //gap: 12px
 
             .contacts-socials-link
+                margin-right: 12px
+                display: block
+                width: 48px
+                height: 48px
                 padding: 12px
                 background: #F4F2F7
                 border-radius: 100px
                 transition: 0.3s ease-in-out
+                &:last-child
+                    margin-right: 0
                 &:hover
                     background: rgba(128, 65, 255, 0.1)
 
@@ -908,7 +924,7 @@
 
 
 //SLIDER
-#history, #address, #album
+#history, #address, #album, #info
     .swiper-box
         position: relative
 
@@ -962,15 +978,10 @@
 
     .swiper-pagination
         display: none
-        bottom: 5%
-        position: absolute
-        @media screen and (max-width: 1200px)
-            display: block
-
-#history
-    .swiper-pagination
         position: static
         padding-top: 10px
+        @media screen and (max-width: 1200px)
+            display: block
 
 .swiper-pagination-bullet
     opacity: 1
