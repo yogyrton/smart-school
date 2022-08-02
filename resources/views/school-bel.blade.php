@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+    @php($activeNav = 'school')
     <section id="head" class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
@@ -19,7 +19,7 @@
                     <div class="btn-group btn-group-3">
                         <a href="/school-belarus/junior" class="button_1 btn-purple">1-4 класс</a>
                         <a href="/school-belarus/senior" class="button_1 btn-purple">5-11 класс</a>
-                        <button class="button_1 btn-pink">Оставить заявку</button>
+                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">
@@ -32,7 +32,7 @@
                                                 <div class="swiper-slide">
                                                     <div class="advt-box w-100">
                                                         <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                        <p class="head-text text">{!! $mainNew->text !!}</p>
                                                     </div>
 
                                                 </div>
@@ -51,7 +51,7 @@
         </div>
     </section>
 
-    <section id="history" class="history scrollreveal">
+    <section id="history" class="history pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">О нас</h2>
             <div class="row align-items-center justify-content-between container-mob">
@@ -102,6 +102,9 @@
                                     <img src="/img/main/history/home-2.jpg" alt="history-img">
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3H1QoTI_uj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -122,7 +125,7 @@
 
     @include('sections.advantagies')
 
-    <section class="pt-120 pb-120" id="address">
+    <section class="pt-120 pb-120 scrollreveal" id="address">
         <div class="container">
             <div class="row mb-40">
                 <div class="col-md-6 mb-5 mb-md-0">
@@ -162,7 +165,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-                <button class="button_1 btn-pink">Оставить заявку</button>
+                <button data-bs-toggle="modal" data-bs-target="#requestModal" class="button_1 btn-pink">Оставить заявку</button>
             </div>
         </div>
     </section>
@@ -170,6 +173,7 @@
     @include('sections.documents')
     @include('sections.album')
     @include('sections.contacts')
+    @include('sections.schools-without-bel')
 
 @stop
 

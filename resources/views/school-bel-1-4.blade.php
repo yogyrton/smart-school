@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    @php($activeNav = 'school')
 
     <section id="head" class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
@@ -18,9 +18,9 @@
                         Частная школа в Республике Беларусь <span class="nowrap">1-4 классы</span>
                     </h1>
                     <div class="btn-group btn-group-3">
-                        <a href="/school-belarus/junior" class="button_1 btn-purple">Жуков Луг</a>
-                        <a href="/school-belarus/senior" class="button_1 btn-purple">Dreamland</a>
-                        <button class="button_1 btn-pink">Оставить заявку</button>
+                        <a href="/school-belarus/junior#address" class="button_1 btn-purple">Жуков Луг</a>
+                        <a href="/school-belarus/junior#dreamland" class="button_1 btn-purple">Dreamland</a>
+                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">
@@ -33,7 +33,7 @@
                                                 <div class="swiper-slide">
                                                     <div class="advt-box w-100">
                                                         <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                        <p class="head-text text">{!! $mainNew->text !!}</p>
                                                     </div>
 
                                                 </div>
@@ -52,7 +52,7 @@
     </section>
 
 
-    <section id="history" class="history scrollreveal">
+    <section id="history" class="history pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">О нас</h2>
             <div class="row align-items-center justify-content-between container-mob">
@@ -106,6 +106,9 @@
                                     <img src="/img/main/history/home-2.jpg" alt="history-img">
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3H1QoTI_uj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -127,12 +130,12 @@
 
     @include('sections.advantagies')
 
-    <section class="pt-120 pb-120" id="address">
+    <section class="pt-120 pb-120 scrollreveal" id="address">
         <div class="container">
             <div class="row align-items-center mb-160">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <a href="https://goo.gl/maps/efPppZVbbreqtA369" target="_blank" rel="noopener" class="d-inline-flex align-items-center font-weight-bold mb-40">
-                        <img src="/svg/location.svg" alt="" class="me-2">
+                        <img src="/svg/location.svg" alt="" class="me-3">
                         <span class="text-start h4">д. Жуков Луг, ул. Дорожная, 14А, 5 км от ст.м.Уручье </span>
                     </a>
 
@@ -143,7 +146,7 @@
                     </ul>
 
                     <div class="row">
-                        <div class="col-md-4"><button class="button_1 btn-pink w-100">Оставить заявку</button></div>
+                        <div class="col-md-4"><button class="button_1 btn-pink w-100" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button></div>
                     </div>
 
                 </div>
@@ -152,10 +155,10 @@
                 </div>
             </div>
 
-            <div class="row align-items-center">
+            <div class="row align-items-center" id="dreamland">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <a href="https://goo.gl/maps/1DqaKy5WPwUwZm2UA" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
-                        <img src="/svg/location.svg" alt="" class="me-2">
+                        <img src="/svg/location.svg" alt="" class="me-3">
                         <span class="text-start text-md-center h4">г.Минск, ул. Орловская, 80 (Dreamland)</span>
                     </a>
 
@@ -166,7 +169,7 @@
                     </ul>
 
                     <div class="row">
-                        <div class="col-md-4"><button class="button_1 btn-pink w-100">Оставить заявку</button></div>
+                        <div class="col-md-4"><button class="button_1 btn-pink w-100" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button></div>
                     </div>
 
                 </div>
@@ -177,7 +180,7 @@
         </div>
     </section>
 
-    <section id="price" class="pb-120">
+    <section id="price" class="pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Наш прейскурант</h2>
 
@@ -207,7 +210,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="price--card d-flex align-items-center">
-                                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                                        <img src="/svg/twemoji_books.svg" alt="" class="me-3">
                                         <p class="mb-0">
                                             Учебные занятия согласно образовательным программам общего среднего образования Республики Беларусь.
                                         </p>
@@ -258,7 +261,7 @@
                         </div>
                         <div class="col-xl-4">
                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                <div class="h3 accentColor text-md-end">1200 руб.</div>
+                                <div class="h3 accentColor text-md-end">@if(!empty($price)){{$price}} @else 1200 @endif руб.</div>
                                 <div class="text-md-end">в месяц</div>
                             </div>
                         </div>
@@ -267,7 +270,7 @@
 
                 <div class="col-lg-6">
                     <div class="price--card align-items-center mb-20 d-none d-lg-flex">
-                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                        <img src="/svg/twemoji_books.svg" alt="" class="me-3">
                         <p class="mb-0">
                             Учебные занятия согласно образовательным программам общего среднего образования Республики Беларусь.
                         </p>
@@ -351,7 +354,7 @@
     </section>
 
 
-    <section id="faq" class="pb-120">
+    <section id="faq" class="pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Часто задаваемые вопросы</h2>
 
@@ -435,6 +438,7 @@
     @include('sections.news')
     @include('sections.documents')
     @include('sections.contacts')
+    @include('sections.schools-without-bel')
 
 
     <!-- Modals FAQ -->

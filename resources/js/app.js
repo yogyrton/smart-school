@@ -233,7 +233,7 @@ const swiper_7 = new Swiper('#partners .swiper', {
             spaceBetween: 30,
         },
         768: {
-            slidesPerView: 3
+            slidesPerView: 4
         }
     }
 });
@@ -428,37 +428,46 @@ const swiper_17 = new Swiper('#schedule .swiper', {
 
 //для уменьшения лого при скролле
 window.onscroll = function () {
-    if (window.scrollY < 200) {
-        // document.querySelector('.header-rectangle').classList.remove('tiny');
-        document.querySelector('header').classList.remove('tiny');
-    } else {
-        // document.querySelector('.header-rectangle').classList.add('tiny');
-        document.querySelector('header').classList.add('tiny');
-    }
-}
+    if (window.scrollY < 200) document.querySelector('header').classList.remove('tiny');
+    else document.querySelector('header').classList.add('tiny');
+};
 
 //для появления ссылки подробнее в блоке news
 window.addEventListener("DOMContentLoaded", () => {
     function cutTextWithDots(line) {
-        line = line.substring(0, 120)
+        line = line.substring(0, 120);
         line = line.substring(0, line.lastIndexOf(' '));
-        line += '...'
+        line += '...';
         return line;
     }
 
     const el = document.getElementsByClassName('news-text');
+    const el_image = document.getElementsByClassName('news__image-ibg');
+    const el_title = document.getElementsByClassName('news-title');
+    const full_el = document.getElementsByClassName('full-text');
     const mores = document.getElementsByClassName('news-btn');
 
     for (let i = 0; i < el.length; i++) {
         let height = getComputedStyle(el[i]).height;
         if (Number(height.substring(0, height.indexOf('px'))) > 115) {
-            el[i].style.height = '120px';
+            // el[i].style.height = '120px';
             el[i].style.overflow = 'hidden';
             mores[i].style.display = 'block';
             el[i].innerHTML = cutTextWithDots(el[i].innerHTML);
         }
     }
-})
+    for(let i=0; i<mores.length; i++) {
+        mores[i].onclick = function() {
+            let image = el_image[i].innerHTML;
+            let title = el_title[i].innerHTML;
+            let description = full_el[i].innerHTML;
+            document.querySelector('.modal--image').innerHTML = image;
+            document.querySelector('.modal--title').innerHTML = title;
+            document.querySelector('.modal--description').innerHTML = description;
+            $('#full_news_modal').modal('show');
+        }
+    }
+});
 
 //для кнопки Подробнее, которая раскрывает остальной текст в history
 window.addEventListener("DOMContentLoaded", () => {

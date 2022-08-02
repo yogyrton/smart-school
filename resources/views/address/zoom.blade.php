@@ -1,4 +1,4 @@
-<section class="pt-120 pb-120">
+<section class="pt-120 pb-120 scrollreveal">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 mb-5 mb-md-0">
@@ -9,7 +9,7 @@
                     <li>Структура урока и все материалы специально адаптированы для программы онлайн-обучения.</li>
                 </ul>
                 <div class="row">
-                    <div class="col-md-4"><button class="button_1 btn-pink w-100">Оставить заявку</button></div>
+                    <div class="col-md-4"><button class="button_1 btn-pink w-100" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button></div>
                 </div>
             </div>
             <div class="col-md-6">
