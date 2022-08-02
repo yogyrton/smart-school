@@ -13,7 +13,7 @@
             </div>
             <div class="swiper">
                 <div class="swiper-wrapper popup-gallery">
-                    @foreach($photo as $image)
+                    @foreach($photos as $image)
                         <a href="/storage/{{$image->thumbnail}}" class="swiper-slide">
                             <div class="image-container">
                                 <img src="/storage/{{$image->thumbnail}}" width="75" height="75">
