@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Page\DreamlandCampController;
 use App\Http\Controllers\Page\GeorgiaCampController;
@@ -33,6 +34,8 @@ Route::get('/camp', [CampController::class, 'index'])->name('camp');
 Route::get('/camp/jukov-lug', [JukovLugController::class, 'index'])->name('jukov-lug');
 Route::get('/camp/georgia', [GeorgiaCampController::class, 'index'])->name('georgia');
 Route::get('/camp/dreamland', [DreamlandCampController::class, 'index'])->name('dreamland');
+
+Route::get('/download/{id}', [DocumentController::class, 'download'])->name('download');
 
 
 Route::get('/dev', function (){
