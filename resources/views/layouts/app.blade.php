@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title> @yield('title')</title>
 
-@php($assets_version = 8)
+@php($assets_version = 9)
 
 <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">

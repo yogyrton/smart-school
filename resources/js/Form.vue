@@ -138,7 +138,7 @@
                         <span class="d-flex"></span>
                         <p class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на
                             обработку персональных данных в соответствии с
-                            <a class="politic-link" target="_blank" href="/dev">Политикой обработки персональных
+                            <a class="politic-link" target="_blank" href="/docs/privacy_policy.pdf">Политикой обработки персональных
                                 данных</a>.</p>
                     </label>
 
