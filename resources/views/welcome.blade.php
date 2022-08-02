@@ -17,7 +17,7 @@
                         Международная сеть частных школ <span class="accentColor nowrap">Smart School</span>
                     </h1>
                     <div class="btn-group">
-                        <button class="button_1 btn-purple">Выбрать страну</button>
+                        <a href="#school" class="button_1 btn-purple">Выбрать страну</a>
                         <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
@@ -93,6 +93,11 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
+                                    <img src="/img/main/history/home-3.jpg" alt="history-img">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="d-flex h-100 justify-content-center">
                                     <img src="/img/main/history/home-1.jpg" alt="history-img">
                                 </div>
                             </div>
@@ -102,9 +107,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/home-3.jpg" alt="history-img">
-                                </div>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3H1QoTI_uj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -124,109 +127,7 @@
 
     </section>
 
-    <section id="school" class="scrollreveal">
-        <div class="container">
-            <h2 class="accentColor mb-40">Школа</h2>
-            <div class="swiper-box">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a class="school-box" href="/school-belarus">
-                                <div class="img-box">
-                                    <img src="/img/main/school/belarus.jpg" alt="children-with-map">
-                                </div>
-                                <div class="d-flex flex-column box-inner">
-                                    <div>
-                                        <h3 class="accentColor mb-24">Беларусь</h3>
-                                        <div class="box-description">
-                                            <p class="text flex-grow-1 mb-12">Минск, ул. Орловская, 80 (Dreamland)</p>
-                                            <p class="text flex-grow-1 mb-20">д. Жуков Луг (5 км от ст.м.Уручье)</p>
-                                        </div>
-                                    </div>
-                                    <button class="button_2 text">Подробнее</button>
-                                </div>
-                            </a>
-                        </div>
-
-
-                        <div class="swiper-slide">
-                            <a class="school-box school-box-short" href="/dev">
-                                <div class="img-box block-mob">
-                                    <img src="/img/main/school/gruziya.jpg" alt="children-img">
-                                </div>
-                                <div class="box-inner">
-                                    <div>
-                                        <h3 class="accentColor mb-24">Грузия</h3>
-                                        <div class="box-description">
-                                            <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
-                                        </div>
-                                    </div>
-                                    <button class="button_2 text">Подробнее</button>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="school-box school-box-desktop">
-                            <img class="w-100" src="/img/main/school/photo2.png" alt="children-img">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <a class="school-box school-box-short" href="/school-online">
-                                <div class="img-box block-mob">
-                                    <img src="/img/main/school/online.jpg" alt="children-img">
-                                </div>
-                                <div class="box-inner">
-                                    <div>
-                                        <h3 class="accentColor mb-24">Онлайн</h3>
-                                        <div class="box-description">
-                                            <p class="text flex-grow-1 mb-12">обучение на платформе Zoom</p>
-                                        </div>
-                                    </div>
-                                    <button class="button_2 text">Подробнее</button>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <a class="school-box school-box-short" href="/school-russia">
-                                <div class="img-box block-mob">
-                                    <img src="/img/main/school/russia.jpg" alt="children-img">
-                                </div>
-                                <div class="box-inner">
-                                    <div>
-                                        <h3 class="accentColor mb-24">Россия</h3>
-                                        <div class="box-description">
-                                            <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
-                                        </div>
-                                    </div>
-                                    <button class="button_2 text">Подробнее</button>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <a class="school-box" href="/dev">
-                                <div class="img-box">
-                                    <img src="/img/main/school/poland.jpg" alt="children-with-map">
-                                </div>
-
-                                <div class="d-flex flex-column box-inner">
-                                    <div>
-                                        <h3 class="accentColor mb-24">Польша</h3>
-                                        <div class="box-description">
-                                            <p class="text flex-grow-1 mb-12">обучение по адресу: ul.Ksieskiej, Wroclaw</p>
-                                        </div>
-                                    </div>
-                                    <button class="button_2 text">Подробнее</button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
+    @include('sections.schools-common')
 
     <section id="advantages" class="advantages pt-120 scrollreveal">
         <div class="container">

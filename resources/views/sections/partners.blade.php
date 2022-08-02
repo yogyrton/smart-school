@@ -7,13 +7,13 @@
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="/img/main/partners/1.png" alt="partner-1">
+                                <img src="/img/main/partners/1.png" alt="partner-1" class="img-fluid">
                             </div>
                             <div class="swiper-slide">
-                                <img src="/img/main/partners/2.png" alt="partner-2">
+                                <img src="/img/main/partners/2.png" alt="partner-2" class="img-fluid">
                             </div>
                             <div class="swiper-slide">
-                                <img src="/img/main/partners/3.png" alt="partner-3">
+                                <img src="/img/main/partners/3.png" alt="partner-3" class="img-fluid">
                             </div>
                         </div>
 

@@ -96,37 +96,27 @@
             checkForm() {
                 this.$v.form.$touch();
                 if (!this.$v.form.$error) {
-
-                    Swal.fire({
-                        allowEscapeKey: false,
-                        title: 'Спасибо, Ваша заявка успешно отправлена!',
-                        icon: 'error',
-                        confirmButtonText: 'На главную',
-                        customClass: {
-                            container: 'full-height-swall'
-                        }
-                    })
-                        .then((result) => {
-                            if (result.isConfirmed) {
-                                window.location.href='/'
-                            }
-                        });
-
                     axios.post('api/mail', {
                         name: this.form.name,
                         phone: this.form.phone,
                     })
                         .then(response => {
                             if(response) {
+                                $('#requestModal').modal('hide');
                                 Swal.fire({
-                                    title: 'Error!',
-                                    text: 'Do you want to continue',
+                                    allowEscapeKey: false,
+                                    title: 'Спасибо, Ваша заявка успешно отправлена!',
                                     icon: 'error',
-                                    confirmButtonText: 'Cool',
+                                    confirmButtonText: 'На главную',
                                     customClass: {
                                         container: 'full-height-swall'
                                     }
                                 })
+                                    .then((result) => {
+                                        if (result.isConfirmed) {
+                                            window.location.href='/'
+                                        }
+                                    });
                             }
                         })
 

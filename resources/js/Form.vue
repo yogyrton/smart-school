@@ -1,12 +1,7 @@
-
 <template>
     <div>
         <div>
-            <form
-                v-if="!registrationPassed"
-                class="sign-up"
-                @submit.prevent="checkForm"
-            >
+            <form class="sign-up" @submit.prevent="checkForm">
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group mb-12">
@@ -16,24 +11,11 @@
                                 class="form-control w-100"
                                 :placeholder="windowWidth > 767 ? 'Введите Ваше имя' : 'Имя'"
                                 :class="$v.form.name.$error ? 'is-invalid' : ''"
-                                v-model.trim="form.name"
-                            />
-                            <p
-                                v-if="
-                                    $v.form.name.$dirty &&
-                                    !$v.form.name.required
-                                "
-                                class="invalid-feedback"
-                            >
+                                v-model.trim="form.name"/>
+                            <p v-if=" $v.form.name.$dirty &&!$v.form.name.required" class="invalid-feedback">
                                 Обязательное поле
                             </p>
-                            <p
-                                v-if="
-                                    $v.form.name.$dirty &&
-                                    !$v.form.name.minLength
-                                "
-                                class="invalid-feedback"
-                            >
+                            <p v-if="$v.form.name.$dirty && !$v.form.name.minLength" class="invalid-feedback">
                                 Здесь должно быть больше 2-х символов
                             </p>
                         </div>
@@ -46,22 +28,12 @@
                                 id="country"
                                 v-model="form.country"
                                 class="w-100"
-                                :class="$v.form.country.$error ? 'is-invalid' : ''"
                                 :options="countries"
                                 :searchable="false"
                                 :close-on-select="true"
                                 :show-labels="false"
-                                :placeholder="windowWidth > 767 ? 'Выберите страну' : 'Страна'"
-                            >
+                                :placeholder="windowWidth > 767 ? 'Выберите страну' : 'Страна'">
                             </multiselect>
-                            <p
-                                v-if="
-                                    !$v.form.country.required
-                                "
-                                class="invalid-feedback"
-                            >
-                                Выберите страну
-                            </p>
                         </div>
 
                     </div>
@@ -74,23 +46,12 @@
                                 name="format"
                                 v-model="form.format"
                                 class="multiselect w-100"
-                                :class="$v.form.format.$error ? 'is-invalid' : ''"
                                 :options="format"
                                 :searchable="false"
                                 :close-on-select="true"
                                 :show-labels="false"
-                                :placeholder="windowWidth > 1200 ? 'Выберите формат обучения' : 'Формат'"
-                            >
+                                :placeholder="windowWidth > 1200 ? 'Выберите формат обучения' : 'Формат'">
                             </multiselect>
-                            <p
-                                v-if="
-                                    !$v.form.format.required
-                                "
-                                class="invalid-feedback"
-                            >
-                                Выберите формат обучения
-                            </p>
-
                         </div>
                     </div>
 
@@ -100,23 +61,13 @@
                             <multiselect
                                 id="grade"
                                 v-model="form.grade"
-                                :class="$v.form.grade.$error ? 'is-invalid' : ''"
                                 class="multiselect w-100"
                                 :options="grade"
                                 :searchable="false"
                                 :close-on-select="true"
                                 :show-labels="false"
-                                :placeholder="windowWidth > 1200 ? 'Выберите класс обучения' : 'Класс'"
-                            >
+                                :placeholder="windowWidth > 1200 ? 'Выберите класс обучения' : 'Класс'">
                             </multiselect>
-                            <p
-                                v-if="
-                                    !$v.form.grade.required
-                                "
-                                class="invalid-feedback"
-                            >
-                                Выберите класс обучения
-                            </p>
                         </div>
                     </div>
 
@@ -128,18 +79,9 @@
                                 type="text"
                                 class="form-control w-100"
                                 placeholder="Введите номер телефона"
-                                :class="
-                                    $v.form.phone.$error ? 'is-invalid' : ''
-                                "
-                                v-model.trim="form.phone"
-                            />
-                            <p
-                                v-if="
-                                    $v.form.name.$dirty &&
-                                    !$v.form.phone.required
-                                "
-                                class="invalid-feedback"
-                            >
+                                :class="$v.form.phone.$error ? 'is-invalid' : ''"
+                                v-model.trim="form.phone"/>
+                            <p v-if="$v.form.name.$dirty && !$v.form.phone.required" class="invalid-feedback">
                                 Обязательное поле
                             </p>
                         </div>
@@ -180,127 +122,145 @@
 
                 </div>
 
-                    <div class="mb-12">
-                        <label for="order_name">Есть вопросы? Напишите</label>
-                        <textarea name="contact_msg" id="contact_msg" v-model="form.contact_msg" class="w-100 textarea" placeholder="Напишите Ваш вопрос"></textarea>
-                    </div>
+                <div class="mb-12">
+                    <label for="order_name">Есть вопросы? Напишите</label>
+                    <textarea name="contact_msg" id="contact_msg" v-model="form.contact_msg" class="w-100 textarea"
+                              placeholder="Напишите Ваш вопрос"></textarea>
+                </div>
 
-                    <div class="box-check-ico col-12">
-                                <label class="d-flex check-ico"
-                                :class="$v.form.agreeWithRules.$error ? 'is-invalid' : ''"
-                                for="agreeWithRules"
-                                >
-                                    <input class="consent" id="agreeWithRules" type="checkbox" checked name="agreement" value="true"
-                                        autocomplete="off" v-model="form.agreeWithRules">
-                                    <span class="d-flex"></span>
-                                    <p class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на обработку персональных данных в соответствии с
-                                        <a class="politic-link" target="_blank" href="/">Политикой обработки персональных данных</a>.</p>
-                                </label>
+                <div class="box-check-ico col-12">
+                    <label class="d-flex check-ico"
+                           :class="$v.form.agreeWithRules.$error ? 'is-invalid' : ''"
+                           for="agreeWithRules"
+                    >
+                        <input class="consent" id="agreeWithRules" type="checkbox" checked name="agreement" value="true"
+                               autocomplete="off" v-model="form.agreeWithRules">
+                        <span class="d-flex"></span>
+                        <p class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на
+                            обработку персональных данных в соответствии с
+                            <a class="politic-link" target="_blank" href="/docs/privacy_policy.pdf">Политикой обработки персональных
+                                данных</a>.</p>
+                    </label>
 
-                        <p
+                    <p
                         v-if="
                             $v.form.agreeWithRules.$dirty &&
                             !$v.form.agreeWithRules.mustBeTrue
                         "
                         class="invalid-feedback"
-                        >
+                    >
                         Прочтите правила!
-                        </p>
-                    </div>
+                    </p>
+                </div>
 
                 <div class="form_btn">
                     <button type="submit" class="btn-purple button_2">Отправить</button>
                 </div>
 
             </form>
-            <div v-else>
-                <h1>
-                    {{ `${form.name}. Спасибо, Ваша заявка успешно отправлена!` }}
-                </h1>
-            </div>
         </div>
     </div>
 </template>
 
 <script>
-import { required, email, minLength, maxlength } from "vuelidate/lib/validators";
-import { validationMixin } from "vuelidate";
-import Multiselect from "vue-multiselect";
+    import {required, email, minLength, maxlength} from "vuelidate/lib/validators";
+    import {validationMixin} from "vuelidate";
+    import Multiselect from "vue-multiselect";
 
-export default {
-    components: {
-        Multiselect,
-    },
-    mixins: [validationMixin],
-    data() {
-        return {
-            windowWidth: null,
-            registrationPassed: false,
+    export default {
+        components: {
+            Multiselect,
+        },
+        mixins: [validationMixin],
+        props: {
+            page: {
+                default: null
+            }
+        },
+        data() {
+            return {
+                windowWidth: null,
+                registrationPassed: false,
+                form: {
+                    name: null,
+                    email: null,
+                    phone: null,
+                    agreeWithRules: false,
+                    format: null,
+                    country: null,
+                    grade: null,
+                    contact_msg: null
+                },
+                format: ['Онлайн', 'Оффлайн'],
+                grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+            };
+        },
+        validations: {
             form: {
-                name: null,
-                email: null,
-                phone: null,
-                agreeWithRules: false,
-                format:null,
-                country: null,
-                grade: null,
-                contact_msg: null
-            },
-            format: ['Онлайн', 'Оффлайн'],
-            countries: ['Беларусь','Россия','Грузия', 'Польша'],
-            grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
-        };
-    },
-    validations: {
-        form: {
-            name: { required, minLength: minLength(2) },
-            email: { required, email },
-            phone: { required, minLength: minLength(10) },
-            format: { required },
-            country: { required },
-            grade: { required },
-            contact_msg: {},
-            agreeWithRules: {
-                mustBeTrue(value) {
-                    return value;
+                name: {required, minLength: minLength(2)},
+                email: {required, email},
+                phone: {required, minLength: minLength(10)},
+                // format: {required},
+                // country: {required},
+                // grade: {required},
+                // contact_msg: {},
+                agreeWithRules: {
+                    mustBeTrue(value) {
+                        return value;
+                    },
                 },
             },
         },
-    },
-    created() {
+        created() {
             this.handleWindowResize();
             window.addEventListener('resize', this.handleWindowResize);
         },
-    methods: {
-        checkForm() {
-
-            this.$v.form.$touch();
-            if (!this.$v.form.$error) {
-                axios.post('api/mail', {
-                    name: this.form.name,
-                    email: this.form.email,
-                    phone: this.form.phone,
-                    format: this.form.format,
-                    country: this.form.country,
-                    grade: this.form.grade,
-                    contact_msg: this.form.contact_msg}
-                    )
-                    .then(response => {
-                        if(response) {
-                            Swal.fire({
-                                title: 'Error!',
-                                text: 'Do you want to continue',
-                                icon: 'error',
-                                confirmButtonText: 'Cool'
-                            })
-                        }
-                    })
-            }
+        computed: {
+            countries() {
+                if(this.page && this.page === 'russia') return  ['Россия','Беларусь','Польша','Грузия', 'Другая'];
+                else return  ['Беларусь','Россия','Польша','Грузия', 'Другая']
+            },
         },
+        methods: {
+            checkForm() {
+
+                this.$v.form.$touch();
+                if (!this.$v.form.$error) {
+                    axios.post('api/mail', {
+                            name: this.form.name,
+                            email: this.form.email,
+                            phone: this.form.phone,
+                            format: this.form.format,
+                            country: this.form.country,
+                            grade: this.form.grade,
+                            contact_msg: this.form.contact_msg
+                        }
+                    )
+                        .then(response => {
+                            if (response) {
+                                $('#requestModal').modal('hide');
+                                Swal.fire({
+                                    allowEscapeKey: false,
+                                    title: 'Спасибо, Ваша заявка успешно отправлена!',
+                                    icon: 'error',
+                                    confirmButtonText: 'На главную',
+                                    customClass: {
+                                        container: 'full-height-swall'
+                                    }
+                                })
+                                    .then((result) => {
+                                        if (result.isConfirmed) {
+                                            window.location.href='/'
+                                        }
+                                    });
+                            }
+                        })
+                }
+            },
             handleWindowResize() {
                 this.windowWidth = window.innerWidth;
             }
-    },
-};
+        },
+    };
 </script>
 

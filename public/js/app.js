@@ -5434,66 +5434,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -5502,6 +5442,11 @@ __webpack_require__.r(__webpack_exports__);
     Multiselect: (vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default())
   },
   mixins: [vuelidate__WEBPACK_IMPORTED_MODULE_1__.validationMixin],
+  props: {
+    page: {
+      "default": null
+    }
+  },
   data: function data() {
     return {
       windowWidth: null,
@@ -5517,7 +5462,6 @@ __webpack_require__.r(__webpack_exports__);
         contact_msg: null
       },
       format: ['Онлайн', 'Оффлайн'],
-      countries: ['Беларусь', 'Россия', 'Грузия', 'Польша'],
       grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
     };
   },
@@ -5535,16 +5479,10 @@ __webpack_require__.r(__webpack_exports__);
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
         minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(10)
       },
-      format: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
-      },
-      country: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
-      },
-      grade: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
-      },
-      contact_msg: {},
+      // format: {required},
+      // country: {required},
+      // grade: {required},
+      // contact_msg: {},
       agreeWithRules: {
         mustBeTrue: function mustBeTrue(value) {
           return value;
@@ -5555,6 +5493,11 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.handleWindowResize();
     window.addEventListener('resize', this.handleWindowResize);
+  },
+  computed: {
+    countries: function countries() {
+      if (this.page && this.page === 'russia') return ['Россия', 'Беларусь', 'Польша', 'Грузия', 'Другая'];else return ['Беларусь', 'Россия', 'Польша', 'Грузия', 'Другая'];
+    }
   },
   methods: {
     checkForm: function checkForm() {
@@ -5571,11 +5514,19 @@ __webpack_require__.r(__webpack_exports__);
           contact_msg: this.form.contact_msg
         }).then(function (response) {
           if (response) {
+            $('#requestModal').modal('hide');
             Swal.fire({
-              title: 'Error!',
-              text: 'Do you want to continue',
+              allowEscapeKey: false,
+              title: 'Спасибо, Ваша заявка успешно отправлена!',
               icon: 'error',
-              confirmButtonText: 'Cool'
+              confirmButtonText: 'На главную',
+              customClass: {
+                container: 'full-height-swall'
+              }
+            }).then(function (result) {
+              if (result.isConfirmed) {
+                window.location.href = '/';
+              }
             });
           }
         });
@@ -5707,31 +5658,23 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        Swal.fire({
-          allowEscapeKey: false,
-          title: 'Спасибо, Ваша заявка успешно отправлена!',
-          icon: 'error',
-          confirmButtonText: 'На главную',
-          customClass: {
-            container: 'full-height-swall'
-          }
-        }).then(function (result) {
-          if (result.isConfirmed) {
-            window.location.href = '/';
-          }
-        });
         axios.post('api/mail', {
           name: this.form.name,
           phone: this.form.phone
         }).then(function (response) {
           if (response) {
+            $('#requestModal').modal('hide');
             Swal.fire({
-              title: 'Error!',
-              text: 'Do you want to continue',
+              allowEscapeKey: false,
+              title: 'Спасибо, Ваша заявка успешно отправлена!',
               icon: 'error',
-              confirmButtonText: 'Cool',
+              confirmButtonText: 'На главную',
               customClass: {
                 container: 'full-height-swall'
+              }
+            }).then(function (result) {
+              if (result.isConfirmed) {
+                window.location.href = '/';
               }
             });
           }
@@ -49862,443 +49805,390 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", [
-      !_vm.registrationPassed
-        ? _c(
-            "form",
-            {
-              staticClass: "sign-up",
-              on: {
-                submit: function ($event) {
-                  $event.preventDefault()
-                  return _vm.checkForm.apply(null, arguments)
-                },
-              },
+      _c(
+        "form",
+        {
+          staticClass: "sign-up",
+          on: {
+            submit: function ($event) {
+              $event.preventDefault()
+              return _vm.checkForm.apply(null, arguments)
             },
-            [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-6" }, [
-                  _c("div", { staticClass: "form-group mb-12" }, [
-                    _c("label", { attrs: { for: "name" } }, [
-                      _vm._v("Представьтесь*"),
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model.trim",
-                          value: _vm.form.name,
-                          expression: "form.name",
-                          modifiers: { trim: true },
-                        },
-                      ],
-                      staticClass: "form-control w-100",
-                      class: _vm.$v.form.name.$error ? "is-invalid" : "",
-                      attrs: {
-                        id: "name",
-                        placeholder:
-                          _vm.windowWidth > 767 ? "Введите Ваше имя" : "Имя",
-                      },
-                      domProps: { value: _vm.form.name },
-                      on: {
-                        input: function ($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.form, "name", $event.target.value.trim())
-                        },
-                        blur: function ($event) {
-                          return _vm.$forceUpdate()
-                        },
-                      },
-                    }),
-                    _vm._v(" "),
-                    _vm.$v.form.name.$dirty && !_vm.$v.form.name.required
-                      ? _c("p", { staticClass: "invalid-feedback" }, [
-                          _vm._v(
-                            "\n                            Обязательное поле\n                        "
-                          ),
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.$v.form.name.$dirty && !_vm.$v.form.name.minLength
-                      ? _c("p", { staticClass: "invalid-feedback" }, [
-                          _vm._v(
-                            "\n                            Здесь должно быть больше 2-х символов\n                        "
-                          ),
-                        ])
-                      : _vm._e(),
-                  ]),
+          },
+        },
+        [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "form-group mb-12" }, [
+                _c("label", { attrs: { for: "name" } }, [
+                  _vm._v("Представьтесь*"),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-6" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group mb-12" },
-                    [
-                      _c("label", { attrs: { for: "country" } }, [
-                        _vm._v("Страна"),
-                      ]),
-                      _vm._v(" "),
-                      _c("multiselect", {
-                        staticClass: "w-100",
-                        class: _vm.$v.form.country.$error ? "is-invalid" : "",
-                        attrs: {
-                          id: "country",
-                          options: _vm.countries,
-                          searchable: false,
-                          "close-on-select": true,
-                          "show-labels": false,
-                          placeholder:
-                            _vm.windowWidth > 767
-                              ? "Выберите страну"
-                              : "Страна",
-                        },
-                        model: {
-                          value: _vm.form.country,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "country", $$v)
-                          },
-                          expression: "form.country",
-                        },
-                      }),
-                      _vm._v(" "),
-                      !_vm.$v.form.country.required
-                        ? _c("p", { staticClass: "invalid-feedback" }, [
-                            _vm._v(
-                              "\n                            Выберите страну\n                        "
-                            ),
-                          ])
-                        : _vm._e(),
-                    ],
-                    1
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-6" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group mb-12" },
-                    [
-                      _c("label", { attrs: { for: "format" } }, [
-                        _vm._v("Формат обучения:"),
-                      ]),
-                      _vm._v(" "),
-                      _c("multiselect", {
-                        staticClass: "multiselect w-100",
-                        class: _vm.$v.form.format.$error ? "is-invalid" : "",
-                        attrs: {
-                          id: "format",
-                          name: "format",
-                          options: _vm.format,
-                          searchable: false,
-                          "close-on-select": true,
-                          "show-labels": false,
-                          placeholder:
-                            _vm.windowWidth > 1200
-                              ? "Выберите формат обучения"
-                              : "Формат",
-                        },
-                        model: {
-                          value: _vm.form.format,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "format", $$v)
-                          },
-                          expression: "form.format",
-                        },
-                      }),
-                      _vm._v(" "),
-                      !_vm.$v.form.format.required
-                        ? _c("p", { staticClass: "invalid-feedback" }, [
-                            _vm._v(
-                              "\n                            Выберите формат обучения\n                        "
-                            ),
-                          ])
-                        : _vm._e(),
-                    ],
-                    1
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-6" }, [
-                  _c(
-                    "div",
-                    { staticClass: "form-group mb-12" },
-                    [
-                      _c("label", { attrs: { for: "country" } }, [
-                        _vm._v("Класс обучения"),
-                      ]),
-                      _vm._v(" "),
-                      _c("multiselect", {
-                        staticClass: "multiselect w-100",
-                        class: _vm.$v.form.grade.$error ? "is-invalid" : "",
-                        attrs: {
-                          id: "grade",
-                          options: _vm.grade,
-                          searchable: false,
-                          "close-on-select": true,
-                          "show-labels": false,
-                          placeholder:
-                            _vm.windowWidth > 1200
-                              ? "Выберите класс обучения"
-                              : "Класс",
-                        },
-                        model: {
-                          value: _vm.form.grade,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "grade", $$v)
-                          },
-                          expression: "form.grade",
-                        },
-                      }),
-                      _vm._v(" "),
-                      !_vm.$v.form.grade.required
-                        ? _c("p", { staticClass: "invalid-feedback" }, [
-                            _vm._v(
-                              "\n                            Выберите класс обучения\n                        "
-                            ),
-                          ])
-                        : _vm._e(),
-                    ],
-                    1
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-md-12" }, [
-                  _c("div", { staticClass: "form-group mb-12" }, [
-                    _c("label", { attrs: { for: "name" } }, [
-                      _vm._v("Телефон*"),
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model.trim",
-                          value: _vm.form.phone,
-                          expression: "form.phone",
-                          modifiers: { trim: true },
-                        },
-                      ],
-                      staticClass: "form-control w-100",
-                      class: _vm.$v.form.phone.$error ? "is-invalid" : "",
-                      attrs: {
-                        id: "phone",
-                        type: "text",
-                        placeholder: "Введите номер телефона",
-                      },
-                      domProps: { value: _vm.form.phone },
-                      on: {
-                        input: function ($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.form,
-                            "phone",
-                            $event.target.value.trim()
-                          )
-                        },
-                        blur: function ($event) {
-                          return _vm.$forceUpdate()
-                        },
-                      },
-                    }),
-                    _vm._v(" "),
-                    _vm.$v.form.name.$dirty && !_vm.$v.form.phone.required
-                      ? _c("p", { staticClass: "invalid-feedback" }, [
-                          _vm._v(
-                            "\n                            Обязательное поле\n                        "
-                          ),
-                        ])
-                      : _vm._e(),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-md-12" }, [
-                  _c("div", { staticClass: "form-group mb-12" }, [
-                    _c("label", { attrs: { for: "name" } }, [_vm._v("Email*")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model.trim",
-                          value: _vm.form.email,
-                          expression: "form.email",
-                          modifiers: { trim: true },
-                        },
-                      ],
-                      staticClass: "form-control w-100",
-                      class: _vm.$v.form.email.$error ? "is-invalid" : "",
-                      attrs: {
-                        id: "email",
-                        type: "email",
-                        placeholder: "Введите email для связи",
-                      },
-                      domProps: { value: _vm.form.email },
-                      on: {
-                        input: function ($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.form,
-                            "email",
-                            $event.target.value.trim()
-                          )
-                        },
-                        blur: function ($event) {
-                          return _vm.$forceUpdate()
-                        },
-                      },
-                    }),
-                    _vm._v(" "),
-                    _vm.$v.form.name.$dirty && !_vm.$v.form.email.required
-                      ? _c("p", { staticClass: "invalid-feedback" }, [
-                          _vm._v(
-                            "\n                            Обязательное поле\n                        "
-                          ),
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.$v.form.name.$dirty && !_vm.$v.form.email.email
-                      ? _c("p", { staticClass: "invalid-feedback" }, [
-                          _vm._v(
-                            "\n                            Email неккоректный\n                        "
-                          ),
-                        ])
-                      : _vm._e(),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "mb-12" }, [
-                _c("label", { attrs: { for: "order_name" } }, [
-                  _vm._v("Есть вопросы? Напишите"),
-                ]),
-                _vm._v(" "),
-                _c("textarea", {
+                _c("input", {
                   directives: [
                     {
                       name: "model",
-                      rawName: "v-model",
-                      value: _vm.form.contact_msg,
-                      expression: "form.contact_msg",
+                      rawName: "v-model.trim",
+                      value: _vm.form.name,
+                      expression: "form.name",
+                      modifiers: { trim: true },
                     },
                   ],
-                  staticClass: "w-100 textarea",
+                  staticClass: "form-control w-100",
+                  class: _vm.$v.form.name.$error ? "is-invalid" : "",
                   attrs: {
-                    name: "contact_msg",
-                    id: "contact_msg",
-                    placeholder: "Напишите Ваш вопрос",
+                    id: "name",
+                    placeholder:
+                      _vm.windowWidth > 767 ? "Введите Ваше имя" : "Имя",
                   },
-                  domProps: { value: _vm.form.contact_msg },
+                  domProps: { value: _vm.form.name },
                   on: {
                     input: function ($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.form, "contact_msg", $event.target.value)
+                      _vm.$set(_vm.form, "name", $event.target.value.trim())
+                    },
+                    blur: function ($event) {
+                      return _vm.$forceUpdate()
                     },
                   },
                 }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "box-check-ico col-12" }, [
-                _c(
-                  "label",
-                  {
-                    staticClass: "d-flex check-ico",
-                    class: _vm.$v.form.agreeWithRules.$error
-                      ? "is-invalid"
-                      : "",
-                    attrs: { for: "agreeWithRules" },
-                  },
-                  [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.agreeWithRules,
-                          expression: "form.agreeWithRules",
-                        },
-                      ],
-                      staticClass: "consent",
-                      attrs: {
-                        id: "agreeWithRules",
-                        type: "checkbox",
-                        checked: "",
-                        name: "agreement",
-                        value: "true",
-                        autocomplete: "off",
-                      },
-                      domProps: {
-                        checked: Array.isArray(_vm.form.agreeWithRules)
-                          ? _vm._i(_vm.form.agreeWithRules, "true") > -1
-                          : _vm.form.agreeWithRules,
-                      },
-                      on: {
-                        change: function ($event) {
-                          var $$a = _vm.form.agreeWithRules,
-                            $$el = $event.target,
-                            $$c = $$el.checked ? true : false
-                          if (Array.isArray($$a)) {
-                            var $$v = "true",
-                              $$i = _vm._i($$a, $$v)
-                            if ($$el.checked) {
-                              $$i < 0 &&
-                                _vm.$set(
-                                  _vm.form,
-                                  "agreeWithRules",
-                                  $$a.concat([$$v])
-                                )
-                            } else {
-                              $$i > -1 &&
-                                _vm.$set(
-                                  _vm.form,
-                                  "agreeWithRules",
-                                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                                )
-                            }
-                          } else {
-                            _vm.$set(_vm.form, "agreeWithRules", $$c)
-                          }
-                        },
-                      },
-                    }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "d-flex" }),
-                    _vm._v(" "),
-                    _vm._m(0),
-                  ]
-                ),
                 _vm._v(" "),
-                _vm.$v.form.agreeWithRules.$dirty &&
-                !_vm.$v.form.agreeWithRules.mustBeTrue
+                _vm.$v.form.name.$dirty && !_vm.$v.form.name.required
                   ? _c("p", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                    Прочтите правила!\n                    "
+                        "\n                            Обязательное поле\n                        "
+                      ),
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.$v.form.name.$dirty && !_vm.$v.form.name.minLength
+                  ? _c("p", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n                            Здесь должно быть больше 2-х символов\n                        "
                       ),
                     ])
                   : _vm._e(),
               ]),
-              _vm._v(" "),
-              _vm._m(1),
-            ]
-          )
-        : _c("div", [
-            _c("h1", [
-              _vm._v(
-                "\n                " +
-                  _vm._s(
-                    _vm.form.name + ". Спасибо, Ваша заявка успешно отправлена!"
-                  ) +
-                  "\n            "
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-6" }, [
+              _c(
+                "div",
+                { staticClass: "form-group mb-12" },
+                [
+                  _c("label", { attrs: { for: "country" } }, [
+                    _vm._v("Страна"),
+                  ]),
+                  _vm._v(" "),
+                  _c("multiselect", {
+                    staticClass: "w-100",
+                    attrs: {
+                      id: "country",
+                      options: _vm.countries,
+                      searchable: false,
+                      "close-on-select": true,
+                      "show-labels": false,
+                      placeholder:
+                        _vm.windowWidth > 767 ? "Выберите страну" : "Страна",
+                    },
+                    model: {
+                      value: _vm.form.country,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "country", $$v)
+                      },
+                      expression: "form.country",
+                    },
+                  }),
+                ],
+                1
               ),
             ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-6" }, [
+              _c(
+                "div",
+                { staticClass: "form-group mb-12" },
+                [
+                  _c("label", { attrs: { for: "format" } }, [
+                    _vm._v("Формат обучения:"),
+                  ]),
+                  _vm._v(" "),
+                  _c("multiselect", {
+                    staticClass: "multiselect w-100",
+                    attrs: {
+                      id: "format",
+                      name: "format",
+                      options: _vm.format,
+                      searchable: false,
+                      "close-on-select": true,
+                      "show-labels": false,
+                      placeholder:
+                        _vm.windowWidth > 1200
+                          ? "Выберите формат обучения"
+                          : "Формат",
+                    },
+                    model: {
+                      value: _vm.form.format,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "format", $$v)
+                      },
+                      expression: "form.format",
+                    },
+                  }),
+                ],
+                1
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-6" }, [
+              _c(
+                "div",
+                { staticClass: "form-group mb-12" },
+                [
+                  _c("label", { attrs: { for: "country" } }, [
+                    _vm._v("Класс обучения"),
+                  ]),
+                  _vm._v(" "),
+                  _c("multiselect", {
+                    staticClass: "multiselect w-100",
+                    attrs: {
+                      id: "grade",
+                      options: _vm.grade,
+                      searchable: false,
+                      "close-on-select": true,
+                      "show-labels": false,
+                      placeholder:
+                        _vm.windowWidth > 1200
+                          ? "Выберите класс обучения"
+                          : "Класс",
+                    },
+                    model: {
+                      value: _vm.form.grade,
+                      callback: function ($$v) {
+                        _vm.$set(_vm.form, "grade", $$v)
+                      },
+                      expression: "form.grade",
+                    },
+                  }),
+                ],
+                1
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-md-12" }, [
+              _c("div", { staticClass: "form-group mb-12" }, [
+                _c("label", { attrs: { for: "name" } }, [_vm._v("Телефон*")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.trim",
+                      value: _vm.form.phone,
+                      expression: "form.phone",
+                      modifiers: { trim: true },
+                    },
+                  ],
+                  staticClass: "form-control w-100",
+                  class: _vm.$v.form.phone.$error ? "is-invalid" : "",
+                  attrs: {
+                    id: "phone",
+                    type: "text",
+                    placeholder: "Введите номер телефона",
+                  },
+                  domProps: { value: _vm.form.phone },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "phone", $event.target.value.trim())
+                    },
+                    blur: function ($event) {
+                      return _vm.$forceUpdate()
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _vm.$v.form.name.$dirty && !_vm.$v.form.phone.required
+                  ? _c("p", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n                            Обязательное поле\n                        "
+                      ),
+                    ])
+                  : _vm._e(),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-md-12" }, [
+              _c("div", { staticClass: "form-group mb-12" }, [
+                _c("label", { attrs: { for: "name" } }, [_vm._v("Email*")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.trim",
+                      value: _vm.form.email,
+                      expression: "form.email",
+                      modifiers: { trim: true },
+                    },
+                  ],
+                  staticClass: "form-control w-100",
+                  class: _vm.$v.form.email.$error ? "is-invalid" : "",
+                  attrs: {
+                    id: "email",
+                    type: "email",
+                    placeholder: "Введите email для связи",
+                  },
+                  domProps: { value: _vm.form.email },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "email", $event.target.value.trim())
+                    },
+                    blur: function ($event) {
+                      return _vm.$forceUpdate()
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _vm.$v.form.name.$dirty && !_vm.$v.form.email.required
+                  ? _c("p", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n                            Обязательное поле\n                        "
+                      ),
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.$v.form.name.$dirty && !_vm.$v.form.email.email
+                  ? _c("p", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n                            Email неккоректный\n                        "
+                      ),
+                    ])
+                  : _vm._e(),
+              ]),
+            ]),
           ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mb-12" }, [
+            _c("label", { attrs: { for: "order_name" } }, [
+              _vm._v("Есть вопросы? Напишите"),
+            ]),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.contact_msg,
+                  expression: "form.contact_msg",
+                },
+              ],
+              staticClass: "w-100 textarea",
+              attrs: {
+                name: "contact_msg",
+                id: "contact_msg",
+                placeholder: "Напишите Ваш вопрос",
+              },
+              domProps: { value: _vm.form.contact_msg },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "contact_msg", $event.target.value)
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "box-check-ico col-12" }, [
+            _c(
+              "label",
+              {
+                staticClass: "d-flex check-ico",
+                class: _vm.$v.form.agreeWithRules.$error ? "is-invalid" : "",
+                attrs: { for: "agreeWithRules" },
+              },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.agreeWithRules,
+                      expression: "form.agreeWithRules",
+                    },
+                  ],
+                  staticClass: "consent",
+                  attrs: {
+                    id: "agreeWithRules",
+                    type: "checkbox",
+                    checked: "",
+                    name: "agreement",
+                    value: "true",
+                    autocomplete: "off",
+                  },
+                  domProps: {
+                    checked: Array.isArray(_vm.form.agreeWithRules)
+                      ? _vm._i(_vm.form.agreeWithRules, "true") > -1
+                      : _vm.form.agreeWithRules,
+                  },
+                  on: {
+                    change: function ($event) {
+                      var $$a = _vm.form.agreeWithRules,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = "true",
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 &&
+                            _vm.$set(
+                              _vm.form,
+                              "agreeWithRules",
+                              $$a.concat([$$v])
+                            )
+                        } else {
+                          $$i > -1 &&
+                            _vm.$set(
+                              _vm.form,
+                              "agreeWithRules",
+                              $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                            )
+                        }
+                      } else {
+                        _vm.$set(_vm.form, "agreeWithRules", $$c)
+                      }
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "d-flex" }),
+                _vm._v(" "),
+                _vm._m(0),
+              ]
+            ),
+            _vm._v(" "),
+            _vm.$v.form.agreeWithRules.$dirty &&
+            !_vm.$v.form.agreeWithRules.mustBeTrue
+              ? _c("p", { staticClass: "invalid-feedback" }, [
+                  _vm._v(
+                    "\n                    Прочтите правила!\n                "
+                  ),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _vm._m(1),
+        ]
+      ),
     ]),
   ])
 }
@@ -50309,12 +50199,19 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", { staticClass: "politic grey" }, [
       _vm._v(
-        "Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на обработку персональных данных в соответствии с\n                                    "
+        "Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на\n                        обработку персональных данных в соответствии с\n                        "
       ),
       _c(
         "a",
-        { staticClass: "politic-link", attrs: { target: "_blank", href: "/" } },
-        [_vm._v("Политикой обработки персональных данных")]
+        {
+          staticClass: "politic-link",
+          attrs: { target: "_blank", href: "/docs/privacy_policy.pdf" },
+        },
+        [
+          _vm._v(
+            "Политикой обработки персональных\n                            данных"
+          ),
+        ]
       ),
       _vm._v("."),
     ])
@@ -77154,7 +77051,7 @@ _core_core_js__WEBPACK_IMPORTED_MODULE_0__["default"].use(modules);
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"D:\\\\smart-school\\\\smart-school","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 
@@ -77481,7 +77378,7 @@ var swiper_7 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#partn
       spaceBetween: 30
     },
     768: {
-      slidesPerView: 3
+      slidesPerView: 4
     }
   }
 });
@@ -77712,13 +77609,7 @@ var swiper_19 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#camp
 }); //для уменьшения лого при скролле
 
 window.onscroll = function () {
-  if (window.scrollY < 200) {
-    // document.querySelector('.header-rectangle').classList.remove('tiny');
-    document.querySelector('header').classList.remove('tiny');
-  } else {
-    // document.querySelector('.header-rectangle').classList.add('tiny');
-    document.querySelector('header').classList.add('tiny');
-  }
+  if (window.scrollY < 200) document.querySelector('header').classList.remove('tiny');else document.querySelector('header').classList.add('tiny');
 }; //для появления ссылки подробнее в блоке news
 
 
@@ -77731,17 +77622,36 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   var el = document.getElementsByClassName('news-text');
+  var el_image = document.getElementsByClassName('news__image-ibg');
+  var el_title = document.getElementsByClassName('news-title');
+  var full_el = document.getElementsByClassName('full-text');
   var mores = document.getElementsByClassName('news-btn');
 
   for (var i = 0; i < el.length; i++) {
     var height = getComputedStyle(el[i]).height;
 
     if (Number(height.substring(0, height.indexOf('px'))) > 115) {
-      el[i].style.height = '120px';
+      // el[i].style.height = '120px';
       el[i].style.overflow = 'hidden';
       mores[i].style.display = 'block';
       el[i].innerHTML = cutTextWithDots(el[i].innerHTML);
     }
+  }
+
+  var _loop = function _loop(_i) {
+    mores[_i].onclick = function () {
+      var image = el_image[_i].innerHTML;
+      var title = el_title[_i].innerHTML;
+      var description = full_el[_i].innerHTML;
+      document.querySelector('.modal--image').innerHTML = image;
+      document.querySelector('.modal--title').innerHTML = title;
+      document.querySelector('.modal--description').innerHTML = description;
+      $('#full_news_modal').modal('show');
+    };
+  };
+
+  for (var _i = 0; _i < mores.length; _i++) {
+    _loop(_i);
   }
 }); //для кнопки Подробнее, которая раскрывает остальной текст в history
 

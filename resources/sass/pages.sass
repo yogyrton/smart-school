@@ -125,7 +125,7 @@
 
 .head.notification-size
     @media screen and (max-width: 767px)
-        padding: 60px 0 160px 0
+        padding: 60px 0 180px 0
 
 #head .swiper-box
     max-width: 340px
@@ -148,8 +148,6 @@
     width: 60px
     height: 60px
     @media screen and (max-width: 400px)
-        left: -75px
-    @media screen and (max-width: 359px)
         width: 40px
         height: 40px
         background-size: contain
@@ -177,10 +175,10 @@
 
 
 #history
-    overflow: hidden
-    padding-bottom: 160px
-    @media screen and (max-width: 992px)
-        padding-bottom: 40px
+    //overflow: hidden
+    //padding-bottom: 160px
+    //@media screen and (max-width: 992px)
+    //    padding-bottom: 40px
 
     .history-text-box
         max-width: 654px
@@ -207,6 +205,9 @@
 
     #hidden-text-box.active
         display: block
+
+    .swiper-slide
+        height: auto
 
 
 .priority
@@ -454,6 +455,7 @@
             justify-content: space-between
             @media screen and (min-width: 1200px)
                 border-radius: 0 12px 12px 0
+                padding: 40px 30px
 
 
     .school-box-short.school-box
@@ -694,9 +696,18 @@
             font-size: 20px
             line-height: 24px
 
+        .full-text
+            display: none
+            opacity: 0
+            visibility: hidden
+
     .news-btn
         display: none
         color: $accentColor !important
+        transition: 0.3s ease-in-out
+        &:hover
+            cursor: pointer
+            opacity: 0.9
 
     .swiper .swiper-slide
         @media screen and (max-width: 576px)
@@ -824,20 +835,20 @@
             word-break: break-all
 
         .contacts-mail
-            padding-left: 34px
+            //padding-left: 34px
             position: relative
-            margin-bottom: 28px
+            //margin-bottom: 28px
             word-break: break-all
 
         .contacts-mail::before
-            content: ""
-            position: absolute
-            background-image: url('/svg/letter.svg')
-            background-repeat: no-repeat
-            width: 24px
-            height: 24px
-            left: 2px
-            top: 4px
+            //content: ""
+            //position: absolute
+            //background-image: url('/svg/letter.svg')
+            //background-repeat: no-repeat
+            //width: 24px
+            //height: 24px
+            //left: 2px
+            //top: 4px
 
         .contacts-socials
             gap: 12px
@@ -846,31 +857,30 @@
                 padding: 12px
                 background: #F4F2F7
                 border-radius: 100px
+                transition: 0.3s ease-in-out
+                &:hover
+                    background: rgba(128, 65, 255, 0.1)
 
         .contacts-location,
-        .contacts-timetable
+        .contacts-timetable,
+        .contacts-tel
             padding-left: 34px
             position: relative
-
+            &::before
+                content: ""
+                position: absolute
+                background-repeat: no-repeat
+                width: 24px
+                height: 24px
+                left: 0
+                top: 0
+        .contacts-tel::before
+            background-image: url('/svg/telephone.svg')
         .contacts-location::before
-            content: ""
-            position: absolute
             background-image: url('/svg/location.svg')
-            background-repeat: no-repeat
-            width: 24px
-            height: 24px
-            left: 2px
-            top: -3px
-
         .contacts-timetable::before
-            content: ""
-            position: absolute
             background-image: url('/svg/time.svg')
-            background-repeat: no-repeat
-            width: 24px
-            height: 24px
-            left: 2px
-            top: -1px
+
 
 
     .order-box
@@ -957,6 +967,10 @@
         @media screen and (max-width: 1200px)
             display: block
 
+#history
+    .swiper-pagination
+        position: static
+        padding-top: 10px
 
 .swiper-pagination-bullet
     opacity: 1

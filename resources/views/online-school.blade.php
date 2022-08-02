@@ -1,7 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
-
+    @php($activeNav = 'school')
 
     <section id="head"
              class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
@@ -18,7 +17,7 @@
                         Онлайн-школа <span class="nowrap">1-11 классы</span>
                     </h1>
                     <div class="btn-group btn-group-1">
-                        <button class="button_1 btn-pink">Оставить заявку</button>
+                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">
@@ -31,7 +30,7 @@
                                                 <div class="swiper-slide">
                                                     <div class="advt-box w-100">
                                                         <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                        <p class="head-text text">{!! $mainNew->text !!}</p>
                                                     </div>
 
                                                 </div>
@@ -50,7 +49,7 @@
         </div>
     </section>
 
-    <section id="history" class="history scrollreveal">
+    <section id="history" class="pb-120 history scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">О нас</h2>
             <div class="row align-items-center justify-content-between container-mob">
@@ -106,6 +105,9 @@
                                     <img src="/img/main/history/online-2.jpg" alt="history-img">
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ng-Lu08nDUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -127,7 +129,7 @@
     @include('sections.advantagies-online')
     @include('address.zoom')
 
-    <section id="price" class="pb-120 price-online">
+    <section id="price" class="pb-120 price-online scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Наш прейскурант</h2>
 
@@ -156,7 +158,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="price--card d-flex align-items-center">
-                                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                                        <img src="/svg/twemoji_books.svg" alt="" class="me-3">
                                         <p class="mb-0">
                                             Учебные занятия согласно образовательным программам общего среднего
                                             образования Республики Беларусь.
@@ -201,19 +203,19 @@
                                     <div class="row">
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">500 руб.</div>
+                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceBel_1)){{$priceBel_1}} @else 500 @endif руб.</div>
                                                 <div class="text-md-end">1-4 классы</div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">550 руб.</div>
+                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceBel_5)){{$priceBel_5}} @else 550 @endif руб.</div>
                                                 <div class="text-md-end">5-8 классы</div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">650 руб.</div>
+                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceBel_9)){{$priceBel_9}} @else 650 @endif руб.</div>
                                                 <div class="text-md-end">9-11 классы</div>
                                             </div>
                                         </div>
@@ -223,19 +225,19 @@
                                     <div class="row">
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">12000 рос.руб.</div>
+                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceRus_1)){{$priceRus_1}} @else 12000 @endif рос.руб.</div>
                                                 <div class="text-md-end">1-4 классы</div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">13000 рос.руб.</div>
+                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceRus_5)){{$priceRus_5}} @else 13000 @endif рос.руб.</div>
                                                 <div class="text-md-end">5-8 классы</div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end">15000 рос.руб.</div>
+                                                <div class="h3 accentColor text-md-end">@if(!empty($priceRus_9)){{$priceRus_9}} @else 15000 @endif рос.руб.</div>
                                                 <div class="text-md-end">9-11 классы</div>
                                             </div>
                                         </div>
@@ -248,7 +250,7 @@
 
 
                     <div class="price--card align-items-center mb-20 d-none d-lg-flex">
-                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                        <img src="/svg/twemoji_books.svg" alt="" class="me-3">
                         <p class="mb-0">
                             Учебные занятия согласно образовательным программам общего среднего образования Республики
                             Беларусь.
@@ -295,5 +297,8 @@
     @include('sections.news')
     @include('sections.documents')
     @include('sections.contacts')
+    <div class="pb-120">
+        @include('sections.schools-common')
+    </div>
 @stop
 
