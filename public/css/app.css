@@ -17340,6 +17340,29 @@ textarea:focus, textarea:active {
   background: #8041FF;
 }
 
+@media screen and (max-width: 576px) {
+  .camp-address {
+    font-size: 20px;
+  }
+}
+
+.mt-160 {
+  margin-top: 160px;
+}
+@media screen and (max-width: 992px) {
+  .mt-160 {
+    margin-top: 40px;
+  }
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
 .btn-group-4 {
   display: grid;
   grid-template-columns: repeat(3, 188px);
@@ -17401,6 +17424,72 @@ textarea:focus, textarea:active {
   top: 0;
 }
 
+#guides .guide-box {
+  display: block;
+  height: 100%;
+  background: #F4F2F6;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+@media screen and (min-width: 1200px) {
+  #guides .guide-box {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+  }
+  #guides .guide-box:hover {
+    color: #8041FF;
+  }
+}
+#guides .guide-box .img-box {
+  background: #F4F2F6;
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  #guides .guide-box .img-box {
+    border-radius: 20px;
+  }
+}
+#guides .guide-box .img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  position: static;
+  top: 0;
+  left: 0;
+  background: #F4F2F6;
+}
+#guides .guide-box .box-inner {
+  padding: 24px;
+  background: #F4F2F6;
+  border-radius: 0 0 12px 12px;
+}
+@media screen and (min-width: 1200px) {
+  #guides .guide-box .box-inner {
+    border-radius: 0 12px 12px 0;
+  }
+}
+#guides .swiper-pagination {
+  display: none;
+  bottom: -10%;
+  position: absolute;
+}
+@media screen and (max-width: 992px) {
+  #guides .swiper-pagination {
+    display: block;
+  }
+}
+
+#schedule .swiper-box {
+  position: relative;
+}
+
 @media screen and (max-width: 1200px) {
   .schedule .row {
     align-items: center;
@@ -17411,52 +17500,62 @@ textarea:focus, textarea:active {
     flex-direction: column-reverse;
   }
 }
-
 @media screen and (max-width: 992px) {
-  .schedule-photo {
+  .schedule .row .schedule-photo {
     display: none;
   }
 }
 @media screen and (max-width: 420px) {
-  .schedule-photo {
+  .schedule .row .schedule-photo {
     display: block;
     margin-bottom: 12px;
   }
 }
-
-.schedule-photo img {
+.schedule .row .schedule-photo img {
+  border-radius: 12px;
   height: auto;
   width: 100%;
 }
-
-.schedule-card {
-  margin: 0 30px 24px 0;
+.schedule .row .schedule-card {
+  margin-right: 30px;
   padding: 68px 35px;
+  height: 100%;
   width: 100%;
   font-size: 24px;
+  white-space: nowrap;
   line-height: 24px;
   background-color: #F4F2F6;
   border-radius: 12px;
 }
-@media screen and (max-width: 1440px) {
-  .schedule-card {
+@media screen and (max-width: 1500px) {
+  .schedule .row .schedule-card {
     padding: 65px 15px;
     text-align: center;
   }
 }
+@media screen and (max-width: 1200px) {
+  .schedule .row .schedule-card {
+    padding: 30px 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .schedule .row .schedule-card {
+    font-size: 24px;
+    padding: 68px 52px;
+  }
+}
 @media screen and (max-width: 360px) {
-  .schedule-card {
+  .schedule .row .schedule-card {
     text-align: center;
     white-space: nowrap;
   }
 }
 
-#schedule .swiper-box {
-  position: relative;
-}
 #schedule .swiper-pagination {
   display: none;
-  bottom: -10%;
+  bottom: -25%;
   position: absolute;
 }
 @media screen and (max-width: 992px) {
@@ -17473,6 +17572,139 @@ textarea:focus, textarea:active {
 }
 #schedule .swiper-pagination .swiper-pagination-bullet-active {
   background: #8041FF;
+}
+
+@media screen and (max-width: 992px) {
+  .slider-button-next, .slider-button-prev {
+    display: none;
+  }
+}
+
+.slider-button-next {
+  right: 0px;
+  transform: translateX(55px);
+  position: absolute;
+}
+@media screen and (max-width: 1400px) {
+  .slider-button-next {
+    right: 50%;
+    transform: translate(145%, -100%);
+    bottom: -130px;
+    top: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slider-button-next {
+    transform: translate(100%, -100%);
+  }
+}
+
+.slider-button-prev {
+  left: 0px;
+  transform: translateX(-55px);
+  position: absolute;
+}
+@media screen and (max-width: 1400px) {
+  .slider-button-prev {
+    left: 50%;
+    transform: translate(-100%, -100%);
+    bottom: -130px;
+    top: auto;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .swiper-button-disabled {
+    opacity: 1;
+    visibility: inherit;
+  }
+}
+
+#campLinks {
+  margin-bottom: 134px;
+}
+#campLinks a.linkBox:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+#campLinks a.linkBox:hover button {
+  background: #8041FF;
+  color: #ffffff;
+}
+#campLinks .linkBox {
+  display: block;
+  height: 100%;
+  min-height: 426px;
+  background: #F4F2F6;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+}
+@media screen and (max-width: 1220px) {
+  #campLinks .linkBox {
+    min-height: 405px;
+  }
+}
+#campLinks .img-box {
+  width: 100%;
+  height: 50%;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+#campLinks .img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+  position: static;
+  top: 0;
+  left: 0;
+}
+#campLinks .box-inner {
+  border-radius: 24px;
+  background: #F4F2F6;
+  padding: 46px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1220px) {
+  #campLinks .box-inner {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  #campLinks .swiper-slide {
+    height: auto;
+  }
+}
+#campLinks .box-inner button {
+  position: absolute;
+  bottom: 10%;
+}
+#campLinks .swiper-wrapper {
+  padding-bottom: 5px;
+}
+#campLinks .swiper-pagination {
+  display: none;
+  bottom: -10%;
+}
+@media screen and (max-width: 1220px) {
+  #campLinks .swiper-pagination {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .price-dreamland .row,
+.price-jukov .row {
+    margin: 20px -8px !important;
+  }
 }
 
 .mfp-container .mfp-arrow {

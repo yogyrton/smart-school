@@ -77655,6 +77655,60 @@ var swiper_17 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#sche
     el: "#schedule .swiper-pagination",
     clickable: true
   }
+});
+var swiper_18 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#guides .swiper', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 100,
+  pagination: {
+    el: "#guides .swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: '#guides .slider-button-next',
+    prevEl: '#guides .slider-button-prev'
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    575: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1600: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    }
+  }
+});
+var swiper_19 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#campLinks .swiper', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 100,
+  pagination: {
+    el: "#campLinks .swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
 }); //для уменьшения лого при скролле
 
 window.onscroll = function () {

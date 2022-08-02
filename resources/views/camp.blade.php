@@ -17,12 +17,12 @@
                         Детский лагерь
                     </h1>
                     <div class=" btn-group-4">
-                        <a href="/school-belarus/junior" class="button_1 btn-purple">Жуков Луг</a>
-                        <a href="/school-belarus/junior" class="button_1 btn-purple">Dreamland</a>
-                        <a href="/school-belarus/junior" class="button_1 btn-purple">Грузия</a>
-                        <a href="/school-belarus/junior" class="button_1 btn-purple">Польша</a>
-                        <a href="/school-belarus/senior" class="button_1 btn-purple">Онлайн</a>
-                        <a class="button_1 btn-pink">Оставить заявку</a>
+                        <a href="/camp/jukov-lug" class="button_1 btn-purple">Жуков Луг</a>
+                        <a href="/camp/dreamland" class="button_1 btn-purple">Dreamland</a>
+                        <a href="/camp/georgia" class="button_1 btn-purple">Грузия</a>
+                        <a href="/dev" class="button_1 btn-purple">Польша</a>
+                        <a href="/camp" class="button_1 btn-purple">Онлайн</a>
+                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">
@@ -35,7 +35,7 @@
                                                 <div class="swiper-slide">
                                                     <div class="advt-box w-100">
                                                         <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{{ $mainNew->text }}</p>
+                                                        <p class="head-text text">{!! $mainNew->text !!}</p>
                                                     </div>
 
                                                 </div>
