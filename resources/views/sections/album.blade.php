@@ -38,9 +38,11 @@
                </svg>
            </div>
        </div>
-       <div class="d-flex justify-content-center">
-            <a class="button_1 btn-pink text-bold" href="{{ $links->links }}" target="_blank">Смотреть все</a>
-        </div>
+       @if($links)
+           <div class="d-flex justify-content-center">
+               <a class="button_1 btn-pink text-bold" href="{{ $links->links }}" target="_blank">Смотреть все</a>
+           </div>
+       @endif
    </div>
 </section>
 @endif
