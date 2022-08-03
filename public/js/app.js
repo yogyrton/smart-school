@@ -5434,6 +5434,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -5459,10 +5492,14 @@ __webpack_require__.r(__webpack_exports__);
         format: null,
         country: null,
         grade: null,
-        contact_msg: null
+        contact_msg: null,
+        visit: null,
+        month: null
       },
       format: ['Онлайн', 'Оффлайн'],
-      grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
+      grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+      visit: ["Дневной", "Круглосуточный"],
+      month: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
     };
   },
   validations: {
@@ -49906,76 +49943,153 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-6" }, [
-              _c(
-                "div",
-                { staticClass: "form-group mb-12" },
-                [
-                  _c("label", { attrs: { for: "format" } }, [
-                    _vm._v("Формат обучения:"),
-                  ]),
-                  _vm._v(" "),
-                  _c("multiselect", {
-                    staticClass: "multiselect w-100",
-                    attrs: {
-                      id: "format",
-                      name: "format",
-                      options: _vm.format,
-                      searchable: false,
-                      "close-on-select": true,
-                      "show-labels": false,
-                      placeholder:
-                        _vm.windowWidth > 1200
-                          ? "Выберите формат обучения"
-                          : "Формат",
-                    },
-                    model: {
-                      value: _vm.form.format,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "format", $$v)
-                      },
-                      expression: "form.format",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ]),
+            _vm.page === "camp" ||
+            _vm.page === "dreamland" ||
+            _vm.page === "georgia" ||
+            _vm.page === "jukov-lug"
+              ? _c("div", { staticClass: "d-block col-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "form-group mb-12" },
+                    [
+                      _c("label", { attrs: { for: "visit" } }, [
+                        _vm._v("Формат пребывания"),
+                      ]),
+                      _vm._v(" "),
+                      _c("multiselect", {
+                        staticClass: "multiselect w-100",
+                        attrs: {
+                          id: "visit",
+                          name: "visit",
+                          options: _vm.visit,
+                          searchable: false,
+                          "close-on-select": true,
+                          "show-labels": false,
+                          placeholder:
+                            _vm.windowWidth > 1200
+                              ? "Выберите формат пребывания"
+                              : "Формат",
+                        },
+                        model: {
+                          value: _vm.form.visit,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "visit", $$v)
+                          },
+                          expression: "form.visit",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ])
+              : _c("div", { staticClass: "col-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "form-group mb-12" },
+                    [
+                      _c("label", { attrs: { for: "format" } }, [
+                        _vm._v("Формат обучения"),
+                      ]),
+                      _vm._v(" "),
+                      _c("multiselect", {
+                        staticClass: "w-100",
+                        attrs: {
+                          id: "format",
+                          options: _vm.format,
+                          searchable: false,
+                          "close-on-select": true,
+                          "show-labels": false,
+                          placeholder:
+                            _vm.windowWidth > 767
+                              ? "Выберите формат обучения"
+                              : "Формат",
+                        },
+                        model: {
+                          value: _vm.form.format,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "format", $$v)
+                          },
+                          expression: "form.format",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-6" }, [
-              _c(
-                "div",
-                { staticClass: "form-group mb-12" },
-                [
-                  _c("label", { attrs: { for: "country" } }, [
-                    _vm._v("Класс обучения"),
-                  ]),
-                  _vm._v(" "),
-                  _c("multiselect", {
-                    staticClass: "multiselect w-100",
-                    attrs: {
-                      id: "grade",
-                      options: _vm.grade,
-                      searchable: false,
-                      "close-on-select": true,
-                      "show-labels": false,
-                      placeholder:
-                        _vm.windowWidth > 1200
-                          ? "Выберите класс обучения"
-                          : "Класс",
-                    },
-                    model: {
-                      value: _vm.form.grade,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "grade", $$v)
-                      },
-                      expression: "form.grade",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ]),
+            _vm.page === "camp" ||
+            _vm.page === "dreamland" ||
+            _vm.page === "georgia" ||
+            _vm.page === "jukov-lug"
+              ? _c("div", { staticClass: "d-block col-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "form-group mb-12" },
+                    [
+                      _c("label", { attrs: { for: "month" } }, [
+                        _vm._v("Месяц"),
+                      ]),
+                      _vm._v(" "),
+                      _c("multiselect", {
+                        staticClass: "multiselect w-100",
+                        attrs: {
+                          id: "month",
+                          name: "month",
+                          options: _vm.month,
+                          searchable: false,
+                          "close-on-select": true,
+                          "show-labels": false,
+                          placeholder:
+                            _vm.windowWidth > 1200
+                              ? "Выберите месяц пребывания"
+                              : "Месяц",
+                        },
+                        model: {
+                          value: _vm.form.month,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "month", $$v)
+                          },
+                          expression: "form.month",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ])
+              : _c("div", { staticClass: "col-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "form-group mb-12" },
+                    [
+                      _c("label", { attrs: { for: "country" } }, [
+                        _vm._v("Класс обучения"),
+                      ]),
+                      _vm._v(" "),
+                      _c("multiselect", {
+                        staticClass: "multiselect w-100",
+                        attrs: {
+                          id: "grade",
+                          options: _vm.grade,
+                          searchable: false,
+                          "close-on-select": true,
+                          "show-labels": false,
+                          placeholder:
+                            _vm.windowWidth > 1200
+                              ? "Выберите класс обучения"
+                              : "Класс",
+                        },
+                        model: {
+                          value: _vm.form.grade,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "grade", $$v)
+                          },
+                          expression: "form.grade",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-lg-6 col-md-12" }, [
               _c("div", { staticClass: "form-group mb-12" }, [

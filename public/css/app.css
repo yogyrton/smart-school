@@ -14619,7 +14619,7 @@ body {
 }
 
 html {
-  scroll-padding-top: 100px;
+  scroll-padding-top: 50px;
 }
 
 .w-100 {
@@ -15931,6 +15931,12 @@ textarea:focus, textarea:active {
   background: #8041FF;
   scrollbar-width: thin;
   border-radius: 10px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #F4F2F7 !important;
+  -webkit-text-fill-color: #000000 !important;
+  color: #000000 !important;
 }
 
 .footer {

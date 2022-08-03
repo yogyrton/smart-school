@@ -2,7 +2,7 @@
 <section id="album" class="pb-120 pt-120 scrollreveal">
    <div class="container">
        <h2 class="accentColor mb-40">Фотогалерея</h2>
-       <div class="swiper-box">
+       <div class="swiper-box mb-40">
            <div class="slider-button-prev">
                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                    <path
@@ -38,6 +38,9 @@
                </svg>
            </div>
        </div>
+       <div class="d-flex justify-content-center">
+            <a class="button_1 btn-pink text-bold" href="/">Смотреть все</a>
+        </div>
    </div>
 </section>
 @endif

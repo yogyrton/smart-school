@@ -80,18 +80,45 @@
 
                 <p class="grey mb-16">Подписывайтесь на наши соц. сети:</p>
                 <div class="contacts-socials d-flex">
+                    @if($routeName === 'camp')
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.instagram.com/fabrikazvezdminsk/">
+                        <img class="contacts-socials-img" src="/svg/inst.svg" alt="inst">
+                    </a>
+                    @else
                     <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.instagram.com/smartschool_minsk/">
                         <img class="contacts-socials-img" src="/svg/inst.svg" alt="inst">
                     </a>
+                    @endif
+
+                    @if($routeName === 'camp')
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://ru-ru.facebook.com/obrazovatelnycentrfabrikazvezd/">
+                        <img class="contacts-socials-img" src="/svg/facebook.svg" alt="facebook">
+                    </a>
+                    @else
                     <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.facebook.com/people/Smart-School-%25D1%2587%25D0%25B0%25D1%2581%25D1%2582%25D0%25BD%25D0%25B0%25D1%258F-%25D1%2588%25D0%25BA%25D0%25BE%25D0%25BB%25D0%25B0/100039861583458/">
                         <img class="contacts-socials-img" src="/svg/facebook.svg" alt="facebook">
                     </a>
+                    @endif
+
+                    @if($routeName === 'camp')
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href=" https://vk.com/centr_fabrika_zvezd">
+                        <img class="contacts-socials-img" src="/svg/vk.svg" alt="vk">
+                    </a>
+                    @else
                     <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://vk.com/smartschool_minsk">
                         <img class="contacts-socials-img" src="/svg/vk.svg" alt="vk">
                     </a>
+                    @endif
+
+                    @if($routeName === 'camp')
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://ok.ru/fabrika.zvezd.minsk">
+                        <img class="contacts-socials-img" src="/svg/ok.svg" alt="ok">
+                    </a>
+                    @else
                     <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://ok.ru/group/58476618186850">
                         <img class="contacts-socials-img" src="/svg/ok.svg" alt="ok">
                     </a>
+                    @endif
                     <a class="contacts-socials-link" target="_blank" rel="noopener" href="tg://resolve?domain=sm_education_bot&start=ml15">
                         <img class="contacts-socials-img" src="/svg/telegram.svg" alt="telegram">
                     </a>

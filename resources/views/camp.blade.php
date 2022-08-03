@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@php($page = Route::current()->getName())
 
 <section id="head"
             class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
