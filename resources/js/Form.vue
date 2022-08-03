@@ -32,7 +32,7 @@
                                 :searchable="false"
                                 :close-on-select="true"
                                 :show-labels="false"
-                                :placeholder="windowWidth > 767 ? 'Выберите страну' : 'Страна'">
+                                :placeholder="windowWidth > 1200 ? 'Выберите страну' : 'Страна'">
                             </multiselect>
                         </div>
 
@@ -66,7 +66,7 @@
                                 :searchable="false"
                                 :close-on-select="true"
                                 :show-labels="false"
-                                :placeholder="windowWidth > 767 ? 'Выберите формат обучения' : 'Формат'">
+                                :placeholder="windowWidth > 1200 ? 'Выберите формат обучения' : 'Формат'">
                             </multiselect>
                         </div>
                     </div>

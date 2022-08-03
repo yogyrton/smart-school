@@ -7,6 +7,8 @@
     z-index: 10
     @media screen and (max-width: 1440px)
         min-height: 600px
+        margin-top: 0
+        padding-bottom: 0
     @media screen and (max-width: 1200px)
         height: auto
         min-height: auto
@@ -184,8 +186,10 @@
 #history
     //overflow: hidden
     //padding-bottom: 160px
-    //@media screen and (max-width: 992px)
-    //    padding-bottom: 40px
+    @media screen and (max-width: 1440px)
+       padding-top: 120px
+    @media screen and (max-width: 992px)
+       padding-top: 40px
 
     .history-text-box
         max-width: 654px
@@ -335,24 +339,54 @@
 
 
 #documents
-    .wrapper
-        display: grid
-        grid-template-columns: repeat(6, 1fr)
-        grid-column-gap: 30px
-        grid-row-gap: 12px
-        @media screen and (max-width: 1500px)
-            grid-template-columns: repeat(4, 1fr)
-        @media screen and (max-width: 768px)
-            grid-template-columns: 1fr
-            grid-row-gap: 12px
-            grid-column-gap: 0
-
-    .document-button
-        flex: 0 1 198px
-
+    @media screen and (max-width: 1200px)
+        padding-bottom: 100px
+    @media screen and (max-width: 700px)
+        padding-bottom: 50px
     a
         display: block
         width: 100%
+
+    .swiper-pagination
+        display: none
+        @media screen and (max-width: 700px)
+            display: block
+            bottom: -40px
+
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -105%)
+        @media screen and (max-width: 700px)
+            display: none
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(-100%, -105%)
+        @media screen and (max-width: 700px)
+            display: none
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
 
 
 #price
@@ -493,10 +527,6 @@
         padding: 4px 0 12px 0
 
 
-
-
-
-
 #teachers
     @media screen and (max-width: 990px)
         margin-bottom: 0
@@ -605,7 +635,8 @@
 #replies
     @media screen and (max-width: 990px)
         margin-bottom: 0
-        padding-bottom: 110px
+        padding-bottom: 80px
+        padding-top: 30px
 
     img
         width: 100%
@@ -827,6 +858,9 @@
             background: $accentColor
 
 #order-section
+    @media screen and (max-width: 990px)
+        margin-bottom: 0
+        padding-top: 10px
 
     #order-section img
         object-fit: contain

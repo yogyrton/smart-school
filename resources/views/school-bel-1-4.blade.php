@@ -5,7 +5,7 @@
 @section('content')
     @php($activeNav = 'school')
 
-    <section id="head" class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+    <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
@@ -354,7 +354,7 @@
         </div>
     </section>
 
-    <section id="faq" class="scrollreveal">
+    <section id="faq" class="scrollreveal pb-120">
         <div class="container">
             <h2 class="accentColor mb-40">Часто задаваемые вопросы</h2>
 
@@ -435,9 +435,19 @@
         </div>
     </section>
 
-    @include('sections.news')
-    @include('sections.documents')
-    @include('sections.contacts')
+    <div class="pb-120">
+        @include('sections.news')
+    </div>
+
+    <div class="pb-120">
+        @include('sections.documents')
+    </div>
+
+    <div class="pb-120">
+        @include('sections.contacts')
+    </div>
+
+    
     @include('sections.schools-without-bel')
 
 

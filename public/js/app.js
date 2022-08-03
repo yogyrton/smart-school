@@ -49928,7 +49928,7 @@ var render = function () {
                       "close-on-select": true,
                       "show-labels": false,
                       placeholder:
-                        _vm.windowWidth > 767 ? "Выберите страну" : "Страна",
+                        _vm.windowWidth > 1200 ? "Выберите страну" : "Страна",
                     },
                     model: {
                       value: _vm.form.country,
@@ -50000,7 +50000,7 @@ var render = function () {
                           "close-on-select": true,
                           "show-labels": false,
                           placeholder:
-                            _vm.windowWidth > 767
+                            _vm.windowWidth > 1200
                               ? "Выберите формат обучения"
                               : "Формат",
                         },
@@ -77714,6 +77714,48 @@ var swiper_19 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#camp
       slidesPerView: 3,
       spaceBetween: 30
     }
+  }
+});
+var swiper_20 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#documents .swiper', {
+  slidesPerView: 1,
+  loop: false,
+  pagination: {
+    el: "#documents .swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    },
+    1400: {
+      slidesPerView: 5,
+      spaceBetween: 30
+    },
+    1500: {
+      slidesPerView: 6,
+      spaceBetween: 30
+    }
+  },
+  navigation: {
+    nextEl: '#documents .slider-button-next',
+    prevEl: '#documents .slider-button-prev'
   }
 }); //для уменьшения лого при скролле
 

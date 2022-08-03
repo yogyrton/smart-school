@@ -1,5 +1,5 @@
 @if(!empty($news)  && count($news) > 0)
-    <section id="news" class="pt-120 news scrollreveal">
+    <section id="news" class=" news scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Новости</h2>
             <div class="wrapper">

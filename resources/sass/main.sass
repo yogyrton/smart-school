@@ -14,8 +14,11 @@ body
         padding-top: 44px
 
 html
-    scroll-padding-top: 50px
-
+    scroll-padding-top: 120px
+    @media screen and (max-width: 1200px)
+        scroll-padding-top: 90px   
+    @media screen and (max-width: 992px)
+        scroll-padding-top: 40px
 .w-100
     width: 100% !important
 
@@ -286,6 +289,8 @@ button
     color: $accentColor !important
     border: 1px solid #8041FF
 
+.mt-80
+    margin-top: 80px 
 .mb-8
     margin-bottom: 8px
 
@@ -354,11 +359,27 @@ h2.mb-60, h1.mb-60
     @media screen and (max-width: 992px)
         padding-bottom: 40px
 
+.mb-120
+    margin-bottom: 120px
+    @media screen and (max-width: 992px)
+        margin-bottom: 40px
+
 .pt-120
     padding-top: 120px
     @media screen and (max-width: 992px)
         padding-top: 40px
 
+.mt-80
+    margin-top: 80px
+
+.mt-160
+    margin-top: 160px
+
+.mb-160
+    margin-bottom: 160px
+
+.pb-160
+    padding-bottom: 160px
 
 .border-20
     border-radius: 20px

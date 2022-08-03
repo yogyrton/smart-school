@@ -20,11 +20,11 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#history">История</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home')#priority @else /#priority @endif">Преимущества</a></li>
+                                <li><a class="dropdown-item" href="#priority">Преимущества</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home')#news @else /#news @endif">Новости</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home')#documents @else /#documents @endif">Документы</a></li>
+                                <li><a class="dropdown-item" href="#news">Новости</a></li>
+                                <li><a class="dropdown-item" href="#documents">Документы</a></li>
                             </ul>
                         </div>
 
@@ -77,7 +77,7 @@
                                 <a class="h5" href="/dev">Одно окно</a>
                             </li>
                             <li class="header-item">
-                                <a  class="h5 menu-link" href="@if($routeName === 'home')#order-section @else /#order-section @endif">Контакты</a>
+                                <a  class="h5 menu-link" href="#order-section">Контакты</a>
                             </li>
                         </ul>
                     </div>

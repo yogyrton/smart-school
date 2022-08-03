@@ -2,7 +2,7 @@
 @section('title', 'Частная школа Smart School')
 @section('description', 'Оффлайн и онлайн обучение для 1-11 классов в Беларуси, России, Грузии, Польше в школе Смарт Скул. Театральная студия, занятия с репетитором, подготовка к школе, факультативы, курсы, лагеря.')
 @section('content')
-    <section id="head" class="head position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+    <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container container-mob">
 
             <div class="head--container">
@@ -48,7 +48,7 @@
         </div>
     </section>
 
-    <section id="history" class="pt-120 history scrollreveal">
+    <section id="history" class="history scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">История</h2>
             <div class="row align-items-center justify-content-between container-mob">
@@ -126,9 +126,12 @@
 
     </section>
 
-    @include('sections.schools-common')
+    <div class="pb-120">
+        @include('sections.schools-common')
+    </div>
+    
 
-    <section id="advantages" class="advantages pt-120 scrollreveal">
+    <section id="advantages" class="advantages pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Почему мы?</h2>
 
@@ -208,7 +211,7 @@
         </div>
     </section>
 
-    <section id="info" class="info pb-120 pt-120 scrollreveal">
+    <section id="info" class="info pb-120 scrollreveal">
         <div class="container">
             <div class="swiper-box">
                 <div class="swiper">
@@ -259,9 +262,12 @@
         </div>
     </section>
 
-    @include('sections.advantagies')
+    <div class="mb-120">
+        @include('sections.advantagies')
+    </div>
+    
 
-    <section id="teachers" class="pt-120 scrollreveal teachers">
+    <section id="teachers" class="scrollreveal pb-120 teachers">
         <div class="container">
             <h2 class="accentColor mb-40">Команда профессиональных педагогов</h2>
             <p class="text mb-60 teachers-info">Наши учителя создают мотивацию к обучению, учат ребят быстро запоминать
@@ -308,11 +314,26 @@
         </div>
     </section>
 
-    @include('sections.reviews')
-    @include('sections.news')
-    @include('sections.documents')
-    @include('sections.partners')
-    @include('sections.contacts')
+    <div class="pb-120">
+        @include('sections.reviews')
+    </div>
+    
+    <div class="pb-120">
+        @include('sections.news')
+    </div>
 
+    <div class="pb-120">
+        @include('sections.documents')
+    </div>
+    
+    <div class="pb-120">
+    @include('sections.partners')
+    </div>
+
+    <div class="pb-120">
+        @include('sections.contacts')
+    </div>
+    
+    
 @stop
 

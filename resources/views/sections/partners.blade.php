@@ -1,4 +1,4 @@
-<section id="partners" class="partners pt-120 scrollreveal">
+<section id="partners" class="partners  scrollreveal">
     <div class="container">
         <h2 class="accentColor mb-40">Наши партнеры</h2>
         <div class="row">
