@@ -18,7 +18,7 @@
                         Частная школа в России (дистанционно)
                     </h1>
                     <div class="btn-group btn-group-1">
-                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
+                        <button class="button_1 btn-pink text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">

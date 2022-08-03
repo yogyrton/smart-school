@@ -16358,6 +16358,7 @@ input:-webkit-autofill {
 @media screen and (max-width: 575px) {
   .head .notification--head {
     left: 15px;
+    bottom: 10px;
     max-width: calc(100% - 30px);
     transform: translateX(0);
   }
@@ -16453,6 +16454,12 @@ input:-webkit-autofill {
 
 @media screen and (max-width: 767px) {
   .head.notification-size {
+    padding: 60px 0 155px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .head.notification-size-2 {
     padding: 60px 0 180px 0;
   }
 }

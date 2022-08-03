@@ -59,7 +59,7 @@
                             <ul class="footer-list mb-40">
                                 <li class="text-bold mb-12"><a href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a></li>
                                 <li class="text-bold mb-12"><a href="/dev">Одно окно</a></li>
-                                <li class="text-bold"><a href="@if($routeName === 'home')#contacts @else /#contacts @endif">Контакты</a></li>
+                                <li class="text-bold"><a href="#order-section">Контакты</a></li>
                             </ul>
                             <div class="d-lg-flex d-none footer-socials">
                                 @include('partials.social_navigation')
