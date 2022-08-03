@@ -354,8 +354,7 @@
         </div>
     </section>
 
-
-    <section id="faq" class="pb-120 scrollreveal">
+    <section id="faq" class="scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Часто задаваемые вопросы</h2>
 

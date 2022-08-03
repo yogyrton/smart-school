@@ -589,12 +589,17 @@
         color: $white
         background: $accentColor
 
-
     .teachers-pagination
         position: absolute
         bottom: 0
-        transform: translateY(70px)
+        transform: translate(-50%, 70px)
 
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next 
+        transform: scale(0.83)
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next 
+        transform: scale(0.63)
 
 
 #replies
@@ -921,10 +926,8 @@
 
 
 
-
-
 //SLIDER
-#history, #address, #album, #info
+#history, #address, #album, #info 
     .swiper-box
         position: relative
 

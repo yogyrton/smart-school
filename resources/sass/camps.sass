@@ -1,3 +1,16 @@
+.camp-address
+    @media screen and (max-width: 576px)
+        font-size: 20px
+.mt-160
+    margin-top: 160px
+    @media screen and (max-width: 992px)
+        margin-top: 40px
+.pt-0
+    padding-top: 0px
+
+.pb-30
+    padding-bottom: 30px
+    
 .btn-group-4
     display: grid
     grid-template-columns: repeat(3, 188px)
@@ -8,6 +21,7 @@
         grid-row-gap: 12px
     @media screen and (max-width: 767px)
         grid-template-columns: repeat(2, 48%)
+        margin-bottom: 32px
     @media screen and (max-width: 400px)
         grid-template-columns: repeat(2, 49%)
         column-gap: 8px
@@ -42,43 +56,45 @@
             left: 0
             top: 0
 
-.schedule .row
-    @media screen and (max-width: 1200px)
-        align-items: center
-    @media screen and (max-width: 420px)  
-        flex-direction: column-reverse
 
-.schedule-photo
-    @media screen and (max-width: 992px)
-        display: none
-    @media screen and (max-width: 420px)
+//guides
+#guides
+    .guide-box
         display: block
-        margin-bottom: 12px
+        height: 100%
+        background: $light-grey
+        border-radius: 20px
+        transition: 0.3s ease-in-out
+        @media screen and (min-width: 1200px)
+            display: grid
+            grid-template-columns: 50% 50%
+            width: 100%
+            &:hover
+                color: $accentColor
+        .img-box
+            background: $light-grey
+            width: 100%
+            border-radius: 20px
+            position: relative
+            overflow: hidden
+            @media screen and (min-width: 1200px)
+                border-radius: 20px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+                position: static
+                top: 0
+                left: 0
+                background: $light-grey
 
-.schedule-photo img
-    height: auto
-    width: 100%
-
-.schedule-card
-    margin: 0 30px 24px 0
-    padding: 68px 35px
-    width: 100%
-    font-size: 24px
-    line-height: 24px
-    background-color: $light-grey
-    border-radius: 12px
-    @media screen and (max-width: 1440px)
-        padding: 65px 15px
-        text-align: center
-    @media screen and (max-width: 360px)
-        text-align: center
-        white-space: nowrap
-
-
-//SLIDER
-#schedule
-    .swiper-box
-        position: relative
+        .box-inner
+            padding: 24px
+            background: $light-grey
+            border-radius: 0 0 12px 12px
+            @media screen and (min-width: 1200px)
+                border-radius: 0 12px 12px 0
 
     .swiper-pagination
         display: none
@@ -86,13 +102,172 @@
         position: absolute
         @media screen and (max-width: 992px)
             display: block
+        
 
-        .swiper-pagination-bullet
+#schedule
+    .swiper-box
+        position: relative
+
+.schedule .row
+    @media screen and (max-width: 1200px)
+        align-items: center
+    @media screen and (max-width: 420px)  
+        flex-direction: column-reverse
+
+    .schedule-photo
+        @media screen and (max-width: 992px)
+            display: none
+        @media screen and (max-width: 420px)
+            display: block
+            margin-bottom: 12px
+
+    .schedule-photo img
+        border-radius: 12px
+        height: auto
+        width: 100%
+
+    .schedule-card
+        margin-right: 30px
+        padding: 68px 35px
+        height: 100%
+        width: 100%
+        font-size: 24px
+        white-space: nowrap
+        line-height: 24px
+        background-color: $light-grey
+        border-radius: 12px
+        @media screen and (max-width: 1500px)
+            padding: 65px 15px
+            text-align: center
+        @media screen and (max-width: 1200px)
+            padding: 30px 10px
+            font-size: 16px
+            text-align: center
+        @media screen and (max-width: 576px)
+            font-size: 24px
+            padding: 68px 52px
+        @media screen and (max-width: 360px)
+            text-align: center
+            white-space: nowrap
+
+//pagination
+#schedule 
+    .swiper-pagination
+        display: none
+        bottom: -25%
+        position: absolute
+        @media screen and (max-width: 992px)
+            display: block
+
+    .swiper-pagination-bullet
+        opacity: 1
+        background: $light-grey
+        width: 8px
+        height: 8px
+        margin: 0 8px
+
+    .swiper-pagination-bullet-active
+        background: $accentColor
+
+//arrows
+    .slider-button-next, .slider-button-prev
+        @media screen and (max-width: 992px)
+            display: none
+
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -100%)
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
             opacity: 1
-            background: $light-grey
-            width: 8px
-            height: 8px
-            margin: 0 8px
+            visibility: inherit
 
-        .swiper-pagination-bullet-active
-            background: $accentColor
+
+#campLinks
+    margin-bottom: 134px
+    a.linkBox
+        &:hover
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2)
+            button
+                background: $accentColor
+                color: #ffffff
+
+    .linkBox
+        display: block
+        height: 100%
+        min-height: 426px
+        background: $light-grey
+        border-radius: 12px
+        transition: 0.3s ease-in-out
+        @media screen and (max-width: 1220px)
+            min-height: 405px
+
+    .img-box
+        width: 100%
+        height: 50%
+        border-radius: 12px 12px 0 0
+        position: relative
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            -o-object-fit: cover
+            object-fit: cover
+            -o-object-position: center center
+            object-position: center center
+            position: static
+            top: 0
+            left: 0
+
+    .box-inner
+        border-radius: 24px
+        background: #F4F2F6
+        padding: 46px 40px 40px 40px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        @media screen and (max-width: 1220px)
+            padding: 24px
+
+    .swiper-slide
+        @media screen and (max-width: 1500px)
+            height: auto
+
+    .box-inner button
+        position: absolute
+        bottom: 10%
+
+    .swiper-wrapper
+        padding-bottom: 5px
+
+    .swiper-pagination
+        display: none
+        bottom: -10%
+        @media screen and (max-width: 1220px)
+            display: block
+
+.price-dreamland .row,
+.price-jukov .row
+    @media screen and (max-width: 1500px)
+        margin: 20px -8px !important

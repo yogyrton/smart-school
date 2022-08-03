@@ -18,7 +18,7 @@
                                 О нас
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="@if($routeName === 'home')#history @else /#history @endif">История</a></li>
+                                <li><a class="dropdown-item" href="#history">История</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#priority @else /#priority @endif">Преимущества</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
@@ -57,17 +57,27 @@
                         </div>
 
                         <ul class="d-flex ">
+
+                        <div class="dropdown">
+                            <button class="dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Детский лагерь
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/dev">Беларусь</a></li>
+                                <li><a class="dropdown-item" href="/dev">Грузия</a></li>
+                                <li><a class="dropdown-item" href="/dev">Польша</a></li>
+                                <li><a class="dropdown-item" href="/dev">Онлайн</a></li>
+                            </ul>
+                        </div>
+                        
                             <li class="header-item">
-                                <a class="h5 dropdown-btn" href="/dev">Детский лагерь</a>
-                            </li>
-                            <li class="header-item">
-                                <a data-goto=".replies" class="h5 menu-link" href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a>
+                                <a class="h5 menu-link" href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a>
                             </li>
                             <li class="header-item">
                                 <a class="h5" href="/dev">Одно окно</a>
                             </li>
                             <li class="header-item">
-                                <a data-goto=".order-section" class="h5 menu-link" href="@if($routeName === 'home')#order-section @else /#order-section @endif">Контакты</a>
+                                <a  class="h5 menu-link" href="@if($routeName === 'home')#order-section @else /#order-section @endif">Контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -115,19 +125,19 @@
                                     <a href="#history" class="h5 mobile-link">О нас</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="#school">Школа</a>
+                                    <a class="h5 mobile-link" href="/#school">Школа</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/">Доп.услуги</a>
+                                    <a class="h5 mobile-link" href="/dev">Доп.услуги</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/">Детский лагерь</a>
+                                    <a class="h5 mobile-link" href="/camp">Детский лагерь</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="#replies">Отзывы</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/">Одно окно</a>
+                                    <a class="h5 mobile-link" href="/dev">Одно окно</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="#order-section">Контакты</a>
