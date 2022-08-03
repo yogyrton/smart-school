@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    public function send(VueFormRequest $request)
+    public function send(Request $request)
     {
-        $data = $request->validated();
+        $data = $request->all();
 
         Mail::to('parusov.93@gmail.com')->send(new MessageMail($data));
     }
