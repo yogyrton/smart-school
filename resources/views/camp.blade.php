@@ -1,5 +1,6 @@
 @extends('layouts.app')
-
+@section('title', 'Детские лагеря Фабрика Звезд на каникулах')
+@section('description', 'Фабрика звезд - детский отдых в Беларуси и за рубежом. Детские лагеря на каникулах: летних, зимних, весенних, осенних.')
 @section('content')
 @php($routeName = Route::current()->getName())
 @php($page = Route::current()->getName())
