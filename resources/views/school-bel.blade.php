@@ -126,8 +126,9 @@
 
     @include('sections.advantagies')
 
-    <section class="pt-120 pb-120 scrollreveal" id="address">
+    <section class="pt-120 scrollreveal" id="address">
         <div class="container">
+            <h2 class="accentColor mb-40">Наши школы</h2>
             <div class="row mb-40">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <div class="d-flex flex-column justify-content-between h-100">
@@ -172,8 +173,15 @@
     </section>
 
     @include('sections.documents')
-    @include('sections.album')
-    @include('sections.contacts')
+
+    <div class="pt-120">
+        @include('sections.album')
+    </div>
+    
+    <div class="pb-120">
+        @include('sections.contacts')
+    </div>
+
     @include('sections.schools-without-bel')
 
 @stop

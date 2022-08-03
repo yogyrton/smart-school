@@ -309,7 +309,7 @@
         </div>
     </section>
 
-    <section id="faq" class="pb-120 scrollreveal">
+    <section id="faq" class="scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Часто задаваемые вопросы</h2>
 
@@ -368,10 +368,12 @@
 
     @include('sections.news')
     @include('sections.documents')
-    @include('sections.contacts')
+
+    <div class="pb-120">
+        @include('sections.contacts')
+    </div>
+    
     @include('sections.schools-without-bel')
-
-
 
 
     <!-- Modals FAQ -->

@@ -16,8 +16,8 @@
                         Международная сеть частных школ <span class="accentColor nowrap">Smart School</span>
                     </h1>
                     <div class="btn-group">
-                        <a href="#school" class="button_1 btn-purple">Выбрать страну</a>
-                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
+                        <a href="#school" class="button_1 btn-purple text-bold">Выбрать страну</a>
+                        <button class="button_1 btn-pink text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">

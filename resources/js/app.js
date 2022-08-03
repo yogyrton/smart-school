@@ -35,27 +35,27 @@ ScrollReveal().reveal('.scrollheader',
 );
 
 //для плавного скролла к разделам
-const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
-if (menuLinks.length > 0) {
-    menuLinks.forEach(menuLink => {
-        menuLink.addEventListener("click", onMenuLinkClick);
-    });
+// const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
+// if (menuLinks.length > 0) {
+//     menuLinks.forEach(menuLink => {
+//         menuLink.addEventListener("click", onMenuLinkClick);
+//     });
 
-    function onMenuLinkClick(e) {
-        const menuLink = e.target;
-        if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-            const gotoBlock = document.querySelector(menuLink.dataset.goto);
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+//     function onMenuLinkClick(e) {
+//         const menuLink = e.target;
+//         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+//             const gotoBlock = document.querySelector(menuLink.dataset.goto);
+//             const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
-            window.scrollTo({
-                top: gotoBlockValue,
-                behavior: "smooth"
-            });
+//             window.scrollTo({
+//                 top: gotoBlockValue,
+//                 behavior: "smooth"
+//             });
 
-            e.preventDefault();
-        }
-    }
-}
+//             e.preventDefault();
+//         }
+//     }
+// }
 
 //свайперы
 
@@ -72,12 +72,15 @@ const swiper_1 = new Swiper('#head .swiper', {
 const swiper_2 = new Swiper('#teachers .swiper', {
     loop: false,
     slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 30,
     navigation: {
         nextEl: '.teachers .slider-button-next',
         prevEl: '.teachers .slider-button-prev',
     },
     pagination: {
+        dynamicBullets: true,
+        dynamicMainBullets: 1,
         el: ".teachers .swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
@@ -105,8 +108,8 @@ const swiper_3 = new Swiper('#replies .swiper', {
     slidesPerView: 3,
     spaceBetween: 30,
     navigation: {
-        nextEl: '.replies .slider-button-next',
-        prevEl: '.replies .slider-button-prev',
+        nextEl: '#replies .slider-button-next',
+        prevEl: '#replies .slider-button-prev',
     },
     pagination: {
         el: ".replies .swiper-pagination",
@@ -134,7 +137,7 @@ const swiper_3 = new Swiper('#replies .swiper', {
             spaceBetween: 10,
         },
         1200: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 10,
         }
     }
@@ -418,6 +421,65 @@ const swiper_17 = new Swiper('#schedule .swiper', {
     pagination: {
         el: "#schedule .swiper-pagination",
         clickable: true
+    }
+});
+
+const swiper_18 = new Swiper('#guides .swiper', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 100,
+    pagination: {
+        el: "#guides .swiper-pagination",
+        clickable: true
+    },
+
+    navigation: {
+        nextEl: '#guides .slider-button-next',
+        prevEl: '#guides .slider-button-prev',
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        575: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        1600: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        }
+    }
+});
+
+const swiper_19 = new Swiper('#campLinks .swiper', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 100,
+    pagination: {
+        el: "#campLinks .swiper-pagination",
+        clickable: true
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        }
     }
 });
 

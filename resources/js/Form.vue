@@ -38,24 +38,57 @@
 
                     </div>
 
-                    <div class="col-6">
+                    <div v-if="(page === 'camp' || page === 'dreamland' || page === 'georgia' || page === 'jukov-lug')" class="d-block col-6">
                         <div class="form-group mb-12">
-                            <label for="format">Формат обучения:</label>
+                            <label for="visit">Формат пребывания</label>
                             <multiselect
-                                id="format"
-                                name="format"
-                                v-model="form.format"
+                                id="visit"
+                                name="visit"
+                                v-model="form.visit"
                                 class="multiselect w-100"
-                                :options="format"
+                                :options="visit"
                                 :searchable="false"
                                 :close-on-select="true"
                                 :show-labels="false"
-                                :placeholder="windowWidth > 1200 ? 'Выберите формат обучения' : 'Формат'">
+                                :placeholder="windowWidth > 1200 ? 'Выберите формат пребывания' : 'Формат'">
                             </multiselect>
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div v-else class="col-6">
+                        <div class="form-group mb-12">
+                            <label for="format">Формат обучения</label>
+                            <multiselect
+                                id="format"
+                                v-model="form.format"
+                                class="w-100"
+                                :options="format"
+                                :searchable="false"
+                                :close-on-select="true"
+                                :show-labels="false"
+                                :placeholder="windowWidth > 767 ? 'Выберите формат обучения' : 'Формат'">
+                            </multiselect>
+                        </div>
+                    </div>
+
+                    <div v-if="(page === 'camp' || page === 'dreamland' || page === 'georgia' || page === 'jukov-lug')" class="d-block col-6">
+                        <div class="form-group mb-12">
+                            <label for="month">Месяц</label>
+                            <multiselect
+                                id="month"
+                                name="month"
+                                v-model="form.month"
+                                class="multiselect w-100"
+                                :options="month"
+                                :searchable="false"
+                                :close-on-select="true"
+                                :show-labels="false"
+                                :placeholder="windowWidth > 1200 ? 'Выберите месяц пребывания' : 'Месяц'">
+                            </multiselect>
+                        </div>
+                    </div>
+
+                    <div v-else class="col-6">
                         <div class="form-group mb-12">
                             <label for="country">Класс обучения</label>
                             <multiselect
@@ -189,10 +222,14 @@
                     format: null,
                     country: null,
                     grade: null,
-                    contact_msg: null
+                    contact_msg: null,
+                    visit: null,
+                    month: null
                 },
                 format: ['Онлайн', 'Оффлайн'],
                 grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+                visit: ["Дневной", "Круглосуточный"],
+                month: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
             };
         },
         validations: {
