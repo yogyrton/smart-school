@@ -25,12 +25,7 @@ class VueFormRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required',
             'phone' => 'required',
-            'format' => 'required',
-            'country' => 'required',
-            'grade' => 'required',
-            'contact_msg' => 'nullable'
         ];
     }
 }

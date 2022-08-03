@@ -10,12 +10,27 @@
 <body>
 <h1>Данные об отправителе: </h1>
     <p>Имя: {{ $data['name'] }}</p>
-    <p>Страна: {{ $data['country']}}</p>
-    <p>Класс: {{ $data['grade'] }}</p>
-    <p>Формат: {{ $data['format'] }}</p>
     <p>Телефон: {{ $data['phone'] }}</p>
+@if ($data['country'])
+    <p>Страна: {{ $data['country']}}</p>
+@endif
+
+@if ($data['grade'])
+    <p>Класс: {{ $data['grade'] }}</p></p>
+@endif
+
+@if ($data['format'])
+    <p>Формат: {{ $data['format'] }}</p>
+@endif
+
+@if ($data['email'])
     <p>Email: {{ $data['email'] }}</p>
+@endif
+
+@if ($data['contact_msg'])
     <p>Текст сообщения:</p>
-{!! nl2br($data['contact_msg']) !!}
+    {!! nl2br($data['contact_msg']) !!}
+@endif
+
 </body>
 </html>
