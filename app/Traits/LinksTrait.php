@@ -6,8 +6,8 @@ use App\Models\Admin\Link;
 
 trait LinksTrait
 {
-    public static function getTeachers($page)
+    public static function getLinks($page)
     {
-        return Link::query()->where('camp', '=', $page)->get();
+        return Link::query()->where('camp', '=', $page)->first();
     }
 }

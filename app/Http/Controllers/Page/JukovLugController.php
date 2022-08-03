@@ -25,7 +25,7 @@ class JukovLugController extends Controller
         $priceForSale = PriceTrait::getPrice($this->priceForSale);
         $counselors = CounselorTrait::getTeachers($this->page);
         $photos = PhotoTrait::getPhotoByCamp($this->page);
-        $links = LinksTrait::getTeachers($this->page);
+        $links = LinksTrait::getLinks($this->page);
 
         return view('camp-jukov-lug', compact('mainNews', 'price', 'documents', 'counselors', 'photos', 'priceForSale', 'links'));
     }

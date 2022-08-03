@@ -20,7 +20,7 @@ class SchoolBelarusController extends Controller
         $mainNews = MainNewsTrait::getMainNews($this->page);
         $documents = DocumentsTrait::getDocuments($this->doc);
         $photos = GalleryTrait::getPhotoGallery();
-        $links = LinksTrait::getTeachers($this->page);
+        $links = LinksTrait::getLinks($this->page);
 
         return view('school-bel', compact('mainNews', 'documents', 'photos', 'links'));
     }

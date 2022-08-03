@@ -22,7 +22,7 @@ class GeorgiaCampController extends Controller
         $price = PriceTrait::getPrice($this->price);
         $counselors = CounselorTrait::getTeachers($this->page);
         $photos = PhotoTrait::getPhotoByCamp($this->page);
-        $links = LinksTrait::getTeachers($this->page);
+        $links = LinksTrait::getLinks($this->page);
 
         return view('camp-georgia', compact('mainNews', 'price', 'documents', 'counselors', 'photos', 'links'));
     }
