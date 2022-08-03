@@ -193,6 +193,26 @@
                         </ul>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <p>
+                                --- Cсылки для галерей
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('links.index') }}" class="nav-link">
+                                    <p>Посмотреть ссылки</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('links.create') }}" class="nav-link">
+                                    <p>Добавить ссылку</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </nav>
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">

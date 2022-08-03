@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Counselor;
 use App\Models\Admin\Document;
 use App\Models\Admin\Gallery;
+use App\Models\Admin\Link;
 use App\Models\Admin\MainNews;
 use App\Models\Admin\News;
 use App\Models\Admin\Photo;
@@ -26,7 +27,8 @@ class AdminController extends Controller
         $doc = Document::query()->count();
         $photo = Photo::query()->count();
         $gallery = Gallery::query()->count();
+        $links = Link::query()->count();
 
-        return view('admin.main', compact('news', 'teachers', 'new', 'counselors', 'doc', 'price', 'photo', 'gallery'));
+        return view('admin.main', compact('news', 'teachers', 'new', 'counselors', 'doc', 'price', 'photo', 'gallery', 'links'));
     }
 }

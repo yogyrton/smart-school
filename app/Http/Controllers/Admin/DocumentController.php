@@ -82,23 +82,39 @@ class DocumentController extends Controller
      */
     public function update(DocumentUpdateRequest $request, $id)
     {
+        $doc = Document::query()->find($id);
+        $docPage = $doc->page;
         $page = $request->page;
-        $count = Document::query()->where('page', '=', $page)->count();
 
-        if (($page == 'Лагерь Жуков Луг' || $page == 'Лагерь Дримленд' || $page == 'Лагерь в Грузии') && $count >= 2) {
-            return redirect()->route('documents.index')->with('error', 'Неверное количество документов');
+        $count = Document::query()->where('page', '=', $request->page)->count();
+
+        if (($page == 'Лагерь Жуков Луг' || $page == 'Лагерь Дримленд' || $page == 'Лагерь в Грузии') && ($count < 2 || ($count == 2 && $docPage == $request->page))) {
+            $document = Document::query()->find($id);
+            $file = $request->hasFile('path') ? $request->file('path')->store('documents','public') : $document->path;
+
+            $document->update([
+                'title' => $request->title,
+                'path' => $file,
+                'page' => $request->page,
+            ]);
+
+            return redirect()->route('documents.index')->with('success', 'Документ успешно изменен');
         }
 
-        $document = Document::query()->find($id);
-        $file = $request->hasFile('path') ? $request->file('path')->store('documents','public') : $document->path;
+        if ($page == 'Главная' ) {
+            $document = Document::query()->find($id);
+            $file = $request->hasFile('path') ? $request->file('path')->store('documents','public') : $document->path;
 
-        $document->update([
-            'title' => $request->title,
-            'path' => $file,
-            'page' => $request->page,
-        ]);
+            $document->update([
+                'title' => $request->title,
+                'path' => $file,
+                'page' => $request->page,
+            ]);
 
-        return redirect()->route('documents.index')->with('success', 'Документ успешно изменен');
+            return redirect()->route('documents.index')->with('success', 'Документ успешно изменен');
+        }
+
+        return redirect()->route('documents.index')->with('error', 'Неверное количество документов');
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Page;
 use App\Http\Controllers\Controller;
 use App\Traits\CounselorTrait;
 use App\Traits\DocumentsTrait;
+use App\Traits\LinksTrait;
 use App\Traits\MainNewsTrait;
 use App\Traits\PhotoTrait;
 use App\Traits\PriceTrait;
@@ -24,7 +25,8 @@ class JukovLugController extends Controller
         $priceForSale = PriceTrait::getPrice($this->priceForSale);
         $counselors = CounselorTrait::getTeachers($this->page);
         $photos = PhotoTrait::getPhotoByCamp($this->page);
+        $links = LinksTrait::getTeachers($this->page);
 
-        return view('camp-jukov-lug', compact('mainNews', 'price', 'documents', 'counselors', 'photos', 'priceForSale'));
+        return view('camp-jukov-lug', compact('mainNews', 'price', 'documents', 'counselors', 'photos', 'priceForSale', 'links'));
     }
 }
