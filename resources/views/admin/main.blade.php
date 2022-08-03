@@ -151,5 +151,22 @@
             </div>
         </div>
         <!-- ./col -->
+
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-orange">
+                <div class="inner">
+
+                    <h3>{{ $links }}</h3>
+                    <p>Cсылки для галерей</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="{{ route('links.index') }}" class="small-box-footer">Подробнее</a>
+            </div>
+        </div>
+        <!-- ./col -->
     </div>
 @endsection

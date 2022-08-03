@@ -39,7 +39,7 @@
            </div>
        </div>
        <div class="d-flex justify-content-center">
-            <a class="button_1 btn-pink text-bold" href="/">Смотреть все</a>
+            <a class="button_1 btn-pink text-bold" href="{{ $links->links }}" target="_blank">Смотреть все</a>
         </div>
    </div>
 </section>

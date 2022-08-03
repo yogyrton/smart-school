@@ -9,28 +9,36 @@
 </head>
 <body>
 <h1>Данные об отправителе: </h1>
-    <p>Имя: {{ $data['name'] }}</p>
+
+@if (isset($data['name']) && $data['name'])
+    <p>Имя: {{ $data['name'] }}</p></p>
+@endif
+
+@if (isset($data['phone']) && $data['phone'])
     <p>Телефон: {{ $data['phone'] }}</p>
-@if ($data['country'])
+@endif
+
+@if (isset($data['country']) && $data['country'])
     <p>Страна: {{ $data['country']}}</p>
 @endif
 
-@if ($data['grade'])
+@if (isset($data['grade']) && $data['grade'])
     <p>Класс: {{ $data['grade'] }}</p></p>
 @endif
 
-@if ($data['format'])
+@if (isset($data['format']) && $data['format'])
     <p>Формат: {{ $data['format'] }}</p>
 @endif
 
-@if ($data['email'])
+@if (isset($data['email']) && $data['email'])
     <p>Email: {{ $data['email'] }}</p>
 @endif
 
-@if ($data['contact_msg'])
+@if (isset($data['contact_msg']) && $data['contact_msg'])
     <p>Текст сообщения:</p>
     {!! nl2br($data['contact_msg']) !!}
 @endif
+
 
 </body>
 </html>
