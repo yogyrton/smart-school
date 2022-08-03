@@ -134,7 +134,7 @@
                                     <a class="h5 mobile-link" href="/camp">Детский лагерь</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="#replies">Отзывы</a>
+                                    <a class="h5 mobile-link" href="/#replies">Отзывы</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Одно окно</a>

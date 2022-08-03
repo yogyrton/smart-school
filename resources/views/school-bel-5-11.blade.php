@@ -19,8 +19,8 @@
                         Частная школа в Республике Беларусь <span class="nowrap">5-11 классы</span>
                     </h1>
                     <div class="btn-group">
-                        <a href="/school-belarus/senior#address" class="button_1 btn-purple">Dreamland</a>
-                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
+                        <a href="/school-belarus/senior#address" class="button_1 btn-purple text-bold">Dreamland</a>
+                        <button class="button_1 btn-pink text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">

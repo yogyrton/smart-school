@@ -64,6 +64,8 @@
                     </div>
                     @endif
 
+                    
+
                     @if($routeName !== 'russia')
                     <div class="swiper-slide">
                         <a class="school-box school-box-short" href="/school-russia">
@@ -85,7 +87,7 @@
 
                     @if($routeName === 'online' || $routeName === 'russia')
                         <div class="school-box school-box-desktop">
-                            <img class="w-100" src="/img/main/school/photo5.png" alt="children-img">
+                            <img class="w-100" src="/img/main/school/online.jpg" alt="children-img">
                         </div>
                     @endif
 
