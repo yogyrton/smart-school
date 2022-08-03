@@ -13,7 +13,7 @@ use App\Http\Controllers\Page\OnlineSchoolController;
 use App\Http\Controllers\Page\SchoolRussiaController;
 use App\Http\Controllers\Page\CampController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\URL;
 
 Route::prefix('login')->middleware('throttle:test')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('login');
