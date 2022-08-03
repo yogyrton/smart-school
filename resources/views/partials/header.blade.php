@@ -144,7 +144,7 @@
                                 </li>
                             </ul>
                             <div class="d-flex flex-column header-contacts-messengers">
-                                <a target="_blank" href="">
+                                <a target="_blank" href="https://www.instagram.com/smartschool_minsk/">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_182_1856)">
@@ -159,7 +159,7 @@
                                         </defs>
                                     </svg>
                                 </a>
-                                <a target="_blank" href="">
+                                <a target="_blank" href="https://www.facebook.com/people/Smart-School-%25D1%2587%25D0%25B0%25D1%2581%25D1%2582%25D0%25BD%25D0%25B0%25D1%258F-%25D1%2588%25D0%25BA%25D0%25BE%25D0%25BB%25D0%25B0/100039861583458/">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -167,7 +167,7 @@
                                               fill="#8041FF"/>
                                     </svg>
                                 </a>
-                                <a target="_blank" href="">
+                                <a target="_blank" href="https://vk.com/smartschool_minsk">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_182_1860)">
@@ -182,7 +182,7 @@
                                         </defs>
                                     </svg>
                                 </a>
-                                <a target="_blank" href="">
+                                <a target="_blank" href="tg://resolve?domain=sm_education_bot&start=ml15">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
