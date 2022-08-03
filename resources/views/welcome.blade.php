@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Международная сеть частных школ Smart School')
-@section('description', 'Международная сеть частных школ Smart School - это официальное частное учреждение образования в Беларуси, России, Грузии, Польше.')
+@section('title', 'Частная школа Smart School')
+@section('description', 'Оффлайн и онлайн обучение для 1-11 классов в Беларуси, России, Грузии, Польше в школе Смарт Скул. Театральная студия, занятия с репетитором, подготовка к школе, факультативы, курсы, лагеря.')
 @section('content')
     <section id="head" class="head position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container container-mob">

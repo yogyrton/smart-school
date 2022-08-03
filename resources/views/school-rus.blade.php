@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Частная школа Smart School в России')
-@section('description', 'Частная школа Smart School предлагает обучение в любой точке мира с классами до 12 человек.')
+@section('title', 'Онлайн школа Смарт Скул - Школьная программа дистанционно')
+@section('description', 'Дистанционное обучение для 1-11 классов в школе Smart School в России. Современное онлайн-образование, занятия с репетитором, факультативы, курсы, лагеря.')
 @section('content')
     @php($activeNav = 'school')
 
