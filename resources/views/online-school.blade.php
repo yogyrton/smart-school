@@ -5,7 +5,7 @@
     @php($activeNav = 'school')
 
     <section id="head"
-             class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+             class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
@@ -295,10 +295,22 @@
         </div>
     </section>
 
-    @include('sections.faq-online')
-    @include('sections.news')
-    @include('sections.documents')
-    @include('sections.contacts')
+    <div class="pb-120">
+        @include('sections.faq-online')
+    </div>
+    
+    <div class="pb-120">
+        @include('sections.news')
+    </div>
+
+    <div class="pb-120">
+        @include('sections.documents')
+    </div>
+    
+    <div class="pb-120">
+        @include('sections.contacts')
+    </div>
+    
     <div class="pb-120">
         @include('sections.schools-common')
     </div>

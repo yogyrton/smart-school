@@ -14619,7 +14619,17 @@ body {
 }
 
 html {
-  scroll-padding-top: 50px;
+  scroll-padding-top: 120px;
+}
+@media screen and (max-width: 1200px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+}
+@media screen and (max-width: 992px) {
+  html {
+    scroll-padding-top: 40px;
+  }
 }
 
 .w-100 {
@@ -14975,6 +14985,10 @@ button {
   border: 1px solid #8041FF;
 }
 
+.mt-80 {
+  margin-top: 80px;
+}
+
 .mb-8 {
   margin-bottom: 8px;
 }
@@ -15078,6 +15092,15 @@ button {
   }
 }
 
+.mb-120 {
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 992px) {
+  .mb-120 {
+    margin-bottom: 40px;
+  }
+}
+
 .pt-120 {
   padding-top: 120px;
 }
@@ -15085,6 +15108,22 @@ button {
   .pt-120 {
     padding-top: 40px;
   }
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mt-160 {
+  margin-top: 160px;
+}
+
+.mb-160 {
+  margin-bottom: 160px;
+}
+
+.pb-160 {
+  padding-bottom: 160px;
 }
 
 .border-20 {
@@ -16230,6 +16269,8 @@ input:-webkit-autofill {
 @media screen and (max-width: 1440px) {
   .head {
     min-height: 600px;
+    margin-top: 0;
+    padding-bottom: 0;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -16478,6 +16519,16 @@ input:-webkit-autofill {
   background: #8041FF;
 }
 
+@media screen and (max-width: 1440px) {
+  #history {
+    padding-top: 120px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #history {
+    padding-top: 40px;
+  }
+}
 #history .history-text-box {
   max-width: 654px;
 }
@@ -16649,30 +16700,84 @@ input:-webkit-autofill {
   }
 }
 
-#documents .wrapper {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 12px;
-}
-@media screen and (max-width: 1500px) {
-  #documents .wrapper {
-    grid-template-columns: repeat(4, 1fr);
+@media screen and (max-width: 1200px) {
+  #documents {
+    padding-bottom: 100px;
   }
 }
-@media screen and (max-width: 768px) {
-  #documents .wrapper {
-    grid-template-columns: 1fr;
-    grid-row-gap: 12px;
-    grid-column-gap: 0;
+@media screen and (max-width: 700px) {
+  #documents {
+    padding-bottom: 50px;
   }
-}
-#documents .document-button {
-  flex: 0 1 198px;
 }
 #documents a {
   display: block;
   width: 100%;
+}
+#documents .swiper-pagination {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  #documents .swiper-pagination {
+    display: block;
+    bottom: -40px;
+  }
+}
+#documents .slider-button-next {
+  right: 0px;
+  transform: translateX(55px);
+  position: absolute;
+}
+@media screen and (max-width: 1400px) {
+  #documents .slider-button-next {
+    right: 50%;
+    transform: translate(145%, -100%);
+    bottom: -130px;
+    top: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #documents .slider-button-next {
+    transform: translate(100%, -105%);
+  }
+}
+@media screen and (max-width: 700px) {
+  #documents .slider-button-next {
+    display: none;
+  }
+}
+#documents .slider-button-prev {
+  left: 0px;
+  transform: translateX(-55px);
+  position: absolute;
+}
+@media screen and (max-width: 1400px) {
+  #documents .slider-button-prev {
+    left: 50%;
+    transform: translate(-100%, -100%);
+    bottom: -130px;
+    top: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #documents .slider-button-prev {
+    transform: translate(-100%, -105%);
+  }
+}
+@media screen and (max-width: 700px) {
+  #documents .slider-button-prev {
+    display: none;
+  }
+}
+#documents .swiper-button-disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+@media screen and (max-width: 1200px) {
+  #documents .swiper-button-disabled {
+    opacity: 1;
+    visibility: inherit;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -16975,7 +17080,8 @@ input:-webkit-autofill {
 @media screen and (max-width: 990px) {
   #replies {
     margin-bottom: 0;
-    padding-bottom: 110px;
+    padding-bottom: 80px;
+    padding-top: 30px;
   }
 }
 #replies img {
@@ -17244,6 +17350,12 @@ input:-webkit-autofill {
   background: #8041FF;
 }
 
+@media screen and (max-width: 990px) {
+  #order-section {
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+}
 #order-section #order-section img {
   -o-object-fit: contain;
      object-fit: contain;

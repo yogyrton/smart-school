@@ -483,6 +483,50 @@ const swiper_19 = new Swiper('#campLinks .swiper', {
     }
 });
 
+const swiper_20 = new Swiper('#documents .swiper', {
+    slidesPerView: 1,
+    loop: false,
+    pagination: {
+        el: "#documents .swiper-pagination",
+        clickable: true
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        900: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        1400: {
+            slidesPerView: 5,
+            spaceBetween: 30
+        },
+        1500: {
+            slidesPerView: 6,
+            spaceBetween: 30
+        }
+    },
+    navigation: {
+        nextEl: '#documents .slider-button-next',
+        prevEl: '#documents .slider-button-prev',
+    },
+});
+
+
 
 //для уменьшения лого при скролле
 window.onscroll = function () {

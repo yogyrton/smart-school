@@ -4,7 +4,7 @@
 @section('content')
 
     @php($activeNav = 'school')
-    <section id="head" class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+    <section id="head" class="head pb-80 mt-80  position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
@@ -126,7 +126,7 @@
 
     @include('sections.advantagies')
 
-    <section class="pt-120 scrollreveal" id="address">
+    <section class="pt-120 pb-120 scrollreveal" id="address">
         <div class="container">
             <h2 class="accentColor mb-40">Наши школы</h2>
             <div class="row mb-40">
@@ -172,9 +172,11 @@
         </div>
     </section>
 
-    @include('sections.documents')
-
-    <div class="pt-120">
+    <div class="pb-120">
+        @include('sections.documents')
+    </div>
+    
+    <div class="pb-120">
         @include('sections.album')
     </div>
     

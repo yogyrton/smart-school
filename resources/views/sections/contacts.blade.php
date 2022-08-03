@@ -3,7 +3,7 @@
 @if($routeName === 'russia') @php($regionNumber = 79680710905)
 @else @php($regionNumber = 375255066588)
 @endif
-<section id="order-section" class="pt-120 order-section scrollreveal">
+<section id="order-section" class="order-section scrollreveal">
     <div class="container">
         <div class="row container-mob justify-content-between">
             <div class="col-lg-5 mb-5 mb-lg-0 d-flex flex-column contacts-wrapper">
