@@ -21,6 +21,7 @@
         grid-row-gap: 12px
     @media screen and (max-width: 767px)
         grid-template-columns: repeat(2, 48%)
+        margin-bottom: 32px
     @media screen and (max-width: 400px)
         grid-template-columns: repeat(2, 49%)
         column-gap: 8px
@@ -150,12 +151,13 @@
             white-space: nowrap
 
 //pagination
-#schedule .swiper-pagination
-    display: none
-    bottom: -25%
-    position: absolute
-    @media screen and (max-width: 992px)
-        display: block
+#schedule 
+    .swiper-pagination
+        display: none
+        bottom: -25%
+        position: absolute
+        @media screen and (max-width: 992px)
+            display: block
 
     .swiper-pagination-bullet
         opacity: 1
@@ -168,39 +170,38 @@
         background: $accentColor
 
 //arrows
-.slider-button-next, .slider-button-prev
-    @media screen and (max-width: 992px)
-        display: none
+    .slider-button-next, .slider-button-prev
+        @media screen and (max-width: 992px)
+            display: none
 
-.slider-button-next
-    right: 0px
-    transform: translateX(55px)
-    position: absolute
-    @media screen and (max-width: 1400px)
-        right: 50%
-        transform: translate(145%, -100%)
-        bottom: -130px
-        top: auto
-    @media screen and (max-width: 1200px)
-        transform: translate(100%, -100%)
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -100%)
 
-.slider-button-prev
-    left: 0px
-    transform: translateX(-55px)
-    position: absolute
-    @media screen and (max-width: 1400px)
-        left: 50%
-        transform: translate(-100%, -100%)
-        bottom: -130px
-        top: auto
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
 
-
-.swiper-button-disabled
-    opacity: 0
-    visibility: hidden
-    @media screen and (max-width: 1200px)
-        opacity: 1
-        visibility: inherit
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
 
 
 #campLinks

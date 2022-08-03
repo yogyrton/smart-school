@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@php($routeName = Route::current()->getName())
 @php($page = Route::current()->getName())
 
 <section id="head"
@@ -23,7 +24,7 @@
                         <a href="/camp/georgia" class="button_1 btn-purple">Грузия</a>
                         <a href="/dev" class="button_1 btn-purple">Польша</a>
                         <a href="/camp" class="button_1 btn-purple">Онлайн</a>
-                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
+                        <button class="button_1 btn-pink w-100" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">

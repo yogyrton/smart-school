@@ -1,5 +1,5 @@
 @if(!empty($photos)  && count($photos) > 0)
-<section id="album" class="pb-120 pt-120 scrollreveal">
+<section id="album" class="scrollreveal">
    <div class="container">
        <h2 class="accentColor mb-40">Фотогалерея</h2>
        <div class="swiper-box mb-40">

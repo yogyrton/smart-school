@@ -1,5 +1,6 @@
 @extends('layouts.app')
-
+@section('title', 'Частная школа Smart School в Республике Беларусь')
+@section('description', 'Частная школа Smart School предлагает интерактивную среду обучения, где учащиеся активно и уверенно участвуют в собственном образовании.')
 @section('content')
 
     @php($activeNav = 'school')
@@ -8,8 +9,8 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/school-belarus.png" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/school-belarus-mob.png" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/school-belarus.webp" alt="" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/school-belarus-mob.webp" alt="" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -125,8 +126,9 @@
 
     @include('sections.advantagies')
 
-    <section class="pt-120 pb-120 scrollreveal" id="address">
+    <section class="pt-120 scrollreveal" id="address">
         <div class="container">
+            <h2 class="accentColor mb-40">Наши школы</h2>
             <div class="row mb-40">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <div class="d-flex flex-column justify-content-between h-100">
@@ -171,8 +173,15 @@
     </section>
 
     @include('sections.documents')
-    @include('sections.album')
-    @include('sections.contacts')
+
+    <div class="pt-120">
+        @include('sections.album')
+    </div>
+    
+    <div class="pb-120">
+        @include('sections.contacts')
+    </div>
+
     @include('sections.schools-without-bel')
 
 @stop

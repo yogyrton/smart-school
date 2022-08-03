@@ -14,6 +14,7 @@
                     <div class="swiper-slide"><img src="/img/main/replies/reply1.png" alt="reply-1"></div>
                     <div class="swiper-slide"><img src="/img/main/replies/reply2.png" alt="reply-2"></div>
                     <div class="swiper-slide"><img src="/img/main/replies/reply3.png" alt="reply-3"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/reply3.png" alt="reply-3"></div>
                 </div>
 
             </div>

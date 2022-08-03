@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="school-box school-box-desktop">
-                        <img class="w-100" src="/img/main/school/photo2.png" alt="children-img">
+                        <img class="w-100" src="/img/main/school/gruziya.jpg" alt="children-img">
                     </div>
 
                     @if($routeName !== 'online')

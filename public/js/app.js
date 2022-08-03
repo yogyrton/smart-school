@@ -77300,29 +77300,25 @@ var slideUp = {
   duration: 1000,
   reset: false
 }); //для плавного скролла к разделам
-
-var menuLinks = document.querySelectorAll('.menu-link[data-goto]');
-
-if (menuLinks.length > 0) {
-  var onMenuLinkClick = function onMenuLinkClick(e) {
-    var menuLink = e.target;
-
-    if (menuLink.dataset["goto"] && document.querySelector(menuLink.dataset["goto"])) {
-      var gotoBlock = document.querySelector(menuLink.dataset["goto"]);
-      var gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-      window.scrollTo({
-        top: gotoBlockValue,
-        behavior: "smooth"
-      });
-      e.preventDefault();
-    }
-  };
-
-  menuLinks.forEach(function (menuLink) {
-    menuLink.addEventListener("click", onMenuLinkClick);
-  });
-} //свайперы
-
+// const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
+// if (menuLinks.length > 0) {
+//     menuLinks.forEach(menuLink => {
+//         menuLink.addEventListener("click", onMenuLinkClick);
+//     });
+//     function onMenuLinkClick(e) {
+//         const menuLink = e.target;
+//         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+//             const gotoBlock = document.querySelector(menuLink.dataset.goto);
+//             const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+//             window.scrollTo({
+//                 top: gotoBlockValue,
+//                 behavior: "smooth"
+//             });
+//             e.preventDefault();
+//         }
+//     }
+// }
+//свайперы
 
 var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head .swiper', {
   loop: false,
@@ -77336,12 +77332,15 @@ var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head 
 var swiper_2 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#teachers .swiper', {
   loop: false,
   slidesPerView: 1,
+  slidesPerGroup: 1,
   spaceBetween: 30,
   navigation: {
     nextEl: '.teachers .slider-button-next',
     prevEl: '.teachers .slider-button-prev'
   },
   pagination: {
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
     el: ".teachers .swiper-pagination",
     clickable: true,
     renderBullet: function renderBullet(index, className) {
@@ -77368,8 +77367,8 @@ var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#repli
   slidesPerView: 3,
   spaceBetween: 30,
   navigation: {
-    nextEl: '.replies .slider-button-next',
-    prevEl: '.replies .slider-button-prev'
+    nextEl: '#replies .slider-button-next',
+    prevEl: '#replies .slider-button-prev'
   },
   pagination: {
     el: ".replies .swiper-pagination",
@@ -77397,12 +77396,8 @@ var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#repli
       spaceBetween: 10
     },
     1200: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    },
-    1600: {
       slidesPerView: 3,
-      spaceBetween: 20
+      spaceBetween: 10
     }
   }
 });
