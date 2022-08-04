@@ -15,13 +15,13 @@
                         <div class="footer-box">
                             <h5 class="text-bold mb-16">О нас</h5>
                             <ul class="footer-list">
-                                <li class="footer-list-item"><a href="@if($routeName === 'home')#history @else /#history @endif">История</a></li>
+                                <li class="footer-list-item"><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif">История</a></li>
                                 <li class="footer-list-item "><a href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
-                                <li class="footer-list-item "><a href="@if($routeName === 'home')#priority @else /#priority @endif">Преимущества</a></li>
+                                <li class="footer-list-item "><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )#priority @else /#priority @endif">Преимущества</a></li>
                                 <li class="footer-list-item "><a href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
-                                <li class="footer-list-item "><a href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a></li>
-                                <li class="footer-list-item "><a href="@if($routeName === 'home')#news @else /#news @endif">Новости</a></li>
-                                <li class="footer-list-item "><a href="@if($routeName === 'home')#documents @else /#documents @endif">Документы</a></li>
+                                <li class="footer-list-item "><a href="@if($routeName === 'home' || $routeName === 'camp' )#replies @else /#replies @endif">Отзывы</a></li>
+                                <li class="footer-list-item "><a href="@if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )#news @else /#news @endif">Новости</a></li>
+                                <li class="footer-list-item "><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )#documents @else /#documents @endif">Документы</a></li>
                             </ul>
                         </div>
                         <div class="footer-box">
@@ -57,7 +57,7 @@
                         </div>
                         <div class="footer-box">
                             <ul class="footer-list mb-40">
-                                <li class="text-bold mb-12"><a href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a></li>
+                                <li class="text-bold mb-12"><a href="@if($routeName === 'home' || $routeName === 'camp' )#replies @else /#replies @endif">Отзывы</a></li>
                                 <li class="text-bold mb-12"><a href="/dev">Одно окно</a></li>
                                 <li class="text-bold"><a href="#order-section">Контакты</a></li>
                             </ul>
