@@ -119,7 +119,7 @@ const swiper_3 = new Swiper('#replies .swiper', {
         },
     },
     breakpoints: {
-        320: {
+        280: {
             slidesPerView: 1,
             spaceBetween: 30,
             // autoHeight: true,
@@ -250,9 +250,8 @@ const swiper_8 = new Swiper('#priority .swiper', {
         rows: 2,
     },
     breakpoints: {
-        320: {
+        280: {
             slidesPerView: 1,
-            spaceBetween: 30,
             rows: 2,
         },
         768: {
@@ -276,6 +275,10 @@ const swiper_9 = new Swiper('#priority-online .swiper', {
     },
 
     breakpoints: {
+        280: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
         320: {
             slidesPerView: 1,
             spaceBetween: 0,
