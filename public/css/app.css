@@ -15626,7 +15626,6 @@ header.tiny .logo img {
   align-items: center;
   justify-content: center;
   z-index: 0;
-  cursor: pointer;
 }
 .advantages .grid-wrapper .grid-box .overlay-title {
   position: absolute;

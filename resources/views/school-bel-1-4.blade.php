@@ -3,6 +3,9 @@
 @section('title', 'Начальная частная школа Смарт Скул в Минске 1-4 классы')
 @section('description', 'Оффлайн и онлайн обучение для 1-4 классов в Беларуси, России, Грузии, Польше. Начальная школа Smart School ведет набор на подготовку к школе в Минске.')
 @section('content')
+
+@php($routeName = Route::current()->getName())
+
     @php($activeNav = 'school')
 
     <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">

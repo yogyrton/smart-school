@@ -2,6 +2,7 @@
 @section('title', 'Онлайн школа Смарт Скул - Школьная программа дистанционно')
 @section('description', 'Дистанционное обучение для 1-11 классов в школе Smart School в России. Современное онлайн-образование, занятия с репетитором, факультативы, курсы, лагеря.')
 @section('content')
+@php($routeName = Route::current()->getName())
     @php($activeNav = 'school')
 
     <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
@@ -53,7 +54,7 @@
     <section id="history" class="history pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">О нас</h2>
-            <div class="row align-items-center justify-content-between container-mob">
+            <div class="row justify-content-between container-mob">
                 <div class=" col-lg-7 text order-2 order-lg-7">
                     <div class="history-text-box">
                         <p class="pb-10">

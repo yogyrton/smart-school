@@ -77845,6 +77845,7 @@ $(document).ready(function () {
     delegate: 'a',
     type: 'image',
     tLoading: 'Загрузка...',
+    closeOnContentClick: true,
     mainClass: 'mfp-img-mobile',
     gallery: {
       enabled: true,

@@ -2,6 +2,7 @@
 @section('title', 'Онлайн школа Смарт Скул - Школьная программа онлайн')
 @section('description', 'Онлайн обучение для 1-11 классов в школе Smart School. Современное образование, занятия с репетитором, подготовка к школе, факультативы, курсы, лагеря.')
 @section('content')
+@php($routeName = Route::current()->getName())
     @php($activeNav = 'school')
 
     <section id="head"
