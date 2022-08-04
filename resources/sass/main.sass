@@ -181,6 +181,8 @@ h1, .h1
         line-height: 32px
     @media screen and (max-width: 1500px)
         white-space: normal
+    @media screen and (max-width: 300px)
+        font-size: 28px
 
 h2, .h2
 
@@ -191,8 +193,9 @@ h2, .h2
         font-size: 32px
         line-height: 32px
     @media screen and (max-width: 359px)
-        font-size: 28px
-        line-height: 28px
+        font-size: 24px
+        line-height: 26px
+
 
 h3, .h3
     font-size: 32px
@@ -412,7 +415,9 @@ h2.mb-60, h1.mb-60
         height: 100%
         @media screen and (max-width: 800px)
             width: auto
-
+        @media screen and (max-width: 300px)
+            max-width: 265px !important
+        
         .modal-close
             width: 20px
             height: 20px
@@ -1005,6 +1010,9 @@ textarea
     padding: 4px 8px
     text-align: center
     cursor: pointer
+    @media screen and (max-width: 300px)
+        right: 5px
+
 
 
 .multiselect__select:before
@@ -1170,6 +1178,8 @@ input:-webkit-autofill
     .footer-socials
         display: flex
         gap: 16px
+        @media screen and (max-width: 300px)
+            gap: 5px
 
     address
         color: $grey

@@ -5,6 +5,7 @@
     display: flex
     align-items: flex-end
     z-index: 10
+    position: relative
     @media screen and (max-width: 1440px)
         min-height: 600px
         margin-top: 0
@@ -16,6 +17,17 @@
         padding: 40px 0
     @media screen and (max-width: 767px)
         padding: 60px 0
+    &:before
+        @media screen and (min-width: 1500px)
+            content:""
+            position: absolute
+            width: 245px
+            height: 145px
+            bottom: 0
+            right: 0
+            transform: translate(-35%, -55%)
+            background-image: url('/img/main/head-recangle.svg')
+            background-repeat: no-repeat
 
 
     .head--container
@@ -86,6 +98,9 @@
         @media screen and (max-width: 360px)
             grid-template-columns: 100%
             grid-row-gap: 12px
+        @media screen and (max-width: 300px)
+            grid-template-columns: 95%
+            grid-row-gap: 12px
 
         .button_1
             @media screen and (max-width: 767px)
@@ -131,7 +146,7 @@
 
 .head.notification-size
     @media screen and (max-width: 767px)
-        padding: 60px 0 155px 0
+        padding: 60px 0 200px 0
 
 .head.notification-size-2
     @media screen and (max-width: 767px)
@@ -456,6 +471,9 @@
             &:last-child
                 grid-column-start: 3
                 grid-column-end: 5
+        @media screen and (max-width: 300px)
+            height: fit-content
+
     a.school-box
         &:hover
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2)
@@ -905,7 +923,8 @@
             //top: 4px
 
         .contacts-socials
-            //gap: 12px
+            @media screen and (max-width: 300px)
+                flex-wrap: wrap
 
             .contacts-socials-link
                 margin-right: 12px

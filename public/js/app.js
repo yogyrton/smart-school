@@ -77378,7 +77378,7 @@ var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#repli
     }
   },
   breakpoints: {
-    320: {
+    280: {
       slidesPerView: 1,
       spaceBetween: 30 // autoHeight: true,
 
@@ -77504,9 +77504,8 @@ var swiper_8 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#prior
     rows: 2
   },
   breakpoints: {
-    320: {
+    280: {
       slidesPerView: 1,
-      spaceBetween: 30,
       rows: 2
     },
     768: {
@@ -77528,6 +77527,10 @@ var swiper_9 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#prior
     clickable: true
   },
   breakpoints: {
+    280: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
     320: {
       slidesPerView: 1,
       spaceBetween: 0
