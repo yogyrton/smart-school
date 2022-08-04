@@ -18,13 +18,13 @@
                                 О нас
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#history">История</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif">История</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
-                                <li><a class="dropdown-item" href="#priority">Преимущества</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )#priority @else /#priority @endif">Преимущества</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a></li>
-                                <li><a class="dropdown-item" href="#news">Новости</a></li>
-                                <li><a class="dropdown-item" href="#documents">Документы</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'camp' )#replies @else /#replies @endif">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )#news @else /#news @endif">Новости</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )#documents @else /#documents @endif">Документы</a></li>
                             </ul>
                         </div>
 
@@ -131,7 +131,7 @@
                                     <a class="h5 mobile-link" href="/dev">Доп.услуги</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/camp">Детский лагерь</a>
+                                    <a class="h5 mobile-link" href="/dev">Детский лагерь</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/#replies">Отзывы</a>

@@ -183,27 +183,27 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="grid-wrapper">
-                        <a class="grid-box" href="/">
+                        <div class="grid-box" >
                             <img src="/img/main/advantages/img1.png" alt="image-1">
                             <div class="overlay-title">
                                 <h3>Первоклассник</h3>
                             </div>
-                        </a>
-                        <a class="grid-box" href="/"><img src="/img/main/advantages/img2.png" alt="image-2">
+                        </div>
+                        <div class="grid-box"><img src="/img/main/advantages/img2.png" alt="image-2">
                             <div class="overlay-title">
                                 <h3>Обучение</h3>
                             </div>
-                        </a>
-                        <a class="grid-box" href="/"><img src="/img/main/advantages/img3.png" alt="image-3">
+                        </div>
+                        <div class="grid-box" ><img src="/img/main/advantages/img3.png" alt="image-3">
                             <div class="overlay-title">
                                 <h3>Старшеклассник</h3>
                             </div>
-                        </a>
-                        <a class="grid-box" href="/"><img src="/img/main/advantages/img4.png" alt="image-4">
+                        </div>
+                        <div class="grid-box"><img src="/img/main/advantages/img4.png" alt="image-4">
                             <div class="overlay-title">
                                 <h3>Достижения</h3>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

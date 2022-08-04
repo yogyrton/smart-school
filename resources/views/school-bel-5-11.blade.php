@@ -3,6 +3,7 @@
 @section('title', 'Средняя частная школа Смарт Скул в Минске 5-11 классы')
 @section('description', 'Оффлайн и онлайн обучение для 5-11 классов в Беларуси, России, Грузии, Польше. Театральная студия, занятия с репетитором, факультативы, подготовка к ЦТ, курсы, лагеря.')
 @section('content')
+@php($routeName = Route::current()->getName())
     @php($activeNav = 'school')
 
     <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
