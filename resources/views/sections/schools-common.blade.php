@@ -1,7 +1,7 @@
 @php($routeName = Route::current()->getName())
-<section id="school" class="@if($routeName === 'home') pt-120 @endif scrollreveal">
+<section id="school" class="@if($routeName === 'home') @endif scrollreveal">
     <div class="container">
-        <h2 class="accentColor mb-40">Школа</h2>
+        <h2 class="accentColor mb-40">Школы</h2>
         <div class="swiper-box">
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -64,6 +64,8 @@
                     </div>
                     @endif
 
+                    
+
                     @if($routeName !== 'russia')
                     <div class="swiper-slide">
                         <a class="school-box school-box-short" href="/school-russia">
@@ -85,7 +87,7 @@
 
                     @if($routeName === 'online' || $routeName === 'russia')
                         <div class="school-box school-box-desktop">
-                            <img class="w-100" src="/img/main/school/photo5.png" alt="children-img">
+                            <img class="w-100" src="/img/main/school/online.jpg" alt="children-img">
                         </div>
                     @endif
 

@@ -3,6 +3,7 @@
 @section('title', 'Средняя частная школа Смарт Скул в Минске 5-11 классы')
 @section('description', 'Оффлайн и онлайн обучение для 5-11 классов в Беларуси, России, Грузии, Польше. Театральная студия, занятия с репетитором, факультативы, подготовка к ЦТ, курсы, лагеря.')
 @section('content')
+@php($routeName = Route::current()->getName())
     @php($activeNav = 'school')
 
     <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
@@ -16,11 +17,11 @@
 
                 <div>
                     <h1 class="h1 pb-48">
-                        Частная школа в Республике Беларусь <span class="nowrap">5-11 классы</span>
+                        Частная школа <br> в Республике Беларусь <span class="nowrap">5-11 классы</span>
                     </h1>
                     <div class="btn-group">
-                        <a href="/school-belarus/senior#address" class="button_1 btn-purple">Dreamland</a>
-                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
+                        <a href="/school-belarus/senior#address" class="button_1 btn-purple text-bold">Dreamland</a>
+                        <button class="button_1 btn-pink text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">
@@ -131,7 +132,7 @@
 
     <section class="pt-120 pb-120 scrollreveal" id="address">
         <div class="container">
-            <div class="row align-items-center mb-160">
+            <div class="row align-items-center">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <a href="https://goo.gl/maps/F79utxo4z8EmgPKG8" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
                         <img src="/svg/location.svg" alt="" class="me-3">
@@ -279,7 +280,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Дополнительные занятия (на выбор):
+                                    По желанию с дополнительной оплатой:
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">

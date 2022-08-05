@@ -2,6 +2,7 @@
 @section('title', 'Частная школа Смарт Скул в Минске 1-11 классы')
 @section('description', 'Оффлайн и онлайн обучение для 1-11 классов в Беларуси в Минске в школе Smart School. Театральная студия, занятия с репетитором, подготовка к школе, факультативы, курсы, лагеря.')
 @section('content')
+@php($routeName = Route::current()->getName())
 
     @php($activeNav = 'school')
     <section id="head" class="head pb-80 mt-80  position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
@@ -15,12 +16,12 @@
 
                 <div>
                     <h1 class="h1 pb-48">
-                        Частная школа в Республике Беларусь
+                        Частная школа <br> в Республике Беларусь
                     </h1>
                     <div class="btn-group btn-group-3">
-                        <a href="/school-belarus/junior" class="button_1 btn-purple">1-4 класс</a>
-                        <a href="/school-belarus/senior" class="button_1 btn-purple">5-11 класс</a>
-                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
+                        <a href="/school-belarus/junior" class="button_1 btn-purple text-bold">1-4 класс</a>
+                        <a href="/school-belarus/senior" class="button_1 btn-purple text-bold">5-11 класс</a>
+                        <button class="button_1 btn-pink text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">

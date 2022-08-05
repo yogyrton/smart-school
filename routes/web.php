@@ -46,6 +46,10 @@ Route::fallback(function (){
     return view('errors.404');
 });
 
+Route::get('/thanks', function (){
+    return view('errors.thanks');
+});
+
 
 //Route::domain('test.urist-perevozki.by')->group(function(){
 //    Route::get('/', function () {

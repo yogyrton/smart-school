@@ -1,4 +1,4 @@
-<section class="priority pt-120 pb-120 scrollreveal" id="priority">
+<section class="priority pt-80 pb-60 scrollreveal" id="priority">
     <div class="container">
         <h2 class="accentColor mb-60">Вам точно к нам, если для вас важны</h2>
 
@@ -63,7 +63,7 @@
                             <img src="/svg/hand.webp" alt="hand-svg" width="60">
                             <div class="d-flex flex-column">
                                 <h5 class="text-bold">БЛАГОПОЛУЧИЕ И ЗДОРОВЬЕ</h5>
-                                <p class="text">Психологическое сопровождение и тренинги по авторской программе “Секрет
+                                <p class="text">Психологическое сопровождение и тренинги <br> по авторской программе “Секрет
                                     успешного обучения”.</p>
                             </div>
                         </div>

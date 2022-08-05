@@ -5549,23 +5549,28 @@ __webpack_require__.r(__webpack_exports__);
           country: this.form.country,
           grade: this.form.grade,
           contact_msg: this.form.contact_msg
-        }).then(function (response) {
-          if (response) {
-            $('#requestModal').modal('hide');
-            Swal.fire({
-              allowEscapeKey: false,
-              title: 'Спасибо, Ваша заявка успешно отправлена!',
-              icon: 'error',
-              confirmButtonText: 'На главную',
-              customClass: {
-                container: 'full-height-swall'
-              }
-            }).then(function (result) {
-              if (result.isConfirmed) {
-                window.location.href = '/';
-              }
-            });
-          }
+        })
+        /*.then(response => {
+            if (response) {
+                $('#requestModal').modal('hide');
+                Swal.fire({
+                    allowEscapeKey: false,
+                    title: 'Спасибо, Ваша заявка успешно отправлена!',
+                    icon: 'error',
+                    confirmButtonText: 'На главную',
+                    customClass: {
+                        container: 'full-height-swall'
+                    }
+                })
+                    .then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href='/'
+                        }
+                    });
+            }
+        })*/
+        .then(function (response) {
+          if (response) window.location.href = '/thanks';
         });
       }
     },
@@ -77378,7 +77383,7 @@ var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#repli
     }
   },
   breakpoints: {
-    320: {
+    280: {
       slidesPerView: 1,
       spaceBetween: 30 // autoHeight: true,
 
@@ -77486,7 +77491,10 @@ var swiper_7 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#partn
       slidesPerView: 1,
       spaceBetween: 30
     },
-    768: {
+    700: {
+      slidesPerView: 3
+    },
+    1400: {
       slidesPerView: 4
     }
   }
@@ -77504,9 +77512,8 @@ var swiper_8 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#prior
     rows: 2
   },
   breakpoints: {
-    320: {
+    280: {
       slidesPerView: 1,
-      spaceBetween: 30,
       rows: 2
     },
     768: {
@@ -77528,6 +77535,10 @@ var swiper_9 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#prior
     clickable: true
   },
   breakpoints: {
+    280: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
     320: {
       slidesPerView: 1,
       spaceBetween: 0
@@ -77845,6 +77856,7 @@ $(document).ready(function () {
     delegate: 'a',
     type: 'image',
     tLoading: 'Загрузка...',
+    closeOnContentClick: true,
     mainClass: 'mfp-img-mobile',
     gallery: {
       enabled: true,

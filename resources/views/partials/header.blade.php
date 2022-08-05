@@ -18,28 +18,28 @@
                                 О нас
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#history">История</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif">История</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
-                                <li><a class="dropdown-item" href="#priority">Преимущества</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' ||   $routeName === 'senior'  || $routeName === 'junior' )#priority @elseif ($routeName === 'russia' || $routeName === 'online') #priority-online @else /#priority @endif">Преимущества</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a></li>
-                                <li><a class="dropdown-item" href="#news">Новости</a></li>
-                                <li><a class="dropdown-item" href="#documents">Документы</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'camp' )#replies @else /#replies @endif">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )#news @else /#news @endif">Новости</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )#documents @else /#documents @endif">Документы</a></li>
                             </ul>
                         </div>
 
                         <div class="dropdown">
                             <button class="dropdown-btn @if(!empty($activeNav) && $activeNav === 'school') active @endif" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Школа
+                                Школы
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="@if($routeName === 'belarus')# @else /school-belarus @endif">Беларусь</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'russia')# @else /school-russia @endif">Россия</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'poland')# @else /dev @endif">Польша</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'moldova')# @else /dev @endif">Молдавия</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'georgia')# @else /dev @endif">Грузия</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'germany')# @else /dev @endif">Германия</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'online')# @else /school-online @endif">Онлайн</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'poland')# @else /dev @endif">Польша</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'georgia')# @else /dev @endif">Грузия</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'moldova')# @else /dev @endif">Молдова</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'germany')# @else /dev @endif">Германия</a></li>
                             </ul>
                         </div>
 
@@ -77,7 +77,7 @@
                                 <a class="h5" href="/dev">Одно окно</a>
                             </li>
                             <li class="header-item">
-                                <a  class="h5 menu-link" href="#order-section">Контакты</a>
+                                <a  class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#order-section @else /#order-section @endif">Контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -122,29 +122,52 @@
                         <nav>
                             <ul>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a href="#history" class="h5 mobile-link">О нас</a>
+                                    <a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif" class="h5 mobile-link">О нас</a>
                                 </li>
-                                <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/#school">Школа</a>
-                                </li>
+                                
+                                <div class="accordion accordion-modal mb-16" id="accordionmodal">
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneFaq">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneModal" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="text">Школы</span>
+                                        </button>
+                                        </h2>
+                                        <div id="collapseOneModal" class="accordion-collapse collapse" aria-labelledby="headingOneModal" data-bs-parent="#accordionModal">
+                                            <div class="accordion-body">
+                                                <ul class="accordion-menu">
+                                                <li><a class="dropdown-item" href="@if($routeName === 'belarus')# @else /school-belarus @endif">Беларусь</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'russia')# @else /school-russia @endif">Россия</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'online')# @else /school-online @endif">Онлайн</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'poland')# @else /dev @endif">Польша</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'georgia')# @else /dev @endif">Грузия</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'moldova')# @else /dev @endif">Молдова</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'germany')# @else /dev @endif">Германия</a></li>
+                                            </ul>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                    
+                                </div>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Доп.услуги</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/camp">Детский лагерь</a>
+                                    <a class="h5 mobile-link" href="/dev">Детский лагерь</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="#replies">Отзывы</a>
+                                    <a class="h5 mobile-link" href="/#replies">Отзывы</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Одно окно</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="#order-section">Контакты</a>
+                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#order-section @else /#order-section @endif">Контакты</a>
                                 </li>
                             </ul>
                             <div class="d-flex flex-column header-contacts-messengers">
-                                <a target="_blank" href="">
+                                <a target="_blank" href="https://www.facebook.com/people/Smart-School-%25D1%2587%25D0%25B0%25D1%2581%25D1%2582%25D0%25BD%25D0%25B0%25D1%258F-%25D1%2588%25D0%25BA%25D0%25BE%25D0%25BB%25D0%25B0/100039861583458/">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_182_1856)">
@@ -159,7 +182,7 @@
                                         </defs>
                                     </svg>
                                 </a>
-                                <a target="_blank" href="">
+                                <a target="_blank" href="https://www.instagram.com/smartschool_minsk/">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -167,7 +190,7 @@
                                               fill="#8041FF"/>
                                     </svg>
                                 </a>
-                                <a target="_blank" href="">
+                                <a target="_blank" href="https://vk.com/smartschool_minsk">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_182_1860)">
@@ -182,7 +205,7 @@
                                         </defs>
                                     </svg>
                                 </a>
-                                <a target="_blank" href="">
+                                <a target="_blank" href="tg://resolve?domain=sm_education_bot&start=ml15">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path

@@ -6,7 +6,7 @@
 @php($page = Route::current()->getName())
 
 <section id="head"
-            class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+            class="head mb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
@@ -20,12 +20,12 @@
                         Детский лагерь
                     </h1>
                     <div class=" btn-group-4">
-                        <a href="/camp/jukov-lug" class="button_1 btn-purple">Жуков Луг</a>
-                        <a href="/camp/dreamland" class="button_1 btn-purple">Dreamland</a>
-                        <a href="/camp/georgia" class="button_1 btn-purple">Грузия</a>
-                        <a href="/dev" class="button_1 btn-purple">Польша</a>
-                        <a href="/camp" class="button_1 btn-purple">Онлайн</a>
-                        <button class="button_1 btn-pink w-100" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
+                        <a href="/camp/jukov-lug" class="button_1 btn-purple text-bold">Жуков Луг</a>
+                        <a href="/camp/dreamland" class="button_1 btn-purple text-bold">Dreamland</a>
+                        <a href="/camp/georgia" class="button_1 btn-purple text-bold">Грузия</a>
+                        <a href="/dev" class="button_1 btn-purple text-bold">Польша</a>
+                        <a href="/camp" class="button_1 btn-purple text-bold">Онлайн</a>
+                        <button class="button_1 btn-pink w-100 text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">

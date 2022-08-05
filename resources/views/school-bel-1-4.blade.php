@@ -3,6 +3,9 @@
 @section('title', 'Начальная частная школа Смарт Скул в Минске 1-4 классы')
 @section('description', 'Оффлайн и онлайн обучение для 1-4 классов в Беларуси, России, Грузии, Польше. Начальная школа Smart School ведет набор на подготовку к школе в Минске.')
 @section('content')
+
+@php($routeName = Route::current()->getName())
+
     @php($activeNav = 'school')
 
     <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
@@ -16,12 +19,12 @@
 
                 <div>
                     <h1 class="h1 pb-48">
-                        Частная школа в Республике Беларусь <span class="nowrap">1-4 классы</span>
+                        Частная школа <br> в  Республике Беларусь  <span class="nowrap">1-4 классы</span>
                     </h1>
                     <div class="btn-group btn-group-3">
-                        <a href="/school-belarus/junior#address" class="button_1 btn-purple">Жуков Луг</a>
-                        <a href="/school-belarus/junior#dreamland" class="button_1 btn-purple">Dreamland</a>
-                        <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
+                        <a href="/school-belarus/junior#address " class="button_1 btn-purple text-bold">Жуков Луг</a>
+                        <a href="/school-belarus/junior#dreamland" class="button_1 btn-purple text-bold">Dreamland</a>
+                        <button class="button_1 btn-pink text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
                     <div class="notification--head">

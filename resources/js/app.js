@@ -119,7 +119,7 @@ const swiper_3 = new Swiper('#replies .swiper', {
         },
     },
     breakpoints: {
-        320: {
+        280: {
             slidesPerView: 1,
             spaceBetween: 30,
             // autoHeight: true,
@@ -231,7 +231,10 @@ const swiper_7 = new Swiper('#partners .swiper', {
             slidesPerView: 1,
             spaceBetween: 30,
         },
-        768: {
+        700: {
+            slidesPerView: 3
+        },
+        1400: {
             slidesPerView: 4
         }
     }
@@ -250,9 +253,8 @@ const swiper_8 = new Swiper('#priority .swiper', {
         rows: 2,
     },
     breakpoints: {
-        320: {
+        280: {
             slidesPerView: 1,
-            spaceBetween: 30,
             rows: 2,
         },
         768: {
@@ -276,6 +278,10 @@ const swiper_9 = new Swiper('#priority-online .swiper', {
     },
 
     breakpoints: {
+        280: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
         320: {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -615,6 +621,7 @@ $(document).ready(function() {
         delegate: 'a',
         type: 'image',
         tLoading: 'Загрузка...',
+        closeOnContentClick: true,
         mainClass: 'mfp-img-mobile',
         gallery: {
             enabled: true,

@@ -2,7 +2,7 @@
 @section('title', 'Частная школа Smart School')
 @section('description', 'Оффлайн и онлайн обучение для 1-11 классов в Беларуси, России, Грузии, Польше в школе Смарт Скул. Театральная студия, занятия с репетитором, подготовка к школе, факультативы, курсы, лагеря.')
 @section('content')
-    <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+    <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size-2 @endif">
         <div class="container container-mob">
 
             <div class="head--container">
@@ -48,7 +48,7 @@
         </div>
     </section>
 
-    <section id="history" class="history scrollreveal">
+    <section id="history" class="history pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">История</h2>
             <div class="row align-items-center justify-content-between container-mob">
@@ -60,7 +60,7 @@
                             Образовательный Центр "Фабрика Звезд", на базе которого мы
                             разработали уникальную программу для школьников по нейробике,
                             кинезиологии и эмоциональному интеллекту «Секрет успешного обучения».
-                            <span class="text-bold">Наша методика позволяет эффективно, легкои быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span>
+                            <span class="text-bold">Наша методика позволяет эффективно, легко и быстро усваивать школьную программу, повышает успеваемость на 2-3 балла!</span>
                         </p>
 
                         <div id="hidden-text-box">
@@ -130,7 +130,6 @@
         @include('sections.schools-common')
     </div>
     
-
     <section id="advantages" class="advantages pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Почему мы?</h2>
@@ -146,7 +145,7 @@
                         </li>
                         <li class="text mb-20"><span class="text-bold ">Наша цель</span> - воспитание счастливых,
                             здоровых, мыслящих и социально-адаптированных детей СЕГОДНЯ. Воспитание умеющих
-                            сотрудничать, заботливых, творческих, компетентных, ответственных взрослых ЗАВТРА <span
+                            сотрудничать, заботливых, творческих, компетентных, ответственных взрослых ЗАВТРА. <span
                                 id="dots2">...</span></li>
                     </ul>
 
@@ -183,27 +182,27 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="grid-wrapper">
-                        <a class="grid-box" href="/">
+                        <div class="grid-box" >
                             <img src="/img/main/advantages/img1.png" alt="image-1">
                             <div class="overlay-title">
                                 <h3>Первоклассник</h3>
                             </div>
-                        </a>
-                        <a class="grid-box" href="/"><img src="/img/main/advantages/img2.png" alt="image-2">
+                        </div>
+                        <div class="grid-box"><img src="/img/main/advantages/img2.png" alt="image-2">
                             <div class="overlay-title">
                                 <h3>Обучение</h3>
                             </div>
-                        </a>
-                        <a class="grid-box" href="/"><img src="/img/main/advantages/img3.png" alt="image-3">
+                        </div>
+                        <div class="grid-box" ><img src="/img/main/advantages/img3.png" alt="image-3">
                             <div class="overlay-title">
                                 <h3>Старшеклассник</h3>
                             </div>
-                        </a>
-                        <a class="grid-box" href="/"><img src="/img/main/advantages/img4.png" alt="image-4">
+                        </div>
+                        <div class="grid-box"><img src="/img/main/advantages/img4.png" alt="image-4">
                             <div class="overlay-title">
                                 <h3>Достижения</h3>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

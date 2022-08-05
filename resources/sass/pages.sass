@@ -5,6 +5,7 @@
     display: flex
     align-items: flex-end
     z-index: 10
+    position: relative
     @media screen and (max-width: 1440px)
         min-height: 600px
         margin-top: 0
@@ -16,7 +17,19 @@
         padding: 40px 0
     @media screen and (max-width: 767px)
         padding: 60px 0
-
+    &:before
+        @media screen and (min-width: 1400px)
+            content:""
+            position: absolute
+            width: 245px
+            height: 145px
+            bottom: 0
+            right: 50px
+            background-image: url('/img/main/head-recangle.svg')
+            background-repeat: no-repeat
+        @media screen and (min-width: 1500px)
+            transform: translate(-35%, -55%)
+            right: 0
 
     .head--container
         display: grid
@@ -67,6 +80,7 @@
             z-index: 2
         @media screen and (max-width: 575px)
             left: 15px
+            bottom: 10px
             max-width: calc(100% - 30px)
             transform: translateX(0)
 
@@ -84,6 +98,9 @@
             grid-template-columns: repeat(2, 49%)
         @media screen and (max-width: 360px)
             grid-template-columns: 100%
+            grid-row-gap: 12px
+        @media screen and (max-width: 300px)
+            grid-template-columns: 95%
             grid-row-gap: 12px
 
         .button_1
@@ -130,6 +147,10 @@
 
 .head.notification-size
     @media screen and (max-width: 767px)
+        padding: 60px 0 200px 0
+
+.head.notification-size-2
+    @media screen and (max-width: 767px)
         padding: 60px 0 180px 0
 
 #head .swiper-box
@@ -174,10 +195,11 @@
 
         .swiper-pagination-bullet
             opacity: 1
-            background: $light-grey
-            width: 8px
-            height: 8px
+            background: rgba(0, 0, 0, 0.2)
+            width: 11px
+            height: 11px
             margin: 0 8px
+            border-color: red !important
 
         .swiper-pagination-bullet-active
             background: $accentColor
@@ -397,7 +419,7 @@
 
     .row
         @media screen and (max-width: 1500px)
-            margin: 0 -8px
+            margin: 0 -8px 20px
 
     .row > *
         @media screen and (max-width: 1500px)
@@ -425,6 +447,12 @@
                 width: 100% !important
                 margin-bottom: 20px
 
+#price 
+    .custom-ul li
+        list-style: none
+        padding-left: 40px
+        position: relative
+        margin-bottom: 12px
 
 
 
@@ -451,6 +479,9 @@
             &:last-child
                 grid-column-start: 3
                 grid-column-end: 5
+        @media screen and (max-width: 300px)
+            height: fit-content
+
     a.school-box
         &:hover
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2)
@@ -833,25 +864,29 @@
     @media screen and (max-width: 576px)
         padding-bottom: 100px
 
+    .swiper
+        align-items: center
+
     .swiper-slide
+        height: auto
         text-align: left
         @media screen and (max-width: 768px)
             text-align: center
 
     .swiper-pagination
-        bottom: -25px
+        bottom: -50px
         position: absolute
         display: none
         @media screen and (max-width: 1200px)
             display: block
         @media screen and (max-width: 768px)
-            bottom: -50px
+            bottom: -60px
 
         .swiper-pagination-bullet
             opacity: 1
             background: $light-grey
-            width: 8px
-            height: 8px
+            width: 11px
+            height: 11px
             margin: 0 8px
 
         .swiper-pagination-bullet-active
@@ -900,7 +935,9 @@
             //top: 4px
 
         .contacts-socials
-            //gap: 12px
+            @media screen and (max-width: 500px)
+                flex-wrap: wrap
+                gap: 5px
 
             .contacts-socials-link
                 margin-right: 12px
@@ -1023,9 +1060,10 @@
 .swiper-pagination-bullet
     opacity: 1
     background: $light-grey
-    width: 8px
-    height: 8px
+    width: 11px
+    height: 11px
     margin: 0 8px
 
 .swiper-pagination-bullet-active
     background: $accentColor
+

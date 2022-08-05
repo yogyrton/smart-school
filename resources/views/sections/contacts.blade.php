@@ -11,22 +11,23 @@
                 <div class="mb-24">
                     <p class="grey subtitle">Звоните по телефонам:</br> Отдел маркетинга и продаж (консультация,
                         заключение договора, оплаты)</p>
+                        <div class="contacts-info d-flex mb-20">
+{{--                        <img src="/svg/telephone.svg" alt="phone-logo">--}}
+{{--                        <img src="/svg/viber.svg" alt="viber-logo">--}}
+{{--                        <img src="/svg/telegram.svg" alt="telegram-logo">--}}
+                        <a href="tel:+375255066009">+375 (25) 506-60-09</a>
+                        </div>
                     <div class="contacts-info d-flex mb-20">
 {{--                        <img src="/svg/telephone.svg" alt="phone-logo">--}}
 {{--                        <img src="/svg/viber.svg" alt="viber-logo">--}}
 {{--                        <img src="/svg/telegram.svg" alt="telegram-logo">--}}
-                        @if($routeName === 'russia')
+                        @if($routeName === 'russia' || $routeName === 'online')
                             <a href="tel:+79680710905">+7 (968) 071-09-05</a>
                         @else
                         <a href="tel:+375255066588">+375 (25) 506-65-88</a>
                         @endif
                     </div>
-                    <div class="contacts-info d-flex mb-20">
-{{--                        <img src="/svg/telephone.svg" alt="phone-logo">--}}
-{{--                        <img src="/svg/viber.svg" alt="viber-logo">--}}
-{{--                        <img src="/svg/telegram.svg" alt="telegram-logo">--}}
-                        <a href="tel:+375255066009">+375 (25) 506-60-09</a>
-                    </div>
+                    
 
                     <div class="contacts-mail">
                         <a href="mailto:smartminsk2020@gmail.com">smartminsk2020@gmail.com</a>
@@ -45,7 +46,7 @@
                 <div class="mb-24">
                     <p class="grey mb-16">Администрация:</p>
                     <div>
-                        @if($routeName === 'russia')
+                        @if($routeName === 'russia' || $routeName === 'online')
                             <a class="contacts-tel mb-12 d-inline-block" href="tel:+79680710905">+7 (968) 071-09-05</a>
                         @else
                             <a class="contacts-tel mb-12 d-inline-block" href="tel:+375255156009">+375 (25) 515-60-09</a>
@@ -53,7 +54,7 @@
                     </div>
 
                     <div>
-                        @if($routeName === 'russia')
+                        @if($routeName === 'russia' || $routeName === 'online')
                             <a class="contacts-location d-inline-block mb-12" href="https://goo.gl/maps/6ubYWPAp4Bxy32mC7" target="_blank" rel="noopener">г. Смоленск, ул. Большая Советская, д. 16/17</a>
                         @else
                             <a class="contacts-location d-inline-block mb-12" href="https://goo.gl/maps/1DqaKy5WPwUwZm2UA" target="_blank" rel="noopener">г. Минск, ул. Орловская, 80</a>
@@ -119,9 +120,28 @@
                         <img class="contacts-socials-img" src="/svg/ok.svg" alt="ok">
                     </a>
                     @endif
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="tg://resolve?domain=sm_education_bot&start=ml15">
-                        <img class="contacts-socials-img" src="/svg/telegram.svg" alt="telegram">
+
+                    @if($routeName === 'camp' || $routeName === 'jukov-lug' || $routeName === 'georgia' || $routeName === 'dreamland')
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCWB5hzQchCK7zorsIyvDzpg">
+                        <img class="contacts-socials-img" src="/svg/youtube.svg" alt="youtube">
                     </a>
+                    @else
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCz0Rk1OJ9ImphZhh9eWsIMQ">
+                        <img class="contacts-socials-img" src="/svg/youtube.svg" alt="youtube">
+                    </a>
+                    @endif
+
+
+                    @if($routeName === 'camp' || $routeName === 'jukov-lug' || $routeName === 'georgia' || $routeName === 'dreamland')
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.tiktok.com/@fabrika_zvezd">
+                        <img class="contacts-socials-img" src="/svg/tiktok.svg" alt="tiktok">
+                    </a>
+                    @else
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.tiktok.com/@smartschoolminsk">
+                        <img class="contacts-socials-img" src="/svg/tiktok.svg" alt="tiktok">
+                    </a>
+                    @endif
+                    
                 </div>
 
             </div>
