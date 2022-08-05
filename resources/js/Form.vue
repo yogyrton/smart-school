@@ -265,7 +265,7 @@ export default {
         checkForm() {
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
-                axios.post('api/mail', {
+                axios.post('https://smart.ilavista.tech/api/mail', {
                         name: this.form.name,
                         email: this.form.email,
                         phone: this.form.phone,

@@ -5544,7 +5544,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('api/mail', {
+        axios.post('https://smart-school/api/mail', {
           name: this.form.name,
           email: this.form.email,
           phone: this.form.phone,
@@ -5705,7 +5705,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('api/mail', {
+        axios.post('https://smart-school/api/mail', {
           name: this.form.name,
           phone: this.form.phone
         }).then(function (response) {
