@@ -14601,6 +14601,12 @@ html * {
   margin: 0;
 }
 
+* {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
 body {
   padding-top: 105px;
   background: #FFFFFF;
@@ -14616,6 +14622,16 @@ body {
   body {
     padding-top: 44px;
   }
+}
+
+body::-moz-selection {
+  color: #fff;
+  background-color: #000;
+}
+
+body::selection {
+  color: #fff;
+  background-color: #000;
 }
 
 html {
@@ -15303,7 +15319,7 @@ button {
   margin-bottom: 0;
 }
 #burgerModal .accordion-modal button {
-  padding: 0;
+  padding: 0 !important;
 }
 #burgerModal .accordion-body {
   max-width: 150px;
@@ -15336,7 +15352,7 @@ button {
 }
 #burgerModal .accordion-button::after {
   margin-left: 12px;
-  background-image: url("/svg/arrowHeader.svg");
+  background-image: url("/svg/arrowHeader.svg") !important;
 }
 
 #burgerModal.show .modal-dialog {
@@ -16681,6 +16697,11 @@ input:-webkit-autofill {
     padding-bottom: 60px;
   }
 }
+@media screen and (max-width: 500px) {
+  .priority {
+    padding-bottom: 25px;
+  }
+}
 @media screen and (max-width: 992px) {
   .priority h2, .priority .h2 {
     margin-bottom: 24px;
@@ -16931,6 +16952,15 @@ input:-webkit-autofill {
   padding-left: 40px;
   position: relative;
   margin-bottom: 12px;
+}
+
+.g-col1 {
+  grid-column-start: 1 !important;
+  grid-column-end: 1 !important;
+}
+
+.g-col {
+  grid-column: 3/5 !important;
 }
 
 @media screen and (min-width: 1200px) {
@@ -17261,14 +17291,6 @@ input:-webkit-autofill {
     visibility: inherit;
   }
 }
-#replies .swiper-pagination {
-  display: none;
-}
-@media screen and (max-width: 576px) {
-  #replies .swiper-pagination {
-    display: block;
-  }
-}
 #replies .swiper-pagination-bullet {
   width: 24px;
   height: 24px;
@@ -17284,11 +17306,24 @@ input:-webkit-autofill {
   background: #8041FF;
 }
 #replies .replies-pagination {
-  position: absolute;
-  bottom: 0;
-  transform: translate(-50%, 70px);
-  max-width: calc(100% - 100px);
-  left: 50%;
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  #replies .replies-pagination {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, 70px);
+    max-width: calc(100% - 100px);
+    left: 50%;
+  }
+}
+#replies .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+  transform: scale(0.83);
+}
+#replies .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+#replies .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+  transform: scale(0.63);
 }
 
 @media screen and (max-width: 990px) {
@@ -17646,6 +17681,17 @@ input:-webkit-autofill {
 
 .swiper-pagination-bullet-active {
   background: #8041FF;
+}
+
+@media screen and (max-width: 420px) {
+  #faq-1 .modal-dialog.modal-dialog-centered, .modal.show .modal-dialog {
+    transform: translate(0, 10%);
+  }
+}
+@media screen and (max-width: 300px) {
+  #faq-1 .modal-dialog.modal-dialog-centered, .modal.show .modal-dialog {
+    transform: translate(0, 70%);
+  }
 }
 
 @media screen and (max-width: 576px) {

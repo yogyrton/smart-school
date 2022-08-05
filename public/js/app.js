@@ -5703,23 +5703,28 @@ __webpack_require__.r(__webpack_exports__);
         axios.post('api/mail', {
           name: this.form.name,
           phone: this.form.phone
-        }).then(function (response) {
-          if (response) {
-            $('#requestModal').modal('hide');
-            Swal.fire({
-              allowEscapeKey: false,
-              title: 'Спасибо, Ваша заявка успешно отправлена!',
-              icon: 'error',
-              confirmButtonText: 'На главную',
-              customClass: {
-                container: 'full-height-swall'
-              }
-            }).then(function (result) {
-              if (result.isConfirmed) {
-                window.location.href = '/';
-              }
-            });
-          }
+        })
+        /*.then(response => {
+            if (response) {
+                $('#requestModal').modal('hide');
+                Swal.fire({
+                    allowEscapeKey: false,
+                    title: 'Спасибо, Ваша заявка успешно отправлена!',
+                    icon: 'error',
+                    confirmButtonText: 'На главную',
+                    customClass: {
+                        container: 'full-height-swall'
+                    }
+                })
+                    .then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href='/'
+                        }
+                    });
+            }
+        })*/
+        .then(function (response) {
+          if (response) window.location.href = '/thanks';
         });
       }
     },
@@ -77376,6 +77381,8 @@ var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#repli
     prevEl: '#replies .slider-button-prev'
   },
   pagination: {
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
     el: ".replies .swiper-pagination",
     clickable: true,
     renderBullet: function renderBullet(index, className) {
@@ -77401,7 +77408,7 @@ var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#repli
       spaceBetween: 10
     },
     1200: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 10
     }
   }
@@ -77859,6 +77866,7 @@ $(document).ready(function () {
     closeOnContentClick: true,
     mainClass: 'mfp-img-mobile',
     gallery: {
+      clickable: true,
       enabled: true,
       navigateByImgClick: true,
       preload: [0, 1],

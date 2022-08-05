@@ -248,6 +248,8 @@
     position: relative
     @media screen and (max-width: 1200px)
         padding-bottom: 60px
+    @media screen and (max-width: 500px)
+        padding-bottom: 25px
 
     h2
         @media screen and (max-width: 992px)
@@ -435,7 +437,6 @@
         position: static
         padding: 4px 0 12px 0
 
-
 #price.price-online
     .swiper-wrapper
         @media screen and (min-width: 991px)
@@ -454,8 +455,12 @@
         position: relative
         margin-bottom: 12px
 
+.g-col1
+    grid-column-start: 1 !important
+    grid-column-end: 1 !important
 
-
+.g-col
+    grid-column: 3 / 5 !important
 
 #school
     .swiper
@@ -710,11 +715,6 @@
             opacity: 1
             visibility: inherit
 
-    .swiper-pagination
-        display: none
-        @media screen and (max-width: 576px)
-            display: block
-
     .swiper-pagination-bullet
         width: 24px
         height: 24px
@@ -729,13 +729,49 @@
         color: $white
         background: $accentColor
 
-
     .replies-pagination
-        position: absolute
-        bottom: 0
-        transform: translate(-50%, 70px)
-        max-width: calc(100% - 100px)
-        left: 50%
+        display: none
+        @media screen and (max-width: 576px)
+            display: block
+            position: absolute
+            bottom: 0
+            transform: translate(-50%, 70px)
+            max-width: calc(100% - 100px)
+            left: 50%
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next 
+        transform: scale(0.83)
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next 
+        transform: scale(0.63)
+
+    // .swiper-pagination
+    //     display: none
+    //     @media screen and (max-width: 576px)
+    //         display: block
+
+    // .swiper-pagination-bullet
+    //     width: 24px
+    //     height: 24px
+    //     text-align: center
+    //     line-height: 24px
+    //     font-size: 16px
+    //     color: $grey
+    //     background-color: inherit
+    //     opacity: 1
+
+    // .swiper-pagination-bullet-active
+    //     color: $white
+    //     background: $accentColor
+
+
+    // .replies-pagination
+    //     position: absolute
+    //     bottom: 0
+    //     transform: translate(-50%, 70px)
+    //     max-width: calc(100% - 100px)
+    //     left: 50%
 
 #news
     @media screen and (max-width: 990px)
@@ -848,8 +884,6 @@
         position: absolute
         bottom: 0
         transform: translateY(70px)
-
-
 
 #partners
     // .partners-wrapper
@@ -995,8 +1029,6 @@
             color: $grey
 
 
-
-
 //SLIDER
 #history, #address, #album, #info 
     .swiper-box
@@ -1067,3 +1099,9 @@
 .swiper-pagination-bullet-active
     background: $accentColor
 
+
+#faq-1 .modal-dialog.modal-dialog-centered, .modal.show .modal-dialog 
+    @media screen and (max-width: 420px)
+        transform: translate(0, 10%)
+    @media screen and (max-width: 300px)
+        transform: translate(0, 70%)

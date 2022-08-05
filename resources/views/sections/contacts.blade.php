@@ -1,7 +1,7 @@
 @php($routeName = Route::current()->getName())
 @php($regionNumber = null)
 @if($routeName === 'russia') @php($regionNumber = 79680710905)
-@else @php($regionNumber = 375255066588)
+@else @php($regionNumber = 375255066009)
 @endif
 <section id="order-section" class="order-section scrollreveal">
     <div class="container">

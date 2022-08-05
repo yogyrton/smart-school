@@ -112,6 +112,8 @@ const swiper_3 = new Swiper('#replies .swiper', {
         prevEl: '#replies .slider-button-prev',
     },
     pagination: {
+        dynamicBullets: true,
+        dynamicMainBullets: 1,
         el: ".replies .swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
@@ -137,7 +139,7 @@ const swiper_3 = new Swiper('#replies .swiper', {
             spaceBetween: 10,
         },
         1200: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 10,
         }
     }
@@ -624,6 +626,7 @@ $(document).ready(function() {
         closeOnContentClick: true,
         mainClass: 'mfp-img-mobile',
         gallery: {
+            clickable: true,
             enabled: true,
             navigateByImgClick: true,
             preload: [0,1],
