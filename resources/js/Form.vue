@@ -227,7 +227,7 @@ export default {
                 grade: null,
                 contact_msg: null,
                 visit: null,
-                month: null,
+                month: null
             },
             format: ['Онлайн', 'Оффлайн'],
             grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
@@ -263,7 +263,6 @@ export default {
     },
     methods: {
         checkForm() {
-
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
                 axios.post('api/mail', {
@@ -278,7 +277,7 @@ export default {
                         month: this.form.month,
                     }
                 )
-                    .then(response => {
+                    /*.then(response => {
                         if (response) {
                             $('#requestModal').modal('hide');
                             Swal.fire({
@@ -292,10 +291,13 @@ export default {
                             })
                                 .then((result) => {
                                     if (result.isConfirmed) {
-                                        window.location.href = '/'
+                                        window.location.href='/'
                                     }
                                 });
                         }
+                    })*/
+                    .then(response => {
+                        if (response) window.location.href = '/thanks';
                     })
             }
         },
@@ -305,4 +307,3 @@ export default {
     },
 };
 </script>
-
