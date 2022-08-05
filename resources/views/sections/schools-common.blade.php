@@ -23,24 +23,26 @@
                         </a>
                     </div>
 
-
+                    @if($routeName !== 'russia')
                     <div class="swiper-slide">
-                        <a class="school-box school-box-short" href="/dev">
+                        <a class="school-box school-box-short" href="/school-russia">
                             <div class="img-box block-mob">
-                                <img src="/img/main/school/gruziya.jpg" alt="children-img">
+                                <img src="/img/main/school/russia.jpg" alt="children-img">
                             </div>
                             <div class="box-inner">
                                 <div>
-                                    <h3 class="accentColor mb-24">Грузия</h3>
+                                    <h3 class="accentColor mb-24">Россия</h3>
                                     <div class="box-description">
-                                        <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
+                                        <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
                                     </div>
                                 </div>
                                 <button class="button_2 text">Подробнее</button>
                             </div>
                         </a>
                     </div>
+                    @endif
 
+                    
                     <div class="school-box school-box-desktop">
                         <img class="w-100" src="/img/main/school/gruziya.jpg" alt="children-img">
                     </div>
@@ -64,26 +66,22 @@
                     </div>
                     @endif
 
-                    
-
-                    @if($routeName !== 'russia')
                     <div class="swiper-slide">
-                        <a class="school-box school-box-short" href="/school-russia">
+                        <a class="school-box school-box-short" href="/dev">
                             <div class="img-box block-mob">
-                                <img src="/img/main/school/russia.jpg" alt="children-img">
+                                <img src="/img/main/school/gruziya.jpg" alt="children-img">
                             </div>
                             <div class="box-inner">
                                 <div>
-                                    <h3 class="accentColor mb-24">Россия</h3>
+                                    <h3 class="accentColor mb-24">Грузия</h3>
                                     <div class="box-description">
-                                        <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
+                                        <p class="text flex-grow-1 mb-12">обучение в Батуми</p>
                                     </div>
                                 </div>
                                 <button class="button_2 text">Подробнее</button>
                             </div>
                         </a>
                     </div>
-                    @endif
 
                     @if($routeName === 'online' || $routeName === 'russia')
                         <div class="school-box school-box-desktop">
@@ -109,6 +107,9 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- MOBILE -->
+
             </div>
             <div class="swiper-pagination"></div>
         </div>

@@ -100,8 +100,8 @@
                         name: this.form.name,
                         phone: this.form.phone,
                     })
-                        .then(response => {
-                            if(response) {
+                        /*.then(response => {
+                            if (response) {
                                 $('#requestModal').modal('hide');
                                 Swal.fire({
                                     allowEscapeKey: false,
@@ -118,6 +118,9 @@
                                         }
                                     });
                             }
+                        })*/
+                        .then(response => {
+                            if (response) window.location.href = '/thanks';
                         })
 
                 }

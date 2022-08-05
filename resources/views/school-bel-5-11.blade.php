@@ -11,7 +11,7 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/school-belarus-senior.webp" alt="" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/new4.webp" alt="" class="d-none d-md-block banner-image">
                     <img src="/img/main/banners/school-belarus-senior-mob.webp" alt="" class="banner-image d-block d-md-none">
                 </div>
 
