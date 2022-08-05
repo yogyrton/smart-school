@@ -3,8 +3,11 @@ html *
     padding: 0
     margin: 0
 
-* 
-    -webkit-tap-highlight-color: transparent
+*
+    -webkit-touch-callout:none              
+    -webkit-text-size-adjust:none          
+    -webkit-tap-highlight-color:rgba(0,0,0,0) 
+    -webkit-user-select:none               
 
 body
     padding-top: 105px
@@ -351,6 +354,9 @@ h2.mb-60, h1.mb-60
     @media screen and (max-width: 992px)
         padding-bottom: 24px
 
+.pb-60
+    padding-bottom: 60px
+
 .pb-80
     padding-bottom: 80px
 
@@ -369,6 +375,9 @@ h2.mb-60, h1.mb-60
     margin-bottom: 120px
     @media screen and (max-width: 992px)
         margin-bottom: 40px
+
+.pt-80
+    padding-top: 80px
 
 .pt-120
     padding-top: 120px
@@ -531,6 +540,42 @@ h2.mb-60, h1.mb-60
 
                 li:last-of-type
                     margin-bottom: 0
+
+    .accordion-modal button
+        padding: 0
+
+    .accordion-body
+        max-width: 150px
+        padding: 10px 30px 0 0
+        ul
+            border: 5px
+            padding: 5px
+
+    .button-burger
+        padding-right: 0
+    
+    .accordion-button
+        padding: 20px 0
+        border: none
+        font-size: 20px
+        background: transparent !important
+        line-height: 24px
+        color: $accentColor
+        font-weight: 600
+        @media screen and (max-width: 991px)
+            font-size: 16px
+        span
+            display: inline-block
+            max-width: calc(100% - 32px)
+        &::after
+            margin-left: 12px
+            background-image: url('/svg/arrowHeader.svg')
+                
+
+
+
+
+
 
 #burgerModal.show .modal-dialog
     -webkit-transform: translateX(0)
@@ -707,6 +752,14 @@ header
 
             &:last-child
                 margin-right: 0
+        
+    .header-contacts-messengers
+        gap: 13px
+        align-items: center
+
+    .header-contacts-messengers a
+        color: $text
+        white-space: nowrap
 
     .dropdown-menu
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
@@ -725,6 +778,9 @@ header
                     background: $light-grey
                     color: $text
 
+    .dropdown.dropdown-btn
+        &:active
+            color: $accentColor
 
     .header-contacts-messengers
         gap: 13px
@@ -745,11 +801,9 @@ header
             right: 0
             top: 0
 
-        &:hover
+        &:hover, 
+        &:active
             color: $accentColor
-    .dropdown-btn.active
-        color: $accentColor
-
 
     .button-burger
         padding-right: 0
@@ -893,8 +947,8 @@ header.tiny
         .swiper-pagination-bullet
             opacity: 1
             background: $light-grey
-            width: 8px
-            height: 8px
+            width: 11px
+            height: 11px
             margin: 0 8px
 
         .swiper-pagination-bullet-active
@@ -1008,13 +1062,15 @@ textarea
     position: absolute
     width: 30px
     height: 30px
-    right: 25px
+    right: 8%
     top: 10px
     padding: 4px 8px
     text-align: center
     cursor: pointer
-    @media screen and (max-width: 300px)
-        right: 5px
+    @media screen and (max-width: 1500px)
+        right: 4%
+    // @media screen and (max-width: 300px)
+    //     right: 5px
 
 
 

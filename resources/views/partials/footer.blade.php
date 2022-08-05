@@ -25,15 +25,16 @@
                             </ul>
                         </div>
                         <div class="footer-box">
-                            <h5 class="text-bold mb-16">Школа</h5>
+                            <h5 class="text-bold mb-16">Школы</h5>
                             <ul class="footer-list">
                                 <li class="footer-list-item"><a href="@if($routeName === 'belarus')# @else /school-belarus @endif">Беларусь</a></li>
                                 <li class="footer-list-item "><a href="@if($routeName === 'russia')# @else /school-russia @endif">Россия</a></li>
-                                <li class="footer-list-item "><a href="@if($routeName === 'poland')# @else /dev @endif">Польша</a></li>
-                                <li class="footer-list-item "><a href="@if($routeName === 'moldova')# @else /dev @endif">Молдавия</a></li>
-                                <li class="footer-list-item "><a href="@if($routeName === 'georgia')# @else /dev @endif">Грузия</a></li>
-                                <li class="footer-list-item "><a href="@if($routeName === 'germany')# @else /dev @endif">Германия</a></li>
                                 <li class="footer-list-item "><a href="@if($routeName === 'online')# @else /school-online @endif">Онлайн</a></li>
+                                <li class="footer-list-item "><a href="@if($routeName === 'poland')# @else /dev @endif">Польша</a></li>
+                                <li class="footer-list-item "><a href="@if($routeName === 'georgia')# @else /dev @endif">Грузия</a></li>
+                                <li class="footer-list-item "><a href="@if($routeName === 'moldova')# @else /dev @endif">Молдова</a></li>
+                                <li class="footer-list-item "><a href="@if($routeName === 'germany')# @else /dev @endif">Германия</a></li>
+                                
                             </ul>
                         </div>
                         <div class="footer-box">
@@ -59,7 +60,7 @@
                             <ul class="footer-list mb-40">
                                 <li class="text-bold mb-12"><a href="@if($routeName === 'home' || $routeName === 'camp' )#replies @else /#replies @endif">Отзывы</a></li>
                                 <li class="text-bold mb-12"><a href="/dev">Одно окно</a></li>
-                                <li class="text-bold"><a href="#order-section">Контакты</a></li>
+                                <li class="text-bold"><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#order-section @else /#order-section @endif">Контакты</a></li>
                             </ul>
                             <div class="d-lg-flex d-none footer-socials">
                                 @include('partials.social_navigation')

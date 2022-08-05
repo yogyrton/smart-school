@@ -30,16 +30,16 @@
 
                         <div class="dropdown">
                             <button class="dropdown-btn @if(!empty($activeNav) && $activeNav === 'school') active @endif" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Школа
+                                Школы
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="@if($routeName === 'belarus')# @else /school-belarus @endif">Беларусь</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'russia')# @else /school-russia @endif">Россия</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'poland')# @else /dev @endif">Польша</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'moldova')# @else /dev @endif">Молдавия</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'georgia')# @else /dev @endif">Грузия</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'germany')# @else /dev @endif">Германия</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'online')# @else /school-online @endif">Онлайн</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'poland')# @else /dev @endif">Польша</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'georgia')# @else /dev @endif">Грузия</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'moldova')# @else /dev @endif">Молдова</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'germany')# @else /dev @endif">Германия</a></li>
                             </ul>
                         </div>
 
@@ -77,7 +77,7 @@
                                 <a class="h5" href="/dev">Одно окно</a>
                             </li>
                             <li class="header-item">
-                                <a  class="h5 menu-link" href="#order-section">Контакты</a>
+                                <a  class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#order-section @else /#order-section @endif">Контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -124,9 +124,32 @@
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif" class="h5 mobile-link">О нас</a>
                                 </li>
-                                <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/#school">Школа</a>
-                                </li>
+                                
+                                <div class="accordion accordion-modal mb-16" id="accordionmodal">
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneFaq">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneModal" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="text">Школы</span>
+                                        </button>
+                                        </h2>
+                                        <div id="collapseOneModal" class="accordion-collapse collapse" aria-labelledby="headingOneModal" data-bs-parent="#accordionModal">
+                                            <div class="accordion-body">
+                                                <ul class="accordion-menu">
+                                                <li><a class="dropdown-item" href="@if($routeName === 'belarus')# @else /school-belarus @endif">Беларусь</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'russia')# @else /school-russia @endif">Россия</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'online')# @else /school-online @endif">Онлайн</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'poland')# @else /dev @endif">Польша</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'georgia')# @else /dev @endif">Грузия</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'moldova')# @else /dev @endif">Молдова</a></li>
+                                                <li><a class="li-item" href="@if($routeName === 'germany')# @else /dev @endif">Германия</a></li>
+                                            </ul>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                    
+                                </div>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Доп.услуги</a>
                                 </li>
@@ -140,7 +163,7 @@
                                     <a class="h5 mobile-link" href="/dev">Одно окно</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="#order-section">Контакты</a>
+                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#order-section @else /#order-section @endif">Контакты</a>
                                 </li>
                             </ul>
                             <div class="d-flex flex-column header-contacts-messengers">

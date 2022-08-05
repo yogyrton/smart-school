@@ -16,7 +16,7 @@
 
                 <div>
                     <h1 class="h1 pb-48">
-                        Частная школа в Республике Беларусь
+                        Частная школа <br> в Республике Беларусь
                     </h1>
                     <div class="btn-group btn-group-3">
                         <a href="/school-belarus/junior" class="button_1 btn-purple text-bold">1-4 класс</a>

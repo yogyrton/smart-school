@@ -1,7 +1,7 @@
 @php($routeName = Route::current()->getName())
-<section id="school" class="@if($routeName === 'home') pt-120 @endif scrollreveal">
+<section id="school" class="@if($routeName === 'home') @endif scrollreveal">
     <div class="container">
-        <h2 class="accentColor mb-40">Школа</h2>
+        <h2 class="accentColor mb-40">Школы</h2>
         <div class="swiper-box">
             <div class="swiper">
                 <div class="swiper-wrapper">

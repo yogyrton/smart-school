@@ -273,7 +273,7 @@
                             contact_msg: this.form.contact_msg
                         }
                     )
-                        .then(response => {
+                        /*.then(response => {
                             if (response) {
                                 $('#requestModal').modal('hide');
                                 Swal.fire({
@@ -291,6 +291,9 @@
                                         }
                                     });
                             }
+                        })*/
+                        .then(response => {
+                            if (response) window.location.href = '/thanks';
                         })
                 }
             },
