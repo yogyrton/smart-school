@@ -96,7 +96,7 @@
             checkForm() {
                 this.$v.form.$touch();
                 if (!this.$v.form.$error) {
-                    axios.post('api/mail', {
+                    axios.post('https://smart.ilavista.tech/api/mail', {
                         name: this.form.name,
                         phone: this.form.phone,
                     })

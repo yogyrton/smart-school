@@ -30,6 +30,14 @@
     <p>Формат: {{ $data['format'] }}</p>
 @endif
 
+@if (isset($data['visit']) && $data['visit'])
+    <p>Формат пребывания: {{ $data['visit'] }}</p>
+@endif
+
+@if (isset($data['month']) && $data['month'])
+    <p>Месяц: {{ $data['month'] }}</p>
+@endif
+
 @if (isset($data['email']) && $data['email'])
     <p>Email: {{ $data['email'] }}</p>
 @endif
@@ -38,7 +46,6 @@
     <p>Текст сообщения:</p>
     {!! nl2br($data['contact_msg']) !!}
 @endif
-
 
 </body>
 </html>

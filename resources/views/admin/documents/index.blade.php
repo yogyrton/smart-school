@@ -17,7 +17,7 @@
     @endif
 
 
-    <a href="{{ route('documents.create') }}">Добавить документ (не более 2 для каждого лагеря)</a>
+    <a href="{{ route('documents.create') }}">Добавить документ</a>
 
     <table class="table table-striped projects">
 
