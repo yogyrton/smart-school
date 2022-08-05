@@ -15,6 +15,9 @@
                             <div class="swiper-slide">
                                 <img src="/img/main/partners/3.png" alt="partner-3" class="img-fluid">
                             </div>
+                            <div class="swiper-slide">
+                                <img src="/img/main/partners/4.png" alt="partner-4" class="img-fluid">
+                            </div>
                         </div>
 
                     </div>

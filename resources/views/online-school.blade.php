@@ -73,7 +73,7 @@
                                 Вам удобно, чтобы ребенок обучался онлайн и при этом получал качественное обучение с
                                 официальной аттестацией? <br>
                                 Теперь это возможно!<br>
-                                <span class="text-bold">Достойное образование для наших детей!</span>
+                                Достойное образование для наших детей!
                             </p>
                             <p class="pb-10">
                                 Более подробную информацию по программам и условиям обучения в нашей школе можно узнать
@@ -149,7 +149,7 @@
                                         <div class="d-flex align-items-start mb-3">
                                             <img src="/svg/time.svg" alt="" class="me-2">
                                             <span>Пребывание в школе: <br>
-                                            Онлайн 9:00-15.45 <br>
+                                            Онлайн с 9:00 <br>
                                             (1-4 классы есть возможность выбора смены обучения<br>
                                             (утренняя с 09:00, дневная с 12:00)</span>
                                         </div>
@@ -164,7 +164,7 @@
                                         <img src="/svg/twemoji_books.svg" alt="" class="me-3">
                                         <p class="mb-0">
                                             Учебные занятия согласно образовательным программам общего среднего
-                                            образования Республики Беларусь.
+                                            образования.
                                         </p>
                                     </div>
                                 </div>
@@ -187,7 +187,7 @@
                         <div class="d-flex align-items-start mb-3">
                             <img src="/svg/time.svg" alt="" class="me-2">
                             <span>Пребывание в школе: <br>
-                                Онлайн 9:00-15.45 <br>
+                                Онлайн с 9:00 <br>
                                 (1-4 классы есть возможность выбора смены обучения<br>
                                 (утренняя с 09:00, дневная с 12:00)</span>
                         </div>
@@ -206,20 +206,23 @@
                                     <div class="row">
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceBel_1)){{$priceBel_1}} @else 500 @endif руб.</div>
-                                                <div class="text-md-end">1-4 классы</div>
+                                                <div class="text-md-end mb-2 h3 accentColor">1-4 классы</div>
+                                                <div class=" text-md-end">@if(!empty($priceBel_1)){{$priceBel_1}} @else 500 @endif руб.</div>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceBel_5)){{$priceBel_5}} @else 550 @endif руб.</div>
-                                                <div class="text-md-end">5-8 классы</div>
+                                                <div class="text-md-end mb-2 h3 accentColor">5-8 классы</div>
+                                                <div class=" text-md-end ">@if(!empty($priceBel_5)){{$priceBel_5}} @else 550 @endif руб.</div>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceBel_9)){{$priceBel_9}} @else 650 @endif руб.</div>
-                                                <div class="text-md-end">9-11 классы</div>
+                                                <div class="text-md-end mb-2 h3 accentColor">9-11 классы</div>
+                                                <div class=" text-md-end ">@if(!empty($priceBel_9)){{$priceBel_9}} @else 650 @endif руб.</div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -228,20 +231,23 @@
                                     <div class="row">
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceRus_1)){{$priceRus_1}} @else 12000 @endif рос.руб.</div>
-                                                <div class="text-md-end">1-4 классы</div>
+                                                <div class="text-md-end text-md-end mb-2 h3 accentColor">1-4 классы</div>
+                                                <div class="text-md-end">@if(!empty($priceRus_1)){{$priceRus_1}} @else 12000 @endif рос.руб.</div>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceRus_5)){{$priceRus_5}} @else 13000 @endif рос.руб.</div>
-                                                <div class="text-md-end">5-8 классы</div>
+                                                <div class="text-md-end text-md-end mb-2 h3 accentColor">5-8 классы</div>
+                                                <div class=" text-md-end ">@if(!empty($priceRus_5)){{$priceRus_5}} @else 13000 @endif рос.руб.</div>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                                <div class="h3 accentColor text-md-end">@if(!empty($priceRus_9)){{$priceRus_9}} @else 15000 @endif рос.руб.</div>
-                                                <div class="text-md-end">9-11 классы</div>
+                                                <div class="text-md-end text-md-end mb-2 h3 accentColor">9-11 классы</div>
+                                                <div class="text-md-end">@if(!empty($priceRus_9)){{$priceRus_9}} @else 15000 @endif рос.руб.</div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -255,8 +261,7 @@
                     <div class="price--card align-items-center mb-20 d-none d-lg-flex">
                         <img src="/svg/twemoji_books.svg" alt="" class="me-3">
                         <p class="mb-0">
-                            Учебные занятия согласно образовательным программам общего среднего образования Республики
-                            Беларусь.
+                            Учебные занятия согласно образовательным программам общего среднего образования.
                         </p>
                     </div>
 
@@ -275,7 +280,7 @@
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Дополнительные занятия (на выбор):
+                                        По желанию с дополнительной оплатой:
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"

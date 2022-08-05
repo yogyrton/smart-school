@@ -231,7 +231,10 @@ const swiper_7 = new Swiper('#partners .swiper', {
             slidesPerView: 1,
             spaceBetween: 30,
         },
-        768: {
+        700: {
+            slidesPerView: 3
+        },
+        1400: {
             slidesPerView: 4
         }
     }

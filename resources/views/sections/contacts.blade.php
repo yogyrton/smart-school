@@ -120,9 +120,28 @@
                         <img class="contacts-socials-img" src="/svg/ok.svg" alt="ok">
                     </a>
                     @endif
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="tg://resolve?domain=sm_education_bot&start=ml15">
-                        <img class="contacts-socials-img" src="/svg/telegram.svg" alt="telegram">
+
+                    @if($routeName === 'camp' || $routeName === 'jukov-lug' || $routeName === 'georgia' || $routeName === 'dreamland')
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCWB5hzQchCK7zorsIyvDzpg">
+                        <img class="contacts-socials-img" src="/svg/youtube.svg" alt="youtube">
                     </a>
+                    @else
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCz0Rk1OJ9ImphZhh9eWsIMQ">
+                        <img class="contacts-socials-img" src="/svg/youtube.svg" alt="youtube">
+                    </a>
+                    @endif
+
+
+                    @if($routeName === 'camp' || $routeName === 'jukov-lug' || $routeName === 'georgia' || $routeName === 'dreamland')
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.tiktok.com/@fabrika_zvezd">
+                        <img class="contacts-socials-img" src="/svg/tiktok.svg" alt="tiktok">
+                    </a>
+                    @else
+                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.tiktok.com/@smartschoolminsk">
+                        <img class="contacts-socials-img" src="/svg/tiktok.svg" alt="tiktok">
+                    </a>
+                    @endif
+                    
                 </div>
 
             </div>

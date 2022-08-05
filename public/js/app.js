@@ -5549,23 +5549,28 @@ __webpack_require__.r(__webpack_exports__);
           country: this.form.country,
           grade: this.form.grade,
           contact_msg: this.form.contact_msg
-        }).then(function (response) {
-          if (response) {
-            $('#requestModal').modal('hide');
-            Swal.fire({
-              allowEscapeKey: false,
-              title: 'Спасибо, Ваша заявка успешно отправлена!',
-              icon: 'error',
-              confirmButtonText: 'На главную',
-              customClass: {
-                container: 'full-height-swall'
-              }
-            }).then(function (result) {
-              if (result.isConfirmed) {
-                window.location.href = '/';
-              }
-            });
-          }
+        })
+        /*.then(response => {
+            if (response) {
+                $('#requestModal').modal('hide');
+                Swal.fire({
+                    allowEscapeKey: false,
+                    title: 'Спасибо, Ваша заявка успешно отправлена!',
+                    icon: 'error',
+                    confirmButtonText: 'На главную',
+                    customClass: {
+                        container: 'full-height-swall'
+                    }
+                })
+                    .then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href='/'
+                        }
+                    });
+            }
+        })*/
+        .then(function (response) {
+          if (response) window.location.href = '/thanks';
         });
       }
     },
@@ -77486,7 +77491,10 @@ var swiper_7 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#partn
       slidesPerView: 1,
       spaceBetween: 30
     },
-    768: {
+    700: {
+      slidesPerView: 3
+    },
+    1400: {
       slidesPerView: 4
     }
   }

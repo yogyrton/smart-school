@@ -19,7 +19,7 @@
 
                 <div>
                     <h1 class="h1 pb-48">
-                        Частная школа в Республике Беларусь <span class="nowrap">1-4 классы</span>
+                        Частная школа <br> в  Республике Беларусь  <span class="nowrap">1-4 классы</span>
                     </h1>
                     <div class="btn-group btn-group-3">
                         <a href="/school-belarus/junior#address " class="button_1 btn-purple text-bold">Жуков Луг</a>
