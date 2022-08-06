@@ -62,7 +62,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <body class="@yield('padding')">
 
-<div id="preview">
+<div id="preview" class="preview">
     <img src="/img/preloader/preloader.gif.gif" alt="">
 </div>
 

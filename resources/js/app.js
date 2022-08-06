@@ -17,13 +17,15 @@ Vue.component('app-request-form', require('./ReqForm.vue').default);
 new Vue({}).$mount('#app');
 
 document.getElementById('preview').classList.add('hidden')
+$(".preview").delay(20000).fadeOut()
 
 setTimeout(() => {
 
     document.getElementById('content-area').classList.add('loaded')
     initPage();
 
-}, 1200)
+
+}, 2000)
 
 //*Animation*//
 var slideUp = {
