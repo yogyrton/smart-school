@@ -9,7 +9,7 @@
                         fill="#8041FF"/>
                 </svg>
             </div>
-            <div class="swiper">
+            <div class="swiper" id="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="/img/main/replies/1.png" alt="reply-1"></div>
                     <div class="swiper-slide"><img src="/img/main/replies/2.png" alt="reply-2"></div>

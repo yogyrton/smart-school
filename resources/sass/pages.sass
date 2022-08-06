@@ -250,6 +250,7 @@
         padding-bottom: 60px
     @media screen and (max-width: 500px)
         padding-bottom: 25px
+        padding-top: 40px
 
     h2
         @media screen and (max-width: 992px)
@@ -292,6 +293,8 @@
 
     .swiper-pagination
         bottom: 40px
+        @media screen and (max-width: 400px)
+            bottom: 13px
 
         .swiper-pagination-bullet
             background: #D3D1D9
@@ -1100,8 +1103,18 @@
     background: $accentColor
 
 
-#faq-1 .modal-dialog.modal-dialog-centered, .modal.show .modal-dialog 
+#faq-1.modal-dialog .modal-dialog-centered, #faq-1.modal.show .modal-dialog 
     @media screen and (max-width: 420px)
         transform: translate(0, 20%)
     @media screen and (max-width: 300px)
         transform: translate(0, 70%)
+
+.zoom-section .row
+    @media screen and (max-width: 768px)
+        flex-direction: column-reverse
+
+.zoom-section .img-block
+    @media screen and (max-width: 767px)
+        margin-bottom: 40px
+    @media screen and (max-width: 500px)
+        margin-bottom: 20px
