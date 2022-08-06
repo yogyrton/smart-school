@@ -17729,6 +17729,28 @@ input:-webkit-autofill {
   }
 }
 
+@media screen and (max-width: 420px) {
+  #faq-1 .modal-close {
+    right: 2%;
+  }
+}
+@media screen and (max-width: 300px) {
+  #faq-1 .modal-close {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #faq-1 .title-faq {
+    max-width: 440px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #faq-1 .title-faq {
+    max-width: 300px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .zoom-section .row {
     flex-direction: column-reverse;
