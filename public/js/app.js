@@ -77301,7 +77301,7 @@ document.getElementById('preview').classList.add('hidden');
 setTimeout(function () {
   document.getElementById('content-area').classList.add('loaded');
   initPage();
-}, 1000); //*Animation*//
+}, 1200); //*Animation*//
 
 var slideUp = {
   delay: 300,

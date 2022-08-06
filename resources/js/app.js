@@ -23,7 +23,7 @@ setTimeout(() => {
     document.getElementById('content-area').classList.add('loaded')
     initPage();
 
-}, 1000)
+}, 1200)
 
 //*Animation*//
 var slideUp = {
