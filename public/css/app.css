@@ -14634,6 +14634,31 @@ body::selection {
   background-color: #000;
 }
 
+#preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#preview img {
+  background-color: transparent;
+}
+@media screen and (max-width: 360px) {
+  #preview img {
+    width: 230px;
+  }
+}
+#preview.hidden {
+  transform: translateY(-100%);
+}
+
 html {
   scroll-padding-top: 120px;
 }
@@ -15066,15 +15091,6 @@ button {
   margin-bottom: 80px;
 }
 
-.mb-160 {
-  margin-bottom: 160px;
-}
-@media screen and (max-width: 992px) {
-  .mb-160 {
-    margin-bottom: 60px;
-  }
-}
-
 .mb-180 {
   margin-bottom: 180px;
 }
@@ -15150,6 +15166,11 @@ button {
 .mb-160 {
   margin-bottom: 160px;
 }
+@media screen and (max-width: 992px) {
+  .mb-160 {
+    margin-bottom: 60px;
+  }
+}
 
 .pb-160 {
   padding-bottom: 160px;
@@ -15162,6 +15183,14 @@ button {
 .swiper {
   width: 100%;
   overflow: hidden;
+}
+
+.swiper::-moz-selection {
+  background: none;
+}
+
+.swiper::selection {
+  background: none;
 }
 
 .swiper-button-disabled {
@@ -16700,6 +16729,7 @@ input:-webkit-autofill {
 @media screen and (max-width: 500px) {
   .priority {
     padding-bottom: 25px;
+    padding-top: 40px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -16755,6 +16785,11 @@ input:-webkit-autofill {
 }
 .priority .swiper-pagination {
   bottom: 40px;
+}
+@media screen and (max-width: 400px) {
+  .priority .swiper-pagination {
+    bottom: 13px;
+  }
 }
 .priority .swiper-pagination .swiper-pagination-bullet {
   background: #D3D1D9;
@@ -17684,13 +17719,30 @@ input:-webkit-autofill {
 }
 
 @media screen and (max-width: 420px) {
-  #faq-1 .modal-dialog.modal-dialog-centered, .modal.show .modal-dialog {
+  #faq-1.modal-dialog .modal-dialog-centered, #faq-1.modal.show .modal-dialog {
     transform: translate(0, 20%);
   }
 }
 @media screen and (max-width: 300px) {
-  #faq-1 .modal-dialog.modal-dialog-centered, .modal.show .modal-dialog {
+  #faq-1.modal-dialog .modal-dialog-centered, #faq-1.modal.show .modal-dialog {
     transform: translate(0, 70%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .zoom-section .row {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .zoom-section .img-block {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .zoom-section .img-block {
+    margin-bottom: 20px;
   }
 }
 

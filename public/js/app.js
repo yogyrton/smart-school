@@ -77301,7 +77301,12 @@ window.EventHandler = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]();
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuelidate__WEBPACK_IMPORTED_MODULE_4__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-form', (__webpack_require__(/*! ./Form.vue */ "./resources/js/Form.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-request-form', (__webpack_require__(/*! ./ReqForm.vue */ "./resources/js/ReqForm.vue")["default"]));
-new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app'); //*Animation*//
+new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app');
+document.getElementById('preview').classList.add('hidden');
+setTimeout(function () {
+  document.getElementById('content-area').classList.add('loaded');
+  initPage();
+}, 1000); //*Animation*//
 
 var slideUp = {
   delay: 300,
@@ -77314,25 +77319,7 @@ var slideUp = {
   delay: 250,
   duration: 1000,
   reset: false
-}); //для плавного скролла к разделам
-// const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
-// if (menuLinks.length > 0) {
-//     menuLinks.forEach(menuLink => {
-//         menuLink.addEventListener("click", onMenuLinkClick);
-//     });
-//     function onMenuLinkClick(e) {
-//         const menuLink = e.target;
-//         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-//             const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//             const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-//             window.scrollTo({
-//                 top: gotoBlockValue,
-//                 behavior: "smooth"
-//             });
-//             e.preventDefault();
-//         }
-//     }
-// }
+}); //
 //свайперы
 
 var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head .swiper', {
@@ -77879,7 +77866,21 @@ $(document).ready(function () {
       arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>'
     }
   });
-});
+}); //для отмены выделения при перелистывании слайдера
+
+swiper.onmousedown = swiper.onselectstart = function () {
+  return false;
+};
+
+swiper.onselectstart = function () {
+  return false;
+};
+
+swiper.onselectstart.preventDefault();
+
+document.onselectstart = function () {
+  event.preventDefault();
+};
 })();
 
 /******/ })()
