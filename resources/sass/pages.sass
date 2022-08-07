@@ -889,17 +889,11 @@
         transform: translateY(70px)
 
 #partners
-    // .partners-wrapper
-    //     gap: 30px
-    //     @media screen and (max-width: 1200px)
-    //         gap: 12px
-    //         flex-wrap: wrap
-    //         justify-content: center
     @media screen and (max-width: 768px)
         margin-bottom: 0
         padding-bottom: 80px
     @media screen and (max-width: 576px)
-        padding-bottom: 100px
+        padding-bottom: 60px
 
     .swiper
         align-items: center
@@ -956,20 +950,15 @@
             word-break: break-all
 
         .contacts-mail
-            //padding-left: 34px
             position: relative
-            //margin-bottom: 28px
             word-break: break-all
 
-        .contacts-mail::before
-            //content: ""
-            //position: absolute
-            //background-image: url('/svg/letter.svg')
-            //background-repeat: no-repeat
-            //width: 24px
-            //height: 24px
-            //left: 2px
-            //top: 4px
+        .contacts-2
+            @media screen and (max-width: 500px)
+                flex-wrap: wrap
+                justify-content: space-between
+            @media screen and (max-width: 360px)
+                justify-content: flex-start 
 
         .contacts-socials
             @media screen and (max-width: 500px)
@@ -989,6 +978,8 @@
                     margin-right: 0
                 &:hover
                     background: rgba(128, 65, 255, 0.1)
+                @media screen and (max-width: 500px)
+                    margin-right: 0
 
         .contacts-location,
         .contacts-timetable,
