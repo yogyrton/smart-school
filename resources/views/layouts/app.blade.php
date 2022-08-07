@@ -62,17 +62,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <body class="@yield('padding')">
 
-<div id="preview" class="preview">
+<!-- <div id="preview" class="preview">
     <img src="/img/preloader/preloader.gif.gif" alt="">
-</div>
+</div> -->
 
 <div id="app">
-    <div id="content-area">
         @include('partials.header')
         @include('partials.request_modal')
         @yield('content')
         @include('partials.footer')
-    </div>
 </div>
 
 <script src="/js/app.js"></script>

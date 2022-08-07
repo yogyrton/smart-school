@@ -16,16 +16,15 @@ Vue.component('app-form', require('./Form.vue').default);
 Vue.component('app-request-form', require('./ReqForm.vue').default);
 new Vue({}).$mount('#app');
 
-document.getElementById('preview').classList.add('hidden')
-$(".preview").delay(20000).fadeOut()
+// document.getElementById('preview').classList.add('hidden')
+// $(".preview").delay(20000).fadeOut()
 
-setTimeout(() => {
+// setTimeout(() => {
 
-    document.getElementById('content-area').classList.add('loaded')
-    initPage();
+//     document.getElementById('content-area').classList.add('loaded')
+//     initPage();
 
-
-}, 2000)
+// }, 2000)
 
 //*Animation*//
 var slideUp = {

@@ -121,12 +121,33 @@
                     <div class="container">
                         <nav>
                             <ul>
-                                <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
+                                <!-- <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif" class="h5 mobile-link">О нас</a>
-                                </li>
-                                
-                                <div class="accordion accordion-modal mb-16" id="accordionmodal">
+                                </li> -->
 
+                                <div class="accordion accordion-modal mb-16" id="accordionmodal">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingSecondFaq">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecondModal" aria-expanded="false" aria-controls="collapseFirst">
+                                            <span class="text">О нас</span>
+                                        </button>
+                                        </h2>
+                                        <div id="collapseSecondModal" class="accordion-collapse collapse" aria-labelledby="collapseSecondModal" data-bs-parent="#accordionModal">
+                                            <div class="accordion-body">
+                                                <ul class="accordion-menu">
+                                                    <li><a onClick="$('.modal').modal('hide');"  class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif">История</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' ||   $routeName === 'senior'  || $routeName === 'junior' )#priority @elseif ($routeName === 'russia' || $routeName === 'online') #priority-online @else /#priority @endif">Преимущества</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )#news @else /#news @endif">Новости</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )#documents @else /#documents @endif">Документы</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <div class="accordion accordion-modal mb-16" id="accordionmodal">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="headingOneFaq">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneModal" aria-expanded="false" aria-controls="collapseTwo">
@@ -146,9 +167,7 @@
                                             </ul>
                                             </div>
                                         </div>
-                                </div>
-
-                                    
+                                    </div> 
                                 </div>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Доп.услуги</a>
