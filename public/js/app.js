@@ -77410,6 +77410,8 @@ var swiper_4 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#news 
     prevEl: '.news .slider-button-prev'
   },
   pagination: {
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
     el: ".news .swiper-pagination",
     clickable: true,
     renderBullet: function renderBullet(index, className) {

@@ -144,6 +144,8 @@ const swiper_4 = new Swiper('#news .swiper', {
         prevEl: '.news .slider-button-prev',
     },
     pagination: {
+        dynamicBullets: true,
+        dynamicMainBullets: 1,
         el: ".news .swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
