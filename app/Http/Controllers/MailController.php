@@ -30,9 +30,12 @@ class MailController extends Controller
                 $page = 'smart-s.info/school-online';
                 break;
             case 'camp':
-                $page = 'smart-s.info/camp/jukov-lug';
+                $page = 'smart-s.info/camp';
                 break;
             case 'jukov-lug':
+                $page = 'smart-s.info/camp/jukov-lug';
+                break;
+            case 'georgia':
                 $page = 'smart-s.info/camp/georgia';
                 break;
             case 'dreamland':
@@ -44,9 +47,11 @@ class MailController extends Controller
 
         }
 
+        if ($data['pages'] === 'camp' || $data['pages'] === 'georgia' || $data['pages'] === 'jukov-lug' || $data['pages'] === 'dreamland') {
+            Mail::to('summer.camp.dreamland@gmail.com')->send(new MessageMail($data, $page));
+        } else {
+            Mail::to('smart2020ekaterina@gmail.com')->send(new MessageMail($data, $page));
+        }
 
-        $mail = 'parusov.93@gmail.com';
-
-        Mail::to($mail)->send(new MessageMail($data, $page));
     }
 }
