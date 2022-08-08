@@ -11,11 +11,11 @@
 <h1>Данные об отправителе: </h1>
 
 @if (isset($page) && $page)
-    <h3>С какого сайта: {{ $page }}</h3>
+    <h3>С какой страницы: {{ $page }}</h3>
 @endif
 
 @if (isset($data['name']) && $data['name'])
-    <p>Имя: {{ $data['name'] }}</p></p>
+    <p>Имя: {{ $data['name'] }}</p>
 @endif
 
 @if (isset($data['phone']) && $data['phone'])

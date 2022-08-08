@@ -265,7 +265,7 @@ export default {
         checkForm() {
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
-                axios.post('https://smart.ilavista.tech/api/mail', {
+                axios.post('https://smart-s.info/api/mail', {
                         name: this.form.name,
                         email: this.form.email,
                         phone: this.form.phone,
@@ -275,7 +275,7 @@ export default {
                         contact_msg: this.form.contact_msg,
                         visit: this.form.visit,
                         month: this.form.month,
-                        page: this.page
+                        pages: this.page
                     }
                 )
                     /*.then(response => {
