@@ -5544,7 +5544,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('https://smart.ilavista.tech/api/mail', {
+        axios.post('https://smart-s.info/api/mail', {
           name: this.form.name,
           email: this.form.email,
           phone: this.form.phone,
@@ -5554,7 +5554,7 @@ __webpack_require__.r(__webpack_exports__);
           contact_msg: this.form.contact_msg,
           visit: this.form.visit,
           month: this.form.month,
-          page: this.page
+          pages: this.page
         })
         /*.then(response => {
             if (response) {
@@ -5675,6 +5675,11 @@ __webpack_require__.r(__webpack_exports__);
     Multiselect: (vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default())
   },
   mixins: [vuelidate__WEBPACK_IMPORTED_MODULE_1__.validationMixin],
+  props: {
+    page: {
+      "default": null
+    }
+  },
   data: function data() {
     return {
       windowWidth: null,
@@ -5706,10 +5711,10 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('https://smart.ilavista.tech/api/mail', {
+        axios.post('https://smart-s.info/api/mail', {
           name: this.form.name,
           phone: this.form.phone,
-          page: this.page
+          pages: this.page
         })
         /*.then(response => {
             if (response) {

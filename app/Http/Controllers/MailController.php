@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\MessageMail;
+use App\Mail\RequestFormMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -12,9 +13,7 @@ class MailController extends Controller
     {
         $data = $request->all();
 
-        $page = 'smart-s.info';
-
-        switch ($data['page']) {
+        switch ($data['pages']) {
             case 'belarus':
                 $page = 'smart-s.info/school-belarus';
                 break;
@@ -40,12 +39,14 @@ class MailController extends Controller
                 $page = 'smart-s.info/camp/dreamland';
                 break;
             default:
-                $page = 'smart-s';
+                $page = 'smart-s.info';
                 break;
+
         }
 
-        $mailTo = 'parusov.93@gmail.com';
 
-        Mail::to($mailTo)->send(new MessageMail($data, $page));
+        $mail = 'parusov.93@gmail.com';
+
+        Mail::to($mail)->send(new MessageMail($data, $page));
     }
 }
