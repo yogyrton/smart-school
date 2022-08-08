@@ -16,15 +16,6 @@ Vue.component('app-form', require('./Form.vue').default);
 Vue.component('app-request-form', require('./ReqForm.vue').default);
 new Vue({}).$mount('#app');
 
-// document.getElementById('preview').classList.add('hidden')
-// $(".preview").delay(20000).fadeOut()
-
-// setTimeout(() => {
-
-//     document.getElementById('content-area').classList.add('loaded')
-//     initPage();
-
-// }, 2000)
 
 //*Animation*//
 var slideUp = {
@@ -42,9 +33,6 @@ ScrollReveal().reveal('.scrollheader',
         reset: false,
     }
 );
-
-//
-
 
 
 //свайперы
@@ -525,6 +513,7 @@ const swiper_20 = new Swiper('#documents .swiper', {
         prevEl: '#documents .slider-button-prev',
     },
 });
+
 
 
 

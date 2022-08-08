@@ -6,12 +6,12 @@
 @php($page = Route::current()->getName())
 
 <section id="head"
-            class="head mb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+            class="head mb-120 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/camp.png" alt="" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/camp.webp" alt="" class="d-none d-md-block banner-image">
                     <img src="/img/main/banners/camp-mob.png" alt="" class="banner-image d-block d-md-none">
                 </div>
 
@@ -28,7 +28,7 @@
                         <button class="button_1 btn-pink w-100 text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
-                    <div class="notification--head">
+                    <div class="notification--head notification--head-camp">
                         @if(!empty($mainNews)  && count($mainNews) > 0)
                             <div class="position-relative swiper-box head-swiper">
                                 <div class="position-relative container-slider-pagination">
@@ -166,7 +166,7 @@
         </div>
 </section>
 
-<section id="faq">
+<section id="faq" class="pb-120">
         <div class="container">
             <h2 class="accentColor mb-40">Часто задаваемые вопросы</h2>
 
@@ -232,8 +232,17 @@
         </div>
 </section>
 
-@include ('sections.partners')
-@include ('sections.reviews')
-@include ('sections.contacts')
+<div class="pb-120">
+    @include ('sections.partners')
+</div>
+
+<div class="pb-120">
+    @include ('sections.reviews')
+</div>
+
+<div class="pb-120">
+    @include ('sections.contacts')
+</div>
+
 
 @stop

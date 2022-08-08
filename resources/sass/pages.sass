@@ -27,9 +27,9 @@
             right: 50px
             background-image: url('/img/main/head-recangle.svg')
             background-repeat: no-repeat
-        @media screen and (min-width: 1500px)
-            transform: translate(-35%, -55%)
-            right: 0
+        // @media screen and (min-width: 1500px)
+        //     transform: translate(-35%, -55%)
+        //     right: 0
 
     .head--container
         display: grid
@@ -152,6 +152,10 @@
 .head.notification-size-2
     @media screen and (max-width: 767px)
         padding: 60px 0 180px 0
+
+.notification--head-camp
+    @media screen and (max-width: 575px)
+        transform: translate(0, 20%) !important
 
 #head .swiper-box
     max-width: 340px
@@ -435,6 +439,11 @@
         border-radius: 12px
         background: $light-grey
         padding: 20px
+
+    .price--card-camp
+        padding: 40px 
+        @media screen and (max-width: 360px)
+            padding: 20px
 
     .swiper-pagination
         position: static

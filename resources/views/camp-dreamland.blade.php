@@ -4,7 +4,7 @@
 @section('content')
 
 <section id="head"
-            class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+            class="head mb-120 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
@@ -23,7 +23,7 @@
                     <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
-                    <div class="notification--head">
+                    <div class="notification--head notification--head-camp">
                         @if(!empty($mainNews)  && count($mainNews) > 0)
                             <div class="position-relative swiper-box head-swiper">
                                 <div class="position-relative container-slider-pagination">
@@ -50,7 +50,7 @@
         </div>
 </section>
 
-<section class="pb-120" id="address">
+<section class="pb-120 camp-addres-section" id="address">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-5 mb-md-0">
@@ -184,7 +184,7 @@
         </div>
 </section>
 
-<section id="guides" class="scrollreveal mb-160">
+<section id="guides" class="scrollreveal pb-120">
         <div class="container">
             <h2 class="accentColor mb-40">Вожатые</h2>
                 <div class="d-flex align-items-center justify-content-between position-relative">
@@ -249,10 +249,15 @@
             
 </section>
 
-@include ('sections.album')
-@include ('sections.contacts')
+<div class="pb-120">
+    @include ('sections.album')
+</div>
 
-<section id="campLinks">
+<div class="pb-120">
+    @include ('sections.contacts')
+</div>
+
+<section id="campLinks" class="pb-120">
     <div class="container">
         <h2 class="accentColor mb-40">Вам может быть интересно</h2>
         <div class="d-flex align-items-center justify-content-between position-relative">

@@ -5,7 +5,7 @@
 @php($routeName = Route::current()->getName())
     @php($activeNav = 'school')
 
-    <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+    <section id="head" class="head mb-120 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">

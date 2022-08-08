@@ -3,7 +3,7 @@
 @section('content')
 
 <section id="head"
-            class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+            class="head mb-120 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
@@ -22,7 +22,7 @@
                     <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
-                    <div class="notification--head">
+                    <div class="notification--head notification--head-camp">
                         @if(!empty($mainNews)  && count($mainNews) > 0)
                             <div class="position-relative swiper-box head-swiper">
                                 <div class="position-relative container-slider-pagination">
@@ -49,7 +49,7 @@
         </div>
 </section>
 
-<section class="pb-120" id="address">
+<section class="pb-120 camp-addres-section" id="address">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-5 mb-md-0">
@@ -75,7 +75,7 @@
         </div>
 </section>
 
-<section class="schedule" id="schedule">
+<section class="schedule pb-120" id="schedule">
     <div class="container">
         <h2 class="accentColor mb-40">
             График смен
@@ -129,7 +129,7 @@
     @include('sections.documents')
 </div>
 
-<section id="price" class="pb-120 price-dreamland">
+<section id="price" class="pb-120 price-georgia">
         <div class="container">
             <h2 class="accentColor mb-40">Наш прейскурант</h2>
 
@@ -141,8 +141,8 @@
                 <div class="col-lg-6">
 
                 <div class="row mb-40">
-                        <div class="col-xl-8 mb-4 mb-xl-0 d-none d-lg-block">
-                            <div class="price--card">
+                        <div class="col-xl-8 mb-4 mb-xl-0 ">
+                            <div class="price--card price--card-camp">
                                 <div class="d-flex align-items-start mb-3">
                                     <img src="/svg/time.svg" alt="" class="me-2">
                                     <span>Пребывание в лагере: круглосуточное;</span>
@@ -165,7 +165,7 @@
                         </div>
                 </div>
 
-                    <ul class="custom-ul-2">
+                    <ul class="custom-ul-2 d-lg-block d-none">
                         <li>проживание 13 ночей/14 дней в комфортных номерах по 3-5 человек (письменный стол, телевизор с плоским экраном, собственная ванная комната);</li>
                         <li>шестиразовое сбалансированное питание с учетом индивидуальных запросов родителей и детей (домашняя кухня от профессиональных поваров: завтрак, второй завтрак, обед, полдник, ужин, второй ужин); </li>
                         <li>круглосуточное обеспечение питьевой водой;</li>
@@ -174,12 +174,44 @@
                         <li>ежедневные групповые и общие развлекательно-познавательные мероприятия лагеря;</li>
                         <li>обеспечение безопасности и медицинского обслуживания.</li>
                     </ul>
+
+                    <!-- MOBILE -->
+
+                    <div class="swiper-box d-lg-none d-block">
+                        <div class="swiper swiper-1 d-lg-none d-block">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <ul class="custom-ul-2">
+                                        <li>проживание 13 ночей/14 дней в комфортных номерах по 3-5 человек (письменный стол, телевизор с плоским экраном, собственная ванная комната);</li>
+                                        <li>шестиразовое сбалансированное питание с учетом индивидуальных запросов родителей и детей (домашняя кухня от профессиональных поваров: завтрак, второй завтрак, обед, полдник, ужин, второй ужин); </li>
+                                    </ul>
+                            </div>
+                                <div class="swiper-slide">
+                                    <ul class="custom-ul-2">
+                                        <li>круглосуточное обеспечение питьевой водой;</li>
+                                        <li>круглосуточное квалифицированное педагогическое, психологическое сопровождение детей (с детьми работают опытные педагоги); </li>
+                                        <li>ежедневные анимационные программы согласно сюжетно-сценарной идее;</li>
+                                    </ul>
+                            </div>
+                            <div class="swiper-slide">
+                                <ul class="custom-ul-2">
+                                    <li>ежедневные групповые и общие развлекательно-познавательные мероприятия лагеря;</li>
+                                    <li>обеспечение безопасности и медицинского обслуживания.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-1"></div>
+                    </div>
+                    </div>
+
+                    
+
                 </div>
             </div>
         </div>
 </section>
 
-<section id="guides" class="scrollreveal">
+<section id="guides" class="scrollreveal pb-120">
         <div class="container">
             <h2 class="accentColor mb-40">Вожатые</h2>
                 <div class="d-flex align-items-center justify-content-between position-relative">
@@ -244,10 +276,15 @@
             
 </section>
 
-@include ('sections.album')
-@include ('sections.contacts')
+<div class="pb-120">
+    @include ('sections.album')
+</div>
 
-<section id="campLinks">
+<div class="pb-120">
+    @include ('sections.contacts')
+</div>
+
+<section id="campLinks" class="pb-120">
     <div class="container">
         <h2 class="accentColor mb-40">Вам может быть интересно</h2>
         <div class="d-flex align-items-center justify-content-between position-relative">

@@ -16411,12 +16411,6 @@ input:-webkit-autofill {
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 1500px) {
-  .head:before {
-    transform: translate(-35%, -55%);
-    right: 0;
-  }
-}
 .head .head--container {
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -16963,6 +16957,14 @@ input:-webkit-autofill {
   border-radius: 12px;
   background: #F4F2F6;
   padding: 20px;
+}
+#price .price--card-camp {
+  padding: 40px;
+}
+@media screen and (max-width: 360px) {
+  #price .price--card-camp {
+    padding: 20px;
+  }
 }
 #price .swiper-pagination {
   position: static;
@@ -17857,18 +17859,14 @@ input:-webkit-autofill {
     padding-top: 40px;
   }
 }
+@media screen and (max-width: 300px) {
+  .camp-addres-section {
+    padding-top: 75px;
+  }
+}
 
 .page-description {
   max-width: 653px;
-}
-
-.price--card-camp {
-  padding: 40px;
-}
-@media screen and (max-width: 360px) {
-  .price--card-camp {
-    padding: 20px;
-  }
 }
 
 .price--card-2 {
@@ -17901,11 +17899,6 @@ input:-webkit-autofill {
 @media screen and (max-width: 1000px) {
   #guides {
     padding-bottom: 100px;
-  }
-}
-@media screen and (max-width: 765px) {
-  #guides {
-    padding-bottom: 40px;
   }
 }
 #guides .guide-box {
@@ -18204,7 +18197,8 @@ input:-webkit-autofill {
 
 @media screen and (max-width: 1500px) {
   .price-dreamland .row,
-.price-jukov .row {
+.price-jukov .row,
+.price-georgia .row {
     margin: 20px -8px !important;
   }
 }

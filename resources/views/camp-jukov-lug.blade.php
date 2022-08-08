@@ -4,7 +4,7 @@
 @section('content')
 
 <section id="head"
-            class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+            class="head mb-120 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
@@ -23,7 +23,7 @@
                     <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 
-                    <div class="notification--head">
+                    <div class="notification--head notification--head-camp">
                         @if(!empty($mainNews)  && count($mainNews) > 0)
                             <div class="position-relative swiper-box head-swiper">
                                 <div class="position-relative container-slider-pagination">
@@ -52,7 +52,7 @@
         </div>
 </section>
 
-<section class="pb-120" id="address">
+<section class="pb-120 camp-addres-section" id="address">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-5 mb-md-0">
@@ -80,7 +80,7 @@
         </div>
 </section>
 
-<section class="schedule" id="schedule">
+<section class="schedule pb-120" id="schedule">
     <div class="container">
         <h2 class="accentColor mb-40">
             График смен
@@ -160,7 +160,7 @@
 
                 <div class="col-lg-6">
 
-                    <div class="price--card mb-24">
+                    <div class="price--card price--card-camp  mb-24">
                         <div class="d-flex align-items-start mb-3">
                             <img src="/svg/time.svg" alt="" class="me-2">
                             <span>Пребывание в лагере: круглосуточное / дневное;</span>
@@ -175,7 +175,7 @@
                         </div>
                     </div>
 
-                    <div class="row mb-40">
+                    <div class="row mb-40 ">
                         <div class="col-lg-6 col-md-4 mb-3 mb-md-0">
                             <div class="price--card-2 d-flex flex-column h-100">
                                 <div class="h3 accentColor text-md-end mb-2">1200 BYN</div>
@@ -203,7 +203,7 @@
         </div>
 </section>
 
-<section id="guides" class="scrollreveal mb-160">
+<section id="guides" class="scrollreveal pb-120">
         <div class="container">
             <h2 class="accentColor mb-40">Вожатые</h2>
                 <div class="d-flex align-items-center justify-content-between position-relative">
@@ -268,10 +268,15 @@
             
 </section>
 
-@include ('sections.album')
-@include ('sections.contacts')
+<div class="pb-120">
+    @include ('sections.album')
+</div>
 
-<section id="campLinks">
+<div class="pb-120">
+    @include ('sections.contacts')
+</div>
+
+<section id="campLinks" class="pb-120">
     <div class="container">
         <h2 class="accentColor mb-40">Вам может быть интересно</h2>
         <div class="d-flex align-items-center justify-content-between position-relative">
@@ -304,7 +309,7 @@
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a class="linkBox" href="/camp">
+                        <a class="linkBox" href="/dev">
                             <div class="img-box">
                                 <img src="/img/main/campLinks/online.jpg" alt="online-img">
                             </div>
