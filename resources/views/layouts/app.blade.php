@@ -22,7 +22,7 @@
 <!-- Meta -->
 <meta name="yandex-verification" content="16d615ad060ac4c2" />
 
-<meta name="google-site-verification" content="T8INzbR22jEUMz7gMm4z1zruU79ZOXxaB7J7ZQJ5qPw" />
+<meta name="google-site-verification" content="k5Vx4QTrboj3Epoy3jBoPd5h80-rNgTqATKbofLx6j4" />
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
