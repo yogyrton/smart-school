@@ -5544,7 +5544,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('https://smart-school/api/mail', {
+        axios.post('https://smart.ilavista.tech/api/mail', {
           name: this.form.name,
           email: this.form.email,
           phone: this.form.phone,
@@ -5553,7 +5553,8 @@ __webpack_require__.r(__webpack_exports__);
           grade: this.form.grade,
           contact_msg: this.form.contact_msg,
           visit: this.form.visit,
-          month: this.form.month
+          month: this.form.month,
+          page: this.page
         })
         /*.then(response => {
             if (response) {
@@ -5705,9 +5706,10 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('https://smart-school/api/mail', {
+        axios.post('https://smart.ilavista.tech/api/mail', {
           name: this.form.name,
-          phone: this.form.phone
+          phone: this.form.phone,
+          page: this.page
         })
         /*.then(response => {
             if (response) {

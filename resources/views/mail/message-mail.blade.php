@@ -10,8 +10,8 @@
 <body>
 <h1>Данные об отправителе: </h1>
 
-@if (isset($data['page']) && $data['page'])
-    <h3>С какого сайта: {{ $data['page'] }}</h3>
+@if (isset($page) && $page)
+    <h3>С какого сайта: {{ $page }}</h3>
 @endif
 
 @if (isset($data['name']) && $data['name'])
