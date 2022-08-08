@@ -749,32 +749,6 @@
     .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next 
         transform: scale(0.63)
 
-    // .swiper-pagination
-    //     display: none
-    //     @media screen and (max-width: 576px)
-    //         display: block
-
-    // .swiper-pagination-bullet
-    //     width: 24px
-    //     height: 24px
-    //     text-align: center
-    //     line-height: 24px
-    //     font-size: 16px
-    //     color: $grey
-    //     background-color: inherit
-    //     opacity: 1
-
-    // .swiper-pagination-bullet-active
-    //     color: $white
-    //     background: $accentColor
-
-
-    // .replies-pagination
-    //     position: absolute
-    //     bottom: 0
-    //     transform: translate(-50%, 70px)
-    //     max-width: calc(100% - 100px)
-    //     left: 50%
 
 #news
     @media screen and (max-width: 990px)
@@ -864,11 +838,6 @@
             opacity: 1
             visibility: inherit
 
-    .swiper-pagination
-        display: none
-        @media screen and (max-width: 576px)
-            display: block
-
     .swiper-pagination-bullet
         width: 24px
         height: 24px
@@ -884,9 +853,21 @@
         background: $accentColor
 
     .news-pagination
-        position: absolute
-        bottom: 0
-        transform: translateY(70px)
+        display: none
+        @media screen and (max-width: 576px)
+            display: block
+            position: absolute
+            bottom: 0
+            transform: translate(-50%, 70px)
+            max-width: calc(100% - 100px)
+            left: 50%
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next 
+        transform: scale(0.83)
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next 
+        transform: scale(0.63)
 
 #partners
     @media screen and (max-width: 768px)
