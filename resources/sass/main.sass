@@ -6,8 +6,10 @@ html *
 *
     -webkit-touch-callout:none              
     -webkit-text-size-adjust:none          
-    -webkit-tap-highlight-color:rgba(0,0,0,0) 
-    -webkit-user-select:none               
+    -webkit-user-select:none
+    -moz-user-select: none     
+    -ms-user-select: none      
+    user-select: none 
 
 body
     padding-top: 105px
@@ -19,12 +21,24 @@ body
     @media screen and (max-width: 1199px)
         padding-top: 44px
 
+body::-moz-selection 
+    color: #fff
+    background-color: #000
+
+body::selection 
+    color: #fff
+    background-color: #000
+
+
 html
     scroll-padding-top: 120px
     @media screen and (max-width: 1200px)
         scroll-padding-top: 90px   
     @media screen and (max-width: 992px)
         scroll-padding-top: 40px
+    @media screen and (max-width: 400px)
+        scroll-padding-top: 50px
+
 .w-100
     width: 100% !important
 
@@ -57,6 +71,8 @@ img, svg
 input, textarea
     -webkit-border-radius: 0
     -webkit-appearance: none
+    user-select: auto
+    -webkit-user-select: auto
 
 .row
     margin: 0 -15px
@@ -338,11 +354,6 @@ h2.mb-60, h1.mb-60
 .mb-80
     margin-bottom: 80px
 
-.mb-160
-    margin-bottom: 160px
-    @media screen and (max-width: 992px)
-        margin-bottom: 60px
-
 .mb-180
     margin-bottom: 180px
 
@@ -392,6 +403,8 @@ h2.mb-60, h1.mb-60
 
 .mb-160
     margin-bottom: 160px
+    @media screen and (max-width: 992px)
+        margin-bottom: 60px
 
 .pb-160
     padding-bottom: 160px
@@ -404,10 +417,13 @@ h2.mb-60, h1.mb-60
     width: 100%
     overflow: hidden
 
+ 
+    
+.swiper::selection 
+    background: none
+
 .swiper-button-disabled
     opacity: .3
-
-
 
 #requestModal.modal
     .modal-dialog
@@ -427,8 +443,8 @@ h2.mb-60, h1.mb-60
         height: 100%
         @media screen and (max-width: 800px)
             width: auto
-        @media screen and (max-width: 300px)
-            max-width: 265px !important
+        // @media screen and (max-width: 300px)
+        //     max-width: 265px !important
         
         .modal-close
             width: 20px
@@ -504,24 +520,46 @@ h2.mb-60, h1.mb-60
 
 #burgerModal
     padding-right: 0
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1055
+    display: none
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+    overflow-y: auto
+    outline: 0
 
     .modal-content
         padding: 0
 
     .modal-dialog
         max-width: none
+        transform: none
         margin: 0
         height: 100%
-        width: 90%
+        width: auto
+        position: relative
+        pointer-events: none
 
-        -webkit-transform: translateX(-20px)
-        -moz-transform: translateX(-20px)
-        -ms-transform: translateX(-20px)
-        transform: translateX(-20px)
+
+        // -webkit-transform: translateX(-20px)
+        // -moz-transform: translateX(-20px)
+        // -ms-transform: translateX(-20px)
+        // transform: translateX(-20px)
 
         .modal-content
-            height: 100%
-            border-radius: 0 24px 24px 0
+            min-height: 100%
+            position: relative
+            display: flex
+            flex-direction: column
+            width: 100%
+            pointer-events: auto
+            background-color: #fff
+            background-clip: padding-box
+            border-radius: 0.3rem
+            outline: 0
 
     .modal-header
         padding: 24px 0
@@ -542,7 +580,7 @@ h2.mb-60, h1.mb-60
                     margin-bottom: 0
 
     .accordion-modal button
-        padding: 0
+        padding: 0 !important
 
     .accordion-body
         max-width: 150px
@@ -569,11 +607,8 @@ h2.mb-60, h1.mb-60
             max-width: calc(100% - 32px)
         &::after
             margin-left: 12px
-            background-image: url('/svg/arrowHeader.svg')
+            background-image: url('/svg/arrowHeader.svg') !important
                 
-
-
-
 
 
 

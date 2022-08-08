@@ -1,7 +1,7 @@
 @php($routeName = Route::current()->getName())
 @php($regionNumber = null)
 @if($routeName === 'russia') @php($regionNumber = 79680710905)
-@else @php($regionNumber = 375255066588)
+@else @php($regionNumber = 375256016500)
 @endif
 <section id="order-section" class="order-section scrollreveal">
     <div class="container">
@@ -80,7 +80,7 @@
                 </div>
 
                 <p class="grey mb-16">Подписывайтесь на наши соц. сети:</p>
-                <div class="contacts-socials d-flex">
+                <div class="contacts-socials contacts-2 d-flex">
                     @if($routeName === 'camp')
                     <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.instagram.com/fabrikazvezdminsk/">
                         <img class="contacts-socials-img" src="/svg/inst.svg" alt="inst">

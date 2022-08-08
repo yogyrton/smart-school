@@ -16,6 +16,15 @@ Vue.component('app-form', require('./Form.vue').default);
 Vue.component('app-request-form', require('./ReqForm.vue').default);
 new Vue({}).$mount('#app');
 
+// document.getElementById('preview').classList.add('hidden')
+// $(".preview").delay(20000).fadeOut()
+
+// setTimeout(() => {
+
+//     document.getElementById('content-area').classList.add('loaded')
+//     initPage();
+
+// }, 2000)
 
 //*Animation*//
 var slideUp = {
@@ -34,28 +43,9 @@ ScrollReveal().reveal('.scrollheader',
     }
 );
 
-//для плавного скролла к разделам
-// const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
-// if (menuLinks.length > 0) {
-//     menuLinks.forEach(menuLink => {
-//         menuLink.addEventListener("click", onMenuLinkClick);
-//     });
+//
 
-//     function onMenuLinkClick(e) {
-//         const menuLink = e.target;
-//         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-//             const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//             const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
-//             window.scrollTo({
-//                 top: gotoBlockValue,
-//                 behavior: "smooth"
-//             });
-
-//             e.preventDefault();
-//         }
-//     }
-// }
 
 //свайперы
 
@@ -112,6 +102,8 @@ const swiper_3 = new Swiper('#replies .swiper', {
         prevEl: '#replies .slider-button-prev',
     },
     pagination: {
+        dynamicBullets: true,
+        dynamicMainBullets: 1,
         el: ".replies .swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
@@ -137,7 +129,7 @@ const swiper_3 = new Swiper('#replies .swiper', {
             spaceBetween: 10,
         },
         1200: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 10,
         }
     }
@@ -152,6 +144,8 @@ const swiper_4 = new Swiper('#news .swiper', {
         prevEl: '.news .slider-button-prev',
     },
     pagination: {
+        dynamicBullets: true,
+        dynamicMainBullets: 1,
         el: ".news .swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
@@ -534,6 +528,7 @@ const swiper_20 = new Swiper('#documents .swiper', {
 
 
 
+
 //для уменьшения лого при скролле
 window.onscroll = function () {
     if (window.scrollY < 200) document.querySelector('header').classList.remove('tiny');
@@ -624,6 +619,7 @@ $(document).ready(function() {
         closeOnContentClick: true,
         mainClass: 'mfp-img-mobile',
         gallery: {
+            clickable: true,
             enabled: true,
             navigateByImgClick: true,
             preload: [0,1],
@@ -633,4 +629,17 @@ $(document).ready(function() {
     });
 });
 
+//для отмены выделения при перелистывании слайдера
+
+swiper.onmousedown = swiper.onselectstart = function() {
+    return false;
+};
+
+swiper.onselectstart = () => false;
+
+swiper.onselectstart.preventDefault() 
+
+document.onselectstart = () => {
+event.preventDefault();
+}
 

@@ -10,7 +10,7 @@
                                 fill="#8041FF"/>
                         </svg>
                     </div>
-                <div class="swiper">
+                <div class="swiper" id="swiper">
                     <div class="swiper-wrapper">
                         
                             @foreach($documents as $document)

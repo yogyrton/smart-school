@@ -4,7 +4,29 @@
         <div class="swiper-box">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                <div class="swiper-slide g-col1">
+                        <a class="school-box school-box-short" href="/school-russia">
+                            <div class="img-box block-mob">
+                                <img src="/img/main/school/russia.jpg" alt="children-img">
+                            </div>
+                            <div class="box-inner">
+                                <div>
+                                    <h3 class="accentColor mb-24">Россия</h3>
+                                    <div class="box-description">
+                                        <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
+                                    </div>
+                                </div>
+                                <button class="button_2 text">Подробнее</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="school-box school-box-desktop">
+                        <img class="w-100" src="/img/main/school/russia.jpg" alt="children-img">
+                    </div>
+
+                    
+                    <div class="swiper-slide g-col">
                         <a class="school-box" href="/school-online">
                             <div class="img-box block-mob">
                                 <img src="/img/main/school/online.jpg" alt="children-img">
@@ -43,26 +65,7 @@
                         <img class="w-100" src="/img/main/school/gruziya.jpg" alt="children-img">
                     </div>
 
-                    <div class="swiper-slide">
-                        <a class="school-box school-box-short" href="/school-russia">
-                            <div class="img-box block-mob">
-                                <img src="/img/main/school/russia.jpg" alt="children-img">
-                            </div>
-                            <div class="box-inner">
-                                <div>
-                                    <h3 class="accentColor mb-24">Россия</h3>
-                                    <div class="box-description">
-                                        <p class="text flex-grow-1 mb-12">обучение дистанционно на платформе Zoom</p>
-                                    </div>
-                                </div>
-                                <button class="button_2 text">Подробнее</button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="school-box school-box-desktop">
-                        <img class="w-100" src="/img/main/school/russia.jpg" alt="children-img">
-                    </div>
+                    
 
                     <div class="swiper-slide">
                         <a class="school-box" href="/dev">

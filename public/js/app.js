@@ -5544,7 +5544,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('https://smart.ilavista.tech/api/mail', {
+        axios.post('https://smart-school/api/mail', {
           name: this.form.name,
           email: this.form.email,
           phone: this.form.phone,
@@ -5553,8 +5553,7 @@ __webpack_require__.r(__webpack_exports__);
           grade: this.form.grade,
           contact_msg: this.form.contact_msg,
           visit: this.form.visit,
-          month: this.form.month,
-          page: this.page
+          month: this.form.month
         })
         /*.then(response => {
             if (response) {
@@ -5706,27 +5705,31 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('https://smart.ilavista.tech/api/mail', {
+        axios.post('https://smart-school/api/mail', {
           name: this.form.name,
-          phone: this.form.phone,
-          page: this.page
-        }).then(function (response) {
-          if (response) {
-            $('#requestModal').modal('hide');
-            Swal.fire({
-              allowEscapeKey: false,
-              title: 'Спасибо, Ваша заявка успешно отправлена!',
-              icon: 'error',
-              confirmButtonText: 'На главную',
-              customClass: {
-                container: 'full-height-swall'
-              }
-            }).then(function (result) {
-              if (result.isConfirmed) {
-                window.location.href = '/';
-              }
-            });
-          }
+          phone: this.form.phone
+        })
+        /*.then(response => {
+            if (response) {
+                $('#requestModal').modal('hide');
+                Swal.fire({
+                    allowEscapeKey: false,
+                    title: 'Спасибо, Ваша заявка успешно отправлена!',
+                    icon: 'error',
+                    confirmButtonText: 'На главную',
+                    customClass: {
+                        container: 'full-height-swall'
+                    }
+                })
+                    .then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href='/'
+                        }
+                    });
+            }
+        })*/
+        .then(function (response) {
+          if (response) window.location.href = '/thanks';
         });
       }
     },
@@ -77298,7 +77301,13 @@ window.EventHandler = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]();
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuelidate__WEBPACK_IMPORTED_MODULE_4__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-form', (__webpack_require__(/*! ./Form.vue */ "./resources/js/Form.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-request-form', (__webpack_require__(/*! ./ReqForm.vue */ "./resources/js/ReqForm.vue")["default"]));
-new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app'); //*Animation*//
+new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app'); // document.getElementById('preview').classList.add('hidden')
+// $(".preview").delay(20000).fadeOut()
+// setTimeout(() => {
+//     document.getElementById('content-area').classList.add('loaded')
+//     initPage();
+// }, 2000)
+//*Animation*//
 
 var slideUp = {
   delay: 300,
@@ -77311,25 +77320,7 @@ var slideUp = {
   delay: 250,
   duration: 1000,
   reset: false
-}); //для плавного скролла к разделам
-// const menuLinks = document.querySelectorAll('.menu-link[data-goto]');
-// if (menuLinks.length > 0) {
-//     menuLinks.forEach(menuLink => {
-//         menuLink.addEventListener("click", onMenuLinkClick);
-//     });
-//     function onMenuLinkClick(e) {
-//         const menuLink = e.target;
-//         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-//             const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//             const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-//             window.scrollTo({
-//                 top: gotoBlockValue,
-//                 behavior: "smooth"
-//             });
-//             e.preventDefault();
-//         }
-//     }
-// }
+}); //
 //свайперы
 
 var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head .swiper', {
@@ -77383,6 +77374,8 @@ var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#repli
     prevEl: '#replies .slider-button-prev'
   },
   pagination: {
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
     el: ".replies .swiper-pagination",
     clickable: true,
     renderBullet: function renderBullet(index, className) {
@@ -77408,7 +77401,7 @@ var swiper_3 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#repli
       spaceBetween: 10
     },
     1200: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 10
     }
   }
@@ -77422,6 +77415,8 @@ var swiper_4 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#news 
     prevEl: '.news .slider-button-prev'
   },
   pagination: {
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
     el: ".news .swiper-pagination",
     clickable: true,
     renderBullet: function renderBullet(index, className) {
@@ -77866,6 +77861,7 @@ $(document).ready(function () {
     closeOnContentClick: true,
     mainClass: 'mfp-img-mobile',
     gallery: {
+      clickable: true,
       enabled: true,
       navigateByImgClick: true,
       preload: [0, 1],
@@ -77873,7 +77869,21 @@ $(document).ready(function () {
       arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>'
     }
   });
-});
+}); //для отмены выделения при перелистывании слайдера
+
+swiper.onmousedown = swiper.onselectstart = function () {
+  return false;
+};
+
+swiper.onselectstart = function () {
+  return false;
+};
+
+swiper.onselectstart.preventDefault();
+
+document.onselectstart = function () {
+  event.preventDefault();
+};
 })();
 
 /******/ })()

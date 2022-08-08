@@ -11,7 +11,7 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/school-belarus-senior.webp" alt="" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/new4.webp" alt="" class="d-none d-md-block banner-image">
                     <img src="/img/main/banners/school-belarus-senior-mob.webp" alt="" class="banner-image d-block d-md-none">
                 </div>
 
@@ -387,7 +387,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><img src="/svg/close.svg" alt=""></button>
-                <div class="h6 mb-20 text-bold">Является ли школа официальной? Есть ли у школы лицензия? Выдает ли школа аттестаты государственного образца?</div>
+                <div class="h6 mb-20 text-bold title-faq">Является ли школа официальной? Есть ли у школы лицензия? Выдает ли школа аттестаты государственного образца?</div>
                 <p class="mb-20">
                     Школа является официальным учреждением образования наравне с государственными школами.
                     В Республике Беларусь для работы частных общеобразовательных школ лицензия не требуется.

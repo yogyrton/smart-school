@@ -10,7 +10,7 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/school-belarus.webp" alt="" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/new3.webp" alt="" class="d-none d-md-block banner-image">
                     <img src="/img/main/banners/school-belarus-mob.webp" alt="" class="banner-image d-block d-md-none">
                 </div>
 

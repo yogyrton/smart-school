@@ -9,11 +9,16 @@
                         fill="#8041FF"/>
                 </svg>
             </div>
-            <div class="swiper">
+            <div class="swiper" id="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/img/main/replies/reply1.png" alt="reply-1"></div>
-                    <div class="swiper-slide"><img src="/img/main/replies/reply2.png" alt="reply-2"></div>
-                    <div class="swiper-slide"><img src="/img/main/replies/reply3.png" alt="reply-3"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/1.png" alt="reply-1"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/2.png" alt="reply-2"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/3.png" alt="reply-3"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/4.png" alt="reply-4"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/5.png" alt="reply-5"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/6.png" alt="reply-6"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/7.png" alt="reply-7"></div>
+                    <div class="swiper-slide"><img src="/img/main/replies/8.png" alt="reply-8"></div>
                 </div>
 
             </div>
