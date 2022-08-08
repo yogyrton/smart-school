@@ -14,15 +14,17 @@ class MessageMail extends Mailable
     use Queueable, SerializesModels;
 
     public $data;
+    public $page;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct($data, $page)
     {
         $this->data = $data;
+        $this->page = $page;
     }
 
     /**
