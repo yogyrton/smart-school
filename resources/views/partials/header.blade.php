@@ -18,13 +18,13 @@
                                 О нас
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif">История</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @elseif ( $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#history @else /#history @endif">История</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' ||   $routeName === 'senior'  || $routeName === 'junior' )#priority @elseif ($routeName === 'russia' || $routeName === 'online') #priority-online @else /#priority @endif">Преимущества</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'camp' )#replies @else /#replies @endif">Отзывы</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )#news @else /#news @endif">Новости</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )#documents @else /#documents @endif">Документы</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )#documents @else /#documents @endif">Документы</a></li>
                             </ul>
                         </div>
 
@@ -77,7 +77,7 @@
                                 <a class="h5" href="/dev">Одно окно</a>
                             </li>
                             <li class="header-item">
-                                <a  class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#order-section @else /#order-section @endif">Контакты</a>
+                                <a  class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -135,7 +135,7 @@
                                         <div id="collapseSecondModal" class="accordion-collapse collapse" aria-labelledby="collapseSecondModal" data-bs-parent="#accordionModal">
                                             <div class="accordion-body">
                                                 <ul class="accordion-menu">
-                                                    <li><a onClick="$('.modal').modal('hide');"  class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @else /#history @endif">История</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');"  class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @elseif ( $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#history @else /#history @endif">История</a></li>
                                                     <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
                                                     <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' ||   $routeName === 'senior'  || $routeName === 'junior' )#priority @elseif ($routeName === 'russia' || $routeName === 'online') #priority-online @else /#priority @endif">Преимущества</a></li>
                                                     <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
@@ -176,17 +176,17 @@
                                     <a class="h5 mobile-link" href="/dev">Детский лагерь</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/#replies">Отзывы</a>
+                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies @elseif ($routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else #replies @endif">Отзывы</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Одно окно</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#order-section @else /#order-section @endif">Контакты</a>
+                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a>
                                 </li>
                             </ul>
                             <div class="d-flex flex-column header-contacts-messengers">
-                                <a target="_blank" href="https://www.instagram.com/smartschool_minsk/">
+                                <a class="instagram" target="_blank" href="https://www.instagram.com/smartschool_minsk/">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -194,7 +194,7 @@
                                               fill="#8041FF"/>
                                     </svg>
                                 </a>
-                                <a target="_blank" href="https://www.facebook.com/people/Smart-School-%25D1%2587%25D0%25B0%25D1%2581%25D1%2582%25D0%25BD%25D0%25B0%25D1%258F-%25D1%2588%25D0%25BA%25D0%25BE%25D0%25BB%25D0%25B0/100039861583458/">
+                                <a class="facebook" target="_blank" href="https://www.facebook.com/people/Smart-School-%25D1%2587%25D0%25B0%25D1%2581%25D1%2582%25D0%25BD%25D0%25B0%25D1%258F-%25D1%2588%25D0%25BA%25D0%25BE%25D0%25BB%25D0%25B0/100039861583458/">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_182_1856)">
@@ -210,7 +210,7 @@
                                     </svg>
                                 </a>
                                 
-                                <a target="_blank" href="https://vk.com/smartschool_minsk">
+                                <a class="vk" target="_blank" href="https://vk.com/smartschool_minsk">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_182_1860)">
@@ -225,7 +225,7 @@
                                         </defs>
                                     </svg>
                                 </a>
-                                <a target="_blank" href="tg://resolve?domain=sm_education_bot&start=ml15">
+                                <a class="telegram" target="_blank" href="tg://resolve?domain=sm_education_bot&start=ml15">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
