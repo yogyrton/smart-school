@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         User::query()->create([
             'name' => 'Admin',
             'email' => 'Admin@admin.ru',
-            'password' => Hash::make('123'),
+            'password' => Hash::make('Wdv7vOG4smartMinsk2020'),
         ]);
     }
 }

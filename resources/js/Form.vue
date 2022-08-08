@@ -227,7 +227,7 @@ export default {
                 grade: null,
                 contact_msg: null,
                 visit: null,
-                month: null
+                month: null,
             },
             format: ['Онлайн', 'Оффлайн'],
             grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
@@ -275,6 +275,7 @@ export default {
                         contact_msg: this.form.contact_msg,
                         visit: this.form.visit,
                         month: this.form.month,
+                        page: this.page
                     }
                 )
                     /*.then(response => {

@@ -5,10 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Письмо</title>
 </head>
 <body>
 <h1>Данные об отправителе: </h1>
+
+@if (isset($data['page']) && $data['page'])
+    <h3>С какого сайта: {{ $data['page'] }}</h3>
+@endif
 
 @if (isset($data['name']) && $data['name'])
     <p>Имя: {{ $data['name'] }}</p></p>
@@ -46,6 +50,7 @@
     <p>Текст сообщения:</p>
     {!! nl2br($data['contact_msg']) !!}
 @endif
+
 
 </body>
 </html>

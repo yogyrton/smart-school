@@ -32,6 +32,6 @@ class MessageMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.message-mail');
+        return $this->view('mail.message-mail');
     }
 }
