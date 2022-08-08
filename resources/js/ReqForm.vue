@@ -99,6 +99,7 @@
                     axios.post('https://smart.ilavista.tech/api/mail', {
                         name: this.form.name,
                         phone: this.form.phone,
+                        page: this.page
                     })
                         .then(response => {
                             if(response) {

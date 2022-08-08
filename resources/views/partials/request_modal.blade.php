@@ -1,3 +1,4 @@
+@php($routeName = Route::current()->getName())
 <div class="modal fade" id="requestModal" tabindex="-1" aria-labelledby="requestModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -6,7 +7,9 @@
             <p class="grey mb-20">
                 Оставьте свой номер телефона и мы перезвоним, чтобы ответить на все интересующие Вас вопросы.
             </p>
-            <app-request-form></app-request-form>
+            <app-request-form page="{{$routeName}}"></app-request-form>
         </div>
     </div>
 </div>
+
+
