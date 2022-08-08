@@ -16601,6 +16601,12 @@ input:-webkit-autofill {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .notification--head-camp {
+    transform: translate(0, 20%) !important;
+  }
+}
+
 #head .swiper-box {
   max-width: 340px;
   margin-left: 100px;
@@ -17846,14 +17852,34 @@ input:-webkit-autofill {
   width: 100%;
 }
 
+@media screen and (max-width: 576px) {
+  .camp-addres-section {
+    padding-top: 40px;
+  }
+}
+
 .page-description {
   max-width: 653px;
+}
+
+.price--card-camp {
+  padding: 40px;
+}
+@media screen and (max-width: 360px) {
+  .price--card-camp {
+    padding: 20px;
+  }
 }
 
 .price--card-2 {
   border-radius: 12px;
   background: #F4F2F6;
   padding: 44px 66px;
+}
+@media screen and (max-width: 400px) {
+  .price--card-2 {
+    padding: 24px;
+  }
 }
 
 .custom-ul-2 {
@@ -17872,6 +17898,16 @@ input:-webkit-autofill {
   top: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  #guides {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 765px) {
+  #guides {
+    padding-bottom: 40px;
+  }
+}
 #guides .guide-box {
   display: block;
   height: 100%;
@@ -17923,12 +17959,68 @@ input:-webkit-autofill {
     border-radius: 0 12px 12px 0;
   }
 }
+#guides .slider-button-next {
+  right: 0px;
+  transform: translateX(55px);
+  position: absolute;
+}
+@media screen and (max-width: 1400px) {
+  #guides .slider-button-next {
+    right: 50%;
+    transform: translate(145%, -100%);
+    bottom: -130px;
+    top: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #guides .slider-button-next {
+    transform: translate(100%, -105%);
+  }
+}
+@media screen and (max-width: 700px) {
+  #guides .slider-button-next {
+    display: none;
+  }
+}
+#guides .slider-button-prev {
+  left: 0px;
+  transform: translateX(-55px);
+  position: absolute;
+}
+@media screen and (max-width: 1400px) {
+  #guides .slider-button-prev {
+    left: 50%;
+    transform: translate(-100%, -100%);
+    bottom: -130px;
+    top: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #guides .slider-button-prev {
+    transform: translate(-100%, -105%);
+  }
+}
+@media screen and (max-width: 700px) {
+  #guides .slider-button-prev {
+    display: none;
+  }
+}
+#guides .swiper-button-disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+@media screen and (max-width: 1200px) {
+  #guides .swiper-button-disabled {
+    opacity: 1;
+    visibility: inherit;
+  }
+}
 #guides .swiper-pagination {
   display: none;
   bottom: -10%;
   position: absolute;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 700px) {
   #guides .swiper-pagination {
     display: block;
   }
@@ -18001,6 +18093,11 @@ input:-webkit-autofill {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #schedule {
+    padding-bottom: 90px;
+  }
+}
 #schedule .swiper-pagination {
   display: none;
   bottom: -25%;
@@ -18014,16 +18111,18 @@ input:-webkit-autofill {
 #schedule .swiper-pagination-bullet {
   opacity: 1;
   background: #F4F2F6;
-  width: 8px;
-  height: 8px;
+  width: 11px;
+  height: 11px;
   margin: 0 8px;
 }
 #schedule .swiper-pagination-bullet-active {
   background: #8041FF;
 }
 
-#campLinks {
-  margin-bottom: 134px;
+@media screen and (max-width: 990px) {
+  #campLinks {
+    padding-bottom: 90px;
+  }
 }
 #campLinks a.linkBox:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -18084,6 +18183,11 @@ input:-webkit-autofill {
 #campLinks .box-inner button {
   position: absolute;
   bottom: 10%;
+}
+@media screen and (max-width: 300px) {
+  #campLinks .box-inner button {
+    bottom: 5%;
+  }
 }
 #campLinks .swiper-wrapper {
   padding-bottom: 5px;
