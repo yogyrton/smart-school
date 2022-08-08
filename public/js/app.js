@@ -5497,8 +5497,7 @@ __webpack_require__.r(__webpack_exports__);
         grade: null,
         contact_msg: null,
         visit: null,
-        month: null,
-        page: this.page
+        month: null
       },
       format: ['Онлайн', 'Оффлайн'],
       grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
@@ -5555,7 +5554,7 @@ __webpack_require__.r(__webpack_exports__);
           contact_msg: this.form.contact_msg,
           visit: this.form.visit,
           month: this.form.month,
-          page: this.form.page
+          page: this.page
         })
         /*.then(response => {
             if (response) {
