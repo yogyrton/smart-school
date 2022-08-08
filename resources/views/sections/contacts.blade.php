@@ -15,16 +15,16 @@
 {{--                        <img src="/svg/telephone.svg" alt="phone-logo">--}}
 {{--                        <img src="/svg/viber.svg" alt="viber-logo">--}}
 {{--                        <img src="/svg/telegram.svg" alt="telegram-logo">--}}
-                        <a href="tel:+375255066009">+375 (25) 506-60-09</a>
+                        <a class="tel-number" href="tel:+375255066009">+375 (25) 506-60-09</a>
                         </div>
                     <div class="contacts-info d-flex mb-20">
 {{--                        <img src="/svg/telephone.svg" alt="phone-logo">--}}
 {{--                        <img src="/svg/viber.svg" alt="viber-logo">--}}
 {{--                        <img src="/svg/telegram.svg" alt="telegram-logo">--}}
                         @if($routeName === 'russia' || $routeName === 'online')
-                            <a href="tel:+79680710905">+7 (968) 071-09-05</a>
+                            <a class="tel-number" href="tel:+79680710905">+7 (968) 071-09-05</a>
                         @else
-                        <a href="tel:+375255066588">+375 (25) 506-65-88</a>
+                        <a class="tel-number" href="tel:+375255066588">+375 (25) 506-65-88</a>
                         @endif
                     </div>
                     
@@ -40,16 +40,16 @@
 {{--                        <img src="/svg/viber.svg" alt="viber-logo">--}}
 {{--                        <img src="/svg/whatsapp.svg" alt="whatsapp-logo">--}}
 {{--                        <img src="/svg/telegram.svg" alt="telegram-logo">--}}
-                        <a href="tel:+37525601-65-00">+375 (25) 601-65-00</a>
+                        <a class="tel-number" href="tel:+375256016500">+375 (25) 601-65-00</a>
                     </div>
                 </div>
                 <div class="mb-24">
                     <p class="grey mb-16">Администрация:</p>
                     <div>
                         @if($routeName === 'russia' || $routeName === 'online')
-                            <a class="contacts-tel mb-12 d-inline-block" href="tel:+79680710905">+7 (968) 071-09-05</a>
+                            <a class="contacts-tel mb-12 d-inline-block tel-number" href="tel:+79680710905">+7 (968) 071-09-05</a>
                         @else
-                            <a class="contacts-tel mb-12 d-inline-block" href="tel:+375255156009">+375 (25) 515-60-09</a>
+                            <a class="contacts-tel mb-12 d-inline-block tel-number" href="tel:+375255156009">+375 (25) 515-60-09</a>
                         @endif
                     </div>
 
@@ -67,13 +67,13 @@
                 <div class="mb-24">
                     <p  class="grey mb-16">Пишите в мессенджеры:</p>
                     <div class="contacts-socials d-flex">
-                        <a class="contacts-socials-link" target="_blank" rel="noopener" href="viber://chat?number=%2B{{$regionNumber}}">
+                        <a class="contacts-socials-link viber" target="_blank" rel="noopener" href="viber://chat?number=%2B{{$regionNumber}}">
                             <img class="contacts-socials-img" src="/svg/viber.svg" alt="viber">
                         </a>
-                        <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone={{$regionNumber}}">
+                        <a class="contacts-socials-link whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone={{$regionNumber}}">
                             <img class="contacts-socials-img" src="/svg/whatsapp.svg" alt="whatsapp">
                         </a>
-                        <a class="contacts-socials-link" target="_blank" rel="noopener" href="tg://resolve?domain=sm_education_bot&start=ml15">
+                        <a class="contacts-socials-link telegram" target="_blank" rel="noopener" href="tg://resolve?domain=sm_education_bot&start=ml15">
                             <img class="contacts-socials-img" src="/svg/telegram.svg" alt="telegram">
                         </a>
                     </div>
@@ -82,41 +82,41 @@
                 <p class="grey mb-16">Подписывайтесь на наши соц. сети:</p>
                 <div class="contacts-socials contacts-2 d-flex">
                     @if($routeName === 'camp')
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.instagram.com/fabrikazvezdminsk/">
+                    <a class="contacts-socials-link instagram" target="_blank" rel="noopener" href="https://www.instagram.com/fabrikazvezdminsk/">
                         <img class="contacts-socials-img" src="/svg/inst.svg" alt="inst">
                     </a>
                     @else
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.instagram.com/smartschool_minsk/">
+                    <a class="contacts-socials-link instagram" target="_blank" rel="noopener" href="https://www.instagram.com/smartschool_minsk/">
                         <img class="contacts-socials-img" src="/svg/inst.svg" alt="inst">
                     </a>
                     @endif
 
                     @if($routeName === 'camp')
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://ru-ru.facebook.com/obrazovatelnycentrfabrikazvezd/">
+                    <a class="contacts-socials-link facebook" target="_blank" rel="noopener" href="https://ru-ru.facebook.com/obrazovatelnycentrfabrikazvezd/">
                         <img class="contacts-socials-img" src="/svg/facebook.svg" alt="facebook">
                     </a>
                     @else
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://www.facebook.com/people/Smart-School-%25D1%2587%25D0%25B0%25D1%2581%25D1%2582%25D0%25BD%25D0%25B0%25D1%258F-%25D1%2588%25D0%25BA%25D0%25BE%25D0%25BB%25D0%25B0/100039861583458/">
+                    <a class="contacts-socials-link facebook" target="_blank" rel="noopener" href="https://www.facebook.com/people/Smart-School-%25D1%2587%25D0%25B0%25D1%2581%25D1%2582%25D0%25BD%25D0%25B0%25D1%258F-%25D1%2588%25D0%25BA%25D0%25BE%25D0%25BB%25D0%25B0/100039861583458/">
                         <img class="contacts-socials-img" src="/svg/facebook.svg" alt="facebook">
                     </a>
                     @endif
 
                     @if($routeName === 'camp')
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href=" https://vk.com/centr_fabrika_zvezd">
+                    <a class="contacts-socials-link vk" target="_blank" rel="noopener" href=" https://vk.com/centr_fabrika_zvezd">
                         <img class="contacts-socials-img" src="/svg/vk.svg" alt="vk">
                     </a>
                     @else
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://vk.com/smartschool_minsk">
+                    <a class="contacts-socials-link vk" target="_blank" rel="noopener" href="https://vk.com/smartschool_minsk">
                         <img class="contacts-socials-img" src="/svg/vk.svg" alt="vk">
                     </a>
                     @endif
 
                     @if($routeName === 'camp')
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://ok.ru/fabrika.zvezd.minsk">
+                    <a class="contacts-socials-link ok" target="_blank" rel="noopener" href="https://ok.ru/fabrika.zvezd.minsk">
                         <img class="contacts-socials-img" src="/svg/ok.svg" alt="ok">
                     </a>
                     @else
-                    <a class="contacts-socials-link" target="_blank" rel="noopener" href="https://ok.ru/group/58476618186850">
+                    <a class="contacts-socials-link ok" target="_blank" rel="noopener" href="https://ok.ru/group/58476618186850">
                         <img class="contacts-socials-img" src="/svg/ok.svg" alt="ok">
                     </a>
                     @endif
