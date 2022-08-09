@@ -50,8 +50,8 @@
                         <div class="footer-box">
                             <h5 class="text-bold mb-16">Детский лагерь</h5>
                             <ul class="footer-list">
-                                <li class="footer-list-item"><a href="/dev">Беларусь</a></li>
-                                <li class="footer-list-item "><a href="/dev">Грузия</a></li>
+                                <li class="footer-list-item"><a href="/camp">Беларусь</a></li>
+                                <li class="footer-list-item "><a href="/camp/georgia">Грузия</a></li>
                                 <li class="footer-list-item "><a href="/dev">Польша</a></li>
                                 <li class="footer-list-item "><a href="/dev">Онлайн</a></li>
                             </ul>

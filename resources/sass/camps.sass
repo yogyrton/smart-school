@@ -35,9 +35,7 @@
 
 .camp-addres-section
     @media screen and (max-width: 576px)
-        padding-top: 40px
-    @media screen and (max-width: 300px)
-        padding-top: 75px
+        padding-top: 100px
 
 .page-description
     max-width: 653px
@@ -80,16 +78,20 @@
             display: grid
             grid-template-columns: 50% 50%
             width: 100%
+            // min-height: 320px
             &:hover
                 color: $accentColor
+        h3
+            word-wrap: break-word
         .img-box
             background: $light-grey
             width: 100%
+            height: 322px
             border-radius: 20px
             position: relative
             overflow: hidden
-            @media screen and (min-width: 1200px)
-                border-radius: 20px
+            @media screen and (max-width: 1200px)
+                height: 345px
             img
                 width: 100%
                 height: 100%
@@ -106,6 +108,9 @@
             border-radius: 0 0 12px 12px
             @media screen and (min-width: 1200px)
                 border-radius: 0 12px 12px 0
+
+    .swiper-slide 
+        height: auto
 
     .slider-button-next
         right: 0px
