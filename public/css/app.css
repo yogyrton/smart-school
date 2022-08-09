@@ -16632,12 +16632,12 @@ input:-webkit-autofill {
 
 @media screen and (max-width: 767px) {
   .head.notification-size {
-    padding: 60px 0 200px 0;
+    padding: 60px 0 250px 0;
   }
 }
 @media screen and (max-width: 360px) {
   .head.notification-size {
-    padding: 60px 0 230px 0;
+    padding: 60px 0 270px 0;
   }
 }
 
@@ -17974,6 +17974,7 @@ input:-webkit-autofill {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 100%;
+    min-height: 320px;
   }
   #guides .guide-box:hover {
     color: #8041FF;
