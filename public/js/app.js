@@ -5467,7 +5467,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -49958,7 +49957,7 @@ var render = function () {
             _vm.page === "dreamland" ||
             _vm.page === "georgia" ||
             _vm.page === "jukov-lug"
-              ? _c("div", { staticClass: "d-block col-6" }, [
+              ? _c("div", { staticClass: "d-block col-6 multiselect-cut" }, [
                   _c(
                     "div",
                     { staticClass: "form-group mb-12" },
@@ -49968,7 +49967,7 @@ var render = function () {
                       ]),
                       _vm._v(" "),
                       _c("multiselect", {
-                        staticClass: "multiselect w-100",
+                        staticClass: "multiselect w-100 ",
                         attrs: {
                           id: "visit",
                           name: "visit",
@@ -50032,10 +50031,10 @@ var render = function () {
             _vm.page === "dreamland" ||
             _vm.page === "georgia" ||
             _vm.page === "jukov-lug"
-              ? _c("div", { staticClass: "d-block col-6" }, [
+              ? _c("div", { staticClass: "d-block col-6 multiselect-cut" }, [
                   _c(
                     "div",
-                    { staticClass: "form-group mb-12" },
+                    { staticClass: "form-group mb-12 " },
                     [
                       _c("label", { attrs: { for: "month" } }, [
                         _vm._v("Месяц"),

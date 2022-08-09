@@ -63,8 +63,8 @@
                                 Детский лагерь
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/camp">Беларусь</a></li>
-                                <li><a class="dropdown-item" href="/camp/georgia">Грузия</a></li>
+                                <li><a class="dropdown-item" href="/dev">Беларусь</a></li>
+                                <li><a class="dropdown-item" href="/dev">Грузия</a></li>
                                 <li><a class="dropdown-item" href="/dev">Польша</a></li>
                                 <li><a class="dropdown-item" href="/dev">Онлайн</a></li>
                             </ul>
@@ -173,7 +173,7 @@
                                     <a class="h5 mobile-link" href="/dev">Доп.услуги</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/camp">Детский лагерь</a>
+                                    <a class="h5 mobile-link" href="/dev">Детский лагерь</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies @elseif ($routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else #replies @endif">Отзывы</a>

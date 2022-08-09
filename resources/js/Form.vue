@@ -38,15 +38,14 @@
 
                     </div>
 
-                    <div v-if="(page === 'camp' || page === 'dreamland' || page === 'georgia' || page === 'jukov-lug')" class="d-block col-6">
+                    <div v-if="(page === 'camp' || page === 'dreamland' || page === 'georgia' || page === 'jukov-lug')" class="d-block col-6 multiselect-cut">
                         <div class="form-group mb-12">
-                            
                             <label for="visit">Формат пребывания</label>
                             <multiselect
                                 id="visit"
                                 name="visit"
                                 v-model="form.visit"
-                                class="multiselect w-100"
+                                class="multiselect w-100 "
                                 :options="visit"
                                 :searchable="false"
                                 :close-on-select="true"
@@ -72,8 +71,8 @@
                         </div>
                     </div>
 
-                    <div v-if="(page === 'camp' || page === 'dreamland' || page === 'georgia' || page === 'jukov-lug')" class="d-block col-6">
-                        <div class="form-group mb-12">
+                    <div v-if="(page === 'camp' || page === 'dreamland' || page === 'georgia' || page === 'jukov-lug')" class="d-block col-6 multiselect-cut">
+                        <div class="form-group mb-12 ">
                             <label for="month">Месяц</label>
                             <multiselect
                                 id="month"
