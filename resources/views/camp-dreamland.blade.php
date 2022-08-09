@@ -148,7 +148,7 @@
                 <div class="col-lg-6">
 
                 <div class="row mb-40">
-                        <div class="col-xl-8 mb-4 mb-xl-0 d-none d-lg-block">
+                        <div class="col-xl-8 mb-4 mb-xl-0 d-block">
                             <div class="price--card price--card-camp">
                                 <div class="d-flex align-items-start mb-3">
                                     <img src="/svg/time.svg" alt="" class="me-2">
