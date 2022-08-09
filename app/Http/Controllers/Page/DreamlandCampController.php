@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Page;
 use App\Http\Controllers\Controller;
 use App\Traits\CounselorTrait;
 use App\Traits\DocumentsTrait;
+use App\Traits\LinksTrait;
 use App\Traits\MainNewsTrait;
 use App\Traits\PhotoTrait;
 use App\Traits\PriceTrait;
@@ -21,7 +22,8 @@ class DreamlandCampController extends Controller
         $price = PriceTrait::getPrice($this->price);
         $counselors = CounselorTrait::getTeachers($this->page);
         $photos = PhotoTrait::getPhotoByCamp($this->page);
+        $links = LinksTrait::getLinks($this->page);
 
-        return view('camp-dreamland', compact('mainNews', 'price', 'documents', 'counselors', 'photos'));
+        return view('camp-dreamland', compact('mainNews', 'price', 'documents', 'counselors', 'photos', 'links'));
     }
 }

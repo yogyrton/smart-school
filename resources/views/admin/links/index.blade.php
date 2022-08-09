@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 
-@section('title', 'Список документов')
+@section('title', 'Ссылки на внешний ресурсы')
 
 @section('content')
 
@@ -17,48 +17,40 @@
     @endif
 
 
-    <a href="{{ route('documents.create') }}">Добавить документ</a>
+    <a href="{{ route('links.create') }}">Добавить ссылку (не более 1 на каждую страницу)</a>
 
     <table class="table table-striped projects">
 
         <thead>
         <tr>
 
-            <th style="width: 20%">
-                Позиция
+            <th style="width: 40%">
+                Лагерь
             </th>
 
-            <th style="width: 20%">
-                Название
-            </th>
-
-            <th style="width: 5%">
-                Скачать
+            <th style="width: 15%">
+                Ссылка
             </th>
 
         </tr>
         </thead>
 
         <tbody>
-        @foreach($documents as $document)
+        @foreach($links as $link)
             <tr>
 
-                <th>
-                    {{ $document->page }}
-                </th>
-
                 <td>
-                    {{ $document->title }}
+                    {{ $link->camp }}
                 </td>
 
                 <td>
-                    <a href="{{ route('download', $document->id) }}">Скачать</a>
+                    <a href="{{ $link->links }}" target="_blank">Ссылка</a>
                 </td>
 
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="{{ route('documents.edit', $document->id) }}">Редактировать</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('links.edit', $link->id) }}">Редактировать</a>
 
-                    <form action="{{ route('documents.destroy', $document->id) }}" method="post">
+                    <form action="{{ route('links.destroy', $link->id) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm">Удалить</button>

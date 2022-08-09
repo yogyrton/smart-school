@@ -171,7 +171,8 @@
                         <span class="d-flex"></span>
                         <p class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на
                             обработку персональных данных в соответствии с
-                            <a class="politic-link" target="_blank" href="/docs/privacy_policy.pdf">Политикой обработки персональных
+                            <a class="politic-link" target="_blank" href="/docs/privacy_policy.pdf">Политикой обработки
+                                персональных
                                 данных</a>.</p>
                     </label>
 
@@ -196,111 +197,112 @@
 </template>
 
 <script>
-    import {required, email, minLength, maxlength} from "vuelidate/lib/validators";
-    import {validationMixin} from "vuelidate";
-    import Multiselect from "vue-multiselect";
+import {required, email, minLength, maxlength} from "vuelidate/lib/validators";
+import {validationMixin} from "vuelidate";
+import Multiselect from "vue-multiselect";
 
-    export default {
-        components: {
-            Multiselect,
-        },
-        mixins: [validationMixin],
-        props: {
-            page: {
-                default: null
-            }
-        },
-        data() {
-            return {
-                windowWidth: null,
-                registrationPassed: false,
-                form: {
-                    name: null,
-                    email: null,
-                    phone: null,
-                    agreeWithRules: false,
-                    format: null,
-                    country: null,
-                    grade: null,
-                    contact_msg: null,
-                    visit: null,
-                    month: null
-                },
-                format: ['Онлайн', 'Оффлайн'],
-                grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
-                visit: ["Дневной", "Круглосуточный"],
-                month: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
-            };
-        },
-        validations: {
+export default {
+    components: {
+        Multiselect,
+    },
+    mixins: [validationMixin],
+    props: {
+        page: {
+            default: null
+        }
+    },
+    data() {
+        return {
+            windowWidth: null,
+            registrationPassed: false,
             form: {
-                name: {required, minLength: minLength(2)},
-                email: {required, email},
-                phone: {required, minLength: minLength(10)},
-                // format: {required},
-                // country: {required},
-                // grade: {required},
-                // contact_msg: {},
-                agreeWithRules: {
-                    mustBeTrue(value) {
-                        return value;
-                    },
+                name: null,
+                email: null,
+                phone: null,
+                agreeWithRules: false,
+                format: null,
+                country: null,
+                grade: null,
+                contact_msg: null,
+                visit: null,
+                month: null,
+            },
+            format: ['Онлайн', 'Оффлайн'],
+            grade: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+            visit: ["Дневной", "Круглосуточный"],
+            month: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+        };
+    },
+    validations: {
+        form: {
+            name: {required, minLength: minLength(2)},
+            email: {required, email},
+            phone: {required, minLength: minLength(10)},
+            // format: {required},
+            // country: {required},
+            // grade: {required},
+            // contact_msg: {},
+            agreeWithRules: {
+                mustBeTrue(value) {
+                    return value;
                 },
             },
         },
-        created() {
-            this.handleWindowResize();
-            window.addEventListener('resize', this.handleWindowResize);
+    },
+    created() {
+        this.handleWindowResize();
+        window.addEventListener('resize', this.handleWindowResize);
+    },
+    computed: {
+        countries() {
+            if (this.page && this.page === 'russia') return ['Россия', 'Беларусь', 'Польша', 'Грузия', 'Другая'];
+            else return ['Беларусь', 'Россия', 'Польша', 'Грузия', 'Другая']
         },
-        computed: {
-            countries() {
-                if(this.page && this.page === 'russia') return  ['Россия','Беларусь','Польша','Грузия', 'Другая'];
-                else return  ['Беларусь','Россия','Польша','Грузия', 'Другая']
-            },
-        },
-        methods: {
-            checkForm() {
-
-                this.$v.form.$touch();
-                if (!this.$v.form.$error) {
-                    axios.post('api/mail', {
-                            name: this.form.name,
-                            email: this.form.email,
-                            phone: this.form.phone,
-                            format: this.form.format,
-                            country: this.form.country,
-                            grade: this.form.grade,
-                            contact_msg: this.form.contact_msg
-                        }
-                    )
-                        /*.then(response => {
-                            if (response) {
-                                $('#requestModal').modal('hide');
-                                Swal.fire({
-                                    allowEscapeKey: false,
-                                    title: 'Спасибо, Ваша заявка успешно отправлена!',
-                                    icon: 'error',
-                                    confirmButtonText: 'На главную',
-                                    customClass: {
-                                        container: 'full-height-swall'
+    },
+    methods: {
+        checkForm() {
+            this.$v.form.$touch();
+            if (!this.$v.form.$error) {
+                axios.post('https://smart-s.info/api/mail', {
+                        name: this.form.name,
+                        email: this.form.email,
+                        phone: this.form.phone,
+                        format: this.form.format,
+                        country: this.form.country,
+                        grade: this.form.grade,
+                        contact_msg: this.form.contact_msg,
+                        visit: this.form.visit,
+                        month: this.form.month,
+                        pages: this.page
+                    }
+                )
+                    /*.then(response => {
+                        if (response) {
+                            $('#requestModal').modal('hide');
+                            Swal.fire({
+                                allowEscapeKey: false,
+                                title: 'Спасибо, Ваша заявка успешно отправлена!',
+                                icon: 'error',
+                                confirmButtonText: 'На главную',
+                                customClass: {
+                                    container: 'full-height-swall'
+                                }
+                            })
+                                .then((result) => {
+                                    if (result.isConfirmed) {
+                                        window.location.href='/'
                                     }
-                                })
-                                    .then((result) => {
-                                        if (result.isConfirmed) {
-                                            window.location.href='/'
-                                        }
-                                    });
-                            }
-                        })*/
-                        .then(response => {
-                            if (response) window.location.href = '/thanks';
-                        })
-                }
-            },
-            handleWindowResize() {
-                this.windowWidth = window.innerWidth;
+                                });
+                        }
+                    })*/
+                    .then(response => {
+                        if (response) window.location.href = '/thanks';
+                    })
             }
         },
-    };
+        handleWindowResize() {
+            this.windowWidth = window.innerWidth;
+        }
+    },
+};
 </script>
-

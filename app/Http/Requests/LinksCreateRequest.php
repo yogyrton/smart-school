@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class VueFormRequest extends FormRequest
+class LinksCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,17 @@ class VueFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'phone' => 'required',
+            'links' => 'required',
+            'camp' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'links.required' => 'Поле "Ссылка" должно быть заполнено',
+
+            'camp.required' => 'Поле "Страница" должно быть заполнено'
         ];
     }
 }

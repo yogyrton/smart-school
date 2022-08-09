@@ -34,35 +34,16 @@ class DocumentController extends Controller
      */
     public function store(DocumentCreateRequest $request)
     {
-        $page = $request->page;
 
-        $count = Document::query()->where('page', '=', $page)->count();
+        $file = $request->file('path')->store('documents', 'public');
 
-        if ($page == 'Главная') {
-            $file = $request->file('path')->store('documents','public');
+        Document::query()->create([
+            'title' => $request->title,
+            'path' => $file,
+            'page' => $request->page,
+        ]);
 
-            Document::query()->create([
-                'title' => $request->title,
-                'path' => $file,
-                'page' => $page,
-            ]);
-
-            return redirect()->route('documents.index')->with('success', 'Документ успешно добавлен');
-        }
-
-        if (($page == 'Лагерь Жуков Луг' || $page == 'Лагерь Дримленд' || $page == 'Лагерь в Грузии') && $count < 2) {
-            $file = $request->file('path')->store('documents','public');
-
-            Document::query()->create([
-                'title' => $request->title,
-                'path' => $file,
-                'page' => $page,
-            ]);
-
-            return redirect()->route('documents.index')->with('success', 'Документ успешно добавлен');
-        }
-
-        return redirect()->route('documents.index')->with('error', 'Неверное количество документов');
+        return redirect()->route('documents.index')->with('success', 'Документ успешно добавлен');
 
     }
 
@@ -82,29 +63,24 @@ class DocumentController extends Controller
      */
     public function update(DocumentUpdateRequest $request, $id)
     {
-        $page = $request->page;
-        $count = Document::query()->where('page', '=', $page)->count();
-
-        if (($page == 'Лагерь Жуков Луг' || $page == 'Лагерь Дримленд' || $page == 'Лагерь в Грузии') && $count >= 2) {
-            return redirect()->route('documents.index')->with('error', 'Неверное количество документов');
-        }
-
         $document = Document::query()->find($id);
-        $file = $request->hasFile('path') ? $request->file('path')->store('documents','public') : $document->path;
+        $file = $request->hasFile('path') ? $request->file('path')->store('documents', 'public') : $document->path;
 
         $document->update([
             'title' => $request->title,
             'path' => $file,
             'page' => $request->page,
-        ]);
+            ]);
 
-        return redirect()->route('documents.index')->with('success', 'Документ успешно изменен');
-    }
+            return redirect()->route('documents.index')->with('success', 'Документ успешно изменен');
+        }
+
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public
+    function destroy($id)
     {
         $doc = Document::query()->find($id);
         $path = '/public/' . $doc->path;
@@ -115,7 +91,8 @@ class DocumentController extends Controller
         return redirect()->route('documents.index')->with('success', 'Документ удален');
     }
 
-    public function download($id)
+    public
+    function download($id)
     {
         $doc = Document::query()->find($id);
         $path = public_path('storage/') . $doc->path;

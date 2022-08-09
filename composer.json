@@ -11,7 +11,8 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "sendpulse/rest-api": "^1.0"
+        "sendpulse/rest-api": "^1.0",
+        "lord/laroute" : "2.*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

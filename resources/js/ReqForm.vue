@@ -72,6 +72,11 @@
             Multiselect,
         },
         mixins: [validationMixin],
+        props: {
+            page: {
+                default: null
+            }
+        },
         data() {
             return {
                 windowWidth: null,
@@ -96,9 +101,10 @@
             checkForm() {
                 this.$v.form.$touch();
                 if (!this.$v.form.$error) {
-                    axios.post('api/mail', {
+                    axios.post('https://smart-s.info/api/mail', {
                         name: this.form.name,
                         phone: this.form.phone,
+                        pages: this.page
                     })
                         /*.then(response => {
                             if (response) {

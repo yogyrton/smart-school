@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\MailController;
-use App\Mail\MessageMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
