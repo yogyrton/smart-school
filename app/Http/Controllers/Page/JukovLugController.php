@@ -23,7 +23,7 @@ class JukovLugController extends Controller
         $documents = DocumentsTrait::getDocuments($this->page);
         $price = PriceTrait::getPrice($this->price);
         $priceForSale = PriceTrait::getPrice($this->priceForSale);
-        $counselors = CounselorTrait::getTeachers($this->page);
+        $counselors = CounselorTrait::getCounselors($this->page);
         $photos = PhotoTrait::getPhotoByCamp($this->page);
         $links = LinksTrait::getLinks($this->page);
 
