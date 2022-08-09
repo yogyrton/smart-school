@@ -17957,6 +17957,11 @@ input:-webkit-autofill {
     padding-bottom: 100px;
   }
 }
+@media screen and (max-width: 540px) {
+  #guides {
+    padding-bottom: 40px;
+  }
+}
 #guides .guide-box {
   display: block;
   height: 100%;
