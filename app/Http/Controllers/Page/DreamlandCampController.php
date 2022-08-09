@@ -20,7 +20,7 @@ class DreamlandCampController extends Controller
         $mainNews = MainNewsTrait::getMainNews($this->page);
         $documents = DocumentsTrait::getDocuments($this->page);
         $price = PriceTrait::getPrice($this->price);
-        $counselors = CounselorTrait::getTeachers($this->page);
+        $counselors = CounselorTrait::getCounselors($this->page);
         $photos = PhotoTrait::getPhotoByCamp($this->page);
         $links = LinksTrait::getLinks($this->page);
 

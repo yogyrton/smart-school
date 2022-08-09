@@ -16,7 +16,7 @@
                     <h1 class="h1 pb-48">
                         Лагерь в Грузии
                     </h1>
-                    <p class="text mb-32 page-description">Наша цель - создать ребенку приятные воспоминания о летнем отдыхе на всю жизнь.</br>                                                                                                    
+                    <p class="text mb-32 page-description">Наша цель - создать ребенку приятные воспоминания о летнем отдыхе на всю жизнь.</br>
                     Мы достигаем этого благодаря домашней обстановке, дружной команде и атмосфере постоянного праздника и приключений. Наша программа - развлечения, способствующие развитию и приобретению новых знаний и навыков, которые останутся с ребенком на всю жизнь!</p>
                     <div class="btn-group btn-group-1">
                     <button class="button_1 btn-pink" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
@@ -86,15 +86,15 @@
                 <div class="swiper-box d-block d-lg-none">
                     <div class="swiper">
                         <div class="swiper-wrapper text-bold">
-                            
+
                             <div class="swiper-slide">
                                 <div class="schedule-card d-flex align-items-center justify-content-center grey">01.06.22 - 14.06.22 </div>
                             </div>
-                            
+
                             <div class="swiper-slide">
                                 <div class="schedule-card d-flex align-items-center justify-content-center grey">16.06.22 - 29.06.22 </div>
                             </div>
-                            
+
                             <div class="swiper-slide">
                                 <div class="schedule-card d-flex align-items-center justify-content-center grey">01.07.22 - 14.07.22 </div>
                             </div>
@@ -121,7 +121,7 @@
                     <img src="/img/main/schedule/camp-georgia.jpg" alt="schedule-img">
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 </section>
 
@@ -159,7 +159,7 @@
                         </div>
                         <div class="col-xl-4">
                             <div class="price--card d-flex flex-column justify-content-center h-100">
-                                <div class="h3 accentColor text-md-end">325 USD</div>
+                                <div class="h3 accentColor text-md-end">@if(!empty($price)){{$price}} @else 325 USD @endif</div>
                                 <div class="text-md-end grey">за 14 дней пребывания</div>
                             </div>
                         </div>
@@ -204,7 +204,7 @@
                     </div>
                     </div>
 
-                    
+
 
                 </div>
             </div>
