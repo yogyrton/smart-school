@@ -2,7 +2,7 @@
 @section('title', 'Частная школа Smart School')
 @section('description', 'Оффлайн и онлайн обучение для 1-11 классов в Беларуси, России, Грузии, Польше в школе Смарт Скул. Театральная студия, занятия с репетитором, подготовка к школе, факультативы, курсы, лагеря.')
 @section('content')
-    <section id="head" class="head pb-80 mt-80 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size-2 @endif">
+    <section id="head" class="head mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container container-mob">
 
             <div class="head--container">

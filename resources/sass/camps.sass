@@ -33,13 +33,22 @@
 
 //camp-jukov-lug
 
+.camp-addres-section
+    @media screen and (max-width: 576px)
+        padding-top: 40px
+    @media screen and (max-width: 300px)
+        padding-top: 75px
+
 .page-description
     max-width: 653px
+
 
 .price--card-2
     border-radius: 12px
     background: $light-grey
-    padding: 44px 66px 
+    padding: 44px 66px
+    @media screen and (max-width: 400px)
+        padding: 24px
 
 .custom-ul-2
     padding-left: 0
@@ -59,6 +68,8 @@
 
 //guides
 #guides
+    @media screen and (max-width: 1000px)
+        padding-bottom: 100px
     .guide-box
         display: block
         height: 100%
@@ -96,11 +107,47 @@
             @media screen and (min-width: 1200px)
                 border-radius: 0 12px 12px 0
 
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -105%)
+        @media screen and (max-width: 700px)
+            display: none
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(-100%, -105%)
+        @media screen and (max-width: 700px)
+            display: none
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+
     .swiper-pagination
         display: none
         bottom: -10%
         position: absolute
-        @media screen and (max-width: 992px)
+        @media screen and (max-width: 700px)
             display: block
         
 
@@ -151,7 +198,9 @@
             white-space: nowrap
 
 //pagination
-#schedule 
+#schedule
+    @media screen and (max-width: 768px)
+        padding-bottom: 90px
     .swiper-pagination
         display: none
         bottom: -25%
@@ -162,8 +211,8 @@
     .swiper-pagination-bullet
         opacity: 1
         background: $light-grey
-        width: 8px
-        height: 8px
+        width: 11px
+        height: 11px
         margin: 0 8px
 
     .swiper-pagination-bullet-active
@@ -205,7 +254,8 @@
 
 
 #campLinks
-    margin-bottom: 134px
+    @media screen and (max-width: 990px)
+        padding-bottom: 90px
     a.linkBox
         &:hover
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2)
@@ -257,6 +307,8 @@
     .box-inner button
         position: absolute
         bottom: 10%
+        @media screen and (max-width: 300px)
+            bottom: 5%
 
     .swiper-wrapper
         padding-bottom: 5px
@@ -268,6 +320,10 @@
             display: block
 
 .price-dreamland .row,
-.price-jukov .row
+.price-jukov .row,
+.price-georgia .row
     @media screen and (max-width: 1500px)
         margin: 20px -8px !important
+
+
+

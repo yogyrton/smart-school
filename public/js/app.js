@@ -49969,7 +49969,7 @@ var render = function () {
             _vm.page === "dreamland" ||
             _vm.page === "georgia" ||
             _vm.page === "jukov-lug"
-              ? _c("div", { staticClass: "d-block col-6" }, [
+              ? _c("div", { staticClass: "d-block col-6 multiselect-cut" }, [
                   _c(
                     "div",
                     { staticClass: "form-group mb-12" },
@@ -49979,7 +49979,7 @@ var render = function () {
                       ]),
                       _vm._v(" "),
                       _c("multiselect", {
-                        staticClass: "multiselect w-100",
+                        staticClass: "multiselect w-100 ",
                         attrs: {
                           id: "visit",
                           name: "visit",
@@ -50043,10 +50043,10 @@ var render = function () {
             _vm.page === "dreamland" ||
             _vm.page === "georgia" ||
             _vm.page === "jukov-lug"
-              ? _c("div", { staticClass: "d-block col-6" }, [
+              ? _c("div", { staticClass: "d-block col-6 multiselect-cut" }, [
                   _c(
                     "div",
-                    { staticClass: "form-group mb-12" },
+                    { staticClass: "form-group mb-12 " },
                     [
                       _c("label", { attrs: { for: "month" } }, [
                         _vm._v("Месяц"),
@@ -77308,13 +77308,7 @@ window.EventHandler = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]();
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuelidate__WEBPACK_IMPORTED_MODULE_4__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-form', (__webpack_require__(/*! ./Form.vue */ "./resources/js/Form.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-request-form', (__webpack_require__(/*! ./ReqForm.vue */ "./resources/js/ReqForm.vue")["default"]));
-new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app'); // document.getElementById('preview').classList.add('hidden')
-// $(".preview").delay(20000).fadeOut()
-// setTimeout(() => {
-//     document.getElementById('content-area').classList.add('loaded')
-//     initPage();
-// }, 2000)
-//*Animation*//
+new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app'); //*Animation*//
 
 var slideUp = {
   delay: 300,
@@ -77327,8 +77321,7 @@ var slideUp = {
   delay: 250,
   duration: 1000,
   reset: false
-}); //
-//свайперы
+}); //свайперы
 
 var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head .swiper', {
   loop: false,

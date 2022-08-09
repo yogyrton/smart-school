@@ -242,6 +242,7 @@ h6, .h6
     line-height: 24px
     font-weight: 600
 
+
 .italic
     font-style: italic
 
@@ -417,8 +418,6 @@ h2.mb-60, h1.mb-60
     width: 100%
     overflow: hidden
 
- 
-    
 .swiper::selection 
     background: none
 
@@ -443,8 +442,6 @@ h2.mb-60, h1.mb-60
         height: 100%
         @media screen and (max-width: 800px)
             width: auto
-        // @media screen and (max-width: 300px)
-        //     max-width: 265px !important
         
         .modal-close
             width: 20px
@@ -544,11 +541,6 @@ h2.mb-60, h1.mb-60
         pointer-events: none
 
 
-        // -webkit-transform: translateX(-20px)
-        // -moz-transform: translateX(-20px)
-        // -ms-transform: translateX(-20px)
-        // transform: translateX(-20px)
-
         .modal-content
             min-height: 100%
             position: relative
@@ -640,9 +632,6 @@ h2.mb-60, h1.mb-60
                 max-height: 96px
                 overflow-y: scroll
 
-
-
-
 .full-height-swall
     padding: 0 !important
     .swal2-popup
@@ -712,9 +701,6 @@ h2.mb-60, h1.mb-60
                 &:hover
                     background: #ffffff
                     color: $accentColor
-
-
-
 
 
 header
@@ -990,10 +976,6 @@ header.tiny
             background: $accentColor
 
 
-
-
-
-
 label
     display: block
     margin-bottom: 2px
@@ -1036,6 +1018,8 @@ textarea
     padding: 12px 16px
     transition: 0.4s ease
     min-height: 200px
+    @media screen and (max-width: 320px)
+        font-size: 14px
 
     &:focus, &:active
         border: 1px solid #8041FF
@@ -1059,6 +1043,8 @@ textarea
         font-weight: 400
         font-size: 16px
         line-height: 24px
+        @media screen and (max-width: 320px)
+            font-size: 14px
 
 .form_btn
     justify-content: flex-end
@@ -1090,8 +1076,18 @@ textarea
     line-height: 24px
     font-weight: 400
     color: $grey
+    @media screen and (max-width: 320px)
+        font-size: 14px
+
 .multiselect__single
     color: $text
+    @media screen and (max-width: 400px)
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+        width: 100%
+        box-sizing: border-box
+        display: inline-block
 
 .multiselect__select
     position: absolute
@@ -1104,8 +1100,6 @@ textarea
     cursor: pointer
     @media screen and (max-width: 1500px)
         right: 4%
-    // @media screen and (max-width: 300px)
-    //     right: 5px
 
 
 
@@ -1162,6 +1156,8 @@ textarea
     min-width: 100%
     vertical-align: top
     cursor: pointer
+    @media screen and (max-width: 320px)
+        font-size: 14px
 
 .multiselect__option
     padding: 4px 20px
@@ -1177,6 +1173,11 @@ textarea
 .multiselect__option--selected:hover
     background-color: $light-grey
     border-radius: 5px
+
+.multiselect-cut
+    @media screen and (max-width: 320px)
+        width: 100%
+
 
 //multiselect-scroll
 
@@ -1248,12 +1249,7 @@ input:-webkit-autofill
                 grid-template-rows: 3fr
                 grid-column-gap: 15px
                 grid-row-gap: 20px
-            //@media screen and (max-width: 359px)
-            //    grid-template-columns: 1fr
-            //    grid-auto-rows: auto
-            //    grid-column-gap: 0
-            //    grid-row-gap: 20px
-
+        
             .footer-box
                 display: flex
                 flex-direction: column
@@ -1378,6 +1374,8 @@ input:-webkit-autofill
     -moz-appearance: none
     appearance: none
     box-shadow: none !important
+    @media screen and (max-width: 320px)
+        font-size: 14px
 
     &:focus, &:active
         border: 1px solid #8041FF

@@ -15877,6 +15877,11 @@ textarea {
   transition: 0.4s ease;
   min-height: 200px;
 }
+@media screen and (max-width: 320px) {
+  textarea {
+    font-size: 14px;
+  }
+}
 textarea:focus, textarea:active {
   border: 1px solid #8041FF;
   box-shadow: none;
@@ -15917,6 +15922,17 @@ textarea:focus, textarea:active {
   font-size: 16px;
   line-height: 24px;
 }
+@media screen and (max-width: 320px) {
+  .textarea::-moz-placeholder {
+    font-size: 14px;
+  }
+  .textarea:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .textarea::placeholder {
+    font-size: 14px;
+  }
+}
 
 .form_btn {
   justify-content: flex-end;
@@ -15954,9 +15970,24 @@ textarea:focus, textarea:active {
   font-weight: 400;
   color: #605F5F;
 }
+@media screen and (max-width: 320px) {
+  .multiselect__single, .multiselect__placeholder {
+    font-size: 14px;
+  }
+}
 
 .multiselect__single {
   color: #130A25;
+}
+@media screen and (max-width: 400px) {
+  .multiselect__single {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+  }
 }
 
 .multiselect__select {
@@ -16032,6 +16063,11 @@ textarea:focus, textarea:active {
   vertical-align: top;
   cursor: pointer;
 }
+@media screen and (max-width: 320px) {
+  .multiselect__content {
+    font-size: 14px;
+  }
+}
 
 .multiselect__option {
   padding: 4px 20px;
@@ -16049,6 +16085,12 @@ textarea:focus, textarea:active {
 .multiselect__option--selected:hover {
   background-color: #F4F2F6;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 320px) {
+  .multiselect-cut {
+    width: 100%;
+  }
 }
 
 .multiselect__content-wrapper::-webkit-scrollbar {
@@ -16285,6 +16327,11 @@ input:-webkit-autofill {
   appearance: none;
   box-shadow: none !important;
 }
+@media screen and (max-width: 320px) {
+  .form-control {
+    font-size: 14px;
+  }
+}
 .form-control:focus, .form-control:active {
   border: 1px solid #8041FF;
   box-shadow: none;
@@ -16409,12 +16456,6 @@ input:-webkit-autofill {
     right: 50px;
     background-image: url("/img/main/head-recangle.svg");
     background-repeat: no-repeat;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .head:before {
-    transform: translate(-35%, -55%);
-    right: 0;
   }
 }
 .head .head--container {
@@ -16594,10 +16635,9 @@ input:-webkit-autofill {
     padding: 60px 0 200px 0;
   }
 }
-
-@media screen and (max-width: 767px) {
-  .head.notification-size-2 {
-    padding: 60px 0 180px 0;
+@media screen and (max-width: 360px) {
+  .head.notification-size {
+    padding: 60px 0 230px 0;
   }
 }
 
@@ -16963,6 +17003,14 @@ input:-webkit-autofill {
   border-radius: 12px;
   background: #F4F2F6;
   padding: 20px;
+}
+#price .price--card-camp {
+  padding: 40px;
+}
+@media screen and (max-width: 360px) {
+  #price .price--card-camp {
+    padding: 20px;
+  }
 }
 #price .swiper-pagination {
   position: static;
@@ -17565,6 +17613,11 @@ input:-webkit-autofill {
   font-size: 20px;
   line-height: 24px;
 }
+@media screen and (max-width: 320px) {
+  #order-section .contacts-wrapper {
+    font-size: 16px;
+  }
+}
 #order-section .contacts-wrapper .contacts-title,
 #order-section .contacts-wrapper .order-title {
   margin-bottom: 28px;
@@ -17659,11 +17712,21 @@ input:-webkit-autofill {
   font-size: 20px;
   line-height: 24px;
 }
+@media screen and (max-width: 320px) {
+  #order-section .order-box .order-box-description {
+    font-size: 16px;
+  }
+}
 #order-section .order-form .input, #order-section .order-form input, #order-section .order-form textarea {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #605F5F;
+}
+@media screen and (max-width: 320px) {
+  #order-section .order-form .input, #order-section .order-form input, #order-section .order-form textarea {
+    font-size: 14px;
+  }
 }
 
 #history .swiper-box, #address .swiper-box, #album .swiper-box, #info .swiper-box {
@@ -17857,18 +17920,14 @@ input:-webkit-autofill {
     padding-top: 40px;
   }
 }
+@media screen and (max-width: 300px) {
+  .camp-addres-section {
+    padding-top: 75px;
+  }
+}
 
 .page-description {
   max-width: 653px;
-}
-
-.price--card-camp {
-  padding: 40px;
-}
-@media screen and (max-width: 360px) {
-  .price--card-camp {
-    padding: 20px;
-  }
 }
 
 .price--card-2 {
@@ -17901,11 +17960,6 @@ input:-webkit-autofill {
 @media screen and (max-width: 1000px) {
   #guides {
     padding-bottom: 100px;
-  }
-}
-@media screen and (max-width: 765px) {
-  #guides {
-    padding-bottom: 40px;
   }
 }
 #guides .guide-box {
@@ -18204,7 +18258,8 @@ input:-webkit-autofill {
 
 @media screen and (max-width: 1500px) {
   .price-dreamland .row,
-.price-jukov .row {
+.price-jukov .row,
+.price-georgia .row {
     margin: 20px -8px !important;
   }
 }

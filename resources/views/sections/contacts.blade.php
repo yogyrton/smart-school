@@ -1,6 +1,7 @@
 @php($routeName = Route::current()->getName())
 @php($regionNumber = null)
 @if($routeName === 'russia') @php($regionNumber = 79680710905)
+@elseif ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' ) @php($regionNumber = 375255066588)
 @else @php($regionNumber = 375256016500)
 @endif
 <section id="order-section" class="order-section scrollreveal">
@@ -81,7 +82,7 @@
 
                 <p class="grey mb-16">Подписывайтесь на наши соц. сети:</p>
                 <div class="contacts-socials contacts-2 d-flex">
-                    @if($routeName === 'camp')
+                    @if($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
                     <a class="contacts-socials-link instagram" target="_blank" rel="noopener" href="https://www.instagram.com/fabrikazvezdminsk/">
                         <img class="contacts-socials-img" src="/svg/inst.svg" alt="inst">
                     </a>
@@ -91,7 +92,7 @@
                     </a>
                     @endif
 
-                    @if($routeName === 'camp')
+                    @if($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')
                     <a class="contacts-socials-link facebook" target="_blank" rel="noopener" href="https://ru-ru.facebook.com/obrazovatelnycentrfabrikazvezd/">
                         <img class="contacts-socials-img" src="/svg/facebook.svg" alt="facebook">
                     </a>
@@ -101,7 +102,7 @@
                     </a>
                     @endif
 
-                    @if($routeName === 'camp')
+                    @if($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')
                     <a class="contacts-socials-link vk" target="_blank" rel="noopener" href=" https://vk.com/centr_fabrika_zvezd">
                         <img class="contacts-socials-img" src="/svg/vk.svg" alt="vk">
                     </a>
@@ -111,7 +112,7 @@
                     </a>
                     @endif
 
-                    @if($routeName === 'camp')
+                    @if($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')
                     <a class="contacts-socials-link ok" target="_blank" rel="noopener" href="https://ok.ru/fabrika.zvezd.minsk">
                         <img class="contacts-socials-img" src="/svg/ok.svg" alt="ok">
                     </a>
