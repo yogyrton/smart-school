@@ -24,7 +24,7 @@
                         <a href="/camp/dreamland" class="button_1 btn-purple text-bold">Dreamland</a>
                         <a href="/camp/georgia" class="button_1 btn-purple text-bold">Грузия</a>
                         <a href="/dev" class="button_1 btn-purple text-bold">Польша</a>
-                        <a href="/camp" class="button_1 btn-purple text-bold">Онлайн</a>
+                        <a href="/dev" class="button_1 btn-purple text-bold">Онлайн</a>
                         <button class="button_1 btn-pink w-100 text-bold" data-bs-toggle="modal" data-bs-target="#requestModal">Оставить заявку</button>
                     </div>
 

@@ -219,40 +219,14 @@
                             <div class="swiper-slide">
                                 <div class="guide-box">
                                     <div class="img-box">
-                                        <img src="/img/main/guides/jukov-lug/guide-1.jpg" alt="guide-1">
+                                        <img src="/img/main/history/camp-1.jpg" alt="guide-1">
                                     </div>                  
                                     <div class="d-flex flex-column box-inner justify-content-center">
                                         <h3 class="mb-24">Дерех Василий</h3>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                                <div class="guide-box">
-                                                    <div class="img-box">
-                                                        <img src="/img/main/guides/jukov-lug/guide-1.jpg" alt="guide-2">
-                                                    </div>
-
-                                                    <div class="d-flex flex-column box-inner justify-content-center">
-                                                        <h3 class="mb-24">Гавриленко Ангелина</h3>
-                                                    </div>
-                                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                                    <div class="guide-box">
-                                                        <div class="img-box">
-                                                            <img src="/img/main/guides/jukov-lug/guide-1.jpg" alt="guide-2">
-                                                        </div>
-
-                                                        <div class="d-flex flex-column box-inner justify-content-center">
-                                                            <h3 class="mb-24">Гавриленко Ангелина</h3>
-                                                        </div>
-                                                    </div>
-                            </div>
-                                            
+                            </div>                
                         </div>
-                        
                     </div>
                     <div class="swiper-pagination"></div>
                 <div class="slider-button-next">

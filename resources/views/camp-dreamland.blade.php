@@ -149,7 +149,7 @@
 
                 <div class="row mb-40">
                         <div class="col-xl-8 mb-4 mb-xl-0 d-none d-lg-block">
-                            <div class="price--card">
+                            <div class="price--card price--card-camp">
                                 <div class="d-flex align-items-start mb-3">
                                     <img src="/svg/time.svg" alt="" class="me-2">
                                     <span>Пребывание в лагере: круглосуточное / <br> дневное;</span>
@@ -206,32 +206,7 @@
                                         <h3 class="mb-24">Дерех Василий</h3>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                                <div class="guide-box">
-                                                    <div class="img-box">
-                                                        <img src="/img/main/guides/jukov-lug/guide-1.jpg" alt="guide-2">
-                                                    </div>
-
-                                                    <div class="d-flex flex-column box-inner justify-content-center">
-                                                        <h3 class="mb-24">Гавриленко Ангелина</h3>
-                                                    </div>
-                                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                                    <div class="guide-box">
-                                                        <div class="img-box">
-                                                            <img src="/img/main/guides/jukov-lug/guide-1.jpg" alt="guide-2">
-                                                        </div>
-
-                                                        <div class="d-flex flex-column box-inner justify-content-center">
-                                                            <h3 class="mb-24">Гавриленко Ангелина</h3>
-                                                        </div>
-                                                    </div>
-                            </div>
-                                            
+                            </div>            
                         </div>
                         
                     </div>
