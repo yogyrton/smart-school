@@ -6,7 +6,7 @@
 @php($page = Route::current()->getName())
 
 <section id="head"
-            class="head mb-120 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
+            class="head head-camp mb-160 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">

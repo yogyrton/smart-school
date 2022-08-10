@@ -15952,6 +15952,11 @@ textarea:focus, textarea:active {
   display: flex;
   margin-top: 32px;
 }
+@media screen and (max-width: 560px) {
+  .form_btn button {
+    width: 100%;
+  }
+}
 
 .multiselect {
   box-sizing: content-box;
@@ -16071,6 +16076,11 @@ textarea:focus, textarea:active {
 
 .multiselect__option {
   padding: 4px 20px;
+}
+@media screen and (max-width: 420px) {
+  .multiselect__option {
+    padding: 4px 12px;
+  }
 }
 
 .multiselect__option,
@@ -16426,13 +16436,6 @@ input:-webkit-autofill {
   z-index: 10;
   position: relative;
 }
-@media screen and (max-width: 1440px) {
-  .head {
-    min-height: 600px;
-    margin-top: 0;
-    padding-bottom: 0;
-  }
-}
 @media screen and (max-width: 1200px) {
   .head {
     height: auto;
@@ -16464,7 +16467,12 @@ input:-webkit-autofill {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
+  .head .head--container {
+    grid-template-columns: repeat(2, 52%);
+  }
+}
+@media screen and (max-width: 1390px) {
   .head .head--container {
     grid-template-columns: 44% 56%;
   }
@@ -17952,6 +17960,17 @@ input:-webkit-autofill {
   top: 0;
 }
 
+@media screen and (max-width: 1500px) {
+  .head-camp {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .head-camp {
+    margin-bottom: 80px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   #guides {
     padding-bottom: 100px;
@@ -18116,6 +18135,7 @@ input:-webkit-autofill {
   border-radius: 12px;
   height: auto;
   width: 100%;
+  height: 100%;
 }
 .schedule .row .schedule-card {
   margin-right: 30px;

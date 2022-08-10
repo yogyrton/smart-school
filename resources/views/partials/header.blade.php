@@ -172,9 +172,29 @@
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Доп.услуги</a>
                                 </li>
-                                <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
+                                <div class="accordion accordion-modal mb-16" id="accordionmodal">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThreeFaq">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeModal" aria-expanded="false" aria-controls="collapseThree">
+                                            <span class="text">Детский лагерь</span>
+                                        </button>
+                                        </h2>
+                                        <div id="collapseThreeModal" class="accordion-collapse collapse" aria-labelledby="headingThreeModal" data-bs-parent="#accordionModal">
+                                            <div class="accordion-body">
+                                                <ul class="accordion-menu">
+                                                <li><a class="dropdown-item" href="/camp">Беларусь</a></li>
+                                                <li><a class="li-item" href="/camp/georgia">Грузия</a></li>
+                                                <li><a class="li-item" href="/dev">Польша</a></li>
+                                                <li><a class="li-item" href="/dev">Онлайн</a></li>
+                                            </ul>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <!-- <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/camp">Детский лагерь</a>
-                                </li>
+                                </li> -->
+
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies @elseif ($routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else #replies @endif">Отзывы</a>
                                 </li>
