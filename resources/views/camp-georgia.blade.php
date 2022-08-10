@@ -254,7 +254,7 @@
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a class="linkBox" href="/camp">
+                        <a class="linkBox" href="/dev">
                             <div class="img-box">
                                 <img src="/img/main/campLinks/online.jpg" alt="online-img">
                             </div>

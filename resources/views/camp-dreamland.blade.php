@@ -77,7 +77,7 @@
         </div>
 </section>
 
-<section class="schedule" id="schedule">
+<section class="schedule pb-120" id="schedule">
     <div class="container">
         <h2 class="accentColor mb-40">
             График смен
@@ -124,7 +124,7 @@
             </div>
 
             <div class="d-block col-lg-6">
-                <div class="w-100 schedule-photo">
+                <div class="w-100 h-100 schedule-photo">
                     <img src="/img/main/schedule/camp-dreamland.jpg" alt="schedule-img">
                 </div>
             </div>
@@ -227,7 +227,7 @@
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a class="linkBox" href="/camp">
+                        <a class="linkBox" href="/dev">
                             <div class="img-box">
                                 <img src="/img/main/campLinks/online.jpg" alt="online-img">
                             </div>
