@@ -63,8 +63,8 @@
                                 Детский лагерь
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/dev">Беларусь</a></li>
-                                <li><a class="dropdown-item" href="/dev">Грузия</a></li>
+                                <li><a class="dropdown-item" href="/camp">Беларусь</a></li>
+                                <li><a class="dropdown-item" href="/camp/georgia">Грузия</a></li>
                                 <li><a class="dropdown-item" href="/dev">Польша</a></li>
                                 <li><a class="dropdown-item" href="/dev">Онлайн</a></li>
                             </ul>
@@ -182,8 +182,8 @@
                                         <div id="collapseThreeModal" class="accordion-collapse collapse" aria-labelledby="headingThreeModal" data-bs-parent="#accordionModal">
                                             <div class="accordion-body">
                                                 <ul class="accordion-menu">
-                                                <li><a class="dropdown-item" href="/dev">Беларусь</a></li>
-                                                <li><a class="li-item" href="/dev">Грузия</a></li>
+                                                <li><a class="dropdown-item" href="/camp">Беларусь</a></li>
+                                                <li><a class="li-item" href="/camp/georgia">Грузия</a></li>
                                                 <li><a class="li-item" href="/dev">Польша</a></li>
                                                 <li><a class="li-item" href="/dev">Онлайн</a></li>
                                             </ul>

@@ -136,7 +136,7 @@
             </div>
 
             <div class="d-block col-lg-3">
-                <div class="w-100 schedule-photo">
+                <div class="w-100 h-100 schedule-photo">
                     <img src="/img/main/schedule/camp-jukov-lug.jpg" alt="schedule-img">
                 </div>
             </div>
