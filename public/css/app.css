@@ -16467,7 +16467,7 @@ input:-webkit-autofill {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
   .head .head--container {
     grid-template-columns: repeat(2, 52%);
   }
