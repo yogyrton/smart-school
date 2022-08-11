@@ -20,6 +20,8 @@
 
 
 <!-- Meta -->
+<script src="//upsales.pro/api/w/29/widget.js" async></script>
+
 <meta name="yandex-verification" content="16d615ad060ac4c2" />
 
 <meta name="google-site-verification" content="k5Vx4QTrboj3Epoy3jBoPd5h80-rNgTqATKbofLx6j4" />
