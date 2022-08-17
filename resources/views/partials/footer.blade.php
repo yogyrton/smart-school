@@ -50,7 +50,8 @@
                         <div class="footer-box">
                             <h5 class="text-bold mb-16">Детский лагерь</h5>
                             <ul class="footer-list">
-                                <li class="footer-list-item"><a href="/camp">Беларусь</a></li>
+                                <li class="footer-list-item "><a href="/camp/jukov-lug">Беларусь Жуков луг</a></li>
+                                <li class="footer-list-item "><a href="/camp/dreamland">Беларусь Dreamland</a></li>
                                 <li class="footer-list-item "><a href="/camp/georgia">Грузия</a></li>
                                 <li class="footer-list-item "><a href="/dev">Польша</a></li>
                                 <li class="footer-list-item "><a href="/dev">Онлайн</a></li>
@@ -58,7 +59,7 @@
                         </div>
                         <div class="footer-box">
                             <ul class="footer-list mb-40">
-                                <li class="text-bold mb-12"><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies @elseif ($routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else #replies @endif">Отзывы</a></li>
+                                <li class="text-bold mb-12"><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a></li>
                                 <li class="text-bold mb-12"><a href="/dev">Одно окно</a></li>
                                 <li class="text-bold"><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a></li>
                             </ul>
