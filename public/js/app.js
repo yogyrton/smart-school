@@ -5468,6 +5468,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -50306,7 +50313,52 @@ var render = function () {
                 _vm._v(" "),
                 _c("span", { staticClass: "d-flex" }),
                 _vm._v(" "),
-                _vm._m(0),
+                _vm.page === "camp" ||
+                _vm.page === "dreamland" ||
+                _vm.page === "georgia" ||
+                _vm.page === "jukov-lug"
+                  ? _c("p", { staticClass: "politic grey" }, [
+                      _vm._v(
+                        "Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на\n                        обработку персональных данных в соответствии с\n                        "
+                      ),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "politic-link",
+                          attrs: {
+                            target: "_blank",
+                            href: "/docs/privacy-camp.pdf",
+                          },
+                        },
+                        [
+                          _vm._v(
+                            "Политикой обработки\n                            персональных\n                            данных"
+                          ),
+                        ]
+                      ),
+                      _vm._v(".\n                        "),
+                    ])
+                  : _c("p", { staticClass: "politic grey" }, [
+                      _vm._v(
+                        "Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на\n                        обработку персональных данных в соответствии с\n                        "
+                      ),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "politic-link",
+                          attrs: {
+                            target: "_blank",
+                            href: "/docs/privacy_policy.pdf",
+                          },
+                        },
+                        [
+                          _vm._v(
+                            "Политикой обработки\n                            персональных\n                            данных"
+                          ),
+                        ]
+                      ),
+                      _vm._v(".\n                        "),
+                    ]),
               ]
             ),
             _vm._v(" "),
@@ -50320,36 +50372,13 @@ var render = function () {
               : _vm._e(),
           ]),
           _vm._v(" "),
-          _vm._m(1),
+          _vm._m(0),
         ]
       ),
     ]),
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "politic grey" }, [
-      _vm._v(
-        "Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на\n                        обработку персональных данных в соответствии с\n                        "
-      ),
-      _c(
-        "a",
-        {
-          staticClass: "politic-link",
-          attrs: { target: "_blank", href: "/docs/privacy_policy.pdf" },
-        },
-        [
-          _vm._v(
-            "Политикой обработки\n                            персональных\n                            данных"
-          ),
-        ]
-      ),
-      _vm._v("."),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement

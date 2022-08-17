@@ -12,16 +12,17 @@
                 <div class="mb-24">
                     <p class="grey subtitle">Звоните по телефонам:</br> Отдел маркетинга и продаж (консультация,
                         заключение договора, оплаты)</p>
+
+                        @if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )
                         <div class="contacts-info d-flex mb-20">
-{{--                        <img src="/svg/telephone.svg" alt="phone-logo">--}}
-{{--                        <img src="/svg/viber.svg" alt="viber-logo">--}}
-{{--                        <img src="/svg/telegram.svg" alt="telegram-logo">--}}
-                        <a class="tel-number" href="tel:+375255066009">+375 (25) 506-60-09</a>
+                            <a class="tel-number" href="tel:+375255066009">+375 (25) 506-60-09</a>
                         </div>
+                        @else
+                        <div class="d-none"></div>
+                        @endif
+
                     <div class="contacts-info d-flex mb-20">
-{{--                        <img src="/svg/telephone.svg" alt="phone-logo">--}}
-{{--                        <img src="/svg/viber.svg" alt="viber-logo">--}}
-{{--                        <img src="/svg/telegram.svg" alt="telegram-logo">--}}
+
                         @if($routeName === 'russia' || $routeName === 'online')
                             <a class="tel-number" href="tel:+79680710905">+7 (968) 071-09-05</a>
                         @else
@@ -74,9 +75,17 @@
                         <a class="contacts-socials-link whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone={{$regionNumber}}">
                             <img class="contacts-socials-img" src="/svg/whatsapp.svg" alt="whatsapp">
                         </a>
+
+
+                        @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                        <a class="contacts-socials-link telegram" target="_blank" rel="noopener" href="https://t.me/DaryaSmartSchool">
+                            <img class="contacts-socials-img" src="/svg/telegram.svg" alt="telegram">
+                        </a>
+                        @else
                         <a class="contacts-socials-link telegram" target="_blank" rel="noopener" href="tg://resolve?domain=sm_education_bot&start=ml15">
                             <img class="contacts-socials-img" src="/svg/telegram.svg" alt="telegram">
                         </a>
+                        @endif
                     </div>
                 </div>
 

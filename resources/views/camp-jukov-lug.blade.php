@@ -56,13 +56,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-5 mb-md-0">
-                    <a href="https://goo.gl/maps/1DqaKy5WPwUwZm2UA" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
+                    <a href="https://goo.gl/maps/wft5Bh46PFRMhpWR6" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
                         <img src="/svg/location.svg" alt="" class="me-2">
                         <span class="text-start h4 camp-address">д. Жуков Луг, ул. Дорожная, 14А, 5 км от ст. м.Уручье </span>
                     </a>
 
                     <ul class="mb-10 custom-ul">
-                        <li>находится в 5 км от ст. м. Уручье, охраняемая территория, двухэтажное здание, удобные помещения, большая территория;</li>
+                        <li>находится в 5 км от ст.м. Уручье, большая охраняемая территория, двухэтажное здание, удобные помещения;</li>
                         <li>шестиразовое питание с учетом индивидуальных запросов родителей, собственный шеф-повар;</li>
                         <li>условия соответствуют санитарным и противопожарным нормам Республики Беларусь.</li>
                     </ul>
@@ -186,7 +186,7 @@
                             <div class="price--card-2 d-flex flex-column justify-content-center h-100">
                                 <div class="h3 accentColor text-md-end mb-2">@if(!empty($priceForSale)){{$priceForSale}} @else 1000 BYN @endif</div>
                                 <div class="mb-2 text-md-end">на смены августа</div>
-                                <div class="text-md-end grey">за 14 дней пребывания</div>
+                                <div class="text-md-end grey">за 12 дней пребывания</div>
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@
                     <div class="swiper-slide">
                         <a class="linkBox" href="/camp/dreamland">
                             <div class="img-box">
-                                <img src="/img/main/campLinks/dreamland.jpg" alt="dreamlang-img">
+                                <img src="/img/main/campLinks/dreamland3.jpg" alt="dreamlang-img">
                             </div>
                             <div class="box-inner d-flex flex-column">
                                     <div>
@@ -235,11 +235,24 @@
                     <div class="swiper-slide">
                         <a class="linkBox" href="/camp/georgia">
                             <div class="img-box">
-                                <img src="/img/main/campLinks/gruzia.jpg" alt="gruzia-img">
+                                <img src="/img/main/campLinks/gruzia2.jpg" alt="gruzia-img">
                             </div>
                             <div class="box-inner d-flex flex-column">
                                     <div>
                                         <h3 class="accentColor">Лагерь Грузия</h3>
+                                    </div>
+                                    <button class="button_2 text">Подробнее</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="linkBox" href="/dev">
+                            <div class="img-box">
+                                <img src="/img/main/campLinks/poland.jpg" alt="poland-img">
+                            </div>
+                            <div class="box-inner d-flex flex-column">
+                                    <div>
+                                        <h3 class="accentColor">Лагерь Польша</h3>
                                     </div>
                                     <button class="button_2 text">Подробнее</button>
                             </div>

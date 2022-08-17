@@ -1,3 +1,5 @@
+@php($routeName = Route::current()->getName())
+
 <section id="replies" class="replies scrollreveal">
     <div class="container">
         <h2 class="accentColor mb-40">Отзывы</h2>
@@ -11,14 +13,65 @@
             </div>
             <div class="swiper" id="swiper">
                 <div class="swiper-wrapper">
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/1.png" alt="reply-1"></div>
+                    @else
                     <div class="swiper-slide"><img src="/img/main/replies/1.png" alt="reply-1"></div>
+                    @endif
+
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/2.png" alt="reply-2"></div>
+                    @else
                     <div class="swiper-slide"><img src="/img/main/replies/2.png" alt="reply-2"></div>
+                    @endif
+
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/3.png" alt="reply-3"></div>
+                    @else
                     <div class="swiper-slide"><img src="/img/main/replies/3.png" alt="reply-3"></div>
+                    @endif
+
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/4.png" alt="reply-4"></div>
+                    @else
                     <div class="swiper-slide"><img src="/img/main/replies/4.png" alt="reply-4"></div>
+                    @endif
+
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/5.png" alt="reply-5"></div>
+                    @else
                     <div class="swiper-slide"><img src="/img/main/replies/5.png" alt="reply-5"></div>
+                    @endif
+
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/6.png" alt="reply-6"></div>
+                    @else
                     <div class="swiper-slide"><img src="/img/main/replies/6.png" alt="reply-6"></div>
+                    @endif
+
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/7.png" alt="reply-7"></div>
+                    @else
                     <div class="swiper-slide"><img src="/img/main/replies/7.png" alt="reply-7"></div>
+                    @endif
+
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/8.png" alt="reply-8"></div>
+                    @else
                     <div class="swiper-slide"><img src="/img/main/replies/8.png" alt="reply-8"></div>
+                    @endif
+
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/9.png" alt="reply-9"></div>
+                    @else
+                    <div class="d-none"></div>
+                    @endif
+                    @if ($routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )
+                    <div class="swiper-slide"><img src="/img/main/replies/camps/10.png" alt="reply-10"></div>
+                    @else
+                    <div class="d-none"></div>
+                    @endif
+
                 </div>
 
             </div>

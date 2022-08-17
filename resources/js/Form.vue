@@ -169,11 +169,18 @@
                         <input class="consent" id="agreeWithRules" type="checkbox" checked name="agreement" value="true"
                                autocomplete="off" v-model="form.agreeWithRules">
                         <span class="d-flex"></span>
-                        <p class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на
+                        <p v-if="(page === 'camp' || page === 'dreamland' || page === 'georgia' || page === 'jukov-lug')" class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на
+                            обработку персональных данных в соответствии с
+                            <a class="politic-link" target="_blank" href="/docs/privacy-camp.pdf">Политикой обработки
+                                персональных
+                                данных</a>.
+                            </p>
+                        <p v-else class="politic grey">Нажимая на кнопку “Отправить заявку”, вы даете свое согласие на
                             обработку персональных данных в соответствии с
                             <a class="politic-link" target="_blank" href="/docs/privacy_policy.pdf">Политикой обработки
                                 персональных
-                                данных</a>.</p>
+                                данных</a>.
+                            </p>
                     </label>
 
                     <p

@@ -3,6 +3,8 @@
 @section('description', 'Фабрика звезд - детский отдых в Беларуси в Минске. Детские образовательные лагеря круглосуточного и дневного пребывания.')
 @section('content')
 
+
+
 <section id="head"
             class="head mb-120 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
@@ -60,8 +62,8 @@
                     </a>
 
                     <ul class="mb-10 custom-ul">
-                        <li>находится в центре города на территории парка Dreamland, охраняемая территория, двухэтажное здание, удобное транспортное сообщение, большая пришкольная территория;</li>
-                        <li>трехразовое питание с учетом индивидуальных запросов родителей, собственный шеф-повар;</li>
+                        <li>двухэтажное здание, находится в центре города на большой охраняемой территории парка Dreamland, удобное транспортное сообщение;</li>
+                        <li>шестиразовое питание с учетом индивидуальных запросов родителей, собственный шеф-повар;</li>
                         <li>условия соответствуют санитарным и противопожарным нормам Республики Беларусь.</li>
                     </ul>
 
@@ -216,7 +218,7 @@
                     <div class="swiper-slide">
                         <a class="linkBox" href="/camp/georgia">
                             <div class="img-box">
-                                <img src="/img/main/campLinks/gruzia.jpg" alt="gruzia-img">
+                                <img src="/img/main/campLinks/gruzia2.jpg" alt="gruzia-img">
                             </div>
                             <div class="box-inner d-flex flex-column">
                                     <div>
@@ -226,6 +228,19 @@
                             </div>
                         </a>
                     </div>
+                    <div class="swiper-slide">
+                        <a class="linkBox" href="/dev">
+                            <div class="img-box">
+                                <img src="/img/main/campLinks/poland.jpg" alt="poland-img">
+                            </div>
+                            <div class="box-inner d-flex flex-column">
+                                    <div>
+                                        <h3 class="accentColor">Лагерь Польша</h3>
+                                    </div>
+                                    <button class="button_2 text">Подробнее</button>
+                            </div>
+                        </a>
+                    </div>       
                     <div class="swiper-slide">
                         <a class="linkBox" href="/dev">
                             <div class="img-box">
