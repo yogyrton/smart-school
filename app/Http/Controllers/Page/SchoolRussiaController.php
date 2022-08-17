@@ -11,7 +11,6 @@ use App\Traits\PriceTrait;
 class SchoolRussiaController extends Controller
 {
     private $page = 'Школа Россия';
-    private $doc = 'Главная';
     private $priceRus_1_4 = 'onl_1_4_rus';
     private $priceRus_5_8 = 'onl_5_8_rus';
     private $priceRus_9_11 = 'onl_9_11_rus';
@@ -23,7 +22,7 @@ class SchoolRussiaController extends Controller
         $price_5_8 = PriceTrait::getPrice($this->priceRus_5_8);
         $price_9_11 = PriceTrait::getPrice($this->priceRus_9_11);
         $news = NewsTrait::getNews();
-        $documents = DocumentsTrait::getDocuments($this->doc);
+        $documents = DocumentsTrait::getDocuments($this->page);
 
         return view('school-rus', compact('mainNews', 'news', 'documents', 'price_1_4', 'price_5_8', 'price_9_11'));
     }

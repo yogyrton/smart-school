@@ -12,7 +12,6 @@ use Illuminate\Http\Request;
 class SchoolBelarus5_11Controller extends Controller
 {
     private $page = 'Школа Беларусь 5-11';
-    private $doc = 'Главная';
     private $price = 'blr_5_11';
 
     public function index()
@@ -20,7 +19,7 @@ class SchoolBelarus5_11Controller extends Controller
         $mainNews = MainNewsTrait::getMainNews($this->page);
         $price = PriceTrait::getPrice($this->price);
         $news = NewsTrait::getNews();
-        $documents = DocumentsTrait::getDocuments($this->doc);
+        $documents = DocumentsTrait::getDocuments($this->page);
 
         return view('school-bel-5-11', compact('mainNews', 'price', 'news', 'documents'));
     }

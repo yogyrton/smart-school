@@ -13,12 +13,11 @@ class SchoolBelarusController extends Controller
 {
 
     private $page = 'Школа Беларусь';
-    private $doc = 'Главная';
 
     public function index()
     {
         $mainNews = MainNewsTrait::getMainNews($this->page);
-        $documents = DocumentsTrait::getDocuments($this->doc);
+        $documents = DocumentsTrait::getDocuments($this->page);
         $photos = GalleryTrait::getPhotoGallery();
         $links = LinksTrait::getLinks($this->page);
 
