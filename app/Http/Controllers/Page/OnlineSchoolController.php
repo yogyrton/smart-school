@@ -11,7 +11,6 @@ use App\Traits\PriceTrait;
 class OnlineSchoolController extends Controller
 {
     private $page = 'Онлайн школа';
-    private $doc = 'Главная';
     private $priceBel_1_4 = 'onl_1_4_blr';
     private $priceRus_1_4 = 'onl_1_4_rus';
     private $priceBel_5_8 = 'onl_5_8_blr';
@@ -29,7 +28,7 @@ class OnlineSchoolController extends Controller
         $priceRus_5 = PriceTrait::getPrice($this->priceRus_5_8);
         $priceRus_9 = PriceTrait::getPrice($this->priceRus_9_11);
         $news = NewsTrait::getNews();
-        $documents = DocumentsTrait::getDocuments($this->doc);
+        $documents = DocumentsTrait::getDocuments($this->page);
 
         return view('online-school', compact('mainNews', 'news', 'documents', 'priceBel_1', 'priceBel_5', 'priceBel_9', 'priceRus_1', 'priceRus_5', 'priceRus_9'));
     }

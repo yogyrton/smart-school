@@ -44,7 +44,12 @@
 
                                 <div class="form-group">
                                     <select class="custom-select" name="page">
-                                        <option value="Главная">Общие</option>
+                                        <option value="Главная">Главная</option>
+                                        <option value="Школа Беларусь">Школа Беларусь</option>
+                                        <option value="Школа Беларусь 1-4">Школа Беларусь 1-4</option>
+                                        <option value="Школа Беларусь 5-11">Школа Беларусь 5-11</option>
+                                        <option value="Онлайн школа">Онлайн школа</option>
+                                        <option value="Школа Россия">Школа Россия</option>
                                         <option value="Лагерь Жуков Луг">Лагерь Жуков Луг</option>
                                         <option value="Лагерь Дримленд">Лагерь Дримленд</option>
                                         <option value="Лагерь в Грузии">Лагерь в Грузии</option>
