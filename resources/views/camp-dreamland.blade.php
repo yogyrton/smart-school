@@ -37,7 +37,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-5 mb-md-0">
-                    <a href="https://goo.gl/maps/1DqaKy5WPwUwZm2UA" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
+                    <a href="https://goo.gl/maps/K91sq1GUcZJXodys7" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
                         <img src="/svg/location.svg" alt="" class="me-2">
                         <span class="text-start text-md-center h4">г.Минск, ул. Орловская, 80 (Dreamland)</span>
                     </a>
