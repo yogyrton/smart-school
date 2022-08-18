@@ -24,26 +24,7 @@
                     </div>
 
                     <div class="notification--head">
-                        @if(!empty($mainNews)  && count($mainNews) > 0)
-                            <div class="position-relative swiper-box head-swiper">
-                                <div class="position-relative container-slider-pagination">
-                                    <div class="swiper" >
-                                        <div class="swiper-wrapper">
-                                            @foreach($mainNews as $mainNew)
-                                                <div class="swiper-slide">
-                                                    <div class="advt-box w-100">
-                                                        <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{!! $mainNew->text !!}</p>
-                                                    </div>
-
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        @endif
+                        @include('sections.main-news')
                     </div>
 
                 </div>
@@ -208,21 +189,21 @@
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
                                                 <div class="text-md-end mb-2 h3 accentColor">1-4 классы</div>
                                                 <div class=" text-md-end">@if(!empty($priceBel_1)){{$priceBel_1}} @else 500 @endif руб.</div>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
                                                 <div class="text-md-end mb-2 h3 accentColor">5-8 классы</div>
                                                 <div class=" text-md-end ">@if(!empty($priceBel_5)){{$priceBel_5}} @else 550 @endif руб.</div>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
                                                 <div class="text-md-end mb-2 h3 accentColor">9-11 классы</div>
                                                 <div class=" text-md-end ">@if(!empty($priceBel_9)){{$priceBel_9}} @else 650 @endif руб.</div>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -233,21 +214,21 @@
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
                                                 <div class="text-md-end text-md-end mb-2 h3 accentColor">1-4 классы</div>
                                                 <div class="text-md-end">@if(!empty($priceRus_1)){{$priceRus_1}} @else 12000 @endif рос.руб.</div>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-sm-4 mb-3 mb-sm-0">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
                                                 <div class="text-md-end text-md-end mb-2 h3 accentColor">5-8 классы</div>
                                                 <div class=" text-md-end ">@if(!empty($priceRus_5)){{$priceRus_5}} @else 13000 @endif рос.руб.</div>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="price--card d-flex flex-column justify-content-center h-100">
                                                 <div class="text-md-end text-md-end mb-2 h3 accentColor">9-11 классы</div>
                                                 <div class="text-md-end">@if(!empty($priceRus_9)){{$priceRus_9}} @else 15000 @endif рос.руб.</div>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -304,7 +285,7 @@
     <div class="pb-120">
         @include('sections.faq-online')
     </div>
-    
+
     <div class="pb-120">
         @include('sections.news')
     </div>
@@ -312,11 +293,11 @@
     <div class="pb-120">
         @include('sections.documents')
     </div>
-    
+
     <div class="pb-120">
         @include('sections.contacts')
     </div>
-    
+
     <div class="pb-120">
         @include('sections.schools-common')
     </div>
