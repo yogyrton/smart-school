@@ -15347,7 +15347,7 @@ button {
   padding: 0 !important;
 }
 #burgerModal .accordion-body {
-  max-width: 150px;
+  max-width: 210px;
   padding: 10px 30px 0 0;
 }
 #burgerModal .accordion-body ul {
@@ -16869,6 +16869,14 @@ input:-webkit-autofill {
 #address .btn-purple {
   min-width: auto;
 }
+#address .custom-ul li:last-child {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  #address .custom-ul li:last-child {
+    margin-bottom: 24px;
+  }
+}
 
 #album .image-container {
   position: relative;
@@ -17921,6 +17929,7 @@ input:-webkit-autofill {
 
 .btn-group-4 a {
   width: 100%;
+  height: 72px;
 }
 
 @media screen and (max-width: 576px) {
@@ -18274,13 +18283,8 @@ input:-webkit-autofill {
   padding-bottom: 5px;
 }
 #campLinks .swiper-pagination {
-  display: none;
+  display: block;
   bottom: -10%;
-}
-@media screen and (max-width: 1220px) {
-  #campLinks .swiper-pagination {
-    display: block;
-  }
 }
 
 @media screen and (max-width: 1500px) {

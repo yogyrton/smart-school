@@ -1,3 +1,5 @@
+@php($routeName = Route::current()->getName())
+
 <div class="swiper-box swiper-box-2">
     <div class="slider-button-prev">
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +24,11 @@
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
+                @if( $routeName === 'jukov-lug')
+                    <img src="/img/main/address/camps/jukov-camp.jpg" alt="history-img">
+                @else
                     <img src="/img/main/address/belarus-6.jpg" alt="history-img">
+                @endif
                 </div>
             </div>
             <div class="swiper-slide">

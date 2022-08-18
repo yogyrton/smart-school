@@ -8,8 +8,8 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/camp-georgia.png" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/camp-georgia-mob.png" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/test3.png" alt="" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/camp-georgia-mob2.webp" alt="" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -40,8 +40,8 @@
                     </a>
 
                     <ul class="mb-10 custom-ul">
-                        <li>14 км от г. Батуми, курортный поселок Гонио;</li>
-                        <li>большая охраняемая территория в частном семейном отеле Venera in Gonio с сезонным открытым бассейном и садом.</li>
+                        <li>большая охраняемая территория в частном семейном отеле Venera in Gonio;</li>
+                        <li>сезонный открытый бассейн и сад.</li>
                     </ul>
 
                     <div class="row">
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="d-flex align-items-start">
                                     <img src="/svg/people.svg" alt="" class="me-2">
-                                    <span>Лагерь: до 35 человек.</span>
+                                    <span>Лагерь: до 50 человек.</span>
                                 </div>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                     <div class="swiper-slide">
                         <a class="linkBox" href="/camp/dreamland">
                             <div class="img-box">
-                                <img src="/img/main/campLinks/dreamland2.jpg" alt="dreamland-img">
+                                <img src="/img/main/campLinks/dreamland3.jpg" alt="dreamland-img">
                             </div>
                             <div class="box-inner d-flex flex-column">
                                     <div>
@@ -234,6 +234,19 @@
                             </div>
                         </a>
                     </div>
+                    <div class="swiper-slide">
+                        <a class="linkBox" href="/dev">
+                            <div class="img-box">
+                                <img src="/img/main/campLinks/poland.jpg" alt="poland-img">
+                            </div>
+                            <div class="box-inner d-flex flex-column">
+                                    <div>
+                                        <h3 class="accentColor">Лагерь Польша</h3>
+                                    </div>
+                                    <button class="button_2 text">Подробнее</button>
+                            </div>
+                        </a>
+                    </div>      
                     <div class="swiper-slide">
                         <a class="linkBox" href="/dev">
                             <div class="img-box">

@@ -22,7 +22,7 @@
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' ||   $routeName === 'senior'  || $routeName === 'junior' )#priority @elseif ($routeName === 'russia' || $routeName === 'online') #priority-online @else /#priority @endif">Преимущества</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'camp' )#replies @else /#replies @endif">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )#news @else /#news @endif">Новости</a></li>
                                 <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )#documents @else /#documents @endif">Документы</a></li>
                             </ul>
@@ -63,7 +63,8 @@
                                 Детский лагерь
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/camp">Беларусь</a></li>
+                                <li><a class="dropdown-item" href="/camp/jukov-lug">Беларусь Жуков луг</a></li>
+                                <li><a class="dropdown-item" href="/camp/dreamland">Беларусь Dreamland</a></li>
                                 <li><a class="dropdown-item" href="/camp/georgia">Грузия</a></li>
                                 <li><a class="dropdown-item" href="/dev">Польша</a></li>
                                 <li><a class="dropdown-item" href="/dev">Онлайн</a></li>
@@ -71,7 +72,7 @@
                         </div>
                         
                             <li class="header-item">
-                                <a class="h5 menu-link" href="@if($routeName === 'home')#replies @else /#replies @endif">Отзывы</a>
+                                <a class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a>
                             </li>
                             <li class="header-item">
                                 <a class="h5" href="/dev">Одно окно</a>
@@ -182,7 +183,8 @@
                                         <div id="collapseThreeModal" class="accordion-collapse collapse" aria-labelledby="headingThreeModal" data-bs-parent="#accordionModal">
                                             <div class="accordion-body">
                                                 <ul class="accordion-menu">
-                                                <li><a class="dropdown-item" href="/camp">Беларусь</a></li>
+                                                <li><a class="li-item" href="/camp/jukov-lug">Беларусь Жуков луг</a></li>
+                                                <li><a class="li-item" href="/camp/dreamland">Беларусь Dreamland</a></li>
                                                 <li><a class="li-item" href="/camp/georgia">Грузия</a></li>
                                                 <li><a class="li-item" href="/dev">Польша</a></li>
                                                 <li><a class="li-item" href="/dev">Онлайн</a></li>
@@ -191,12 +193,10 @@
                                         </div>
                                     </div> 
                                 </div>
-                                <!-- <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/camp">Детский лагерь</a>
-                                </li> -->
+                            
 
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies @elseif ($routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else #replies @endif">Отзывы</a>
+                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Одно окно</a>
