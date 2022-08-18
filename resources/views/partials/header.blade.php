@@ -245,7 +245,7 @@
                                         </defs>
                                     </svg>
                                 </a>
-                                <a class="telegram" target="_blank" href="tg://resolve?domain=sm_education_bot&start=ml15">
+                                <a class="telegram" target="_blank" href="https://t.me/NataliaSmartSchool">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path

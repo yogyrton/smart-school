@@ -82,7 +82,7 @@
                             <img class="contacts-socials-img" src="/svg/telegram.svg" alt="telegram">
                         </a>
                         @else
-                        <a class="contacts-socials-link telegram" target="_blank" rel="noopener" href="tg://resolve?domain=sm_education_bot&start=ml15">
+                        <a class="contacts-socials-link telegram" target="_blank" rel="noopener" href="https://t.me/NataliaSmartSchool">
                             <img class="contacts-socials-img" src="/svg/telegram.svg" alt="telegram">
                         </a>
                         @endif
