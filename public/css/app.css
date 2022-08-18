@@ -16707,7 +16707,6 @@ input:-webkit-autofill {
   width: 11px;
   height: 11px;
   margin: 0 8px;
-  border-color: red !important;
 }
 #head .container-slider-pagination .swiper-pagination .swiper-pagination-bullet-active {
   background: #8041FF;
@@ -18283,7 +18282,7 @@ input:-webkit-autofill {
 }
 #campLinks .swiper-pagination .swiper-pagination-bullet {
   opacity: 1;
-  background: #F4F2F6;
+  background: rgba(0, 0, 0, 0.2);
   width: 11px;
   height: 11px;
   margin: 0 8px;
