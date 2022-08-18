@@ -22,24 +22,7 @@
 
                     <div class="notification--head">
                         @if(!empty($mainNews)  && count($mainNews) > 0)
-                            <div class="position-relative swiper-box head-swiper">
-                                <div class="position-relative container-slider-pagination">
-                                    <div class="swiper" id="swiper">
-                                        <div class="swiper-wrapper">
-                                            @foreach($mainNews as $mainNew)
-                                                <div class="swiper-slide">
-                                                    <div class="advt-box w-100">
-                                                        <h5 class="accentColor">{{ $mainNew->title }}</h5>
-                                                        <p class="head-text text">{!! $mainNew->text !!}</p>
-                                                    </div>
-
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
+                            @include('sections.main-news')
                         @endif
                     </div>
 
@@ -129,7 +112,7 @@
     <div class="pb-120">
         @include('sections.schools-common')
     </div>
-    
+
     <section id="advantages" class="advantages pb-120 scrollreveal">
         <div class="container">
             <h2 class="accentColor mb-40">Почему мы?</h2>
@@ -264,7 +247,7 @@
     <div class="mb-120">
         @include('sections.advantagies')
     </div>
-    
+
 
     <section id="teachers" class="scrollreveal pb-120 teachers">
         <div class="container">
@@ -316,7 +299,7 @@
     <div class="pb-120">
         @include('sections.reviews')
     </div>
-    
+
     <div class="pb-120">
         @include('sections.news')
     </div>
@@ -324,7 +307,7 @@
     <div class="pb-120">
         @include('sections.documents')
     </div>
-    
+
     <div class="pb-120">
     @include('sections.partners')
     </div>
@@ -332,7 +315,7 @@
     <div class="pb-120">
         @include('sections.contacts')
     </div>
-    
-    
+
+
 @stop
 
