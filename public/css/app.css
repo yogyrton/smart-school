@@ -16697,11 +16697,6 @@ input:-webkit-autofill {
   }
 }
 
-#head .container-slider-pagination .advt-box {
-  width: 338px;
-  cursor: pointer;
-  word-wrap: break-word;
-}
 #head .container-slider-pagination .swiper-pagination {
   bottom: -40px;
   position: absolute;
@@ -18285,6 +18280,16 @@ input:-webkit-autofill {
 #campLinks .swiper-pagination {
   display: block;
   bottom: -10%;
+}
+#campLinks .swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background: #F4F2F6;
+  width: 11px;
+  height: 11px;
+  margin: 0 8px;
+}
+#campLinks .swiper-pagination .swiper-pagination-bullet-active {
+  background: #8041FF;
 }
 
 @media screen and (max-width: 1500px) {

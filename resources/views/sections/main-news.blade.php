@@ -5,11 +5,10 @@
                 <div class="swiper-wrapper">
                     @foreach($mainNews as $mainNew)
                         <div class="swiper-slide">
-                            <div class="advt-box w-100">
+                            <div class="w-100">
                                 <h5 class="accentColor">{{ $mainNew->title }}</h5>
                                 <p class="head-text text">{!! $mainNew->text !!}</p>
                             </div>
-
                         </div>
                     @endforeach
                 </div>
