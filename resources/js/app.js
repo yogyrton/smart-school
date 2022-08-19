@@ -35,7 +35,7 @@ ScrollReveal().reveal('.scrollheader',
 );
 
 
-//свайперы
+//слайдеры
 
 const swiper_1 = new Swiper('#head .swiper', {
     loop: false,
@@ -513,9 +513,6 @@ const swiper_20 = new Swiper('#documents .swiper', {
         prevEl: '#documents .slider-button-prev',
     },
 });
-
-
-
 
 
 //для уменьшения лого при скролле
