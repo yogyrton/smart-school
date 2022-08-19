@@ -36,7 +36,12 @@ Route::get('/camp/georgia', [GeorgiaCampController::class, 'index'])->name('geor
 Route::get('/camp/dreamland', [DreamlandCampController::class, 'index'])->name('dreamland');
 
 Route::get('/download/{id}', [DocumentController::class, 'download'])->name('download');
-
+Route::view('/single-window', 'single-window');
+Route::view('/single-window/admin', 'single-window-admin');
+Route::view('/single-window/timetable', 'single-window-timetable');
+Route::view('/single-window/organizations', 'single-window-organizations');
+Route::view('/single-window/documents', 'single-window-documents');
+Route::view('/single-window/links', 'single-window-links');
 
 Route::get('/dev', function (){
     return view('errors.dev');

@@ -17866,6 +17866,132 @@ input:-webkit-autofill {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .window-section .mb-24 {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .window-section .row {
+    flex-direction: column-reverse;
+  }
+}
+.window-section .contacts {
+  max-width: 360px;
+}
+.window-section .contacts-location,
+.window-section .contacts-timetable,
+.window-section .contacts-tel {
+  padding-left: 34px;
+  position: relative;
+}
+.window-section .contacts-location::before,
+.window-section .contacts-timetable::before,
+.window-section .contacts-tel::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: 0;
+}
+.window-section .contacts-tel::before {
+  background-image: url("/svg/telephone.svg");
+}
+.window-section .contacts-location::before {
+  background-image: url("/svg/location.svg");
+}
+.window-section .contacts-timetable::before {
+  background-image: url("/svg/time.svg");
+}
+.window-section ul, .window-section ol {
+  padding-left: 15px;
+}
+.window-section li {
+  list-style-type: inherit;
+}
+.window-section .window-doc-link {
+  border-bottom: 1px solid black;
+  position: relative;
+}
+.window-section .organization-box {
+  max-width: 540px;
+}
+.window-section .link-wrap {
+  margin-right: 30px;
+  max-width: 315px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .window-section .link-wrap {
+    margin-bottom: 16px;
+  }
+}
+.window-section .link-wrap img {
+  width: 100%;
+}
+
+.sidebar {
+  background: #F4F2F7;
+  border-radius: 16px;
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    margin-bottom: 40px;
+  }
+}
+.sidebar .sidebar-header {
+  border-radius: 16px 16px 0 0px;
+  padding: 12px 24px;
+  background-color: #8041FF;
+  color: #FFFFFF;
+}
+.sidebar .sidebar-content {
+  padding: 28px 28px 200px 28px;
+}
+@media screen and (max-width: 768px) {
+  .sidebar .sidebar-content {
+    padding: 24px 30px 24px 24px;
+  }
+}
+.sidebar .sidebar-content ul, .sidebar .sidebar-content ol {
+  padding-left: 0;
+}
+.sidebar .sidebar-content ul li, .sidebar .sidebar-content ol li {
+  padding-left: 36px;
+  list-style-type: none;
+}
+.sidebar .sidebar-content .navigation__item {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar .sidebar-content .navigation__item::before {
+  display: none;
+  content: "";
+  position: absolute;
+  background-image: url("/svg/east.svg");
+  left: 0;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+.sidebar .sidebar-content .navigation__item .navigation__link {
+  transition: all 0.3s ease-in-out;
+}
+.sidebar .sidebar-content .navigation__item .navigation__link:hover {
+  font-weight: 600;
+  margin-top: -4px;
+  transition: 0.2s;
+}
+.sidebar .sidebar-content .navigation__item:hover::before,
+.sidebar .sidebar-content .navigation__item:active::before {
+  display: block;
+}
+
 @media screen and (max-width: 576px) {
   .camp-address {
     font-size: 20px;

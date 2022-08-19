@@ -1121,3 +1121,105 @@
         margin-bottom: 40px
     @media screen and (max-width: 500px)
         margin-bottom: 20px
+
+.window-section
+    .mb-24
+        @media screen and (max-width: 600px)
+            margin-bottom: 20px
+
+    .row
+        @media screen and (max-width: 768px)
+            flex-direction: column-reverse
+
+    .contacts
+        max-width: 360px
+
+    .contacts-location,
+    .contacts-timetable,
+    .contacts-tel
+        padding-left: 34px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            background-repeat: no-repeat
+            width: 24px
+            height: 24px
+            left: 0
+            top: 0
+    .contacts-tel::before
+        background-image: url('/svg/telephone.svg')
+    .contacts-location::before
+        background-image: url('/svg/location.svg')
+    .contacts-timetable::before
+        background-image: url('/svg/time.svg')
+
+    ul, ol
+        padding-left: 15px
+
+    ul, ol
+    li
+        list-style-type: inherit
+
+    .window-doc-link
+        border-bottom: 1px solid black
+        position: relative
+
+    .organization-box
+        max-width: 540px
+
+    .link-wrap
+        margin-right: 30px
+        max-width: 315px
+        margin-bottom: 24px
+        @media screen and (max-width: 768px)
+            margin-bottom: 16px
+        img
+            width: 100%
+
+.sidebar
+    background: #F4F2F7
+    border-radius: 16px
+    @media screen and (max-width: 768px)
+        margin-bottom: 40px
+    .sidebar-header
+        border-radius: 16px 16px 0 0px
+        padding: 12px 24px
+        background-color: $accentColor
+        color: $white
+    .sidebar-content
+        padding: 28px 28px 200px 28px
+        @media screen and (max-width: 768px)
+            padding: 24px 30px 24px 24px
+        ul,ol
+            padding-left: 0
+        ul, ol
+            li  
+                padding-left: 36px
+                list-style-type: none
+        .navigation__item
+            width: 100%
+            cursor: pointer
+            transition: .2s 
+            position: relative
+            transition: all .3s ease-in-out
+            &::before
+                display: none
+                content:""
+                position: absolute
+                background-image: url('/svg/east.svg')
+                left: 0
+                background-repeat: no-repeat
+                width: 24px
+                height: 24px
+            .navigation__link
+                transition: all .3s ease-in-out
+                &:hover
+                    font-weight: 600
+                    margin-top: -4px
+                    transition: .2s 
+        .navigation__item:hover::before,
+        .navigation__item:active::before
+            display: block
+
+

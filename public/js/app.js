@@ -77348,7 +77348,7 @@ var slideUp = {
   delay: 250,
   duration: 1000,
   reset: false
-}); //свайперы
+}); //слайдеры
 
 var swiper_1 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('#head .swiper', {
   loop: false,
