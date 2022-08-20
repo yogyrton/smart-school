@@ -37,7 +37,7 @@
                             </p>
                         </div>
                 </div>
-                
+
                 <div class="col-lg-6">
                         <div class="form-group mb-20">
                             <label for="place">Адрес места жительства (места пребывания)*</label>
@@ -99,7 +99,7 @@
                     </p>
             </div>
 
-            
+
                 <div class="col-lg-6 d-flex flex-column justify-content-end">
                         <div class="form-group mb-20">
                             <label for="name">Фамилия, собственное имя, отчество лица, уполномоченного подписывать обращения*</label>
@@ -172,7 +172,7 @@ export default {
         checkForm2() {
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
-                axios.post('https://smart-s.info/api/mail', {
+                axios.post('https://smart-school/api/mail-window', {
                         organization: this.form.organization,
                         organization_name: this.form. organization_name,
                         name: this.form.name,
