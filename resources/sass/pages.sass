@@ -1181,7 +1181,42 @@
         .row
             @media screen and (max-width: 768px)
                 flex-direction: column
-        
+    
+
+#appeals_page
+    
+    border: 1px solid #D3D1D9
+    border-radius: 12px
+
+    .inner
+        padding: 0 40px
+
+    .filter-tabs ul
+        display: flex
+
+    .filter-tabs ul
+        margin-bottom: 40px
+        padding-left: 0
+        background: #F4F2F7
+        @media screen and (max-width: 1200px)
+            white-space: nowrap
+            overflow-x: scroll
+            margin-bottom: 40px
+        li
+            margin-bottom: 0
+            display: inline-block
+            padding: 12px 30px
+            border-radius: 10px 10px 0 0
+            color: $text
+            transition: 0.4s ease
+            cursor: pointer
+            border: 2px solid transparent
+            border-bottom: none!important
+            @media screen and (max-width: 575px)
+                padding: 12px 24px
+
+    .active
+        background: $accentColor
 
 .sidebar
     background: #F4F2F7

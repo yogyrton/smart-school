@@ -6,8 +6,7 @@
             <h1 class="text-bold mb-32">Электронное обращение</h1>
             <div class="row">
                 <div class="col-lg-8">
-                    <app-appeal-form1></app-appeal-form1>
-                    <!-- <app-appeal-form2></app-appeal-form2> -->
+                    <app-appeal-filter></app-appeal-filter>
                 </div>
                 <div class="col-lg-4">
                     @include('partials.single-window-sidebar')
