@@ -14,9 +14,11 @@ Vue.use(Validations);
 
 Vue.component('app-form', require('./Form.vue').default);
 Vue.component('app-request-form', require('./ReqForm.vue').default);
+Vue.component('app-appeal-filter', require('./AppealFilter.vue').default);
 Vue.component('app-appeal-form1', require('./FormAppeal1.vue').default);
 Vue.component('app-appeal-form2', require('./FormAppeal2.vue').default);
 new Vue({}).$mount('#app');
+
 
 
 //*Animation*//

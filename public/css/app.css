@@ -17943,6 +17943,48 @@ input:-webkit-autofill {
   }
 }
 
+#appeals_page {
+  border: 1px solid #D3D1D9;
+  border-radius: 12px;
+}
+#appeals_page .inner {
+  padding: 0 40px;
+}
+#appeals_page .filter-tabs ul {
+  display: flex;
+}
+#appeals_page .filter-tabs ul {
+  margin-bottom: 40px;
+  padding-left: 0;
+  background: #F4F2F7;
+}
+@media screen and (max-width: 1200px) {
+  #appeals_page .filter-tabs ul {
+    white-space: nowrap;
+    overflow-x: scroll;
+    margin-bottom: 40px;
+  }
+}
+#appeals_page .filter-tabs ul li {
+  margin-bottom: 0;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 10px 10px 0 0;
+  color: #130A25;
+  transition: 0.4s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-bottom: none !important;
+}
+@media screen and (max-width: 575px) {
+  #appeals_page .filter-tabs ul li {
+    padding: 12px 24px;
+  }
+}
+#appeals_page .active {
+  background: #8041FF;
+}
+
 .sidebar {
   background: #F4F2F7;
   border-radius: 16px;
