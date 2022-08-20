@@ -42,6 +42,7 @@ Route::view('/single-window/timetable', 'single-window-timetable');
 Route::view('/single-window/organizations', 'single-window-organizations');
 Route::view('/single-window/documents', 'single-window-documents');
 Route::view('/single-window/links', 'single-window-links');
+Route::view('/single-window/appeal', 'single-window-appeal');
 
 Route::get('/dev', function (){
     return view('errors.dev');

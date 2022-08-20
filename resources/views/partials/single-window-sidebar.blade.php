@@ -6,7 +6,7 @@
         <ul class="navigation__list">
             <li class="navigation__item mb-20"><a class="navigation__link text" href="/single-window">Главная</a></li>
             <li class="navigation__item mb-20"><a class="navigation__link text" href="/single-window/admin">Административные процедуры</a></li>
-            <li class="navigation__item mb-20"><a class="navigation__link text" href="#">Электронное обращение</a></li>
+            <li class="navigation__item mb-20"><a class="navigation__link text" href="/single-window/appeal">Электронное обращение</a></li>
             <li class="navigation__item mb-20"><a class="navigation__link text" href="/single-window/timetable">График приема</a></li>
             <li class="navigation__item mb-20"><a class="navigation__link text" href="/single-window/organizations">Вышестоящие организации</a></li>
             <li class="navigation__item mb-20"><a class="navigation__link text" href="/single-window/documents">Нормативные документы</a></li>

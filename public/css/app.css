@@ -15887,6 +15887,12 @@ textarea:focus, textarea:active {
   box-shadow: none;
   outline: none;
 }
+textarea.is-invalid {
+  background: #F4F2F7;
+  border-color: #dc3545 !important;
+  -webkit-animation: is_invalid 0.4s linear;
+          animation: is_invalid 0.4s linear;
+}
 @media screen and (max-width: 400px) {
   textarea {
     height: 50px;
@@ -17930,6 +17936,11 @@ input:-webkit-autofill {
 }
 .window-section .link-wrap img {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .window-section form .row {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
