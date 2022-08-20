@@ -63,19 +63,19 @@
                                 Детский лагерь
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/camp/jukov-lug">Беларусь Жуков луг</a></li>
-                                <li><a class="dropdown-item" href="/camp/dreamland">Беларусь Dreamland</a></li>
-                                <li><a class="dropdown-item" href="/camp/georgia">Грузия</a></li>
+                                <li><a class="dropdown-item" href="{{ route('jukov-lug') }}">Беларусь Жуков луг</a></li>
+                                <li><a class="dropdown-item" href="{{ route('dreamland') }}">Беларусь Dreamland</a></li>
+                                <li><a class="dropdown-item" href="{{ route('georgia') }}">Грузия</a></li>
                                 <li><a class="dropdown-item" href="/dev">Польша</a></li>
                                 <li><a class="dropdown-item" href="/dev">Онлайн</a></li>
                             </ul>
                         </div>
-                        
+
                             <li class="header-item">
                                 <a class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a>
                             </li>
                             <li class="header-item">
-                                <a class="h5" href="/single-window">Одно окно</a>
+                                <a class="h5" href="{{ route('single-window') }}">Одно окно</a>
                             </li>
                             <li class="header-item">
                                 <a  class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a>
@@ -145,7 +145,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
 
                                 <div class="accordion accordion-modal mb-16" id="accordionmodal">
@@ -168,7 +168,7 @@
                                             </ul>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="/dev">Доп.услуги</a>
@@ -191,9 +191,9 @@
                                             </ul>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
-                            
+
 
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a>
@@ -229,7 +229,7 @@
                                         </defs>
                                     </svg>
                                 </a>
-                                
+
                                 <a target="_blank" href="https://vk.com/smartschool_minsk">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
