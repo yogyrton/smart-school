@@ -5593,6 +5593,204 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/FormAppeal1.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/FormAppeal1.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuelidate */ "./node_modules/vuelidate/lib/index.js");
+/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
+/* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Multiselect: (vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default())
+  },
+  mixins: [vuelidate__WEBPACK_IMPORTED_MODULE_1__.validationMixin],
+  props: {
+    page: {
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      windowWidth: null,
+      registrationPassed: false,
+      form: {
+        organization: null,
+        name: null,
+        place: null,
+        email: null,
+        appeal_question: null
+      }
+    };
+  },
+  validations: {
+    form: {
+      organization: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
+      },
+      name: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(2)
+      },
+      place: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
+      },
+      email: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+        email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.email
+      },
+      appeal_question: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
+      }
+    }
+  },
+  created: function created() {
+    this.handleWindowResize();
+    window.addEventListener('resize', this.handleWindowResize);
+  },
+  methods: {
+    checkForm2: function checkForm2() {
+      this.$v.form.$touch();
+
+      if (!this.$v.form.$error) {
+        axios.post('https://smart-s.info/api/mail', {
+          organization: this.form.organization,
+          name: this.form.name,
+          place: this.form.place,
+          email: this.form.email,
+          appeal_question: this.form.appeal_question
+        }).then(function (response) {
+          if (response) window.location.href = '/thanks';
+        });
+      }
+    },
+    handleWindowResize: function handleWindowResize() {
+      this.windowWidth = window.innerWidth;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/ReqForm.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/ReqForm.vue?vue&type=script&lang=js& ***!
@@ -49746,6 +49944,79 @@ component.options.__file = "resources/js/Form.vue"
 
 /***/ }),
 
+/***/ "./resources/js/FormAppeal1.vue":
+/*!**************************************!*\
+  !*** ./resources/js/FormAppeal1.vue ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormAppeal1_vue_vue_type_template_id_5431c620___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormAppeal1.vue?vue&type=template&id=5431c620& */ "./resources/js/FormAppeal1.vue?vue&type=template&id=5431c620&");
+/* harmony import */ var _FormAppeal1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormAppeal1.vue?vue&type=script&lang=js& */ "./resources/js/FormAppeal1.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormAppeal1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormAppeal1_vue_vue_type_template_id_5431c620___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormAppeal1_vue_vue_type_template_id_5431c620___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/FormAppeal1.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/FormAppeal2.vue":
+/*!**************************************!*\
+  !*** ./resources/js/FormAppeal2.vue ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/FormAppeal2.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/ReqForm.vue":
 /*!**********************************!*\
   !*** ./resources/js/ReqForm.vue ***!
@@ -49801,6 +50072,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/FormAppeal1.vue?vue&type=script&lang=js&":
+/*!***************************************************************!*\
+  !*** ./resources/js/FormAppeal1.vue?vue&type=script&lang=js& ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormAppeal1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormAppeal1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/FormAppeal1.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormAppeal1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/ReqForm.vue?vue&type=script&lang=js&":
 /*!***********************************************************!*\
   !*** ./resources/js/ReqForm.vue?vue&type=script&lang=js& ***!
@@ -49830,6 +50117,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Form_vue_vue_type_template_id_1e620c62___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Form_vue_vue_type_template_id_1e620c62___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Form.vue?vue&type=template&id=1e620c62& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Form.vue?vue&type=template&id=1e620c62&");
+
+
+/***/ }),
+
+/***/ "./resources/js/FormAppeal1.vue?vue&type=template&id=5431c620&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/FormAppeal1.vue?vue&type=template&id=5431c620& ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormAppeal1_vue_vue_type_template_id_5431c620___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormAppeal1_vue_vue_type_template_id_5431c620___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormAppeal1_vue_vue_type_template_id_5431c620___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormAppeal1.vue?vue&type=template&id=5431c620& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/FormAppeal1.vue?vue&type=template&id=5431c620&");
 
 
 /***/ }),
@@ -50384,6 +50688,334 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form_btn" }, [
+      _c(
+        "button",
+        { staticClass: "btn-purple button_2", attrs: { type: "submit" } },
+        [_vm._v("Отправить")]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/FormAppeal1.vue?vue&type=template&id=5431c620&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/FormAppeal1.vue?vue&type=template&id=5431c620& ***!
+  \************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "form",
+      {
+        staticClass: "appeal",
+        on: {
+          submit: function ($event) {
+            $event.preventDefault()
+            return _vm.checkForm2.apply(null, arguments)
+          },
+        },
+      },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-6" }, [
+            _c("div", { staticClass: "form-group mb-12" }, [
+              _c("label", { attrs: { for: "organization" } }, [
+                _vm._v(
+                  "Наименование и (или) адрес организации либо должность лица, которым направляется обращение*"
+                ),
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.form.organization,
+                    expression: "form.organization",
+                    modifiers: { trim: true },
+                  },
+                ],
+                staticClass: "form-control w-100",
+                class: _vm.$v.form.organization.$error ? "is-invalid" : "",
+                attrs: {
+                  id: "organization",
+                  placeholder:
+                    _vm.windowWidth > 767
+                      ? "Введите наименование / адрес / должность"
+                      : "Введите наимен. / адрес / должность",
+                },
+                domProps: { value: _vm.form.organization },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.form,
+                      "organization",
+                      $event.target.value.trim()
+                    )
+                  },
+                  blur: function ($event) {
+                    return _vm.$forceUpdate()
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _vm.$v.form.organization.$dirty &&
+              !_vm.$v.form.organization.required
+                ? _c("p", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Обязательное поле\n                        "
+                    ),
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.$v.form.organization.$dirty &&
+              !_vm.$v.form.organization.minLength
+                ? _c("p", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Здесь должно быть больше 5-и символов\n                        "
+                    ),
+                  ])
+                : _vm._e(),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-lg-6 d-flex flex-column justify-content-end" },
+            [
+              _c("div", { staticClass: "form-group mb-12" }, [
+                _c("label", { attrs: { for: "name" } }, [
+                  _vm._v("Фамилия, собственное имя, отчество либо инициалы*"),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.trim",
+                      value: _vm.form.name,
+                      expression: "form.name",
+                      modifiers: { trim: true },
+                    },
+                  ],
+                  staticClass: "form-control w-100",
+                  class: _vm.$v.form.name.$error ? "is-invalid" : "",
+                  attrs: { id: "name", placeholder: "Введите Ваше ФИО" },
+                  domProps: { value: _vm.form.name },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "name", $event.target.value.trim())
+                    },
+                    blur: function ($event) {
+                      return _vm.$forceUpdate()
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _vm.$v.form.name.$dirty && !_vm.$v.form.name.required
+                  ? _c("p", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n                            Обязательное поле\n                        "
+                      ),
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.$v.form.name.$dirty && !_vm.$v.form.name.minLength
+                  ? _c("p", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n                            Здесь должно быть больше 2-х символов\n                        "
+                      ),
+                    ])
+                  : _vm._e(),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6" }, [
+            _c("div", { staticClass: "form-group mb-12" }, [
+              _c("label", { attrs: { for: "place" } }, [
+                _vm._v("Адрес места жительства (места пребывания)*"),
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.form.place,
+                    expression: "form.place",
+                    modifiers: { trim: true },
+                  },
+                ],
+                staticClass: "form-control w-100",
+                class: _vm.$v.form.place.$error ? "is-invalid" : "",
+                attrs: { id: "place", placeholder: "Введите Ваш адрес" },
+                domProps: { value: _vm.form.place },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "place", $event.target.value.trim())
+                  },
+                  blur: function ($event) {
+                    return _vm.$forceUpdate()
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _vm.$v.form.place.$dirty && !_vm.$v.form.place.required
+                ? _c("p", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Обязательное поле\n                            "
+                    ),
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.$v.form.place.$dirty && !_vm.$v.form.place.minLength
+                ? _c("p", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Здесь должно быть больше 5-и символов\n                        "
+                    ),
+                  ])
+                : _vm._e(),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6" }, [
+            _c("div", { staticClass: "form-group mb-12" }, [
+              _c("label", { attrs: { for: "email" } }, [
+                _vm._v("Адрес электронной почты*"),
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.trim",
+                    value: _vm.form.email,
+                    expression: "form.email",
+                    modifiers: { trim: true },
+                  },
+                ],
+                staticClass: "form-control w-100",
+                class: _vm.$v.form.email.$error ? "is-invalid" : "",
+                attrs: { id: "email", placeholder: "Введите Ваш email" },
+                domProps: { value: _vm.form.email },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "email", $event.target.value.trim())
+                  },
+                  blur: function ($event) {
+                    return _vm.$forceUpdate()
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _vm.$v.form.name.$dirty && !_vm.$v.form.email.required
+                ? _c("p", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Обязательное поле\n                        "
+                    ),
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.$v.form.name.$dirty && !_vm.$v.form.email.email
+                ? _c("p", { staticClass: "invalid-feedback" }, [
+                    _vm._v(
+                      "\n                            Email неккоректный\n                        "
+                    ),
+                  ])
+                : _vm._e(),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-12" }, [
+          _c("label", { attrs: { for: "appeal_question" } }, [
+            _vm._v("Есть вопросы? Напишите"),
+          ]),
+          _vm._v(" "),
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model.trim",
+                value: _vm.form.appeal_question,
+                expression: "form.appeal_question",
+                modifiers: { trim: true },
+              },
+            ],
+            staticClass: "w-100 textarea",
+            class: _vm.$v.form.appeal_question.$error ? "is-invalid" : "",
+            attrs: {
+              name: "appeal_question",
+              id: "appeal_question",
+              placeholder: "Изложите суть обращения",
+            },
+            domProps: { value: _vm.form.appeal_question },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(
+                  _vm.form,
+                  "appeal_question",
+                  $event.target.value.trim()
+                )
+              },
+              blur: function ($event) {
+                return _vm.$forceUpdate()
+              },
+            },
+          }),
+          _vm._v(" "),
+          _vm.$v.form.appeal_question.$dirty &&
+          !_vm.$v.form.appeal_question.required
+            ? _c("p", { staticClass: "invalid-feedback" }, [
+                _vm._v(
+                  "\n                    Обязательное поле\n                "
+                ),
+              ])
+            : _vm._e(),
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
+      ]
+    ),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form_btn justify-content-start" }, [
       _c(
         "button",
         { staticClass: "btn-purple button_2", attrs: { type: "submit" } },
@@ -77335,6 +77967,8 @@ window.EventHandler = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]();
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuelidate__WEBPACK_IMPORTED_MODULE_4__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-form', (__webpack_require__(/*! ./Form.vue */ "./resources/js/Form.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-request-form', (__webpack_require__(/*! ./ReqForm.vue */ "./resources/js/ReqForm.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-appeal-form1', (__webpack_require__(/*! ./FormAppeal1.vue */ "./resources/js/FormAppeal1.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-appeal-form2', (__webpack_require__(/*! ./FormAppeal2.vue */ "./resources/js/FormAppeal2.vue")["default"]));
 new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({}).$mount('#app'); //*Animation*//
 
 var slideUp = {
