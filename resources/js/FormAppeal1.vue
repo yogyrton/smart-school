@@ -96,7 +96,7 @@
                         Обязательное поле
                     </p>
             </div>
-            
+
             <div class="form_btn justify-content-start">
                 <button type="submit" class="btn-purple button_2">Отправить</button>
             </div>
@@ -149,7 +149,7 @@ export default {
         checkForm2() {
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
-                axios.post('https://smart-s.info/api/mail', {
+                axios.post('https://smart-school/api/mail-window', {
                         organization: this.form.organization,
                         name: this.form.name,
                         place: this.form.place,
