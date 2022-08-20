@@ -3,7 +3,7 @@
         <form class="appeal" @submit.prevent="checkForm2">
             <div class="row">
                 <div class="col-lg-6">
-                        <div class="form-group mb-12">
+                        <div class="form-group mb-20">
                             <label for="organization">Наименование и (или) адрес организации либо должность лица, которым направляется обращение*</label>
                             <input
                                 id="organization"
@@ -20,7 +20,7 @@
                         </div>
                 </div>
                 <div class="col-lg-6 d-flex flex-column justify-content-end">
-                        <div class="form-group mb-12">
+                        <div class="form-group mb-20">
                             <label for="name">Фамилия, собственное имя, отчество либо инициалы*</label>
                             <input
                                 id="name"
@@ -37,7 +37,7 @@
                         </div>
                 </div>
                 <div class="col-lg-6">
-                        <div class="form-group mb-12">
+                        <div class="form-group mb-20">
                             <label for="place">Адрес места жительства (места пребывания)*</label>
                             <input
                                 id="place"
@@ -54,7 +54,7 @@
                         </div>
                 </div>
                 <div class="col-lg-6">
-                        <div class="form-group mb-12">
+                        <div class="form-group mb-20">
                             <label for="email">Адрес электронной почты*</label>
                             <input
                                 id="email"
@@ -85,7 +85,7 @@
                 </div>
 
             </div>
-            <div class="mb-12">
+            <div class="mb-20">
                     <label for="appeal_question">Есть вопросы? Напишите</label>
                     <textarea name="appeal_question" id="appeal_question"  class="w-100 textarea"
                     placeholder="Изложите суть обращения"
@@ -96,8 +96,9 @@
                         Обязательное поле
                     </p>
             </div>
+            
+            <div class="form_btn justify-content-start mb-40">
 
-            <div class="form_btn justify-content-start">
                 <button type="submit" class="btn-purple button_2">Отправить</button>
             </div>
         </form>
