@@ -7,11 +7,13 @@
             <div class="row">
                 <div class="col-lg-8">
                     <app-appeal-form1></app-appeal-form1>
+                    <!-- <app-appeal-form2></app-appeal-form2> -->
                 </div>
                 <div class="col-lg-4">
                     @include('partials.single-window-sidebar')
                 </div>
             </div>
+            
         </div>
 </section>
     
