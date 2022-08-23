@@ -6,8 +6,10 @@
             <h1 class="text-bold mb-32">График приема</h1>
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="align-content-center mb-32">
-                        <img src="/svg/doc.svg" alt="doc-img">
+                    <div class="d-flex gap-12 mb-32">
+                        <div>
+                            <img src="/svg/doc.svg" alt="doc-img">
+                        </div>
                         <a class="window-doc-link text" href="/docs/grafic_priema.docx">График приема</a>
                     </div>
                     <h6 class="mb-24">Порядок личного приема</h6>

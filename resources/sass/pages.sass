@@ -1123,6 +1123,9 @@
         margin-bottom: 20px
 
 .window-section
+    .gap-12
+        gap: 12px
+
     .mb-24
         @media screen and (max-width: 600px)
             margin-bottom: 20px
@@ -1162,7 +1165,11 @@
         list-style-type: inherit
 
     .window-doc-link
-        border-bottom: 1px solid black
+        text-decoration: underline !important
+        // text-decoration-color: #130A25
+        // text-decoration-thickness: 0.5px
+        // -webkit-text-decoration-thickness: 0.5px
+        text-underline-offset: 3px
         position: relative
 
     .organization-box
@@ -1181,42 +1188,67 @@
         .row
             @media screen and (max-width: 768px)
                 flex-direction: column
-    
+
+        .form_btn button
+            margin-top: 0
+
+        .file_label
+            display: inline-block
+            cursor: pointer
+            border-bottom: 1px solid
+            position: relative
+            margin-left: 30px
+            &::before
+                content: ""
+                position: absolute
+                width: 36px
+                height: 36px
+                left: -40px
+                bottom: -10px
+                background-image: url('/svg/doc.svg')
 
 #appeals_page
-    
     border: 1px solid #D3D1D9
     border-radius: 12px
 
     .inner
         padding: 0 40px
+        @media screen and (max-width: 560px)
+            padding: 0 5px
 
     .filter-tabs ul
         display: flex
-
-    .filter-tabs ul
         margin-bottom: 40px
-        padding-left: 0
+        padding: 0
         background: #F4F2F7
+        border-radius: 12px 12px 0px 0px
         @media screen and (max-width: 1200px)
             white-space: nowrap
             overflow-x: scroll
             margin-bottom: 40px
-        li
-            margin-bottom: 0
-            display: inline-block
-            padding: 12px 30px
-            border-radius: 10px 10px 0 0
-            color: $text
-            transition: 0.4s ease
-            cursor: pointer
-            border: 2px solid transparent
-            border-bottom: none!important
-            @media screen and (max-width: 575px)
-                padding: 12px 24px
+    a
+        margin-bottom: 0
+        display: flex
+        justify-content: center
+        padding: 12px 0
+        border-radius: 12px 12px 0 0
+        color: $text
+        cursor: pointer
+        border: 2px solid transparent
+        border-bottom: none!important
+        width: 50%
+        @media screen and (max-width: 576px)
+            padding: 15px 24px
+            font-size: 12px
 
-    .active
-        background: $accentColor
+    .form-control
+        @media screen and (max-width: 400px)
+            padding: 12px 5px
+    .activeText
+        color: #F4F2F7
+        background-color: $accentColor
+        &:hover
+            color: #F4F2F7 !important
 
 .sidebar
     background: #F4F2F7
