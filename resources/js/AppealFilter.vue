@@ -6,11 +6,11 @@
                     <div class="w-100 row">
                         <ul>
                             <div class="w-100 d-flex">
-                                <a  v-if="width > 576" v-on:click="type=1" class="text col-lg-6" v-bind:class="[type===1?'activeText':'' ]">Электронное обращение граждан </a>
-                                <a  v-else v-on:click="type=1" class="text col-lg-6" v-bind:class="[type===1?'activeText':'' ]">Эл. обращ. граждан </a>
+                                <a  v-if="width > 576" @click = changeType(1) class="text col-lg-6" v-bind:class="[type===1?'activeText':'' ]">Электронное обращение граждан </a>
+                                <a  v-else @click = changeType(1) class="text col-lg-6" v-bind:class="[type===1?'activeText':'' ]">Эл. обращ. граждан </a>
 
-                                <a v-if="width > 576" v-on:click="type=2" class="text col-lg-6" v-bind:class="[type===2?'activeText':'' ]" >Электронное обращение ЮЛ и ИП</a>
-                                <a v-else v-on:click="type=2" class="text col-lg-6" v-bind:class="[type===2?'activeText':'' ]" >Эл. обращ. ЮЛ и ИП</a>
+                                <a v-if="width > 576"  @click = changeType(2) class="text col-lg-6" v-bind:class="[type===2?'activeText':'' ]" >Электронное обращение ЮЛ и ИП</a>
+                                <a v-else @click = changeType(2) class="text col-lg-6" v-bind:class="[type===2?'activeText':'' ]" >Эл. обращ. ЮЛ и ИП</a>
 
                             </div>
                             
@@ -124,7 +124,7 @@
                                 v-model.trim="form.email"/>
                                 <p
                                 v-if="
-                                    $v.form.name.$dirty &&
+                                    $v.form.email.$dirty &&
                                     !$v.form.email.required
                                 "
                                 class="invalid-feedback"
@@ -150,9 +150,9 @@
                                 class="form-control w-100"
                                 placeholder="Введите Ваш email"
                                 :class="
-                                    $v.form.email.$error ? 'is-invalid' : ''
+                                    $v.form.email_organization.$error ? 'is-invalid' : ''
                                 "
-                                v-model.trim="form.email"/>
+                                v-model.trim="form.email_organization"/>
                                 <p
                                 v-if="
                                     $v.form.email_organization.$dirty &&
@@ -210,7 +210,9 @@
                             <label v-on:change="handFileUpload()" for="file" class="file_label text"> Прикрепить документ
                                 <input class="d-none" type="file" id="file" ref="file" />
                             </label>
+                            {{file}}
                         </div>
+                        
                     </div>
                 </div>
 
@@ -218,10 +220,12 @@
                         <label v-on:change="handFileUpload()" for="file" class="file_label text"> Прикрепить документ
                             <input class="d-none" type="file" id="file" ref="file" />
                         </label>
-                    </div>
+                        {{file}}
+                </div>
+
                 
                 <div class="form_btn justify-content-start mb-40 mt-40">
-                    <button v-on:click="submitFile()" type="submit" class="btn-purple button_2">Отправить</button>
+                    <button type="submit" class="btn-purple button_2">Отправить</button>
                 </div>
             </div>
         </form>
@@ -234,6 +238,7 @@
 import {required, email, minLength, maxlength} from "vuelidate/lib/validators";
 import {validationMixin} from "vuelidate";
 import Multiselect from "vue-multiselect";
+
 
 export default {
     components: {
@@ -248,7 +253,6 @@ export default {
     data() {
         return {
             width: null,
-            activeClass: '0',
             file: '',
             type: 1,
             windowWidth: null,
@@ -265,23 +269,41 @@ export default {
             },
         }
     },
-    validations: {
-        form: {
-            organization: {required, minLength: minLength(5)},
-            organization_name: {required, minLength: minLength(5)},
-            name: {required, minLength: minLength(2)},
-            place: {required, minLength: minLength(5)},
-            place_organization: {required, minLength: minLength(5)},
-            email: {required, email},
-            email_organization: {required, email},
-            appeal_question: {required},
+    validations() {
+        if(this.type == 1) {
+            return {
+                form: {
+                    organization: {required, minLength: minLength(5)},
+                    name: {required, minLength: minLength(2)},
+                    place: {required, minLength: minLength(5)},
+                    email: {required, email},
+                    appeal_question: {required},
+                } 
+            }
         }
-    },
+        if(this.type == 2) {
+            return {
+                form: {
+                    organization: {required, minLength: minLength(5)},
+                    organization_name: {required, minLength: minLength(5)},
+                    place_organization: {required, minLength: minLength(5)},
+                    email_organization: {required, email},
+                    appeal_question: {required},
+                    name: {required, minLength: minLength(2)},
+                }
+                }
+            }
+        },
     created() {
         this.handleWindowResize();
         window.addEventListener('resize', this.handleWindowResize);
     },
+    
     methods: {
+        changeType(i) {
+            this.type = i;
+            this.$v.$reset();
+        },
         checkForm() {
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
@@ -304,25 +326,8 @@ export default {
         handleWindowResize() {
             this.width = window.innerWidth;
         },
-        submitFile() {
-            let formData = new FormData();
-            formData.append('file', this.file);
-            axios.post ('/single-file', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }).then (function() {
-                console.log('SUCCESS!!');
-            })
-            .catch(function(){
-                console.log('FAILURE!!');
-            });
-        },
         handFileUpload() {
-            this.file = this.$refs.file.files[0];
-            if  (file ==='') 
-                console.log ('тут пусто')
-            else alert ('Файл выбран')
+            this.file = 'Документ выбран';
         }
     }
 }

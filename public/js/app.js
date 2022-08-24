@@ -5502,6 +5502,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -5518,7 +5522,6 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       width: null,
-      activeClass: '0',
       file: '',
       type: 1,
       windowWidth: null,
@@ -5535,39 +5538,61 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  validations: {
-    form: {
-      organization: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
-      },
-      organization_name: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
-      },
-      name: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(2)
-      },
-      place: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
-      },
-      place_organization: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
-      },
-      email: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
-        email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.email
-      },
-      email_organization: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
-        email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.email
-      },
-      appeal_question: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
-      }
+  validations: function validations() {
+    if (this.type == 1) {
+      return {
+        form: {
+          organization: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
+          },
+          name: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(2)
+          },
+          place: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
+          },
+          email: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.email
+          },
+          appeal_question: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
+          }
+        }
+      };
+    }
+
+    if (this.type == 2) {
+      return {
+        form: {
+          organization: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
+          },
+          organization_name: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
+          },
+          place_organization: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(5)
+          },
+          email_organization: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.email
+          },
+          appeal_question: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required
+          },
+          name: {
+            required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.required,
+            minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__.minLength)(2)
+          }
+        }
+      };
     }
   },
   created: function created() {
@@ -5575,6 +5600,10 @@ __webpack_require__.r(__webpack_exports__);
     window.addEventListener('resize', this.handleWindowResize);
   },
   methods: {
+    changeType: function changeType(i) {
+      this.type = i;
+      this.$v.$reset();
+    },
     checkForm: function checkForm() {
       this.$v.form.$touch();
 
@@ -5596,22 +5625,8 @@ __webpack_require__.r(__webpack_exports__);
     handleWindowResize: function handleWindowResize() {
       this.width = window.innerWidth;
     },
-    submitFile: function submitFile() {
-      var formData = new FormData();
-      formData.append('file', this.file);
-      axios.post('/single-file', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      }).then(function () {
-        console.log('SUCCESS!!');
-      })["catch"](function () {
-        console.log('FAILURE!!');
-      });
-    },
     handFileUpload: function handFileUpload() {
-      this.file = this.$refs.file.files[0];
-      if (file === '') console.log('тут пусто');else alert('Файл выбран');
+      this.file = 'Документ выбран';
     }
   }
 });
@@ -50331,7 +50346,7 @@ var render = function () {
                           class: [_vm.type === 1 ? "activeText" : ""],
                           on: {
                             click: function ($event) {
-                              _vm.type = 1
+                              return _vm.changeType(1)
                             },
                           },
                         },
@@ -50344,7 +50359,7 @@ var render = function () {
                           class: [_vm.type === 1 ? "activeText" : ""],
                           on: {
                             click: function ($event) {
-                              _vm.type = 1
+                              return _vm.changeType(1)
                             },
                           },
                         },
@@ -50359,7 +50374,7 @@ var render = function () {
                           class: [_vm.type === 2 ? "activeText" : ""],
                           on: {
                             click: function ($event) {
-                              _vm.type = 2
+                              return _vm.changeType(2)
                             },
                           },
                         },
@@ -50372,7 +50387,7 @@ var render = function () {
                           class: [_vm.type === 2 ? "activeText" : ""],
                           on: {
                             click: function ($event) {
-                              _vm.type = 2
+                              return _vm.changeType(2)
                             },
                           },
                         },
@@ -50739,7 +50754,7 @@ var render = function () {
                       },
                     }),
                     _vm._v(" "),
-                    _vm.$v.form.name.$dirty && !_vm.$v.form.email.required
+                    _vm.$v.form.email.$dirty && !_vm.$v.form.email.required
                       ? _c("p", { staticClass: "invalid-feedback" }, [
                           _vm._v(
                             "\r\n                                Обязательное поле\r\n                            "
@@ -50767,18 +50782,20 @@ var render = function () {
                         {
                           name: "model",
                           rawName: "v-model.trim",
-                          value: _vm.form.email,
-                          expression: "form.email",
+                          value: _vm.form.email_organization,
+                          expression: "form.email_organization",
                           modifiers: { trim: true },
                         },
                       ],
                       staticClass: "form-control w-100",
-                      class: _vm.$v.form.email.$error ? "is-invalid" : "",
+                      class: _vm.$v.form.email_organization.$error
+                        ? "is-invalid"
+                        : "",
                       attrs: {
                         id: "email_organization",
                         placeholder: "Введите Ваш email",
                       },
-                      domProps: { value: _vm.form.email },
+                      domProps: { value: _vm.form.email_organization },
                       on: {
                         input: function ($event) {
                           if ($event.target.composing) {
@@ -50786,7 +50803,7 @@ var render = function () {
                           }
                           _vm.$set(
                             _vm.form,
-                            "email",
+                            "email_organization",
                             $event.target.value.trim()
                           )
                         },
@@ -50961,6 +50978,11 @@ var render = function () {
                               }),
                             ]
                           ),
+                          _vm._v(
+                            "\r\n                            " +
+                              _vm._s(_vm.file) +
+                              "\r\n                        "
+                          ),
                         ]),
                       ]
                     )
@@ -50992,34 +51014,38 @@ var render = function () {
                     }),
                   ]
                 ),
+                _vm._v(
+                  "\r\n                        " +
+                    _vm._s(_vm.file) +
+                    "\r\n                "
+                ),
               ])
             : _vm._e(),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "form_btn justify-content-start mb-40 mt-40" },
-            [
-              _c(
-                "button",
-                {
-                  staticClass: "btn-purple button_2",
-                  attrs: { type: "submit" },
-                  on: {
-                    click: function ($event) {
-                      return _vm.submitFile()
-                    },
-                  },
-                },
-                [_vm._v("Отправить")]
-              ),
-            ]
-          ),
+          _vm._m(0),
         ]),
       ]
     ),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "form_btn justify-content-start mb-40 mt-40" },
+      [
+        _c(
+          "button",
+          { staticClass: "btn-purple button_2", attrs: { type: "submit" } },
+          [_vm._v("Отправить")]
+        ),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 

@@ -10,6 +10,7 @@ import Swiper from 'swiper/bundle';
 import ScrollReveal from 'scrollreveal';
 import magnificPopup from 'magnific-popup';
 
+
 Vue.use(Validations);
 
 Vue.component('app-form', require('./Form.vue').default);
