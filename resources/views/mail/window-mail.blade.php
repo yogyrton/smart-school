@@ -15,7 +15,7 @@
 @endif
 
 @if (isset($data['organization_name']) && $data['organization_name'])
-    <p>Наименование и (или) адрес организации либо должность лица, которым направляется обращение: {{ $data['organization_name'] }}</p>
+    <p>Полное наименование юридического лица: {{ $data['organization_name'] }}</p>
 @endif
 
 @if (isset($data['name']) && $data['name'])
@@ -31,10 +31,8 @@
 @endif
 
 @if (isset($data['appeal_question']) && $data['appeal_question'])
-    <p>Вопрос: {{ $data['appeal_question'] }}</p>
+    <p>Суть обращения: {{ $data['appeal_question'] }}</p>
 @endif
-
-
 
 </body>
 </html>

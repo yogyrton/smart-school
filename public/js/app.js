@@ -5795,6 +5795,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -5853,7 +5854,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('/api/mail-window', {
+        axios.post('https://smart-school/api/mail-window', {
           organization: this.form.organization,
           name: this.form.name,
           place: this.form.place,
@@ -6077,7 +6078,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
-        axios.post('https://smart-s.info/api/mail', {
+        axios.post('https://smart-school/api/mail-window', {
           organization: this.form.organization,
           organization_name: this.form.organization_name,
           name: this.form.name,
