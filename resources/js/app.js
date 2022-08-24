@@ -10,13 +10,12 @@ import Swiper from 'swiper/bundle';
 import ScrollReveal from 'scrollreveal';
 import magnificPopup from 'magnific-popup';
 
+
 Vue.use(Validations);
 
 Vue.component('app-form', require('./Form.vue').default);
 Vue.component('app-request-form', require('./ReqForm.vue').default);
 Vue.component('app-appeal-filter', require('./AppealFilter.vue').default);
-Vue.component('app-appeal-form1', require('./FormAppeal1.vue').default);
-Vue.component('app-appeal-form2', require('./FormAppeal2.vue').default);
 new Vue({}).$mount('#app');
 
 
@@ -30,13 +29,11 @@ var slideUp = {
 };
 
 ScrollReveal().reveal('.scrollreveal', slideUp);
-ScrollReveal().reveal('.scrollheader',
-    {
-        delay: 250,
-        duration: 1000,
-        reset: false,
-    }
-);
+ScrollReveal().reveal('.scrollheader', {
+    delay: 250,
+    duration: 1000,
+    reset: false,
+});
 
 
 //слайдеры
@@ -549,8 +546,8 @@ window.addEventListener("DOMContentLoaded", () => {
             el[i].innerHTML = cutTextWithDots(el[i].innerHTML);
         }
     }
-    for(let i=0; i<mores.length; i++) {
-        mores[i].onclick = function() {
+    for (let i = 0; i < mores.length; i++) {
+        mores[i].onclick = function () {
             let image = el_image[i].innerHTML;
             let title = el_title[i].innerHTML;
             let description = full_el[i].innerHTML;
@@ -601,7 +598,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 //ZOOM ALBUM IMAGES
-$(document).ready(function() {
+$(document).ready(function () {
     $('.popup-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
@@ -612,7 +609,7 @@ $(document).ready(function() {
             clickable: true,
             enabled: true,
             navigateByImgClick: true,
-            preload: [0,1],
+            preload: [0, 1],
             tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
             arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>'
         }
@@ -621,15 +618,19 @@ $(document).ready(function() {
 
 //для отмены выделения при перелистывании слайдера
 
-swiper.onmousedown = swiper.onselectstart = function() {
+swiper.onmousedown = swiper.onselectstart = function () {
     return false;
 };
 
 swiper.onselectstart = () => false;
 
-swiper.onselectstart.preventDefault() 
+swiper.onselectstart.preventDefault()
 
 document.onselectstart = () => {
-event.preventDefault();
+    event.preventDefault();
 }
 
+$('.my').change(function() {
+    if ($(this).val() != '') $(this).prev().text('Выбрано файлов: ' + $(this)[0].files.length);
+    else $(this).prev().text('Выберите файлы');
+});
