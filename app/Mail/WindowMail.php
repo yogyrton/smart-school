@@ -6,7 +6,6 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Storage;
 
 class WindowMail extends Mailable
 {
@@ -20,7 +19,7 @@ class WindowMail extends Mailable
      *
      * @return void
      */
-    public function __construct($data, $path)
+    public function __construct($data, $path = null)
     {
         $this->data = $data;
         $this->path = $path;
@@ -33,7 +32,9 @@ class WindowMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.window-mail')->attach(public_path('storage/') . $this->path);
-
+        if ($this->path) {
+            return $this->view('mail.window-mail')->attach(public_path('storage/') . $this->path);
+        }
+        return $this->view('mail.window-mail');
     }
 }

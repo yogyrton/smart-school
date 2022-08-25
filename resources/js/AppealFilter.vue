@@ -320,6 +320,7 @@ export default {
                 formData.append('email', this.form.email);
                 formData.append('email_organization', this.form.email_organization);
                 formData.append('appeal_question', this.form.appeal_question);
+
                 axios.post('https://smart.ilavista.tech/api/mail-window', formData,
                     {
                         headers: {
