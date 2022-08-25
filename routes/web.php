@@ -39,11 +39,11 @@ Route::get('/download/{id}', [DocumentController::class, 'download'])->name('dow
 
 Route::view('/single-window', 'single-window')->name('single-window');
 Route::view('/single-window/admin', 'single-window-admin')->name('single-window-admin');
+Route::view('/single-window/appeal', 'single-window-appeal')->name('single-window-appeal');
 Route::view('/single-window/timetable', 'single-window-timetable')->name('single-window-timetable');
 Route::view('/single-window/organizations', 'single-window-organizations')->name('single-window-organizations');
 Route::view('/single-window/documents', 'single-window-documents')->name('single-window-documents');
 Route::view('/single-window/links', 'single-window-links')->name('single-window-links');
-Route::view('/single-window/appeal', 'single-window-appeal')->name('single-window-appeal');
 
 Route::get('/dev', function (){
     return view('errors.dev');
