@@ -13,7 +13,7 @@
                                 <a v-else @click = changeType(2) class="text col-lg-6" v-bind:class="[type===2?'activeText':'' ]" >Эл. обращ. ЮЛ и ИП</a>
 
                             </div>
-                            
+
                         </ul>
                     </div>
             </div>
@@ -212,7 +212,7 @@
                             </label>
                             {{file}}
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -223,7 +223,7 @@
                         {{file}}
                 </div>
 
-                
+
                 <div class="form_btn justify-content-start mb-40 mt-40">
                     <button type="submit" class="btn-purple button_2">Отправить</button>
                 </div>
@@ -253,19 +253,21 @@ export default {
     data() {
         return {
             width: null,
-            file: '',
             type: 1,
+            file: '',
             windowWidth: null,
             registrationPassed: false,
             form: {
-                organization: null,
-                organization_name: null,
-                name: null,
-                place: null,
-                place_organization: null,
-                email: null,
-                email_organization: null,
-                appeal_question: null,
+                organization: '',
+                organization_name: '',
+                name: '',
+                place: '',
+                place_organization: '',
+                email: '',
+                email_organization: '',
+                appeal_question: '',
+                files: ''
+
             },
         }
     },
@@ -278,7 +280,7 @@ export default {
                     place: {required, minLength: minLength(5)},
                     email: {required, email},
                     appeal_question: {required},
-                } 
+                }
             }
         }
         if(this.type == 2) {
@@ -298,7 +300,7 @@ export default {
         this.handleWindowResize();
         window.addEventListener('resize', this.handleWindowResize);
     },
-    
+
     methods: {
         changeType(i) {
             this.type = i;
@@ -307,17 +309,24 @@ export default {
         checkForm() {
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
-                axios.post('https://smart-s.info/api/mail', {
-                        organization: this.form.organization,
-                        organization_name: this.form. organization_name,
-                        name: this.form.name,
-                        place: this.form.place,
-                        place_organization: this.form.place_organization, 
-                        email: this.form.email,
-                        email_organization: this.form.email_organization,
-                        appeal_question: this.form.appeal_question
-                    }
-                )
+                let formData = new FormData();
+
+                formData.append('file', this.form.files);
+                formData.append('organization', this.form.organization);
+                formData.append('organization_name', this.form.organization_name);
+                formData.append('name', this.form.name);
+                formData.append('place', this.form.place);
+                formData.append('place_organization', this.form.place_organization);
+                formData.append('email', this.form.email);
+                formData.append('email_organization', this.form.email_organization);
+                formData.append('appeal_question', this.form.appeal_question);
+
+                axios.post('https://smart.ilavista.tech/api/mail-window', formData,
+                    {
+                        headers: {
+                            'Content-Type': 'multipart/form-data'
+                        }
+                    })
                     .then(response => {
                         if (response) window.location.href = '/thanks';
                     })
@@ -327,6 +336,7 @@ export default {
             this.width = window.innerWidth;
         },
         handFileUpload() {
+            this.form.files = this.$refs.file.files[0];
             this.file = 'Документ выбран';
         }
     }

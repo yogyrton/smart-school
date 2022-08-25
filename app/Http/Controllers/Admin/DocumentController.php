@@ -79,8 +79,7 @@ class DocumentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public
-    function destroy($id)
+    public function destroy($id)
     {
         $doc = Document::query()->find($id);
         $path = '/public/' . $doc->path;
@@ -91,8 +90,7 @@ class DocumentController extends Controller
         return redirect()->route('documents.index')->with('success', 'Документ удален');
     }
 
-    public
-    function download($id)
+    public function download($id)
     {
         $doc = Document::query()->find($id);
         $path = public_path('storage/') . $doc->path;

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Mail\MessageMail;
-use App\Mail\RequestFormMail;
-use App\Mail\WindowMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
