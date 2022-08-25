@@ -5642,7 +5642,7 @@ __webpack_require__.r(__webpack_exports__);
         formData.append('email', this.form.email);
         formData.append('email_organization', this.form.email_organization);
         formData.append('appeal_question', this.form.appeal_question);
-        axios.post('https://smart.ilavista.tech/api/mail-window', formData, {
+        axios.post('https://smart-school/api/mail-window', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
