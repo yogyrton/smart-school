@@ -3,7 +3,7 @@
 @section('content')
 <section class="pb-120 pt-120 window-section">
         <div class="container">
-            <h1 class="text-bold mb-32">Административные <br> процедуры</h1>
+            <h1 class="text-bold mb-32 d-lg-block d-none">Административные <br> процедуры</h1>
             <div class="row">
                 <div class="col-lg-8">
                     <h6 class="mb-24">Административные процедуры по заявлениям граждан на основе заявительного принципа «одно окно».</h6>
