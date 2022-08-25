@@ -314,11 +314,6 @@ export default {
         this.handleWindowResize();
         window.addEventListener('resize', this.handleWindowResize);
     },
-    mounted() {
-            this.$nextTick(() => {
-                if (this.user) this.initData();
-            })
-        },
     methods: {
         changeType(i) {
             this.type = i;
@@ -355,10 +350,7 @@ export default {
             this.width = window.innerWidth;
         },
         handFileUpload() {
-            this.file = '';
-                this.$nextTick(() => {
-                    this.$refs.upload.handFileUpload();
-            });
+            this.form.files = this.$refs.file.files[0];
             this.file = 'Документ выбран';
         }
     }

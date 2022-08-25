@@ -5615,13 +5615,6 @@ __webpack_require__.r(__webpack_exports__);
     this.handleWindowResize();
     window.addEventListener('resize', this.handleWindowResize);
   },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.$nextTick(function () {
-      if (_this.user) _this.initData();
-    });
-  },
   methods: {
     changeType: function changeType(i) {
       this.type = i;
@@ -5655,12 +5648,7 @@ __webpack_require__.r(__webpack_exports__);
       this.width = window.innerWidth;
     },
     handFileUpload: function handFileUpload() {
-      var _this2 = this;
-
-      this.file = '';
-      this.$nextTick(function () {
-        _this2.$refs.upload.handFileUpload();
-      });
+      this.form.files = this.$refs.file.files[0];
       this.file = 'Документ выбран';
     }
   }
