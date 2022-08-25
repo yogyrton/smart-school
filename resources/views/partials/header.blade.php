@@ -75,7 +75,7 @@
                                 <a class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a>
                             </li>
                             <li class="header-item">
-                                <a class="h5" href="/dev">Одно окно</a>
+                                <a class="h5" href="{{ route('single-window') }}">Одно окно</a>
                             </li>
                             <li class="header-item">
                                 <a  class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a>
@@ -199,7 +199,7 @@
                                     <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="/dev">Одно окно</a>
+                                    <a class="h5 mobile-link" href="{{ route('single-window') }}">Одно окно</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a>

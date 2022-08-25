@@ -16408,6 +16408,9 @@ input:-webkit-autofill {
   font-size: 12px;
   line-height: 18px;
   color: #BD2773;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .politic-link {
@@ -17928,7 +17931,11 @@ input:-webkit-autofill {
   text-decoration: underline !important;
   text-underline-offset: 3px;
   position: relative;
-  max-width: 284px;
+}
+@media screen and (max-width: 420px) {
+  .window-section .window-doc-link {
+    max-width: 284px;
+  }
 }
 .window-section .organization-box {
   max-width: 540px;
@@ -17988,6 +17995,15 @@ input:-webkit-autofill {
 }
 .window-section form .doc-box span {
   color: #605F5F;
+}
+.window-section form .invalid-feedback {
+  position: absolute;
+}
+.window-section form .spinner {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 #appeals_page {

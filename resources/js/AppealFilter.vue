@@ -1,7 +1,10 @@
 <template>
+  
 
 <div>
-        <form id="appeals_page" class="appeal mb-40" @submit.prevent="checkForm">
+    
+
+        <form id="appeals_page" class="appeal mb-40 position-relative" @submit.prevent="checkForm">
             <div class="filter-tabs d-flex justify-content-center">
                     <div class="w-100 row">
                         <ul>
@@ -21,7 +24,7 @@
             <div class="inner">
                 <div class="row">
                 <div class="col-lg-6">
-                        <div class="form-group mb-20">
+                        <div class="form-group mb-24">
                             <label for="organization">Наименование и (или) адрес организации либо должность лица, которым направляется обращение*</label>
                             <input
                                 id="organization"
@@ -39,10 +42,10 @@
 
                 </div>
                 <div v-if="type===1" class="col-lg-6 d-flex flex-column justify-content-end">
-                        <div class="form-group mb-20">
-                            <label for="name">Фамилия, собственное имя, отчество либо инициалы*</label>
+                        <div class="form-group mb-24">
+                            <label for="name1">Фамилия, собственное имя, отчество либо инициалы*</label>
                             <input
-                                id="name"
+                                id="name1"
                                 class="form-control w-100"
                                 placeholder="Введите Ваше ФИО"
                                 :class="$v.form.name.$error ? 'is-invalid' : ''"
@@ -57,7 +60,7 @@
                 </div>
 
                 <div v-else class="col-lg-6 d-flex flex-column justify-content-end">
-                        <div class="form-group mb-20">
+                        <div class="form-group mb-24">
                             <label for="organization_name">Полное наименование юридического лица*</label>
                             <input
                                 id="organization_name"
@@ -75,7 +78,7 @@
                 </div>
 
                 <div v-if="type===1" class="col-lg-6">
-                        <div class="form-group mb-20">
+                        <div class="form-group mb-24">
                             <label for="place">Адрес места жительства (места пребывания)*</label>
                             <input
                                 id="place"
@@ -93,7 +96,7 @@
                 </div>
 
                 <div v-else class="col-lg-6">
-                        <div class="form-group mb-20">
+                        <div class="form-group mb-24">
                             <label for="place_organization">Место нахождения юридического лица*</label>
                             <input
                                 id="place_organization"
@@ -112,7 +115,7 @@
 
 
                 <div v-if="type===1" class="col-lg-6">
-                        <div class="form-group mb-20">
+                        <div class="form-group mb-24">
                             <label for="email">Адрес электронной почты*</label>
                             <input
                                 id="email"
@@ -132,9 +135,8 @@
                                 Обязательное поле
                             </p>
                             <p
-                                v-if="
-                                    $v.form.email.$dirty && !$v.form.email.required
-                                "
+                                v-if="form.email && $v.form.email.$dirty"
+                                
                                 class="invalid-feedback"
                             >
                                 Email неккоректный
@@ -143,7 +145,7 @@
                 </div>
 
                 <div v-else class="col-lg-6">
-                        <div class="form-group mb-20">
+                        <div class="form-group mb-24">
                             <label for="email_organization">Адрес электронной почты юридического лица*</label>
                             <input
                                 id="email_organization"
@@ -164,7 +166,7 @@
                             </p>
                             <p
                                 v-if="
-                                    $v.form.email_organization.$dirty && !$v.form.email_organization.required
+                                    $v.form.email_organization.$dirty && !$v.form.email_organization.email
                                 "
                                 class="invalid-feedback"
                             >
@@ -174,7 +176,7 @@
                 </div>
 
             </div>
-                <div class="mb-20">
+                <div class="mb-24">
                         <label for="appeal_question">Есть вопросы? Напишите</label>
                         <textarea name="appeal_question" id="appeal_question"  class="w-100 textarea"
                         placeholder="Изложите суть обращения"
@@ -188,10 +190,10 @@
 
                 <div v-if="type===2" class="row">
                     <div  class="col-lg-6 d-flex flex-column justify-content-end">
-                        <div class="form-group mb-20">
-                            <label for="name">Фамилия, собственное имя, отчество лица, уполномоченного подписывать обращения*</label>
+                        <div class="form-group mb-24">
+                            <label for="name2">Фамилия, собственное имя, отчество лица, уполномоченного подписывать обращения*</label>
                             <input
-                                id="name"
+                                id="name2"
                                 class="form-control w-100"
                                 placeholder="Введите Ваше ФИО"
                                 :class="$v.form.name.$error ? 'is-invalid' : ''"
@@ -232,7 +234,15 @@
                     <button type="submit" class="btn-purple button_2">Отправить</button>
                 </div>
             </div>
+
+            <div v-if="loading" class="spinner position-absolute">
+                <div class="spinner-border text-secondary " role="status" >
+                </div>
+            </div>
+            
         </form>
+
+        
     </div>
 
 </template>
@@ -256,6 +266,7 @@ export default {
     },
     data() {
         return {
+            loading: false,
             file: '',
             width: null,
             type: 1,
@@ -316,6 +327,7 @@ export default {
         checkForm() {
             this.$v.form.$touch();
             if (!this.$v.form.$error) {
+                this.loading = true;
                 let formData = new FormData();
 
                 formData.append('file', this.form.files);

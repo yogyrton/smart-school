@@ -2,6 +2,7 @@ require('./bootstrap');
 
 import Vue from 'vue';
 
+
 window.EventHandler = new Vue;
 
 import Validations from 'vuelidate';

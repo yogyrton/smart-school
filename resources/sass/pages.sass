@@ -1166,12 +1166,10 @@
 
     .window-doc-link
         text-decoration: underline !important
-        // text-decoration-color: #130A25
-        // text-decoration-thickness: 0.5px
-        // -webkit-text-decoration-thickness: 0.5px
         text-underline-offset: 3px
         position: relative
-        max-width: 284px
+        @media screen and (max-width: 420px)
+            max-width: 284px
 
     .organization-box
         max-width: 540px
@@ -1220,6 +1218,15 @@
 
             span
                 color: $grey
+
+        .invalid-feedback
+            position: absolute
+
+        .spinner
+            top: 50%
+            left: 50%
+            margin-right: -50%
+            transform: translate(-50%, -50%)
 
 #appeals_page
     border: 1px solid #D3D1D9
@@ -1309,4 +1316,7 @@
         .navigation__item:hover::before,
         .navigation__item:active::before
             display: block
+
+// .spinner
+//     position: absolute
 
