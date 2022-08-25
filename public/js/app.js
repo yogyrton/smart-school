@@ -5510,6 +5510,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -5525,6 +5535,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      loading: false,
       file: '',
       width: null,
       type: 1,
@@ -5620,6 +5631,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$v.form.$touch();
 
       if (!this.$v.form.$error) {
+        this.loading = true;
         var formData = new FormData();
         formData.append('file', this.form.files);
         formData.append('organization', this.form.organization);
@@ -50344,7 +50356,7 @@ var render = function () {
     _c(
       "form",
       {
-        staticClass: "appeal mb-40",
+        staticClass: "appeal mb-40 position-relative",
         attrs: { id: "appeals_page" },
         on: {
           submit: function ($event) {
@@ -50425,7 +50437,7 @@ var render = function () {
         _c("div", { staticClass: "inner" }, [
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-lg-6" }, [
-              _c("div", { staticClass: "form-group mb-20" }, [
+              _c("div", { staticClass: "form-group mb-24" }, [
                 _c("label", { attrs: { for: "organization" } }, [
                   _vm._v(
                     "Наименование и (или) адрес организации либо должность лица, которым направляется обращение*"
@@ -50497,8 +50509,8 @@ var render = function () {
                       "col-lg-6 d-flex flex-column justify-content-end",
                   },
                   [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c("label", { attrs: { for: "name" } }, [
+                    _c("div", { staticClass: "form-group mb-24" }, [
+                      _c("label", { attrs: { for: "name1" } }, [
                         _vm._v(
                           "Фамилия, собственное имя, отчество либо инициалы*"
                         ),
@@ -50516,7 +50528,7 @@ var render = function () {
                         ],
                         staticClass: "form-control w-100",
                         class: _vm.$v.form.name.$error ? "is-invalid" : "",
-                        attrs: { id: "name", placeholder: "Введите Ваше ФИО" },
+                        attrs: { id: "name1", placeholder: "Введите Ваше ФИО" },
                         domProps: { value: _vm.form.name },
                         on: {
                           input: function ($event) {
@@ -50560,7 +50572,7 @@ var render = function () {
                       "col-lg-6 d-flex flex-column justify-content-end",
                   },
                   [
-                    _c("div", { staticClass: "form-group mb-20" }, [
+                    _c("div", { staticClass: "form-group mb-24" }, [
                       _c("label", { attrs: { for: "organization_name" } }, [
                         _vm._v("Полное наименование юридического лица*"),
                       ]),
@@ -50624,7 +50636,7 @@ var render = function () {
             _vm._v(" "),
             _vm.type === 1
               ? _c("div", { staticClass: "col-lg-6" }, [
-                  _c("div", { staticClass: "form-group mb-20" }, [
+                  _c("div", { staticClass: "form-group mb-24" }, [
                     _c("label", { attrs: { for: "place" } }, [
                       _vm._v("Адрес места жительства (места пребывания)*"),
                     ]),
@@ -50678,7 +50690,7 @@ var render = function () {
                   ]),
                 ])
               : _c("div", { staticClass: "col-lg-6" }, [
-                  _c("div", { staticClass: "form-group mb-20" }, [
+                  _c("div", { staticClass: "form-group mb-24" }, [
                     _c("label", { attrs: { for: "place_organization" } }, [
                       _vm._v("Место нахождения юридического лица*"),
                     ]),
@@ -50741,7 +50753,7 @@ var render = function () {
             _vm._v(" "),
             _vm.type === 1
               ? _c("div", { staticClass: "col-lg-6" }, [
-                  _c("div", { staticClass: "form-group mb-20" }, [
+                  _c("div", { staticClass: "form-group mb-24" }, [
                     _c("label", { attrs: { for: "email" } }, [
                       _vm._v("Адрес электронной почты*"),
                     ]),
@@ -50785,7 +50797,7 @@ var render = function () {
                         ])
                       : _vm._e(),
                     _vm._v(" "),
-                    _vm.$v.form.email.$dirty && !_vm.$v.form.email.required
+                    _vm.form.email && _vm.$v.form.email.$dirty
                       ? _c("p", { staticClass: "invalid-feedback" }, [
                           _vm._v(
                             "\r\n                                Email неккоректный\r\n                            "
@@ -50795,7 +50807,7 @@ var render = function () {
                   ]),
                 ])
               : _c("div", { staticClass: "col-lg-6" }, [
-                  _c("div", { staticClass: "form-group mb-20" }, [
+                  _c("div", { staticClass: "form-group mb-24" }, [
                     _c("label", { attrs: { for: "email_organization" } }, [
                       _vm._v("Адрес электронной почты юридического лица*"),
                     ]),
@@ -50846,7 +50858,7 @@ var render = function () {
                       : _vm._e(),
                     _vm._v(" "),
                     _vm.$v.form.email_organization.$dirty &&
-                    !_vm.$v.form.email_organization.required
+                    !_vm.$v.form.email_organization.email
                       ? _c("p", { staticClass: "invalid-feedback" }, [
                           _vm._v(
                             "\r\n                                Email неккоректный\r\n                            "
@@ -50857,7 +50869,7 @@ var render = function () {
                 ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "mb-20" }, [
+          _c("div", { staticClass: "mb-24" }, [
             _c("label", { attrs: { for: "appeal_question" } }, [
               _vm._v("Есть вопросы? Напишите"),
             ]),
@@ -50916,8 +50928,8 @@ var render = function () {
                       "col-lg-6 d-flex flex-column justify-content-end",
                   },
                   [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c("label", { attrs: { for: "name" } }, [
+                    _c("div", { staticClass: "form-group mb-24" }, [
+                      _c("label", { attrs: { for: "name2" } }, [
                         _vm._v(
                           "Фамилия, собственное имя, отчество лица, уполномоченного подписывать обращения*"
                         ),
@@ -50935,7 +50947,7 @@ var render = function () {
                         ],
                         staticClass: "form-control w-100",
                         class: _vm.$v.form.name.$error ? "is-invalid" : "",
-                        attrs: { id: "name", placeholder: "Введите Ваше ФИО" },
+                        attrs: { id: "name2", placeholder: "Введите Ваше ФИО" },
                         domProps: { value: _vm.form.name },
                         on: {
                           input: function ($event) {
@@ -51041,6 +51053,15 @@ var render = function () {
           _vm._v(" "),
           _vm._m(0),
         ]),
+        _vm._v(" "),
+        _vm.loading
+          ? _c("div", { staticClass: "spinner position-absolute" }, [
+              _c("div", {
+                staticClass: "spinner-border text-secondary ",
+                attrs: { role: "status" },
+              }),
+            ])
+          : _vm._e(),
       ]
     ),
   ])
