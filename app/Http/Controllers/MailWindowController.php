@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MailRequest;
 use App\Mail\WindowMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class MailWindowController extends Controller
 {
-    public function send(Request $request)
+    public function send(MailRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
 
         if ($request->hasFile('file')) {
             $path = $request->file('file')->store('mail', 'public');
