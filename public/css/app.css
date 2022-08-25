@@ -17975,6 +17975,20 @@ input:-webkit-autofill {
   bottom: -10px;
   background-image: url("/svg/doc.svg");
 }
+.window-section form .doc-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 576px) {
+  .window-section form .doc-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.window-section form .doc-box span {
+  color: #605F5F;
+}
 
 #appeals_page {
   border: 1px solid #D3D1D9;

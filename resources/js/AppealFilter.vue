@@ -206,21 +206,25 @@
                     </div>
 
                     <div v-if="type===2" class="col-lg-6 d-flex align-items-center">
-                        <div class="dada">
+                        <div class="doc-box">
                             <label v-on:change="handFileUpload()" for="file" class="file_label text"> Прикрепить документ
                                 <input class="d-none" type="file" id="file" ref="file" />
                             </label>
-                            {{file}}
+
+                            <span>{{file}}</span>
                         </div>
 
                     </div>
                 </div>
 
-                <div v-if="type===1" class="dada">
+                <div v-if="type===1" class="doc-box">
                         <label v-on:change="handFileUpload()" for="file" class="file_label text"> Прикрепить документ
                             <input class="d-none" type="file" id="file" ref="file" />
                         </label>
-                        {{file}}
+                        
+                        <span>{{file}}</span>
+
+                        
                 </div>
 
 
@@ -252,9 +256,9 @@ export default {
     },
     data() {
         return {
+            file: '',
             width: null,
             type: 1,
-            file: '',
             windowWidth: null,
             registrationPassed: false,
             form: {
@@ -267,7 +271,6 @@ export default {
                 email_organization: '',
                 appeal_question: '',
                 files: ''
-
             },
         }
     },
@@ -300,7 +303,11 @@ export default {
         this.handleWindowResize();
         window.addEventListener('resize', this.handleWindowResize);
     },
-
+    mounted() {
+            this.$nextTick(() => {
+                if (this.user) this.initData();
+            })
+        },
     methods: {
         changeType(i) {
             this.type = i;
@@ -336,7 +343,10 @@ export default {
             this.width = window.innerWidth;
         },
         handFileUpload() {
-            this.form.files = this.$refs.file.files[0];
+            this.file = '';
+                this.$nextTick(() => {
+                    this.$refs.upload.handFileUpload();
+            });
             this.file = 'Документ выбран';
         }
     }
