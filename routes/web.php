@@ -44,6 +44,7 @@ Route::view('/single-window/timetable', 'single-window-timetable')->name('single
 Route::view('/single-window/organizations', 'single-window-organizations')->name('single-window-organizations');
 Route::view('/single-window/documents', 'single-window-documents')->name('single-window-documents');
 Route::view('/single-window/links', 'single-window-links')->name('single-window-links');
+Route::view('/patriotic-page', 'patriotic-page')->name('patriotic-page');
 
 Route::get('/dev', function (){
     return view('errors.dev');

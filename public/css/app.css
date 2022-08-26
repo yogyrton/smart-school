@@ -18127,6 +18127,16 @@ input:-webkit-autofill {
   display: block;
 }
 
+.gimn-box {
+  max-width: 257px;
+}
+@media screen and (max-width: 576px) {
+  .gimn-box {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .camp-address {
     font-size: 20px;
