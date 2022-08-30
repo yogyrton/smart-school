@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LinksCreateRequest;
 use App\Http\Requests\LinksUpdateRequest;
 use App\Models\Admin\Link;
-use Illuminate\Http\Request;
 
 class LinksController extends Controller
 {

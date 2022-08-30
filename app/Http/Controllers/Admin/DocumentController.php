@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\DocumentCreateRequest;
 use App\Http\Requests\DocumentUpdateRequest;
 use App\Models\Admin\Document;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class DocumentController extends Controller

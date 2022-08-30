@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PriceRequest;
 use App\Models\Admin\Price;
-use Illuminate\Http\Request;
 
 class PriceController extends Controller
 {
