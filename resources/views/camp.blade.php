@@ -11,8 +11,8 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/camp.webp" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/camp-mob.png" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/camp.webp" alt="main-banner" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/camp-mob.png" alt="main-banner-mob" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -223,7 +223,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                    <img src="/img/main/faq/camp.jpg" alt="" class="w-100 border-20">
+                    <img src="/img/main/faq/camp.jpg" alt="faq-img" class="w-100 border-20">
                 </div>
             </div>
         </div>

@@ -14,36 +14,36 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/belarus-4.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-4.jpg" alt="address-img">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/belarus-5.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-5.jpg" alt="address-img">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
                 @if( $routeName === 'jukov-lug')
-                    <img src="/img/main/address/camps/jukov-camp.jpg" alt="history-img">
+                    <img src="/img/main/address/camps/jukov-camp.jpg" alt="address-img">
                 @else
-                    <img src="/img/main/address/belarus-6.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-6.jpg" alt="address-img">
                 @endif
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/belarus-7.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-7.jpg" alt="address-img">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/belarus-8.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-8.jpg" alt="address-img">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/belarus-9.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-9.jpg" alt="address-img">
                 </div>
             </div>
         </div>

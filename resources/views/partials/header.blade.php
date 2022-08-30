@@ -1,6 +1,25 @@
 @section('header')
     @php($routeName = Route::current()->getName())
-    <header class="">
+    @php($advantages = '/#advantages') 
+    @if($routeName === 'home') @php($advantages = '#advantages') @endif
+    @php($replies = '/#replies') 
+    @if($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')  @php($replies = '/camp/#replies') @else @php($replies = '/#replies')  @endif
+    @php($history = '/#history')
+    @if ($routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') @php($history = '/camp#history') @elseif  ($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )@php($history = '#history') @else @php($history = '/#history') @endif
+    @php($priority = '/#priority')
+    @if($routeName === 'home' || $routeName === 'belarus' ||   $routeName === 'senior'  || $routeName === 'junior' ) @php($priority = '#priority') @elseif ($routeName === 'russia' || $routeName === 'online') @php($priority = '#priority-online')  @else @php($priority = '/#priority') @endif
+    @php($news = '/#news')
+    @if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )@php($news = '#news') @else @php($news = '/#news') @endif
+    @php($documents = '/#documents')
+    @if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' ) @php($documents = '#documents') @else @php($documents = '/#documents') @endif
+    @php($teachers = '/#teachers')
+    @if($routeName === 'home')@php($teachers = '#teachers') @else @php($teachers = '/#teachers') @endif
+    @php($orderSection = '/#order-section')
+    @if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')@php($orderSection = '#order-section') @else @php($orderSection = '/#order-section') @endif
+    
+
+
+    <header class="header">
         <nav class="navbar navbar-expand-xl navbar-light">
             <div class="container container-md">
 
@@ -18,13 +37,13 @@
                                 О нас
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @elseif ( $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#history @else /#history @endif">История</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' ||   $routeName === 'senior'  || $routeName === 'junior' )#priority @elseif ($routeName === 'russia' || $routeName === 'online') #priority-online @else /#priority @endif">Преимущества</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )#news @else /#news @endif">Новости</a></li>
-                                <li><a class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia' )#documents @else /#documents @endif">Документы</a></li>
+                                <li><a class="dropdown-item" href="{{$history}}">История</a></li>
+                                <li><a class="dropdown-item" href="{{$advantages}}">Почему мы</a></li>
+                                <li><a class="dropdown-item" href="{{$priority}}">Преимущества</a></li>
+                                <li><a class="dropdown-item" href="{{$teachers}}">Преподаватели</a></li>
+                                <li><a class="dropdown-item" href="{{$replies}}">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="{{$news}}">Новости</a></li>
+                                <li><a class="dropdown-item" href="{{$documents}}">Документы</a></li>
                             </ul>
                         </div>
 
@@ -72,13 +91,13 @@
                         </div>
 
                             <li class="header-item">
-                                <a class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a>
+                                <a class="h5 menu-link" href="{{$replies}}">Отзывы</a>
                             </li>
                             <li class="header-item">
                                 <a class="h5" href="{{ route('single-window') }}">Одно окно</a>
                             </li>
                             <li class="header-item">
-                                <a  class="h5 menu-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a>
+                                <a  class="h5 menu-link" href="{{$orderSection}}">Контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -136,12 +155,12 @@
                                         <div id="collapseSecondModal" class="accordion-collapse collapse" aria-labelledby="collapseSecondModal" data-bs-parent="#accordionModal">
                                             <div class="accordion-body">
                                                 <ul class="accordion-menu">
-                                                    <li><a onClick="$('.modal').modal('hide');"  class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' )#history @elseif ( $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#history @else /#history @endif">История</a></li>
-                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home')#advantages @else /#advantages @endif">Почему мы</a></li>
-                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' ||   $routeName === 'senior'  || $routeName === 'junior' )#priority @elseif ($routeName === 'russia' || $routeName === 'online') #priority-online @else /#priority @endif">Преимущества</a></li>
-                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home')#teachers @else /#teachers @endif">Преподаватели</a></li>
-                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'junior' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'russia' )#news @else /#news @endif">Новости</a></li>
-                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )#documents @else /#documents @endif">Документы</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');"  class="dropdown-item" href="{{$history}}">История</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="{{$advantages}}">Почему мы</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="{{$priority}}">Преимущества</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="{{$teachers}}">Преподаватели</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="{{$news}}">Новости</a></li>
+                                                    <li><a onClick="$('.modal').modal('hide');" class="dropdown-item" href="{{$documents}}">Документы</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -196,13 +215,13 @@
 
 
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a>
+                                    <a class="h5 mobile-link" href="{{$replies}}">Отзывы</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
                                     <a class="h5 mobile-link" href="{{ route('single-window') }}">Одно окно</a>
                                 </li>
                                 <li class="d-block" data-bs-toggle="modal" data-bs-target="#burgerModal">
-                                    <a class="h5 mobile-link" href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a>
+                                    <a class="h5 mobile-link" href="{{$orderSection}}">Контакты</a>
                                 </li>
                             </ul>
                             <div class="d-flex flex-column header-contacts-messengers">

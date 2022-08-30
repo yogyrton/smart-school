@@ -1,4 +1,4 @@
-<section class="pt-120 pb-120 scrollreveal zoom-section">
+<section class="pt-120 pb-120 scrollreveal zoom-section" id="zoom-section">
     <div class="container">
     <h2 class="accentColor mb-60 d-lg-none d-block">Платформа Zoom</h2>
         <div class="row">
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="col-md-6 img-block">
-                <img src="/img/main/address/zoom.jpg" alt="" class="img-fluid border-20">
+                <img src="/img/main/address/zoom.jpg" alt="address-img" class="img-fluid border-20">
             </div>
         </div>
     </div>

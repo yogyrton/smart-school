@@ -16424,17 +16424,23 @@ input:-webkit-autofill {
 }
 
 /* width */
-::-webkit-scrollbar {
+::-webkit-scrollbar,
+::moz-scrollbar,
+::-ms-scrollbar {
   width: 6px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track,
+::moz-scrollbar,
+::-ms-scrollbar {
   background: #FFFFFF;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,
+::moz-scrollbar,
+::-ms-scrollbar {
   background: #8041FF;
   scrollbar-width: thin;
   border-radius: 10px;
@@ -17829,12 +17835,12 @@ input:-webkit-autofill {
   background: #8041FF;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
   #faq-1.modal-dialog .modal-dialog-centered, #faq-1.modal.show .modal-dialog {
-    transform: translate(0, 20%);
+    transform: translate(0, 30%);
   }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
   #faq-1.modal-dialog .modal-dialog-centered, #faq-1.modal.show .modal-dialog {
     transform: translate(0, 70%);
   }

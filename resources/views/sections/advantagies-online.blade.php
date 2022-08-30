@@ -9,7 +9,7 @@
                     <div class="swiper-slide">
                         <div class="swiper-wrapper--card">
                             <div class="priority-box d-flex mb-40">
-                                <img src="/svg/security.webp" alt="bag-img" width="60">
+                                <img src="/svg/security.webp" alt="security-img" width="60">
                                 <div class="d-flex flex-column">
                                     <h5 class="text-bold">БЕЗОПАСНОСТЬ</h5>
                                     <p class="text">Эпидемиологическая и психологическая безопасность.</p>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="swiper-wrapper--card">
                             <div class="priority-box d-flex">
-                                <img src="/svg/econom.webp" alt="prize-img" width="60">
+                                <img src="/svg/econom.webp" alt="econom-img" width="60">
                                 <div class="d-flex flex-column">
                                     <h5 class="text-bold">МОБИЛЬНОСТЬ И ЭКОНОМИЯ ВРЕМЕНИ</h5>
                                     <p class="text">Ученики получают возможность обучаться <br> вне зависимости от страны проживания. <br>  Освобождается время для дополнительных занятий и хобби. Родительские собрания также проходят онлайн.</p>
@@ -64,7 +64,7 @@
 
                         <div class="swiper-wrapper--card">
                             <div class="priority-box d-flex mb-40">
-                                <img src="/svg/change.webp" alt="bag-img" width="60">
+                                <img src="/svg/change.webp" alt="change-img" width="60">
                                 <div class="d-flex flex-column">
                                     <h5 class="text-bold">ИНДИВИДУАЛЬНАЯ ПРОГРАММА ОБУЧЕНИЯ</h5>
                                     <p class="text">Поможет превратить процесс получения знаний в профильное образование. Так можно легко подготовить школьника <br> к будущей профессии, при этом не упуская из внимания ни одну дисциплину.</p>
@@ -76,7 +76,7 @@
                     <div class="swiper-slide">
                         <div class="swiper-wrapper--card">
                             <div class="priority-box d-flex">
-                                <img src="/svg/laptop.webp" alt="prize-img" width="60">
+                                <img src="/svg/laptop.webp" alt="laptop-img" width="60">
                                 <div class="d-flex flex-column">
                                     <h5 class="text-bold">КОНТРОЛЬ</h5>
                                     <p class="text">Выбрав удаленное обучение, проверка усвоения материала учащимися проводится дважды. <br>1) При помощи выполнения разнообразных тестовых заданий, акцентируя внимание  на трудных моментах. <br> 2) С помощью родителей, получая информацию от педагогов и из электронного журнала.</p>
