@@ -51,7 +51,7 @@
             <div class="modal-content">
                 <div class="modal--image"></div>
                 <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><img
-                        src="/svg/close.svg" alt=""></button>
+                        src="/svg/close.svg" alt="close-img"></button>
                 <div class="info-content">
                     <div class="h6 mb-20 text-bold modal--title"></div>
                     <div class="modal--description"></div>

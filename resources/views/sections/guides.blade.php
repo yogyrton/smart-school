@@ -16,7 +16,7 @@
                             <div class="swiper-slide">
                                 <div class="guide-box">
                                     <div class="img-box">
-                                        <img src="{{ '/storage/' . $counselor->thumbnail }}" alt="guide-1">
+                                        <img src="{{ '/storage/' . $counselor->thumbnail }}" alt="guide-img">
                                     </div>
                                     <div class="d-flex flex-column box-inner justify-content-center">
                                         <h3 class="mb-24">{{ $counselor->name }}</h3>

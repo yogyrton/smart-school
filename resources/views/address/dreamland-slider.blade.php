@@ -14,21 +14,21 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/belarus-1.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-1.jpg" alt="address-img">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
                 @if( $routeName === 'dreamland')
-                    <img src="/img/main/address/camps/dreamland-camp.jpg" alt="history-img">
+                    <img src="/img/main/address/camps/dreamland-camp.jpg" alt="address-img">
                 @else
-                    <img src="/img/main/address/belarus-2.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-2.jpg" alt="address-img">
                 @endif
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/belarus-3.jpg" alt="history-img">
+                    <img src="/img/main/address/belarus-3.jpg" alt="address-img">
                 </div>
             </div>
         </div>

@@ -11,8 +11,8 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/new4.webp" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/school-belarus-senior-mob.webp" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/new4.webp" alt="main-banner" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/school-belarus-senior-mob.webp" alt="main-banner-mob" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -116,7 +116,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <a href="https://goo.gl/maps/F79utxo4z8EmgPKG8" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
-                        <img src="/svg/location.svg" alt="" class="me-3">
+                        <img src="/svg/location.svg" alt="location-img" class="me-3">
                         <span class="text-start text-md-center h4">г.Минск, ул. Орловская, 80 (Dreamland)</span>
                     </a>
 
@@ -144,7 +144,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="/img/main/price/senior.jpg" alt="" class="border-20 img-fluid mb-20">
+                    <img src="/img/main/price/senior.jpg" alt="price-img" class="border-20 img-fluid mb-20">
 
                     {{-- MOBILE --}}
                     <div class="swiper-box d-block d-lg-none">
@@ -153,22 +153,22 @@
                                 <div class="swiper-slide">
                                     <div class="price--card">
                                         <div class="d-flex align-items-start mb-3">
-                                            <img src="/svg/time.svg" alt="" class="me-2">
+                                            <img src="/svg/time.svg" alt="timetable-img" class="me-2">
                                             <span>Пребывание в школе: <br>8:00-15:30/19:00 (начало уроков в 9:00);</span>
                                         </div>
                                         <div class="d-flex align-items-start mb-3">
-                                            <img src="/svg/food.svg" alt="" class="me-2">
+                                            <img src="/svg/food.svg" alt="food-img" class="me-2">
                                             <span>Питание: завтрак, обед, после 15:30 полдник;</span>
                                         </div>
                                         <div class="d-flex align-items-start">
-                                            <img src="/svg/people.svg" alt="" class="me-2">
+                                            <img src="/svg/people.svg" alt="group-img" class="me-2">
                                             <span>Наполняемость классов: до 15 человек.</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="price--card d-flex align-items-center mb-20">
-                                        <img src="/svg/twemoji_books.svg" alt="" class="me-2">
+                                        <img src="/svg/twemoji_books.svg" alt="program-img" class="me-2">
                                         <p class="mb-0">
                                             Учебные занятия согласно образовательным программам общего среднего образования Республики Беларусь.
                                         </p>
@@ -201,15 +201,15 @@
                         <div class="col-xl-8 mb-4 mb-xl-0 d-none d-lg-block">
                             <div class="price--card">
                                 <div class="d-flex align-items-start mb-3">
-                                    <img src="/svg/time.svg" alt="" class="me-2">
+                                    <img src="/svg/time.svg" alt="timetable-img" class="me-2">
                                     <span>Пребывание в школе: <br>8:00-15:30/19:00 (начало уроков в 9:00);</span>
                                 </div>
                                 <div class="d-flex align-items-start mb-3">
-                                    <img src="/svg/food.svg" alt="" class="me-2">
+                                    <img src="/svg/food.svg" alt="food-img" class="me-2">
                                     <span>Питание: завтрак, обед, после 15:30 полдник;</span>
                                 </div>
                                 <div class="d-flex align-items-start">
-                                    <img src="/svg/people.svg" alt="" class="me-2">
+                                    <img src="/svg/people.svg" alt="group-img" class="me-2">
                                     <span>Наполняемость классов: до 15 человек.</span>
                                 </div>
                             </div>
@@ -342,7 +342,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                    <img src="/img/main/faq/senior.jpg" alt="" class="w-100 border-20">
+                    <img src="/img/main/faq/senior.jpg" alt="faq-img" class="w-100 border-20">
                 </div>
             </div>
         </div>
@@ -367,7 +367,7 @@
     <div class="modal fade" id="faq-1" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><img src="/svg/close.svg" alt=""></button>
+                <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><img src="/svg/close.svg" alt="close-img"></button>
                 <div class="h6 mb-20 text-bold title-faq">Является ли школа официальной? Есть ли у школы лицензия? Выдает ли школа аттестаты государственного образца?</div>
                 <p class="mb-20">
                     Школа является официальным учреждением образования наравне с государственными школами.
