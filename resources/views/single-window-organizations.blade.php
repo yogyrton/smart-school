@@ -3,7 +3,7 @@
 @section('content')
 <section class="pb-120 pt-120 window-section">
         <div class="container">
-            <h1 class="text-bold mb-32">Вышестоящие организации</h1>
+            <h1 class="text-bold mb-32 d-lg-block d-none">Вышестоящие организации</h1>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="organization-box mb-32 d-flex flex-column">

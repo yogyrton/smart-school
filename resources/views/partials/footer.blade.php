@@ -60,7 +60,7 @@
                         <div class="footer-box">
                             <ul class="footer-list mb-40">
                                 <li class="text-bold mb-12"><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' )/#replies  @elseif ($routeName === 'camp'|| $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia') /camp#replies @else /#replies @endif">Отзывы</a></li>
-                                <li class="text-bold mb-12"><a href="/dev">Одно окно</a></li>
+                                <li class="text-bold mb-12"><a href="{{ route('single-window') }}">Одно окно</a></li>
                                 <li class="text-bold"><a href="@if($routeName === 'home' || $routeName === 'belarus' || $routeName === 'russia' ||  $routeName === 'senior' || $routeName === 'online' || $routeName === 'junior' || $routeName === 'camp' || $routeName === 'dreamland' || $routeName === 'jukov-lug' || $routeName === 'georgia')#order-section @else /#order-section @endif">Контакты</a></li>
                             </ul>
                             <div class="d-lg-flex d-none footer-socials">

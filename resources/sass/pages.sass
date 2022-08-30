@@ -1131,7 +1131,7 @@
             margin-bottom: 20px
 
     .row
-        @media screen and (max-width: 768px)
+        @media screen and (max-width: 900px)
             flex-direction: column-reverse
 
     .contacts
@@ -1166,11 +1166,10 @@
 
     .window-doc-link
         text-decoration: underline !important
-        // text-decoration-color: #130A25
-        // text-decoration-thickness: 0.5px
-        // -webkit-text-decoration-thickness: 0.5px
         text-underline-offset: 3px
         position: relative
+        @media screen and (max-width: 420px)
+            max-width: 284px
 
     .organization-box
         max-width: 540px
@@ -1198,6 +1197,8 @@
             border-bottom: 1px solid
             position: relative
             margin-left: 30px
+            @media screen and (max-width: 576px)
+                margin-left: 40px
             &::before
                 content: ""
                 position: absolute
@@ -1206,6 +1207,26 @@
                 left: -40px
                 bottom: -10px
                 background-image: url('/svg/doc.svg')
+        
+        .doc-box
+            display: flex
+            align-items: center
+            gap: 20px
+            @media screen and (max-width: 576px)
+                flex-direction: column
+                align-items: flex-start
+
+            span
+                color: $grey
+
+        .invalid-feedback
+            position: absolute
+
+        .spinner
+            top: 50%
+            left: 50%
+            margin-right: -50%
+            transform: translate(-50%, -50%)
 
 #appeals_page
     border: 1px solid #D3D1D9
@@ -1253,17 +1274,19 @@
 .sidebar
     background: #F4F2F7
     border-radius: 16px
-    @media screen and (max-width: 768px)
-        margin-bottom: 40px
+    @media screen and (max-width: 900px)
+        margin-bottom: 32px
     .sidebar-header
         border-radius: 16px 16px 0 0px
         padding: 12px 24px
         background-color: $accentColor
         color: $white
     .sidebar-content
-        padding: 28px 28px 200px 28px
+        padding: 28px 28px 150px 28px
         @media screen and (max-width: 768px)
             padding: 24px 30px 24px 24px
+        @media screen and (max-width: 576px)
+            padding: 24px 15px 
         ul,ol
             padding-left: 0
         ul, ol
@@ -1289,9 +1312,13 @@
                 transition: all .3s ease-in-out
                 &:hover
                     font-weight: 600
-                    margin-top: -4px
                     transition: .2s 
         .navigation__item:hover::before,
         .navigation__item:active::before
             display: block
 
+.gimn-box
+    max-width: 257px
+    @media screen and (max-width: 576px)
+        max-width: 100%
+        text-align: center
