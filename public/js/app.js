@@ -5635,7 +5635,7 @@ __webpack_require__.r(__webpack_exports__);
         formData.append('email', this.form.email);
         formData.append('email_organization', this.form.email_organization);
         formData.append('appeal_question', this.form.appeal_question);
-        axios.post('https://smart-school/api/mail-window', formData, {
+        axios.post('https://smart.ilavista.tech/api/mail-window', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
@@ -79072,7 +79072,7 @@ window.addEventListener("DOMContentLoaded", function () {
   for (var _i = 0; _i < mores.length; _i++) {
     _loop(_i);
   }
-}); //для кнопки Подробнее, которая раскрывает остальной текст в history
+}); //для кнопки Подробнее, которая раскрывает остальной текст в history, одном окне
 
 window.addEventListener("DOMContentLoaded", function () {
   var button_more = document.getElementById("btnMore");
@@ -79081,14 +79081,14 @@ window.addEventListener("DOMContentLoaded", function () {
     var hidden_box = document.getElementById("hidden-text-box");
 
     if (hidden_box.classList.contains('active')) {
+      button_more.innerHTML = "Подробнее";
       hidden_box.classList.remove('active');
     } else {
       hidden_box.classList.add('active');
       button_more.innerHTML = "Свернуть";
     }
   };
-}); //для кнопки Подробнее, которая раскрывает остальной текст в advantages
-
+});
 window.addEventListener("DOMContentLoaded", function () {
   var btn = document.getElementById("btnMore2");
 
@@ -79124,21 +79124,11 @@ $(document).ready(function () {
       arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>'
     }
   });
-}); //для отмены выделения при перелистывании слайдера
-
-swiper.onmousedown = swiper.onselectstart = function () {
-  return false;
-};
-
-swiper.onselectstart = function () {
-  return false;
-};
-
-swiper.onselectstart.preventDefault();
-
-document.onselectstart = function () {
-  event.preventDefault();
-};
+});
+$(document).ready(function () {
+  var page = window.location.pathname.substring('/single-window/'.length);
+  $("#nav_".concat(page ? page : 'main')).addClass('active');
+});
 })();
 
 /******/ })()
