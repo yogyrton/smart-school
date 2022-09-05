@@ -188,6 +188,14 @@ input, textarea
     @media screen and (max-width: 576px)
         display: block
 
+#hidden-text-box
+    display: block
+    @media screen and (max-width: 576px)
+        display: none
+
+#hidden-text-box.active
+    display: block
+
 .h1, .h2, .h3, .h4, .h5, .h6, p
     margin-bottom: 0
     margin-top: 0
@@ -1461,4 +1469,5 @@ input:-webkit-autofill
     background: $accentColor
     scrollbar-width: thin
     border-radius: 10px
+
 

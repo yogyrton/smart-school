@@ -560,13 +560,14 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-//для кнопки Подробнее, которая раскрывает остальной текст в history
+//для кнопки Подробнее, которая раскрывает остальной текст в history, одном окне
 window.addEventListener("DOMContentLoaded", () => {
     let button_more = document.getElementById("btnMore");
     button_more.onclick = function readMore() {
         let hidden_box = document.getElementById("hidden-text-box");
 
         if (hidden_box.classList.contains('active')) {
+            button_more.innerHTML = "Подробнее";
             hidden_box.classList.remove('active');
 
         } else {
@@ -576,7 +577,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-//для кнопки Подробнее, которая раскрывает остальной текст в advantages
 
 window.addEventListener("DOMContentLoaded", () => {
     var btn = document.getElementById("btnMore2");
@@ -597,7 +597,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 })
 
-
 //ZOOM ALBUM IMAGES
 $(document).ready(function () {
     $('.popup-gallery').magnificPopup({
@@ -617,20 +616,10 @@ $(document).ready(function () {
     });
 });
 
-//для отмены выделения при перелистывании слайдера
 
-swiper.onmousedown = swiper.onselectstart = function () {
-    return false;
-};
-
-swiper.onselectstart = () => false;
-
-swiper.onselectstart.preventDefault()
-
-document.onselectstart = () => {
-    event.preventDefault();
-}
-
-
+$(document).ready(function(){
+    const page = window.location.pathname.substring('/single-window/'.length);
+    $(`#nav_${page ? page : 'main'}`).addClass('active');
+});
 
 

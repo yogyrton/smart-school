@@ -210,8 +210,6 @@
 
 
 #history
-    //overflow: hidden
-    //padding-bottom: 160px
     @media screen and (max-width: 1440px)
        padding-top: 120px
     @media screen and (max-width: 992px)
@@ -235,13 +233,6 @@
         @media screen and (max-width: 1510px)
             display: none
 
-    #hidden-text-box
-        display: block
-        @media screen and (max-width: 576px)
-            display: none
-
-    #hidden-text-box.active
-        display: block
 
     .swiper-slide
         height: auto
@@ -1228,6 +1219,7 @@
             margin-right: -50%
             transform: translate(-50%, -50%)
 
+
 #appeals_page
     border: 1px solid #D3D1D9
     border-radius: 12px
@@ -1310,15 +1302,29 @@
                 height: 24px
             .navigation__link
                 transition: all .3s ease-in-out
+                &::before
+                    display: none
+                    content:""
+                    position: absolute
+                    background-image: url('/svg/east.svg')
+                    left: 0
+                    background-repeat: no-repeat
+                    width: 24px
+                    height: 24px
                 &:hover
                     font-weight: 600
                     transition: .2s 
         .navigation__item:hover::before,
-        .navigation__item:active::before
+        .navigation__link.active::before
             display: block
+            
+.active
+    color: $accentColor
+    font-weight: 600
 
 .gimn-box
     max-width: 257px
     @media screen and (max-width: 576px)
         max-width: 100%
         text-align: center
+
