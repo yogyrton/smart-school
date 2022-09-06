@@ -1,5 +1,7 @@
 @extends('layouts.app')
+@section('title', 'Гражданско-патриотическое воспитание в Средней школе Смарт Скул')
 @section('content')
+
 
 <section class="verse pb-120 pt-120 scrollreveal">
         <div class="container">

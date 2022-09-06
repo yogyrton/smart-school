@@ -359,7 +359,6 @@ const swiper_14 = new Swiper('#price .swiper-1', {
     }
 });
 
-
 const swiper_15 = new Swiper('#price.price-online .swiper-2', {
     loop: false,
     slidesPerView: 1,
