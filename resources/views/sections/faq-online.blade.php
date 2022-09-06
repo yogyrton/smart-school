@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                <img src="/img/main/faq/online.jpg" alt="" class="w-100 border-20">
+                <img src="/img/main/faq/online.jpg" alt="faq-img" class="w-100 border-20">
             </div>
         </div>
     </div>

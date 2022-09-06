@@ -12,22 +12,22 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/georgia-1.jpg" alt="history-img">
+                    <img src="/img/main/address/georgia-1.jpg" alt="address-img">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/georgia-2.jpg" alt="history-img">
+                    <img src="/img/main/address/georgia-2.jpg" alt="address-img">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/georgia-3.jpg" alt="history-img">
+                    <img src="/img/main/address/georgia-3.jpg" alt="address-img">
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="d-flex h-100 justify-content-center">
-                    <img src="/img/main/address/georgia-4.jpg" alt="history-img">
+                    <img src="/img/main/address/georgia-4.jpg" alt="address-img">
                 </div>
             </div>
         </div>

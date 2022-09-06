@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="pb-120 pt-120 window-section">
+<section class="pb-120 pt-120 window-section" id="window-links">
         <div class="container">
             <h1 class="text-bold mb-32 d-lg-block d-none">Полезные ссылки</h1>
             <div class="row">

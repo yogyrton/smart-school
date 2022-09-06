@@ -8,8 +8,8 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/test3.png" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/camp-georgia-mob2.webp" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/test3.png" alt="main-banner" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/camp-georgia-mob2.webp" alt="main-banner-mob" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -35,7 +35,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <a href="https://goo.gl/maps/Nn2LfRR61jfZPt7CA" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
-                        <img src="/svg/location.svg" alt="" class="me-2">
+                        <img src="/svg/location.svg" alt="location-img" class="me-2">
                         <span class="text-start text-md-left h4 camp-address">14 км от г. Батуми, курортный поселок Гонио</span>
                     </a>
 
@@ -98,7 +98,7 @@
             </div>
 
             <div class="d-block col-lg-6">
-                <div class="w-100 schedule-photo">
+                <div class="w-100 h-100 schedule-photo">
                     <img src="/img/main/schedule/camp-georgia.jpg" alt="schedule-img">
                 </div>
             </div>
@@ -125,15 +125,15 @@
                         <div class="col-xl-8 mb-4 mb-xl-0 ">
                             <div class="price--card price--card-camp">
                                 <div class="d-flex align-items-start mb-3">
-                                    <img src="/svg/time.svg" alt="" class="me-2">
+                                    <img src="/svg/time.svg" alt="timetable-img" class="me-2">
                                     <span>Пребывание в лагере: круглосуточное;</span>
                                 </div>
                                 <div class="d-flex align-items-start mb-3">
-                                    <img src="/svg/food.svg" alt="" class="me-2">
+                                    <img src="/svg/food.svg" alt="food-img" class="me-2">
                                     <span>Питание: шестиразовое;</span>
                                 </div>
                                 <div class="d-flex align-items-start">
-                                    <img src="/svg/people.svg" alt="" class="me-2">
+                                    <img src="/svg/people.svg" alt="group-img" class="me-2">
                                     <span>Лагерь: до 50 человек.</span>
                                 </div>
                             </div>

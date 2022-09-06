@@ -10,8 +10,8 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/school-russia.webp" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/school-russia-mob.webp" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/school-russia.webp" alt="main-banner" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/school-russia-mob.webp" alt="main-banner-mob" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -112,7 +112,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="/img/main/price/online.jpg" alt="" class="border-20 img-fluid mb-20">
+                    <img src="/img/main/price/online.jpg" alt="price-img" class="border-20 img-fluid mb-20">
 
                     {{-- MOBILE --}}
                     <div class="swiper-box d-block d-lg-none">
@@ -121,21 +121,21 @@
                                 <div class="swiper-slide">
                                     <div class="price--card">
                                         <div class="d-flex align-items-start mb-3">
-                                            <img src="/svg/time.svg" alt="" class="me-2">
+                                            <img src="/svg/time.svg" alt="time-img" class="me-2">
                                             <span>Пребывание в школе: <br>
                                             Онлайн с 9:00 <br>
                                             (1-4 классы есть возможность выбора смены обучения<br>
                                             (утренняя с 09:00, дневная с 12:00)</span>
                                         </div>
                                         <div class="d-flex align-items-start">
-                                            <img src="/svg/people.svg" alt="" class="me-2">
+                                            <img src="/svg/people.svg" alt="group-img" class="me-2">
                                             <span>Наполняемость классов: до 12 человек.</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="price--card d-flex align-items-center">
-                                        <img src="/svg/twemoji_books.svg" alt="" class="me-3">
+                                        <img src="/svg/twemoji_books.svg" alt="program-img" class="me-3">
                                         <p class="mb-0">
                                             Учебные занятия согласно образовательным программам общего среднего
                                             образования Российской Федерации.
@@ -159,14 +159,14 @@
 
                     <div class="price--card d-none d-lg-block">
                         <div class="d-flex align-items-start mb-3">
-                            <img src="/svg/time.svg" alt="" class="me-2">
+                            <img src="/svg/time.svg" alt="timetable-img" class="me-2">
                             <span>Пребывание в школе: <br>
                                 Онлайн с 9:00 <br>
                                 (1-4 классы есть возможность выбора смены обучения<br>
                                 (утренняя с 09:00, дневная с 12:00)</span>
                         </div>
                         <div class="d-flex align-items-start">
-                            <img src="/svg/people.svg" alt="" class="me-2">
+                            <img src="/svg/people.svg" alt="group-img" class="me-2">
                             <span>Наполняемость классов: до 12 человек.</span>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
                     </div>
 
                     <div class="price--card align-items-center mb-20 d-none d-lg-flex">
-                        <img src="/svg/twemoji_books.svg" alt="" class="me-3">
+                        <img src="/svg/twemoji_books.svg" alt="program-img" class="me-3">
                         <p class="mb-0">
                             Учебные занятия согласно образовательным программам общего среднего образования Российской Федерации.
                         </p>
@@ -301,7 +301,7 @@
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                <img src="/img/main/faq/online.jpg" alt="" class="w-100 border-20">
+                <img src="/img/main/faq/online.jpg" alt="faq-img" class="w-100 border-20">
             </div>
         </div>
     </div>

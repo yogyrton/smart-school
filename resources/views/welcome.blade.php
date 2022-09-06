@@ -7,8 +7,8 @@
 
             <div class="head--container">
                 <div>
-                    <img src="/img/main/banners/home.webp" alt="" class="banner-image d-none d-md-block">
-                    <img src="/img/main/banners/home-mob.webp" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/home.webp" alt="main-banner" class="banner-image d-none d-md-block">
+                    <img src="/img/main/banners/home-mob.webp" alt="main-banner-mob" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -247,7 +247,6 @@
     <div class="mb-120">
         @include('sections.advantagies')
     </div>
-
 
     <section id="teachers" class="scrollreveal pb-120 teachers">
         <div class="container">

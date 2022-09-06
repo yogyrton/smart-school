@@ -3,16 +3,14 @@
 @section('description', 'Фабрика звезд - детский отдых в Беларуси в Минске. Детские образовательные лагеря круглосуточного и дневного пребывания.')
 @section('content')
 
-
-
 <section id="head"
             class="head mb-120 position-relative @if(!empty($mainNews)  && count($mainNews) > 0) notification-size @endif">
         <div class="container">
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/camp-dreamland.png" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/camp-dreamland-mob.png" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/camp-dreamland.png" alt="main-banner" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/camp-dreamland-mob.png" alt="main-banner-mob" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -134,15 +132,15 @@
                         <div class="col-xl-8 mb-4 mb-xl-0 d-block">
                             <div class="price--card price--card-camp">
                                 <div class="d-flex align-items-start mb-3">
-                                    <img src="/svg/time.svg" alt="" class="me-2">
+                                    <img src="/svg/time.svg" alt="timetable-img" class="me-2">
                                     <span>Пребывание в лагере: круглосуточное / <br> дневное;</span>
                                 </div>
                                 <div class="d-flex align-items-start mb-3">
-                                    <img src="/svg/food.svg" alt="" class="me-2">
+                                    <img src="/svg/food.svg" alt="food-img" class="me-2">
                                     <span>Питание: шестиразовое;</span>
                                 </div>
                                 <div class="d-flex align-items-start">
-                                    <img src="/svg/people.svg" alt="" class="me-2">
+                                    <img src="/svg/people.svg" alt="group-img" class="me-2">
                                     <span>Лагерь: до 40 человек.</span>
                                 </div>
                             </div>

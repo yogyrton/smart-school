@@ -6,10 +6,6 @@
     align-items: flex-end
     z-index: 10
     position: relative
-    // @media screen and (max-width: 1440px)
-    //     min-height: 600px
-    //     margin-top: 0
-    //     padding-bottom: 0
     @media screen and (max-width: 1200px)
         height: auto
         min-height: auto
@@ -27,9 +23,6 @@
             right: 50px
             background-image: url('/img/main/head-recangle.svg')
             background-repeat: no-repeat
-        // @media screen and (min-width: 1500px)
-        //     transform: translate(-35%, -55%)
-        //     right: 0
 
     .head--container
         display: grid
@@ -189,10 +182,6 @@
 
 
 #head .container-slider-pagination
-    // .advt-box
-    //     width: 338px
-    //     cursor: pointer
-    //     word-wrap: break-word
 
     .swiper-pagination
         bottom: -40px
@@ -210,8 +199,6 @@
 
 
 #history
-    //overflow: hidden
-    //padding-bottom: 160px
     @media screen and (max-width: 1440px)
        padding-top: 120px
     @media screen and (max-width: 992px)
@@ -235,13 +222,6 @@
         @media screen and (max-width: 1510px)
             display: none
 
-    #hidden-text-box
-        display: block
-        @media screen and (max-width: 576px)
-            display: none
-
-    #hidden-text-box.active
-        display: block
 
     .swiper-slide
         height: auto
@@ -279,9 +259,7 @@
                 width: 100% !important
 
         .priority-box
-            //gap: 20px
             align-items: flex-start
-            //height: 105px
             @media screen and (max-width: 992px)
                 height: 100%
                 margin-bottom: 20px
@@ -310,7 +288,6 @@
 .priority-online.priority
     .priority-inner
         .swiper-wrapper
-            //display: flex
             justify-content: space-between
             grid-template-rows: repeat(2, auto)
             grid-template-columns: 44% 42%
@@ -1053,8 +1030,6 @@
         right: 24px
         position: absolute
         border: none
-        //top: 0px
-        //transform: translate(30%, 400%)
         top: 50%
         transform: translateY(-50%)
         margin: 0
@@ -1063,8 +1038,6 @@
         left: 24px
         position: absolute
         border: none
-        //top: 0px
-        //transform: translate(30%, 400%)
         top: 50%
         transform: translateY(-50%)
         margin: 0
@@ -1095,9 +1068,9 @@
 
 
 #faq-1.modal-dialog .modal-dialog-centered, #faq-1.modal.show .modal-dialog 
-    @media screen and (max-width: 420px)
-        transform: translate(0, 20%)
-    @media screen and (max-width: 300px)
+    @media screen and (max-width: 500px)
+        transform: translate(0, 30%)
+    @media screen and (max-width: 320px)
         transform: translate(0, 70%)
     
 #faq-1 .modal-close 
@@ -1228,6 +1201,7 @@
             margin-right: -50%
             transform: translate(-50%, -50%)
 
+
 #appeals_page
     border: 1px solid #D3D1D9
     border-radius: 12px
@@ -1310,15 +1284,29 @@
                 height: 24px
             .navigation__link
                 transition: all .3s ease-in-out
+                &::before
+                    display: none
+                    content:""
+                    position: absolute
+                    background-image: url('/svg/east.svg')
+                    left: 0
+                    background-repeat: no-repeat
+                    width: 24px
+                    height: 24px
                 &:hover
                     font-weight: 600
                     transition: .2s 
         .navigation__item:hover::before,
-        .navigation__item:active::before
+        .navigation__link.active::before
             display: block
+            
+.active
+    color: $accentColor
+    font-weight: 600
 
 .gimn-box
     max-width: 257px
     @media screen and (max-width: 576px)
         max-width: 100%
         text-align: center
+

@@ -10,8 +10,8 @@
 
             <div class="head--container centered-mobile">
                 <div>
-                    <img src="/img/main/banners/new3.webp" alt="" class="d-none d-md-block banner-image">
-                    <img src="/img/main/banners/school-belarus-mob.webp" alt="" class="banner-image d-block d-md-none">
+                    <img src="/img/main/banners/new3.webp" alt="main-banner" class="d-none d-md-block banner-image">
+                    <img src="/img/main/banners/school-belarus-mob.webp" alt="main-banner-mob" class="banner-image d-block d-md-none">
                 </div>
 
                 <div>
@@ -116,7 +116,7 @@
                     <div class="d-flex flex-column justify-content-between h-100">
                         <div class="text-center">
                             <a href="https://goo.gl/maps/1DqaKy5WPwUwZm2UA" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
-                                <img src="/svg/location.svg" alt="" class="me-2">
+                                <img src="/svg/location.svg" alt="location-img" class="me-2">
                                 <span class="text-start text-md-center h6">г.Минск, ул. Орловская, 80 (Dreamland)</span>
                             </a>
 
@@ -134,7 +134,7 @@
                     <div class="d-flex flex-column justify-content-between h-100">
                         <div class="text-center">
                             <a href="https://goo.gl/maps/efPppZVbbreqtA369" target="_blank" rel="noopener" class="d-inline-flex align-items-start align-items-sm-center font-weight-bold mb-24">
-                                <img src="/svg/location.svg" alt="" class="me-2">
+                                <img src="/svg/location.svg" alt="location-img" class="me-2">
                                 <span class="text-start text-md-center h6">д. Жуков Луг, ул. Дорожная, 14А, 5 км от ст.м.Уручье </span>
                             </a>
 

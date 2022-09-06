@@ -22,7 +22,7 @@
                        </a>
 {{--                    <div class="swiper-slide">--}}
 {{--                        <div class="image-container">--}}
-{{--                            <img src="/storage/{{$image->thumbnail}}" alt="history-img">--}}
+{{--                            <img src="/storage/{{$image->thumbnail}}" alt="gallery-img">--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
                    @endforeach
