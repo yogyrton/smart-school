@@ -15,10 +15,9 @@ class MailWindowController extends Controller
 
         if ($request->hasFile('file')) {
             $path = $request->file('file')->store('mail', 'public');
-            Mail::to('parusov.93@gmail.com')->send(new WindowMail($data, $path));
+            Mail::to('smart2020ekaterina@gmail.com')->send(new WindowMail($data, $path));
         } else {
-            Mail::to('parusov.93@gmail.com')->send(new WindowMail($data));
+            Mail::to('smart2020ekaterina@gmail.com')->send(new WindowMail($data));
         }
-
     }
 }

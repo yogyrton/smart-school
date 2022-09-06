@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TeacherCreateRequest;
 use App\Http\Requests\TeacherUpdateRequest;
-use App\Models\Admin\MainNews;
 use App\Models\Admin\Teacher;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class TeacherController extends Controller

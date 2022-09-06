@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MainNewsRequest;
 use App\Models\Admin\MainNews;
-use Illuminate\Http\Request;
 
 class MainNewsController extends Controller
 {

@@ -12,7 +12,6 @@ use App\Models\Admin\News;
 use App\Models\Admin\Photo;
 use App\Models\Admin\Price;
 use App\Models\Admin\Teacher;
-use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {

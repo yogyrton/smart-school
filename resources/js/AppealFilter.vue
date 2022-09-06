@@ -1,8 +1,8 @@
 <template>
-  
+
 
 <div>
-    
+
 
         <form id="appeals_page" class="appeal mb-40 position-relative" @submit.prevent="checkForm">
             <div class="filter-tabs d-flex justify-content-center">
@@ -136,7 +136,7 @@
                             </p>
                             <p
                                 v-if="form.email && $v.form.email.$dirty"
-                                
+
                                 class="invalid-feedback"
                             >
                                 Email неккоректный
@@ -223,10 +223,10 @@
                         <label v-on:change="handFileUpload()" for="file" class="file_label text"> Прикрепить документ
                             <input class="d-none" type="file" id="file" ref="file" />
                         </label>
-                        
+
                         <span>{{file}}</span>
 
-                        
+
                 </div>
 
 
@@ -239,10 +239,10 @@
                 <div class="spinner-border text-secondary " role="status" >
                 </div>
             </div>
-            
+
         </form>
 
-        
+
     </div>
 
 </template>
@@ -335,7 +335,7 @@ export default {
                 formData.append('email_organization', this.form.email_organization);
                 formData.append('appeal_question', this.form.appeal_question);
 
-                axios.post('https://smart.ilavista.tech/api/mail-window', formData,
+                axios.post('https://smart-s.info/api/mail-window', formData,
                     {
                         headers: {
                             'Content-Type': 'multipart/form-data'

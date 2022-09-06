@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\GalleriesCreateRequest;
 use App\Http\Requests\GalleriesUpdateRequest;
 use App\Models\Admin\Gallery;
-use Illuminate\Http\Request;
-use Storage;
+use Illuminate\Support\Facades\Storage;
+
 
 class GalleryController extends Controller
 {

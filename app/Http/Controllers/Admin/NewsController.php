@@ -6,8 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsRequest;
 use App\Http\Requests\NewsUpdateRequest;
 use App\Models\Admin\News;
-use App\Models\Admin\Teacher;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
