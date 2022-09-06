@@ -98,7 +98,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/camp-10.jpg" alt="history-img">
+                                    <img src="/img/main/history/camp-1.jpg" alt="history-img">
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -143,7 +143,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="d-flex h-100 justify-content-center">
-                                    <img src="/img/main/history/camp-1.jpg" alt="history-img">
+                                    <img src="/img/main/history/camp-10.jpg" alt="history-img">
                                 </div>
                             </div>
                         </div>
