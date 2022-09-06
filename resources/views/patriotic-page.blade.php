@@ -27,7 +27,7 @@
             </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 align-items-center order-1 order-lg-2 mb-40">
                     <div class="w-100">
-                        <img class="w-100 h-100" src="/img/main/patriotic/1.png" alt="patriotic-img">
+                        <img class="w-100 h-100" src="/img/main/patriotic/1.jpg" alt="patriotic-img">
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
         <div class="row container-mob">
             <div class="col-lg-5 mb-40">
                 <div class="w-100">
-                    <img class="w-100" src="/img/main/patriotic/2.png" alt="patriotic-img">
+                    <img class="w-100" src="/img/main/patriotic/2.jpg" alt="patriotic-img">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -74,12 +74,11 @@
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 order-1 order-lg-2 mb-40">
                     <div class="w-100">
-                        <img class="w-100" src="/img/main/patriotic/3.png" alt="patriotic-img">
+                        <img class="w-100" src="/img/main/patriotic/3.jpg" alt="patriotic-img">
                     </div>
                 </div>
             </div>
         </div>
-
 </section>
 
 <section class="flag pb-120">
@@ -88,7 +87,7 @@
         <div class="row align-items-center container-mob">
                 <div class="col-lg-5 col-md-12 col-sm-12 order-1 order-lg-2 mb-40">
                     <div class="w-100">
-                        <img class="w-100" src="/img/main/patriotic/4.png" alt="patriotic-img">
+                        <img class="w-100" src="/img/main/patriotic/4.jpg" alt="patriotic-img">
                     </div>
                 </div>
                 <div class="col-lg-7 text order-2 order-lg-7">
@@ -120,7 +119,7 @@
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 order-1 order-lg-2 mb-40">
                     <div class="w-100">
-                        <img class="w-100" src="/img/main/patriotic/5.png" alt="patriotic-img">
+                        <img class="w-100" src="/img/main/patriotic/5.jpg" alt="patriotic-img">
                     </div>
                 </div>
             </div>
