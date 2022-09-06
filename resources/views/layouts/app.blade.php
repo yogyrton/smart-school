@@ -59,6 +59,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <script src="//code.jivo.ru/widget/fRmgWrSAhm" async></script>
+
 
 </head>
 
