@@ -25,7 +25,7 @@
         <tr>
 
             <th style="width: 20%">
-                Позиция
+                Страница
             </th>
 
             <th style="width: 20%">

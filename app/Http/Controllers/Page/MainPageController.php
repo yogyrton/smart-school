@@ -16,7 +16,7 @@ class MainPageController extends Controller
     {
         $mainNews = MainNewsTrait::getMainNews($this->page);
         $teachers = TeachersTrait::getTeachers();
-        $news = NewsTrait::getNews();
+        $news = NewsTrait::getNews($this->page);
         $documents = DocumentsTrait::getDocuments($this->page);
 
 

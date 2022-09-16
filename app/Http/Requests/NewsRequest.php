@@ -24,9 +24,10 @@ class NewsRequest extends FormRequest
     public function rules()
     {
         return [
-                'title' => 'required|max:50',
-                'text' => 'required|max:1000',
-                'thumbnail' => 'required|image|max:10000',
+            'title' => 'required|max:50',
+            'text' => 'required|max:1000',
+            'thumbnail' => 'required|image|max:10000',
+            'page' => 'required',
         ];
     }
 
@@ -42,6 +43,8 @@ class NewsRequest extends FormRequest
             'thumbnail.required' => 'Поле "Фото" должно быть заполнено',
             'thumbnail.image' => 'Поле "Фото" должно иметь форматы jpg, jpeg, png, bmp, gif, svg или webp',
             'thumbnail.max' => 'Поле "Фото" должно быть не больше 8 мб',
+
+            'page.required' => 'Выберите лагерь',
         ];
     }
 }

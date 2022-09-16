@@ -27,6 +27,7 @@ class NewsUpdateRequest extends FormRequest
             'title' => 'required|max:50',
             'text' => 'required|max:1000',
             'thumbnail' => 'image|max:10000',
+            'page' => 'required',
         ];
     }
 
@@ -41,6 +42,8 @@ class NewsUpdateRequest extends FormRequest
 
             'thumbnail.image' => 'Поле "Фото" должно иметь форматы jpg, jpeg, png, bmp, gif, svg или webp',
             'thumbnail.max' => 'Поле "Фото" должно быть не больше 8 мб',
+
+            'page.required' => 'Выберите лагерь',
         ];
     }
 }

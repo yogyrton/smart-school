@@ -25,7 +25,7 @@
         <thead>
         <tr>
             <th style="width: 20%">
-                Лагерь
+                Страница
             </th>
             <th style="width: 20%">
                 Заголовок

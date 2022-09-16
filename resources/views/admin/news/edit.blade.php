@@ -45,6 +45,21 @@
                                     <input type="file" name="thumbnail" class="form-control-file" id="exampleInputPassword1">
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Выбрать страницу (необязательно изменять, сохранится старое)</label>
+
+                                    <div class="form-group">
+                                        <select class="custom-select" name="page">
+                                            <option value="{{ $news->page }}">{{ $news->page }}</option>
+                                            <option value="Главная">Главная</option>
+                                            <option value="Школа Беларусь 1-4">Школа Беларусь 1-4</option>
+                                            <option value="Школа Беларусь 5-11">Школа Беларусь 5-11</option>
+                                            <option value="Онлайн школа">Онлайн школа</option>
+                                            <option value="Школа Россия">Школа Россия</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <!-- /.card-body -->

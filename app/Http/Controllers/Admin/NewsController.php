@@ -39,6 +39,7 @@ class NewsController extends Controller
             'title' => $request->title,
             'text' => $request->text,
             'thumbnail' => $file,
+            'page' => $request->page,
         ]);
 
         return redirect()->route('news.index')->with('success', 'Новость успешно добавлена');
@@ -69,6 +70,7 @@ class NewsController extends Controller
             'title' => $request->title,
             'text' => $request->text,
             'thumbnail' => $file,
+            'page' => $request->page,
         ]);
 
         return redirect()->route('news.index')->with('success', 'Новость успешно отредактирована');

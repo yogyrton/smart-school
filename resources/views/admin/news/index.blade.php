@@ -23,6 +23,9 @@
 
         <thead>
         <tr>
+            <th style="width: 20%">
+                Страница
+            </th>
 
             <th style="width: 10%">
                 Фото
@@ -51,6 +54,10 @@
         <tbody>
         @foreach($news as $new)
             <tr>
+
+                <td>
+                    {{ $new->page }}
+                </td>
 
                 <td>
                     <img src="{{ asset('storage/' . $new->thumbnail) }}" alt="{{ $new->title }}" width="60px" height="60px">

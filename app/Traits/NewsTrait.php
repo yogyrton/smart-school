@@ -6,8 +6,8 @@ use App\Models\Admin\News;
 
 trait NewsTrait
 {
-    public static function getNews()
+    public static function getNews($page)
     {
-        return News::query()->orderByDesc('updated_at')->get();
+        return News::query()->where('page', '=', $page)->get();
     }
 }

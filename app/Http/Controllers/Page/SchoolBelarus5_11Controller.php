@@ -18,7 +18,7 @@ class SchoolBelarus5_11Controller extends Controller
     {
         $mainNews = MainNewsTrait::getMainNews($this->page);
         $price = PriceTrait::getPrice($this->price);
-        $news = NewsTrait::getNews();
+        $news = NewsTrait::getNews($this->page);
         $documents = DocumentsTrait::getDocuments($this->page);
 
         return view('school-bel-5-11', compact('mainNews', 'price', 'news', 'documents'));
