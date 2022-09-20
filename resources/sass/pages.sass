@@ -1,0 +1,1312 @@
+.head
+    height: calc(100vh - 105px)
+    max-height: 800px
+    min-height: 700px
+    display: flex
+    align-items: flex-end
+    z-index: 10
+    position: relative
+    @media screen and (max-width: 1200px)
+        height: auto
+        min-height: auto
+        max-height: 100%
+        padding: 40px 0
+    @media screen and (max-width: 767px)
+        padding: 60px 0
+    &:before
+        @media screen and (min-width: 1400px)
+            content:""
+            position: absolute
+            width: 245px
+            height: 145px
+            bottom: 0
+            right: 50px
+            background-image: url('/img/main/head-recangle.svg')
+            background-repeat: no-repeat
+
+    .head--container
+        display: grid
+        grid-template-columns: repeat(2, 50%)
+        justify-content: space-between
+        align-items: center
+        @media screen and (max-width: 1400px)
+            grid-template-columns: repeat(2, 52%)
+        @media screen and (max-width: 1390px)
+            grid-template-columns: 44% 56%
+        @media screen and (max-width: 767px)
+            display: flex
+            flex-direction: column-reverse
+            align-items: flex-start
+
+    .head--container.centered-mobile
+        @media screen and (max-width: 767px)
+            align-items: center
+
+        .banner-image
+            @media screen and (max-width: 767px)
+                transform: translateX(0)
+            @media screen and (max-width: 500px)
+                width: calc(100% + 30px)
+                max-width: calc(100% + 30px)
+                transform: translateX(-15px)
+
+
+    .banner-image
+        transform: translateX(-160px)
+        max-width: 110%
+        @media screen and (max-width: 1200px)
+            transform: translateX(-100px)
+        @media screen and (max-width: 767px)
+            transform: translateX(-15px)
+            max-width: 500px
+        @media screen and (max-width: 575px)
+            max-width: 100%
+
+
+    .notification--head
+        min-height: 147px
+        padding-top: 48px
+        @media screen and (max-width: 767px)
+            min-height: auto
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: 40px
+            z-index: 2
+        @media screen and (max-width: 575px)
+            left: 15px
+            bottom: 10px
+            max-width: calc(100% - 30px)
+            transform: translateX(0)
+
+        p
+            @media screen and (max-width: 359px)
+                font-size: 14px
+
+    .btn-group
+        @media screen and (max-width: 767px)
+            display: grid
+            grid-template-columns: repeat(2, 48%)
+            justify-content: space-between
+            margin-bottom: 24px
+        @media screen and (max-width: 400px)
+            grid-template-columns: repeat(2, 49%)
+        @media screen and (max-width: 360px)
+            grid-template-columns: 100%
+            grid-row-gap: 12px
+        @media screen and (max-width: 300px)
+            grid-template-columns: 95%
+            grid-row-gap: 12px
+
+        .button_1
+            @media screen and (max-width: 767px)
+                width: 100%
+
+            &:first-child
+                margin-right: 20px
+                @media screen and (max-width: 767px)
+                    margin-right: 0
+
+    .btn-group-1
+        @media screen and (max-width: 767px)
+            grid-template-columns: 100%
+
+    .btn-group-3
+        display: grid
+        grid-template-columns: repeat(3, 188px)
+        column-gap: 20px
+        @media screen and (max-width: 1200px)
+            grid-template-columns: repeat(2, 188px)
+            grid-row-gap: 12px
+        @media screen and (max-width: 767px)
+            column-gap: 0
+            grid-template-columns: repeat(2, 48%)
+        @media screen and (max-width: 400px)
+            grid-template-columns: repeat(2, 49%)
+        @media screen and (max-width: 360px)
+            grid-template-columns: 100%
+
+        .button_1
+            width: 100%
+
+            &:first-child
+                margin-right: 0
+
+            &:last-child
+                @media screen and (max-width: 1200px)
+                    grid-column-start: 1
+                    grid-column-end: 3
+                @media screen and (max-width: 360px)
+                    grid-column-end: 2
+
+
+.head.notification-size
+    @media screen and (max-width: 767px)
+        padding: 60px 0 250px 0
+    @media screen and (max-width: 360px)
+        padding: 60px 0 270px 0
+
+
+.notification--head-camp
+    @media screen and (max-width: 575px)
+        transform: translate(0, 20%) !important
+
+#head .swiper-box
+    max-width: 340px
+    margin-left: 100px
+    position: relative
+    cursor: pointer
+    @media screen and (max-width: 575px)
+        margin-left: 80px
+    @media screen and (max-width: 400px)
+        margin-left: 60px
+
+
+#head .swiper-box:before
+    content: ""
+    display: block
+    position: absolute
+    background-image: url('/svg/bell.svg')
+    left: -95px
+    top: 20px
+    width: 60px
+    height: 60px
+    @media screen and (max-width: 575px)
+        top: 10px
+        left: -75px
+    @media screen and (max-width: 400px)
+        width: 40px
+        height: 40px
+        background-size: contain
+        left: -55px
+
+
+#head .container-slider-pagination
+
+    .swiper-pagination
+        bottom: -40px
+        position: absolute
+
+        .swiper-pagination-bullet
+            opacity: 1
+            background: rgba(0, 0, 0, 0.2)
+            width: 11px
+            height: 11px
+            margin: 0 8px
+
+        .swiper-pagination-bullet-active
+            background: $accentColor
+
+
+#history
+    @media screen and (max-width: 1440px)
+       padding-top: 120px
+    @media screen and (max-width: 992px)
+       padding-top: 40px
+
+    .history-text-box
+        max-width: 654px
+        @media screen and (max-width: 992px)
+            width: 100%
+            max-width: 100%
+
+    .history-pseudo
+        position: absolute
+        background-image: url('/img/main/history/historyPseudo.png')
+        background-repeat: no-repeat
+        width: 625px
+        height: 500px
+        z-index: -1
+        top: -56px
+        left: -38px
+        @media screen and (max-width: 1510px)
+            display: none
+
+
+    .swiper-slide
+        height: auto
+
+
+.priority
+    background-color: rgba(244, 242, 246, 1)
+    position: relative
+    @media screen and (max-width: 1200px)
+        padding-bottom: 60px
+    @media screen and (max-width: 500px)
+        padding-bottom: 25px
+        padding-top: 40px
+
+    h2
+        @media screen and (max-width: 992px)
+            margin-bottom: 24px
+
+    .swiper
+        width: 100%
+
+    .priority-inner
+        .swiper-wrapper
+            display: grid
+            grid-template-columns: 50% 50%
+            grid-template-rows: repeat(3, 1fr)
+            @media screen and (max-width: 1240px)
+                grid-template-columns: repeat(3, 33%)
+                grid-template-rows: repeat(2, 1fr)
+            @media screen and (max-width: 1199px)
+                display: flex
+
+        .swiper-slide
+            @media screen and (min-width: 1200px)
+                width: 100% !important
+
+        .priority-box
+            align-items: flex-start
+            @media screen and (max-width: 992px)
+                height: 100%
+                margin-bottom: 20px
+
+            img
+                margin-right: 20px
+                object-fit: contain
+                @media screen and (max-width: 400px)
+                    width: 40px
+
+            p
+                max-width: 460px
+
+    .swiper-pagination
+        bottom: 40px
+        @media screen and (max-width: 400px)
+            bottom: 13px
+
+        .swiper-pagination-bullet
+            background: #D3D1D9
+
+        .swiper-pagination-bullet-active
+            background: $accentColor
+
+
+.priority-online.priority
+    .priority-inner
+        .swiper-wrapper
+            justify-content: space-between
+            grid-template-rows: repeat(2, auto)
+            grid-template-columns: 44% 42%
+
+            .swiper-slide
+                @media screen and (min-width: 1200px)
+                    width: 100% !important
+
+                .swiper-wrapper--card
+                    margin-bottom: 40px
+                    height: auto
+
+                    .priority-box
+                        p
+                            max-width: 100%
+
+
+#address
+    .btn-purple
+        min-width: auto
+
+    .custom-ul li:last-child
+        margin-bottom: 40px
+        @media screen and (max-width: 768px)
+            margin-bottom: 24px
+
+#album
+    .image-container
+        position: relative
+        overflow: hidden
+        border-radius: 20px
+        padding-top: 100%
+
+        img
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .container
+        .slider-button-next
+            right: -72px
+            @media screen and (max-width: 1366px)
+                right: 15px
+
+        .slider-button-prev
+            left: -72px
+            @media screen and (max-width: 1366px)
+                left: 15px
+
+        .slider-button-next, .slider-button-prev
+            @media screen and (max-width: 1366px)
+                svg
+                    path
+                        fill: #ffffff
+
+                    rect
+                        stroke: #ffffff
+
+
+#documents
+    @media screen and (max-width: 1200px)
+        padding-bottom: 100px
+    @media screen and (max-width: 700px)
+        padding-bottom: 50px
+    a
+        display: block
+        width: 100%
+
+    .swiper-pagination
+        display: none
+        @media screen and (max-width: 700px)
+            display: block
+            bottom: -40px
+
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -105%)
+        @media screen and (max-width: 700px)
+            display: none
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(-100%, -105%)
+        @media screen and (max-width: 700px)
+            display: none
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+
+#price
+    .h3
+        @media screen and (max-width: 1500px)
+            font-size: 28px
+            line-height: 1
+
+    .row
+        @media screen and (max-width: 1500px)
+            margin: 0 -8px 20px
+
+    .row > *
+        @media screen and (max-width: 1500px)
+            padding-left: 8px
+            padding-right: 8px
+
+    .price--card
+        border-radius: 12px
+        background: $light-grey
+        padding: 20px
+
+    .price--card-camp
+        padding: 40px 
+        @media screen and (max-width: 360px)
+            padding: 20px
+
+    .swiper-pagination
+        position: static
+        padding: 4px 0 12px 0
+
+#price.price-online
+    .swiper-wrapper
+        @media screen and (min-width: 991px)
+            height: fit-content !important
+            flex-direction: column
+
+        .swiper-slide
+            @media screen and (min-width: 991px)
+                width: 100% !important
+                margin-bottom: 20px
+
+#price 
+    .custom-ul li
+        list-style: none
+        padding-left: 40px
+        position: relative
+        margin-bottom: 12px
+
+.g-col1
+    grid-column-start: 1 !important
+    grid-column-end: 1 !important
+
+.g-col
+    grid-column: 3 / 5 !important
+
+#school
+    .swiper
+        @media screen and (min-width: 1200px)
+            overflow: visible
+    .swiper-wrapper
+        @media screen and (min-width: 1200px)
+            overflow: visible
+            display: grid
+            grid-template-columns: repeat(4, calc(25% - 23px))
+            row-gap: 30px
+            justify-content: space-between
+
+    .swiper-slide
+        height: auto
+        @media screen and (min-width: 1200px)
+            width: 100% !important
+            &:first-child
+                grid-column-start: 1
+                grid-column-end: 3
+            &:last-child
+                grid-column-start: 3
+                grid-column-end: 5
+        @media screen and (max-width: 300px)
+            height: fit-content
+
+    a.school-box
+        &:hover
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2)
+            button
+                background: $accentColor
+                color: #ffffff
+    .school-box
+        display: block
+        height: 100%
+        background: $light-grey
+        border-radius: 12px
+        transition: 0.3s ease-in-out
+
+        @media screen and (min-width: 1200px)
+            display: grid
+            grid-template-columns: 50% 50%
+            width: 100%
+            background: transparent
+        .img-box
+            width: 100%
+            border-radius: 12px 12px 0 0
+            position: relative
+            overflow: hidden
+            @media screen and (min-width: 1200px)
+                padding-top: 100%
+                border-radius: 12px 0 0 12px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+                position: static
+                top: 0
+                left: 0
+                @media screen and (min-width: 1200px)
+                    position: absolute
+
+        .box-inner
+            padding: 24px
+            background: $light-grey
+            border-radius: 0 0 12px 12px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            @media screen and (min-width: 1200px)
+                border-radius: 0 12px 12px 0
+                padding: 40px 30px
+
+
+    .school-box-short.school-box
+        @media screen and (min-width: 1200px)
+            height: 100%
+            display: block
+            .box-inner
+                border-radius: 12px
+                width: 100%
+                height: 100%
+            .block-mob
+                display: none
+
+    .school-box-desktop
+        display: none
+        @media screen and (min-width: 1200px)
+            display: block
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-radius: 12px
+
+
+    .swiper-pagination
+        position: static
+        padding: 4px 0 12px 0
+
+
+#teachers
+    @media screen and (max-width: 990px)
+        margin-bottom: 0
+        padding-bottom: 110px
+
+    .teachers-info
+        max-width: 654px
+
+    .teacher__image-ibg
+        width: 100%
+        padding-top: 100%
+        overflow: hidden
+        position: relative
+        border-radius: 16px
+
+    .teacher__image-ibg img
+        position: absolute
+        left: 0
+        top: 0
+        object-fit: cover
+        width: 100%
+        height: 100%
+
+
+    .teacher-description
+        word-wrap: break-word
+
+
+    .teacher__image-ibg
+        height: 100%
+        width: 100%
+        overflow: hidden
+        border-radius: 16px
+
+    .teacher__image-ibg img
+        object-fit: cover
+        width: 100%
+
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -100%)
+        @media screen and (max-width: 576px)
+            right: 75px
+            z-index: 100
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 576px)
+            left: 75px
+            z-index: 100
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+    .swiper-pagination
+        display: none
+        @media screen and (max-width: 576px)
+            display: block
+
+    .swiper-pagination-bullet
+        width: 24px
+        height: 24px
+        text-align: center
+        line-height: 24px
+        font-size: 16px
+        color: $grey
+        background-color: inherit
+        opacity: 1
+
+    .swiper-pagination-bullet-active
+        color: $white
+        background: $accentColor
+
+    .teachers-pagination
+        position: absolute
+        bottom: 0
+        transform: translate(-50%, 70px)
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next 
+        transform: scale(0.83)
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next 
+        transform: scale(0.63)
+
+
+#replies
+    @media screen and (max-width: 990px)
+        margin-bottom: 0
+        padding-bottom: 80px
+        padding-top: 30px
+
+    img
+        width: 100%
+
+    .swiper .swiper-slide
+        text-align: center
+
+    .slider-button-next
+        right: 0
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -100%)
+        @media screen and (max-width: 576px)
+            right: 75px
+            z-index: 100
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 576px)
+            left: 75px
+            z-index: 100
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+    .swiper-pagination-bullet
+        width: 24px
+        height: 24px
+        text-align: center
+        line-height: 24px
+        font-size: 16px
+        color: $grey
+        background-color: inherit
+        opacity: 1
+
+    .swiper-pagination-bullet-active
+        color: $white
+        background: $accentColor
+
+    .replies-pagination
+        display: none
+        @media screen and (max-width: 576px)
+            display: block
+            position: absolute
+            bottom: 0
+            transform: translate(-50%, 70px)
+            max-width: calc(100% - 100px)
+            left: 50%
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next 
+        transform: scale(0.83)
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next 
+        transform: scale(0.63)
+
+
+#news
+    @media screen and (max-width: 990px)
+        margin-bottom: 0
+        padding-bottom: 110px
+
+    .image-in-slider
+        height: 100%
+
+    .image-in-slider img
+        width: 100%
+
+    .news__image-ibg
+        width: 100%
+        height: 200px
+        overflow: hidden
+        border-radius: 12px
+
+    .news__image-ibg img
+        width: 100%
+        height: 100%
+        min-height: 200px
+
+    .news-description
+        padding: 0 5px
+        word-wrap: break-word
+        flex-grow: 1
+
+        span
+            font-size: 12px
+            line-height: 18px
+            font-weight: 400
+
+        .news-title
+            font-size: 20px
+            line-height: 24px
+
+        .full-text
+            display: none
+            opacity: 0
+            visibility: hidden
+
+    .news-btn
+        display: none
+        color: $accentColor !important
+        transition: 0.3s ease-in-out
+        &:hover
+            cursor: pointer
+            opacity: 0.9
+
+    .swiper .swiper-slide
+        @media screen and (max-width: 576px)
+
+
+    .slider-button-next
+        right: 0px
+        transform: translateX(55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            right: 50%
+            transform: translate(145%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 1200px)
+            transform: translate(100%, -100%)
+        @media screen and (max-width: 576px)
+            right: 75px
+            z-index: 100
+
+    .slider-button-prev
+        left: 0px
+        transform: translateX(-55px)
+        position: absolute
+        @media screen and (max-width: 1400px)
+            left: 50%
+            transform: translate(-100%, -100%)
+            bottom: -130px
+            top: auto
+        @media screen and (max-width: 576px)
+            left: 75px
+            z-index: 100
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+    .swiper-pagination-bullet
+        width: 24px
+        height: 24px
+        text-align: center
+        line-height: 24px
+        font-size: 16px
+        color: $grey
+        background-color: inherit
+        opacity: 1
+
+    .swiper-pagination-bullet-active
+        color: $white
+        background: $accentColor
+
+    .news-pagination
+        display: none
+        @media screen and (max-width: 576px)
+            display: block
+            position: absolute
+            bottom: 0
+            transform: translate(-50%, 70px)
+            max-width: calc(100% - 100px)
+            left: 50%
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next 
+        transform: scale(0.83)
+
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next 
+        transform: scale(0.63)
+
+#partners
+    @media screen and (max-width: 768px)
+        margin-bottom: 0
+        padding-bottom: 80px
+    @media screen and (max-width: 576px)
+        padding-bottom: 60px
+
+    .swiper
+        align-items: center
+
+    .swiper-slide
+        height: auto
+        text-align: left
+        @media screen and (max-width: 768px)
+            text-align: center
+
+    .swiper-pagination
+        bottom: -50px
+        position: absolute
+        display: none
+        @media screen and (max-width: 1200px)
+            display: block
+        @media screen and (max-width: 768px)
+            bottom: -60px
+
+        .swiper-pagination-bullet
+            opacity: 1
+            background: $light-grey
+            width: 11px
+            height: 11px
+            margin: 0 8px
+
+        .swiper-pagination-bullet-active
+            background: $accentColor
+
+#order-section
+    @media screen and (max-width: 990px)
+        margin-bottom: 0
+        padding-top: 10px
+
+    #order-section img
+        object-fit: contain
+
+    .contacts-wrapper
+        font-size: 20px
+        line-height: 24px
+        @media screen and (max-width: 320px)
+            font-size: 16px
+
+        .contacts-title,
+        .order-title
+            margin-bottom: 28px
+
+        .subtitle
+            max-width: 435px
+            margin-bottom: 28px
+            font-weight: 400
+
+        .contacts-info
+            gap: 8px
+            align-items: center
+            word-break: break-all
+
+        .contacts-mail
+            position: relative
+            word-break: break-all
+
+        .contacts-2
+            @media screen and (max-width: 500px)
+                flex-wrap: wrap
+                justify-content: space-between
+            @media screen and (max-width: 360px)
+                justify-content: flex-start 
+
+        .contacts-socials
+            @media screen and (max-width: 500px)
+                flex-wrap: wrap
+                gap: 5px
+
+            .contacts-socials-link
+                margin-right: 12px
+                display: block
+                width: 48px
+                height: 48px
+                padding: 12px
+                background: #F4F2F7
+                border-radius: 100px
+                transition: 0.3s ease-in-out
+                &:last-child
+                    margin-right: 0
+                &:hover
+                    background: rgba(128, 65, 255, 0.1)
+                @media screen and (max-width: 500px)
+                    margin-right: 0
+
+        .contacts-location,
+        .contacts-timetable,
+        .contacts-tel
+            padding-left: 34px
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                background-repeat: no-repeat
+                width: 24px
+                height: 24px
+                left: 0
+                top: 0
+        .contacts-tel::before
+            background-image: url('/svg/telephone.svg')
+        .contacts-location::before
+            background-image: url('/svg/location.svg')
+        .contacts-timetable::before
+            background-image: url('/svg/time.svg')
+
+
+
+    .order-box
+        @media screen and (max-width: 990px)
+            margin-bottom: 40px
+
+        .order-title
+            margin-bottom: 28px
+
+        .order-box-description
+            font-size: 20px
+            line-height: 24px
+            @media screen and (max-width: 320px)
+                font-size: 16px
+
+    .order-form
+
+        .input, input, textarea
+            font-size: 16px
+            line-height: 24px
+            font-weight: 400
+            color: $grey
+            @media screen and (max-width: 320px)
+                font-size: 14px
+
+
+//SLIDER
+#history, #address, #album, #info 
+    .swiper-box
+        position: relative
+
+    .swiper
+        border-radius: 20px
+
+    .swiper-slide
+        @media screen and (max-width: 992px)
+            text-align: center !important
+
+        img
+            max-width: 100%
+            object-fit: cover
+            height: 100%
+            border-radius: 20px
+
+    .position-relative
+        @media screen and (max-width: 992px)
+            margin-bottom: 24px
+
+    .slider-button-next, .slider-button-prev
+        @media screen and (max-width: 1200px)
+            display: none
+
+    .slider-button-next
+        right: 24px
+        position: absolute
+        border: none
+        top: 50%
+        transform: translateY(-50%)
+        margin: 0
+
+    .slider-button-prev
+        left: 24px
+        position: absolute
+        border: none
+        top: 50%
+        transform: translateY(-50%)
+        margin: 0
+
+    .swiper-button-disabled
+        opacity: 0
+        visibility: hidden
+        @media screen and (max-width: 1200px)
+            opacity: 1
+            visibility: inherit
+
+    .swiper-pagination
+        display: none
+        position: static
+        padding-top: 10px
+        @media screen and (max-width: 1200px)
+            display: block
+
+.swiper-pagination-bullet
+    opacity: 1
+    background: $light-grey
+    width: 11px
+    height: 11px
+    margin: 0 8px
+
+.swiper-pagination-bullet-active
+    background: $accentColor
+
+
+#faq-1.modal-dialog .modal-dialog-centered, #faq-1.modal.show .modal-dialog 
+    @media screen and (max-width: 500px)
+        transform: translate(0, 30%)
+    @media screen and (max-width: 320px)
+        transform: translate(0, 70%)
+    
+#faq-1 .modal-close 
+    @media screen and (max-width: 420px)
+        right: 2%
+    @media screen and (max-width: 300px)
+        right: 5%
+
+#faq-1 .title-faq
+    @media screen and (max-width: 768px)
+        max-width: 440px
+    @media screen and (max-width: 500px)
+        max-width: 300px
+
+.zoom-section .row
+    @media screen and (max-width: 768px)
+        flex-direction: column-reverse
+
+.zoom-section .img-block
+    @media screen and (max-width: 767px)
+        margin-bottom: 40px
+    @media screen and (max-width: 500px)
+        margin-bottom: 20px
+
+.window-section
+    .gap-12
+        gap: 12px
+
+    .mb-24
+        @media screen and (max-width: 600px)
+            margin-bottom: 20px
+
+    .row
+        @media screen and (max-width: 900px)
+            flex-direction: column-reverse
+
+    .contacts
+        max-width: 360px
+
+    .contacts-location,
+    .contacts-timetable,
+    .contacts-tel
+        padding-left: 34px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            background-repeat: no-repeat
+            width: 24px
+            height: 24px
+            left: 0
+            top: 0
+    .contacts-tel::before
+        background-image: url('/svg/telephone.svg')
+    .contacts-location::before
+        background-image: url('/svg/location.svg')
+    .contacts-timetable::before
+        background-image: url('/svg/time.svg')
+
+    ul, ol
+        padding-left: 15px
+
+    ul, ol
+    li
+        list-style-type: inherit
+
+    .window-doc-link
+        text-decoration: underline !important
+        text-underline-offset: 3px
+        position: relative
+        @media screen and (max-width: 420px)
+            max-width: 284px
+
+    .organization-box
+        max-width: 540px
+
+    .link-wrap
+        margin-right: 30px
+        max-width: 315px
+        margin-bottom: 24px
+        @media screen and (max-width: 768px)
+            margin-bottom: 16px
+        img
+            width: 100%
+
+    form
+        .row
+            @media screen and (max-width: 768px)
+                flex-direction: column
+
+        .form_btn button
+            margin-top: 0
+
+        .file_label
+            display: inline-block
+            cursor: pointer
+            border-bottom: 1px solid
+            position: relative
+            margin-left: 30px
+            @media screen and (max-width: 576px)
+                margin-left: 40px
+            &::before
+                content: ""
+                position: absolute
+                width: 36px
+                height: 36px
+                left: -40px
+                bottom: -10px
+                background-image: url('/svg/doc.svg')
+        
+        .doc-box
+            display: flex
+            align-items: center
+            gap: 20px
+            @media screen and (max-width: 576px)
+                flex-direction: column
+                align-items: flex-start
+
+            span
+                color: $grey
+
+        .invalid-feedback
+            position: absolute
+
+        .spinner
+            top: 50%
+            left: 50%
+            margin-right: -50%
+            transform: translate(-50%, -50%)
+
+
+#appeals_page
+    border: 1px solid #D3D1D9
+    border-radius: 12px
+
+    .inner
+        padding: 0 40px
+        @media screen and (max-width: 560px)
+            padding: 0 5px
+
+    .filter-tabs ul
+        display: flex
+        margin-bottom: 40px
+        padding: 0
+        background: #F4F2F7
+        border-radius: 12px 12px 0px 0px
+        @media screen and (max-width: 1200px)
+            white-space: nowrap
+            overflow-x: scroll
+            margin-bottom: 40px
+    a
+        margin-bottom: 0
+        display: flex
+        justify-content: center
+        padding: 12px 0
+        border-radius: 12px 12px 0 0
+        color: $text
+        cursor: pointer
+        border: 2px solid transparent
+        border-bottom: none!important
+        width: 50%
+        @media screen and (max-width: 576px)
+            padding: 15px 24px
+            font-size: 12px
+
+    .form-control
+        @media screen and (max-width: 400px)
+            padding: 12px 5px
+    .activeText
+        color: #F4F2F7
+        background-color: $accentColor
+        &:hover
+            color: #F4F2F7 !important
+
+.sidebar
+    background: #F4F2F7
+    border-radius: 16px
+    @media screen and (max-width: 900px)
+        margin-bottom: 32px
+    .sidebar-header
+        border-radius: 16px 16px 0 0px
+        padding: 12px 24px
+        background-color: $accentColor
+        color: $white
+    .sidebar-content
+        padding: 28px 28px 150px 28px
+        @media screen and (max-width: 768px)
+            padding: 24px 30px 24px 24px
+        @media screen and (max-width: 576px)
+            padding: 24px 15px 
+        ul,ol
+            padding-left: 0
+        ul, ol
+            li  
+                padding-left: 36px
+                list-style-type: none
+        .navigation__item
+            width: 100%
+            cursor: pointer
+            transition: .2s 
+            position: relative
+            transition: all .3s ease-in-out
+            &::before
+                display: none
+                content:""
+                position: absolute
+                background-image: url('/svg/east.svg')
+                left: 0
+                background-repeat: no-repeat
+                width: 24px
+                height: 24px
+            .navigation__link
+                transition: all .3s ease-in-out
+                &::before
+                    display: none
+                    content:""
+                    position: absolute
+                    background-image: url('/svg/east.svg')
+                    left: 0
+                    background-repeat: no-repeat
+                    width: 24px
+                    height: 24px
+                &:hover
+                    font-weight: 600
+                    transition: .2s 
+        .navigation__item:hover::before,
+        .navigation__link.active::before
+            display: block
+            
+.active
+    color: $accentColor
+    font-weight: 600
+
+.gimn-box
+    max-width: 257px
+    @media screen and (max-width: 576px)
+        max-width: 100%
+        text-align: center
+

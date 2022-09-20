@@ -3,14 +3,30 @@
 @section('title', 'Список главных новостей')
 
 @section('content')
-    <a href="{{ route('main_news.create') }}">Добавить</a>
+
     @if (session('error'))
-        Уже 3 главные новости
+        <div class="alert alert-danger">
+            <li>{{ session('error') }}</li>
+        </div>
     @endif
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            <li>{{ session('success') }}</li>
+        </div>
+    @endif
+
+
+
+    <a href="{{ route('main_news.create') }}">Добавить главную новость (не больше 3 на каждую страницу)</a>
+
     <table class="table table-striped projects">
 
         <thead>
         <tr>
+            <th style="width: 20%">
+                Страница
+            </th>
             <th style="width: 20%">
                 Заголовок
             </th>
@@ -24,11 +40,14 @@
         @foreach($news as $new)
             <tr>
                 <td>
+                    {{ $new->page }}
+                </td>
+                <td>
                     {{ $new->title }}
                 </td>
                 <td>
                     <a>
-                        {{ $new->text }}
+                        {!! $new->text !!}
                     </a>
                     <br>
                 </td>

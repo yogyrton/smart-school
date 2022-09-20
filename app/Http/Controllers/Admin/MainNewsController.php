@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MainNewsRequest;
 use App\Models\Admin\MainNews;
-use Illuminate\Http\Request;
 
 class MainNewsController extends Controller
 {
@@ -15,7 +14,7 @@ class MainNewsController extends Controller
      */
     public function index()
     {
-        $news = MainNews::all();
+        $news = MainNews::query()->orderBy('page')->get();
 
         return view('admin.main_news.index', compact('news'));
     }
@@ -35,11 +34,13 @@ class MainNewsController extends Controller
      */
     public function store(MainNewsRequest $request)
     {
-        $news = MainNews::query()->count();
-        if ($news < 3) {
+        $count = MainNews::query()->where('page', '=', $request->page)->count();
+        if ($count < 3) {
             MainNews::query()->create($request->all());
+            return redirect()->route('main_news.index')->with('success', 'Главная новость добавлена');
         }
-        return redirect()->route('main_news.index')->with('error', 'Уже 3 главные новости');
+        return redirect()->route('main_news.index')->with('error', "Уже 3 главные новости на странице: $request->page" );
+
     }
 
     /**
@@ -58,9 +59,16 @@ class MainNewsController extends Controller
     public function update(MainNewsRequest $request, $id)
     {
         $news = MainNews::query()->find($id);
+        $newsCamp = $news->page;
+        $count = MainNews::query()->where('page', '=', $request->page)->count();
 
-        $news->update($request->all());
-        return redirect()->route('main_news.index');
+        if ($count < 3 || ($count == 3 && $newsCamp == $request->page)) {
+            $news->update($request->all());
+
+            return redirect()->route('main_news.index')->with('success', 'Главная новость изменена');
+        }
+        return redirect()->route('main_news.index')->with('error', "Уже 3 главные новости на странице: $request->page");
+
     }
 
     /**
@@ -70,6 +78,6 @@ class MainNewsController extends Controller
     {
         MainNews::destroy($id);
 
-        return redirect()->route('main_news.store');
+        return redirect()->route('main_news.index')->with('success', 'Главная новость удалена');
     }
 }

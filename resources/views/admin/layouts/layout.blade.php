@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/admin/css/admin.css">
+    <link rel="stylesheet" href="/admin_assets/css/admin.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -36,7 +36,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Главные новости
+                                --- Главные новости
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -56,7 +56,27 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Педагоги
+                                --- Блок новостей
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('news.index') }}" class="nav-link">
+                                    <p>Список новостей</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('news.create') }}" class="nav-link">
+                                    <p>Добавить новость</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <p>
+                                --- Педагоги
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -75,18 +95,18 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Блок новостей
+                                --- Вожатые
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
-                                    <p>Список новостей</p>
+                                <a href="{{ route('counselor.index') }}" class="nav-link">
+                                    <p>Список вожатых</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
-                                    <p>Добавить новость</p>
+                                <a href="{{ route('counselor.create') }}" class="nav-link">
+                                    <p>Добавить вожатого</p>
                                 </a>
                             </li>
                         </ul>
@@ -95,17 +115,17 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Блок документов
+                                --- Блок документов
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
+                                <a href="{{ route('documents.index') }}" class="nav-link">
                                     <p>Список документов</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
+                                <a href="{{ route('documents.create') }}" class="nav-link">
                                     <p>Добавить документ</p>
                                 </a>
                             </li>
@@ -115,13 +135,39 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Прейскурант цен
+                                --- Прейскурант цен
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
-                                    <p>Список цен</p>
+                                <a href="{{ route('prices.index') }}" class="nav-link">
+                                    <p>Посмотреть прейскурант</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('prices.create') }}" class="nav-link">
+                                    <p>Добавить прейскурант</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <p>
+                                --- Фото предыдущих смен
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('photos.index') }}" class="nav-link">
+                                    <p>Посмотреть фото</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('photos.create') }}" class="nav-link">
+                                    <p>Добавить фото</p>
                                 </a>
                             </li>
                         </ul>
@@ -130,25 +176,51 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <p>
-                                Вожатые
+                                --- Фотогалерея
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">
-                                    <p>Список вожатых</p>
+                                <a href="{{ route('galleries.index') }}" class="nav-link">
+                                    <p>Посмотреть фото</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../index2.html" class="nav-link">
-                                    <p>Добавить вожатого</p>
+                                <a href="{{ route('galleries.create') }}" class="nav-link">
+                                    <p>Добавить фото</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <p>
+                                --- Cсылки для галерей
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('links.index') }}" class="nav-link">
+                                    <p>Посмотреть ссылки</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('links.create') }}" class="nav-link">
+                                    <p>Добавить ссылку</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </nav>
-            <!-- /.sidebar-menu -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="info d-block">
+                    <a href="{{ route('logout') }}" class="d-block">Выйти из АдминПанели</a>
+                </div>
+            </div>
+
         </div>
         <!-- /.sidebar -->
     </aside>
@@ -165,6 +237,9 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
+
+
+
         <section class="content-header">
             <div class="container-fluid">
                 @yield('content')
@@ -180,7 +255,8 @@
     <!-- /.control-sidebar -->
 </div>
 
-<script src="/admin/js/admin.js"></script>
+<script src="/admin_assets/js/admin.js"></script>
+
 
 </body>
 </html>

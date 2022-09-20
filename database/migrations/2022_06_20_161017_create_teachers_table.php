@@ -15,12 +15,12 @@ class CreateTeachersTable extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('position')->nullable();
-            $table->string('category')->nullable();
-            $table->string('experience')->nullable();
-            $table->string('thumbnail')->nullable();
-            $table->tinyInteger('point')->unique();
+            $table->string('name', 200);
+            $table->string('position', 200)->nullable();
+            $table->string('category', 200)->nullable();
+            $table->string('experience', 200)->nullable();
+            $table->string('thumbnail');
+            $table->tinyInteger('point')->unsigned();
             $table->timestamps();
         });
     }

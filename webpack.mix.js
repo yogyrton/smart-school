@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,6 +10,7 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.webpackConfig({ stats: { children: true, }, });
 
 mix.styles([
     'resources/css/admin/all.min.css',
@@ -26,5 +26,9 @@ mix.js([
 ], 'public/admin_assets/js/admin.js');
 
  mix.js('resources/js/app.js', 'public/js')
- .sass('resources/sass/app.sass', 'public/css', []);
+ .vue()
+ .sass('resources/sass/app.sass', 'public/css', [])
+ .options({
+    autoprefixer: { remove: false }
+});
 
